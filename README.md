@@ -25,3 +25,11 @@ python3 tools/check_site.py
 이 도구는 지정 커밋의 파일만 읽으며 다른 프로젝트 경로를 수정하지 않습니다. 게시 경로는 `mogu/`, 향후 프로젝트 경로는 `storybridge/`, `vlops/`입니다. 준비되지 않은 프로젝트는 사이트 목차에 표시하지 않습니다.
 
 GitHub Pages 게시 소스: `main` 브랜치 루트(`/`), `.nojekyll` 사용.
+
+공개 사이트 검수(Playwright와 Chrome 필요):
+
+```sh
+python3 tools/verify_live.py https://jungjiyu.github.io/toss-learners-high/
+```
+
+인증 없는 HTTP로 게시 파일의 해시를 대조하고, 쿠키가 없는 새 Chrome 컨텍스트에서 글·목록 이동과 데스크톱/390px 이미지·CSS·SQL·그래프·표를 검사합니다.

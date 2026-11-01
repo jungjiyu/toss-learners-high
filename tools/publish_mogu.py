@@ -62,7 +62,8 @@ while todo:
   if suffix in ['.html','.svg']:
    text=re.sub(r'\b(href|src|xlink:href)=("|\')([^"\']*)\2',lambda m:m[1]+'='+m[2]+escape(rewrite(m[3],path,ref),quote=True)+m[2],text)
   if suffix in ['.css','.svg','.html']:
-   text=re.sub(r'url\(\s*(["\']?)([^)"\']+)\1\s*\)',lambda m:'url("'+rewrite(m[2].strip(),path,ref)+'")',text)
+   # Preserve CSS quoting: adding double quotes inside SVG attributes breaks XML.
+   text=re.sub(r'url\(\s*(["\']?)([^)"\']+)\1\s*\)',lambda m:'url('+m[1]+rewrite(m[2].strip(),path,ref)+m[1]+')',text)
   if suffix in ['.py','.java']:
    code=text;text='<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escape(PurePosixPath(path).name)+' · 구현 근거</title><style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto;padding:0 20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f7;padding:20px;font:14px/1.6 monospace}</style><h1>'+escape(PurePosixPath(path).name)+'</h1><p>원본 커밋: '+ref+'</p><p>'+escape(path)+'</p><pre><code>'+escape(code)+'</code></pre></html>'
   raw=text.encode()

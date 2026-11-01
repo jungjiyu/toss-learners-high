@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import re,json,hashlib,sys
+import xml.etree.ElementTree as ET
 R=Path(__file__).resolve().parents[1]
 class P(HTMLParser):
  def __init__(self,s):super().__init__();self.refs=[];self.ids=set();self.feed(s)
@@ -18,6 +19,9 @@ for row in manifest['files']:
  if hashlib.sha256(p.read_bytes()).hexdigest()!=row['published_sha256']:errors.append([row['published_path'],'content hash mismatch'])
 for p in paths:
  if p.suffix not in ['.html','.css','.svg']:continue
+ if p.suffix=='.svg':
+  try:ET.parse(p)
+  except ET.ParseError as e:errors.append([str(p.relative_to(R)),'invalid SVG XML',str(e)])
  s=p.read_text();parsed=P(s);refs=parsed.refs+re.findall(r'url\(\s*["\']?([^)"\']+)',s)
  for ref in refs:
   u=urlsplit(ref)

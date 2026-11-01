@@ -1,0 +1,137 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recovery.java · 구현 근거</title><style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto;padding:0 20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f7;padding:20px;font:14px/1.6 monospace}</style><h1>Recovery.java</h1><p>원본 커밋: 08ae82a710767f727cbcc2e1e258ac207ac558f5</p><p>src/main/java/market/Recovery.java</p><pre><code>package market;
+
+import org.springframework.stereotype.Component;
+import org.springframework.scheduling.annotation.Scheduled;
+import io.micrometer.core.instrument.MeterRegistry;
+import jakarta.annotation.PreDestroy;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicBoolean;
+import static market.Support.*;
+
+@Component
+class Recovery {
+    final Ledger l; final Provider pg; final Hooks hooks; final MeterRegistry metrics;
+    static int workerCount(){long n=setting(&quot;PG_WORKERS&quot;,4);require(n&gt;=1 &amp;&amp; n&lt;=32,500,&quot;INVALID_PG_WORKERS&quot;);return (int)n;}
+    final int concurrency=workerCount();
+    final ExecutorService workers=Executors.newFixedThreadPool(concurrency); final Semaphore slots=new Semaphore(concurrency);
+    final AtomicBoolean paused=new AtomicBoolean(false);
+    final long leaseMs=setting(&quot;LEASE_MS&quot;,3000),pollMs=setting(&quot;POLL_MS&quot;,500),reviewMs=setting(&quot;REVIEW_AFTER_MS&quot;,30000);
+    Recovery(Ledger l,Provider p,Hooks h,MeterRegistry m){this.l=l;pg=p;hooks=h;metrics=m;m.gauge(&quot;mogu_recovery_active&quot;,slots,s-&gt;concurrency-s.availablePermits());}
+    @PreDestroy void stop(){workers.shutdownNow();}
+    @Scheduled(fixedDelay=50) void dispatch(){
+        if(paused.get())return;
+        try{
+            for(int i=0;i&lt;concurrency &amp;&amp; slots.tryAcquire();i++){
+                Map&lt;String,Object&gt; a;
+                try{a=claim();}catch(Exception e){slots.release();throw e;}
+                if(a==null){slots.release();break;}
+                metrics.counter(&quot;mogu_recovery_claims&quot;).increment();
+                workers.submit(()-&gt;{var sample=io.micrometer.core.instrument.Timer.start(metrics);try{work(a);}catch(Exception e){metrics.counter(&quot;mogu_recovery_errors&quot;).increment();}finally{sample.stop(metrics.timer(&quot;mogu_recovery_work&quot;));slots.release();}});
+            }
+        }catch(Exception e){metrics.counter(&quot;mogu_scan_errors&quot;).increment();}
+    }
+    @Scheduled(fixedDelay=200) void expiry(){if(paused.get())return;try{l.expire();}catch(Exception e){metrics.counter(&quot;mogu_expiry_errors&quot;).increment();}}
+    Map&lt;String,Object&gt; claim(){return l.transaction(()-&gt;{
+        var a=l.one(&quot;SELECT * FROM attempts WHERE workflow&lt;&gt;&#x27;RESOLVED&#x27; AND next_at&lt;=UTC_TIMESTAMP(6) AND (lease_until IS NULL OR lease_until&lt;=UTC_TIMESTAMP(6)) ORDER BY next_at,id LIMIT 1 FOR UPDATE SKIP LOCKED&quot;);
+        if(a==null)return null;
+        l.db.update(&quot;UPDATE attempts SET generation=generation+1,lease_until=TIMESTAMPADD(MICROSECOND,?,UTC_TIMESTAMP(6)) WHERE id=?&quot;,leaseMs*1000,a.get(&quot;id&quot;));
+        a.put(&quot;generation&quot;,num(a,&quot;generation&quot;)+1);return a;
+    });}
+    Map&lt;String,Object&gt; locked(Map&lt;String,Object&gt; claimed){
+        l.lockReservation(str(claimed,&quot;reservation_id&quot;));
+        return l.one(&quot;SELECT *, TIMESTAMPDIFF(MICROSECOND,started_at,UTC_TIMESTAMP(6))/1000 AS age_ms FROM attempts WHERE id=? FOR UPDATE&quot;,claimed.get(&quot;id&quot;));
+    }
+    boolean owns(Map&lt;String,Object&gt; current,Map&lt;String,Object&gt; claim){return num(current,&quot;generation&quot;)==num(claim,&quot;generation&quot;);}
+    String arm(Map&lt;String,Object&gt; claim,String kind){return l.transaction(()-&gt;{
+        var a=locked(claim);if(!owns(a,claim)||str(a,&quot;workflow&quot;).equals(&quot;RESOLVED&quot;))return null;
+        if(!str(a,&quot;credential_scope&quot;).equals(pg.scope())){review(str(a,&quot;id&quot;),&quot;CREDENTIAL_SCOPE_CHANGED&quot;);return null;}
+        if(kind.equals(&quot;CONFIRM&quot;)&amp;&amp;!str(a,&quot;intent&quot;).equals(&quot;CONTINUE&quot;))return null;
+        var op=l.one(&quot;SELECT *, IFNULL(TIMESTAMPDIFF(SECOND,armed_at,UTC_TIMESTAMP(6)),0) AS age_seconds FROM operations WHERE attempt_id=? AND kind=? FOR UPDATE&quot;,a.get(&quot;id&quot;),kind);
+        if(op==null)return null;
+        if(str(op,&quot;dispatch&quot;).equals(&quot;BLOCKED&quot;))return null;
+        if(num(op,&quot;age_seconds&quot;)&gt;=setting(&quot;PG_IDEMPOTENCY_SECONDS&quot;,1296000)) {review(str(a,&quot;id&quot;),&quot;IDEMPOTENCY_WINDOW_EXPIRED&quot;);return null;}
+        l.db.update(&quot;UPDATE operations SET dispatch=&#x27;ARMED&#x27;,armed_at=COALESCE(armed_at,UTC_TIMESTAMP(6)),calls=calls+1 WHERE attempt_id=? AND kind=?&quot;,a.get(&quot;id&quot;),kind);
+        return str(op,&quot;idem_key&quot;);
+    });}
+    void review(String aid,String reason){l.db.update(&quot;UPDATE attempts SET workflow=&#x27;REVIEW&#x27;,review_reason=? WHERE id=?&quot;,reason,aid);}
+    Map&lt;String,Object&gt; call(String kind,Map&lt;String,Object&gt; a,String key){
+        metrics.counter(&quot;mogu_pg_calls&quot;,&quot;kind&quot;,kind).increment();
+        var sample=io.micrometer.core.instrument.Timer.start(metrics);
+        try{return pg.request(kind,a,key);}finally{sample.stop(metrics.timer(&quot;mogu_pg_duration&quot;,&quot;kind&quot;,kind));}
+    }
+    void work(Map&lt;String,Object&gt; a){
+        hooks.hit(&quot;worker_claimed&quot;);
+        var op=l.one(&quot;SELECT * FROM operations WHERE attempt_id=? AND kind=&#x27;CONFIRM&#x27;&quot;,a.get(&quot;id&quot;));
+        Map&lt;String,Object&gt; observation;
+        String source;
+        if(str(op,&quot;dispatch&quot;).equals(&quot;PREPARED&quot;)){
+            String key=arm(a,&quot;CONFIRM&quot;);if(key==null){finish(a);return;}
+            hooks.hit(&quot;confirm_armed&quot;);observation=call(&quot;CONFIRM&quot;,a,key);source=&quot;CONFIRM&quot;;
+        }else{observation=call(&quot;QUERY&quot;,a,&quot;&quot;);source=&quot;QUERY&quot;;}
+        hooks.hit(&quot;pg_observed&quot;);
+        apply(a,observation,source);
+        // A query of READY/NOT_FOUND is not a final failure. Retrying CONTINUE uses the SAME operation.
+        if(source.equals(&quot;QUERY&quot;) &amp;&amp; Set.of(&quot;READY&quot;,&quot;UNKNOWN&quot;,&quot;IN_PROGRESS&quot;).contains(str(observation,&quot;status&quot;))){
+            String key=arm(a,&quot;CONFIRM&quot;);
+            if(key!=null){hooks.hit(&quot;confirm_armed&quot;);apply(a,call(&quot;CONFIRM&quot;,a,key),&quot;CONFIRM&quot;);}
+        }
+        var current=l.one(&quot;SELECT * FROM attempts WHERE id=?&quot;,a.get(&quot;id&quot;));
+        if(str(current,&quot;intent&quot;).equals(&quot;CANCEL_REQUESTED&quot;)&amp;&amp;str(current,&quot;fact&quot;).equals(&quot;APPROVED&quot;)&amp;&amp;!str(current,&quot;workflow&quot;).equals(&quot;RESOLVED&quot;)){
+            String key=arm(a,&quot;CANCEL&quot;);if(key!=null){hooks.hit(&quot;cancel_armed&quot;);apply(a,call(&quot;CANCEL&quot;,a,key),&quot;CANCEL&quot;);}
+        }
+        hooks.hit(&quot;worker_before_finish&quot;);finish(a);
+    }
+    void apply(Map&lt;String,Object&gt; claim,Map&lt;String,Object&gt; observed,String source){
+        l.transaction(()-&gt;{
+            var a=locked(claim);String aid=str(a,&quot;id&quot;);
+            String status=str(observed,&quot;status&quot;);String fact=switch(status){case &quot;DONE&quot;-&gt;&quot;APPROVED&quot;;case &quot;CANCELED&quot;-&gt;&quot;CANCELED_FINAL&quot;;case &quot;ABORTED&quot;,&quot;EXPIRED&quot;-&gt;&quot;NO_CHARGE_FINAL&quot;;default-&gt;&quot;UNOBSERVED&quot;;};
+            boolean valid=fact.equals(&quot;UNOBSERVED&quot;) || (str(observed,&quot;paymentKey&quot;).equals(str(a,&quot;payment_key&quot;))&amp;&amp;str(observed,&quot;orderId&quot;).equals(str(a,&quot;order_id&quot;))&amp;&amp;observed.get(&quot;totalAmount&quot;) instanceof Number&amp;&amp;num(observed,&quot;totalAmount&quot;)==num(a,&quot;amount&quot;)&amp;&amp;str(observed,&quot;currency&quot;).equals(str(a,&quot;currency&quot;))&amp;&amp;str(observed,&quot;mid&quot;).equals(str(a,&quot;merchant&quot;))&amp;&amp;Set.of(&quot;CARD&quot;,&quot;카드&quot;).contains(str(observed,&quot;method&quot;)));
+            if(status.equals(&quot;CANCELED&quot;) &amp;&amp; (!(observed.get(&quot;balanceAmount&quot;) instanceof Number)||num(observed,&quot;balanceAmount&quot;)!=0))valid=false;
+            if(!Set.of(&quot;DONE&quot;,&quot;CANCELED&quot;,&quot;ABORTED&quot;,&quot;EXPIRED&quot;,&quot;READY&quot;,&quot;IN_PROGRESS&quot;,&quot;UNKNOWN&quot;).contains(status))valid=false;
+            // Actual provider final no-charge states require provider-specific future-dispatch proof.
+            if(fact.equals(&quot;NO_CHARGE_FINAL&quot;)&amp;&amp;!pg.base.startsWith(&quot;http://127.0.0.1:&quot;))valid=false;
+            l.db.update(&quot;INSERT IGNORE INTO observations(attempt_id,source,fact,valid,detail) VALUES(?,?,?,?,?)&quot;,aid,source,fact,valid,status);
+            if(!owns(a,claim)){l.db.update(&quot;UPDATE attempts SET dirty=dirty+1,next_at=UTC_TIMESTAMP(6) WHERE id=?&quot;,aid);return null;}
+            if(!valid){review(aid,&quot;OBSERVATION_BINDING_OR_CONTRACT&quot;);return null;}
+            var r=l.one(&quot;SELECT * FROM reservations WHERE id=?&quot;,a.get(&quot;reservation_id&quot;));
+            String state=str(r,&quot;state&quot;);
+            if(!state.equals(&quot;PAYMENT_PENDING&quot;)){
+                if(state.equals(&quot;PURCHASED&quot;)&amp;&amp;!fact.equals(&quot;APPROVED&quot;)&amp;&amp;!fact.equals(&quot;UNOBSERVED&quot;))review(aid,&quot;POST_PURCHASE_EXTERNAL_CHANGE&quot;);
+                else if(!fact.equals(&quot;UNOBSERVED&quot;))l.db.update(&quot;UPDATE attempts SET workflow=&#x27;RESOLVED&#x27;,lease_until=NULL WHERE id=?&quot;,aid);
+                return null;
+            }
+            if(fact.equals(&quot;UNOBSERVED&quot;))return null;
+            if(str(a,&quot;fact&quot;).equals(&quot;CANCELED_FINAL&quot;))return null;
+            if(fact.equals(&quot;NO_CHARGE_FINAL&quot;)&amp;&amp;str(a,&quot;fact&quot;).equals(&quot;APPROVED&quot;)){review(aid,&quot;CONFLICTING_FINAL_FACT&quot;);return null;}
+            l.db.update(&quot;UPDATE attempts SET fact=? WHERE id=?&quot;,fact,aid);
+            if(fact.equals(&quot;APPROVED&quot;)){
+                if(str(a,&quot;intent&quot;).equals(&quot;CONTINUE&quot;)){
+                    hooks.hit(&quot;purchase_before_commit&quot;);
+                    l.db.update(&quot;UPDATE reservations SET state=&#x27;PURCHASED&#x27;,terminal_at=UTC_TIMESTAMP(6) WHERE id=?&quot;,r.get(&quot;id&quot;));
+                    l.db.update(&quot;UPDATE user_guard SET active_id=NULL,purchased_id=? WHERE sale_id=? AND user_id=? AND active_id=?&quot;,r.get(&quot;id&quot;),r.get(&quot;sale_id&quot;),r.get(&quot;user_id&quot;),r.get(&quot;id&quot;));
+                    l.resolve(aid,fact);metrics.counter(&quot;mogu_purchases&quot;,&quot;source&quot;,source).increment();
+                }else l.db.update(&quot;INSERT IGNORE INTO operations(attempt_id,kind,idem_key) VALUES(?,&#x27;CANCEL&#x27;,?)&quot;,aid,id());
+            }else{
+                l.release(r,fact.equals(&quot;CANCELED_FINAL&quot;)||str(a,&quot;intent&quot;).equals(&quot;CANCEL_REQUESTED&quot;)?&quot;CANCELLED&quot;:&quot;EXPIRED&quot;,fact);
+                l.db.update(&quot;UPDATE operations SET dispatch=&#x27;BLOCKED&#x27; WHERE attempt_id=? AND dispatch=&#x27;PREPARED&#x27;&quot;,aid);
+                l.resolve(aid,fact);
+            }
+            return null;
+        });
+        hooks.hit(&quot;purchase_after_commit&quot;);
+    }
+    void finish(Map&lt;String,Object&gt; claim){l.transaction(()-&gt;{
+        var a=locked(claim);if(!owns(a,claim))return null;
+        if(!str(a,&quot;workflow&quot;).equals(&quot;RESOLVED&quot;)){
+            boolean isReview=str(a,&quot;workflow&quot;).equals(&quot;REVIEW&quot;) || num(a,&quot;age_ms&quot;)&gt;=reviewMs;
+            long delay=isReview?setting(&quot;REVIEW_POLL_MS&quot;,2000):Math.min(pollMs*4,pollMs*(1L&lt;&lt;Math.min(2,num(a,&quot;rounds&quot;))));
+            // dirty generation preserves a signal arriving during execution; floor prevents unbounded webhook amplification.
+            if(num(a,&quot;dirty&quot;)!=num(claim,&quot;dirty&quot;))delay=Math.min(delay,pollMs);
+            l.db.update(&quot;UPDATE attempts SET workflow=?,review_reason=CASE WHEN ? THEN COALESCE(review_reason,&#x27;LONG_UNKNOWN&#x27;) ELSE review_reason END,next_at=TIMESTAMPADD(MICROSECOND,?,UTC_TIMESTAMP(6)),rounds=rounds+1,lease_until=NULL WHERE id=?&quot;,isReview?&quot;REVIEW&quot;:&quot;RECONCILING&quot;,isReview,delay*1000,a.get(&quot;id&quot;));
+        }else l.db.update(&quot;UPDATE attempts SET lease_until=NULL WHERE id=?&quot;,a.get(&quot;id&quot;));
+        l.db.update(&quot;UPDATE inbox SET processed=TRUE WHERE attempt_id=? AND processed=FALSE&quot;,a.get(&quot;id&quot;));
+        return null;
+    });}
+}
+</code></pre></html>

@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "commits": [
+    {
+      "variant": "expiry",
+      "source": "d1568748c547cd701162e0d9833b1abeb7a94e72",
+      "at": 1793440345.389004
+    },
+    {
+      "variant": "precheck",
+      "source": "32666c9ebee5b1f230c59a3f5a4c8f8887911786",
+      "at": 1793440347.269954
+    },
+    {
+      "variant": "ready",
+      "source": "8bbb85ae337aa5d73f6e564d42bb3523f9572b4d",
+      "at": 1793440348.940566
+    },
+    {
+      "variant": "late",
+      "source": "e2a232bd1baa13c3415c3567459e847ee536d714",
+      "at": 1793440351.936766
+    },
+    {
+      "variant": "fold",
+      "source": "4664e2d6f791b306ce879dc5849ae342775cc22f",
+      "at": 1793440353.683454
+    },
+    {
+      "variant": "budget",
+      "source": "02f02a3ac64df1ad2784775865acd9d83704ce23",
+      "at": 1793440355.4931111
+    },
+    {
+      "variant": "baseline",
+      "source": "f9be9e9be315befa1fa77e76cf387d7a11e090c6",
+      "at": 1793440358.43979
+    },
+    {
+      "variant": "buckets",
+      "source": "7241085caa79f619ff9f510fb7c2c4181fbdbdf4",
+      "at": 1793440360.188928
+    },
+    {
+      "variant": "short-lock",
+      "source": "7f20afc4b17f4e3ea8915154d6c58e6080bb6039",
+      "at": 1793440362.116238
+    },
+    {
+      "variant": "webhook",
+      "source": "73f9572ce630c59e9bf1947a8e46f984cb4e9e0d",
+      "at": 1793440363.856274
+    },
+    {
+      "variant": "combined",
+      "source": "62b62070746eabe53cbfcccca4ce2ed83300097a",
+      "at": 1793440365.544579
+    },
+    {
+      "variant": "pull",
+      "source": "622e97a3a99ddffa082d3d64602f5723ce7fff05",
+      "at": 1793440368.492714
+    }
+  ],
+  "scope": "Common error classification; no change to payment-admission closed semantics or transaction outcome. Generic503 remains ambiguous to clients. Prior fixture failure included competing webhook DB borrowers; disable webhook in pool-only test."
+}

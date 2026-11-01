@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "variant": "baseline",
+      "suite": "review_money",
+      "run": "retry-correctness-baseline-v1",
+      "at": 1793436779.6601942,
+      "passed": true
+    },
+    {
+      "variant": "baseline",
+      "suite": "terminal_reconciliation",
+      "run": "terminal-retry-correctness-baseline-v1",
+      "at": 1793436786.82828,
+      "passed": true
+    },
+    {
+      "variant": "pull",
+      "suite": "review_money",
+      "run": "retry-correctness-pull-v1",
+      "at": 1793436801.304637,
+      "passed": true
+    },
+    {
+      "variant": "pull",
+      "suite": "terminal_reconciliation",
+      "run": "terminal-retry-correctness-pull-v1",
+      "at": 1793436808.368717,
+      "passed": true
+    },
+    {
+      "variant": "late",
+      "suite": "review_money",
+      "run": "retry-correctness-late-v1",
+      "at": 1793436822.620656,
+      "passed": true
+    },
+    {
+      "variant": "late",
+      "suite": "terminal_reconciliation",
+      "run": "terminal-retry-correctness-late-v1",
+      "at": 1793436829.577112,
+      "passed": true
+    },
+    {
+      "variant": "webhook",
+      "suite": "review_money",
+      "run": "retry-correctness-webhook-v1",
+      "at": 1793436843.8109171,
+      "passed": true
+    },
+    {
+      "variant": "buckets",
+      "suite": "review_money",
+      "run": "retry-correctness-buckets-v1",
+      "at": 1793436863.671637,
+      "passed": true
+    },
+    {
+      "variant": "short-lock",
+      "suite": "review_money",
+      "run": "retry-correctness-short-lock-v1",
+      "at": 1793436883.1381152,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "suite": "review_money",
+      "run": "retry-correctness-combined-v1",
+      "at": 1793436897.110222,
+      "passed": true
+    },
+    {
+      "variant": "budget",
+      "suite": "review_money",
+      "run": "retry-correctness-budget-v1",
+      "at": 1793436911.462877,
+      "passed": true
+    },
+    {
+      "variant": "fold",
+      "suite": "review_money",
+      "run": "retry-correctness-fold-v1",
+      "at": 1793436925.833371,
+      "passed": true
+    }
+  ]
+}

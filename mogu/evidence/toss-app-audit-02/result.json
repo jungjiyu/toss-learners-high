@@ -1,0 +1,80 @@
+{
+  "at": 1793377059.9874618,
+  "passed": true,
+  "errors": [],
+  "scope": "Read-only app stock/user guard + authenticated actual TEST PG status; no provider effect-count ledger available. Unsupported-method REVIEW is not counted as a successful purchase or automatic recovery.",
+  "stock": [
+    {
+      "sale": 1793365526496,
+      "capacity": 1,
+      "available": 1,
+      "occupied": 0
+    },
+    {
+      "sale": 1793368274002,
+      "capacity": 1,
+      "available": 0,
+      "occupied": 1
+    },
+    {
+      "sale": 1793369530487,
+      "capacity": 1,
+      "available": 0,
+      "occupied": 1
+    },
+    {
+      "sale": 1793369878661,
+      "capacity": 1,
+      "available": 1,
+      "occupied": 0
+    }
+  ],
+  "transactions": [
+    {
+      "reservation": "48a04b40-938b-4be3-be03-e90c4afee97a",
+      "state": "PAYMENT_PENDING",
+      "intent": "CONTINUE",
+      "workflow": "REVIEW",
+      "review_reason": "OBSERVATION_BINDING_OR_CONTRACT",
+      "provider_http": 200,
+      "provider_status": "DONE",
+      "method": "간편결제",
+      "binding_matches": true,
+      "supported_card": false,
+      "balanceAmount": 1000,
+      "payment_key_sha256": "b874edbbc4a39b335ba78bc1909f6e8c603c88fed318adfd8355c9240a850831",
+      "inbox_count": 0
+    },
+    {
+      "reservation": "8693d36b-8c5a-4cce-a6fa-3a251384a537",
+      "state": "CANCELLED",
+      "intent": "CANCEL_REQUESTED",
+      "workflow": "RESOLVED",
+      "review_reason": null,
+      "provider_http": 200,
+      "provider_status": "CANCELED",
+      "method": "카드",
+      "binding_matches": true,
+      "supported_card": true,
+      "balanceAmount": 0,
+      "payment_key_sha256": "0d772f99d1f5737ca56121cbc4eb2f709580bfee4b8e2d3493e748f223572d70",
+      "inbox_count": 2
+    },
+    {
+      "reservation": "01121931-6c4b-4b90-8e4d-054c2b00a34b",
+      "state": "PURCHASED",
+      "intent": "CONTINUE",
+      "workflow": "RESOLVED",
+      "review_reason": null,
+      "provider_http": 200,
+      "provider_status": "DONE",
+      "method": "카드",
+      "binding_matches": true,
+      "supported_card": true,
+      "balanceAmount": 1000,
+      "payment_key_sha256": "b31abfe110875e9baf50bbce9d419354670d3c67161eebf1b7d11bf8eeec9674",
+      "inbox_count": 0
+    }
+  ],
+  "source": "e23de53089bbe74c97eebea46803636fa6fb217a"
+}

@@ -1,0 +1,24 @@
+{
+  "at": 1793438824.2100322,
+  "before_implementation": true,
+  "parent": "late c28777ac6884ef691837f3b822cd406940a72364",
+  "observations": {
+    "ready_index": "256->1 primary locks, empty claims disappear; retry400 only992->1022 deadline buys in single pilot, insufficient evidence of robust gain",
+    "late_retry400": "DB statement deltas9420 attempt INSERT,9408 operation INSERT,9425 budget admission UPDATE costing82.75 cumulative SQL seconds; only1172 pending releases including warm/drain. Rejected prepared writes are rolled back but not free."
+  },
+  "hypothesis": "Reject already-full payment admission before preparing attempt/operation writes and before contending on budgets UPDATE. Ordinary READ COMMITTED SELECT is only a conservative rejection screen. Retain authoritative conditional increment in beforeCommit for every accepted transaction; no slot increase/cache/Redis/worker change. Reduce retry amplification cost and let existing workers/first requests progress.",
+  "branch": "experiment-budget-precheck",
+  "preserved_contract": [
+    "request idempotency replay remains before screen",
+    "reservation owner, body binding, state, original TTL validated before screen",
+    "full observation throws same explicit503 and entire command rolls back; same key can later accept",
+    "free observation is not permission: races still use global conditional UPDATE pending<256, same durability and cap across JVMs",
+    "SELECT observes full committed value at that read; a subsequent free slot does not make prior rejection unsafe. No reservation promise or PG knowledge is introduced."
+  ],
+  "discriminator": [
+    "same seeds/client once-retry 100/400 pilots against both originals and index alternative",
+    "track precheck closed/open count, authoritative race-closed, attempt INSERT/rollback SQL count and budget wait, slot ages and first/retry buyer outcomes",
+    "two-JVM cap and explicit503 rollback samekey and duplicate replay while cap full"
+  ],
+  "reject": "Any safety/replay/rollback difference; no meaningful reduction in rejected prepare/lock cost; or failure of preregistered final server gates. Final source choice after pilot, not final threshold revision."
+}

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "lease_ms": 400,
+  "operation_lock_hold_after_observed_wait_seconds": 0.55,
+  "calls_before_valid_reclaim": [],
+  "state_after_valid_reclaim": "PURCHASED"
+}

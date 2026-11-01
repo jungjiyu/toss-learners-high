@@ -1,0 +1,139 @@
+{
+  "expected_old_defect": true,
+  "checks": [
+    {
+      "case": "PURCHASED_late_webhook_timeout_recovery",
+      "before_calls": [
+        {
+          "at": 1793426003.105728,
+          "id": 1,
+          "kind": "CONFIRM",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        }
+      ],
+      "during_calls": [
+        {
+          "at": 1793426003.105728,
+          "id": 1,
+          "kind": "CONFIRM",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        },
+        {
+          "at": 1793426003.264333,
+          "id": 2,
+          "kind": "QUERY",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        },
+        {
+          "at": 1793426004.096983,
+          "id": 3,
+          "kind": "CONFIRM",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        }
+      ],
+      "after_calls": [
+        {
+          "at": 1793426003.105728,
+          "id": 1,
+          "kind": "CONFIRM",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        },
+        {
+          "at": 1793426003.264333,
+          "id": 2,
+          "kind": "QUERY",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        },
+        {
+          "at": 1793426004.096983,
+          "id": 3,
+          "kind": "CONFIRM",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        },
+        {
+          "at": 1793426004.496762,
+          "id": 4,
+          "kind": "QUERY",
+          "payment_key": "sim_55a2f48a21594f69bfb9e4d8363c8847"
+        }
+      ],
+      "added": {
+        "QUERY": 2,
+        "CONFIRM": 1
+      },
+      "effect_delta": 0,
+      "timeout_seconds": 1.4,
+      "app_timeout_ms": 800
+    },
+    {
+      "case": "CANCELLED_late_webhook_timeout_recovery",
+      "before_calls": [
+        {
+          "at": 1793426004.659658,
+          "id": 5,
+          "kind": "CONFIRM",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        },
+        {
+          "at": 1793426004.678103,
+          "id": 6,
+          "kind": "CANCEL",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        }
+      ],
+      "during_calls": [
+        {
+          "at": 1793426004.659658,
+          "id": 5,
+          "kind": "CONFIRM",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        },
+        {
+          "at": 1793426004.678103,
+          "id": 6,
+          "kind": "CANCEL",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        },
+        {
+          "at": 1793426004.822707,
+          "id": 7,
+          "kind": "QUERY",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        }
+      ],
+      "after_calls": [
+        {
+          "at": 1793426004.659658,
+          "id": 5,
+          "kind": "CONFIRM",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        },
+        {
+          "at": 1793426004.678103,
+          "id": 6,
+          "kind": "CANCEL",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        },
+        {
+          "at": 1793426004.822707,
+          "id": 7,
+          "kind": "QUERY",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        },
+        {
+          "at": 1793426006.12901,
+          "id": 8,
+          "kind": "QUERY",
+          "payment_key": "sim_ccf221430c264aeeb56ab4ac0614f974"
+        }
+      ],
+      "added": {
+        "QUERY": 2
+      },
+      "effect_delta": 0,
+      "timeout_seconds": 1.4,
+      "app_timeout_ms": 800
+    }
+  ],
+  "scope": "HTTP PG calls counted independently; zero duplicate effect alone is insufficient"
+}

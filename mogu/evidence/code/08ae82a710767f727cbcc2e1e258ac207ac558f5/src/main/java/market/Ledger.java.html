@@ -1,0 +1,121 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ledger.java · 구현 근거</title><style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto;padding:0 20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f7;padding:20px;font:14px/1.6 monospace}</style><h1>Ledger.java</h1><p>원본 커밋: 08ae82a710767f727cbcc2e1e258ac207ac558f5</p><p>src/main/java/market/Ledger.java</p><pre><code>package market;
+
+import org.springframework.stereotype.Service;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.support.TransactionTemplate;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import java.util.*;
+import java.util.function.Supplier;
+import static market.Support.*;
+
+@Service
+class Ledger {
+    final JdbcTemplate db; final TransactionTemplate tx; final Support codec; final Hooks hooks; final Provider pg;
+    final long holdSeconds=setting(&quot;HOLD_SECONDS&quot;,120), maxPending=setting(&quot;MAX_PENDING&quot;,256);
+    Ledger(JdbcTemplate db,PlatformTransactionManager manager,Support codec,Hooks hooks,Provider pg){
+        this.db=db;this.pg=pg;this.codec=codec;this.hooks=hooks;tx=new TransactionTemplate(manager);
+        tx.setIsolationLevel(TransactionDefinition.ISOLATION_READ_COMMITTED);tx.setTimeout(5);
+    }
+    record Reply(int status,Map&lt;String,Object&gt; body){}
+    Reply answer(int status,String code){return new Reply(status,Map.of(&quot;code&quot;,code));}
+    Map&lt;String,Object&gt; one(String q,Object... a){var rows=db.queryForList(q,a);return rows.isEmpty()?null:rows.getFirst();}
+    &lt;T&gt;T transaction(Supplier&lt;T&gt; work){return tx.execute(s-&gt;work.get());}
+    Reply command(long user,String op,String scope,String key,Object payload,Supplier&lt;Reply&gt; work){
+        require(key!=null &amp;&amp; key.matches(&quot;[A-Za-z0-9._:-]{1,128}&quot;),400,&quot;IDEMPOTENCY_KEY_REQUIRED&quot;);
+        String digest=hash(codec.encode(payload));
+        Reply r=transaction(()-&gt;{
+            db.update(&quot;INSERT INTO request_results(principal,operation,scope,idem_key,request_hash) VALUES(?,?,?,?,?) ON DUPLICATE KEY UPDATE idem_key=idem_key&quot;,user,op,scope,key,digest);
+            var existing=one(&quot;SELECT * FROM request_results WHERE principal=? AND operation=? AND scope=? AND idem_key=? FOR UPDATE&quot;,user,op,scope,key);
+            if(!digest.equals(existing.get(&quot;request_hash&quot;)))return answer(409,&quot;IDEMPOTENCY_CONFLICT&quot;);
+            if(existing.get(&quot;body&quot;)!=null)return new Reply(((Number)existing.get(&quot;http_status&quot;)).intValue(),codec.decode(str(existing,&quot;body&quot;)));
+            Reply result=work.get();
+            db.update(&quot;UPDATE request_results SET http_status=?,body=? WHERE principal=? AND operation=? AND scope=? AND idem_key=?&quot;,result.status,codec.encode(result.body),user,op,scope,key);
+            return result;
+        });
+        hooks.hit(op+&quot;_after_commit&quot;);return r;
+    }
+    Map&lt;String,Object&gt; guard(long sale,long user){
+        db.update(&quot;INSERT INTO user_guard(sale_id,user_id) VALUES(?,?) ON DUPLICATE KEY UPDATE user_id=user_id&quot;,sale,user);
+        return one(&quot;SELECT * FROM user_guard WHERE sale_id=? AND user_id=? FOR UPDATE&quot;,sale,user);
+    }
+    // All mutations of an existing reservation: guard -&gt; reservation -&gt; attempt -&gt; inventory -&gt; budget.
+    // Fresh reservation: request -&gt; guard -&gt; inventory -&gt; INSERT new reservation. No worker can see that new ID yet.
+    Map&lt;String,Object&gt; lockReservation(String id){
+        var initial=one(&quot;SELECT sale_id,user_id FROM reservations WHERE id=?&quot;,id);
+        require(initial!=null,404,&quot;NOT_FOUND&quot;);guard(num(initial,&quot;sale_id&quot;),num(initial,&quot;user_id&quot;));
+        return one(&quot;SELECT *, expires_at&lt;=UTC_TIMESTAMP(6) AS expired FROM reservations WHERE id=? FOR UPDATE&quot;,id);
+    }
+    boolean expired(Map&lt;String,Object&gt; r){return num(r,&quot;expired&quot;)!=0;}
+    Map&lt;String,Object&gt; view(String id,long user){
+        var r=one(&quot;SELECT * FROM reservations WHERE id=?&quot;,id);require(r!=null,404,&quot;NOT_FOUND&quot;);require(num(r,&quot;user_id&quot;)==user,403,&quot;FORBIDDEN&quot;);
+        var a=one(&quot;SELECT id,intent,fact,workflow,review_reason FROM attempts WHERE reservation_id=?&quot;,id);
+        var result=new LinkedHashMap&lt;&gt;(r);if(a!=null)result.put(&quot;payment&quot;,a);return result;
+    }
+    Reply reserve(long user,long sale,String key,Map&lt;String,Object&gt; body){
+        return command(user,&quot;reserve&quot;,&quot;&quot;+sale,key,new TreeMap&lt;&gt;(body),()-&gt;{
+            if(!body.keySet().equals(Set.of(&quot;quantity&quot;)) || !(body.get(&quot;quantity&quot;) instanceof Number) || ((Number)body.get(&quot;quantity&quot;)).doubleValue()!=1.0)return answer(400,&quot;QUANTITY_MUST_BE_ONE&quot;);
+            var g=guard(sale,user);
+            if(g.get(&quot;active_id&quot;)!=null||g.get(&quot;purchased_id&quot;)!=null)return answer(409,&quot;USER_LIMIT&quot;);
+            one(&quot;SELECT id FROM sales WHERE id=? FOR UPDATE&quot;,sale);
+            var s=one(&quot;SELECT *, opens_at&lt;=UTC_TIMESTAMP(6) AND closes_at&gt;UTC_TIMESTAMP(6) AS is_open FROM sales WHERE id=?&quot;,sale);
+            if(s==null)return answer(404,&quot;SALE_NOT_FOUND&quot;);
+            if(num(s,&quot;is_open&quot;)==0)return answer(409,&quot;SALE_CLOSED&quot;);
+            if(db.update(&quot;UPDATE sales SET available=available-1 WHERE id=? AND available&gt;0 AND opens_at&lt;=UTC_TIMESTAMP(6) AND closes_at&gt;UTC_TIMESTAMP(6)&quot;,sale)!=1)return answer(409,&quot;SOLD_OUT&quot;);
+            hooks.hit(&quot;reserve_after_stock&quot;);
+            String id=id(),order=&quot;mogu_&quot;+id.replace(&quot;-&quot;,&quot;&quot;);
+            db.update(&quot;INSERT INTO reservations(id,sale_id,user_id,state,price,currency,order_id,expires_at) VALUES(?,?,?,&#x27;HELD&#x27;,?,?,?,TIMESTAMPADD(SECOND,?,UTC_TIMESTAMP(6)))&quot;,id,sale,user,s.get(&quot;price&quot;),s.get(&quot;currency&quot;),order,holdSeconds);
+            db.update(&quot;UPDATE user_guard SET active_id=? WHERE sale_id=? AND user_id=?&quot;,id,sale,user);
+            return new Reply(201,Map.of(&quot;id&quot;,id,&quot;code&quot;,&quot;RESERVED&quot;,&quot;orderId&quot;,order,&quot;amount&quot;,s.get(&quot;price&quot;),&quot;currency&quot;,s.get(&quot;currency&quot;)));
+        });
+    }
+    Reply pay(long user,String rid,String key,Map&lt;String,Object&gt; body){
+        return command(user,&quot;pay&quot;,rid,key,new TreeMap&lt;&gt;(body),()-&gt;{
+            var r=lockReservation(rid);require(num(r,&quot;user_id&quot;)==user,403,&quot;FORBIDDEN&quot;);
+            require(body.keySet().equals(Set.of(&quot;paymentKey&quot;,&quot;orderId&quot;,&quot;amount&quot;,&quot;currency&quot;)),400,&quot;INVALID_PAYMENT_FIELDS&quot;);
+            String pk=str(body,&quot;paymentKey&quot;);require(pk.matches(&quot;[A-Za-z0-9_-]{1,200}&quot;),400,&quot;INVALID_PAYMENT_KEY&quot;);
+            require(str(r,&quot;order_id&quot;).equals(body.get(&quot;orderId&quot;)) &amp;&amp; body.get(&quot;amount&quot;) instanceof Number &amp;&amp; ((Number)body.get(&quot;amount&quot;)).doubleValue()==num(r,&quot;price&quot;) &amp;&amp; r.get(&quot;currency&quot;).equals(body.get(&quot;currency&quot;)),409,&quot;PAYMENT_BINDING_MISMATCH&quot;);
+            var old=one(&quot;SELECT * FROM attempts WHERE reservation_id=?&quot;,rid);
+            if(old!=null)return answer(409,&quot;ATTEMPT_ALREADY_BOUND&quot;);
+            if(!str(r,&quot;state&quot;).equals(&quot;HELD&quot;))return answer(409,&quot;NOT_HELD&quot;);
+            if(expired(r)){release(r,&quot;EXPIRED&quot;,&quot;HOLD_TTL&quot;);return answer(409,&quot;EXPIRED&quot;);}
+            if(db.update(&quot;UPDATE budgets SET pending=pending+1 WHERE id=1 AND pending&lt;?&quot;,maxPending)!=1)throw new Failure(503,&quot;PAYMENT_ADMISSION_CLOSED&quot;);
+            String aid=id();
+            db.update(&quot;INSERT INTO attempts(id,reservation_id,payment_key,order_id,amount,currency,merchant,credential_scope) VALUES(?,?,?,?,?,?,?,?)&quot;,aid,rid,pk,r.get(&quot;order_id&quot;),r.get(&quot;price&quot;),r.get(&quot;currency&quot;),env(&quot;PG_MERCHANT&quot;,&quot;mogu-sim&quot;),pg.scope());
+            db.update(&quot;INSERT INTO operations(attempt_id,kind,idem_key) VALUES(?,&#x27;CONFIRM&#x27;,?)&quot;,aid,id());
+            db.update(&quot;UPDATE reservations SET state=&#x27;PAYMENT_PENDING&#x27; WHERE id=?&quot;,rid);
+            return new Reply(202,Map.of(&quot;code&quot;,&quot;PAYMENT_PROCESSING&quot;,&quot;id&quot;,rid,&quot;attemptId&quot;,aid));
+        });
+    }
+    Reply cancel(long user,String rid,String key){
+        return command(user,&quot;cancel&quot;,rid,key,Map.of(&quot;id&quot;,rid),()-&gt;{
+            var r=lockReservation(rid);require(num(r,&quot;user_id&quot;)==user,403,&quot;FORBIDDEN&quot;);
+            String state=str(r,&quot;state&quot;);
+            if(state.equals(&quot;PURCHASED&quot;))return answer(409,&quot;PURCHASE_ALREADY_COMMITTED&quot;);
+            if(state.equals(&quot;HELD&quot;)){release(r,&quot;CANCELLED&quot;,&quot;USER_CANCEL&quot;);return answer(200,&quot;CANCELLED&quot;);}
+            if(!state.equals(&quot;PAYMENT_PENDING&quot;))return answer(200,state);
+            var a=one(&quot;SELECT * FROM attempts WHERE reservation_id=? FOR UPDATE&quot;,rid);
+            db.update(&quot;UPDATE attempts SET intent=&#x27;CANCEL_REQUESTED&#x27;,dirty=dirty+1,next_at=UTC_TIMESTAMP(6) WHERE id=?&quot;,a.get(&quot;id&quot;));
+            var op=one(&quot;SELECT * FROM operations WHERE attempt_id=? AND kind=&#x27;CONFIRM&#x27; FOR UPDATE&quot;,a.get(&quot;id&quot;));
+            if(str(op,&quot;dispatch&quot;).equals(&quot;PREPARED&quot;)){
+                db.update(&quot;UPDATE operations SET dispatch=&#x27;BLOCKED&#x27; WHERE attempt_id=? AND kind=&#x27;CONFIRM&#x27;&quot;,a.get(&quot;id&quot;));
+                release(r,&quot;CANCELLED&quot;,&quot;NEVER_ARMED&quot;);resolve(str(a,&quot;id&quot;),&quot;NO_CHARGE_FINAL&quot;);return answer(200,&quot;CANCELLED&quot;);
+            }
+            return answer(202,&quot;CANCEL_REQUESTED&quot;);
+        });
+    }
+    void release(Map&lt;String,Object&gt; r,String state,String reason){
+        db.update(&quot;UPDATE reservations SET state=?,reason=?,terminal_at=UTC_TIMESTAMP(6) WHERE id=?&quot;,state,reason,r.get(&quot;id&quot;));
+        db.update(&quot;UPDATE sales SET available=available+1 WHERE id=?&quot;,r.get(&quot;sale_id&quot;));
+        db.update(&quot;UPDATE user_guard SET active_id=NULL WHERE sale_id=? AND user_id=? AND active_id=?&quot;,r.get(&quot;sale_id&quot;),r.get(&quot;user_id&quot;),r.get(&quot;id&quot;));
+    }
+    void resolve(String aid,String fact){
+        int n=db.update(&quot;UPDATE attempts SET fact=?,workflow=&#x27;RESOLVED&#x27;,resolved_at=UTC_TIMESTAMP(6),lease_until=NULL WHERE id=? AND resolved_at IS NULL&quot;,fact,aid);
+        if(n==1)db.update(&quot;UPDATE budgets SET pending=pending-1 WHERE id=1&quot;);
+    }
+    void expire(){
+        var rows=db.queryForList(&quot;SELECT id FROM reservations WHERE state=&#x27;HELD&#x27; AND expires_at&lt;=UTC_TIMESTAMP(6) ORDER BY expires_at,id LIMIT 32&quot;);
+        for(var row:rows)transaction(()-&gt;{var r=lockReservation(str(row,&quot;id&quot;));if(str(r,&quot;state&quot;).equals(&quot;HELD&quot;)&amp;&amp;expired(r))release(r,&quot;EXPIRED&quot;,&quot;HOLD_TTL&quot;);return null;});
+    }
+}
+</code></pre></html>

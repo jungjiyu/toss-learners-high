@@ -1,0 +1,82 @@
+[
+  {
+    "run": "terminal_reconciliation-terminal-fixed-baseline-v2",
+    "source": "8a36933c574d6c744553ff13743f3fd59ad5179f",
+    "ok": true
+  },
+  {
+    "run": "contracts-terminal-fixed-baseline-v2",
+    "source": "8a36933c574d6c744553ff13743f3fd59ad5179f",
+    "ok": true
+  },
+  {
+    "run": "extended-terminal-fixed-baseline-v2",
+    "source": "8a36933c574d6c744553ff13743f3fd59ad5179f",
+    "ok": true
+  },
+  {
+    "run": "boundaries-terminal-fixed-baseline-v2",
+    "source": "8a36933c574d6c744553ff13743f3fd59ad5179f",
+    "ok": true
+  },
+  {
+    "run": "terminal_reconciliation-terminal-fixed-pull-v2",
+    "source": "546c1cefc9529f45715dd8e6e32d1be46614f411",
+    "ok": true
+  },
+  {
+    "run": "contracts-terminal-fixed-pull-v2",
+    "source": "546c1cefc9529f45715dd8e6e32d1be46614f411",
+    "ok": true
+  },
+  {
+    "run": "extended-terminal-fixed-pull-v2",
+    "source": "a197176e2c9d5a75bbe05cfaf5342e3f6771c0f8",
+    "ok": true
+  },
+  {
+    "run": "boundaries-terminal-fixed-pull-v2",
+    "source": "a197176e2c9d5a75bbe05cfaf5342e3f6771c0f8",
+    "ok": true
+  },
+  {
+    "run": "terminal_reconciliation-terminal-fixed-webhook-v2",
+    "source": "c2712e26798f7037b787d9f3bfb68db1f969a901",
+    "ok": true
+  },
+  {
+    "run": "contracts-terminal-fixed-webhook-v2",
+    "source": "c2712e26798f7037b787d9f3bfb68db1f969a901",
+    "ok": true
+  },
+  {
+    "run": "terminal_reconciliation-terminal-fixed-buckets-v2",
+    "source": "377fc1b729c3015fd08b1b539a4f994e497c75b0",
+    "ok": true
+  },
+  {
+    "run": "contracts-terminal-fixed-buckets-v2",
+    "source": "377fc1b729c3015fd08b1b539a4f994e497c75b0",
+    "ok": true
+  },
+  {
+    "run": "terminal_reconciliation-terminal-fixed-short-lock-v2",
+    "source": "9b2ff8010e54458b7c36920e4f7ad31b10cef1ce",
+    "ok": true
+  },
+  {
+    "run": "contracts-terminal-fixed-short-lock-v2",
+    "source": "9b2ff8010e54458b7c36920e4f7ad31b10cef1ce",
+    "ok": true
+  },
+  {
+    "run": "terminal_reconciliation-terminal-fixed-combined-v2",
+    "source": "8bdbe1541980af9b27235bd7fc536b1036a3a85c",
+    "ok": true
+  },
+  {
+    "run": "contracts-terminal-fixed-combined-v2",
+    "source": "8bdbe1541980af9b27235bd7fc536b1036a3a85c",
+    "ok": true
+  }
+]

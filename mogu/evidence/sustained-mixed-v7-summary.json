@@ -1,0 +1,80 @@
+[
+  {
+    "run": "k6-baseline-sustained-mixed-v7-r01",
+    "measured_purchase_commits_per_second": 28.366666666666667,
+    "cohort_purchases": 2810,
+    "pending_peak": 256,
+    "overdue_peak": 13,
+    "recovery_p99_seconds": 4.180506944656372,
+    "expiry_p99_seconds": 0.288815975189209,
+    "cpu_seconds": 305.4809759999999,
+    "cpu_seconds_per_1000_all_purchases": 104.9762804123711,
+    "unfinished": 0,
+    "dropped": 0
+  },
+  {
+    "run": "k6-baseline-sustained-mixed-v7-r02",
+    "measured_purchase_commits_per_second": 28.377777777777776,
+    "cohort_purchases": 2813,
+    "pending_peak": 256,
+    "overdue_peak": 11,
+    "recovery_p99_seconds": 4.186206102371216,
+    "expiry_p99_seconds": 0.2937469482421875,
+    "cpu_seconds": 316.35315699999927,
+    "cpu_seconds_per_1000_all_purchases": 108.60046584277353,
+    "unfinished": 0,
+    "dropped": 0
+  },
+  {
+    "run": "k6-baseline-sustained-mixed-v7-r03",
+    "measured_purchase_commits_per_second": 28.355555555555554,
+    "cohort_purchases": 2811,
+    "pending_peak": 256,
+    "overdue_peak": 14,
+    "recovery_p99_seconds": 4.214639902114868,
+    "expiry_p99_seconds": 0.2923920154571533,
+    "cpu_seconds": 321.086339,
+    "cpu_seconds_per_1000_all_purchases": 110.30104397114394,
+    "unfinished": 0,
+    "dropped": 0
+  },
+  {
+    "run": "k6-pull-sustained-mixed-v7-r01",
+    "measured_purchase_commits_per_second": 49.044444444444444,
+    "cohort_purchases": 4500,
+    "pending_peak": 84,
+    "overdue_peak": 6,
+    "recovery_p99_seconds": 1.433109998703003,
+    "expiry_p99_seconds": 0.2447819709777832,
+    "cpu_seconds": 447.34304999999995,
+    "cpu_seconds_per_1000_all_purchases": 97.24848913043476,
+    "unfinished": 0,
+    "dropped": 0
+  },
+  {
+    "run": "k6-pull-sustained-mixed-v7-r02",
+    "measured_purchase_commits_per_second": 49.03333333333333,
+    "cohort_purchases": 4500,
+    "pending_peak": 84,
+    "overdue_peak": 6,
+    "recovery_p99_seconds": 1.4269518852233887,
+    "expiry_p99_seconds": 0.24429893493652344,
+    "cpu_seconds": 456.0241130000002,
+    "cpu_seconds_per_1000_all_purchases": 99.13567673913049,
+    "unfinished": 0,
+    "dropped": 0
+  },
+  {
+    "run": "k6-pull-sustained-mixed-v7-r03",
+    "measured_purchase_commits_per_second": 48.94444444444444,
+    "cohort_purchases": 4500,
+    "pending_peak": 89,
+    "overdue_peak": 5,
+    "recovery_p99_seconds": 1.3966078758239746,
+    "expiry_p99_seconds": 0.25049805641174316,
+    "cpu_seconds": 484.1703420000005,
+    "cpu_seconds_per_1000_all_purchases": 105.25442217391316,
+    "unfinished": 0,
+    "dropped": 0
+  }
+]

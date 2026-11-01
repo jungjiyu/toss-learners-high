@@ -1,0 +1,38 @@
+{
+  "question": "Can bounded payment retries rescue reserved buyers without displacing new buyers, and can server scheduling improve the tradeoff?",
+  "starting_sources": {"pull":"227acf651780c6fd81b0e9f400e4d8b4e3bb5790","late":"7d42846ce9cd236b56afaab4385640141e3634f7"},
+  "correctness": "Apply sticky terminal review and exact KRW validation equally before all new measurements. Old measurements remain historical.",
+  "old_15_percent_rule": "Applied to the prior budget-boundary adoption decision only. It is not a permanent exclusion of late-budget and is not this experiment's criterion.",
+  "client_policy": {
+    "name":"closed-only-3",
+    "trigger":"Explicit HTTP 503 with code PAYMENT_ADMISSION_CLOSED only",
+    "additional_attempts":3,
+    "base_delays_seconds":[0.5,1.0,2.0],
+    "jitter":"Multiply each delay by 0.8 + hash(index, seed + 0x6000 + retryNumber*7919)%401 / 1000. Independent of user/action/PG streams.",
+    "identity":"Reuse reservation, paymentKey, orderId, amount, currency and original Idempotency-Key. Never creates a new logical user/opportunity.",
+    "stop":"Stop on any non-CLOSED response, accepted payment, attempt cap, or 10s since logical start. Each call is capped by remaining deadline. Original reservation expiry is unchanged; measured HOLD_SECONDS=15 exceeds the 10s logical deadline.",
+    "ambiguous_response":"Do not treat transport failure or generic 503 as an empty transaction. Bounded reservation GET and durable server recovery; no new identity/key. Record ambiguous response separately.",
+    "control":"One physical payment attempt with identical input seed, PG faults, API timeout bound and status observation policy. All retry calls and observer CPU are counted."
+  },
+  "measurement": {
+    "pilot":"Independent 100/400 per base with once/closed-only-3, warm5s@10, measure25s; 10s per-target deadline; same repeat seed61001. Classify client effects before selecting server hypothesis.",
+    "final":"Freeze executable, harness, config, seed. Independent warm20s@10 + gap5 + measure90s. 100/400, 3 repetitions, same seeds61001..61003. Sequential shared-host runs, alternate ordering. Includes both bases with identical retry policy and one-shot controls.",
+    "resources":"DB2CPU/1GiB, JVM384MiB ActiveProcessorCount2 hint, pool48, worker4, pending256, admission24, HTTP2048, scheduler2, inbox100000. No capacity enlargement as improvement.",
+    "stock":"2,000,000 for bottleneck; separate finite-stock workload, fixed capacity/demand declared before that comparison. No actual PG synthetic load.",
+    "outcomes":["first CLOSED then retry accepted and purchased by 10s","paired gained/lost/net purchases versus one-shot","additional physical payment API calls and DB cost","first-attempt acceptance and first-attempt-purchased rates over all planned payment targets, plus conditional denominators","first-call and successful first/retry purchase latency","wall-window purchase commits including older arrivals","pending age/backlog and drain","expiry return and returned-stock reuse","whole-host CPU with same-window purchase denominator"]
+  },
+  "client_adoption": {
+    "gate":"All correctness and final convergence; no generator dropped iterations",
+    "400":"Mean total deadline purchases >=3% relative above matched one-shot and positive paired net in >=2/3 repetitions. First-attempt-purchased share of all targets may not fall by more than 2 percentage points.",
+    "100":"Deadline purchase rate drop <=1 percentage point",
+    "cost":"Whole-host CPU per purchase <=1.15 times matched one-shot. First payment-call p95 <=1.25 times control."
+  },
+  "server_adoption": {
+    "reference":"Compare to BOTH corrected pull and corrected late under the same bounded retry policy; compare full user outcome also to both one-shot arms.",
+    "gate":"All correctness, no class starvation in deterministic mixed-ready test, global pending bound unchanged, drain<=600s, no generator drops",
+    "400":"Mean deadline purchases >=3% relative above the stronger retry reference and positive paired net in >=2/3 repeats against that reference. First-attempt-purchased share may not drop >2pp versus either retry reference.",
+    "100":"Deadline purchase rate no more than 1pp worse than either retry reference",
+    "cost":"CPU per purchase <=1.10 times the lower-cost retry reference; successful p99 and expiry-return p99 <=1.20 times the stronger-outcome retry reference. Report absolute CPU and all failures even if gates pass.",
+    "fallback":"If new candidate fails, retain the best qualifying existing structure/policy by total deadline buyers, first-customer protection and CPU. Differences below3% without consistent paired gain are inconclusive; prefer lower cost then simpler structure. Do not retrofit thresholds after observing results."
+  }
+}

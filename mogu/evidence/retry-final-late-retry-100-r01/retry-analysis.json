@@ -1,0 +1,408 @@
+{
+  "run": "retry-final-late-retry-100-r01",
+  "source": "e2a232bd1baa13c3415c3567459e847ee536d714",
+  "logical_plan_sha256": "8c97ac5a6d90032e05f7a978fc2eb06c87ee8cab68feb0a130acd2a9671d60e7",
+  "policy": "closed-only-3",
+  "phases": [
+    {
+      "phase": "warmup",
+      "targets": 100,
+      "first_calls": 100,
+      "first_ack202": 100,
+      "first_durable_admitted": 100,
+      "first_ack_acceptance_over_calls": 1.0,
+      "first_purchased_by_deadline": 100,
+      "first_purchase_share_over_all_targets": 1.0,
+      "first_closed": 0,
+      "rescued_by_deadline": 0,
+      "deadline_purchases": 100,
+      "physical_payment_calls": 100,
+      "additional_payment_calls": 0,
+      "first_http_latency_ms": {
+        "n": 100,
+        "p50": 9,
+        "p95": 13,
+        "p99": 14,
+        "max": 14
+      },
+      "first_purchase_latency_s": {
+        "n": 100,
+        "p50": 0.8489999771118164,
+        "p95": 1.6560001373291016,
+        "p99": 1.6770000457763672,
+        "max": 1.6959998607635498
+      },
+      "retry_purchase_latency_s": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "slot_commit_seconds": {
+        "n": 100,
+        "p50": 0.8310000896453857,
+        "p95": 1.630000114440918,
+        "p99": 1.6549999713897705,
+        "max": 1.6749999523162842
+      },
+      "admission_commit_to_arm_sql_seconds": {
+        "n": 100,
+        "p50": 0.024505138397216797,
+        "p95": 0.058042049407958984,
+        "p99": 0.06505894660949707,
+        "max": 0.06528902053833008
+      },
+      "admission_commit_to_first_confirm_http_seconds": {
+        "n": 100,
+        "p50": 0.028590917587280273,
+        "p95": 0.06382608413696289,
+        "p99": 0.07112908363342285,
+        "max": 0.07233667373657227
+      },
+      "work_classes": {
+        "POLL": {
+          "eligible_peak": 1,
+          "oldest_due_seconds": 0.0295,
+          "rows_peak": 7
+        },
+        "SIGNALED": {
+          "eligible_peak": 1,
+          "oldest_due_seconds": 0.0361,
+          "rows_peak": 2
+        },
+        "FIRST_ROUND": {
+          "eligible_peak": 1,
+          "oldest_due_seconds": 0.0437,
+          "rows_peak": 1
+        }
+      },
+      "timeline": [
+        {
+          "second": 0,
+          "first_calls": 25,
+          "first_ack202": 25,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 5,
+          "first_calls": 25,
+          "first_ack202": 25,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 10,
+          "first_calls": 26,
+          "first_ack202": 26,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 15,
+          "first_calls": 24,
+          "first_ack202": 24,
+          "retry_calls": 0,
+          "closed_responses": 0
+        }
+      ],
+      "metrics": {
+        "mogu_budget_results_total{purpose=\"admit\",result=\"updated\"}": 93.0,
+        "mogu_budget_results_total{purpose=\"inbox\",result=\"updated\"}": 79.0,
+        "mogu_budget_results_total{purpose=\"release\",result=\"updated\"}": 94.0,
+        "mogu_db_phase_seconds_count{phase=\"arm\"}": 153.0,
+        "mogu_db_phase_seconds_sum{phase=\"arm\"}": 0.797560791,
+        "mogu_db_phase_seconds_count{phase=\"budget_admit\"}": 93.0,
+        "mogu_db_phase_seconds_sum{phase=\"budget_admit\"}": 0.041725876,
+        "mogu_db_phase_seconds_count{phase=\"budget_inbox\"}": 79.0,
+        "mogu_db_phase_seconds_sum{phase=\"budget_inbox\"}": 0.033306872,
+        "mogu_db_phase_seconds_count{phase=\"budget_release\"}": 94.0,
+        "mogu_db_phase_seconds_sum{phase=\"budget_release\"}": 0.042124206,
+        "mogu_db_phase_seconds_count{phase=\"claim\"}": 1615.0,
+        "mogu_db_phase_seconds_sum{phase=\"claim\"}": 4.713330194999999,
+        "mogu_db_phase_seconds_count{phase=\"observe_schedule\"}": 307.0,
+        "mogu_db_phase_seconds_sum{phase=\"observe_schedule\"}": 2.328425674,
+        "mogu_db_phase_seconds_count{phase=\"transaction\"}": 2495.0,
+        "mogu_db_phase_seconds_sum{phase=\"transaction\"}": 10.979150171,
+        "mogu_pg_observations_total{kind=\"CONFIRM\",status=\"READY\"}": 122.0,
+        "mogu_pg_observations_total{kind=\"CONFIRM\",status=\"UNKNOWN\"}": 31.0,
+        "mogu_pg_observations_total{kind=\"QUERY\",status=\"DONE\"}": 95.0,
+        "mogu_pg_observations_total{kind=\"QUERY\",status=\"READY\"}": 59.0,
+        "mogu_recovery_class_claims_total{class=\"FIRST_ROUND\"}": 94.0,
+        "mogu_recovery_class_claims_total{class=\"POLL\"}": 79.0,
+        "mogu_recovery_class_claims_total{class=\"SIGNALED\"}": 75.0,
+        "mogu_recovery_class_work_seconds_count{class=\"FIRST_ROUND\"}": 94.0,
+        "mogu_recovery_class_work_seconds_sum{class=\"FIRST_ROUND\"}": 1.7875734920000002,
+        "mogu_recovery_class_work_seconds_count{class=\"POLL\"}": 79.0,
+        "mogu_recovery_class_work_seconds_sum{class=\"POLL\"}": 1.950698713,
+        "mogu_recovery_class_work_seconds_count{class=\"SIGNALED\"}": 75.0,
+        "mogu_recovery_class_work_seconds_sum{class=\"SIGNALED\"}": 1.0635447919999999,
+        "mogu_recovery_due_age_seconds_count{class=\"FIRST_ROUND\"}": 94.0,
+        "mogu_recovery_due_age_seconds_sum{class=\"FIRST_ROUND\"}": 2.3605929999999997,
+        "mogu_recovery_due_age_seconds_count{class=\"POLL\"}": 79.0,
+        "mogu_recovery_due_age_seconds_sum{class=\"POLL\"}": 1.553965,
+        "mogu_recovery_due_age_seconds_count{class=\"SIGNALED\"}": 75.0,
+        "mogu_recovery_due_age_seconds_sum{class=\"SIGNALED\"}": 1.925904,
+        "mogu_recovery_empty_claims_total": 1367.0
+      }
+    },
+    {
+      "phase": "measure_0_100",
+      "targets": 4500,
+      "first_calls": 4500,
+      "first_ack202": 4500,
+      "first_durable_admitted": 4500,
+      "first_ack_acceptance_over_calls": 1.0,
+      "first_purchased_by_deadline": 4500,
+      "first_purchase_share_over_all_targets": 1.0,
+      "first_closed": 0,
+      "rescued_by_deadline": 0,
+      "deadline_purchases": 4500,
+      "physical_payment_calls": 4500,
+      "additional_payment_calls": 0,
+      "first_http_latency_ms": {
+        "n": 4500,
+        "p50": 11,
+        "p95": 16,
+        "p99": 22,
+        "max": 49
+      },
+      "first_purchase_latency_s": {
+        "n": 4500,
+        "p50": 1.564000129699707,
+        "p95": 2.111999988555908,
+        "p99": 2.6579999923706055,
+        "max": 3.2839999198913574
+      },
+      "retry_purchase_latency_s": {
+        "n": 0,
+        "p50": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "slot_commit_seconds": {
+        "n": 4500,
+        "p50": 1.5399999618530273,
+        "p95": 2.0909998416900635,
+        "p99": 2.6439998149871826,
+        "max": 3.254999876022339
+      },
+      "admission_commit_to_arm_sql_seconds": {
+        "n": 4500,
+        "p50": 0.49794602394104004,
+        "p95": 0.6449518203735352,
+        "p99": 0.6861941814422607,
+        "max": 0.7243409156799316
+      },
+      "admission_commit_to_first_confirm_http_seconds": {
+        "n": 4500,
+        "p50": 0.5034661293029785,
+        "p95": 0.6506590843200684,
+        "p99": 0.6925837993621826,
+        "max": 0.7306928634643555
+      },
+      "work_classes": {
+        "FIRST_ROUND": {
+          "eligible_peak": 33,
+          "oldest_due_seconds": 0.6721,
+          "rows_peak": 34
+        },
+        "POLL": {
+          "eligible_peak": 23,
+          "oldest_due_seconds": 0.665,
+          "rows_peak": 48
+        },
+        "SIGNALED": {
+          "eligible_peak": 18,
+          "oldest_due_seconds": 0.6647,
+          "rows_peak": 20
+        }
+      },
+      "timeline": [
+        {
+          "second": 0,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 5,
+          "first_calls": 249,
+          "first_ack202": 249,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 10,
+          "first_calls": 251,
+          "first_ack202": 251,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 15,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 20,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 25,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 30,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 35,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 40,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 45,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 50,
+          "first_calls": 249,
+          "first_ack202": 249,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 55,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 60,
+          "first_calls": 251,
+          "first_ack202": 251,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 65,
+          "first_calls": 249,
+          "first_ack202": 249,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 70,
+          "first_calls": 250,
+          "first_ack202": 250,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 75,
+          "first_calls": 251,
+          "first_ack202": 251,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 80,
+          "first_calls": 249,
+          "first_ack202": 249,
+          "retry_calls": 0,
+          "closed_responses": 0
+        },
+        {
+          "second": 85,
+          "first_calls": 251,
+          "first_ack202": 251,
+          "retry_calls": 0,
+          "closed_responses": 0
+        }
+      ],
+      "metrics": {
+        "mogu_budget_results_total{purpose=\"admit\",result=\"updated\"}": 4469.0,
+        "mogu_budget_results_total{purpose=\"inbox\",result=\"updated\"}": 3506.0,
+        "mogu_budget_results_total{purpose=\"release\",result=\"updated\"}": 4399.0,
+        "mogu_db_phase_seconds_count{phase=\"arm\"}": 4999.0,
+        "mogu_db_phase_seconds_sum{phase=\"arm\"}": 38.628289243,
+        "mogu_db_phase_seconds_count{phase=\"budget_admit\"}": 4469.0,
+        "mogu_db_phase_seconds_sum{phase=\"budget_admit\"}": 5.144914841,
+        "mogu_db_phase_seconds_count{phase=\"budget_inbox\"}": 3506.0,
+        "mogu_db_phase_seconds_sum{phase=\"budget_inbox\"}": 3.704800915,
+        "mogu_db_phase_seconds_count{phase=\"budget_release\"}": 4399.0,
+        "mogu_db_phase_seconds_sum{phase=\"budget_release\"}": 3.843004627,
+        "mogu_db_phase_seconds_count{phase=\"claim\"}": 12230.0,
+        "mogu_db_phase_seconds_sum{phase=\"claim\"}": 60.279812706,
+        "mogu_db_phase_seconds_count{phase=\"observe_schedule\"}": 10123.0,
+        "mogu_db_phase_seconds_sum{phase=\"observe_schedule\"}": 121.48529342100001,
+        "mogu_db_phase_seconds_count{phase=\"transaction\"}": 48382.0,
+        "mogu_db_phase_seconds_sum{phase=\"transaction\"}": 437.163901816,
+        "mogu_pg_observations_total{kind=\"CONFIRM\",status=\"DONE\"}": 86.0,
+        "mogu_pg_observations_total{kind=\"CONFIRM\",status=\"READY\"}": 3840.0,
+        "mogu_pg_observations_total{kind=\"CONFIRM\",status=\"UNKNOWN\"}": 1073.0,
+        "mogu_pg_observations_total{kind=\"QUERY\",status=\"DONE\"}": 4571.0,
+        "mogu_pg_observations_total{kind=\"QUERY\",status=\"READY\"}": 554.0,
+        "mogu_recovery_class_claims_total{class=\"FIRST_ROUND\"}": 4445.0,
+        "mogu_recovery_class_claims_total{class=\"POLL\"}": 1668.0,
+        "mogu_recovery_class_claims_total{class=\"SIGNALED\"}": 3457.0,
+        "mogu_recovery_class_work_seconds_count{class=\"FIRST_ROUND\"}": 4445.0,
+        "mogu_recovery_class_work_seconds_sum{class=\"FIRST_ROUND\"}": 106.227804459,
+        "mogu_recovery_class_work_seconds_count{class=\"POLL\"}": 1667.0,
+        "mogu_recovery_class_work_seconds_sum{class=\"POLL\"}": 38.597152285,
+        "mogu_recovery_class_work_seconds_count{class=\"SIGNALED\"}": 3457.0,
+        "mogu_recovery_class_work_seconds_sum{class=\"SIGNALED\"}": 57.966308935,
+        "mogu_recovery_due_age_seconds_count{class=\"FIRST_ROUND\"}": 4445.0,
+        "mogu_recovery_due_age_seconds_sum{class=\"FIRST_ROUND\"}": 2113.784623,
+        "mogu_recovery_due_age_seconds_count{class=\"POLL\"}": 1668.0,
+        "mogu_recovery_due_age_seconds_sum{class=\"POLL\"}": 646.3812379999999,
+        "mogu_recovery_due_age_seconds_count{class=\"SIGNALED\"}": 3457.0,
+        "mogu_recovery_due_age_seconds_sum{class=\"SIGNALED\"}": 1702.257662,
+        "mogu_recovery_empty_claims_total": 2660.0
+      }
+    }
+  ],
+  "audit": {
+    "ok": true,
+    "errors": []
+  },
+  "whole_host_cost": {
+    "window_start": 1793441206.171297,
+    "window_end": 1793441336.8032079,
+    "window_seconds": 130.63191080093384,
+    "host_cpu_seconds": 509.9899999999907,
+    "purchases_in_same_window": 4600,
+    "host_cpu_seconds_per_1000_purchases": 110.8673913043458,
+    "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+  },
+  "script_sha256": "54b0c0c0969656612efa9aa6cd978bed1238669eea84827fbf4e24b34641a173",
+  "definitions": "Rescue is first explicit CLOSED followed by later physical attempt and purchase within original logical 10s. First durable admission includes a committed ambiguous first response; HTTP202 acceptance is separate. This is not paired net improvement: use paired_retry.py against the same-input once arm."
+}

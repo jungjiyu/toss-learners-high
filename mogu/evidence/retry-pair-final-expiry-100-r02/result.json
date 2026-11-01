@@ -1,0 +1,22 @@
+{
+  "control": "retry-final-expiry-once-100-r02",
+  "candidate": "retry-final-expiry-retry-100-r02",
+  "control_policy": "once",
+  "candidate_policy": "closed-only-3",
+  "target_count": 4500,
+  "gained": 0,
+  "lost": 0,
+  "net": 0,
+  "rescued": 0,
+  "rescued_also_gained": 0,
+  "lost_control_first_admitted": 0,
+  "physical_payment_call_delta": 0,
+  "control_deadline_purchases": 4500,
+  "candidate_deadline_purchases": 4500,
+  "logical_plan_sha256": "8af36be0acbba5abbf75179a3356756139605a791dde5c8cdae862045bd57cca",
+  "gained_indices": [],
+  "lost_indices": [],
+  "rescued_indices": [],
+  "scope": "Same-input independent runs, not simultaneous counterfactual twins. Scheduling and host variation remain; use repeated pairs. A rescued buyer may also have succeeded on the one-shot run.",
+  "script_sha256": "6a13cf514ba70fb35868d4889137a5692b097578b127ba3fbab5135e6659675f"
+}

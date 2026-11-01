@@ -1,0 +1,5 @@
+[
+  "D01 empty preferred bucket uses remaining stock; D04 HELD/ARMED return to original bucket",
+  "D02/D06 skew drains all37; D03 not applicable; no quota transfer; transient bucket race retried; no false global soldout",
+  "D05 global user guard survives different keys"
+]

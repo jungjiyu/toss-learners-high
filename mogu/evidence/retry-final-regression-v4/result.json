@@ -1,0 +1,112 @@
+{
+  "ok": true,
+  "new_checks": [
+    {
+      "variant": "baseline",
+      "suite": "boundaries",
+      "run": "retry-final-baseline-boundaries-v3",
+      "passed": true,
+      "at": 1793440439.714937
+    },
+    {
+      "variant": "pull",
+      "suite": "boundaries",
+      "run": "retry-final-pull-boundaries-v3",
+      "passed": true,
+      "at": 1793440450.452498
+    },
+    {
+      "variant": "late",
+      "suite": "boundaries",
+      "run": "retry-final-late-boundaries-v3",
+      "passed": true,
+      "at": 1793440461.0730822
+    },
+    {
+      "variant": "expiry",
+      "suite": "boundaries",
+      "run": "retry-final-expiry-boundaries-v3",
+      "passed": true,
+      "at": 1793440471.672089
+    },
+    {
+      "variant": "expiry",
+      "suite": "buckets",
+      "run": "retry-final-expiry-buckets-v1",
+      "passed": true,
+      "at": 1793440479.335416
+    },
+    {
+      "variant": "expiry",
+      "suite": "multi_instance",
+      "run": "retry-final-expiry-multi_instance-v1",
+      "passed": true,
+      "at": 1793440484.735187
+    },
+    {
+      "variant": "expiry",
+      "suite": "payment_retry_contract",
+      "run": "retry-final-expiry-payment_retry_contract-v1",
+      "passed": true,
+      "at": 1793440488.147108
+    },
+    {
+      "variant": "expiry",
+      "suite": "late_budget",
+      "run": "retry-final-expiry-late_budget-v1",
+      "passed": true,
+      "at": 1793440493.461055
+    },
+    {
+      "variant": "expiry",
+      "suite": "lease_permission",
+      "run": "retry-final-expiry-lease_permission-v1",
+      "passed": true,
+      "at": 1793440497.950892
+    }
+  ],
+  "prior_same_business_code_checks": [
+    {
+      "suite": "ready_index",
+      "run": "retry-final-expiry-ready_index-v1",
+      "at": 1793439726.68014,
+      "passed": true
+    },
+    {
+      "suite": "expiry_batch",
+      "run": "retry-final-expiry-expiry_batch-v1",
+      "at": 1793439735.952251,
+      "passed": true
+    },
+    {
+      "suite": "review_money",
+      "run": "retry-final-expiry-review_money-v1",
+      "at": 1793439743.8325279,
+      "passed": true
+    },
+    {
+      "suite": "terminal_reconciliation",
+      "run": "retry-final-expiry-terminal_reconciliation-v1",
+      "at": 1793439754.135714,
+      "passed": true
+    },
+    {
+      "suite": "contracts",
+      "run": "retry-final-expiry-contracts-v1",
+      "at": 1793439794.3955042,
+      "passed": true
+    },
+    {
+      "suite": "extended",
+      "run": "retry-final-expiry-extended-v2",
+      "at": 1793439956.889824,
+      "passed": true
+    }
+  ],
+  "source_change": "Only common API TransactionException -> ambiguous503 and deterministic pool fixture; earlier app state/PG correctness source unchanged.",
+  "failure_evidence_preserved": [
+    "retry-final-expiry-extended-v1",
+    "retry-final-expiry-boundaries-v1",
+    "retry-final-expiry-boundaries-v2"
+  ]
+}

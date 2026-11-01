@@ -1,0 +1,4854 @@
+{
+  "low_load": [
+    {
+      "run": "retry-final-pull-once-100-r01",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 1,
+      "query_ready": 960.0,
+      "query_done": 4528.0,
+      "confirm_responses": 5395.0,
+      "transaction_count": 59159.0,
+      "empty_claims": 2040.0,
+      "cpu_per1000": 114.82173913043327,
+      "success_p99": 2.6529998779296875
+    },
+    {
+      "run": "retry-final-pull-once-100-r02",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 2,
+      "query_ready": 158.0,
+      "query_done": 3835.0,
+      "confirm_responses": 4097.0,
+      "transaction_count": 50472.0,
+      "empty_claims": 1496.0,
+      "cpu_per1000": 148.35482330467948,
+      "success_p99": 6.7850000858306885
+    },
+    {
+      "run": "retry-final-pull-once-100-r03",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 3,
+      "query_ready": 434.0,
+      "query_done": 4540.0,
+      "confirm_responses": 4880.0,
+      "transaction_count": 56545.0,
+      "empty_claims": 1944.0,
+      "cpu_per1000": 116.18478260869186,
+      "success_p99": 2.628999948501587
+    },
+    {
+      "run": "retry-final-pull-retry-100-r01",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 1,
+      "query_ready": 211.0,
+      "query_done": 4456.0,
+      "confirm_responses": 4644.0,
+      "transaction_count": 55075.0,
+      "empty_claims": 1903.0,
+      "cpu_per1000": 115.03260869565723,
+      "success_p99": 2.440000057220459
+    },
+    {
+      "run": "retry-final-pull-retry-100-r02",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 2,
+      "query_ready": 206.0,
+      "query_done": 4133.0,
+      "confirm_responses": 4438.0,
+      "transaction_count": 54118.0,
+      "empty_claims": 1558.0,
+      "cpu_per1000": 144.5879182573559,
+      "success_p99": 9.559999942779541
+    },
+    {
+      "run": "retry-final-pull-retry-100-r03",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 3,
+      "query_ready": 171.0,
+      "query_done": 4149.0,
+      "confirm_responses": 4399.0,
+      "transaction_count": 53120.0,
+      "empty_claims": 1542.0,
+      "cpu_per1000": 139.64025601412956,
+      "success_p99": 8.26200008392334
+    },
+    {
+      "run": "retry-final-late-once-100-r01",
+      "variant": "late",
+      "policy": "once",
+      "rep": 1,
+      "query_ready": 610.0,
+      "query_done": 4547.0,
+      "confirm_responses": 5060.0,
+      "transaction_count": 48676.0,
+      "empty_claims": 2754.0,
+      "cpu_per1000": 107.79347826087084,
+      "success_p99": 2.873999834060669
+    },
+    {
+      "run": "retry-final-late-once-100-r02",
+      "variant": "late",
+      "policy": "once",
+      "rep": 2,
+      "query_ready": 933.0,
+      "query_done": 4478.0,
+      "confirm_responses": 5322.0,
+      "transaction_count": 48992.0,
+      "empty_claims": 2199.0,
+      "cpu_per1000": 129.0217391304411,
+      "success_p99": 3.24399995803833
+    },
+    {
+      "run": "retry-final-late-once-100-r03",
+      "variant": "late",
+      "policy": "once",
+      "rep": 3,
+      "query_ready": 1399.0,
+      "query_done": 4580.0,
+      "confirm_responses": 5858.0,
+      "transaction_count": 51680.0,
+      "empty_claims": 2453.0,
+      "cpu_per1000": 120.45217391304702,
+      "success_p99": 2.4800000190734863
+    },
+    {
+      "run": "retry-final-late-retry-100-r01",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 1,
+      "query_ready": 554.0,
+      "query_done": 4571.0,
+      "confirm_responses": 4999.0,
+      "transaction_count": 48382.0,
+      "empty_claims": 2660.0,
+      "cpu_per1000": 110.8673913043458,
+      "success_p99": 2.6579999923706055
+    },
+    {
+      "run": "retry-final-late-retry-100-r02",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 2,
+      "query_ready": 364.0,
+      "query_done": 4454.0,
+      "confirm_responses": 4783.0,
+      "transaction_count": 47144.0,
+      "empty_claims": 2420.0,
+      "cpu_per1000": 118.70217391304955,
+      "success_p99": 3.3359999656677246
+    },
+    {
+      "run": "retry-final-late-retry-100-r03",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 3,
+      "query_ready": 243.0,
+      "query_done": 4112.0,
+      "confirm_responses": 4456.0,
+      "transaction_count": 45608.0,
+      "empty_claims": 2090.0,
+      "cpu_per1000": 135.64193691692012,
+      "success_p99": 8.026000022888184
+    },
+    {
+      "run": "retry-final-expiry-once-100-r01",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 1,
+      "query_ready": 2880.0,
+      "query_done": 4733.0,
+      "confirm_responses": 7349.0,
+      "transaction_count": 55315.0,
+      "empty_claims": 1383.0,
+      "cpu_per1000": 119.58478260870122,
+      "success_p99": 1.75600004196167
+    },
+    {
+      "run": "retry-final-expiry-once-100-r02",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 2,
+      "query_ready": 1275.0,
+      "query_done": 4653.0,
+      "confirm_responses": 5720.0,
+      "transaction_count": 47252.0,
+      "empty_claims": 32.0,
+      "cpu_per1000": 131.64782608695376,
+      "success_p99": 2.620000123977661
+    },
+    {
+      "run": "retry-final-expiry-once-100-r03",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 3,
+      "query_ready": 1416.0,
+      "query_done": 4654.0,
+      "confirm_responses": 5855.0,
+      "transaction_count": 47779.0,
+      "empty_claims": 38.0,
+      "cpu_per1000": 130.92826086956293,
+      "success_p99": 2.571000099182129
+    },
+    {
+      "run": "retry-final-expiry-retry-100-r01",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 1,
+      "query_ready": 2095.0,
+      "query_done": 4625.0,
+      "confirm_responses": 6520.0,
+      "transaction_count": 50300.0,
+      "empty_claims": 31.0,
+      "cpu_per1000": 124.03260869564964,
+      "success_p99": 2.252999782562256
+    },
+    {
+      "run": "retry-final-expiry-retry-100-r02",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 2,
+      "query_ready": 2840.0,
+      "query_done": 4758.0,
+      "confirm_responses": 7314.0,
+      "transaction_count": 55248.0,
+      "empty_claims": 1374.0,
+      "cpu_per1000": 118.53913043477603,
+      "success_p99": 1.818000078201294
+    },
+    {
+      "run": "retry-final-expiry-retry-100-r03",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 3,
+      "query_ready": 1944.0,
+      "query_done": 4674.0,
+      "confirm_responses": 6403.0,
+      "transaction_count": 50082.0,
+      "empty_claims": 52.0,
+      "cpu_per1000": 138.32173913044085,
+      "success_p99": 2.2929999828338623
+    }
+  ],
+  "worker_400": [
+    {
+      "run": "retry-final-pull-once-400-r01",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 1,
+      "admission_commit_to_confirm_http": {
+        "n": 2931,
+        "p50": 3.8215999603271484,
+        "p95": 4.952611923217773,
+        "p99": 5.111475944519043,
+        "max": 5.158859014511108
+      },
+      "pg_effect_to_purchase": {
+        "n": 2931,
+        "p50": 3.7453978061676025,
+        "p95": 4.897655963897705,
+        "p99": 5.188296318054199,
+        "max": 5.412699937820435
+      },
+      "slot_commit": {
+        "n": 2931,
+        "p50": 8.134000062942505,
+        "p95": 10.177000045776367,
+        "p99": 10.434000015258789,
+        "max": 11.015000104904175
+      },
+      "refused_stock": {
+        "n": 14802,
+        "p50": 135.12353205680847,
+        "p95": 207.57601499557495,
+        "p99": 213.7886438369751,
+        "max": 215.23940682411194
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2790.0,
+          "work_seconds": 138.883726797,
+          "mean_due_seconds": 3.6720048677419355,
+          "eligible_peak": 144,
+          "oldest_due_seconds": 5.0986,
+          "rows_peak": 146
+        },
+        "SIGNALED": {
+          "claims": 2134.0,
+          "work_seconds": 89.568389903,
+          "mean_due_seconds": 3.871652574039362,
+          "eligible_peak": 106,
+          "oldest_due_seconds": 5.0823,
+          "rows_peak": 106
+        },
+        "POLL": {
+          "claims": 619.0,
+          "work_seconds": 26.540057069000003,
+          "mean_due_seconds": 3.186465140549273,
+          "eligible_peak": 86,
+          "oldest_due_seconds": 5.0104,
+          "rows_peak": 100
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 1175.0,
+      "query_done": 2668.0,
+      "query_ready": 85.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 18.025013210913396,
+        "claim": 9.100239774039894,
+        "arm": 13.128558870956521,
+        "apply": 17.642974393104677,
+        "finish": 14.175766116925297,
+        "budget_admit": 7.787561867694246,
+        "budget_release": 4.871820019223521
+      },
+      "physical_closed_in_arrival_window": 14682,
+      "budget_full_observations": 14582.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 138.25095748901367,
+        "inventory_buckets": 90.64497542381287,
+        "attempts": 7.259828567504883,
+        "inbox": 4.342883586883545
+      },
+      "pg_http_seconds": 29.162711412999997,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 113156,
+        "seconds": 298.18379146,
+        "mean_ms": 2.6351566992470574,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 133.94,
+          "peak_rss_mib": 370.59375,
+          "peak_cpu_percent": 231.0
+        },
+        "pg": {
+          "observed_cpu_seconds": 62.36,
+          "peak_rss_mib": 21.1875,
+          "peak_cpu_percent": 11.3
+        },
+        "k6": {
+          "observed_cpu_seconds": 47.078444,
+          "peak_rss_mib": 727.28125,
+          "peak_cpu_percent": 128.4,
+          "sampled_cpu_seconds": 47.010000000000005
+        },
+        "db_cpu_seconds": 181.440291,
+        "db_peak_memory_current_mib": 862.578125,
+        "db_throttled_seconds": 5.103367,
+        "db_io_delta": {
+          "rbytes": 49152,
+          "wbytes": 4915769344,
+          "rios": 3,
+          "wios": 518387
+        },
+        "observer_cpu_seconds": 8.748366
+      },
+      "db_status_delta": {
+        "Bytes_received": 177696260,
+        "Bytes_sent": 444567578,
+        "Com_commit": 113923,
+        "Com_rollback": 14689,
+        "Innodb_buffer_pool_reads": 6,
+        "Innodb_data_fsyncs": 159952,
+        "Innodb_data_reads": 6,
+        "Innodb_data_writes": 380900,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 153263,
+        "Innodb_row_lock_time": 233831,
+        "Innodb_row_lock_waits": 30018,
+        "Threads_connected": 36,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 149989,
+          "seconds": 88.050532565292,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 428099,
+          "seconds": 69.649098104994,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 112508,
+          "seconds": 5.77626870978,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 994,
+          "seconds": 1.100135259345,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-pull-once-400-r02",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 2,
+      "admission_commit_to_confirm_http": {
+        "n": 3227,
+        "p50": 3.4388129711151123,
+        "p95": 4.544852018356323,
+        "p99": 4.890843868255615,
+        "max": 7.101141929626465
+      },
+      "pg_effect_to_purchase": {
+        "n": 3227,
+        "p50": 3.363187074661255,
+        "p95": 4.399924993515015,
+        "p99": 4.870243072509766,
+        "max": 5.525530815124512
+      },
+      "slot_commit": {
+        "n": 3227,
+        "p50": 7.14300012588501,
+        "p95": 9.42799997329712,
+        "p99": 9.742000102996826,
+        "max": 10.96399998664856
+      },
+      "refused_stock": {
+        "n": 14413,
+        "p50": 130.8488118648529,
+        "p95": 197.33201098442078,
+        "p99": 203.30486011505127,
+        "max": 204.7978219985962
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 3100.0,
+          "work_seconds": 139.721262937,
+          "mean_due_seconds": 3.2895925654838716,
+          "eligible_peak": 160,
+          "oldest_due_seconds": 5.0137,
+          "rows_peak": 162
+        },
+        "SIGNALED": {
+          "claims": 2385.0,
+          "work_seconds": 91.757446764,
+          "mean_due_seconds": 3.46899001509434,
+          "eligible_peak": 119,
+          "oldest_due_seconds": 5.0302,
+          "rows_peak": 119
+        },
+        "POLL": {
+          "claims": 690.0,
+          "work_seconds": 26.880644829999998,
+          "mean_due_seconds": 2.921576960869565,
+          "eligible_peak": 83,
+          "oldest_due_seconds": 4.9364,
+          "rows_peak": 101
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 1174.0,
+      "query_done": 2980.0,
+      "query_ready": 95.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 16.72187746900934,
+        "claim": 8.427397180568784,
+        "arm": 11.995919706011268,
+        "apply": 16.447181188038275,
+        "finish": 12.927821462186236,
+        "budget_admit": 7.2434748611683855,
+        "budget_release": 4.576372380904183
+      },
+      "physical_closed_in_arrival_window": 14305,
+      "budget_full_observations": 14253.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 138.53728675842285,
+        "inventory_buckets": 94.3165373802185,
+        "attempts": 4.467305898666382,
+        "inbox": 2.1457722187042236,
+        "user_guard": 1.0621449947357178
+      },
+      "pg_http_seconds": 26.864597461000002,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 114639,
+        "seconds": 282.898614903,
+        "mean_ms": 2.467734496140057,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 122.65,
+          "peak_rss_mib": 362.03125,
+          "peak_cpu_percent": 214.7
+        },
+        "pg": {
+          "observed_cpu_seconds": 57.57,
+          "peak_rss_mib": 19.515625,
+          "peak_cpu_percent": 11.8
+        },
+        "k6": {
+          "observed_cpu_seconds": 43.474156,
+          "peak_rss_mib": 720.921875,
+          "peak_cpu_percent": 119.2,
+          "sampled_cpu_seconds": 43.46
+        },
+        "db_cpu_seconds": 182.217076,
+        "db_peak_memory_current_mib": 858.73828125,
+        "db_throttled_seconds": 31.0315,
+        "db_io_delta": {
+          "rbytes": 81920,
+          "wbytes": 4998356992,
+          "rios": 5,
+          "wios": 531555
+        },
+        "observer_cpu_seconds": 8.122376000000006
+      },
+      "db_status_delta": {
+        "Bytes_received": 180298090,
+        "Bytes_sent": 457481649,
+        "Com_commit": 115358,
+        "Com_rollback": 14312,
+        "Innodb_buffer_pool_reads": 5,
+        "Innodb_data_fsyncs": 165793,
+        "Innodb_data_reads": 5,
+        "Innodb_data_writes": 463748,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 158942,
+        "Innodb_row_lock_time": 216711,
+        "Innodb_row_lock_waits": 29696,
+        "Threads_connected": 39,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 153970,
+          "seconds": 81.751247605125,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 515239,
+          "seconds": 67.4696824049,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 114061,
+          "seconds": 5.166113807825,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 996,
+          "seconds": 1.038640228175,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-pull-once-400-r03",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 3,
+      "admission_commit_to_confirm_http": {
+        "n": 2600,
+        "p50": 4.566057920455933,
+        "p95": 5.557884931564331,
+        "p99": 5.90865683555603,
+        "max": 9.979158163070679
+      },
+      "pg_effect_to_purchase": {
+        "n": 2600,
+        "p50": 4.404783725738525,
+        "p95": 5.378457069396973,
+        "p99": 5.85854697227478,
+        "max": 6.151697874069214
+      },
+      "slot_commit": {
+        "n": 2600,
+        "p50": 9.601999998092651,
+        "p95": 11.34000015258789,
+        "p99": 11.77999997138977,
+        "max": 12.20300006866455
+      },
+      "refused_stock": {
+        "n": 14927,
+        "p50": 135.5997040271759,
+        "p95": 204.80527901649475,
+        "p99": 211.01902294158936,
+        "max": 212.46810603141785
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2459.0,
+          "work_seconds": 141.160839552,
+          "mean_due_seconds": 4.213384523790158,
+          "eligible_peak": 162,
+          "oldest_due_seconds": 5.8869,
+          "rows_peak": 164
+        },
+        "SIGNALED": {
+          "claims": 1867.0,
+          "work_seconds": 93.80829479399999,
+          "mean_due_seconds": 4.418048536154258,
+          "eligible_peak": 121,
+          "oldest_due_seconds": 5.9047,
+          "rows_peak": 121
+        },
+        "POLL": {
+          "claims": 570.0,
+          "work_seconds": 28.514597724999998,
+          "mean_due_seconds": 3.618585564912281,
+          "eligible_peak": 85,
+          "oldest_due_seconds": 5.7836,
+          "rows_peak": 102
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 952.0,
+      "query_done": 2360.0,
+      "query_ready": 77.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 21.62387646320254,
+        "claim": 10.725715501367988,
+        "arm": 15.156039383129682,
+        "apply": 21.437974387012467,
+        "finish": 16.292987862512767,
+        "budget_admit": 11.312612010271588,
+        "budget_release": 7.91205282322801
+      },
+      "physical_closed_in_arrival_window": 14677,
+      "budget_full_observations": 14667.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 189.0294394493103,
+        "inventory_buckets": 146.32928204536438,
+        "inbox": 5.434476852416992,
+        "attempts": 2.212986946105957
+      },
+      "pg_http_seconds": 28.776921676,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 109214,
+        "seconds": 359.031800382,
+        "mean_ms": 3.287415536304869,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 136.97,
+          "peak_rss_mib": 360.484375,
+          "peak_cpu_percent": 222.7
+        },
+        "pg": {
+          "observed_cpu_seconds": 62.4,
+          "peak_rss_mib": 19.734375,
+          "peak_cpu_percent": 10.8
+        },
+        "k6": {
+          "observed_cpu_seconds": 48.722691,
+          "peak_rss_mib": 718.8125,
+          "peak_cpu_percent": 114.7,
+          "sampled_cpu_seconds": 48.690000000000005
+        },
+        "db_cpu_seconds": 180.655111,
+        "db_peak_memory_current_mib": 866.3984375,
+        "db_throttled_seconds": 1.266253,
+        "db_io_delta": {
+          "rbytes": 147456,
+          "wbytes": 4765437952,
+          "rios": 9,
+          "wios": 487619
+        },
+        "observer_cpu_seconds": 8.866753000000003
+      },
+      "db_status_delta": {
+        "Bytes_received": 171841879,
+        "Bytes_sent": 423226190,
+        "Com_commit": 110088,
+        "Com_rollback": 14688,
+        "Innodb_buffer_pool_reads": 10,
+        "Innodb_data_fsyncs": 150072,
+        "Innodb_data_reads": 10,
+        "Innodb_data_writes": 355959,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 143523,
+        "Innodb_row_lock_time": 340279,
+        "Innodb_row_lock_waits": 32821,
+        "Threads_connected": 35,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 134644,
+          "seconds": 88.355888841456,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 395065,
+          "seconds": 78.859177576707,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 110740,
+          "seconds": 6.320124810594,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 981,
+          "seconds": 1.128542111598,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-pull-retry-400-r01",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 1,
+      "admission_commit_to_confirm_http": {
+        "n": 2498,
+        "p50": 5.283539056777954,
+        "p95": 5.7969810962677,
+        "p99": 5.893902063369751,
+        "max": 5.98888373374939
+      },
+      "pg_effect_to_purchase": {
+        "n": 2498,
+        "p50": 5.041481971740723,
+        "p95": 5.853877067565918,
+        "p99": 6.065758943557739,
+        "max": 6.792792081832886
+      },
+      "slot_commit": {
+        "n": 2498,
+        "p50": 10.819000005722046,
+        "p95": 11.993000030517578,
+        "p99": 12.164999961853027,
+        "max": 13.083000183105469
+      },
+      "refused_stock": {
+        "n": 10586,
+        "p50": 107.9823088645935,
+        "p95": 146.1137089729309,
+        "p99": 149.49347805976868,
+        "max": 150.1943290233612
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2164.0,
+          "work_seconds": 136.261978622,
+          "mean_due_seconds": 4.774946867375231,
+          "eligible_peak": 164,
+          "oldest_due_seconds": 5.9027,
+          "rows_peak": 165
+        },
+        "SIGNALED": {
+          "claims": 1665.0,
+          "work_seconds": 103.27582337,
+          "mean_due_seconds": 5.057357827627627,
+          "eligible_peak": 115,
+          "oldest_due_seconds": 5.8832,
+          "rows_peak": 115
+        },
+        "POLL": {
+          "claims": 464.0,
+          "work_seconds": 28.618063359,
+          "mean_due_seconds": 4.068576747844827,
+          "eligible_peak": 97,
+          "oldest_due_seconds": 5.853,
+          "rows_peak": 106
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 762.0,
+      "query_done": 2064.0,
+      "query_ready": 65.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 27.945986332244974,
+        "claim": 12.753404423541049,
+        "arm": 16.92695742249104,
+        "apply": 28.550640357798166,
+        "finish": 18.070083966006983,
+        "budget_admit": 18.265083583017326,
+        "budget_release": 15.479032051859098
+      },
+      "physical_closed_in_arrival_window": 24868,
+      "budget_full_observations": 24624.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 521.6676898002625,
+        "inventory_buckets": 74.98717546463013,
+        "attempts": 4.328412055969238,
+        "inbox": 4.400652170181274,
+        "user_guard": 1.0924100875854492
+      },
+      "pg_http_seconds": 18.593708639,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 86197,
+        "seconds": 273.465550294,
+        "mean_ms": 3.1725645938257716,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 104.31,
+          "peak_rss_mib": 373.421875,
+          "peak_cpu_percent": 221.1
+        },
+        "pg": {
+          "observed_cpu_seconds": 41.550000000000004,
+          "peak_rss_mib": 20.8125,
+          "peak_cpu_percent": 10.4
+        },
+        "k6": {
+          "observed_cpu_seconds": 40.852326000000005,
+          "peak_rss_mib": 739.484375,
+          "peak_cpu_percent": 136.3,
+          "sampled_cpu_seconds": 40.800000000000004
+        },
+        "db_cpu_seconds": 200.975999,
+        "db_peak_memory_current_mib": 819.08984375,
+        "db_throttled_seconds": 170.196532,
+        "db_io_delta": {
+          "rbytes": 65536,
+          "wbytes": 4099338240,
+          "rios": 4,
+          "wios": 476627
+        },
+        "observer_cpu_seconds": 6.526752999999995
+      },
+      "db_status_delta": {
+        "Bytes_received": 153435293,
+        "Bytes_sent": 408505109,
+        "Com_commit": 86800,
+        "Com_rollback": 25151,
+        "Innodb_buffer_pool_reads": 6,
+        "Innodb_data_fsyncs": 159528,
+        "Innodb_data_reads": 6,
+        "Innodb_data_writes": 984564,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 153906,
+        "Innodb_row_lock_time": 598015,
+        "Innodb_row_lock_waits": 39121,
+        "Threads_connected": 42,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 1052359,
+          "seconds": 84.206247756975,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 116375,
+          "seconds": 65.784793119425,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 91584,
+          "seconds": 4.4585700357,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 801,
+          "seconds": 0.875405837825,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-pull-retry-400-r02",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 2,
+      "admission_commit_to_confirm_http": {
+        "n": 2546,
+        "p50": 5.1169657707214355,
+        "p95": 5.697775840759277,
+        "p99": 5.7970130443573,
+        "max": 5.89156699180603
+      },
+      "pg_effect_to_purchase": {
+        "n": 2546,
+        "p50": 4.8901588916778564,
+        "p95": 5.678275108337402,
+        "p99": 5.92815899848938,
+        "max": 6.422797203063965
+      },
+      "slot_commit": {
+        "n": 2546,
+        "p50": 10.83400011062622,
+        "p95": 11.694999933242798,
+        "p99": 11.986000061035156,
+        "max": 12.555999994277954
+      },
+      "refused_stock": {
+        "n": 10921,
+        "p50": 109.37853193283081,
+        "p95": 149.93996500968933,
+        "p99": 153.80291509628296,
+        "max": 154.65748286247253
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2238.0,
+          "work_seconds": 134.696215577,
+          "mean_due_seconds": 4.651605847631814,
+          "eligible_peak": 166,
+          "oldest_due_seconds": 5.7886,
+          "rows_peak": 167
+        },
+        "SIGNALED": {
+          "claims": 1709.0,
+          "work_seconds": 104.110511971,
+          "mean_due_seconds": 4.9306882931538905,
+          "eligible_peak": 117,
+          "oldest_due_seconds": 5.7356,
+          "rows_peak": 117
+        },
+        "POLL": {
+          "claims": 498.0,
+          "work_seconds": 29.219201106,
+          "mean_due_seconds": 4.029852232931726,
+          "eligible_peak": 105,
+          "oldest_due_seconds": 5.6539,
+          "rows_peak": 115
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 797.0,
+      "query_done": 2146.0,
+      "query_ready": 61.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 26.923890581920155,
+        "claim": 12.194131424265548,
+        "arm": 16.232418878207916,
+        "apply": 27.71783084620506,
+        "finish": 17.27327214488189,
+        "budget_admit": 18.591100353542863,
+        "budget_release": 15.74660711221122
+      },
+      "physical_closed_in_arrival_window": 25983,
+      "budget_full_observations": 25880.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 501.92894649505615,
+        "inventory_buckets": 91.7639651298523,
+        "inbox": 4.290812969207764,
+        "attempts": 6.536128282546997
+      },
+      "pg_http_seconds": 19.490314953,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 88511,
+        "seconds": 294.005131301,
+        "mean_ms": 3.321679015048977,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 108.32,
+          "peak_rss_mib": 374.546875,
+          "peak_cpu_percent": 220.5
+        },
+        "pg": {
+          "observed_cpu_seconds": 43.129999999999995,
+          "peak_rss_mib": 19.59375,
+          "peak_cpu_percent": 10.6
+        },
+        "k6": {
+          "observed_cpu_seconds": 42.387305,
+          "peak_rss_mib": 743.78125,
+          "peak_cpu_percent": 115.5,
+          "sampled_cpu_seconds": 42.35
+        },
+        "db_cpu_seconds": 200.180771,
+        "db_peak_memory_current_mib": 817.75,
+        "db_throttled_seconds": 141.372668,
+        "db_io_delta": {
+          "rbytes": 131072,
+          "wbytes": 4086153216,
+          "rios": 8,
+          "wios": 471133
+        },
+        "observer_cpu_seconds": 6.680030000000003
+      },
+      "db_status_delta": {
+        "Bytes_received": 157761337,
+        "Bytes_sent": 420227326,
+        "Com_commit": 89039,
+        "Com_rollback": 26281,
+        "Innodb_buffer_pool_reads": 10,
+        "Innodb_data_fsyncs": 156644,
+        "Innodb_data_reads": 10,
+        "Innodb_data_writes": 935345,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 150997,
+        "Innodb_row_lock_time": 634925,
+        "Innodb_row_lock_waits": 40732,
+        "Threads_connected": 40,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 1000425,
+          "seconds": 86.440594501136,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 116925,
+          "seconds": 72.874176301272,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 91426,
+          "seconds": 4.633557466708,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 805,
+          "seconds": 0.929080586808,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-pull-retry-400-r03",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 3,
+      "admission_commit_to_confirm_http": {
+        "n": 2655,
+        "p50": 4.737967014312744,
+        "p95": 5.632501840591431,
+        "p99": 5.706228017807007,
+        "max": 5.74505877494812
+      },
+      "pg_effect_to_purchase": {
+        "n": 2655,
+        "p50": 4.583963871002197,
+        "p95": 5.551331043243408,
+        "p99": 5.83104681968689,
+        "max": 6.612857103347778
+      },
+      "slot_commit": {
+        "n": 2655,
+        "p50": 9.861000061035156,
+        "p95": 11.327000141143799,
+        "p99": 11.549999952316284,
+        "max": 12.575000047683716
+      },
+      "refused_stock": {
+        "n": 11586,
+        "p50": 116.23751211166382,
+        "p95": 162.9726960659027,
+        "p99": 166.7413990497589,
+        "max": 167.67222595214844
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2362.0,
+          "work_seconds": 136.32891825299998,
+          "mean_due_seconds": 4.370346693056732,
+          "eligible_peak": 156,
+          "oldest_due_seconds": 5.7,
+          "rows_peak": 156
+        },
+        "SIGNALED": {
+          "claims": 1726.0,
+          "work_seconds": 95.308688856,
+          "mean_due_seconds": 4.65484060023175,
+          "eligible_peak": 111,
+          "oldest_due_seconds": 5.7194,
+          "rows_peak": 111
+        },
+        "POLL": {
+          "claims": 588.0,
+          "work_seconds": 32.916696956,
+          "mean_due_seconds": 3.778817341836735,
+          "eligible_peak": 92,
+          "oldest_due_seconds": 5.568,
+          "rows_peak": 106
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 870.0,
+      "query_done": 2230.0,
+      "query_ready": 84.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 24.963048338634874,
+        "claim": 11.392080975838441,
+        "arm": 15.433294666802945,
+        "apply": 25.221633606850176,
+        "finish": 16.306315980316644,
+        "budget_admit": 18.04286499377319,
+        "budget_release": 14.316890919909502
+      },
+      "physical_closed_in_arrival_window": 28776,
+      "budget_full_observations": 28548.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 605.4809985160828,
+        "inventory_buckets": 77.02894020080566,
+        "attempts": 6.552239656448364,
+        "inbox": 2.1453797817230225
+      },
+      "pg_http_seconds": 21.5593522,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 93319,
+        "seconds": 340.094782258,
+        "mean_ms": 3.6444323477319736,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 118.33,
+          "peak_rss_mib": 355.296875,
+          "peak_cpu_percent": 232.1
+        },
+        "pg": {
+          "observed_cpu_seconds": 46.82,
+          "peak_rss_mib": 19.734375,
+          "peak_cpu_percent": 10.8
+        },
+        "k6": {
+          "observed_cpu_seconds": 45.045452,
+          "peak_rss_mib": 735.59375,
+          "peak_cpu_percent": 131.4,
+          "sampled_cpu_seconds": 45.03
+        },
+        "db_cpu_seconds": 192.524332,
+        "db_peak_memory_current_mib": 827.421875,
+        "db_throttled_seconds": 76.766653,
+        "db_io_delta": {
+          "rbytes": 49152,
+          "wbytes": 4193427456,
+          "rios": 3,
+          "wios": 448135
+        },
+        "observer_cpu_seconds": 7.061916999999999
+      },
+      "db_status_delta": {
+        "Bytes_received": 167955793,
+        "Bytes_sent": 447527435,
+        "Com_commit": 93965,
+        "Com_rollback": 29029,
+        "Innodb_buffer_pool_reads": 6,
+        "Innodb_data_fsyncs": 146840,
+        "Innodb_data_reads": 6,
+        "Innodb_data_writes": 712790,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 140860,
+        "Innodb_row_lock_time": 685170,
+        "Innodb_row_lock_waits": 44996,
+        "Threads_connected": 42,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 762463,
+          "seconds": 90.131200058115,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 117145,
+          "seconds": 85.82389884837,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 96980,
+          "seconds": 5.669772008355,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 855,
+          "seconds": 1.057700491452,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-late-once-400-r01",
+      "variant": "late",
+      "policy": "once",
+      "rep": 1,
+      "admission_commit_to_confirm_http": {
+        "n": 3327,
+        "p50": 3.555976152420044,
+        "p95": 4.045400857925415,
+        "p99": 4.143171072006226,
+        "max": 4.303420066833496
+      },
+      "pg_effect_to_purchase": {
+        "n": 3327,
+        "p50": 3.4546899795532227,
+        "p95": 4.132872104644775,
+        "p99": 4.352434873580933,
+        "max": 4.917520999908447
+      },
+      "slot_commit": {
+        "n": 3327,
+        "p50": 7.5290000438690186,
+        "p95": 8.519000053405762,
+        "p99": 8.825000047683716,
+        "max": 9.649999856948853
+      },
+      "refused_stock": {
+        "n": 14196,
+        "p50": 131.3150360584259,
+        "p95": 197.41083908081055,
+        "p99": 203.2302689552307,
+        "max": 204.65508890151978
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 3201.0,
+          "work_seconds": 133.437074948,
+          "mean_due_seconds": 3.077722055920025,
+          "eligible_peak": 161,
+          "oldest_due_seconds": 4.1634,
+          "rows_peak": 162
+        },
+        "SIGNALED": {
+          "claims": 2483.0,
+          "work_seconds": 77.44171455700001,
+          "mean_due_seconds": 3.517884340716875,
+          "eligible_peak": 118,
+          "oldest_due_seconds": 4.3157,
+          "rows_peak": 119
+        },
+        "POLL": {
+          "claims": 761.0,
+          "work_seconds": 28.555741736,
+          "mean_due_seconds": 2.61428808804205,
+          "eligible_peak": 84,
+          "oldest_due_seconds": 4.1402,
+          "rows_peak": 112
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 1375.0,
+      "query_done": 3107.0,
+      "query_ready": 137.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 19.20269502050822,
+        "claim": 9.583576767263427,
+        "arm": 13.649603108780342,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 6.169610719896194,
+        "budget_release": 2.523342848465056
+      },
+      "physical_closed_in_arrival_window": 14074,
+      "budget_full_observations": 14041.0,
+      "budget_waiter_seconds_sampled": {
+        "inventory_buckets": 128.86278986930847,
+        "budgets": 78.84677004814148,
+        "inbox": 18.25529718399048,
+        "attempts": 14.094645500183105
+      },
+      "pg_http_seconds": 31.615591735000002,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 108275,
+        "seconds": 363.318970356,
+        "mean_ms": 3.3555203911891023,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 126.02,
+          "peak_rss_mib": 374.796875,
+          "peak_cpu_percent": 209.9
+        },
+        "pg": {
+          "observed_cpu_seconds": 59.32,
+          "peak_rss_mib": 21.25,
+          "peak_cpu_percent": 12.6
+        },
+        "k6": {
+          "observed_cpu_seconds": 44.875973,
+          "peak_rss_mib": 726.59375,
+          "peak_cpu_percent": 122.3,
+          "sampled_cpu_seconds": 44.84
+        },
+        "db_cpu_seconds": 177.061761,
+        "db_peak_memory_current_mib": 859.75,
+        "db_throttled_seconds": 3.875179,
+        "db_io_delta": {
+          "rbytes": 131072,
+          "wbytes": 5074784256,
+          "rios": 8,
+          "wios": 483727
+        },
+        "observer_cpu_seconds": 8.18168799999999
+      },
+      "db_status_delta": {
+        "Bytes_received": 189408757,
+        "Bytes_sent": 438116892,
+        "Com_commit": 109072,
+        "Com_rollback": 14080,
+        "Innodb_buffer_pool_reads": 9,
+        "Innodb_data_fsyncs": 147944,
+        "Innodb_data_reads": 9,
+        "Innodb_data_writes": 366981,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 140983,
+        "Innodb_row_lock_time": 240586,
+        "Innodb_row_lock_waits": 33554,
+        "Threads_connected": 35,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 135044,
+          "seconds": 93.573944490776,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 396270,
+          "seconds": 77.64613965422,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 118628,
+          "seconds": 6.349758067616,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 1032,
+          "seconds": 1.246942137228,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-late-once-400-r02",
+      "variant": "late",
+      "policy": "once",
+      "rep": 2,
+      "admission_commit_to_confirm_http": {
+        "n": 3688,
+        "p50": 3.1655898094177246,
+        "p95": 3.704392910003662,
+        "p99": 3.951162099838257,
+        "max": 4.034179925918579
+      },
+      "pg_effect_to_purchase": {
+        "n": 3688,
+        "p50": 3.042524814605713,
+        "p95": 3.7458338737487793,
+        "p99": 4.0010740756988525,
+        "max": 4.6940388679504395
+      },
+      "slot_commit": {
+        "n": 3688,
+        "p50": 6.715000152587891,
+        "p95": 7.733000040054321,
+        "p99": 8.008000135421753,
+        "max": 9.151000022888184
+      },
+      "refused_stock": {
+        "n": 14045,
+        "p50": 129.01180005073547,
+        "p95": 194.55974984169006,
+        "p99": 200.3838930130005,
+        "max": 201.83714389801025
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 3570.0,
+          "work_seconds": 134.058962665,
+          "mean_due_seconds": 2.7510011787114848,
+          "eligible_peak": 150,
+          "oldest_due_seconds": 3.9475,
+          "rows_peak": 151
+        },
+        "SIGNALED": {
+          "claims": 2698.0,
+          "work_seconds": 75.00546836800001,
+          "mean_due_seconds": 3.0936589940696813,
+          "eligible_peak": 108,
+          "oldest_due_seconds": 3.9553,
+          "rows_peak": 108
+        },
+        "POLL": {
+          "claims": 892.0,
+          "work_seconds": 29.589957024,
+          "mean_due_seconds": 2.4443578430493274,
+          "eligible_peak": 71,
+          "oldest_due_seconds": 3.9206,
+          "rows_peak": 102
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 1390.0,
+      "query_done": 3438.0,
+      "query_ready": 152.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 17.380619916290367,
+        "claim": 8.805133064561405,
+        "arm": 12.48740097958087,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 3.2027871498037874,
+        "budget_release": 1.7658820169689877
+      },
+      "physical_closed_in_arrival_window": 13981,
+      "budget_full_observations": 13931.0,
+      "budget_waiter_seconds_sampled": {
+        "inventory_buckets": 80.99150466918945,
+        "budgets": 34.2260799407959,
+        "attempts": 15.1881742477417,
+        "inbox": 15.09878945350647
+      },
+      "pg_http_seconds": 32.065112841,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 111107,
+        "seconds": 277.186975396,
+        "mean_ms": 2.494775085242154,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 128.35,
+          "peak_rss_mib": 368.453125,
+          "peak_cpu_percent": 222.3
+        },
+        "pg": {
+          "observed_cpu_seconds": 60.21,
+          "peak_rss_mib": 20.296875,
+          "peak_cpu_percent": 12.8
+        },
+        "k6": {
+          "observed_cpu_seconds": 44.236609,
+          "peak_rss_mib": 722.4375,
+          "peak_cpu_percent": 118.3,
+          "sampled_cpu_seconds": 44.17
+        },
+        "db_cpu_seconds": 192.600939,
+        "db_peak_memory_current_mib": 871.25,
+        "db_throttled_seconds": 29.37229,
+        "db_io_delta": {
+          "rbytes": 114688,
+          "wbytes": 5279834112,
+          "rios": 7,
+          "wios": 520579
+        },
+        "observer_cpu_seconds": 7.925663000000005
+      },
+      "db_status_delta": {
+        "Bytes_received": 194719117,
+        "Bytes_sent": 456962136,
+        "Com_commit": 111886,
+        "Com_rollback": 13986,
+        "Innodb_buffer_pool_reads": 8,
+        "Innodb_data_fsyncs": 159831,
+        "Innodb_data_reads": 8,
+        "Innodb_data_writes": 428234,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 152579,
+        "Innodb_row_lock_time": 149822,
+        "Innodb_row_lock_waits": 29660,
+        "Threads_connected": 42,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 150518,
+          "seconds": 79.191608361132,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 466362,
+          "seconds": 64.90740800511,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 121660,
+          "seconds": 5.566235487861,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 1072,
+          "seconds": 1.136477550081,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-late-once-400-r03",
+      "variant": "late",
+      "policy": "once",
+      "rep": 3,
+      "admission_commit_to_confirm_http": {
+        "n": 3453,
+        "p50": 3.401715040206909,
+        "p95": 3.978740930557251,
+        "p99": 4.1077728271484375,
+        "max": 4.191346168518066
+      },
+      "pg_effect_to_purchase": {
+        "n": 3453,
+        "p50": 3.2877490520477295,
+        "p95": 3.9546380043029785,
+        "p99": 4.221448183059692,
+        "max": 5.040541887283325
+      },
+      "slot_commit": {
+        "n": 3453,
+        "p50": 7.269999980926514,
+        "p95": 8.434000015258789,
+        "p99": 8.676999807357788,
+        "max": 9.718999862670898
+      },
+      "refused_stock": {
+        "n": 14316,
+        "p50": 131.26226806640625,
+        "p95": 201.89417004585266,
+        "p99": 207.9324870109558,
+        "max": 209.45115613937378
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 3310.0,
+          "work_seconds": 132.466765513,
+          "mean_due_seconds": 2.9592372719033233,
+          "eligible_peak": 148,
+          "oldest_due_seconds": 4.1418,
+          "rows_peak": 150
+        },
+        "SIGNALED": {
+          "claims": 2529.0,
+          "work_seconds": 77.075038831,
+          "mean_due_seconds": 3.3371853459865557,
+          "eligible_peak": 114,
+          "oldest_due_seconds": 4.0813,
+          "rows_peak": 114
+        },
+        "POLL": {
+          "claims": 810.0,
+          "work_seconds": 28.587166406999998,
+          "mean_due_seconds": 2.6576860679012344,
+          "eligible_peak": 71,
+          "oldest_due_seconds": 4.0038,
+          "rows_peak": 95
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 1375.0,
+      "query_done": 3198.0,
+      "query_ready": 141.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 18.309994797542736,
+        "claim": 9.262598016201396,
+        "arm": 13.073708854245146,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 5.454756483054703,
+        "budget_release": 2.199556825416798
+      },
+      "physical_closed_in_arrival_window": 14237,
+      "budget_full_observations": 14163.0,
+      "budget_waiter_seconds_sampled": {
+        "inventory_buckets": 93.16453838348389,
+        "budgets": 92.97500205039978,
+        "inbox": 21.07588028907776,
+        "attempts": 9.563858270645142
+      },
+      "pg_http_seconds": 31.764347585000003,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 110155,
+        "seconds": 352.555275003,
+        "mean_ms": 3.200538105424175,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 128.5,
+          "peak_rss_mib": 359.609375,
+          "peak_cpu_percent": 218.4
+        },
+        "pg": {
+          "observed_cpu_seconds": 60.769999999999996,
+          "peak_rss_mib": 19.6875,
+          "peak_cpu_percent": 12.1
+        },
+        "k6": {
+          "observed_cpu_seconds": 45.326526,
+          "peak_rss_mib": 720.859375,
+          "peak_cpu_percent": 117.0,
+          "sampled_cpu_seconds": 45.260000000000005
+        },
+        "db_cpu_seconds": 178.816486,
+        "db_peak_memory_current_mib": 884.46484375,
+        "db_throttled_seconds": 1.627565,
+        "db_io_delta": {
+          "rbytes": 98304,
+          "wbytes": 5166989312,
+          "rios": 6,
+          "wios": 502202
+        },
+        "observer_cpu_seconds": 8.236177000000009
+      },
+      "db_status_delta": {
+        "Bytes_received": 192800671,
+        "Bytes_sent": 447396414,
+        "Com_commit": 110982,
+        "Com_rollback": 14243,
+        "Innodb_buffer_pool_reads": 7,
+        "Innodb_data_fsyncs": 152373,
+        "Innodb_data_reads": 7,
+        "Innodb_data_writes": 373850,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 145201,
+        "Innodb_row_lock_time": 218645,
+        "Innodb_row_lock_waits": 33133,
+        "Threads_connected": 32,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 138480,
+          "seconds": 95.77449570942,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 406730,
+          "seconds": 76.96175635841,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 119599,
+          "seconds": 6.197335650198,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 1055,
+          "seconds": 1.255147181431,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-late-retry-400-r01",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 1,
+      "admission_commit_to_confirm_http": {
+        "n": 2845,
+        "p50": 4.650600910186768,
+        "p95": 5.470015048980713,
+        "p99": 5.76180100440979,
+        "max": 5.9671618938446045
+      },
+      "pg_effect_to_purchase": {
+        "n": 2845,
+        "p50": 4.507641077041626,
+        "p95": 5.48930811882019,
+        "p99": 5.771216869354248,
+        "max": 6.288270950317383
+      },
+      "slot_commit": {
+        "n": 2845,
+        "p50": 9.596999883651733,
+        "p95": 11.302000045776367,
+        "p99": 11.64300012588501,
+        "max": 12.335000038146973
+      },
+      "refused_stock": {
+        "n": 10579,
+        "p50": 109.45026707649231,
+        "p95": 148.36166787147522,
+        "p99": 152.05886793136597,
+        "max": 152.9661569595337
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2507.0,
+          "work_seconds": 134.201688481,
+          "mean_due_seconds": 3.9674485221380134,
+          "eligible_peak": 155,
+          "oldest_due_seconds": 5.8498,
+          "rows_peak": 157
+        },
+        "SIGNALED": {
+          "claims": 1908.0,
+          "work_seconds": 83.452527478,
+          "mean_due_seconds": 4.57113223951782,
+          "eligible_peak": 118,
+          "oldest_due_seconds": 5.6748,
+          "rows_peak": 118
+        },
+        "POLL": {
+          "claims": 592.0,
+          "work_seconds": 29.779989494,
+          "mean_due_seconds": 3.538028282094594,
+          "eligible_peak": 104,
+          "oldest_due_seconds": 5.4789,
+          "rows_peak": 126
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 976.0,
+      "query_done": 2404.0,
+      "query_ready": 96.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 27.816204760945332,
+        "claim": 12.950505804111652,
+        "arm": 17.770495180107527,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 10.868891321223302,
+        "budget_release": 5.788263372466216
+      },
+      "physical_closed_in_arrival_window": 25825,
+      "budget_full_observations": 25596.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 254.01808333396912,
+        "inventory_buckets": 86.0318534374237,
+        "attempts": 15.60059118270874,
+        "inbox": 22.00944209098816,
+        "user_guard": 2.1948201656341553
+      },
+      "pg_http_seconds": 22.494082843,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 84930,
+        "seconds": 299.926263862,
+        "mean_ms": 3.53145253575886,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 113.88,
+          "peak_rss_mib": 370.78125,
+          "peak_cpu_percent": 240.1
+        },
+        "pg": {
+          "observed_cpu_seconds": 44.59,
+          "peak_rss_mib": 20.640625,
+          "peak_cpu_percent": 11.0
+        },
+        "k6": {
+          "observed_cpu_seconds": 42.586051,
+          "peak_rss_mib": 738.25,
+          "peak_cpu_percent": 124.5,
+          "sampled_cpu_seconds": 42.53
+        },
+        "db_cpu_seconds": 201.090256,
+        "db_peak_memory_current_mib": 818.41015625,
+        "db_throttled_seconds": 147.364849,
+        "db_io_delta": {
+          "rbytes": 131072,
+          "wbytes": 4598325248,
+          "rios": 8,
+          "wios": 459233
+        },
+        "observer_cpu_seconds": 6.678627000000009
+      },
+      "db_status_delta": {
+        "Bytes_received": 182392490,
+        "Bytes_sent": 417686432,
+        "Com_commit": 85514,
+        "Com_rollback": 26104,
+        "Innodb_buffer_pool_reads": 9,
+        "Innodb_data_fsyncs": 146218,
+        "Innodb_data_reads": 9,
+        "Innodb_data_writes": 1180513,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 139885,
+        "Innodb_row_lock_time": 420934,
+        "Innodb_row_lock_waits": 41283,
+        "Threads_connected": 43,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 1222386,
+          "seconds": 87.095795985217,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 111926,
+          "seconds": 74.875442349739,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 104645,
+          "seconds": 5.628602488327,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 897,
+          "seconds": 1.056114501127,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-late-retry-400-r02",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 2,
+      "admission_commit_to_confirm_http": {
+        "n": 2744,
+        "p50": 4.95045804977417,
+        "p95": 5.585571050643921,
+        "p99": 5.668757915496826,
+        "max": 5.711390972137451
+      },
+      "pg_effect_to_purchase": {
+        "n": 2744,
+        "p50": 4.7821831703186035,
+        "p95": 5.654068231582642,
+        "p99": 5.861052989959717,
+        "max": 6.515394926071167
+      },
+      "slot_commit": {
+        "n": 2744,
+        "p50": 9.431999921798706,
+        "p95": 11.561000108718872,
+        "p99": 11.91100001335144,
+        "max": 12.690000057220459
+      },
+      "refused_stock": {
+        "n": 10378,
+        "p50": 109.17214393615723,
+        "p95": 143.0807650089264,
+        "p99": 146.39314699172974,
+        "max": 147.2363350391388
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2414.0,
+          "work_seconds": 135.843095218,
+          "mean_due_seconds": 4.135514169428334,
+          "eligible_peak": 170,
+          "oldest_due_seconds": 5.6641,
+          "rows_peak": 171
+        },
+        "SIGNALED": {
+          "claims": 1801.0,
+          "work_seconds": 82.655230145,
+          "mean_due_seconds": 4.755561833425875,
+          "eligible_peak": 128,
+          "oldest_due_seconds": 5.6044,
+          "rows_peak": 128
+        },
+        "POLL": {
+          "claims": 606.0,
+          "work_seconds": 32.120987819999996,
+          "mean_due_seconds": 3.568379244224422,
+          "eligible_peak": 92,
+          "oldest_due_seconds": 5.6082,
+          "rows_peak": 109
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 879.0,
+      "query_done": 2302.0,
+      "query_ready": 105.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 29.29521832575302,
+        "claim": 13.781943322982457,
+        "arm": 18.83277263373016,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 10.245665375696221,
+        "budget_release": 5.960143524395605
+      },
+      "physical_closed_in_arrival_window": 24374,
+      "budget_full_observations": 24069.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 335.982882976532,
+        "inventory_buckets": 75.71671843528748,
+        "attempts": 11.006380558013916,
+        "inbox": 23.529272079467773
+      },
+      "pg_http_seconds": 22.833513034,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 83007,
+        "seconds": 288.313491729,
+        "mean_ms": 3.47336359257653,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 113.81,
+          "peak_rss_mib": 368.5625,
+          "peak_cpu_percent": 228.3
+        },
+        "pg": {
+          "observed_cpu_seconds": 44.529999999999994,
+          "peak_rss_mib": 20.171875,
+          "peak_cpu_percent": 11.4
+        },
+        "k6": {
+          "observed_cpu_seconds": 41.867625000000004,
+          "peak_rss_mib": 735.515625,
+          "peak_cpu_percent": 105.9,
+          "sampled_cpu_seconds": 41.760000000000005
+        },
+        "db_cpu_seconds": 200.972973,
+        "db_peak_memory_current_mib": 805.74609375,
+        "db_throttled_seconds": 168.726589,
+        "db_io_delta": {
+          "rbytes": 131072,
+          "wbytes": 4651257856,
+          "rios": 8,
+          "wios": 460223
+        },
+        "observer_cpu_seconds": 6.456450999999994
+      },
+      "db_status_delta": {
+        "Bytes_received": 175990661,
+        "Bytes_sent": 403285212,
+        "Com_commit": 83523,
+        "Com_rollback": 24693,
+        "Innodb_buffer_pool_reads": 10,
+        "Innodb_data_fsyncs": 147493,
+        "Innodb_data_reads": 10,
+        "Innodb_data_writes": 1190871,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 141096,
+        "Innodb_row_lock_time": 379084,
+        "Innodb_row_lock_waits": 38603,
+        "Threads_connected": 42,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 1231989,
+          "seconds": 83.077404662608,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 110292,
+          "seconds": 69.635301489624,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 106525,
+          "seconds": 5.587972629984,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 926,
+          "seconds": 0.943217173516,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-late-retry-400-r03",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 3,
+      "admission_commit_to_confirm_http": {
+        "n": 2750,
+        "p50": 4.888916015625,
+        "p95": 5.457334756851196,
+        "p99": 5.584917068481445,
+        "max": 5.686720132827759
+      },
+      "pg_effect_to_purchase": {
+        "n": 2750,
+        "p50": 4.796098947525024,
+        "p95": 5.5606749057769775,
+        "p99": 5.740020036697388,
+        "max": 6.396090030670166
+      },
+      "slot_commit": {
+        "n": 2750,
+        "p50": 9.907999992370605,
+        "p95": 11.378000020980835,
+        "p99": 11.67199993133545,
+        "max": 12.555000066757202
+      },
+      "refused_stock": {
+        "n": 10414,
+        "p50": 109.16464185714722,
+        "p95": 145.99598097801208,
+        "p99": 149.6542830467224,
+        "max": 150.63570713996887
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2441.0,
+          "work_seconds": 135.788352343,
+          "mean_due_seconds": 4.113675080704629,
+          "eligible_peak": 153,
+          "oldest_due_seconds": 5.5768,
+          "rows_peak": 155
+        },
+        "SIGNALED": {
+          "claims": 1850.0,
+          "work_seconds": 83.604366246,
+          "mean_due_seconds": 4.732931727027027,
+          "eligible_peak": 122,
+          "oldest_due_seconds": 5.5276,
+          "rows_peak": 122
+        },
+        "POLL": {
+          "claims": 603.0,
+          "work_seconds": 31.869807412999997,
+          "mean_due_seconds": 3.3539593731343285,
+          "eligible_peak": 82,
+          "oldest_due_seconds": 5.601,
+          "rows_peak": 106
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 874.0,
+      "query_done": 2328.0,
+      "query_ready": 125.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 29.084223540299703,
+        "claim": 13.859514683945907,
+        "arm": 18.353418940763834,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 10.146930949436953,
+        "budget_release": 5.866370499782135
+      },
+      "physical_closed_in_arrival_window": 24566,
+      "budget_full_observations": 24481.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 273.287570476532,
+        "inventory_buckets": 94.90146946907043,
+        "attempts": 15.523437023162842,
+        "inbox": 21.074395418167114
+      },
+      "pg_http_seconds": 23.456177966,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 83100,
+        "seconds": 283.435861638,
+        "mean_ms": 3.410780525126354,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 115.94,
+          "peak_rss_mib": 362.015625,
+          "peak_cpu_percent": 235.8
+        },
+        "pg": {
+          "observed_cpu_seconds": 44.940000000000005,
+          "peak_rss_mib": 18.1875,
+          "peak_cpu_percent": 10.4
+        },
+        "k6": {
+          "observed_cpu_seconds": 42.402326,
+          "peak_rss_mib": 730.265625,
+          "peak_cpu_percent": 96.3,
+          "sampled_cpu_seconds": 42.32
+        },
+        "db_cpu_seconds": 202.460042,
+        "db_peak_memory_current_mib": 823.1953125,
+        "db_throttled_seconds": 166.722206,
+        "db_io_delta": {
+          "rbytes": 98304,
+          "wbytes": 4495036416,
+          "rios": 6,
+          "wios": 448869
+        },
+        "observer_cpu_seconds": 6.636243999999994
+      },
+      "db_status_delta": {
+        "Bytes_received": 176898269,
+        "Bytes_sent": 405090301,
+        "Com_commit": 83626,
+        "Com_rollback": 24894,
+        "Innodb_buffer_pool_reads": 8,
+        "Innodb_data_fsyncs": 146296,
+        "Innodb_data_reads": 8,
+        "Innodb_data_writes": 1133336,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 140102,
+        "Innodb_row_lock_time": 379934,
+        "Innodb_row_lock_waits": 39246,
+        "Threads_connected": 43,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 1176795,
+          "seconds": 81.6089611952,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 111203,
+          "seconds": 68.499063198225,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 102931,
+          "seconds": 4.94607660085,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 888,
+          "seconds": 0.866242005425,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-expiry-once-400-r01",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 1,
+      "admission_commit_to_confirm_http": {
+        "n": 4456,
+        "p50": 2.394422769546509,
+        "p95": 2.8006370067596436,
+        "p99": 2.923002004623413,
+        "max": 3.0171382427215576
+      },
+      "pg_effect_to_purchase": {
+        "n": 4456,
+        "p50": 2.233535051345825,
+        "p95": 2.8146681785583496,
+        "p99": 2.971122980117798,
+        "max": 3.20871901512146
+      },
+      "slot_commit": {
+        "n": 4456,
+        "p50": 5.259000062942505,
+        "p95": 5.93500018119812,
+        "p99": 6.0299999713897705,
+        "max": 6.0879998207092285
+      },
+      "refused_stock": {
+        "n": 13295,
+        "p50": 87.13036894798279,
+        "p95": 132.9948148727417,
+        "p99": 137.1591558456421,
+        "max": 138.1907091140747
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 4325.0,
+          "work_seconds": 165.023990111,
+          "mean_due_seconds": 2.3393921313294794,
+          "eligible_peak": 159,
+          "oldest_due_seconds": 2.9238,
+          "rows_peak": 160
+        },
+        "SIGNALED": {
+          "claims": 3356.0,
+          "work_seconds": 96.238126852,
+          "mean_due_seconds": 2.3807369943384984,
+          "eligible_peak": 92,
+          "oldest_due_seconds": 2.92,
+          "rows_peak": 92
+        },
+        "POLL": {
+          "claims": 840.0,
+          "work_seconds": 24.210828842999998,
+          "mean_due_seconds": 2.3712990392857143,
+          "eligible_peak": 98,
+          "oldest_due_seconds": 2.8862,
+          "rows_peak": 133
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 0.0,
+      "query_done": 4196.0,
+      "query_ready": 0.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 18.164087812230388,
+        "claim": 8.232881070766341,
+        "arm": 12.30877707073509,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 4.06146886483118,
+        "budget_release": 1.8093815927073402
+      },
+      "physical_closed_in_arrival_window": 13244,
+      "budget_full_observations": 13232.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 66.9040744304657,
+        "inventory_buckets": 106.6494493484497,
+        "inbox": 29.075536251068115,
+        "attempts": 8.548844575881958
+      },
+      "pg_http_seconds": 37.464882169,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 87204,
+        "seconds": 260.109037899,
+        "mean_ms": 2.9827649866863903,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 127.32,
+          "peak_rss_mib": 372.875,
+          "peak_cpu_percent": 234.4
+        },
+        "pg": {
+          "observed_cpu_seconds": 58.29,
+          "peak_rss_mib": 20.734375,
+          "peak_cpu_percent": 12.7
+        },
+        "k6": {
+          "observed_cpu_seconds": 45.407742,
+          "peak_rss_mib": 737.78125,
+          "peak_cpu_percent": 125.7,
+          "sampled_cpu_seconds": 45.31
+        },
+        "db_cpu_seconds": 182.397728,
+        "db_peak_memory_current_mib": 871.19921875,
+        "db_throttled_seconds": 17.425768,
+        "db_io_delta": {
+          "rbytes": 81920,
+          "wbytes": 4507553792,
+          "rios": 5,
+          "wios": 396720
+        },
+        "observer_cpu_seconds": 6.709669
+      },
+      "db_status_delta": {
+        "Bytes_received": 193466229,
+        "Bytes_sent": 474762126,
+        "Com_commit": 88317,
+        "Com_rollback": 13249,
+        "Innodb_buffer_pool_reads": 7,
+        "Innodb_data_fsyncs": 112389,
+        "Innodb_data_reads": 7,
+        "Innodb_data_writes": 349739,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 105722,
+        "Innodb_row_lock_time": 191908,
+        "Innodb_row_lock_waits": 35396,
+        "Threads_connected": 42,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 116740,
+          "seconds": 70.505869537004,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 357858,
+          "seconds": 60.542295663812,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 104393,
+          "seconds": 4.98639306028,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 893,
+          "seconds": 0.951869854868,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-expiry-once-400-r02",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 2,
+      "admission_commit_to_confirm_http": {
+        "n": 4456,
+        "p50": 2.3590362071990967,
+        "p95": 2.807344913482666,
+        "p99": 2.8980960845947266,
+        "max": 4.920489072799683
+      },
+      "pg_effect_to_purchase": {
+        "n": 4456,
+        "p50": 2.238867998123169,
+        "p95": 2.826871871948242,
+        "p99": 3.0182549953460693,
+        "max": 3.184154987335205
+      },
+      "slot_commit": {
+        "n": 4456,
+        "p50": 5.164999961853027,
+        "p95": 6.078000068664551,
+        "p99": 6.158999919891357,
+        "max": 7.955000162124634
+      },
+      "refused_stock": {
+        "n": 13378,
+        "p50": 86.69694209098816,
+        "p95": 133.24995708465576,
+        "p99": 137.34629106521606,
+        "max": 138.41594219207764
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 4324.0,
+          "work_seconds": 165.398040038,
+          "mean_due_seconds": 2.3335950191951897,
+          "eligible_peak": 155,
+          "oldest_due_seconds": 2.8763,
+          "rows_peak": 157
+        },
+        "SIGNALED": {
+          "claims": 3373.0,
+          "work_seconds": 95.967899433,
+          "mean_due_seconds": 2.3765383868959384,
+          "eligible_peak": 90,
+          "oldest_due_seconds": 2.8961,
+          "rows_peak": 90
+        },
+        "POLL": {
+          "claims": 815.0,
+          "work_seconds": 23.019201296,
+          "mean_due_seconds": 2.3595092760736196,
+          "eligible_peak": 95,
+          "oldest_due_seconds": 2.8494,
+          "rows_peak": 111
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 0.0,
+      "query_done": 4187.0,
+      "query_ready": 1.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 18.01740389562421,
+        "claim": 8.250995772086466,
+        "arm": 12.38139884115607,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 4.329974318366886,
+        "budget_release": 1.774538997849976
+      },
+      "physical_closed_in_arrival_window": 13312,
+      "budget_full_observations": 13271.0,
+      "budget_waiter_seconds_sampled": {
+        "inventory_buckets": 108.85041284561157,
+        "inbox": 31.771390676498413,
+        "budgets": 72.57388210296631,
+        "attempts": 7.496741771697998
+      },
+      "pg_http_seconds": 38.45700321300001,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 87310,
+        "seconds": 266.266794155,
+        "mean_ms": 3.0496712192761426,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 128.04999999999998,
+          "peak_rss_mib": 365.84375,
+          "peak_cpu_percent": 227.0
+        },
+        "pg": {
+          "observed_cpu_seconds": 59.02,
+          "peak_rss_mib": 19.9375,
+          "peak_cpu_percent": 13.2
+        },
+        "k6": {
+          "observed_cpu_seconds": 45.913264999999996,
+          "peak_rss_mib": 731.109375,
+          "peak_cpu_percent": 94.4,
+          "sampled_cpu_seconds": 45.870000000000005
+        },
+        "db_cpu_seconds": 182.198255,
+        "db_peak_memory_current_mib": 876.05078125,
+        "db_throttled_seconds": 10.146975,
+        "db_io_delta": {
+          "rbytes": 49152,
+          "wbytes": 4545904640,
+          "rios": 3,
+          "wios": 395175
+        },
+        "observer_cpu_seconds": 6.8478180000000055
+      },
+      "db_status_delta": {
+        "Bytes_received": 194093598,
+        "Bytes_sent": 475821655,
+        "Com_commit": 88548,
+        "Com_rollback": 13318,
+        "Innodb_buffer_pool_reads": 5,
+        "Innodb_data_fsyncs": 111055,
+        "Innodb_data_reads": 5,
+        "Innodb_data_writes": 309203,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 104303,
+        "Innodb_row_lock_time": 197322,
+        "Innodb_row_lock_waits": 35852,
+        "Threads_connected": 37,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 115995,
+          "seconds": 71.843056200344,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 314436,
+          "seconds": 60.935652940728,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 105937,
+          "seconds": 5.315193617768,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 901,
+          "seconds": 1.0351148037,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-expiry-once-400-r03",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 3,
+      "admission_commit_to_confirm_http": {
+        "n": 4303,
+        "p50": 2.4385619163513184,
+        "p95": 3.0490851402282715,
+        "p99": 3.166192054748535,
+        "max": 3.2201108932495117
+      },
+      "pg_effect_to_purchase": {
+        "n": 4303,
+        "p50": 2.3252313137054443,
+        "p95": 3.064714193344116,
+        "p99": 3.2585501670837402,
+        "max": 3.41446590423584
+      },
+      "slot_commit": {
+        "n": 4303,
+        "p50": 5.313999891281128,
+        "p95": 6.605000019073486,
+        "p99": 6.710999965667725,
+        "max": 6.815000057220459
+      },
+      "refused_stock": {
+        "n": 13440,
+        "p50": 87.58223915100098,
+        "p95": 134.23977994918823,
+        "p99": 138.22959113121033,
+        "max": 139.3316011428833
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 4130.0,
+          "work_seconds": 163.770577759,
+          "mean_due_seconds": 2.4857721791767555,
+          "eligible_peak": 158,
+          "oldest_due_seconds": 4.4566,
+          "rows_peak": 160
+        },
+        "SIGNALED": {
+          "claims": 3186.0,
+          "work_seconds": 94.71300217699999,
+          "mean_due_seconds": 2.5382132708725678,
+          "eligible_peak": 90,
+          "oldest_due_seconds": 4.4153,
+          "rows_peak": 90
+        },
+        "POLL": {
+          "claims": 830.0,
+          "work_seconds": 24.668417409,
+          "mean_due_seconds": 2.4963116807228913,
+          "eligible_peak": 92,
+          "oldest_due_seconds": 4.4288,
+          "rows_peak": 121
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 0.0,
+      "query_done": 4016.0,
+      "query_ready": 0.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 19.009232858242942,
+        "claim": 8.492267708200346,
+        "arm": 12.800782576755449,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 4.400411339100545,
+        "budget_release": 1.9865298572851806
+      },
+      "physical_closed_in_arrival_window": 13338,
+      "budget_full_observations": 13220.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 75.95953273773193,
+        "inbox": 26.254886627197266,
+        "inventory_buckets": 100.16600227355957,
+        "attempts": 9.680230379104614
+      },
+      "pg_http_seconds": 38.25821515,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 85958,
+        "seconds": 269.65750253,
+        "mean_ms": 3.1370844194839336,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 128.48999999999998,
+          "peak_rss_mib": 363.03125,
+          "peak_cpu_percent": 221.8
+        },
+        "pg": {
+          "observed_cpu_seconds": 59.6,
+          "peak_rss_mib": 19.671875,
+          "peak_cpu_percent": 13.1
+        },
+        "k6": {
+          "observed_cpu_seconds": 46.654657,
+          "peak_rss_mib": 729.203125,
+          "peak_cpu_percent": 128.2,
+          "sampled_cpu_seconds": 46.550000000000004
+        },
+        "db_cpu_seconds": 184.354063,
+        "db_peak_memory_current_mib": 868.3046875,
+        "db_throttled_seconds": 14.8182,
+        "db_io_delta": {
+          "rbytes": 163840,
+          "wbytes": 4513759232,
+          "rios": 10,
+          "wios": 391880
+        },
+        "observer_cpu_seconds": 6.871535999999993
+      },
+      "db_status_delta": {
+        "Bytes_received": 191690037,
+        "Bytes_sent": 467290808,
+        "Com_commit": 87219,
+        "Com_rollback": 13347,
+        "Innodb_buffer_pool_reads": 11,
+        "Innodb_data_fsyncs": 110658,
+        "Innodb_data_reads": 11,
+        "Innodb_data_writes": 305644,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 103972,
+        "Innodb_row_lock_time": 201738,
+        "Innodb_row_lock_waits": 34889,
+        "Threads_connected": 39,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 114336,
+          "seconds": 69.98073571533,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 311173,
+          "seconds": 60.978489812944,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 105245,
+          "seconds": 5.399741076026,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 905,
+          "seconds": 0.983888428204,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-expiry-retry-400-r01",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 1,
+      "admission_commit_to_confirm_http": {
+        "n": 3370,
+        "p50": 3.462949752807617,
+        "p95": 4.080967903137207,
+        "p99": 4.372647047042847,
+        "max": 4.491443872451782
+      },
+      "pg_effect_to_purchase": {
+        "n": 3370,
+        "p50": 3.3661489486694336,
+        "p95": 4.07626485824585,
+        "p99": 4.3958611488342285,
+        "max": 4.67299485206604
+      },
+      "slot_commit": {
+        "n": 3370,
+        "p50": 7.414999961853027,
+        "p95": 8.702000141143799,
+        "p99": 8.821999788284302,
+        "max": 8.986999988555908
+      },
+      "refused_stock": {
+        "n": 10534,
+        "p50": 73.70120286941528,
+        "p95": 102.29777908325195,
+        "p99": 104.87397694587708,
+        "max": 105.53494191169739
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 3069.0,
+          "work_seconds": 161.150126211,
+          "mean_due_seconds": 3.3665486656891495,
+          "eligible_peak": 169,
+          "oldest_due_seconds": 4.3567,
+          "rows_peak": 171
+        },
+        "SIGNALED": {
+          "claims": 2348.0,
+          "work_seconds": 100.374639008,
+          "mean_due_seconds": 3.5086621124361157,
+          "eligible_peak": 105,
+          "oldest_due_seconds": 4.2994,
+          "rows_peak": 105
+        },
+        "POLL": {
+          "claims": 596.0,
+          "work_seconds": 26.077865247000002,
+          "mean_due_seconds": 3.5184367869127513,
+          "eligible_peak": 105,
+          "oldest_due_seconds": 4.2058,
+          "rows_peak": 125
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 0.0,
+      "query_done": 2944.0,
+      "query_ready": 0.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 27.88960681177892,
+        "claim": 11.447663800099782,
+        "arm": 16.613572187947884,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 13.110457691442999,
+        "budget_release": 5.521658965669612
+      },
+      "physical_closed_in_arrival_window": 25746,
+      "budget_full_observations": 25746.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 400.61046075820923,
+        "inventory_buckets": 100.70612382888794,
+        "inbox": 32.765076875686646,
+        "attempts": 5.439718008041382
+      },
+      "pg_http_seconds": 27.525749281000003,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 67523,
+        "seconds": 280.818659881,
+        "mean_ms": 4.158859349865971,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 116.65,
+          "peak_rss_mib": 377.0625,
+          "peak_cpu_percent": 243.8
+        },
+        "pg": {
+          "observed_cpu_seconds": 44.7,
+          "peak_rss_mib": 20.40625,
+          "peak_cpu_percent": 11.8
+        },
+        "k6": {
+          "observed_cpu_seconds": 44.923287,
+          "peak_rss_mib": 738.484375,
+          "peak_cpu_percent": 122.7,
+          "sampled_cpu_seconds": 44.86
+        },
+        "db_cpu_seconds": 193.742317,
+        "db_peak_memory_current_mib": 827.50390625,
+        "db_throttled_seconds": 109.793276,
+        "db_io_delta": {
+          "rbytes": 65536,
+          "wbytes": 4060930048,
+          "rios": 4,
+          "wios": 355835
+        },
+        "observer_cpu_seconds": 5.753058999999999
+      },
+      "db_status_delta": {
+        "Bytes_received": 184272341,
+        "Bytes_sent": 435613076,
+        "Com_commit": 68442,
+        "Com_rollback": 25925,
+        "Innodb_buffer_pool_reads": 6,
+        "Innodb_data_fsyncs": 107015,
+        "Innodb_data_reads": 6,
+        "Innodb_data_writes": 864880,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 101083,
+        "Innodb_row_lock_time": 524635,
+        "Innodb_row_lock_waits": 46837,
+        "Threads_connected": 43,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 879445,
+          "seconds": 76.281093493866,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 88221,
+          "seconds": 69.313370085858,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 92736,
+          "seconds": 4.932244790976,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 785,
+          "seconds": 0.924486270831,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-expiry-retry-400-r02",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 2,
+      "admission_commit_to_confirm_http": {
+        "n": 3064,
+        "p50": 3.8299639225006104,
+        "p95": 4.423836946487427,
+        "p99": 4.611976861953735,
+        "max": 4.673313856124878
+      },
+      "pg_effect_to_purchase": {
+        "n": 3064,
+        "p50": 3.7124998569488525,
+        "p95": 4.398159980773926,
+        "p99": 4.670351982116699,
+        "max": 4.891287088394165
+      },
+      "slot_commit": {
+        "n": 3064,
+        "p50": 8.213000059127808,
+        "p95": 9.332000017166138,
+        "p99": 9.504999876022339,
+        "max": 9.586999893188477
+      },
+      "refused_stock": {
+        "n": 11242,
+        "p50": 78.79095101356506,
+        "p95": 111.51638197898865,
+        "p99": 114.42978000640869,
+        "max": 115.00151085853577
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 2768.0,
+          "work_seconds": 162.160070865,
+          "mean_due_seconds": 3.744008901011561,
+          "eligible_peak": 163,
+          "oldest_due_seconds": 4.6096,
+          "rows_peak": 164
+        },
+        "SIGNALED": {
+          "claims": 2115.0,
+          "work_seconds": 100.46183558599999,
+          "mean_due_seconds": 3.8723870595744683,
+          "eligible_peak": 107,
+          "oldest_due_seconds": 4.5856,
+          "rows_peak": 107
+        },
+        "POLL": {
+          "claims": 494.0,
+          "work_seconds": 23.844089918999998,
+          "mean_due_seconds": 3.8464819574898783,
+          "eligible_peak": 93,
+          "oldest_due_seconds": 4.5189,
+          "rows_peak": 110
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 0.0,
+      "query_done": 2609.0,
+      "query_ready": 0.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 29.72313872755111,
+        "claim": 12.288418086665427,
+        "arm": 17.910234315523464,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 16.570878945625942,
+        "budget_release": 5.661740867714724
+      },
+      "physical_closed_in_arrival_window": 23897,
+      "budget_full_observations": 23669.0,
+      "budget_waiter_seconds_sampled": {
+        "inventory_buckets": 161.28844666481018,
+        "budgets": 428.58897399902344,
+        "inbox": 59.28969883918762,
+        "attempts": 4.431068181991577
+      },
+      "pg_http_seconds": 32.596868017000006,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 67080,
+        "seconds": 352.390377894,
+        "mean_ms": 5.253285299552772,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 142.19,
+          "peak_rss_mib": 374.5625,
+          "peak_cpu_percent": 241.5
+        },
+        "pg": {
+          "observed_cpu_seconds": 53.68,
+          "peak_rss_mib": 19.765625,
+          "peak_cpu_percent": 11.3
+        },
+        "k6": {
+          "observed_cpu_seconds": 53.08523,
+          "peak_rss_mib": 741.921875,
+          "peak_cpu_percent": 144.2,
+          "sampled_cpu_seconds": 53.06
+        },
+        "db_cpu_seconds": 180.222543,
+        "db_peak_memory_current_mib": 828.0,
+        "db_throttled_seconds": 5.625563,
+        "db_io_delta": {
+          "rbytes": 81920,
+          "wbytes": 3945820160,
+          "rios": 5,
+          "wios": 309710
+        },
+        "observer_cpu_seconds": 6.488880999999995
+      },
+      "db_status_delta": {
+        "Bytes_received": 179527594,
+        "Bytes_sent": 417792287,
+        "Com_commit": 68029,
+        "Com_rollback": 24019,
+        "Innodb_buffer_pool_reads": 7,
+        "Innodb_data_fsyncs": 86585,
+        "Innodb_data_reads": 7,
+        "Innodb_data_writes": 274232,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 80684,
+        "Innodb_row_lock_time": 642737,
+        "Innodb_row_lock_waits": 47849,
+        "Threads_connected": 43,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 78840,
+          "seconds": 81.402714579125,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 267353,
+          "seconds": 81.283727119725,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 93682,
+          "seconds": 6.21386577465,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 795,
+          "seconds": 1.043485780425,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    },
+    {
+      "run": "retry-final-expiry-retry-400-r03",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 3,
+      "admission_commit_to_confirm_http": {
+        "n": 3343,
+        "p50": 3.506716251373291,
+        "p95": 4.007772922515869,
+        "p99": 4.066202878952026,
+        "max": 4.152658224105835
+      },
+      "pg_effect_to_purchase": {
+        "n": 3343,
+        "p50": 3.390573263168335,
+        "p95": 4.038693904876709,
+        "p99": 4.195693016052246,
+        "max": 4.326735973358154
+      },
+      "slot_commit": {
+        "n": 3343,
+        "p50": 7.536999940872192,
+        "p95": 8.361000061035156,
+        "p99": 8.452999830245972,
+        "max": 8.57699990272522
+      },
+      "refused_stock": {
+        "n": 10719,
+        "p50": 75.74171113967896,
+        "p95": 104.94601488113403,
+        "p99": 107.6406180858612,
+        "max": 108.24886989593506
+      },
+      "classes": {
+        "FIRST_ROUND": {
+          "claims": 3056.0,
+          "work_seconds": 161.886464979,
+          "mean_due_seconds": 3.374296792212042,
+          "eligible_peak": 165,
+          "oldest_due_seconds": 4.0295,
+          "rows_peak": 167
+        },
+        "SIGNALED": {
+          "claims": 2302.0,
+          "work_seconds": 98.96099113,
+          "mean_due_seconds": 3.4963568853171156,
+          "eligible_peak": 105,
+          "oldest_due_seconds": 4.0316,
+          "rows_peak": 105
+        },
+        "POLL": {
+          "claims": 602.0,
+          "work_seconds": 26.379228146,
+          "mean_due_seconds": 3.4902586893687704,
+          "eligible_peak": 106,
+          "oldest_due_seconds": 3.9764,
+          "rows_peak": 127
+        },
+        "CANCEL_READY": {
+          "claims": 0,
+          "work_seconds": 0,
+          "mean_due_seconds": null
+        }
+      },
+      "empty_claims": 0.0,
+      "query_done": 2903.0,
+      "query_ready": 0.0,
+      "query_unknown": 0,
+      "db_mean_ms": {
+        "transaction": 27.875063444370397,
+        "claim": 11.206652746140941,
+        "arm": 16.77173316290481,
+        "apply": null,
+        "finish": null,
+        "budget_admit": 12.769918037389647,
+        "budget_release": 5.633116127886936
+      },
+      "physical_closed_in_arrival_window": 25908,
+      "budget_full_observations": 25754.0,
+      "budget_waiter_seconds_sampled": {
+        "budgets": 355.0388705730438,
+        "inventory_buckets": 132.94059038162231,
+        "inbox": 26.240215301513672,
+        "attempts": 12.411944389343262
+      },
+      "pg_http_seconds": 28.758985794000004,
+      "sql_commit": {
+        "sql": "COMMIT",
+        "count": 67708,
+        "seconds": 281.39428778,
+        "mean_ms": 4.155997633662197,
+        "present_in_before": true,
+        "rows_examined": 0,
+        "rows_affected": 0
+      },
+      "resources": {
+        "app": {
+          "observed_cpu_seconds": 121.67999999999999,
+          "peak_rss_mib": 361.859375,
+          "peak_cpu_percent": 232.5
+        },
+        "pg": {
+          "observed_cpu_seconds": 46.54,
+          "peak_rss_mib": 19.65625,
+          "peak_cpu_percent": 11.4
+        },
+        "k6": {
+          "observed_cpu_seconds": 46.09529,
+          "peak_rss_mib": 735.046875,
+          "peak_cpu_percent": 133.5,
+          "sampled_cpu_seconds": 46.0
+        },
+        "db_cpu_seconds": 193.246284,
+        "db_peak_memory_current_mib": 833.2109375,
+        "db_throttled_seconds": 93.196241,
+        "db_io_delta": {
+          "rbytes": 65536,
+          "wbytes": 4167499776,
+          "rios": 4,
+          "wios": 360523
+        },
+        "observer_cpu_seconds": 5.8913879999999965
+      },
+      "db_status_delta": {
+        "Bytes_received": 185059501,
+        "Bytes_sent": 436331735,
+        "Com_commit": 68759,
+        "Com_rollback": 26033,
+        "Innodb_buffer_pool_reads": 7,
+        "Innodb_data_fsyncs": 109003,
+        "Innodb_data_reads": 7,
+        "Innodb_data_writes": 822402,
+        "Innodb_log_waits": 0,
+        "Innodb_os_log_fsyncs": 102693,
+        "Innodb_row_lock_time": 519919,
+        "Innodb_row_lock_waits": 46643,
+        "Threads_connected": 43,
+        "Threads_running": 0
+      },
+      "io_waits": [
+        {
+          "event": "wait/io/file/innodb/innodb_log_file",
+          "count": 835330,
+          "seconds": 76.624668899084,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog",
+          "count": 87976,
+          "seconds": 67.84163871952,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_data_file",
+          "count": 96333,
+          "seconds": 5.346724729256,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_dblwr_file",
+          "count": 833,
+          "seconds": 0.787942105948,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/innodb/innodb_temp_file",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/casetest",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/ERRMSG",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/binlog_index",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/pid",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/sql/misc",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/charset",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        },
+        {
+          "event": "wait/io/file/mysys/cnf",
+          "count": 0,
+          "seconds": 0.0,
+          "present_in_before": true
+        }
+      ],
+      "metric_window": "First to last metric sample inside the90s window; boundary partial samples are excluded. Counter values are not exact cohort counts."
+    }
+  ],
+  "finite": [
+    {
+      "run": "retry-finite-pull-once-400-r01",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 1,
+      "plan_sha": "f0164215789a35f46fc610b305da37635ead93ed3b5063e95666c18e2553dd4b",
+      "purchases": 2942,
+      "deadline_purchases": 2842,
+      "returns": 5798,
+      "minimum_reallocations": 5740,
+      "post_quota_purchases": 2387,
+      "sold_out": 19294,
+      "empty_samples": 48,
+      "rescued": 0,
+      "first_purchases": 2842,
+      "physical_calls": 4212,
+      "cpu": {
+        "window_start": 1793448590.9949682,
+        "window_end": 1793448720.404288,
+        "window_seconds": 129.4093198776245,
+        "host_cpu_seconds": 628.070000000007,
+        "purchases_in_same_window": 2942,
+        "host_cpu_seconds_per_1000_purchases": 213.4840244731499,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 26.12776207923889,
+      "first_http_p95": 57
+    },
+    {
+      "run": "retry-finite-pull-once-400-r02",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 2,
+      "plan_sha": "4ce36f3cd7800c59d082bca102827b7cab43efaf9a6d9dac75aa9f99c3aec8e5",
+      "purchases": 2923,
+      "deadline_purchases": 2823,
+      "returns": 5791,
+      "minimum_reallocations": 5714,
+      "post_quota_purchases": 2438,
+      "sold_out": 17565,
+      "empty_samples": 48,
+      "rescued": 0,
+      "first_purchases": 2823,
+      "physical_calls": 4249,
+      "cpu": {
+        "window_start": 1793450197.821842,
+        "window_end": 1793450328.164362,
+        "window_seconds": 130.34251999855042,
+        "host_cpu_seconds": 691.6699999999837,
+        "purchases_in_same_window": 2923,
+        "host_cpu_seconds_per_1000_purchases": 236.63017447827016,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 29.722543954849243,
+      "first_http_p95": 59
+    },
+    {
+      "run": "retry-finite-pull-once-400-r03",
+      "variant": "pull",
+      "policy": "once",
+      "rep": 3,
+      "plan_sha": "1bea43803d6a7e098f88e2871077a56fbadac3f7052fbb64f7b5556a002c0919",
+      "purchases": 2938,
+      "deadline_purchases": 2838,
+      "returns": 5689,
+      "minimum_reallocations": 5627,
+      "post_quota_purchases": 2449,
+      "sold_out": 17566,
+      "empty_samples": 41,
+      "rescued": 0,
+      "first_purchases": 2838,
+      "physical_calls": 4254,
+      "cpu": {
+        "window_start": 1793450341.5304298,
+        "window_end": 1793450470.839703,
+        "window_seconds": 129.30927324295044,
+        "host_cpu_seconds": 705.2399999999907,
+        "purchases_in_same_window": 2938,
+        "host_cpu_seconds_per_1000_purchases": 240.0408441116374,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 30.182895183563232,
+      "first_http_p95": 58
+    },
+    {
+      "run": "retry-finite-pull-retry-400-r01",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 1,
+      "plan_sha": "f0164215789a35f46fc610b305da37635ead93ed3b5063e95666c18e2553dd4b",
+      "purchases": 2928,
+      "deadline_purchases": 2797,
+      "returns": 5619,
+      "minimum_reallocations": 5547,
+      "post_quota_purchases": 2396,
+      "sold_out": 17389,
+      "empty_samples": 47,
+      "rescued": 225,
+      "first_purchases": 2572,
+      "physical_calls": 6943,
+      "cpu": {
+        "window_start": 1793449029.082216,
+        "window_end": 1793449159.417096,
+        "window_seconds": 130.3348798751831,
+        "host_cpu_seconds": 698.289999999979,
+        "purchases_in_same_window": 2928,
+        "host_cpu_seconds_per_1000_purchases": 238.48702185791635,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 26.9410560131073,
+      "first_http_p95": 68
+    },
+    {
+      "run": "retry-finite-pull-retry-400-r02",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 2,
+      "plan_sha": "4ce36f3cd7800c59d082bca102827b7cab43efaf9a6d9dac75aa9f99c3aec8e5",
+      "purchases": 2934,
+      "deadline_purchases": 2802,
+      "returns": 5535,
+      "minimum_reallocations": 5469,
+      "post_quota_purchases": 2397,
+      "sold_out": 17469,
+      "empty_samples": 36,
+      "rescued": 212,
+      "first_purchases": 2590,
+      "physical_calls": 6833,
+      "cpu": {
+        "window_start": 1793449758.388483,
+        "window_end": 1793449887.619838,
+        "window_seconds": 129.23135495185852,
+        "host_cpu_seconds": 704.109999999986,
+        "purchases_in_same_window": 2934,
+        "host_cpu_seconds_per_1000_purchases": 239.98295841853647,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 27.41307282447815,
+      "first_http_p95": 71
+    },
+    {
+      "run": "retry-finite-pull-retry-400-r03",
+      "variant": "pull",
+      "policy": "retry",
+      "rep": 3,
+      "plan_sha": "1bea43803d6a7e098f88e2871077a56fbadac3f7052fbb64f7b5556a002c0919",
+      "purchases": 2916,
+      "deadline_purchases": 2780,
+      "returns": 5651,
+      "minimum_reallocations": 5567,
+      "post_quota_purchases": 2382,
+      "sold_out": 17405,
+      "empty_samples": 33,
+      "rescued": 221,
+      "first_purchases": 2559,
+      "physical_calls": 6826,
+      "cpu": {
+        "window_start": 1793450780.802222,
+        "window_end": 1793450911.201725,
+        "window_seconds": 130.39950299263,
+        "host_cpu_seconds": 692.6199999999953,
+        "purchases_in_same_window": 2916,
+        "host_cpu_seconds_per_1000_purchases": 237.52400548696687,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 27.026979207992554,
+      "first_http_p95": 73
+    },
+    {
+      "run": "retry-finite-late-once-400-r01",
+      "variant": "late",
+      "policy": "once",
+      "rep": 1,
+      "plan_sha": "f0164215789a35f46fc610b305da37635ead93ed3b5063e95666c18e2553dd4b",
+      "purchases": 2921,
+      "deadline_purchases": 2821,
+      "returns": 5749,
+      "minimum_reallocations": 5670,
+      "post_quota_purchases": 2443,
+      "sold_out": 15987,
+      "empty_samples": 35,
+      "rescued": 0,
+      "first_purchases": 2821,
+      "physical_calls": 4234,
+      "cpu": {
+        "window_start": 1793448736.726223,
+        "window_end": 1793448865.918045,
+        "window_seconds": 129.19182205200195,
+        "host_cpu_seconds": 674.0199999999604,
+        "purchases_in_same_window": 2921,
+        "host_cpu_seconds_per_1000_purchases": 230.74974323860337,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 31.70489811897278,
+      "first_http_p95": 56
+    },
+    {
+      "run": "retry-finite-late-once-400-r02",
+      "variant": "late",
+      "policy": "once",
+      "rep": 2,
+      "plan_sha": "4ce36f3cd7800c59d082bca102827b7cab43efaf9a6d9dac75aa9f99c3aec8e5",
+      "purchases": 2931,
+      "deadline_purchases": 2831,
+      "returns": 5759,
+      "minimum_reallocations": 5690,
+      "post_quota_purchases": 2415,
+      "sold_out": 17939,
+      "empty_samples": 46,
+      "rescued": 0,
+      "first_purchases": 2831,
+      "physical_calls": 4233,
+      "cpu": {
+        "window_start": 1793450051.816771,
+        "window_end": 1793450180.781035,
+        "window_seconds": 128.96426391601562,
+        "host_cpu_seconds": 674.859999999986,
+        "purchases_in_same_window": 2931,
+        "host_cpu_seconds_per_1000_purchases": 230.24906175366291,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 28.700562000274658,
+      "first_http_p95": 41
+    },
+    {
+      "run": "retry-finite-late-once-400-r03",
+      "variant": "late",
+      "policy": "once",
+      "rep": 3,
+      "plan_sha": "1bea43803d6a7e098f88e2871077a56fbadac3f7052fbb64f7b5556a002c0919",
+      "purchases": 2945,
+      "deadline_purchases": 2845,
+      "returns": 5666,
+      "minimum_reallocations": 5611,
+      "post_quota_purchases": 2440,
+      "sold_out": 18038,
+      "empty_samples": 53,
+      "rescued": 0,
+      "first_purchases": 2845,
+      "physical_calls": 4251,
+      "cpu": {
+        "window_start": 1793450487.7456388,
+        "window_end": 1793450616.921633,
+        "window_seconds": 129.17599415779114,
+        "host_cpu_seconds": 682.5,
+        "purchases_in_same_window": 2945,
+        "host_cpu_seconds_per_1000_purchases": 231.74872665534804,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 29.196784019470215,
+      "first_http_p95": 36
+    },
+    {
+      "run": "retry-finite-late-retry-400-r01",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 1,
+      "plan_sha": "f0164215789a35f46fc610b305da37635ead93ed3b5063e95666c18e2553dd4b",
+      "purchases": 2948,
+      "deadline_purchases": 2824,
+      "returns": 5442,
+      "minimum_reallocations": 5390,
+      "post_quota_purchases": 2389,
+      "sold_out": 18267,
+      "empty_samples": 31,
+      "rescued": 259,
+      "first_purchases": 2565,
+      "physical_calls": 6774,
+      "cpu": {
+        "window_start": 1793449175.732449,
+        "window_end": 1793449303.8035939,
+        "window_seconds": 128.07114481925964,
+        "host_cpu_seconds": 681.0999999999767,
+        "purchases_in_same_window": 2948,
+        "host_cpu_seconds_per_1000_purchases": 231.03799185887948,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 26.133883953094482,
+      "first_http_p95": 45
+    },
+    {
+      "run": "retry-finite-late-retry-400-r02",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 2,
+      "plan_sha": "4ce36f3cd7800c59d082bca102827b7cab43efaf9a6d9dac75aa9f99c3aec8e5",
+      "purchases": 2940,
+      "deadline_purchases": 2814,
+      "returns": 5370,
+      "minimum_reallocations": 5310,
+      "post_quota_purchases": 2379,
+      "sold_out": 18347,
+      "empty_samples": 54,
+      "rescued": 278,
+      "first_purchases": 2536,
+      "physical_calls": 6811,
+      "cpu": {
+        "window_start": 1793449611.334517,
+        "window_end": 1793449741.572611,
+        "window_seconds": 130.2380940914154,
+        "host_cpu_seconds": 680.1699999999837,
+        "purchases_in_same_window": 2940,
+        "host_cpu_seconds_per_1000_purchases": 231.35034013604889,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 25.921711921691895,
+      "first_http_p95": 47
+    },
+    {
+      "run": "retry-finite-late-retry-400-r03",
+      "variant": "late",
+      "policy": "retry",
+      "rep": 3,
+      "plan_sha": "1bea43803d6a7e098f88e2871077a56fbadac3f7052fbb64f7b5556a002c0919",
+      "purchases": 2945,
+      "deadline_purchases": 2820,
+      "returns": 5372,
+      "minimum_reallocations": 5317,
+      "post_quota_purchases": 2379,
+      "sold_out": 18326,
+      "empty_samples": 58,
+      "rescued": 276,
+      "first_purchases": 2544,
+      "physical_calls": 6932,
+      "cpu": {
+        "window_start": 1793450927.26592,
+        "window_end": 1793451057.3598049,
+        "window_seconds": 130.09388494491577,
+        "host_cpu_seconds": 685.890000000014,
+        "purchases_in_same_window": 2945,
+        "host_cpu_seconds_per_1000_purchases": 232.8998302207178,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 25.23837399482727,
+      "first_http_p95": 44
+    },
+    {
+      "run": "retry-finite-expiry-once-400-r01",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 1,
+      "plan_sha": "f0164215789a35f46fc610b305da37635ead93ed3b5063e95666c18e2553dd4b",
+      "purchases": 2968,
+      "deadline_purchases": 2868,
+      "returns": 6302,
+      "minimum_reallocations": 6270,
+      "post_quota_purchases": 2441,
+      "sold_out": 21611,
+      "empty_samples": 50,
+      "rescued": 0,
+      "first_purchases": 2868,
+      "physical_calls": 4535,
+      "cpu": {
+        "window_start": 1793448882.830424,
+        "window_end": 1793449012.0989041,
+        "window_seconds": 129.26848006248474,
+        "host_cpu_seconds": 676.0999999999767,
+        "purchases_in_same_window": 2968,
+        "host_cpu_seconds_per_1000_purchases": 227.79649595686547,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 14.909624099731445,
+      "first_http_p95": 49
+    },
+    {
+      "run": "retry-finite-expiry-once-400-r02",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 2,
+      "plan_sha": "4ce36f3cd7800c59d082bca102827b7cab43efaf9a6d9dac75aa9f99c3aec8e5",
+      "purchases": 2977,
+      "deadline_purchases": 2877,
+      "returns": 6159,
+      "minimum_reallocations": 6136,
+      "post_quota_purchases": 2429,
+      "sold_out": 22201,
+      "empty_samples": 58,
+      "rescued": 0,
+      "first_purchases": 2877,
+      "physical_calls": 4453,
+      "cpu": {
+        "window_start": 1793449904.995498,
+        "window_end": 1793450035.070483,
+        "window_seconds": 130.07498502731323,
+        "host_cpu_seconds": 654.3099999999977,
+        "purchases_in_same_window": 2977,
+        "host_cpu_seconds_per_1000_purchases": 219.78837756130253,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 14.234655141830444,
+      "first_http_p95": 42
+    },
+    {
+      "run": "retry-finite-expiry-once-400-r03",
+      "variant": "expiry",
+      "policy": "once",
+      "rep": 3,
+      "plan_sha": "1bea43803d6a7e098f88e2871077a56fbadac3f7052fbb64f7b5556a002c0919",
+      "purchases": 2974,
+      "deadline_purchases": 2874,
+      "returns": 5984,
+      "minimum_reallocations": 5958,
+      "post_quota_purchases": 2421,
+      "sold_out": 22564,
+      "empty_samples": 59,
+      "rescued": 0,
+      "first_purchases": 2874,
+      "physical_calls": 4407,
+      "cpu": {
+        "window_start": 1793450634.1018612,
+        "window_end": 1793450764.0583081,
+        "window_seconds": 129.95644688606262,
+        "host_cpu_seconds": 645.6499999999651,
+        "purchases_in_same_window": 2974,
+        "host_cpu_seconds_per_1000_purchases": 217.09818426360627,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 14.309823989868164,
+      "first_http_p95": 42
+    },
+    {
+      "run": "retry-finite-expiry-retry-400-r01",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 1,
+      "plan_sha": "f0164215789a35f46fc610b305da37635ead93ed3b5063e95666c18e2553dd4b",
+      "purchases": 2975,
+      "deadline_purchases": 2861,
+      "returns": 5799,
+      "minimum_reallocations": 5774,
+      "post_quota_purchases": 2384,
+      "sold_out": 22109,
+      "empty_samples": 54,
+      "rescued": 1173,
+      "first_purchases": 1688,
+      "physical_calls": 8855,
+      "cpu": {
+        "window_start": 1793449320.668006,
+        "window_end": 1793449451.052203,
+        "window_seconds": 130.38419699668884,
+        "host_cpu_seconds": 667.1500000000233,
+        "purchases_in_same_window": 2975,
+        "host_cpu_seconds_per_1000_purchases": 224.25210084034399,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 11.75885796546936,
+      "first_http_p95": 49
+    },
+    {
+      "run": "retry-finite-expiry-retry-400-r02",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 2,
+      "plan_sha": "4ce36f3cd7800c59d082bca102827b7cab43efaf9a6d9dac75aa9f99c3aec8e5",
+      "purchases": 2977,
+      "deadline_purchases": 2865,
+      "returns": 5757,
+      "minimum_reallocations": 5734,
+      "post_quota_purchases": 2380,
+      "sold_out": 22211,
+      "empty_samples": 53,
+      "rescued": 1123,
+      "first_purchases": 1742,
+      "physical_calls": 8769,
+      "cpu": {
+        "window_start": 1793449464.87396,
+        "window_end": 1793449594.147558,
+        "window_seconds": 129.27359795570374,
+        "host_cpu_seconds": 664.0200000000186,
+        "purchases_in_same_window": 2977,
+        "host_cpu_seconds_per_1000_purchases": 223.0500503863012,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 11.709492921829224,
+      "first_http_p95": 47
+    },
+    {
+      "run": "retry-finite-expiry-retry-400-r03",
+      "variant": "expiry",
+      "policy": "retry",
+      "rep": 3,
+      "plan_sha": "1bea43803d6a7e098f88e2871077a56fbadac3f7052fbb64f7b5556a002c0919",
+      "purchases": 2990,
+      "deadline_purchases": 2882,
+      "returns": 5694,
+      "minimum_reallocations": 5684,
+      "post_quota_purchases": 2379,
+      "sold_out": 22390,
+      "empty_samples": 55,
+      "rescued": 1108,
+      "first_purchases": 1774,
+      "physical_calls": 8660,
+      "cpu": {
+        "window_start": 1793451073.927746,
+        "window_end": 1793451204.000562,
+        "window_seconds": 130.07281589508057,
+        "host_cpu_seconds": 655.8200000000652,
+        "purchases_in_same_window": 2990,
+        "host_cpu_seconds_per_1000_purchases": 219.33779264216227,
+        "definition": "macOS psutil cumulative user+system+nice over exactly the displayed window; numerator includes all host activity and VM CPU, denominator internal PURCHASED commit observations (legacy pilot: SQL terminal_at) in that window (warmup and drain included). No guest DB double-count. Cannot attribute background CPU to app."
+      },
+      "expiry_p99": 11.568809032440186,
+      "first_http_p95": 50
+    }
+  ],
+  "finite_pairs": [
+    {
+      "left": "retry-finite-pull-once-400-r01",
+      "right": "retry-finite-pull-retry-400-r01",
+      "rep": 1,
+      "delta_deadline_buyers": -45,
+      "delta_total_purchases": -14,
+      "delta_first_buyers": -270,
+      "delta_physical_calls": 2731,
+      "delta_host_cpu_seconds": 70.21999999997206,
+      "delta_post_quota_cohort_purchases": 9
+    },
+    {
+      "left": "retry-finite-pull-once-400-r02",
+      "right": "retry-finite-pull-retry-400-r02",
+      "rep": 2,
+      "delta_deadline_buyers": -21,
+      "delta_total_purchases": 11,
+      "delta_first_buyers": -233,
+      "delta_physical_calls": 2584,
+      "delta_host_cpu_seconds": 12.440000000002328,
+      "delta_post_quota_cohort_purchases": -41
+    },
+    {
+      "left": "retry-finite-pull-once-400-r03",
+      "right": "retry-finite-pull-retry-400-r03",
+      "rep": 3,
+      "delta_deadline_buyers": -58,
+      "delta_total_purchases": -22,
+      "delta_first_buyers": -279,
+      "delta_physical_calls": 2572,
+      "delta_host_cpu_seconds": -12.619999999995343,
+      "delta_post_quota_cohort_purchases": -67
+    },
+    {
+      "left": "retry-finite-late-once-400-r01",
+      "right": "retry-finite-late-retry-400-r01",
+      "rep": 1,
+      "delta_deadline_buyers": 3,
+      "delta_total_purchases": 27,
+      "delta_first_buyers": -256,
+      "delta_physical_calls": 2540,
+      "delta_host_cpu_seconds": 7.080000000016298,
+      "delta_post_quota_cohort_purchases": -54
+    },
+    {
+      "left": "retry-finite-late-once-400-r02",
+      "right": "retry-finite-late-retry-400-r02",
+      "rep": 2,
+      "delta_deadline_buyers": -17,
+      "delta_total_purchases": 9,
+      "delta_first_buyers": -295,
+      "delta_physical_calls": 2578,
+      "delta_host_cpu_seconds": 5.309999999997672,
+      "delta_post_quota_cohort_purchases": -36
+    },
+    {
+      "left": "retry-finite-late-once-400-r03",
+      "right": "retry-finite-late-retry-400-r03",
+      "rep": 3,
+      "delta_deadline_buyers": -25,
+      "delta_total_purchases": 0,
+      "delta_first_buyers": -301,
+      "delta_physical_calls": 2681,
+      "delta_host_cpu_seconds": 3.39000000001397,
+      "delta_post_quota_cohort_purchases": -61
+    },
+    {
+      "left": "retry-finite-expiry-once-400-r01",
+      "right": "retry-finite-expiry-retry-400-r01",
+      "rep": 1,
+      "delta_deadline_buyers": -7,
+      "delta_total_purchases": 7,
+      "delta_first_buyers": -1180,
+      "delta_physical_calls": 4320,
+      "delta_host_cpu_seconds": -8.949999999953434,
+      "delta_post_quota_cohort_purchases": -57
+    },
+    {
+      "left": "retry-finite-expiry-once-400-r02",
+      "right": "retry-finite-expiry-retry-400-r02",
+      "rep": 2,
+      "delta_deadline_buyers": -12,
+      "delta_total_purchases": 0,
+      "delta_first_buyers": -1135,
+      "delta_physical_calls": 4316,
+      "delta_host_cpu_seconds": 9.710000000020955,
+      "delta_post_quota_cohort_purchases": -49
+    },
+    {
+      "left": "retry-finite-expiry-once-400-r03",
+      "right": "retry-finite-expiry-retry-400-r03",
+      "rep": 3,
+      "delta_deadline_buyers": 8,
+      "delta_total_purchases": 16,
+      "delta_first_buyers": -1100,
+      "delta_physical_calls": 4253,
+      "delta_host_cpu_seconds": 10.170000000100117,
+      "delta_post_quota_cohort_purchases": -42
+    },
+    {
+      "left": "retry-finite-pull-once-400-r01",
+      "right": "retry-finite-expiry-once-400-r01",
+      "rep": 1,
+      "delta_deadline_buyers": 26,
+      "delta_total_purchases": 26,
+      "delta_first_buyers": 26,
+      "delta_physical_calls": 323,
+      "delta_host_cpu_seconds": 48.02999999996973,
+      "delta_post_quota_cohort_purchases": 54
+    },
+    {
+      "left": "retry-finite-pull-once-400-r02",
+      "right": "retry-finite-expiry-once-400-r02",
+      "rep": 2,
+      "delta_deadline_buyers": 54,
+      "delta_total_purchases": 54,
+      "delta_first_buyers": 54,
+      "delta_physical_calls": 204,
+      "delta_host_cpu_seconds": -37.35999999998603,
+      "delta_post_quota_cohort_purchases": -9
+    },
+    {
+      "left": "retry-finite-pull-once-400-r03",
+      "right": "retry-finite-expiry-once-400-r03",
+      "rep": 3,
+      "delta_deadline_buyers": 36,
+      "delta_total_purchases": 36,
+      "delta_first_buyers": 36,
+      "delta_physical_calls": 153,
+      "delta_host_cpu_seconds": -59.59000000002561,
+      "delta_post_quota_cohort_purchases": -28
+    },
+    {
+      "left": "retry-finite-pull-retry-400-r01",
+      "right": "retry-finite-expiry-retry-400-r01",
+      "rep": 1,
+      "delta_deadline_buyers": 64,
+      "delta_total_purchases": 47,
+      "delta_first_buyers": -884,
+      "delta_physical_calls": 1912,
+      "delta_host_cpu_seconds": -31.139999999955762,
+      "delta_post_quota_cohort_purchases": -12
+    },
+    {
+      "left": "retry-finite-pull-retry-400-r02",
+      "right": "retry-finite-expiry-retry-400-r02",
+      "rep": 2,
+      "delta_deadline_buyers": 63,
+      "delta_total_purchases": 43,
+      "delta_first_buyers": -848,
+      "delta_physical_calls": 1936,
+      "delta_host_cpu_seconds": -40.089999999967404,
+      "delta_post_quota_cohort_purchases": -17
+    },
+    {
+      "left": "retry-finite-pull-retry-400-r03",
+      "right": "retry-finite-expiry-retry-400-r03",
+      "rep": 3,
+      "delta_deadline_buyers": 102,
+      "delta_total_purchases": 74,
+      "delta_first_buyers": -785,
+      "delta_physical_calls": 1834,
+      "delta_host_cpu_seconds": -36.79999999993015,
+      "delta_post_quota_cohort_purchases": -3
+    },
+    {
+      "left": "retry-finite-late-once-400-r01",
+      "right": "retry-finite-expiry-once-400-r01",
+      "rep": 1,
+      "delta_deadline_buyers": 47,
+      "delta_total_purchases": 47,
+      "delta_first_buyers": 47,
+      "delta_physical_calls": 301,
+      "delta_host_cpu_seconds": 2.080000000016298,
+      "delta_post_quota_cohort_purchases": -2
+    },
+    {
+      "left": "retry-finite-late-once-400-r02",
+      "right": "retry-finite-expiry-once-400-r02",
+      "rep": 2,
+      "delta_deadline_buyers": 46,
+      "delta_total_purchases": 46,
+      "delta_first_buyers": 46,
+      "delta_physical_calls": 220,
+      "delta_host_cpu_seconds": -20.54999999998836,
+      "delta_post_quota_cohort_purchases": 14
+    },
+    {
+      "left": "retry-finite-late-once-400-r03",
+      "right": "retry-finite-expiry-once-400-r03",
+      "rep": 3,
+      "delta_deadline_buyers": 29,
+      "delta_total_purchases": 29,
+      "delta_first_buyers": 29,
+      "delta_physical_calls": 156,
+      "delta_host_cpu_seconds": -36.850000000034925,
+      "delta_post_quota_cohort_purchases": -19
+    },
+    {
+      "left": "retry-finite-late-retry-400-r01",
+      "right": "retry-finite-expiry-retry-400-r01",
+      "rep": 1,
+      "delta_deadline_buyers": 37,
+      "delta_total_purchases": 27,
+      "delta_first_buyers": -877,
+      "delta_physical_calls": 2081,
+      "delta_host_cpu_seconds": -13.949999999953434,
+      "delta_post_quota_cohort_purchases": -5
+    },
+    {
+      "left": "retry-finite-late-retry-400-r02",
+      "right": "retry-finite-expiry-retry-400-r02",
+      "rep": 2,
+      "delta_deadline_buyers": 51,
+      "delta_total_purchases": 37,
+      "delta_first_buyers": -794,
+      "delta_physical_calls": 1958,
+      "delta_host_cpu_seconds": -16.149999999965075,
+      "delta_post_quota_cohort_purchases": 1
+    },
+    {
+      "left": "retry-finite-late-retry-400-r03",
+      "right": "retry-finite-expiry-retry-400-r03",
+      "rep": 3,
+      "delta_deadline_buyers": 62,
+      "delta_total_purchases": 45,
+      "delta_first_buyers": -770,
+      "delta_physical_calls": 1728,
+      "delta_host_cpu_seconds": -30.069999999948777,
+      "delta_post_quota_cohort_purchases": 0
+    }
+  ],
+  "limits": "Same planned users/faults and resource budgets, independent runtime scheduling. Finite total purchases include warmup/drain. Return quantities and post-quota cohorts are accounting evidence, not token identity or proof of causal allocation. Causal user benefit is assessed by matched input outcome differences.",
+  "script_sha256": "ae68cd00ab085a73faa0f667da811934eaf10440bbf78ded616e97e1ba547ecb"
+}

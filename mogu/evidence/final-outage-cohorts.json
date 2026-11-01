@@ -1,0 +1,14 @@
+{
+  "k6-baseline-final-pg-stop-01": {
+    "cohort": 26,
+    "unfinished": 0,
+    "last_resolved_seconds": 3.009625196456909,
+    "definition": "Attempts started by PG restore and still nonterminal then; excludes newly started payments after restore. DB terminal_at clock."
+  },
+  "k6-pull-final-pg-stop-01": {
+    "cohort": 18,
+    "unfinished": 0,
+    "last_resolved_seconds": 0.7745180130004883,
+    "definition": "Attempts started by PG restore and still nonterminal then; excludes newly started payments after restore. DB terminal_at clock."
+  }
+}

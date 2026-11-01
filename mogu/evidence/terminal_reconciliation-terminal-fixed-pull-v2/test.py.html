@@ -1,0 +1,70 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>test.py · 구현 근거</title><style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto;padding:0 20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f7;padding:20px;font:14px/1.6 monospace}</style><h1>test.py</h1><p>원본 커밋: 025c54c2fba77e0264351296ae0597bdff81dbdc</p><p>docs/evidence/terminal_reconciliation-terminal-fixed-pull-v2/test.py</p><pre><code>&quot;&quot;&quot;Real MySQL + HTTP simulator: late authenticated webhook must never re-arm terminal commands.&quot;&quot;&quot;
+import sys
+from pathlib import Path
+sys.path.insert(0,str(Path.cwd()/&#x27;tests&#x27;))
+from harness import *
+from collections import Counter
+expect_defect=&#x27;--expect-defect&#x27; in sys.argv
+checks=[]
+def ledger_calls(pk):return [x for x in sim(&#x27;/admin/ledger&#x27;,method=&#x27;GET&#x27;)[&#x27;calls&#x27;] if x[&#x27;payment_key&#x27;]==pk]
+def effects(pk):return [x for x in sim(&#x27;/admin/ledger&#x27;,method=&#x27;GET&#x27;)[&#x27;effects&#x27;] if x[&#x27;payment_key&#x27;]==pk]
+def event(pk,r,status):
+ return sim(&#x27;/admin/event&#x27;,{&#x27;eventId&#x27;:uuid.uuid4().hex,&#x27;eventType&#x27;:&#x27;PAYMENT_STATUS_CHANGED&#x27;,&#x27;data&#x27;:{&#x27;paymentKey&#x27;:pk,&#x27;orderId&#x27;:r[&#x27;orderId&#x27;],&#x27;mid&#x27;:&#x27;mogu-sim&#x27;,&#x27;status&#x27;:status,&#x27;method&#x27;:&#x27;CARD&#x27;,&#x27;totalAmount&#x27;:r[&#x27;amount&#x27;],&#x27;currency&#x27;:&#x27;KRW&#x27;,&#x27;balanceAmount&#x27;:0 if status==&#x27;CANCELED&#x27; else r[&#x27;amount&#x27;]}})
+def make(cancelled=False):
+ user=int(time.time()*1000000)%9000000000000;r=reserve(sale(1),user)
+ if cancelled:hook(&#x27;confirm_armed&#x27;)
+ pk,a,_=pay(r,user,{&#x27;drop_webhook&#x27;:True})
+ if cancelled:
+  hit(&#x27;confirm_armed&#x27;);assert cancel(r,user)[0]==202;hook(&#x27;confirm_armed&#x27;,&#x27;release&#x27;)
+ terminal(r,&#x27;CANCELLED&#x27; if cancelled else &#x27;PURCHASED&#x27;,user)
+ return user,r,pk,a
+for cancelled in [False,True]:
+ user,r,pk,a=make(cancelled);state=&#x27;CANCELLED&#x27; if cancelled else &#x27;PURCHASED&#x27;
+ ops(&#x27;worker/pause&#x27;);before=ledger_calls(pk);effect_before=effects(pk)
+ sim(&#x27;/admin/payment&#x27;,{&#x27;paymentKey&#x27;:pk,&#x27;config&#x27;:{&#x27;drop_webhook&#x27;:True,&#x27;query_delay&#x27;:1.4}})
+ event(pk,r,&#x27;CANCELED&#x27; if cancelled else &#x27;DONE&#x27;)
+ wait(lambda:sql(&#x27;SELECT COUNT(*) n FROM inbox WHERE attempt_id=%s&#x27;,(a[&#x27;attemptId&#x27;],))[0][&#x27;n&#x27;]&gt;=1)
+ ops(&#x27;worker/resume&#x27;)
+ wait(lambda:sql(&quot;SELECT COUNT(*) n FROM observations WHERE attempt_id=%s AND source=&#x27;QUERY&#x27; AND detail=&#x27;UNKNOWN&#x27;&quot;,(a[&#x27;attemptId&#x27;],))[0][&#x27;n&#x27;]&gt;0)
+ time.sleep(.3);ops(&#x27;worker/pause&#x27;);during=ledger_calls(pk)
+ restored=time.time();sim(&#x27;/admin/payment&#x27;,{&#x27;paymentKey&#x27;:pk,&#x27;config&#x27;:{&#x27;drop_webhook&#x27;:True}});event(pk,r,&#x27;CANCELED&#x27; if cancelled else &#x27;DONE&#x27;);ops(&#x27;worker/resume&#x27;)
+ wait(lambda:sql(&#x27;SELECT COUNT(*) n FROM inbox WHERE attempt_id=%s&#x27;,(a[&#x27;attemptId&#x27;],))[0][&#x27;n&#x27;]&gt;=2)
+ wait(lambda:any(c[&#x27;kind&#x27;]==&#x27;QUERY&#x27; and c[&#x27;at&#x27;]&gt;=restored for c in ledger_calls(pk)),20)
+ wait(lambda:sql(&quot;SELECT workflow FROM attempts WHERE id=%s&quot;,(a[&#x27;attemptId&#x27;],))[0][&#x27;workflow&#x27;]==&#x27;RESOLVED&#x27;,20)
+ after=ledger_calls(pk);added=after[len(before):];counts=Counter(x[&#x27;kind&#x27;] for x in added)
+ assert view(r,user)[&#x27;state&#x27;]==state
+ assert effects(pk)==effect_before
+ checks.append({&#x27;case&#x27;:state+&#x27;_late_webhook_timeout_recovery&#x27;,&#x27;before_calls&#x27;:before,&#x27;during_calls&#x27;:during,&#x27;after_calls&#x27;:after,&#x27;added&#x27;:dict(counts),&#x27;effect_delta&#x27;:len(effects(pk))-len(effect_before),&#x27;timeout_seconds&#x27;:1.4,&#x27;app_timeout_ms&#x27;:int(os.getenv(&#x27;PG_TIMEOUT_MS&#x27;,&#x27;800&#x27;))})
+ if expect_defect and not cancelled:assert counts[&#x27;CONFIRM&#x27;]&gt;=1,&#x27;Expected old terminal reapproval defect was not reproduced&#x27;
+ elif not expect_defect:assert counts[&#x27;CONFIRM&#x27;]==0 and counts[&#x27;CANCEL&#x27;]==0,counts
+if not expect_defect:
+ for cancelled in [False,True]:
+  user,r,pk,a=make(cancelled);before=ledger_calls(pk)
+  override={&#x27;status&#x27;:&#x27;DONE&#x27;,&#x27;balanceAmount&#x27;:r[&#x27;amount&#x27;]} if cancelled else {&#x27;status&#x27;:&#x27;CANCELED&#x27;,&#x27;balanceAmount&#x27;:0}
+  sim(&#x27;/admin/payment&#x27;,{&#x27;paymentKey&#x27;:pk,&#x27;config&#x27;:{&#x27;drop_webhook&#x27;:True,&#x27;query_override&#x27;:override}});event(pk,r,override[&#x27;status&#x27;])
+  wait(lambda:sql(&#x27;SELECT review_reason FROM attempts WHERE id=%s&#x27;,(a[&#x27;attemptId&#x27;],))[0][&#x27;review_reason&#x27;]==&#x27;POST_TERMINAL_FACT_CONFLICT&#x27;)
+  assert view(r,user)[&#x27;state&#x27;]==(&#x27;CANCELLED&#x27; if cancelled else &#x27;PURCHASED&#x27;)
+  added=ledger_calls(pk)[len(before):];assert all(c[&#x27;kind&#x27;]==&#x27;QUERY&#x27; for c in added)
+  checks.append({&#x27;case&#x27;:&#x27;terminal_conflict_&#x27;+(&#x27;cancelled&#x27; if cancelled else &#x27;purchased&#x27;),&#x27;calls&#x27;:added,&#x27;review&#x27;:&#x27;POST_TERMINAL_FACT_CONFLICT&#x27;,&#x27;fault&#x27;:&#x27;Authenticated simulator query_override, independent effect ledger unchanged&#x27;})
+ # Unknown pending CONTINUE must still recover with the original confirmation key.
+ user=int(time.time()*1000000)%9000000000000;r=reserve(sale(1),user)
+ pk,a,_=pay(r,user,{&#x27;apply_delay&#x27;:1,&#x27;drop_confirm&#x27;:True,&#x27;drop_webhook&#x27;:True,&#x27;query_delay&#x27;:1.4})
+ wait(lambda:sum(c[&#x27;kind&#x27;]==&#x27;QUERY&#x27; for c in ledger_calls(pk))&gt;0)
+ sim(&#x27;/admin/payment&#x27;,{&#x27;paymentKey&#x27;:pk,&#x27;config&#x27;:{&#x27;drop_webhook&#x27;:True}});terminal(r,user=user)
+ assert len([e for e in effects(pk) if e[&#x27;kind&#x27;]==&#x27;CONFIRM&#x27;])==1
+ checks.append({&#x27;case&#x27;:&#x27;pending_continue_recovery&#x27;,&#x27;calls&#x27;:ledger_calls(pk),&#x27;state&#x27;:&#x27;PURCHASED&#x27;})
+ user,r,pk,a=make(True);checks.append({&#x27;case&#x27;:&#x27;pending_accepted_cancel&#x27;,&#x27;calls&#x27;:ledger_calls(pk),&#x27;state&#x27;:&#x27;CANCELLED&#x27;})
+ # An expired or superseded claim cannot authorize a new external command.
+ for ownership in [&#x27;expired_lease&#x27;,&#x27;new_generation&#x27;]:
+  user=int(time.time()*1000000)%9000000000000;r=reserve(sale(1),user)
+  hook(&#x27;worker_claimed&#x27;);pk,a,_=pay(r,user,{&#x27;drop_webhook&#x27;:True});hit(&#x27;worker_claimed&#x27;);ops(&#x27;worker/pause&#x27;)
+  if ownership==&#x27;expired_lease&#x27;:sql(&quot;UPDATE attempts SET lease_until=TIMESTAMPADD(SECOND,-1,UTC_TIMESTAMP(6)) WHERE id=%s&quot;,(a[&#x27;attemptId&#x27;],))
+  else:sql(&quot;UPDATE attempts SET generation=generation+1,lease_until=TIMESTAMPADD(SECOND,-1,UTC_TIMESTAMP(6)) WHERE id=%s&quot;,(a[&#x27;attemptId&#x27;],))
+  hook(&#x27;worker_claimed&#x27;,&#x27;release&#x27;);time.sleep(.5)
+  assert not ledger_calls(pk),ledger_calls(pk)
+  ops(&#x27;worker/resume&#x27;);terminal(r,user=user)
+  checks.append({&#x27;case&#x27;:ownership,&#x27;state&#x27;:&#x27;PURCHASED&#x27;,&#x27;calls_after_valid_reclaim&#x27;:ledger_calls(pk)})
+report=evidence(sys.argv[1],{&#x27;expected_old_defect&#x27;:expect_defect,&#x27;checks&#x27;:checks,&#x27;scope&#x27;:&#x27;HTTP PG calls counted independently; zero duplicate effect alone is insufficient&#x27;})
+(Path(os.getenv(&#x27;EVIDENCE_ROOT&#x27;,&#x27;docs/evidence&#x27;))/sys.argv[1]/&#x27;test.py&#x27;).write_bytes(Path(__file__).read_bytes())
+assert report[&#x27;ok&#x27;]
+</code></pre></html>

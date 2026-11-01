@@ -1,0 +1,52 @@
+{
+  "scope": "App integration with real TEST PG",
+  "authentication": "completed",
+  "actual_webhook_delivery": "not_received",
+  "began_at": 1793369343.611731,
+  "settings": {
+    "HOLD_SECONDS": "3600",
+    "PG_TIMEOUT_MS": "10000",
+    "LEASE_MS": "30000",
+    "POLL_MS": "1000",
+    "REVIEW_POLL_MS": "60000"
+  },
+  "requested_method": "direct card, selected issuer, installment0",
+  "reservation_id": "01121931-6c4b-4b90-8e4d-054c2b00a34b",
+  "source": "f423494c2276407ef9490aeed17b5c2e5213c3c5",
+  "callback_received_at": 1793369693.966484,
+  "integration_started_at": 1793369824.711777,
+  "bootstrap_query": {
+    "http": 200,
+    "status": "IN_PROGRESS",
+    "purpose": "expected merchant from authenticated provider, not browser"
+  },
+  "app_payment_http": 202,
+  "app_state": "PURCHASED",
+  "payment": {
+    "id": "e2b506cf-a3c2-4fad-a447-20a265ad6d4a",
+    "intent": "CONTINUE",
+    "fact": "APPROVED",
+    "workflow": "RESOLVED",
+    "review_reason": null
+  },
+  "verification_query": {
+    "http": 200,
+    "status": "DONE",
+    "totalAmount": 1000,
+    "balanceAmount": 1000,
+    "method": "카드"
+  },
+  "scenario": "purchase",
+  "cancel_recovery": "not_verified",
+  "operations": [
+    {
+      "kind": "CONFIRM",
+      "dispatch": "ARMED",
+      "calls": 1
+    }
+  ],
+  "webhook_inbox": [],
+  "payment_key_sha256": "b31abfe110875e9baf50bbce9d419354670d3c67161eebf1b7d11bf8eeec9674",
+  "passed": true,
+  "ended_at": 1793369830.8450508
+}

@@ -1,0 +1,18 @@
+{
+  "at": 1793439283.6294131,
+  "before_implementation": true,
+  "parent": "experiment-ready-index (current committed source; recorded branch SHA in manifest)",
+  "hypothesis": "Expiry releases 32 HELD rows with one transaction per row, plus fixed scheduler delay. Independent400 pilots show27-43s p99 expiry return. Commit the same bounded32 rows in one transaction, acquire all guard/reservation locks before sorted inventory rows, aggregate bucket increments. Reduce commit/SQL roundtrip cost and return delays without changing TTL, pending cap, worker count or reservation promise.",
+  "source_change": "experiment-expiry-batch branched from ready-index; one additional expiry transaction-boundary change, combined implementation measured anew. Do not add isolated improvements arithmetically.",
+  "locks": "Stable (sale,user) guard order, then reservations same order, recheck HELD and expires_at using DB clock after lock; no pending release. Update terminal/guard; increment each original bucket once in sorted(sale,bucket) order; afterCommit events for each. Other business paths hold one guard before inventory. Two expiry batches use the same multi-guard order.",
+  "fixed_limits": "32 candidate rows per scheduler tick; no batch size, TTL, worker or pending enlargement",
+  "tests": [
+    "real two-JVM expiry contention",
+    "payment start vs expiry lock winner",
+    "original bucket conservation",
+    "KILL before batch commit -> full rollback -> restart eventual expiry",
+    "failure hooks + postcommit observation are not substituted for process restart"
+  ],
+  "pilot": "same25s100/400 and once/retry seed61001; compare ready-index parent and both originals, full CPU/expiry/buyer result",
+  "reject": "Any double release, pending release, deadlock order regression, rollback ambiguity; or no expiry/commit improvement and no user outcome gain. Final server/selected-policy gates remain retry-protocol-v1; total purchase change required, not faster expiry alone."
+}

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" role="img" aria-labelledby="title desc">
+<title id="title">재고 버킷과 영속 결제 복구의 권위 경계</title><desc id="desc">HTTP 입장 제어 뒤 MySQL 재고 버킷과 전역 사용자 제약, 별도 트랜잭션으로 claim하는 복구 worker와 외부 PG 원장, 검증한 webhook의 durable inbox와 조회 안전망</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8" fill="#536768" /></marker></defs>
+<style>text{font-family:system-ui,sans-serif;fill:#213c37;font-size:18px}.title{font-size:25px;font-weight:700}.small{font-size:16px}.box{fill:#f3f7f4;stroke:#087c70;stroke-width:2;rx:12}.line{stroke:#536768;stroke-width:2;fill:none;marker-end:url("#arrow")}</style>
+<rect width="1000" height="660" fill="#fff" />
+<text x="32" y="40" class="title">DB 재고 권위와 PG 승인 사실을 분리한다</text>
+<rect class="box" x="30" y="80" width="220" height="108" /><text x="48" y="112">HTTP 요청 / k6</text><text x="48" y="140" class="small">예약·취소·결제·상태</text><text x="48" y="167" class="small">201 ≠ 202 ≠ 구매 확정</text>
+<rect class="box" x="310" y="80" width="270" height="108" /><text x="328" y="112">앱의 유한 입장 예산</text><text x="328" y="140" class="small">HTTP / admission / pool</text><text x="328" y="167" class="small">PG pending256 · worker4</text>
+<path class="line" d="M250 132H310" />
+<rect class="box" x="310" y="250" width="330" height="190" /><text x="330" y="282">MySQL 8.4 · 재고와 의사</text><text x="330" y="313" class="small">16 inventory buckets · 전역 guard</text><text x="330" y="340" class="small">reservations / request_results</text><text x="330" y="367" class="small">attempts / operations / inbox</text><text x="330" y="394" class="small">내구성 COMMIT · 동일 멱등키</text><text x="330" y="421" class="small">불명·REVIEW는 재고 유지</text>
+<path class="line" d="M445 188V248" /><text x="458" y="223" class="small">내부 트랜잭션</text>
+<rect class="box" x="30" y="285" width="230" height="145" /><text x="48" y="318">복구 worker</text><text x="48" y="348" class="small">due claim / lease / generation</text><text x="48" y="376" class="small">직접 선점: 최대 64회 반복</text><text x="48" y="404" class="small">HTTP 대기 중 DB 반환</text>
+<path class="line" d="M310 335H262" /><path class="line" d="M260 389H308" />
+<rect class="box" x="730" y="250" width="240" height="190" /><text x="750" y="282">독립 HTTP PG</text><text x="750" y="313" class="small">승인·조회·필요한 취소</text><text x="750" y="340" class="small">효과 원장 별도 영속</text><text x="750" y="367" class="small">승인/취소 사실의 권위</text><text x="750" y="395" class="small">앱 재시작으로 사라지지 않음</text>
+<path class="line" d="M145 430V488H850V442" /><text x="265" y="479" class="small">DB 트랜잭션 밖 · 안정된 외부 키 · 결과 검증</text>
+<rect class="box" x="310" y="535" width="390" height="95" /><text x="330" y="566">인증된 webhook → inbox COMMIT → ACK</text><text x="330" y="596" class="small">웹훅 조회 앞당김 + 유실 시 주기 조회</text>
+<path class="line" d="M850 440V580H702" /><path class="line" d="M475 535V442" />
+</svg>

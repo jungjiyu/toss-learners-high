@@ -1,0 +1,40 @@
+{
+  "at": 1793376652.1031308,
+  "registration_verified": true,
+  "actual_network_delivery": true,
+  "authenticated_inbox_delivery": false,
+  "observations": [
+    {
+      "at": 1793375826.910132,
+      "http": 401,
+      "bytes": 1779,
+      "body_sha256": "eddf26c01e98fa5137e5268825365f65dadf9abacaadaf2f2ec6627aa18aa231",
+      "transmission_id_sha256": "af23ec5fbef768e86ef95034c6e83d1b5d769cacd1c1b71f033adfa27f0d0cd5",
+      "event_type": "PAYMENT_STATUS_CHANGED",
+      "event_id_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "payment_key_sha256": "0d772f99d1f5737ca56121cbc4eb2f709580bfee4b8e2d3493e748f223572d70",
+      "provider_status": "CANCELED"
+    },
+    {
+      "at": 1793375959.587562,
+      "http": 401,
+      "bytes": 1779,
+      "body_sha256": "eddf26c01e98fa5137e5268825365f65dadf9abacaadaf2f2ec6627aa18aa231",
+      "transmission_id_sha256": "2ddbd455e0f0e94dbcacbf87cc67561c040603c4e36e728f85cde6ab3b8aa4c3",
+      "toss_header_names": [
+        "tosspayments-webhook-transmission-id",
+        "tosspayments-webhook-transmission-retried-count",
+        "tosspayments-webhook-transmission-time"
+      ],
+      "signature_present": false,
+      "signature_length": 0,
+      "transmission_time_present": true,
+      "event_type": "PAYMENT_STATUS_CHANGED",
+      "event_id_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "payment_key_sha256": "0d772f99d1f5737ca56121cbc4eb2f709580bfee4b8e2d3493e748f223572d70",
+      "provider_status": "CANCELED"
+    }
+  ],
+  "reason": "Actual TEST merchant request lacked signature header; strict endpoint rejected401; missing signature support cause unresolved",
+  "scope": "Existing user registration and real CANCELED event manually retried in authenticated developer center. No new payment or credential change."
+}

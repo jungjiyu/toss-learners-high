@@ -1,0 +1,28 @@
+[
+  {
+    "case": "KILL_before_expiry_batch_commit",
+    "held_before_kill": 32,
+    "available_before_kill": 0,
+    "available_after_restart": 32
+  },
+  {
+    "case": "payment_before_expiry",
+    "result": "PURCHASED",
+    "available": 0
+  },
+  {
+    "case": "expiry_before_payment",
+    "response": [
+      409,
+      {
+        "code": "NOT_HELD"
+      }
+    ],
+    "available": 1
+  },
+  {
+    "case": "two_jvm_same_due_rows",
+    "returned": 64,
+    "bucket_conservation": true
+  }
+]

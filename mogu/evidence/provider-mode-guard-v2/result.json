@@ -1,0 +1,14 @@
+{
+  "scope": "Local provider-mode preflight only; no actual PG contract verification",
+  "passed": true,
+  "provider_mode": "toss-test",
+  "exit_code": 1,
+  "inherited_lock_via_bash_verified": true,
+  "diagnostic": "/Users/REDACTED/1030_toss_mogu/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\nk6 requires a simulator-mode app; actual PG load is forbidden",
+  "sales": 0,
+  "attempts": 0,
+  "recorded_pg_calls": 0,
+  "load_started": false,
+  "source": "3bb13672bbfdf9682a1123cfb15ec694d4cce109",
+  "jar_sha256": "594f21920b56c3b1cdaaa6a96a6ca7ce990a36a71ff0e6f2a555b1cd1a14ac90"
+}

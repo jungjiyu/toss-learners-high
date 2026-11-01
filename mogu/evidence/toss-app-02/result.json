@@ -1,0 +1,13 @@
+{
+  "scope": "App integration with real TEST PG",
+  "authentication": "completed",
+  "actual_webhook_delivery": "not_verified",
+  "reservation_id": "204b1ffe-677d-416f-acbd-3ee6e405ce38",
+  "source": "b0fa8f3d0d62b350690e2ffba0714f1bff7298c8",
+  "bootstrap_query": {
+    "http": 200,
+    "status": "IN_PROGRESS",
+    "purpose": "expected merchant from authenticated provider, not browser"
+  },
+  "error": "KeyError"
+}

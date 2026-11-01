@@ -1,0 +1,124 @@
+[
+  {
+    "case": "two_jvm_global_cap_and_rollback",
+    "bound": 8,
+    "results": [
+      {
+        "index": 0,
+        "status": 202,
+        "body": {
+          "id": "8ed6a19c-7f5a-477e-b03e-a58e760d9b4f",
+          "attemptId": "8a7a222f-212b-46b1-be24-cd0735ce2b85",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 1,
+        "status": 503,
+        "body": {
+          "code": "PAYMENT_ADMISSION_CLOSED"
+        }
+      },
+      {
+        "index": 2,
+        "status": 202,
+        "body": {
+          "id": "00b899f4-7380-4f5e-ba10-72eb23db2c6d",
+          "attemptId": "721d5369-a717-4217-bfae-88307cfa9c74",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 3,
+        "status": 202,
+        "body": {
+          "attemptId": "bb92067a-2b54-42dc-9061-885502f17384",
+          "id": "5338ffc7-460d-4a1e-8559-fcdc5dbdc0a2",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 4,
+        "status": 202,
+        "body": {
+          "id": "8fda97e7-4513-4a11-baba-ad59f475197d",
+          "attemptId": "bd70c32b-cf56-4546-85e8-a5534d01d570",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 5,
+        "status": 202,
+        "body": {
+          "attemptId": "d886a331-6dff-4547-8217-e5d60852579f",
+          "id": "dec46aa7-0dff-4159-a22b-03e8cfd0ad2f",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 6,
+        "status": 202,
+        "body": {
+          "id": "f0791bbc-3b2d-4e34-871d-846ae92b4d57",
+          "attemptId": "76393bba-41e5-44b0-a47f-cc16dd4eb8a6",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 7,
+        "status": 503,
+        "body": {
+          "code": "PAYMENT_ADMISSION_CLOSED"
+        }
+      },
+      {
+        "index": 8,
+        "status": 202,
+        "body": {
+          "id": "06ab6d8f-8b64-47c3-8245-38dcebc9d6a6",
+          "attemptId": "e457443b-6861-4452-ba82-ccd8d356c181",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 9,
+        "status": 503,
+        "body": {
+          "code": "PAYMENT_ADMISSION_CLOSED"
+        }
+      },
+      {
+        "index": 10,
+        "status": 202,
+        "body": {
+          "id": "58fd155e-0cf3-4d62-8474-5c41dda17254",
+          "attemptId": "773e2df9-d67d-481b-b8cc-18bd469695f1",
+          "code": "PAYMENT_PROCESSING"
+        }
+      },
+      {
+        "index": 11,
+        "status": 503,
+        "body": {
+          "code": "PAYMENT_ADMISSION_CLOSED"
+        }
+      }
+    ],
+    "pg_calls_before_worker_resume": 0
+  },
+  {
+    "case": "two_jvm_inbox_cap_and_dirty_rollback",
+    "bound": 3,
+    "statuses": [
+      200,
+      200,
+      200,
+      503
+    ]
+  },
+  {
+    "case": "accepted_payments_converge",
+    "purchases": 8,
+    "pending": 0
+  }
+]

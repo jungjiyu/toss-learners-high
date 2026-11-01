@@ -1,0 +1,292 @@
+{
+  "at": 1793369903.376757,
+  "source": "f423494c2276407ef9490aeed17b5c2e5213c3c5",
+  "command": [
+    "/Users/REDACTED/1030_toss_mogu/scripts/capture_diagnostics.py",
+    "live-pull-plans"
+  ],
+  "plans": {
+    "bucket PK": {
+      "sql": "SELECT bucket_id FROM inventory_buckets WHERE sale_id=%s AND bucket_id=0 FOR UPDATE",
+      "plan": {
+        "query_block": {
+          "select_id": 1,
+          "cost_info": {
+            "query_cost": "1.00"
+          },
+          "table": {
+            "table_name": "inventory_buckets",
+            "access_type": "const",
+            "possible_keys": [
+              "PRIMARY"
+            ],
+            "key": "PRIMARY",
+            "used_key_parts": [
+              "sale_id",
+              "bucket_id"
+            ],
+            "key_length": "12",
+            "ref": [
+              "const",
+              "const"
+            ],
+            "rows_examined_per_scan": 1,
+            "rows_produced_per_join": 1,
+            "filtered": "100.00",
+            "using_index": true,
+            "cost_info": {
+              "read_cost": "0.00",
+              "eval_cost": "0.10",
+              "prefix_cost": "0.00",
+              "data_read_per_join": "32"
+            },
+            "used_columns": [
+              "sale_id",
+              "bucket_id"
+            ]
+          }
+        }
+      }
+    },
+    "remaining stock lookup": {
+      "sql": "SELECT bucket_id FROM inventory_buckets WHERE sale_id=%s AND available>0 ORDER BY bucket_id LIMIT 1",
+      "plan": {
+        "query_block": {
+          "select_id": 1,
+          "cost_info": {
+            "query_cost": "1.85"
+          },
+          "ordering_operation": {
+            "using_filesort": false,
+            "table": {
+              "table_name": "inventory_buckets",
+              "access_type": "ref",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "used_key_parts": [
+                "sale_id"
+              ],
+              "key_length": "8",
+              "ref": [
+                "const"
+              ],
+              "rows_examined_per_scan": 16,
+              "rows_produced_per_join": 5,
+              "filtered": "33.33",
+              "cost_info": {
+                "read_cost": "0.26",
+                "eval_cost": "0.53",
+                "prefix_cost": "1.86",
+                "data_read_per_join": "170"
+              },
+              "used_columns": [
+                "sale_id",
+                "bucket_id",
+                "available"
+              ],
+              "attached_condition": "(`mogu`.`inventory_buckets`.`available` > 0)"
+            }
+          }
+        }
+      }
+    },
+    "due recovery scan": {
+      "sql": "SELECT * FROM attempts WHERE workflow<>'RESOLVED' AND next_at<=UTC_TIMESTAMP(6) AND (lease_until IS NULL OR lease_until<=UTC_TIMESTAMP(6)) ORDER BY next_at,id LIMIT 1 FOR UPDATE SKIP LOCKED",
+      "plan": {
+        "query_block": {
+          "select_id": 1,
+          "cost_info": {
+            "query_cost": "1.41"
+          },
+          "ordering_operation": {
+            "using_filesort": true,
+            "table": {
+              "table_name": "attempts",
+              "access_type": "range",
+              "possible_keys": [
+                "due_idx"
+              ],
+              "key": "due_idx",
+              "used_key_parts": [
+                "workflow"
+              ],
+              "key_length": "98",
+              "rows_examined_per_scan": 2,
+              "rows_produced_per_join": 2,
+              "filtered": "100.00",
+              "index_condition": "((`mogu`.`attempts`.`workflow` <> 'RESOLVED') and (`mogu`.`attempts`.`next_at` <= <cache>(utc_timestamp(6))))",
+              "cost_info": {
+                "read_cost": "1.21",
+                "eval_cost": "0.20",
+                "prefix_cost": "1.41",
+                "data_read_per_join": "3K"
+              },
+              "used_columns": [
+                "id",
+                "reservation_id",
+                "payment_key",
+                "order_id",
+                "amount",
+                "currency",
+                "merchant",
+                "credential_scope",
+                "intent",
+                "fact",
+                "workflow",
+                "review_reason",
+                "next_at",
+                "lease_until",
+                "generation",
+                "dirty",
+                "rounds",
+                "started_at",
+                "resolved_at"
+              ],
+              "attached_condition": "((`mogu`.`attempts`.`lease_until` is null) or (`mogu`.`attempts`.`lease_until` <= <cache>(utc_timestamp(6))))"
+            }
+          }
+        }
+      }
+    },
+    "expiry scan": {
+      "sql": "SELECT id FROM reservations WHERE state='HELD' AND expires_at<=UTC_TIMESTAMP(6) ORDER BY expires_at,id LIMIT 32",
+      "plan": {
+        "query_block": {
+          "select_id": 1,
+          "cost_info": {
+            "query_cost": "0.46"
+          },
+          "ordering_operation": {
+            "using_filesort": false,
+            "table": {
+              "table_name": "reservations",
+              "access_type": "range",
+              "possible_keys": [
+                "expire_idx"
+              ],
+              "key": "expire_idx",
+              "used_key_parts": [
+                "state",
+                "expires_at"
+              ],
+              "key_length": "106",
+              "rows_examined_per_scan": 1,
+              "rows_produced_per_join": 1,
+              "filtered": "100.00",
+              "using_index": true,
+              "cost_info": {
+                "read_cost": "0.36",
+                "eval_cost": "0.10",
+                "prefix_cost": "0.46",
+                "data_read_per_join": "832"
+              },
+              "used_columns": [
+                "id",
+                "state",
+                "expires_at"
+              ],
+              "attached_condition": "((`mogu`.`reservations`.`state` = 'HELD') and (`mogu`.`reservations`.`expires_at` <= <cache>(utc_timestamp(6))))"
+            }
+          }
+        }
+      }
+    }
+  },
+  "waiters": [],
+  "digests": [
+    {
+      "DIGEST_TEXT": "COMMIT",
+      "COUNT_STAR": 11771,
+      "SUM_TIMER_WAIT": 35379118070000,
+      "SUM_ROWS_EXAMINED": 0
+    },
+    {
+      "DIGEST_TEXT": "SELECT `bucket_id` FROM `inventory_buckets` WHERE `sale_id` = ? AND `bucket_id` = ? FOR UPDATE",
+      "COUNT_STAR": 10457,
+      "SUM_TIMER_WAIT": 4500543872000,
+      "SUM_ROWS_EXAMINED": 10498
+    },
+    {
+      "DIGEST_TEXT": "INSERT INTO `reservations` ( `id` , `sale_id` , `user_id` , `state` , `price` , `currency` , `order_id` , `expires_at` , `original_bucket_id` ) VALUES ( ?, ... , TIMESTAMPADD ( SQL_TSI_SECOND , ? , UTC_TIMESTAMP (?) ) , ? )",
+      "COUNT_STAR": 10487,
+      "SUM_TIMER_WAIT": 1346090880000,
+      "SUM_ROWS_EXAMINED": 0
+    },
+    {
+      "DIGEST_TEXT": "UPDATE `request_results` SET `http_status` = ? , `body` = ? WHERE `principal` = ? AND `operation` = ? AND `scope` = ? AND `idem_key` = ?",
+      "COUNT_STAR": 10499,
+      "SUM_TIMER_WAIT": 1327470069000,
+      "SUM_ROWS_EXAMINED": 10496
+    },
+    {
+      "DIGEST_TEXT": "UPDATE `user_guard` SET `active_id` = ? WHERE `sale_id` = ? AND `user_id` = ?",
+      "COUNT_STAR": 10475,
+      "SUM_TIMER_WAIT": 1092310884000,
+      "SUM_ROWS_EXAMINED": 10501
+    },
+    {
+      "DIGEST_TEXT": "INSERT INTO `request_results` ( `principal` , `operation` , `scope` , `idem_key` , `request_hash` ) VALUES (...) ON DUPLICATE KEY UPDATE `idem_key` = `idem_key`",
+      "COUNT_STAR": 10508,
+      "SUM_TIMER_WAIT": 1038521399000,
+      "SUM_ROWS_EXAMINED": 0
+    },
+    {
+      "DIGEST_TEXT": "UPDATE `inventory_buckets` SET `available` = `available` - ? WHERE `sale_id` = ? AND `bucket_id` = ? AND `available` > ?",
+      "COUNT_STAR": 10477,
+      "SUM_TIMER_WAIT": 999795040000,
+      "SUM_ROWS_EXAMINED": 10501
+    },
+    {
+      "DIGEST_TEXT": "SELECT * FROM `request_results` WHERE `principal` = ? AND `operation` = ? AND `scope` = ? AND `idem_key` = ? FOR UPDATE",
+      "COUNT_STAR": 10495,
+      "SUM_TIMER_WAIT": 885083030000,
+      "SUM_ROWS_EXAMINED": 10510
+    },
+    {
+      "DIGEST_TEXT": "INSERT INTO `user_guard` ( `sale_id` , `user_id` ) VALUES (...) ON DUPLICATE KEY UPDATE `user_id` = `user_id`",
+      "COUNT_STAR": 10500,
+      "SUM_TIMER_WAIT": 798942138000,
+      "SUM_ROWS_EXAMINED": 0
+    },
+    {
+      "DIGEST_TEXT": "SET `autocommit` = ?",
+      "COUNT_STAR": 23544,
+      "SUM_TIMER_WAIT": 773581714000,
+      "SUM_ROWS_EXAMINED": 0
+    },
+    {
+      "DIGEST_TEXT": "SELECT * , `opens_at` <= UTC_TIMESTAMP (?) AND `closes_at` > UTC_TIMESTAMP (?) AS `is_open` FROM `sales` WHERE `id` = ?",
+      "COUNT_STAR": 10472,
+      "SUM_TIMER_WAIT": 726756976000,
+      "SUM_ROWS_EXAMINED": 10494
+    },
+    {
+      "DIGEST_TEXT": "SELECT * FROM `user_guard` WHERE `sale_id` = ? AND `user_id` = ? FOR UPDATE",
+      "COUNT_STAR": 10498,
+      "SUM_TIMER_WAIT": 698953821000,
+      "SUM_ROWS_EXAMINED": 10507
+    },
+    {
+      "DIGEST_TEXT": "SELECT `bucket_id` , `available` FROM `inventory_buckets` WHERE `sale_id` = ? AND `bucket_id` = ?",
+      "COUNT_STAR": 10484,
+      "SUM_TIMER_WAIT": 674431907000,
+      "SUM_ROWS_EXAMINED": 10502
+    },
+    {
+      "DIGEST_TEXT": "SELECT * FROM `sales` WHERE `id` = ?",
+      "COUNT_STAR": 10473,
+      "SUM_TIMER_WAIT": 673228469000,
+      "SUM_ROWS_EXAMINED": 10499
+    },
+    {
+      "DIGEST_TEXT": "SELECT @@SESSION . `transaction_isolation`",
+      "COUNT_STAR": 11750,
+      "SUM_TIMER_WAIT": 521735488000,
+      "SUM_ROWS_EXAMINED": 11842
+    }
+  ],
+  "gauges": "hikaricp_connections_active{pool=\"HikariPool-1\"} 19.0\nhikaricp_connections_pending{pool=\"HikariPool-1\"} 0.0\njvm_memory_used_bytes{area=\"heap\",id=\"G1 Eden Space\"} 8388608.0\njvm_memory_used_bytes{area=\"heap\",id=\"G1 Old Gen\"} 3.9296632E7\njvm_memory_used_bytes{area=\"heap\",id=\"G1 Survivor Space\"} 286720.0\njvm_memory_used_bytes{area=\"nonheap\",id=\"CodeHeap 'non-nmethods'\"} 1586944.0\njvm_memory_used_bytes{area=\"nonheap\",id=\"CodeHeap 'non-profiled nmethods'\"} 1.0978816E7\njvm_memory_used_bytes{area=\"nonheap\",id=\"CodeHeap 'profiled nmethods'\"} 2.8065408E7\njvm_memory_used_bytes{area=\"nonheap\",id=\"Compressed Class Space\"} 7171168.0\njvm_memory_used_bytes{area=\"nonheap\",id=\"Metaspace\"} 5.8787616E7\nmogu_recovery_active 0.0",
+  "scope": "Single diagnostic snapshot. EXPLAIN does not execute the locking statement. Counters are cumulative since DB start, not window deltas."
+}

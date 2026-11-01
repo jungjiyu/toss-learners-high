@@ -1,0 +1,232 @@
+<!doctype html><meta charset="utf-8"><title>Actual SQL diagnostic snapshot</title><style>body{font:16px/1.6 system-ui;max-width:1080px;margin:40px auto;padding:0 24px;color:#14292b}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef4f0;padding:18px;font:13px/1.6 monospace}h2{margin-top:40px}</style><h1>MySQL / Mogu diagnostic snapshot</h1><p>UTC epoch 1793362168.338839 · 710109142d4a13fe84e467ff8703d3322cc89d23</p><p>Single diagnostic snapshot. EXPLAIN does not execute the locking statement. Counters are cumulative since DB start, not window deltas.</p><h2>Actual waiting transactions</h2><pre>[]</pre><h2>Observed pool / worker gauges</h2><pre>hikaricp_connections_active{pool=&quot;HikariPool-1&quot;} 0.0
+hikaricp_connections_pending{pool=&quot;HikariPool-1&quot;} 0.0
+jvm_memory_used_bytes{area=&quot;heap&quot;,id=&quot;G1 Eden Space&quot;} 2.5165824E7
+jvm_memory_used_bytes{area=&quot;heap&quot;,id=&quot;G1 Old Gen&quot;} 2.9192632E7
+jvm_memory_used_bytes{area=&quot;heap&quot;,id=&quot;G1 Survivor Space&quot;} 517408.0
+jvm_memory_used_bytes{area=&quot;nonheap&quot;,id=&quot;CodeHeap &#x27;non-nmethods&#x27;&quot;} 1586560.0
+jvm_memory_used_bytes{area=&quot;nonheap&quot;,id=&quot;CodeHeap &#x27;non-profiled nmethods&#x27;&quot;} 9539968.0
+jvm_memory_used_bytes{area=&quot;nonheap&quot;,id=&quot;CodeHeap &#x27;profiled nmethods&#x27;&quot;} 6364672.0
+jvm_memory_used_bytes{area=&quot;nonheap&quot;,id=&quot;Compressed Class Space&quot;} 7355536.0
+jvm_memory_used_bytes{area=&quot;nonheap&quot;,id=&quot;Metaspace&quot;} 6.1184472E7
+mogu_pg_calls_total{kind=&quot;CONFIRM&quot;} 3465.0
+mogu_pg_calls_total{kind=&quot;QUERY&quot;} 3472.0
+mogu_recovery_active 0.0</pre><h2>reservation stock PK</h2><pre>SELECT id FROM sales WHERE id=%s FOR UPDATE</pre><pre>{
+  &quot;query_block&quot;: {
+    &quot;select_id&quot;: 1,
+    &quot;cost_info&quot;: {
+      &quot;query_cost&quot;: &quot;1.00&quot;
+    },
+    &quot;table&quot;: {
+      &quot;table_name&quot;: &quot;sales&quot;,
+      &quot;access_type&quot;: &quot;const&quot;,
+      &quot;possible_keys&quot;: [
+        &quot;PRIMARY&quot;
+      ],
+      &quot;key&quot;: &quot;PRIMARY&quot;,
+      &quot;used_key_parts&quot;: [
+        &quot;id&quot;
+      ],
+      &quot;key_length&quot;: &quot;8&quot;,
+      &quot;ref&quot;: [
+        &quot;const&quot;
+      ],
+      &quot;rows_examined_per_scan&quot;: 1,
+      &quot;rows_produced_per_join&quot;: 1,
+      &quot;filtered&quot;: &quot;100.00&quot;,
+      &quot;using_index&quot;: true,
+      &quot;cost_info&quot;: {
+        &quot;read_cost&quot;: &quot;0.00&quot;,
+        &quot;eval_cost&quot;: &quot;0.10&quot;,
+        &quot;prefix_cost&quot;: &quot;0.00&quot;,
+        &quot;data_read_per_join&quot;: &quot;56&quot;
+      },
+      &quot;used_columns&quot;: [
+        &quot;id&quot;
+      ]
+    }
+  }
+}</pre><h2>due recovery scan</h2><pre>SELECT * FROM attempts WHERE workflow&lt;&gt;&#x27;RESOLVED&#x27; AND next_at&lt;=UTC_TIMESTAMP(6) AND (lease_until IS NULL OR lease_until&lt;=UTC_TIMESTAMP(6)) ORDER BY next_at,id LIMIT 1 FOR UPDATE SKIP LOCKED</pre><pre>{
+  &quot;query_block&quot;: {
+    &quot;select_id&quot;: 1,
+    &quot;cost_info&quot;: {
+      &quot;query_cost&quot;: &quot;1.41&quot;
+    },
+    &quot;ordering_operation&quot;: {
+      &quot;using_filesort&quot;: true,
+      &quot;table&quot;: {
+        &quot;table_name&quot;: &quot;attempts&quot;,
+        &quot;access_type&quot;: &quot;range&quot;,
+        &quot;possible_keys&quot;: [
+          &quot;due_idx&quot;
+        ],
+        &quot;key&quot;: &quot;due_idx&quot;,
+        &quot;used_key_parts&quot;: [
+          &quot;workflow&quot;
+        ],
+        &quot;key_length&quot;: &quot;98&quot;,
+        &quot;rows_examined_per_scan&quot;: 2,
+        &quot;rows_produced_per_join&quot;: 0,
+        &quot;filtered&quot;: &quot;13.33&quot;,
+        &quot;index_condition&quot;: &quot;((`mogu`.`attempts`.`workflow` &lt;&gt; &#x27;RESOLVED&#x27;) and (`mogu`.`attempts`.`next_at` &lt;= &lt;cache&gt;(utc_timestamp(6))))&quot;,
+        &quot;cost_info&quot;: {
+          &quot;read_cost&quot;: &quot;1.21&quot;,
+          &quot;eval_cost&quot;: &quot;0.03&quot;,
+          &quot;prefix_cost&quot;: &quot;1.41&quot;,
+          &quot;data_read_per_join&quot;: &quot;543&quot;
+        },
+        &quot;used_columns&quot;: [
+          &quot;id&quot;,
+          &quot;reservation_id&quot;,
+          &quot;payment_key&quot;,
+          &quot;order_id&quot;,
+          &quot;amount&quot;,
+          &quot;currency&quot;,
+          &quot;merchant&quot;,
+          &quot;credential_scope&quot;,
+          &quot;intent&quot;,
+          &quot;fact&quot;,
+          &quot;workflow&quot;,
+          &quot;review_reason&quot;,
+          &quot;next_at&quot;,
+          &quot;lease_until&quot;,
+          &quot;generation&quot;,
+          &quot;dirty&quot;,
+          &quot;rounds&quot;,
+          &quot;started_at&quot;,
+          &quot;resolved_at&quot;
+        ],
+        &quot;attached_condition&quot;: &quot;((`mogu`.`attempts`.`lease_until` is null) or (`mogu`.`attempts`.`lease_until` &lt;= &lt;cache&gt;(utc_timestamp(6))))&quot;
+      }
+    }
+  }
+}</pre><h2>expiry scan</h2><pre>SELECT id FROM reservations WHERE state=&#x27;HELD&#x27; AND expires_at&lt;=UTC_TIMESTAMP(6) ORDER BY expires_at,id LIMIT 32</pre><pre>{
+  &quot;query_block&quot;: {
+    &quot;select_id&quot;: 1,
+    &quot;cost_info&quot;: {
+      &quot;query_cost&quot;: &quot;0.46&quot;
+    },
+    &quot;ordering_operation&quot;: {
+      &quot;using_filesort&quot;: false,
+      &quot;table&quot;: {
+        &quot;table_name&quot;: &quot;reservations&quot;,
+        &quot;access_type&quot;: &quot;range&quot;,
+        &quot;possible_keys&quot;: [
+          &quot;expire_idx&quot;
+        ],
+        &quot;key&quot;: &quot;expire_idx&quot;,
+        &quot;used_key_parts&quot;: [
+          &quot;state&quot;,
+          &quot;expires_at&quot;
+        ],
+        &quot;key_length&quot;: &quot;106&quot;,
+        &quot;rows_examined_per_scan&quot;: 1,
+        &quot;rows_produced_per_join&quot;: 1,
+        &quot;filtered&quot;: &quot;100.00&quot;,
+        &quot;using_index&quot;: true,
+        &quot;cost_info&quot;: {
+          &quot;read_cost&quot;: &quot;0.36&quot;,
+          &quot;eval_cost&quot;: &quot;0.10&quot;,
+          &quot;prefix_cost&quot;: &quot;0.46&quot;,
+          &quot;data_read_per_join&quot;: &quot;824&quot;
+        },
+        &quot;used_columns&quot;: [
+          &quot;id&quot;,
+          &quot;state&quot;,
+          &quot;expires_at&quot;
+        ],
+        &quot;attached_condition&quot;: &quot;((`mogu`.`reservations`.`state` = &#x27;HELD&#x27;) and (`mogu`.`reservations`.`expires_at` &lt;= &lt;cache&gt;(utc_timestamp(6))))&quot;
+      }
+    }
+  }
+}</pre><h2>Cumulative SQL digest</h2><pre>[
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;COMMIT&quot;,
+    &quot;COUNT_STAR&quot;: 64154,
+    &quot;SUM_TIMER_WAIT&quot;: 51483037620000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 0
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT `id` FROM `sales` WHERE `id` = ? FOR UPDATE&quot;,
+    &quot;COUNT_STAR&quot;: 7992,
+    &quot;SUM_TIMER_WAIT&quot;: 14207687191000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 7992
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;UPDATE `sales` SET `available` = `available` + ? WHERE `id` = ?&quot;,
+    &quot;COUNT_STAR&quot;: 5055,
+    &quot;SUM_TIMER_WAIT&quot;: 4853194936000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 5055
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT * FROM `attempts` WHERE `workflow` != ? AND `next_at` &lt;= UTC_TIMESTAMP (?) AND ( `lease_until` IS NULL OR `lease_until` &lt;= UTC_TIMESTAMP (?) ) ORDER BY `next_at` , `id` LIMIT ? FOR UPDATE SKIP LOCKED&quot;,
+    &quot;COUNT_STAR&quot;: 14000,
+    &quot;SUM_TIMER_WAIT&quot;: 3155835039000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 2009581
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SET `autocommit` = ?&quot;,
+    &quot;COUNT_STAR&quot;: 130347,
+    &quot;SUM_TIMER_WAIT&quot;: 2603787381000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 0
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;INSERT INTO `user_guard` ( `sale_id` , `user_id` ) VALUES (...) ON DUPLICATE KEY UPDATE `user_id` = `user_id`&quot;,
+    &quot;COUNT_STAR&quot;: 51153,
+    &quot;SUM_TIMER_WAIT&quot;: 1987638776000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 0
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT @@SESSION . `transaction_isolation`&quot;,
+    &quot;COUNT_STAR&quot;: 65144,
+    &quot;SUM_TIMER_WAIT&quot;: 1805574595000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 65147
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT * FROM `user_guard` WHERE `sale_id` = ? AND `user_id` = ? FOR UPDATE&quot;,
+    &quot;COUNT_STAR&quot;: 51145,
+    &quot;SUM_TIMER_WAIT&quot;: 1765162469000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 51154
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT * FROM `reservations` WHERE `id` = ?&quot;,
+    &quot;COUNT_STAR&quot;: 40577,
+    &quot;SUM_TIMER_WAIT&quot;: 1689322802000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 40590
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT * , `expires_at` &lt;= UTC_TIMESTAMP (?) AS `expired` FROM `reservations` WHERE `id` = ? FOR UPDATE&quot;,
+    &quot;COUNT_STAR&quot;: 43170,
+    &quot;SUM_TIMER_WAIT&quot;: 1663249198000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 43168
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT `sale_id` , `user_id` FROM `reservations` WHERE `id` = ?&quot;,
+    &quot;COUNT_STAR&quot;: 43160,
+    &quot;SUM_TIMER_WAIT&quot;: 1560087884000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 43158
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT * , TIMESTAMPDIFF ( MICROSECOND , `started_at` , UTC_TIMESTAMP (?) ) / ? AS `age_ms` FROM `attempts` WHERE `id` = ? FOR UPDATE&quot;,
+    &quot;COUNT_STAR&quot;: 31785,
+    &quot;SUM_TIMER_WAIT&quot;: 1385260490000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 31788
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;UPDATE `inbox` SET `processed` = TRUE WHERE `attempt_id` = ? AND `processed` = FALSE&quot;,
+    &quot;COUNT_STAR&quot;: 10443,
+    &quot;SUM_TIMER_WAIT&quot;: 1329101521000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 235219
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;SELECT `id` , `intent` , `fact` , `workflow` , `review_reason` FROM `attempts` WHERE `reservation_id` = ?&quot;,
+    &quot;COUNT_STAR&quot;: 26195,
+    &quot;SUM_TIMER_WAIT&quot;: 1094536261000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 26190
+  },
+  {
+    &quot;DIGEST_TEXT&quot;: &quot;INSERT IGNORE INTO `observations` ( `attempt_id` , SOURCE , `fact` , `valid` , `detail` ) VALUES (...)&quot;,
+    &quot;COUNT_STAR&quot;: 14428,
+    &quot;SUM_TIMER_WAIT&quot;: 959629332000,
+    &quot;SUM_ROWS_EXAMINED&quot;: 0
+  }
+]</pre>

@@ -1,0 +1,77 @@
+[
+  {
+    "ids": "T01,T02,T03,T04,T09,T14,T15",
+    "status": "PASS",
+    "seconds": 0.1403799057006836
+  },
+  {
+    "ids": "T05-hook,T06",
+    "status": "PASS",
+    "seconds": 0.030920028686523438
+  },
+  {
+    "ids": "P01,P04,P05,P09",
+    "status": "PASS",
+    "seconds": 1.0115251541137695
+  },
+  {
+    "ids": "P02,P17",
+    "status": "PASS",
+    "seconds": 2.1197052001953125
+  },
+  {
+    "ids": "P03",
+    "status": "PASS",
+    "seconds": 3.7828381061553955
+  },
+  {
+    "ids": "P18+P21,P19+P12",
+    "status": "PASS",
+    "seconds": 6.38329005241394
+  },
+  {
+    "ids": "P12-late-HTTP,P21-fencing",
+    "status": "PASS",
+    "seconds": 3.5073792934417725
+  },
+  {
+    "ids": "P07-hook,P08-hook",
+    "status": "PASS",
+    "seconds": 3.3022022247314453
+  },
+  {
+    "ids": "T07,T08,T10,P14,P06+P15",
+    "status": "PASS",
+    "seconds": 5.035562992095947
+  },
+  {
+    "ids": "P10",
+    "status": "PASS",
+    "seconds": 2.8721580505371094
+  },
+  {
+    "ids": "P11,P13",
+    "status": "PASS",
+    "seconds": 1.8418529033660889
+  },
+  {
+    "ids": "P22",
+    "status": "PASS",
+    "seconds": 1.806640863418579
+  },
+  {
+    "ids": "P20,P23",
+    "status": "PASS",
+    "seconds": 2.330820083618164
+  },
+  {
+    "ids": "P25-retention",
+    "status": "PASS",
+    "seconds": 3.217942953109741
+  },
+  {
+    "ids": "P28",
+    "status": "PASS",
+    "seconds": 0.04401397705078125
+  }
+]

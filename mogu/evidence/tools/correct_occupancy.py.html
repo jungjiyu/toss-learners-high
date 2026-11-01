@@ -1,0 +1,19 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>correct_occupancy.py · 구현 근거</title><style>body{font:16px/1.7 sans-serif;max-width:1100px;margin:30px auto;padding:0 20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f7;padding:20px;font:14px/1.6 monospace}</style><h1>correct_occupancy.py</h1><p>원본 커밋: 025c54c2fba77e0264351296ae0597bdff81dbdc</p><p>docs/scripts/correct_occupancy.py</p><pre><code>&quot;&quot;&quot;Derive corrected occupancy from immutable prior runs, never replace their raw data.&quot;&quot;&quot;
+import json,datetime,hashlib
+from pathlib import Path
+root=Path(__file__).resolve().parents[1]/&#x27;evidence&#x27;
+def epoch(s):return datetime.datetime.fromisoformat(s).replace(tzinfo=datetime.timezone.utc).timestamp()
+for folder in sorted(root.glob(&#x27;*recovery-v[123]-*&#x27;)):
+    raw=folder/&#x27;results.json&#x27;
+    if not raw.exists():continue
+    result=json.loads(raw.read_text())[&#x27;result&#x27;];db=json.loads((folder/&#x27;db.json&#x27;).read_text())
+    reservations={r[&#x27;id&#x27;]:r for r in db[&#x27;reservations&#x27;]};attempts={a[&#x27;reservation_id&#x27;]:a for a in db[&#x27;attempts&#x27;]}
+    rows=[]
+    for r in result[&#x27;rows&#x27;]:
+        reservation=reservations[r[&#x27;id&#x27;]];a=attempts[r[&#x27;id&#x27;]]
+        end=epoch(reservation[&#x27;terminal_at&#x27;]);start=epoch(reservation[&#x27;created_at&#x27;]);pending=epoch(a[&#x27;started_at&#x27;])
+        rows.append(dict(id=r[&#x27;id&#x27;],reserved_at=start,payment_started_at=pending,terminal_at=end,allocation_to_resolution_seconds=end-start,payment_pending_seconds=end-pending,accepted_response_to_resolution_seconds=end-r[&#x27;accepted&#x27;]))
+    value={&#x27;definition&#x27;:&#x27;Unresolved stock occupancy: reservation DB created_at to terminal_at; purchased stock remains consumed after this interval. Measured rows only; warmup excluded. UTC microsecond timestamps.&#x27;, &#x27;unit&#x27;:&#x27;item.seconds&#x27;,&#x27;source_sha256&#x27;:{n:hashlib.sha256((folder/n).read_bytes()).hexdigest() for n in [&#x27;db.json&#x27;,&#x27;results.json&#x27;]},&#x27;original_stock_seconds&#x27;:result[&#x27;stock_seconds&#x27;],&#x27;allocation_stock_seconds&#x27;:sum(r[&#x27;allocation_to_resolution_seconds&#x27;] for r in rows),&#x27;pending_stock_seconds&#x27;:sum(r[&#x27;payment_pending_seconds&#x27;] for r in rows),&#x27;rows&#x27;:rows}
+    (folder/&#x27;occupancy-corrected.json&#x27;).write_text(json.dumps(value,indent=2))
+    print(folder.name,round(value[&#x27;original_stock_seconds&#x27;],3),round(value[&#x27;allocation_stock_seconds&#x27;],3))
+</code></pre></html>

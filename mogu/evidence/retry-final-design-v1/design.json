@@ -1,0 +1,48 @@
+{
+  "recorded_at": 1793438598.723226,
+  "status": "Before final or finite runs; pilot results are exploratory",
+  "final_arms": [
+    "pull-once",
+    "late-once",
+    "ready-once",
+    "pull-retry",
+    "late-retry",
+    "ready-retry"
+  ],
+  "purpose": "Retain same-policy server controls and each server one-shot control, so client and server effects are identifiable. Index candidate subject to pilot and safety validation before freeze.",
+  "aggregation": {
+    "deadline": "same-sized measure cohorts; mean rate and individual repeats",
+    "latency": "Report each repeat; adoption p99 uses pooled raw eligible successful-purchase/expired-reservation durations across three repeats, never average p99 mislabeled pooled",
+    "cpu": "sum whole-host CPU seconds / sum internal purchases in exactly matching individual observation windows; report per-run variation and absolute CPU",
+    "paired": "same seed/rate logical index; count gained/lost with per-repeat variation, not proof individual counterfactual under identical runtime scheduling"
+  },
+  "finite": {
+    "capacity": 3000,
+    "buckets": 16,
+    "new_logical_arrivals_per_second": 400,
+    "warmup_seconds": 20,
+    "warmup_rate": 10,
+    "gap_seconds": 5,
+    "measure_seconds": 90,
+    "hold_seconds": 15,
+    "deadline_seconds": 10,
+    "seeds": [
+      61001,
+      61002,
+      61003
+    ],
+    "arms": [
+      "pull-once",
+      "late-once",
+      "ready-once",
+      "pull-retry",
+      "late-retry",
+      "ready-retry"
+    ],
+    "repetitions": 3,
+    "rationale": "At 400/s and mixed actions, cancellation returns some stock immediately, while paid/expiry holds consume initial stock before the 15s expiry wave. Continued unique demand tests returned-stock allocation. The stock cap is a real outcome ceiling, not server throughput capacity.",
+    "requirement": "Observe sold-out responses and stock exhaustion during continuing demand; if absent, preserve run and explicitly declare a new diagnostic condition instead of pretending depletion occurred. Same conditions for all arms.",
+    "attribution": "Per-bucket allocation and return commit observations plus actual DB original_bucket_id. Units are fungible: allocation beyond the initial quota is return-backed accounting; do not assert physical unit identity. Show TTL->return->subsequent allocation->purchase chronology and whole user outcomes; causal purchase improvement is paired same-demand difference, not reuse count alone."
+  },
+  "additional_common_observation": "Before final freeze, same afterCommit allocation timestamp and 1s inventory snapshots on every compared source. AfterCommit logs are observations that may be lost on process failure; independent DB+PG audit remains authority. Callback timestamps are not a serialization clock."
+}

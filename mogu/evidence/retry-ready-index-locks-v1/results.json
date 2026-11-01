@@ -1,0 +1,267 @@
+{
+  "old_native": {
+    "sql": "SELECT *,GREATEST(0,TIMESTAMPDIFF(MICROSECOND,next_at,UTC_TIMESTAMP(6))) AS due_age_us FROM attempts  WHERE workflow<>'RESOLVED' AND next_at<=UTC_TIMESTAMP(6) AND (lease_until IS NULL OR lease_until<=UTC_TIMESTAMP(6)) ORDER BY next_at,id LIMIT 1 FOR UPDATE SKIP LOCKED",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "25.85"
+        },
+        "ordering_operation": {
+          "using_filesort": true,
+          "table": {
+            "table_name": "attempts",
+            "access_type": "ALL",
+            "possible_keys": [
+              "due_idx"
+            ],
+            "rows_examined_per_scan": 256,
+            "rows_produced_per_join": 34,
+            "filtered": "13.33",
+            "cost_info": {
+              "read_cost": "0.25",
+              "eval_cost": "3.41",
+              "prefix_cost": "25.85",
+              "data_read_per_join": "85K"
+            },
+            "used_columns": [
+              "id",
+              "reservation_id",
+              "payment_key",
+              "order_id",
+              "amount",
+              "currency",
+              "merchant",
+              "credential_scope",
+              "intent",
+              "fact",
+              "workflow",
+              "review_reason",
+              "next_at",
+              "lease_until",
+              "generation",
+              "dirty",
+              "rounds",
+              "started_at",
+              "resolved_at",
+              "hint_after",
+              "review_hold_reason",
+              "review_hold_at",
+              "review_hold_fact",
+              "signal_seen",
+              "is_runnable"
+            ],
+            "attached_condition": "((`mogu`.`attempts`.`workflow` <> 'RESOLVED') and (`mogu`.`attempts`.`next_at` <= <cache>(utc_timestamp(6))) and ((`mogu`.`attempts`.`lease_until` is null) or (`mogu`.`attempts`.`lease_until` <= <cache>(utc_timestamp(6)))))"
+          }
+        }
+      }
+    },
+    "elapsed_seconds_single_probe": 0.0005884160000002581,
+    "selected": "a7f2b8a7-994c-4714-8409-9cb280a56246",
+    "locks": [
+      {
+        "INDEX_NAME": null,
+        "LOCK_TYPE": "TABLE",
+        "LOCK_MODE": "IX",
+        "n": 1
+      },
+      {
+        "INDEX_NAME": "PRIMARY",
+        "LOCK_TYPE": "RECORD",
+        "LOCK_MODE": "X,REC_NOT_GAP",
+        "n": 256
+      }
+    ],
+    "second_connection_selected": null
+  },
+  "old_due_index": {
+    "sql": "SELECT *,GREATEST(0,TIMESTAMPDIFF(MICROSECOND,next_at,UTC_TIMESTAMP(6))) AS due_age_us FROM attempts FORCE INDEX(due_idx) WHERE workflow<>'RESOLVED' AND next_at<=UTC_TIMESTAMP(6) AND (lease_until IS NULL OR lease_until<=UTC_TIMESTAMP(6)) ORDER BY next_at,id LIMIT 1 FOR UPDATE SKIP LOCKED",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "116.16"
+        },
+        "ordering_operation": {
+          "using_filesort": true,
+          "table": {
+            "table_name": "attempts",
+            "access_type": "range",
+            "possible_keys": [
+              "due_idx"
+            ],
+            "key": "due_idx",
+            "used_key_parts": [
+              "workflow"
+            ],
+            "key_length": "98",
+            "rows_examined_per_scan": 257,
+            "rows_produced_per_join": 34,
+            "filtered": "13.33",
+            "index_condition": "((`mogu`.`attempts`.`workflow` <> 'RESOLVED') and (`mogu`.`attempts`.`next_at` <= <cache>(utc_timestamp(6))))",
+            "cost_info": {
+              "read_cost": "90.46",
+              "eval_cost": "3.43",
+              "prefix_cost": "116.16",
+              "data_read_per_join": "85K"
+            },
+            "used_columns": [
+              "id",
+              "reservation_id",
+              "payment_key",
+              "order_id",
+              "amount",
+              "currency",
+              "merchant",
+              "credential_scope",
+              "intent",
+              "fact",
+              "workflow",
+              "review_reason",
+              "next_at",
+              "lease_until",
+              "generation",
+              "dirty",
+              "rounds",
+              "started_at",
+              "resolved_at",
+              "hint_after",
+              "review_hold_reason",
+              "review_hold_at",
+              "review_hold_fact",
+              "signal_seen",
+              "is_runnable"
+            ],
+            "attached_condition": "((`mogu`.`attempts`.`lease_until` is null) or (`mogu`.`attempts`.`lease_until` <= <cache>(utc_timestamp(6))))"
+          }
+        }
+      }
+    },
+    "elapsed_seconds_single_probe": 0.0007308329999995422,
+    "selected": "a7f2b8a7-994c-4714-8409-9cb280a56246",
+    "locks": [
+      {
+        "INDEX_NAME": null,
+        "LOCK_TYPE": "TABLE",
+        "LOCK_MODE": "IX",
+        "n": 1
+      },
+      {
+        "INDEX_NAME": "due_idx",
+        "LOCK_TYPE": "RECORD",
+        "LOCK_MODE": "X,REC_NOT_GAP",
+        "n": 256
+      },
+      {
+        "INDEX_NAME": "PRIMARY",
+        "LOCK_TYPE": "RECORD",
+        "LOCK_MODE": "X,REC_NOT_GAP",
+        "n": 256
+      }
+    ],
+    "second_connection_selected": null
+  },
+  "ready": {
+    "sql": "SELECT *,GREATEST(0,TIMESTAMPDIFF(MICROSECOND,next_at,UTC_TIMESTAMP(6))) AS due_age_us FROM attempts  WHERE is_runnable=1 AND next_at<=UTC_TIMESTAMP(6) AND (lease_until IS NULL OR lease_until<=UTC_TIMESTAMP(6)) ORDER BY next_at,id LIMIT 1 FOR UPDATE SKIP LOCKED",
+    "plan": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "25.85"
+        },
+        "ordering_operation": {
+          "using_filesort": false,
+          "table": {
+            "table_name": "attempts",
+            "access_type": "range",
+            "possible_keys": [
+              "ready_order_idx"
+            ],
+            "key": "ready_order_idx",
+            "used_key_parts": [
+              "is_runnable",
+              "next_at"
+            ],
+            "key_length": "10",
+            "rows_examined_per_scan": 256,
+            "rows_produced_per_join": 102,
+            "filtered": "40.00",
+            "index_condition": "((`mogu`.`attempts`.`is_runnable` = 1) and (`mogu`.`attempts`.`next_at` <= <cache>(utc_timestamp(6))))",
+            "cost_info": {
+              "read_cost": "0.25",
+              "eval_cost": "10.24",
+              "prefix_cost": "25.85",
+              "data_read_per_join": "255K"
+            },
+            "used_columns": [
+              "id",
+              "reservation_id",
+              "payment_key",
+              "order_id",
+              "amount",
+              "currency",
+              "merchant",
+              "credential_scope",
+              "intent",
+              "fact",
+              "workflow",
+              "review_reason",
+              "next_at",
+              "lease_until",
+              "generation",
+              "dirty",
+              "rounds",
+              "started_at",
+              "resolved_at",
+              "hint_after",
+              "review_hold_reason",
+              "review_hold_at",
+              "review_hold_fact",
+              "signal_seen",
+              "is_runnable"
+            ],
+            "attached_condition": "((`mogu`.`attempts`.`lease_until` is null) or (`mogu`.`attempts`.`lease_until` <= <cache>(utc_timestamp(6))))"
+          }
+        }
+      }
+    },
+    "elapsed_seconds_single_probe": 0.000429124999999253,
+    "selected": "a7f2b8a7-994c-4714-8409-9cb280a56246",
+    "locks": [
+      {
+        "INDEX_NAME": null,
+        "LOCK_TYPE": "TABLE",
+        "LOCK_MODE": "IX",
+        "n": 1
+      },
+      {
+        "INDEX_NAME": "PRIMARY",
+        "LOCK_TYPE": "RECORD",
+        "LOCK_MODE": "X,REC_NOT_GAP",
+        "n": 1
+      },
+      {
+        "INDEX_NAME": "ready_order_idx",
+        "LOCK_TYPE": "RECORD",
+        "LOCK_MODE": "X,REC_NOT_GAP",
+        "n": 1
+      }
+    ],
+    "second_connection_selected": "4279aa0b-f511-4659-894d-15a23bb52840"
+  },
+  "class_order_fixture": {
+    "expected": [
+      "a7f2b8a7-994c-4714-8409-9cb280a56246",
+      "4279aa0b-f511-4659-894d-15a23bb52840",
+      "18c6fd6f-b2a3-4351-971b-60f079ffb056",
+      "1b1c3f99-df52-4d19-98d7-e9958660b013"
+    ],
+    "actual": [
+      "a7f2b8a7-994c-4714-8409-9cb280a56246",
+      "4279aa0b-f511-4659-894d-15a23bb52840",
+      "18c6fd6f-b2a3-4351-971b-60f079ffb056",
+      "1b1c3f99-df52-4d19-98d7-e9958660b013"
+    ],
+    "fixture": "rollback-only server state matrix; eligible oldest across FIRST/SIGNALED/POLL/CANCEL; live lease, future due, resolved excluded; not PG integration"
+  }
+}

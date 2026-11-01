@@ -1,0 +1,57 @@
+[
+  {
+    "ids": "T05-process",
+    "status": "PASS",
+    "seconds": 1.8346891403198242
+  },
+  {
+    "ids": "T13-lock-timeout-deadlock",
+    "status": "PASS",
+    "seconds": 2.188570022583008
+  },
+  {
+    "ids": "P16",
+    "status": "PASS",
+    "seconds": 0.36078619956970215
+  },
+  {
+    "ids": "P07-db-pause",
+    "status": "PASS",
+    "seconds": 6.355194091796875
+  },
+  {
+    "ids": "P25-scope",
+    "status": "PASS",
+    "seconds": 4.891427040100098
+  },
+  {
+    "ids": "P26",
+    "status": "PASS",
+    "seconds": 0.2985060214996338
+  },
+  {
+    "ids": "P27-observation",
+    "status": "PASS",
+    "detail": "client timed out at 9s; no success ACK observed"
+  },
+  {
+    "ids": "P27",
+    "status": "PASS",
+    "seconds": 9.286479949951172
+  },
+  {
+    "ids": "P24+T16-detail",
+    "seconds": 4.85280704498291,
+    "accepted_payments": 255,
+    "burst_outcomes": {
+      "201": 762,
+      "429": 438
+    },
+    "status": "PASS"
+  },
+  {
+    "ids": "P23-admission,P24+T16",
+    "status": "PASS",
+    "seconds": 10.07332706451416
+  }
+]

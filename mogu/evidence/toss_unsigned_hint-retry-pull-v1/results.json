@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scope": "Synthetic untrusted hints, not actual provider delivery",
+  "checks": [
+    "invalid present signature rejected",
+    "unknown and merchant mismatch rejected",
+    "false cancel/amount ignored; authenticated query authority",
+    "raw duplicate no new inbox",
+    "changed payload cooldown across restart",
+    "durable query resumes and preserves PURCHASED"
+  ]
+}

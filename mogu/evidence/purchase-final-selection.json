@@ -1,0 +1,35 @@
+{
+  "selected": "pull",
+  "selected_branch": "experiment-worker-pull",
+  "selected_commit": "227acf651780c6fd81b0e9f400e4d8b4e3bb5790",
+  "conditions": {
+    "deadline_400_relative_at_least_15_percent": false,
+    "deadline_100_drop_at_most_1pp": true,
+    "success_p99_no_more_than_10_percent_worse": true,
+    "cpu_per_purchase_no_more_than_10_percent_worse": true,
+    "final_payment_and_hold_convergence": true,
+    "no_generator_drops": true
+  },
+  "deadline_400_relative_ratio": 1.1240293120419995,
+  "definition": "Final 3-run means; exploratory criteria were recorded before comparison. This is a local decision, not a production scale or statistical significance claim.",
+  "runs": [
+    "purchase-final-baseline-100-r01",
+    "purchase-final-pull-100-r01",
+    "purchase-final-late-100-r01",
+    "purchase-final-baseline-400-r01",
+    "purchase-final-pull-400-r01",
+    "purchase-final-late-400-r01",
+    "purchase-final-baseline-100-r02",
+    "purchase-final-pull-100-r02",
+    "purchase-final-late-100-r02",
+    "purchase-final-baseline-400-r02",
+    "purchase-final-pull-400-r02",
+    "purchase-final-late-400-r02",
+    "purchase-final-baseline-100-r03",
+    "purchase-final-pull-100-r03",
+    "purchase-final-late-100-r03",
+    "purchase-final-baseline-400-r03",
+    "purchase-final-pull-400-r03",
+    "purchase-final-late-400-r03"
+  ]
+}

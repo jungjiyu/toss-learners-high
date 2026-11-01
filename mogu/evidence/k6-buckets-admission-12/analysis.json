@@ -1,0 +1,3034 @@
+{
+  "derivation": {
+    "script_sha256": "0b76bb8fc391f0529eb6073c794010d1088a680a6cd59c5525d58c807bd5ceb6",
+    "input_sha256": {
+      "manifest.json": "31405e5713d6cce706283ab39c078c934aab538026d846626831910489341c7c",
+      "plan.json": "e41dbaef718123db7f519625c9e143ac6d4ac20de6213dc234d78475b727eac2",
+      "k6.json.gz": "82c65d20bfae85b77882533add3c9f4271995aab99d58c733adf2b47394ad536",
+      "requests.ndjson.gz": "749ab118131ff3b2aeae7a9e7e75553324662bacefe28ff17c67ef9fa343c0c4",
+      "reservations.json.gz": "0d3d6db3887a850fc722774fc6c50f778b4e6382582d3735d5d4640ebed4164e",
+      "attempts.json.gz": "a050dca0cc93ec9f232f14558d158040ce73333ba4e690394f2eaac0c5058163",
+      "pg.json.gz": "a013f0c9950f6beea28fa8d480e3d6f7452abd32f7c76158343592be833e2d13",
+      "request-results.json.gz": "9496a2990bd46985f19d1071bebaf1ad309e5dc9ac2904ec3675b946e06ba4ad",
+      "samples.json.gz": "c62efbb1fb4c7d9413af133ef2321d89e32d713a00d59abe7edcf4733ae6f635",
+      "metrics.json.gz": "3117c5a5fe9b7ed2d129a5c7722163899538bfe6c480bd07b0da3df3a247069f",
+      "db-before.json.gz": "983a8c6ed6e1cd3203f3f1d1b546c6b2f7f9df5e73a1c0ddd466ae39f18c4e87",
+      "db-after.json.gz": "af153f8e9afd393c762f843f2b8950924a9fdb95bf74ec692d6350391055eb24",
+      "observer-cost.json": "9b665cd6c9967c5824d1b05464578ed7c7e2e5b13616c1cd916be500e5460dad",
+      "summary.json": "f099dbf4062dda78e12382c7c7dda716c483ef6a9855c46f9afb550a0ddccfe0",
+      "faults.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "build.json": "acfccb85c9d321e856182af40f10729ab31aa396649b98cab142218f5a3cc629",
+      "build-source.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "k6_summary_counters": {
+    "vus": {
+      "value": 1,
+      "min": 0,
+      "max": 20
+    },
+    "logical_started": {
+      "count": 95004,
+      "rate": 759.9717798361658
+    },
+    "vus_max": {
+      "value": 256,
+      "min": 256,
+      "max": 256
+    },
+    "logical_completed": {
+      "count": 95004,
+      "rate": 759.9717798361658
+    },
+    "iterations": {
+      "count": 95004,
+      "rate": 759.9717798361658
+    },
+    "http_reqs": {
+      "count": 95004,
+      "rate": 759.9717798361658
+    }
+  },
+  "business_terminal_timeline": [],
+  "run": "k6-buckets-admission-12",
+  "source": "3e81ce1165fb5e6c470c4cf6b2a2c542c12b8464",
+  "branch": "recommended-inventory-buckets",
+  "mode": "hot",
+  "audit": {
+    "ok": true,
+    "errors": [],
+    "states": {
+      "HELD": 55812
+    },
+    "unique_reservations": 55812,
+    "unfinished_payments": 0,
+    "k6_exit": 0,
+    "dropped_iterations": 0
+  },
+  "phases": [
+    {
+      "name": "warmup",
+      "rate": 100,
+      "duration": 20,
+      "start": 0,
+      "offset": 0,
+      "phase": "warmup",
+      "target_iterations": 2000,
+      "completed": 2001,
+      "outcomes": {
+        "RESERVED": {
+          "count": 2001,
+          "p50_ms": 6.391,
+          "p95_ms": 9.492,
+          "p99_ms": 11.813,
+          "max_ms": 19.837
+        }
+      },
+      "unique_reservations": 2001,
+      "durable_unique_reservations": 2001,
+      "committed_without_201_response": 0,
+      "committed_without_recorded_201": 0,
+      "durable_without_iteration_completion_log": 0,
+      "response_loss_definition": "committed_without_201_response is a legacy field name: means no201 in completed client record, not proof that the network never delivered201. Interrupted iteration records are counted separately.",
+      "throughput_definition": "Unique201 IDs from completed client records in the arrival cohort / configured phase duration; durable count includes response loss and interrupted iteration logs. Bins are grouped by iteration start, not commit instant.",
+      "cohort_final_states": {
+        "HELD": 2001
+      },
+      "payment_202_responses": 0,
+      "cohort_purchases_by_phase_end": 0,
+      "cohort_purchases_after_phase_end": 0,
+      "k6": {
+        "counts": {
+          "logical_started": 2001,
+          "http_reqs": 2001,
+          "logical_completed": 2001,
+          "iterations": 2001
+        },
+        "http_by_kind_status": [
+          {
+            "kind": "reserve",
+            "status": "201",
+            "error_code": "unrecorded",
+            "count": 2001
+          }
+        ],
+        "client_end_to_end_latency_ms": [],
+        "network_timing_ms": [
+          {
+            "metric": "http_req_blocked",
+            "kind": "reserve",
+            "status": "201",
+            "n": 2001,
+            "p50": 0.003,
+            "p95": 0.106,
+            "p99": 0.148,
+            "max": 0.176
+          },
+          {
+            "metric": "http_req_connecting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 2001,
+            "p50": 0,
+            "p95": 0.085,
+            "p99": 0.126,
+            "max": 0.156
+          },
+          {
+            "metric": "http_req_waiting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 2001,
+            "p50": 6.314,
+            "p95": 9.352,
+            "p99": 11.684,
+            "max": 19.547
+          }
+        ],
+        "outcome_latency_ms": [
+          {
+            "kind": "reserve",
+            "code": "RESERVED",
+            "n": 2001,
+            "p50": 6.391,
+            "p95": 9.492,
+            "p99": 11.813,
+            "max": 19.837
+          }
+        ]
+      },
+      "new_reservations_per_second": 100.05,
+      "bins": [
+        {
+          "second": 0,
+          "started": 498,
+          "reserved": 498,
+          "rejected": 0,
+          "success_p99_ms": 11.21
+        },
+        {
+          "second": 5,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 12.753
+        },
+        {
+          "second": 10,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 9.469
+        },
+        {
+          "second": 15,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 11.141
+        },
+        {
+          "second": 20,
+          "started": 3,
+          "reserved": 3,
+          "rejected": 0,
+          "success_p99_ms": 6.358
+        }
+      ],
+      "samples": [
+        {
+          "at": 1793357528.0393028,
+          "processes": {
+            "app": {
+              "cpu_seconds": 4.19,
+              "rss_mib": 270.796875,
+              "cpu_percent": 56.8
+            },
+            "pg": {
+              "cpu_seconds": 0.12,
+              "rss_mib": 18.28125,
+              "cpu_percent": 2.5
+            },
+            "k6": {
+              "cpu_seconds": 0.19,
+              "rss_mib": 91.171875,
+              "cpu_percent": 4.8
+            },
+            "observer": {
+              "cpu_seconds": 0.1,
+              "rss_mib": 33.484375,
+              "cpu_percent": 0.3
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357529.059351,
+          "processes": {
+            "app": {
+              "cpu_seconds": 4.78,
+              "rss_mib": 282.390625,
+              "cpu_percent": 54.2
+            },
+            "pg": {
+              "cpu_seconds": 0.14,
+              "rss_mib": 18.28125,
+              "cpu_percent": 2.5
+            },
+            "k6": {
+              "cpu_seconds": 0.25,
+              "rss_mib": 93.671875,
+              "cpu_percent": 3.0
+            },
+            "observer": {
+              "cpu_seconds": 0.11,
+              "rss_mib": 33.53125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357532.0848582,
+          "processes": {
+            "app": {
+              "cpu_seconds": 6.15,
+              "rss_mib": 293.421875,
+              "cpu_percent": 40.5
+            },
+            "pg": {
+              "cpu_seconds": 0.22,
+              "rss_mib": 18.28125,
+              "cpu_percent": 2.4
+            },
+            "k6": {
+              "cpu_seconds": 0.35,
+              "rss_mib": 99.703125,
+              "cpu_percent": 2.9
+            },
+            "observer": {
+              "cpu_seconds": 0.12,
+              "rss_mib": 33.53125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357535.11719,
+          "processes": {
+            "app": {
+              "cpu_seconds": 7.15,
+              "rss_mib": 295.921875,
+              "cpu_percent": 25.2
+            },
+            "pg": {
+              "cpu_seconds": 0.35,
+              "rss_mib": 18.28125,
+              "cpu_percent": 4.0
+            },
+            "k6": {
+              "cpu_seconds": 0.58,
+              "rss_mib": 105.578125,
+              "cpu_percent": 4.8
+            },
+            "observer": {
+              "cpu_seconds": 0.12,
+              "rss_mib": 33.578125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357538.144376,
+          "processes": {
+            "app": {
+              "cpu_seconds": 8.08,
+              "rss_mib": 297.359375,
+              "cpu_percent": 35.8
+            },
+            "pg": {
+              "cpu_seconds": 0.45,
+              "rss_mib": 18.28125,
+              "cpu_percent": 3.2
+            },
+            "k6": {
+              "cpu_seconds": 0.73,
+              "rss_mib": 106.578125,
+              "cpu_percent": 8.0
+            },
+            "observer": {
+              "cpu_seconds": 0.13,
+              "rss_mib": 33.59375,
+              "cpu_percent": 0.7
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 2104226\nuser_usec 1416974\nsystem_usec 687252\nnice_usec 0\nnr_periods 157\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n507580416\n254:0 rbytes=48611328 wbytes=60002304 rios=1946 wios=12685 dbytes=0 dios=0\n"
+        },
+        {
+          "at": 1793357541.2869499,
+          "processes": {
+            "app": {
+              "cpu_seconds": 8.84,
+              "rss_mib": 298.046875,
+              "cpu_percent": 23.3
+            },
+            "pg": {
+              "cpu_seconds": 0.6,
+              "rss_mib": 18.28125,
+              "cpu_percent": 5.9
+            },
+            "k6": {
+              "cpu_seconds": 0.92,
+              "rss_mib": 106.640625,
+              "cpu_percent": 7.1
+            },
+            "observer": {
+              "cpu_seconds": 0.14,
+              "rss_mib": 33.609375,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357544.31584,
+          "processes": {
+            "app": {
+              "cpu_seconds": 9.58,
+              "rss_mib": 298.671875,
+              "cpu_percent": 24.3
+            },
+            "pg": {
+              "cpu_seconds": 0.73,
+              "rss_mib": 18.28125,
+              "cpu_percent": 6.9
+            },
+            "k6": {
+              "cpu_seconds": 1.13,
+              "rss_mib": 108.203125,
+              "cpu_percent": 7.3
+            },
+            "observer": {
+              "cpu_seconds": 0.15,
+              "rss_mib": 33.625,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        }
+      ]
+    },
+    {
+      "name": "measure_0_1000",
+      "rate": 1000,
+      "duration": 30,
+      "start": 25,
+      "offset": 1000000,
+      "phase": "measure_0_1000",
+      "target_iterations": 30000,
+      "completed": 30001,
+      "outcomes": {
+        "OVERLOADED": {
+          "count": 4247,
+          "p50_ms": 0.164,
+          "p95_ms": 0.349,
+          "p99_ms": 0.596,
+          "max_ms": 4.86
+        },
+        "RESERVED": {
+          "count": 25754,
+          "p50_ms": 11.712,
+          "p95_ms": 16.063,
+          "p99_ms": 19.954,
+          "max_ms": 52.075
+        }
+      },
+      "unique_reservations": 25754,
+      "durable_unique_reservations": 25754,
+      "committed_without_201_response": 0,
+      "committed_without_recorded_201": 0,
+      "durable_without_iteration_completion_log": 0,
+      "response_loss_definition": "committed_without_201_response is a legacy field name: means no201 in completed client record, not proof that the network never delivered201. Interrupted iteration records are counted separately.",
+      "throughput_definition": "Unique201 IDs from completed client records in the arrival cohort / configured phase duration; durable count includes response loss and interrupted iteration logs. Bins are grouped by iteration start, not commit instant.",
+      "cohort_final_states": {
+        "HELD": 25754
+      },
+      "payment_202_responses": 0,
+      "cohort_purchases_by_phase_end": 0,
+      "cohort_purchases_after_phase_end": 0,
+      "k6": {
+        "counts": {
+          "logical_started": 30001,
+          "http_reqs": 30001,
+          "logical_completed": 30001,
+          "iterations": 30001
+        },
+        "http_by_kind_status": [
+          {
+            "kind": "reserve",
+            "status": "429",
+            "error_code": "unrecorded",
+            "count": 4247
+          },
+          {
+            "kind": "reserve",
+            "status": "201",
+            "error_code": "unrecorded",
+            "count": 25754
+          }
+        ],
+        "client_end_to_end_latency_ms": [],
+        "network_timing_ms": [
+          {
+            "metric": "http_req_blocked",
+            "kind": "reserve",
+            "status": "429",
+            "n": 4247,
+            "p50": 0.001,
+            "p95": 0.003,
+            "p99": 0.082,
+            "max": 2.073
+          },
+          {
+            "metric": "http_req_connecting",
+            "kind": "reserve",
+            "status": "429",
+            "n": 4247,
+            "p50": 0,
+            "p95": 0,
+            "p99": 0.065,
+            "max": 2.049
+          },
+          {
+            "metric": "http_req_waiting",
+            "kind": "reserve",
+            "status": "429",
+            "n": 4247,
+            "p50": 0.142,
+            "p95": 0.314,
+            "p99": 0.552,
+            "max": 4.833
+          },
+          {
+            "metric": "http_req_blocked",
+            "kind": "reserve",
+            "status": "201",
+            "n": 25754,
+            "p50": 0.001,
+            "p95": 0.003,
+            "p99": 0.071,
+            "max": 1.733
+          },
+          {
+            "metric": "http_req_connecting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 25754,
+            "p50": 0,
+            "p95": 0,
+            "p99": 0.058,
+            "max": 1.643
+          },
+          {
+            "metric": "http_req_waiting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 25754,
+            "p50": 11.689,
+            "p95": 16.026,
+            "p99": 19.915,
+            "max": 52.064
+          }
+        ],
+        "outcome_latency_ms": [
+          {
+            "kind": "reserve",
+            "code": "OVERLOADED",
+            "n": 4247,
+            "p50": 0.164,
+            "p95": 0.349,
+            "p99": 0.596,
+            "max": 4.86
+          },
+          {
+            "kind": "reserve",
+            "code": "RESERVED",
+            "n": 25754,
+            "p50": 11.712,
+            "p95": 16.063,
+            "p99": 19.954,
+            "max": 52.075
+          }
+        ]
+      },
+      "new_reservations_per_second": 858.4666666666667,
+      "bins": [
+        {
+          "second": 0,
+          "started": 4970,
+          "reserved": 4155,
+          "rejected": 815,
+          "success_p99_ms": 21.635
+        },
+        {
+          "second": 5,
+          "started": 5000,
+          "reserved": 4236,
+          "rejected": 764,
+          "success_p99_ms": 18.898
+        },
+        {
+          "second": 10,
+          "started": 5000,
+          "reserved": 4207,
+          "rejected": 793,
+          "success_p99_ms": 20.696
+        },
+        {
+          "second": 15,
+          "started": 5000,
+          "reserved": 4225,
+          "rejected": 775,
+          "success_p99_ms": 19.52
+        },
+        {
+          "second": 20,
+          "started": 5000,
+          "reserved": 4468,
+          "rejected": 532,
+          "success_p99_ms": 18.864
+        },
+        {
+          "second": 25,
+          "started": 4999,
+          "reserved": 4434,
+          "rejected": 565,
+          "success_p99_ms": 19.21
+        },
+        {
+          "second": 30,
+          "started": 32,
+          "reserved": 29,
+          "rejected": 3,
+          "success_p99_ms": 14.41
+        }
+      ],
+      "samples": [
+        {
+          "at": 1793357552.334611,
+          "processes": {
+            "app": {
+              "cpu_seconds": 11.19,
+              "rss_mib": 283.046875,
+              "cpu_percent": 132.2
+            },
+            "pg": {
+              "cpu_seconds": 1.19,
+              "rss_mib": 12.453125,
+              "cpu_percent": 4.0
+            },
+            "k6": {
+              "cpu_seconds": 1.46,
+              "rss_mib": 106.59375,
+              "cpu_percent": 24.4
+            },
+            "observer": {
+              "cpu_seconds": 0.2,
+              "rss_mib": 24.78125,
+              "cpu_percent": 0.1
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357555.364352,
+          "processes": {
+            "app": {
+              "cpu_seconds": 15.25,
+              "rss_mib": 289.546875,
+              "cpu_percent": 130.8
+            },
+            "pg": {
+              "cpu_seconds": 1.27,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.7
+            },
+            "k6": {
+              "cpu_seconds": 2.46,
+              "rss_mib": 123.796875,
+              "cpu_percent": 28.8
+            },
+            "observer": {
+              "cpu_seconds": 0.21,
+              "rss_mib": 24.78125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357558.390162,
+          "processes": {
+            "app": {
+              "cpu_seconds": 18.46,
+              "rss_mib": 291.390625,
+              "cpu_percent": 65.7
+            },
+            "pg": {
+              "cpu_seconds": 1.36,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.2
+            },
+            "k6": {
+              "cpu_seconds": 3.43,
+              "rss_mib": 124.484375,
+              "cpu_percent": 31.1
+            },
+            "observer": {
+              "cpu_seconds": 0.22,
+              "rss_mib": 24.796875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357561.4163158,
+          "processes": {
+            "app": {
+              "cpu_seconds": 20.67,
+              "rss_mib": 296.578125,
+              "cpu_percent": 63.0
+            },
+            "pg": {
+              "cpu_seconds": 1.44,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.5
+            },
+            "k6": {
+              "cpu_seconds": 4.34,
+              "rss_mib": 124.546875,
+              "cpu_percent": 27.3
+            },
+            "observer": {
+              "cpu_seconds": 0.23,
+              "rss_mib": 24.796875,
+              "cpu_percent": 0.3
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 14158708\nuser_usec 9385528\nsystem_usec 4773179\nnice_usec 0\nnr_periods 395\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n606023680\n254:0 rbytes=48660480 wbytes=334938112 rios=1949 wios=53825 dbytes=0 dios=0\n"
+        },
+        {
+          "at": 1793357565.1357062,
+          "processes": {
+            "app": {
+              "cpu_seconds": 23.48,
+              "rss_mib": 297.28125,
+              "cpu_percent": 69.3
+            },
+            "pg": {
+              "cpu_seconds": 1.54,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.4
+            },
+            "k6": {
+              "cpu_seconds": 5.52,
+              "rss_mib": 124.78125,
+              "cpu_percent": 37.5
+            },
+            "observer": {
+              "cpu_seconds": 0.23,
+              "rss_mib": 24.796875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357568.160596,
+          "processes": {
+            "app": {
+              "cpu_seconds": 25.33,
+              "rss_mib": 297.546875,
+              "cpu_percent": 58.4
+            },
+            "pg": {
+              "cpu_seconds": 1.62,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.4
+            },
+            "k6": {
+              "cpu_seconds": 6.42,
+              "rss_mib": 125.59375,
+              "cpu_percent": 27.7
+            },
+            "observer": {
+              "cpu_seconds": 0.24,
+              "rss_mib": 24.78125,
+              "cpu_percent": 0.9
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357571.190492,
+          "processes": {
+            "app": {
+              "cpu_seconds": 27.31,
+              "rss_mib": 297.75,
+              "cpu_percent": 64.3
+            },
+            "pg": {
+              "cpu_seconds": 1.7,
+              "rss_mib": 12.453125,
+              "cpu_percent": 3.0
+            },
+            "k6": {
+              "cpu_seconds": 7.36,
+              "rss_mib": 126.984375,
+              "cpu_percent": 30.3
+            },
+            "observer": {
+              "cpu_seconds": 0.25,
+              "rss_mib": 24.8125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357574.221319,
+          "processes": {
+            "app": {
+              "cpu_seconds": 29.19,
+              "rss_mib": 300.015625,
+              "cpu_percent": 59.8
+            },
+            "pg": {
+              "cpu_seconds": 1.78,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.6
+            },
+            "k6": {
+              "cpu_seconds": 8.29,
+              "rss_mib": 128.109375,
+              "cpu_percent": 26.8
+            },
+            "observer": {
+              "cpu_seconds": 0.26,
+              "rss_mib": 25.6875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357577.252248,
+          "processes": {
+            "app": {
+              "cpu_seconds": 31.27,
+              "rss_mib": 300.125,
+              "cpu_percent": 64.0
+            },
+            "pg": {
+              "cpu_seconds": 1.86,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.5
+            },
+            "k6": {
+              "cpu_seconds": 9.28,
+              "rss_mib": 128.125,
+              "cpu_percent": 36.9
+            },
+            "observer": {
+              "cpu_seconds": 0.26,
+              "rss_mib": 25.6875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 30043360\nuser_usec 19712505\nsystem_usec 10330855\nnice_usec 0\nnr_periods 548\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n678633472\n254:0 rbytes=48660480 wbytes=671334400 rios=1949 wios=102953 dbytes=0 dios=0\n"
+        },
+        {
+          "at": 1793357578.3352268,
+          "processes": {
+            "app": {
+              "cpu_seconds": 32.05,
+              "rss_mib": 300.5,
+              "cpu_percent": 64.3
+            },
+            "pg": {
+              "cpu_seconds": 1.89,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.8
+            },
+            "k6": {
+              "cpu_seconds": 9.61,
+              "rss_mib": 128.4375,
+              "cpu_percent": 27.1
+            },
+            "observer": {
+              "cpu_seconds": 0.27,
+              "rss_mib": 25.75,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357581.357561,
+          "processes": {
+            "app": {
+              "cpu_seconds": 34.0,
+              "rss_mib": 300.46875,
+              "cpu_percent": 56.4
+            },
+            "pg": {
+              "cpu_seconds": 1.97,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.5
+            },
+            "k6": {
+              "cpu_seconds": 10.56,
+              "rss_mib": 128.4375,
+              "cpu_percent": 26.6
+            },
+            "observer": {
+              "cpu_seconds": 0.28,
+              "rss_mib": 25.75,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        }
+      ]
+    },
+    {
+      "name": "measure_1_2000",
+      "rate": 2000,
+      "duration": 30,
+      "start": 60,
+      "offset": 2000000,
+      "phase": "measure_1_2000",
+      "target_iterations": 60000,
+      "completed": 60001,
+      "outcomes": {
+        "OVERLOADED": {
+          "count": 34945,
+          "p50_ms": 0.112,
+          "p95_ms": 0.232,
+          "p99_ms": 0.32,
+          "max_ms": 3.281
+        },
+        "RESERVED": {
+          "count": 25056,
+          "p50_ms": 13.36,
+          "p95_ms": 18.085,
+          "p99_ms": 22.915,
+          "max_ms": 67.367
+        }
+      },
+      "unique_reservations": 25056,
+      "durable_unique_reservations": 25056,
+      "committed_without_201_response": 0,
+      "committed_without_recorded_201": 0,
+      "durable_without_iteration_completion_log": 0,
+      "response_loss_definition": "committed_without_201_response is a legacy field name: means no201 in completed client record, not proof that the network never delivered201. Interrupted iteration records are counted separately.",
+      "throughput_definition": "Unique201 IDs from completed client records in the arrival cohort / configured phase duration; durable count includes response loss and interrupted iteration logs. Bins are grouped by iteration start, not commit instant.",
+      "cohort_final_states": {
+        "HELD": 25056
+      },
+      "payment_202_responses": 0,
+      "cohort_purchases_by_phase_end": 0,
+      "cohort_purchases_after_phase_end": 0,
+      "k6": {
+        "counts": {
+          "logical_started": 60001,
+          "http_reqs": 60001,
+          "logical_completed": 60001,
+          "iterations": 60001
+        },
+        "http_by_kind_status": [
+          {
+            "kind": "reserve",
+            "status": "429",
+            "error_code": "unrecorded",
+            "count": 34945
+          },
+          {
+            "kind": "reserve",
+            "status": "201",
+            "error_code": "unrecorded",
+            "count": 25056
+          }
+        ],
+        "client_end_to_end_latency_ms": [],
+        "network_timing_ms": [
+          {
+            "metric": "http_req_blocked",
+            "kind": "reserve",
+            "status": "429",
+            "n": 34945,
+            "p50": 0.001,
+            "p95": 0.003,
+            "p99": 0.057,
+            "max": 3.004
+          },
+          {
+            "metric": "http_req_connecting",
+            "kind": "reserve",
+            "status": "429",
+            "n": 34945,
+            "p50": 0,
+            "p95": 0,
+            "p99": 0.043,
+            "max": 2.971
+          },
+          {
+            "metric": "http_req_waiting",
+            "kind": "reserve",
+            "status": "429",
+            "n": 34945,
+            "p50": 0.093,
+            "p95": 0.203,
+            "p99": 0.274,
+            "max": 3.193
+          },
+          {
+            "metric": "http_req_blocked",
+            "kind": "reserve",
+            "status": "201",
+            "n": 25056,
+            "p50": 0.001,
+            "p95": 0.003,
+            "p99": 0.068,
+            "max": 0.619
+          },
+          {
+            "metric": "http_req_connecting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 25056,
+            "p50": 0,
+            "p95": 0,
+            "p99": 0.054,
+            "max": 0.553
+          },
+          {
+            "metric": "http_req_waiting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 25056,
+            "p50": 13.336,
+            "p95": 18.058,
+            "p99": 22.898,
+            "max": 67.354
+          }
+        ],
+        "outcome_latency_ms": [
+          {
+            "kind": "reserve",
+            "code": "OVERLOADED",
+            "n": 34945,
+            "p50": 0.112,
+            "p95": 0.232,
+            "p99": 0.32,
+            "max": 3.281
+          },
+          {
+            "kind": "reserve",
+            "code": "RESERVED",
+            "n": 25056,
+            "p50": 13.36,
+            "p95": 18.085,
+            "p99": 22.915,
+            "max": 67.367
+          }
+        ]
+      },
+      "new_reservations_per_second": 835.2,
+      "bins": [
+        {
+          "second": 0,
+          "started": 9938,
+          "reserved": 4255,
+          "rejected": 5683,
+          "success_p99_ms": 21.975
+        },
+        {
+          "second": 5,
+          "started": 10000,
+          "reserved": 4012,
+          "rejected": 5988,
+          "success_p99_ms": 23.392
+        },
+        {
+          "second": 10,
+          "started": 9999,
+          "reserved": 3981,
+          "rejected": 6018,
+          "success_p99_ms": 27.205
+        },
+        {
+          "second": 15,
+          "started": 10000,
+          "reserved": 4400,
+          "rejected": 5600,
+          "success_p99_ms": 21.647
+        },
+        {
+          "second": 20,
+          "started": 10000,
+          "reserved": 4234,
+          "rejected": 5766,
+          "success_p99_ms": 23.075
+        },
+        {
+          "second": 25,
+          "started": 10000,
+          "reserved": 4144,
+          "rejected": 5856,
+          "success_p99_ms": 23.11
+        },
+        {
+          "second": 30,
+          "started": 64,
+          "reserved": 30,
+          "rejected": 34,
+          "success_p99_ms": 14.193
+        }
+      ],
+      "samples": [
+        {
+          "at": 1793357587.6090372,
+          "processes": {
+            "app": {
+              "cpu_seconds": 35.03,
+              "rss_mib": 301.390625,
+              "cpu_percent": 60.6
+            },
+            "pg": {
+              "cpu_seconds": 2.31,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.8
+            },
+            "k6": {
+              "cpu_seconds": 11.17,
+              "rss_mib": 128.5,
+              "cpu_percent": 46.6
+            },
+            "observer": {
+              "cpu_seconds": 0.32,
+              "rss_mib": 25.84375,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [
+            {
+              "OBJECT_NAME": "inventory_buckets",
+              "INDEX_NAME": "PRIMARY",
+              "waiters": 1
+            }
+          ],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357590.6347609,
+          "processes": {
+            "app": {
+              "cpu_seconds": 37.57,
+              "rss_mib": 300.90625,
+              "cpu_percent": 76.3
+            },
+            "pg": {
+              "cpu_seconds": 2.4,
+              "rss_mib": 12.453125,
+              "cpu_percent": 3.3
+            },
+            "k6": {
+              "cpu_seconds": 12.94,
+              "rss_mib": 131.46875,
+              "cpu_percent": 57.5
+            },
+            "observer": {
+              "cpu_seconds": 0.33,
+              "rss_mib": 25.796875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357593.664767,
+          "processes": {
+            "app": {
+              "cpu_seconds": 39.76,
+              "rss_mib": 303.375,
+              "cpu_percent": 71.9
+            },
+            "pg": {
+              "cpu_seconds": 2.49,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.8
+            },
+            "k6": {
+              "cpu_seconds": 14.75,
+              "rss_mib": 133.796875,
+              "cpu_percent": 56.4
+            },
+            "observer": {
+              "cpu_seconds": 0.34,
+              "rss_mib": 25.8125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357596.6898592,
+          "processes": {
+            "app": {
+              "cpu_seconds": 41.85,
+              "rss_mib": 303.375,
+              "cpu_percent": 64.7
+            },
+            "pg": {
+              "cpu_seconds": 2.58,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.7
+            },
+            "k6": {
+              "cpu_seconds": 16.5,
+              "rss_mib": 133.890625,
+              "cpu_percent": 60.6
+            },
+            "observer": {
+              "cpu_seconds": 0.35,
+              "rss_mib": 25.8125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357599.719566,
+          "processes": {
+            "app": {
+              "cpu_seconds": 43.95,
+              "rss_mib": 305.546875,
+              "cpu_percent": 67.5
+            },
+            "pg": {
+              "cpu_seconds": 2.66,
+              "rss_mib": 12.453125,
+              "cpu_percent": 2.5
+            },
+            "k6": {
+              "cpu_seconds": 18.25,
+              "rss_mib": 136.578125,
+              "cpu_percent": 52.8
+            },
+            "observer": {
+              "cpu_seconds": 0.35,
+              "rss_mib": 25.8125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [
+            {
+              "OBJECT_NAME": "inventory_buckets",
+              "INDEX_NAME": "PRIMARY",
+              "waiters": 3
+            }
+          ],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 49874850\nuser_usec 32617661\nsystem_usec 17257188\nnice_usec 0\nnr_periods 777\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n762818560\n254:0 rbytes=48660480 wbytes=1172561920 rios=1949 wios=158863 dbytes=0 dios=0\n"
+        },
+        {
+          "at": 1793357603.3367522,
+          "processes": {
+            "app": {
+              "cpu_seconds": 46.51,
+              "rss_mib": 305.734375,
+              "cpu_percent": 69.4
+            },
+            "pg": {
+              "cpu_seconds": 2.77,
+              "rss_mib": 12.453125,
+              "cpu_percent": 3.0
+            },
+            "k6": {
+              "cpu_seconds": 20.37,
+              "rss_mib": 136.609375,
+              "cpu_percent": 57.6
+            },
+            "observer": {
+              "cpu_seconds": 0.36,
+              "rss_mib": 25.828125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357606.36744,
+          "processes": {
+            "app": {
+              "cpu_seconds": 48.98,
+              "rss_mib": 308.109375,
+              "cpu_percent": 83.2
+            },
+            "pg": {
+              "cpu_seconds": 2.86,
+              "rss_mib": 12.453125,
+              "cpu_percent": 3.2
+            },
+            "k6": {
+              "cpu_seconds": 22.28,
+              "rss_mib": 140.671875,
+              "cpu_percent": 69.5
+            },
+            "observer": {
+              "cpu_seconds": 0.37,
+              "rss_mib": 25.828125,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357607.39612,
+          "processes": {
+            "app": {
+              "cpu_seconds": 49.84,
+              "rss_mib": 308.21875,
+              "cpu_percent": 79.2
+            },
+            "pg": {
+              "cpu_seconds": 2.9,
+              "rss_mib": 12.453125,
+              "cpu_percent": 3.3
+            },
+            "k6": {
+              "cpu_seconds": 22.97,
+              "rss_mib": 140.671875,
+              "cpu_percent": 60.6
+            },
+            "observer": {
+              "cpu_seconds": 0.38,
+              "rss_mib": 25.890625,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357610.424644,
+          "processes": {
+            "app": {
+              "cpu_seconds": 52.31,
+              "rss_mib": 306.484375,
+              "cpu_percent": 75.6
+            },
+            "pg": {
+              "cpu_seconds": 3.0,
+              "rss_mib": 12.453125,
+              "cpu_percent": 3.4
+            },
+            "k6": {
+              "cpu_seconds": 24.93,
+              "rss_mib": 140.671875,
+              "cpu_percent": 67.4
+            },
+            "observer": {
+              "cpu_seconds": 0.39,
+              "rss_mib": 25.84375,
+              "cpu_percent": 1.2
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357613.228224,
+          "processes": {
+            "app": {
+              "cpu_seconds": 54.43,
+              "rss_mib": 308.78125,
+              "cpu_percent": 74.5
+            },
+            "pg": {
+              "cpu_seconds": 3.09,
+              "rss_mib": 12.453125,
+              "cpu_percent": 3.1
+            },
+            "k6": {
+              "cpu_seconds": 26.65,
+              "rss_mib": 140.78125,
+              "cpu_percent": 59.2
+            },
+            "observer": {
+              "cpu_seconds": 0.4,
+              "rss_mib": 25.796875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [
+            {
+              "OBJECT_NAME": "inventory_buckets",
+              "INDEX_NAME": "PRIMARY",
+              "waiters": 1
+            }
+          ],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 67990612\nuser_usec 44584552\nsystem_usec 23406059\nnice_usec 0\nnr_periods 914\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n802713600\n254:0 rbytes=48660480 wbytes=1557188608 rios=1949 wios=206039 dbytes=0 dios=0\n"
+        }
+      ]
+    },
+    {
+      "name": "measure_2_100",
+      "rate": 100,
+      "duration": 30,
+      "start": 95,
+      "offset": 3000000,
+      "phase": "measure_2_100",
+      "target_iterations": 3000,
+      "completed": 3001,
+      "outcomes": {
+        "RESERVED": {
+          "count": 3001,
+          "p50_ms": 6.209,
+          "p95_ms": 9.177,
+          "p99_ms": 11.877,
+          "max_ms": 21.156
+        }
+      },
+      "unique_reservations": 3001,
+      "durable_unique_reservations": 3001,
+      "committed_without_201_response": 0,
+      "committed_without_recorded_201": 0,
+      "durable_without_iteration_completion_log": 0,
+      "response_loss_definition": "committed_without_201_response is a legacy field name: means no201 in completed client record, not proof that the network never delivered201. Interrupted iteration records are counted separately.",
+      "throughput_definition": "Unique201 IDs from completed client records in the arrival cohort / configured phase duration; durable count includes response loss and interrupted iteration logs. Bins are grouped by iteration start, not commit instant.",
+      "cohort_final_states": {
+        "HELD": 3001
+      },
+      "payment_202_responses": 0,
+      "cohort_purchases_by_phase_end": 0,
+      "cohort_purchases_after_phase_end": 0,
+      "k6": {
+        "counts": {
+          "logical_started": 3001,
+          "http_reqs": 3001,
+          "logical_completed": 3001,
+          "iterations": 3001
+        },
+        "http_by_kind_status": [
+          {
+            "kind": "reserve",
+            "status": "201",
+            "error_code": "unrecorded",
+            "count": 3001
+          }
+        ],
+        "client_end_to_end_latency_ms": [],
+        "network_timing_ms": [
+          {
+            "metric": "http_req_blocked",
+            "kind": "reserve",
+            "status": "201",
+            "n": 3001,
+            "p50": 0.004,
+            "p95": 0.013,
+            "p99": 0.229,
+            "max": 0.323
+          },
+          {
+            "metric": "http_req_connecting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 3001,
+            "p50": 0,
+            "p95": 0,
+            "p99": 0.172,
+            "max": 0.246
+          },
+          {
+            "metric": "http_req_waiting",
+            "kind": "reserve",
+            "status": "201",
+            "n": 3001,
+            "p50": 6.154,
+            "p95": 9.121,
+            "p99": 11.848,
+            "max": 21.086
+          }
+        ],
+        "outcome_latency_ms": [
+          {
+            "kind": "reserve",
+            "code": "RESERVED",
+            "n": 3001,
+            "p50": 6.209,
+            "p95": 9.177,
+            "p99": 11.877,
+            "max": 21.156
+          }
+        ]
+      },
+      "new_reservations_per_second": 100.03333333333333,
+      "bins": [
+        {
+          "second": 0,
+          "started": 497,
+          "reserved": 497,
+          "rejected": 0,
+          "success_p99_ms": 13.782
+        },
+        {
+          "second": 5,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 12.008
+        },
+        {
+          "second": 10,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 9.937
+        },
+        {
+          "second": 15,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 9.814
+        },
+        {
+          "second": 20,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 10.32
+        },
+        {
+          "second": 25,
+          "started": 500,
+          "reserved": 500,
+          "rejected": 0,
+          "success_p99_ms": 9.865
+        },
+        {
+          "second": 30,
+          "started": 4,
+          "reserved": 4,
+          "rejected": 0,
+          "success_p99_ms": 6.927
+        }
+      ],
+      "samples": [
+        {
+          "at": 1793357622.117318,
+          "processes": {
+            "app": {
+              "cpu_seconds": 57.52,
+              "rss_mib": 309.421875,
+              "cpu_percent": 4.6
+            },
+            "pg": {
+              "cpu_seconds": 3.53,
+              "rss_mib": 12.453125,
+              "cpu_percent": 5.8
+            },
+            "k6": {
+              "cpu_seconds": 29.15,
+              "rss_mib": 147.625,
+              "cpu_percent": 3.8
+            },
+            "observer": {
+              "cpu_seconds": 0.44,
+              "rss_mib": 25.90625,
+              "cpu_percent": 0.1
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357623.150882,
+          "processes": {
+            "app": {
+              "cpu_seconds": 57.65,
+              "rss_mib": 309.421875,
+              "cpu_percent": 7.4
+            },
+            "pg": {
+              "cpu_seconds": 3.58,
+              "rss_mib": 12.453125,
+              "cpu_percent": 4.3
+            },
+            "k6": {
+              "cpu_seconds": 29.23,
+              "rss_mib": 147.625,
+              "cpu_percent": 6.7
+            },
+            "observer": {
+              "cpu_seconds": 0.45,
+              "rss_mib": 25.953125,
+              "cpu_percent": 0.1
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 72359983\nuser_usec 47483260\nsystem_usec 24876722\nnice_usec 0\nnr_periods 1006\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n810151936\n254:0 rbytes=48660480 wbytes=1743925248 rios=1949 wios=220724 dbytes=0 dios=0\n"
+        },
+        {
+          "at": 1793357624.225471,
+          "processes": {
+            "app": {
+              "cpu_seconds": 57.79,
+              "rss_mib": 309.453125,
+              "cpu_percent": 11.0
+            },
+            "pg": {
+              "cpu_seconds": 3.64,
+              "rss_mib": 12.453125,
+              "cpu_percent": 7.1
+            },
+            "k6": {
+              "cpu_seconds": 29.35,
+              "rss_mib": 147.625,
+              "cpu_percent": 8.0
+            },
+            "observer": {
+              "cpu_seconds": 0.46,
+              "rss_mib": 25.96875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357627.2582731,
+          "processes": {
+            "app": {
+              "cpu_seconds": 58.21,
+              "rss_mib": 309.46875,
+              "cpu_percent": 8.5
+            },
+            "pg": {
+              "cpu_seconds": 3.81,
+              "rss_mib": 12.453125,
+              "cpu_percent": 5.2
+            },
+            "k6": {
+              "cpu_seconds": 29.56,
+              "rss_mib": 147.625,
+              "cpu_percent": 6.2
+            },
+            "observer": {
+              "cpu_seconds": 0.47,
+              "rss_mib": 25.96875,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357630.294218,
+          "processes": {
+            "app": {
+              "cpu_seconds": 58.62,
+              "rss_mib": 309.59375,
+              "cpu_percent": 11.4
+            },
+            "pg": {
+              "cpu_seconds": 3.99,
+              "rss_mib": 12.453125,
+              "cpu_percent": 6.2
+            },
+            "k6": {
+              "cpu_seconds": 29.83,
+              "rss_mib": 147.625,
+              "cpu_percent": 7.9
+            },
+            "observer": {
+              "cpu_seconds": 0.48,
+              "rss_mib": 25.984375,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357633.327563,
+          "processes": {
+            "app": {
+              "cpu_seconds": 59.01,
+              "rss_mib": 309.59375,
+              "cpu_percent": 7.0
+            },
+            "pg": {
+              "cpu_seconds": 4.15,
+              "rss_mib": 12.453125,
+              "cpu_percent": 4.1
+            },
+            "k6": {
+              "cpu_seconds": 30.03,
+              "rss_mib": 147.625,
+              "cpu_percent": 4.8
+            },
+            "observer": {
+              "cpu_seconds": 0.49,
+              "rss_mib": 25.984375,
+              "cpu_percent": 0.5
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357636.354244,
+          "processes": {
+            "app": {
+              "cpu_seconds": 59.42,
+              "rss_mib": 309.640625,
+              "cpu_percent": 11.7
+            },
+            "pg": {
+              "cpu_seconds": 4.32,
+              "rss_mib": 12.453125,
+              "cpu_percent": 5.5
+            },
+            "k6": {
+              "cpu_seconds": 30.3,
+              "rss_mib": 147.625,
+              "cpu_percent": 7.1
+            },
+            "observer": {
+              "cpu_seconds": 0.49,
+              "rss_mib": 25.984375,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 73749626\nuser_usec 48420230\nsystem_usec 25329395\nnice_usec 0\nnr_periods 1139\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n813998080\n254:0 rbytes=48660480 wbytes=1880670208 rios=1949 wios=237533 dbytes=0 dios=0\n"
+        },
+        {
+          "at": 1793357639.460219,
+          "processes": {
+            "app": {
+              "cpu_seconds": 59.82,
+              "rss_mib": 309.640625,
+              "cpu_percent": 10.8
+            },
+            "pg": {
+              "cpu_seconds": 4.49,
+              "rss_mib": 12.453125,
+              "cpu_percent": 6.1
+            },
+            "k6": {
+              "cpu_seconds": 30.52,
+              "rss_mib": 147.625,
+              "cpu_percent": 7.1
+            },
+            "observer": {
+              "cpu_seconds": 0.5,
+              "rss_mib": 25.984375,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357642.499,
+          "processes": {
+            "app": {
+              "cpu_seconds": 60.24,
+              "rss_mib": 309.65625,
+              "cpu_percent": 10.4
+            },
+            "pg": {
+              "cpu_seconds": 4.67,
+              "rss_mib": 12.453125,
+              "cpu_percent": 5.7
+            },
+            "k6": {
+              "cpu_seconds": 30.8,
+              "rss_mib": 147.625,
+              "cpu_percent": 6.9
+            },
+            "observer": {
+              "cpu_seconds": 0.51,
+              "rss_mib": 25.984375,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357645.5354722,
+          "processes": {
+            "app": {
+              "cpu_seconds": 60.64,
+              "rss_mib": 309.640625,
+              "cpu_percent": 11.0
+            },
+            "pg": {
+              "cpu_seconds": 4.85,
+              "rss_mib": 12.453125,
+              "cpu_percent": 6.3
+            },
+            "k6": {
+              "cpu_seconds": 31.06,
+              "rss_mib": 146.296875,
+              "cpu_percent": 12.2
+            },
+            "observer": {
+              "cpu_seconds": 0.52,
+              "rss_mib": 26.0,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357648.5707788,
+          "processes": {
+            "app": {
+              "cpu_seconds": 61.06,
+              "rss_mib": 307.796875,
+              "cpu_percent": 9.4
+            },
+            "pg": {
+              "cpu_seconds": 5.02,
+              "rss_mib": 12.453125,
+              "cpu_percent": 6.0
+            },
+            "k6": {
+              "cpu_seconds": 31.28,
+              "rss_mib": 143.875,
+              "cpu_percent": 6.6
+            },
+            "observer": {
+              "cpu_seconds": 0.53,
+              "rss_mib": 26.015625,
+              "cpu_percent": 0.0
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": null
+        },
+        {
+          "at": 1793357651.589719,
+          "processes": {
+            "app": {
+              "cpu_seconds": 61.47,
+              "rss_mib": 307.796875,
+              "cpu_percent": 10.0
+            },
+            "pg": {
+              "cpu_seconds": 5.19,
+              "rss_mib": 12.453125,
+              "cpu_percent": 5.7
+            },
+            "k6": {
+              "cpu_seconds": 31.55,
+              "rss_mib": 143.875,
+              "cpu_percent": 13.2
+            },
+            "observer": {
+              "cpu_seconds": 0.54,
+              "rss_mib": 26.015625,
+              "cpu_percent": 0.4
+            }
+          },
+          "locks": [],
+          "pending": {
+            "n": 0,
+            "oldest": null
+          },
+          "db_cgroup": "usage_usec 75298893\nuser_usec 49459973\nsystem_usec 25838919\nnice_usec 0\nnr_periods 1292\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n816721920\n254:0 rbytes=48660480 wbytes=2034270208 rios=1949 wios=256487 dbytes=0 dios=0\n"
+        }
+      ]
+    }
+  ],
+  "resources": {
+    "app": {
+      "observed_cpu_seconds": 58.07,
+      "peak_rss_mib": 309.65625,
+      "peak_cpu_percent": 132.2
+    },
+    "pg": {
+      "observed_cpu_seconds": 5.1000000000000005,
+      "peak_rss_mib": 18.28125,
+      "peak_cpu_percent": 7.7
+    },
+    "k6": {
+      "observed_cpu_seconds": 31.604234,
+      "peak_rss_mib": 147.625,
+      "peak_cpu_percent": 69.5,
+      "sampled_cpu_seconds": 31.54
+    },
+    "db_cpu_seconds": 74.629233,
+    "db_peak_memory_current_mib": 778.88671875,
+    "db_throttled_seconds": 0.0,
+    "db_io_delta": {
+      "rbytes": 114688,
+      "wbytes": 2013089792,
+      "rios": 7,
+      "wios": 255589
+    },
+    "observer_cpu_seconds": 1.260675999999992
+  },
+  "host_boundary_cost": null,
+  "observer_cost": {
+    "k6_cpu_seconds": 31.604234,
+    "k6_peak_rss_mib": 147.625,
+    "observer_cpu_seconds": 0.44876800000000006,
+    "observer_child_cpu_seconds": 0.8119079999999919,
+    "load_ended": 1793357652.29321,
+    "drain_ended": 1793357652.2987509,
+    "definition": "During load and bounded recovery drain; post-run snapshot compression excluded. Observer children are ps/docker CLI; Docker daemon/VM not fully isolated."
+  },
+  "faults": [],
+  "instrumentation": {
+    "pool_pending_peak": 0.0,
+    "pool_active_peak": 12.0,
+    "acquire_window_max_seconds": 0.024,
+    "usage_window_max_seconds": 0.067,
+    "tomcat_connections_peak": null,
+    "tomcat_threads_busy_peak": null,
+    "recovery_active_peak": null,
+    "hikaricp_connections_acquire_seconds_sum_delta": 0.871,
+    "hikaricp_connections_acquire_seconds_count_delta": 58664.0,
+    "hikaricp_connections_usage_seconds_sum_delta": 690.6139999999999,
+    "hikaricp_connections_usage_seconds_count_delta": 58665.0,
+    "hikaricp_connections_timeout_total_delta": 0.0,
+    "jvm_gc_pause_seconds_sum_delta": 0.176,
+    "jvm_gc_pause_seconds_count_delta": 160.0,
+    "mogu_pg_calls_total_delta": 0
+  },
+  "instrumentation_samples": [
+    {
+      "at": 1793357527.026468,
+      "hikaricp_connections": 5.0,
+      "hikaricp_connections_acquire_seconds_count": 25.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.0,
+      "hikaricp_connections_acquire_seconds_max": 0.0,
+      "hikaricp_connections_active": 1.0,
+      "hikaricp_connections_creation_seconds_count": 0.0,
+      "hikaricp_connections_creation_seconds_sum": 0.0,
+      "hikaricp_connections_creation_seconds_max": 0.0,
+      "hikaricp_connections_idle": 4.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 24.0,
+      "hikaricp_connections_usage_seconds_sum": 0.128,
+      "hikaricp_connections_usage_seconds_max": 0.015,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357528.054475,
+      "hikaricp_connections": 5.0,
+      "hikaricp_connections_acquire_seconds_count": 150.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.0,
+      "hikaricp_connections_acquire_seconds_max": 0.0,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 0.0,
+      "hikaricp_connections_creation_seconds_sum": 0.0,
+      "hikaricp_connections_creation_seconds_max": 0.0,
+      "hikaricp_connections_idle": 5.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 150.0,
+      "hikaricp_connections_usage_seconds_sum": 0.831,
+      "hikaricp_connections_usage_seconds_max": 0.015,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357547.3748028,
+      "hikaricp_connections": 5.0,
+      "hikaricp_connections_acquire_seconds_count": 2497.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.004,
+      "hikaricp_connections_acquire_seconds_max": 0.001,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 0.0,
+      "hikaricp_connections_creation_seconds_sum": 0.0,
+      "hikaricp_connections_creation_seconds_max": 0.0,
+      "hikaricp_connections_idle": 5.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 2497.0,
+      "hikaricp_connections_usage_seconds_sum": 12.912,
+      "hikaricp_connections_usage_seconds_max": 0.017,
+      "jvm_gc_pause_seconds_count": 6.0,
+      "jvm_gc_pause_seconds_sum": 0.028,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357549.063442,
+      "hikaricp_connections": 5.0,
+      "hikaricp_connections_acquire_seconds_count": 2520.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.005,
+      "hikaricp_connections_acquire_seconds_max": 0.001,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 0.0,
+      "hikaricp_connections_creation_seconds_sum": 0.0,
+      "hikaricp_connections_creation_seconds_max": 0.0,
+      "hikaricp_connections_idle": 5.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 2520.0,
+      "hikaricp_connections_usage_seconds_sum": 12.997,
+      "hikaricp_connections_usage_seconds_max": 0.017,
+      "jvm_gc_pause_seconds_count": 6.0,
+      "jvm_gc_pause_seconds_sum": 0.028,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357550.273452,
+      "hikaricp_connections": 5.0,
+      "hikaricp_connections_acquire_seconds_count": 2546.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.005,
+      "hikaricp_connections_acquire_seconds_max": 0.001,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 0.0,
+      "hikaricp_connections_creation_seconds_sum": 0.0,
+      "hikaricp_connections_creation_seconds_max": 0.0,
+      "hikaricp_connections_idle": 5.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 2546.0,
+      "hikaricp_connections_usage_seconds_sum": 13.097,
+      "hikaricp_connections_usage_seconds_max": 0.017,
+      "jvm_gc_pause_seconds_count": 6.0,
+      "jvm_gc_pause_seconds_sum": 0.028,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357551.3244932,
+      "hikaricp_connections": 5.0,
+      "hikaricp_connections_acquire_seconds_count": 2568.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.005,
+      "hikaricp_connections_acquire_seconds_max": 0.001,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 0.0,
+      "hikaricp_connections_creation_seconds_sum": 0.0,
+      "hikaricp_connections_creation_seconds_max": 0.0,
+      "hikaricp_connections_idle": 5.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 2568.0,
+      "hikaricp_connections_usage_seconds_sum": 13.188,
+      "hikaricp_connections_usage_seconds_max": 0.017,
+      "jvm_gc_pause_seconds_count": 6.0,
+      "jvm_gc_pause_seconds_sum": 0.028,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357577.329329,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 24779.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.823,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 11.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 5.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 24770.0,
+      "hikaricp_connections_usage_seconds_sum": 279.492,
+      "hikaricp_connections_usage_seconds_max": 0.052,
+      "jvm_gc_pause_seconds_count": 62.0,
+      "jvm_gc_pause_seconds_sum": 0.086,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357584.42401,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 29086.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.825,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 16.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 29086.0,
+      "hikaricp_connections_usage_seconds_sum": 326.602,
+      "hikaricp_connections_usage_seconds_max": 0.052,
+      "jvm_gc_pause_seconds_count": 73.0,
+      "jvm_gc_pause_seconds_sum": 0.096,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357585.4729831,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 29108.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.825,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 16.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 29108.0,
+      "hikaricp_connections_usage_seconds_sum": 326.687,
+      "hikaricp_connections_usage_seconds_max": 0.052,
+      "jvm_gc_pause_seconds_count": 73.0,
+      "jvm_gc_pause_seconds_sum": 0.096,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357586.6039958,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 29132.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.825,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 16.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 29132.0,
+      "hikaricp_connections_usage_seconds_sum": 326.787,
+      "hikaricp_connections_usage_seconds_max": 0.052,
+      "jvm_gc_pause_seconds_count": 73.0,
+      "jvm_gc_pause_seconds_sum": 0.096,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357606.392128,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 45725.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.859,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 12.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 4.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 45713.0,
+      "hikaricp_connections_usage_seconds_sum": 547.092,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 124.0,
+      "jvm_gc_pause_seconds_sum": 0.139,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357610.452309,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 50818.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.859,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 9.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 7.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 50806.0,
+      "hikaricp_connections_usage_seconds_sum": 615.182,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 139.0,
+      "jvm_gc_pause_seconds_sum": 0.153,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357617.066205,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 54938.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.86,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 9.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 7.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 54938.0,
+      "hikaricp_connections_usage_seconds_sum": 671.058,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 152.0,
+      "jvm_gc_pause_seconds_sum": 0.165,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357620.0565271,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 54961.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.86,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 16.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 54961.0,
+      "hikaricp_connections_usage_seconds_sum": 671.136,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 152.0,
+      "jvm_gc_pause_seconds_sum": 0.165,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357621.104204,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 54983.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.86,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 0.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 16.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 54983.0,
+      "hikaricp_connections_usage_seconds_sum": 671.224,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 152.0,
+      "jvm_gc_pause_seconds_sum": 0.165,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357622.147458,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 55022.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.865,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 1.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 15.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 55021.0,
+      "hikaricp_connections_usage_seconds_sum": 671.474,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 152.0,
+      "jvm_gc_pause_seconds_sum": 0.165,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357623.221169,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 55153.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.866,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 1.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 15.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 55152.0,
+      "hikaricp_connections_usage_seconds_sum": 672.211,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 152.0,
+      "jvm_gc_pause_seconds_sum": 0.165,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    },
+    {
+      "at": 1793357651.792027,
+      "hikaricp_connections": 16.0,
+      "hikaricp_connections_acquire_seconds_count": 58689.0,
+      "hikaricp_connections_acquire_seconds_sum": 0.871,
+      "hikaricp_connections_acquire_seconds_max": 0.024,
+      "hikaricp_connections_active": 1.0,
+      "hikaricp_connections_creation_seconds_count": 11.0,
+      "hikaricp_connections_creation_seconds_sum": 0.114,
+      "hikaricp_connections_creation_seconds_max": 0.016,
+      "hikaricp_connections_idle": 15.0,
+      "hikaricp_connections_max": 48.0,
+      "hikaricp_connections_min": 4.0,
+      "hikaricp_connections_pending": 0.0,
+      "hikaricp_connections_timeout_total": 0.0,
+      "hikaricp_connections_usage_seconds_count": 58689.0,
+      "hikaricp_connections_usage_seconds_sum": 690.742,
+      "hikaricp_connections_usage_seconds_max": 0.067,
+      "jvm_gc_pause_seconds_count": 160.0,
+      "jvm_gc_pause_seconds_sum": 0.176,
+      "jvm_gc_pause_seconds_max": 0.007,
+      "tomcat_sessions_active_current_sessions": 0.0,
+      "tomcat_sessions_active_max_sessions": 0.0,
+      "tomcat_sessions_alive_max_seconds": 0.0,
+      "tomcat_sessions_created_sessions_total": 0.0,
+      "tomcat_sessions_expired_sessions_total": 0.0,
+      "tomcat_sessions_rejected_sessions_total": 0.0
+    }
+  ],
+  "db_status_delta": {
+    "Bytes_received": 113527274,
+    "Bytes_sent": 164146131,
+    "Com_commit": 58056,
+    "Com_rollback": 0,
+    "Innodb_buffer_pool_reads": 9,
+    "Innodb_data_fsyncs": 81825,
+    "Innodb_data_reads": 9,
+    "Innodb_data_writes": 176704,
+    "Innodb_log_waits": 0,
+    "Innodb_os_log_fsyncs": 80181,
+    "Innodb_row_lock_time": 5293,
+    "Innodb_row_lock_waits": 2953,
+    "Threads_connected": 11,
+    "Threads_running": 0
+  },
+  "sql_delta": [
+    {
+      "sql": "COMMIT",
+      "count": 57803,
+      "seconds": 176.409826262,
+      "mean_ms": 3.05191471484179,
+      "present_in_before": true,
+      "rows_examined": 0,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT `bucket_id` FROM `inventory_buckets` WHERE `sale_id` = ? AND `bucket_id` = ? FOR UPDATE",
+      "count": 55724,
+      "seconds": 7.902388229,
+      "mean_ms": 0.14181301107242839,
+      "present_in_before": false,
+      "rows_examined": 55785,
+      "rows_affected": 0
+    },
+    {
+      "sql": "UPDATE `request_results` SET `http_status` = ? , `body` = ? WHERE `principal` = ? AND `operation` = ? AND `scope` = ? AND `idem_key` = ?",
+      "count": 55793,
+      "seconds": 4.751172389,
+      "mean_ms": 0.08515714137974298,
+      "present_in_before": false,
+      "rows_examined": 55804,
+      "rows_affected": 55788
+    },
+    {
+      "sql": "INSERT INTO `reservations` ( `id` , `sale_id` , `user_id` , `state` , `price` , `currency` , `order_id` , `expires_at` , `original_bucket_id` ) VALUES ( ?, ... , TIMESTAMPADD ( SQL_TSI_SECOND , ? , UTC_TIMESTAMP (?) ) , ? )",
+      "count": 55791,
+      "seconds": 4.631152659,
+      "mean_ms": 0.0830089559068667,
+      "present_in_before": false,
+      "rows_examined": 0,
+      "rows_affected": 55782
+    },
+    {
+      "sql": "UPDATE `user_guard` SET `active_id` = ? WHERE `sale_id` = ? AND `user_id` = ?",
+      "count": 55779,
+      "seconds": 3.791755504,
+      "mean_ms": 0.06797819078864806,
+      "present_in_before": false,
+      "rows_examined": 55801,
+      "rows_affected": 55791
+    },
+    {
+      "sql": "UPDATE `inventory_buckets` SET `available` = `available` - ? WHERE `sale_id` = ? AND `bucket_id` = ? AND `available` > ?",
+      "count": 55762,
+      "seconds": 3.774004398,
+      "mean_ms": 0.06768057813564793,
+      "present_in_before": false,
+      "rows_examined": 55792,
+      "rows_affected": 55776
+    },
+    {
+      "sql": "INSERT INTO `request_results` ( `principal` , `operation` , `scope` , `idem_key` , `request_hash` ) VALUES (...) ON DUPLICATE KEY UPDATE `idem_key` = `idem_key`",
+      "count": 55781,
+      "seconds": 3.595530693,
+      "mean_ms": 0.06445798198311253,
+      "present_in_before": false,
+      "rows_examined": 0,
+      "rows_affected": 55786
+    },
+    {
+      "sql": "SELECT * FROM `request_results` WHERE `principal` = ? AND `operation` = ? AND `scope` = ? AND `idem_key` = ? FOR UPDATE",
+      "count": 55786,
+      "seconds": 3.235348863,
+      "mean_ms": 0.05799571331516868,
+      "present_in_before": false,
+      "rows_examined": 55804,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SET `autocommit` = ?",
+      "count": 115618,
+      "seconds": 2.986772839,
+      "mean_ms": 0.025833112828452316,
+      "present_in_before": true,
+      "rows_examined": 0,
+      "rows_affected": 0
+    },
+    {
+      "sql": "INSERT INTO `user_guard` ( `sale_id` , `user_id` ) VALUES (...) ON DUPLICATE KEY UPDATE `user_id` = `user_id`",
+      "count": 55765,
+      "seconds": 2.864988737,
+      "mean_ms": 0.05137610933381153,
+      "present_in_before": false,
+      "rows_examined": 0,
+      "rows_affected": 55778
+    },
+    {
+      "sql": "SELECT * , `opens_at` <= UTC_TIMESTAMP (?) AND `closes_at` > UTC_TIMESTAMP (?) AS `is_open` FROM `sales` WHERE `id` = ?",
+      "count": 55737,
+      "seconds": 2.823412426,
+      "mean_ms": 0.05065598123329207,
+      "present_in_before": false,
+      "rows_examined": 55778,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT * FROM `user_guard` WHERE `sale_id` = ? AND `user_id` = ? FOR UPDATE",
+      "count": 55759,
+      "seconds": 2.667370481,
+      "mean_ms": 0.04783748777775785,
+      "present_in_before": false,
+      "rows_examined": 55788,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT `bucket_id` , `available` FROM `inventory_buckets` WHERE `sale_id` = ? AND `bucket_id` = ?",
+      "count": 55734,
+      "seconds": 2.633532993,
+      "mean_ms": 0.04725182102486813,
+      "present_in_before": false,
+      "rows_examined": 55782,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT * FROM `sales` WHERE `id` = ?",
+      "count": 55740,
+      "seconds": 2.587060743,
+      "mean_ms": 0.04641300220667384,
+      "present_in_before": false,
+      "rows_examined": 55790,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT @@SESSION . `transaction_isolation`",
+      "count": 58014,
+      "seconds": 1.780760269,
+      "mean_ms": 0.030695354035232877,
+      "present_in_before": true,
+      "rows_examined": 58036,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT * FROM `attempts` WHERE `workflow` != ? AND `next_at` <= UTC_TIMESTAMP (?) AND ( `lease_until` IS NULL OR `lease_until` <= UTC_TIMESTAMP (?) ) ORDER BY `next_at` , `id` LIMIT ? FOR UPDATE SKIP LOCKED",
+      "count": 2244,
+      "seconds": 0.33095632,
+      "mean_ms": 0.14748499108734403,
+      "present_in_before": true,
+      "rows_examined": 0,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT `id` FROM `reservations` WHERE `state` = ? AND `expires_at` <= UTC_TIMESTAMP (?) ORDER BY `expires_at` , `id` LIMIT ?",
+      "count": 617,
+      "seconds": 0.077484027,
+      "mean_ms": 0.12558189141004863,
+      "present_in_before": true,
+      "rows_examined": 0,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT `l` . `OBJECT_NAME` , `l` . `INDEX_NAME` , COUNT ( DISTINCTROW `w` . `REQUESTING_ENGINE_TRANSACTION_ID` ) AS `waiters` FROM `performance_schema` . `data_lock_waits` `w` JOIN `performance_schema` . `data_locks` `l` ON `w` . `REQUESTING_ENGINE_LOCK_ID` = `l` . `ENGINE_LOCK_ID` GROUP BY `l` . `OBJECT_NAME` , `l` . `INDEX_NAME`",
+      "count": 51,
+      "seconds": 0.015882373,
+      "mean_ms": 0.31141907843137256,
+      "present_in_before": false,
+      "rows_examined": 15,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SET NAMES `utf8mb4`",
+      "count": 162,
+      "seconds": 0.006881213,
+      "mean_ms": 0.04247662345679012,
+      "present_in_before": false,
+      "rows_examined": 0,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT COUNT ( * ) AS ACTIVE , MAX ( TIMESTAMPDIFF ( SQL_TSI_SECOND , `trx_started` , NOW ( ) ) ) AS `oldest_seconds` FROM `information_schema` . `innodb_trx`",
+      "count": 51,
+      "seconds": 0.006110126,
+      "mean_ms": 0.11980639215686274,
+      "present_in_before": false,
+      "rows_examined": 204,
+      "rows_affected": 0
+    },
+    {
+      "sql": "SELECT COUNT ( * ) AS `n` , MAX ( TIMESTAMPDIFF ( MICROSECOND , `started_at` , UTC_TIMESTAMP (?) ) / ? ) AS `oldest` FROM `attempts` WHERE `resolved_at` IS NULL",
+      "count": 51,
+      "seconds": 0.005143335,
+      "mean_ms": 0.10084970588235294,
+      "present_in_before": false,
+      "rows_examined": 0,
+      "rows_affected": 0
+    }
+  ],
+  "recovery": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null
+  },
+  "purchase_occupancy": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null
+  },
+  "occupancy_window": {
+    "cutoff": 1793357652.2987509,
+    "allocation_stock_seconds": 3496613.1028676033,
+    "payment_pending_stock_seconds": 0.0,
+    "censored_reservations": 53811,
+    "definition": "Measured cohort reservation created_at to min(terminal_at,observation end after bounded drain). Unresolved rows contribute elapsed time; fully resolved lifetime reported separately."
+  },
+  "resolved_allocation_stock_seconds": 0,
+  "payment_pending_seconds_sum": 0,
+  "user_final_latency": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null
+  },
+  "pg_calls_for_measured_transactions": {},
+  "measured_states": {
+    "HELD": 53811
+  },
+  "limitations": [
+    "Warmup excluded from transaction outcomes; process/DB cumulative cost includes warmup and gaps; compare identical plans.",
+    "Process cumulative CPU sampled first-to-last, misses edges; VM/kernel/control child processes not fully included.",
+    "PG global-unavailable responses are not logged per key by simulator; app call counters include attempts.",
+    "SQL digest top40 window; missing-before rows are flagged and may include prior history. Not a complete trace.",
+    "Purchase time is DB terminal_at; 202 is not purchase throughput; unresolved rows not counted as failed purchases."
+  ],
+  "innodb_metrics_delta": {
+    "lock_deadlocks": 0,
+    "lock_timeouts": 0,
+    "trx_rseg_history_len": -82,
+    "log_waits": 0
+  },
+  "transactions_delta": [
+    {
+      "event": "transaction",
+      "count": 58724,
+      "seconds": 566.639917615,
+      "present_in_before": true
+    }
+  ],
+  "waits_delta": [
+    {
+      "event": "idle",
+      "count": 1807292,
+      "seconds": 2391.791600837,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/sql/binlog",
+      "count": 82857,
+      "seconds": 49.480896469005,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/innodb/innodb_log_file",
+      "count": 221163,
+      "seconds": 42.918696721827,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/table/sql/handler",
+      "count": 840039,
+      "seconds": 12.917572173084,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/innodb/innodb_data_file",
+      "count": 37453,
+      "seconds": 1.49772323169,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/innodb/innodb_dblwr_file",
+      "count": 333,
+      "seconds": 0.335873478633,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/lock/table/sql/handler",
+      "count": 672654,
+      "seconds": 0.154204316958,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/innodb/innodb_temp_file",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/sql/binlog_index",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/sql/casetest",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/sql/ERRMSG",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/sql/misc",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/sql/pid",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/mysys/cnf",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/file/mysys/charset",
+      "count": 0,
+      "seconds": 0.0,
+      "present_in_before": true
+    },
+    {
+      "event": "wait/io/socket/sql/client_connection",
+      "count": 3619858,
+      "seconds": 0.0,
+      "present_in_before": true
+    }
+  ],
+  "cohort_definition": "Measured logical inputs joined to durable successful request_results, including committed reservations without a201 response. Deduplicated by reservation ID. HTTP success throughput remains response-based and is separately labeled.",
+  "effect_delay_groups": {},
+  "expiry_lag_seconds": {
+    "n": 0,
+    "p50": null,
+    "p95": null,
+    "p99": null,
+    "max": null
+  },
+  "expiry_backlog_timeline": [
+    {
+      "second": 0,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 5,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 10,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 15,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 20,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 25,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 30,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 35,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 40,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 45,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 50,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 55,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 60,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 65,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 70,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 75,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 80,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 85,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 90,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 95,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 100,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 105,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 110,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 115,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 120,
+      "held_past_expiry": 0
+    },
+    {
+      "second": 125,
+      "held_past_expiry": 0
+    }
+  ],
+  "expiry_definition": "Reconstructed from DB expiry/attempt-start/terminal timestamps; includes warmup. HELD past TTL until payment attempt or terminal. Not a live commit-instant sample. TTL expiration lag only EXPIRED reservations with no payment attempt."
+}

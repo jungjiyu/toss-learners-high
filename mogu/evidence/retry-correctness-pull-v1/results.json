@@ -1,0 +1,1401 @@
+{
+  "expected_old_defects": false,
+  "checks": [
+    {
+      "case": "terminal_conflict_binding_restart_matching",
+      "conflict": {
+        "id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+        "reservation_id": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+        "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc",
+        "order_id": "mogu_adba683804f54c19be26d34e0fb626e8",
+        "amount": 1000,
+        "currency": "KRW",
+        "merchant": "mogu-sim",
+        "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+        "intent": "CONTINUE",
+        "fact": "APPROVED",
+        "workflow": "REVIEW",
+        "review_reason": "POST_TERMINAL_FACT_CONFLICT",
+        "next_at": "2026-10-31 08:53:18.742725",
+        "lease_until": null,
+        "generation": 2,
+        "dirty": 1,
+        "rounds": 1,
+        "started_at": "2026-10-31 08:53:16.505440",
+        "resolved_at": "2026-10-31 08:53:16.601160",
+        "hint_after": null,
+        "review_hold_reason": "POST_TERMINAL_FACT_CONFLICT",
+        "review_hold_at": "2026-10-31 08:53:16.736719",
+        "review_hold_fact": "CANCELED_FINAL"
+      },
+      "binding_error": {
+        "id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+        "reservation_id": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+        "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc",
+        "order_id": "mogu_adba683804f54c19be26d34e0fb626e8",
+        "amount": 1000,
+        "currency": "KRW",
+        "merchant": "mogu-sim",
+        "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+        "intent": "CONTINUE",
+        "fact": "APPROVED",
+        "workflow": "REVIEW",
+        "review_reason": "POST_TERMINAL_FACT_CONFLICT",
+        "next_at": "2026-10-31 08:53:18.956281",
+        "lease_until": null,
+        "generation": 3,
+        "dirty": 2,
+        "rounds": 2,
+        "started_at": "2026-10-31 08:53:16.505440",
+        "resolved_at": "2026-10-31 08:53:16.601160",
+        "hint_after": null,
+        "review_hold_reason": "POST_TERMINAL_FACT_CONFLICT",
+        "review_hold_at": "2026-10-31 08:53:16.736719",
+        "review_hold_fact": "CANCELED_FINAL"
+      },
+      "after_restart_and_operator_query": {
+        "id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+        "reservation_id": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+        "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc",
+        "order_id": "mogu_adba683804f54c19be26d34e0fb626e8",
+        "amount": 1000,
+        "currency": "KRW",
+        "merchant": "mogu-sim",
+        "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+        "intent": "CONTINUE",
+        "fact": "APPROVED",
+        "workflow": "REVIEW",
+        "review_reason": "POST_TERMINAL_FACT_CONFLICT",
+        "next_at": "2026-10-31 08:53:21.169660",
+        "lease_until": null,
+        "generation": 5,
+        "dirty": 3,
+        "rounds": 4,
+        "started_at": "2026-10-31 08:53:16.505440",
+        "resolved_at": "2026-10-31 08:53:16.601160",
+        "hint_after": null,
+        "review_hold_reason": "POST_TERMINAL_FACT_CONFLICT",
+        "review_hold_at": "2026-10-31 08:53:16.736719",
+        "review_hold_fact": "CANCELED_FINAL"
+      },
+      "added_pg_calls": [
+        {
+          "at": 1793436796.7280571,
+          "id": 2,
+          "kind": "QUERY",
+          "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc"
+        },
+        {
+          "at": 1793436796.943358,
+          "id": 3,
+          "kind": "QUERY",
+          "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc"
+        },
+        {
+          "at": 1793436799.011701,
+          "id": 4,
+          "kind": "QUERY",
+          "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc"
+        },
+        {
+          "at": 1793436799.155214,
+          "id": 5,
+          "kind": "QUERY",
+          "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc"
+        }
+      ],
+      "reservation": {
+        "state": "PURCHASED",
+        "terminal_at": "2026-10-31 08:53:16.599829"
+      }
+    },
+    {
+      "case": "fractional_total",
+      "malformed_state": {
+        "state": "PAYMENT_PENDING",
+        "terminal_at": null
+      },
+      "malformed_attempt": {
+        "id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+        "reservation_id": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+        "payment_key": "sim_5389a210ccdb44e9869dca764f0f686b",
+        "order_id": "mogu_d55f343513e44a81b91067c4cf83303b",
+        "amount": 1000,
+        "currency": "KRW",
+        "merchant": "mogu-sim",
+        "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+        "intent": "CONTINUE",
+        "fact": "UNOBSERVED",
+        "workflow": "REVIEW",
+        "review_reason": "OBSERVATION_BINDING_OR_CONTRACT",
+        "next_at": "2026-10-31 08:53:21.880714",
+        "lease_until": null,
+        "generation": 2,
+        "dirty": 0,
+        "rounds": 2,
+        "started_at": "2026-10-31 08:53:19.295480",
+        "resolved_at": null,
+        "hint_after": null,
+        "review_hold_reason": null,
+        "review_hold_at": null,
+        "review_hold_fact": null
+      },
+      "malformed_snapshot": {
+        "sales": [
+          {
+            "id": 1793436796451655,
+            "capacity": 1,
+            "available": 1,
+            "price": 1000,
+            "currency": "KRW",
+            "opens_at": "2026-10-31 08:53:06.463645",
+            "closes_at": "2026-11-01 08:53:16.463645",
+            "bucket_count": 16
+          },
+          {
+            "id": 1793436799256853,
+            "capacity": 1,
+            "available": 1,
+            "price": 1000,
+            "currency": "KRW",
+            "opens_at": "2026-10-31 08:53:09.261632",
+            "closes_at": "2026-11-01 08:53:19.261632",
+            "bucket_count": 16
+          }
+        ],
+        "reservations": [
+          {
+            "id": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+            "sale_id": 1793436796451655,
+            "user_id": 2436796451655,
+            "state": "PURCHASED",
+            "reason": null,
+            "price": 1000,
+            "currency": "KRW",
+            "order_id": "mogu_adba683804f54c19be26d34e0fb626e8",
+            "created_at": "2026-10-31 08:53:16.489811",
+            "expires_at": "2026-10-31 08:55:16.489811",
+            "terminal_at": "2026-10-31 08:53:16.599829",
+            "original_bucket_id": 0
+          },
+          {
+            "id": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+            "sale_id": 1793436799256853,
+            "user_id": 2436799256848,
+            "state": "PAYMENT_PENDING",
+            "reason": null,
+            "price": 1000,
+            "currency": "KRW",
+            "order_id": "mogu_d55f343513e44a81b91067c4cf83303b",
+            "created_at": "2026-10-31 08:53:19.281965",
+            "expires_at": "2026-10-31 08:55:19.281965",
+            "terminal_at": null,
+            "original_bucket_id": 0
+          }
+        ],
+        "user_guard": [
+          {
+            "sale_id": 1793436796451655,
+            "user_id": 2436796451655,
+            "active_id": null,
+            "purchased_id": "adba6838-04f5-4c19-be26-d34e0fb626e8"
+          },
+          {
+            "sale_id": 1793436799256853,
+            "user_id": 2436799256848,
+            "active_id": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+            "purchased_id": null
+          }
+        ],
+        "attempts": [
+          {
+            "id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "reservation_id": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+            "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc",
+            "order_id": "mogu_adba683804f54c19be26d34e0fb626e8",
+            "amount": 1000,
+            "currency": "KRW",
+            "merchant": "mogu-sim",
+            "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+            "intent": "CONTINUE",
+            "fact": "APPROVED",
+            "workflow": "REVIEW",
+            "review_reason": "POST_TERMINAL_FACT_CONFLICT",
+            "next_at": "2026-10-31 08:53:21.169660",
+            "lease_until": null,
+            "generation": 5,
+            "dirty": 3,
+            "rounds": 4,
+            "started_at": "2026-10-31 08:53:16.505440",
+            "resolved_at": "2026-10-31 08:53:16.601160",
+            "hint_after": null,
+            "review_hold_reason": "POST_TERMINAL_FACT_CONFLICT",
+            "review_hold_at": "2026-10-31 08:53:16.736719",
+            "review_hold_fact": "CANCELED_FINAL"
+          },
+          {
+            "id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "reservation_id": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+            "payment_key": "sim_5389a210ccdb44e9869dca764f0f686b",
+            "order_id": "mogu_d55f343513e44a81b91067c4cf83303b",
+            "amount": 1000,
+            "currency": "KRW",
+            "merchant": "mogu-sim",
+            "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+            "intent": "CONTINUE",
+            "fact": "UNOBSERVED",
+            "workflow": "REVIEW",
+            "review_reason": "OBSERVATION_BINDING_OR_CONTRACT",
+            "next_at": "2026-10-31 08:53:21.880714",
+            "lease_until": null,
+            "generation": 2,
+            "dirty": 0,
+            "rounds": 2,
+            "started_at": "2026-10-31 08:53:19.295480",
+            "resolved_at": null,
+            "hint_after": null,
+            "review_hold_reason": null,
+            "review_hold_at": null,
+            "review_hold_fact": null
+          }
+        ],
+        "operations": [
+          {
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "kind": "CONFIRM",
+            "idem_key": "4db66483-c7f4-465c-a936-78ce600a6999",
+            "dispatch": "ARMED",
+            "armed_at": "2026-10-31 08:53:16.567380",
+            "calls": 1
+          },
+          {
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "kind": "CONFIRM",
+            "idem_key": "c891bdaf-5067-4663-96b9-37f75e180de8",
+            "dispatch": "ARMED",
+            "armed_at": "2026-10-31 08:53:19.318375",
+            "calls": 1
+          }
+        ],
+        "request_results": [
+          {
+            "principal": 2436796451655,
+            "operation": "pay",
+            "scope": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+            "idem_key": "daa4cdf9d4a246439ebfad70c20568b1",
+            "request_hash": "d27a071bc9841e7920f6f2e2146b818c72be5b74f862e240257276277422c3a7",
+            "http_status": 202,
+            "body": "{\"id\":\"adba6838-04f5-4c19-be26-d34e0fb626e8\",\"attemptId\":\"14bf6e92-5a0b-402b-b303-e25a718a308b\",\"code\":\"PAYMENT_PROCESSING\"}",
+            "created_at": "2026-10-31 08:53:16.501370"
+          },
+          {
+            "principal": 2436796451655,
+            "operation": "reserve",
+            "scope": "1793436796451655",
+            "idem_key": "3746393a7e1a4b63b4542ecccf85a571",
+            "request_hash": "60fc81f16fa90167afeffcf8bf4f20a720395d240c12d110db21229226369b80",
+            "http_status": 201,
+            "body": "{\"orderId\":\"mogu_adba683804f54c19be26d34e0fb626e8\",\"code\":\"RESERVED\",\"currency\":\"KRW\",\"amount\":1000,\"id\":\"adba6838-04f5-4c19-be26-d34e0fb626e8\"}",
+            "created_at": "2026-10-31 08:53:16.482836"
+          },
+          {
+            "principal": 2436799256848,
+            "operation": "pay",
+            "scope": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+            "idem_key": "59d775af91704cb3b2830d995cb42ac1",
+            "request_hash": "77a774b4699bdb9dc982f48372bc8216e43ae3e151f330cc7995f3b2928bb11e",
+            "http_status": 202,
+            "body": "{\"id\":\"d55f3435-13e4-4a81-b910-67c4cf83303b\",\"attemptId\":\"4fa961ca-750b-4d08-b0ee-80494e850dc6\",\"code\":\"PAYMENT_PROCESSING\"}",
+            "created_at": "2026-10-31 08:53:19.291893"
+          },
+          {
+            "principal": 2436799256848,
+            "operation": "reserve",
+            "scope": "1793436799256853",
+            "idem_key": "9e6291d5a7004b6eab863572da762885",
+            "request_hash": "60fc81f16fa90167afeffcf8bf4f20a720395d240c12d110db21229226369b80",
+            "http_status": 201,
+            "body": "{\"orderId\":\"mogu_d55f343513e44a81b91067c4cf83303b\",\"code\":\"RESERVED\",\"currency\":\"KRW\",\"amount\":1000,\"id\":\"d55f3435-13e4-4a81-b910-67c4cf83303b\"}",
+            "created_at": "2026-10-31 08:53:19.277648"
+          }
+        ],
+        "observations": [
+          {
+            "id": 1,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "CONFIRM",
+            "fact": "APPROVED",
+            "valid": 1,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:16.595837"
+          },
+          {
+            "id": 2,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "QUERY",
+            "fact": "CANCELED_FINAL",
+            "valid": 1,
+            "detail": "CANCELED",
+            "created_at": "2026-10-31 08:53:16.735110"
+          },
+          {
+            "id": 3,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "QUERY",
+            "fact": "APPROVED",
+            "valid": 0,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:16.949122"
+          },
+          {
+            "id": 4,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "QUERY",
+            "fact": "APPROVED",
+            "valid": 1,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:19.030356"
+          },
+          {
+            "id": 6,
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "source": "CONFIRM",
+            "fact": "UNOBSERVED",
+            "valid": 1,
+            "detail": "UNKNOWN",
+            "created_at": "2026-10-31 08:53:19.329087"
+          },
+          {
+            "id": 7,
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "source": "QUERY",
+            "fact": "APPROVED",
+            "valid": 0,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:19.871373"
+          }
+        ],
+        "inbox": [
+          {
+            "fingerprint": "171d98ac257ee807c4c25d11eb71aa86a1428327b8bdde2c409f5884e4327165",
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "body": "{\"data\":{\"mid\":\"mogu-sim\",\"orderId\":\"mogu_adba683804f54c19be26d34e0fb626e8\",\"paymentKey\":\"sim_e10ac599157441b5be9b67ddb789c5dc\",\"status\":\"DONE\"},\"eventId\":\"e4e778a257c7420a919bfaaded92e7ba\",\"eventType\":\"PAYMENT_STATUS_CHANGED\"}",
+            "processed": 1,
+            "received_at": "2026-10-31 08:53:16.804203"
+          },
+          {
+            "fingerprint": "6a3eb9e5698ee1c2593ec6b824da2ccb911e1f96f24f31a189552fefc10fb838",
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "body": "{\"data\":{\"mid\":\"mogu-sim\",\"orderId\":\"mogu_adba683804f54c19be26d34e0fb626e8\",\"paymentKey\":\"sim_e10ac599157441b5be9b67ddb789c5dc\",\"status\":\"DONE\"},\"eventId\":\"b16021a7ba1e4628ae9d8390eb6f1aeb\",\"eventType\":\"PAYMENT_STATUS_CHANGED\"}",
+            "processed": 1,
+            "received_at": "2026-10-31 08:53:16.680100"
+          }
+        ],
+        "budgets": [
+          {
+            "id": 1,
+            "pending": 1,
+            "inbox_count": 2,
+            "hint_after": null
+          }
+        ],
+        "inventory_buckets": [
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 0,
+            "quota": 1,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 1,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 2,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 3,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 4,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 5,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 6,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 7,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 8,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 9,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 10,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 11,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 12,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 13,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 14,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 15,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 0,
+            "quota": 1,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 1,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 2,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 3,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 4,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 5,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 6,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 7,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 8,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 9,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 10,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 11,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 12,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 13,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 14,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 15,
+            "quota": 0,
+            "available": 0
+          }
+        ]
+      },
+      "malformed_audit": {
+        "ok": true,
+        "errors": [],
+        "reservations": 2,
+        "attempts": 2,
+        "effects": 2,
+        "pending": 1
+      },
+      "recovered_state": {
+        "state": "PURCHASED",
+        "terminal_at": "2026-10-31 08:53:20.137627"
+      },
+      "calls": [
+        {
+          "at": 1793436799.323731,
+          "id": 6,
+          "kind": "CONFIRM",
+          "payment_key": "sim_5389a210ccdb44e9869dca764f0f686b"
+        },
+        {
+          "at": 1793436799.861613,
+          "id": 7,
+          "kind": "QUERY",
+          "payment_key": "sim_5389a210ccdb44e9869dca764f0f686b"
+        },
+        {
+          "at": 1793436800.1305861,
+          "id": 8,
+          "kind": "QUERY",
+          "payment_key": "sim_5389a210ccdb44e9869dca764f0f686b"
+        }
+      ]
+    },
+    {
+      "case": "fractional_cancel_balance",
+      "malformed_state": {
+        "state": "PAYMENT_PENDING",
+        "terminal_at": null
+      },
+      "malformed_attempt": {
+        "id": "7e986f96-610a-4024-a91b-fcf054589a77",
+        "reservation_id": "2279c2c6-6670-4916-9de2-4172560ae026",
+        "payment_key": "sim_ffa2d9dbb1254e5bb0a1c5032d8a436f",
+        "order_id": "mogu_2279c2c6667049169de24172560ae026",
+        "amount": 1000,
+        "currency": "KRW",
+        "merchant": "mogu-sim",
+        "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+        "intent": "CANCEL_REQUESTED",
+        "fact": "APPROVED",
+        "workflow": "REVIEW",
+        "review_reason": "OBSERVATION_BINDING_OR_CONTRACT",
+        "next_at": "2026-10-31 08:53:22.909918",
+        "lease_until": null,
+        "generation": 2,
+        "dirty": 1,
+        "rounds": 2,
+        "started_at": "2026-10-31 08:53:20.232596",
+        "resolved_at": null,
+        "hint_after": null,
+        "review_hold_reason": null,
+        "review_hold_at": null,
+        "review_hold_fact": null
+      },
+      "malformed_snapshot": {
+        "sales": [
+          {
+            "id": 1793436796451655,
+            "capacity": 1,
+            "available": 1,
+            "price": 1000,
+            "currency": "KRW",
+            "opens_at": "2026-10-31 08:53:06.463645",
+            "closes_at": "2026-11-01 08:53:16.463645",
+            "bucket_count": 16
+          },
+          {
+            "id": 1793436799256853,
+            "capacity": 1,
+            "available": 1,
+            "price": 1000,
+            "currency": "KRW",
+            "opens_at": "2026-10-31 08:53:09.261632",
+            "closes_at": "2026-11-01 08:53:19.261632",
+            "bucket_count": 16
+          },
+          {
+            "id": 1793436800194191,
+            "capacity": 1,
+            "available": 1,
+            "price": 1000,
+            "currency": "KRW",
+            "opens_at": "2026-10-31 08:53:10.196419",
+            "closes_at": "2026-11-01 08:53:20.196419",
+            "bucket_count": 16
+          }
+        ],
+        "reservations": [
+          {
+            "id": "2279c2c6-6670-4916-9de2-4172560ae026",
+            "sale_id": 1793436800194191,
+            "user_id": 2436800194189,
+            "state": "PAYMENT_PENDING",
+            "reason": null,
+            "price": 1000,
+            "currency": "KRW",
+            "order_id": "mogu_2279c2c6667049169de24172560ae026",
+            "created_at": "2026-10-31 08:53:20.215916",
+            "expires_at": "2026-10-31 08:55:20.215916",
+            "terminal_at": null,
+            "original_bucket_id": 0
+          },
+          {
+            "id": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+            "sale_id": 1793436796451655,
+            "user_id": 2436796451655,
+            "state": "PURCHASED",
+            "reason": null,
+            "price": 1000,
+            "currency": "KRW",
+            "order_id": "mogu_adba683804f54c19be26d34e0fb626e8",
+            "created_at": "2026-10-31 08:53:16.489811",
+            "expires_at": "2026-10-31 08:55:16.489811",
+            "terminal_at": "2026-10-31 08:53:16.599829",
+            "original_bucket_id": 0
+          },
+          {
+            "id": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+            "sale_id": 1793436799256853,
+            "user_id": 2436799256848,
+            "state": "PURCHASED",
+            "reason": null,
+            "price": 1000,
+            "currency": "KRW",
+            "order_id": "mogu_d55f343513e44a81b91067c4cf83303b",
+            "created_at": "2026-10-31 08:53:19.281965",
+            "expires_at": "2026-10-31 08:55:19.281965",
+            "terminal_at": "2026-10-31 08:53:20.137627",
+            "original_bucket_id": 0
+          }
+        ],
+        "user_guard": [
+          {
+            "sale_id": 1793436796451655,
+            "user_id": 2436796451655,
+            "active_id": null,
+            "purchased_id": "adba6838-04f5-4c19-be26-d34e0fb626e8"
+          },
+          {
+            "sale_id": 1793436799256853,
+            "user_id": 2436799256848,
+            "active_id": null,
+            "purchased_id": "d55f3435-13e4-4a81-b910-67c4cf83303b"
+          },
+          {
+            "sale_id": 1793436800194191,
+            "user_id": 2436800194189,
+            "active_id": "2279c2c6-6670-4916-9de2-4172560ae026",
+            "purchased_id": null
+          }
+        ],
+        "attempts": [
+          {
+            "id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "reservation_id": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+            "payment_key": "sim_e10ac599157441b5be9b67ddb789c5dc",
+            "order_id": "mogu_adba683804f54c19be26d34e0fb626e8",
+            "amount": 1000,
+            "currency": "KRW",
+            "merchant": "mogu-sim",
+            "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+            "intent": "CONTINUE",
+            "fact": "APPROVED",
+            "workflow": "REVIEW",
+            "review_reason": "POST_TERMINAL_FACT_CONFLICT",
+            "next_at": "2026-10-31 08:53:21.169660",
+            "lease_until": null,
+            "generation": 5,
+            "dirty": 3,
+            "rounds": 4,
+            "started_at": "2026-10-31 08:53:16.505440",
+            "resolved_at": "2026-10-31 08:53:16.601160",
+            "hint_after": null,
+            "review_hold_reason": "POST_TERMINAL_FACT_CONFLICT",
+            "review_hold_at": "2026-10-31 08:53:16.736719",
+            "review_hold_fact": "CANCELED_FINAL"
+          },
+          {
+            "id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "reservation_id": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+            "payment_key": "sim_5389a210ccdb44e9869dca764f0f686b",
+            "order_id": "mogu_d55f343513e44a81b91067c4cf83303b",
+            "amount": 1000,
+            "currency": "KRW",
+            "merchant": "mogu-sim",
+            "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+            "intent": "CONTINUE",
+            "fact": "APPROVED",
+            "workflow": "RESOLVED",
+            "review_reason": "OBSERVATION_BINDING_OR_CONTRACT",
+            "next_at": "2026-10-31 08:53:20.083959",
+            "lease_until": null,
+            "generation": 3,
+            "dirty": 1,
+            "rounds": 2,
+            "started_at": "2026-10-31 08:53:19.295480",
+            "resolved_at": "2026-10-31 08:53:20.138605",
+            "hint_after": null,
+            "review_hold_reason": null,
+            "review_hold_at": null,
+            "review_hold_fact": null
+          },
+          {
+            "id": "7e986f96-610a-4024-a91b-fcf054589a77",
+            "reservation_id": "2279c2c6-6670-4916-9de2-4172560ae026",
+            "payment_key": "sim_ffa2d9dbb1254e5bb0a1c5032d8a436f",
+            "order_id": "mogu_2279c2c6667049169de24172560ae026",
+            "amount": 1000,
+            "currency": "KRW",
+            "merchant": "mogu-sim",
+            "credential_scope": "ea7e2467c35e4745fe478c7875ddd10abb42add7022201aefdafa8be95b0286c",
+            "intent": "CANCEL_REQUESTED",
+            "fact": "APPROVED",
+            "workflow": "REVIEW",
+            "review_reason": "OBSERVATION_BINDING_OR_CONTRACT",
+            "next_at": "2026-10-31 08:53:22.909918",
+            "lease_until": null,
+            "generation": 2,
+            "dirty": 1,
+            "rounds": 2,
+            "started_at": "2026-10-31 08:53:20.232596",
+            "resolved_at": null,
+            "hint_after": null,
+            "review_hold_reason": null,
+            "review_hold_at": null,
+            "review_hold_fact": null
+          }
+        ],
+        "operations": [
+          {
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "kind": "CONFIRM",
+            "idem_key": "4db66483-c7f4-465c-a936-78ce600a6999",
+            "dispatch": "ARMED",
+            "armed_at": "2026-10-31 08:53:16.567380",
+            "calls": 1
+          },
+          {
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "kind": "CONFIRM",
+            "idem_key": "c891bdaf-5067-4663-96b9-37f75e180de8",
+            "dispatch": "ARMED",
+            "armed_at": "2026-10-31 08:53:19.318375",
+            "calls": 1
+          },
+          {
+            "attempt_id": "7e986f96-610a-4024-a91b-fcf054589a77",
+            "kind": "CANCEL",
+            "idem_key": "4fb6c5da-38a7-40ac-9c2a-4ef95ce488bb",
+            "dispatch": "ARMED",
+            "armed_at": "2026-10-31 08:53:20.319211",
+            "calls": 2
+          },
+          {
+            "attempt_id": "7e986f96-610a-4024-a91b-fcf054589a77",
+            "kind": "CONFIRM",
+            "idem_key": "13a95281-57d2-4d94-bcb6-277e8696f50b",
+            "dispatch": "ARMED",
+            "armed_at": "2026-10-31 08:53:20.288754",
+            "calls": 1
+          }
+        ],
+        "request_results": [
+          {
+            "principal": 2436796451655,
+            "operation": "pay",
+            "scope": "adba6838-04f5-4c19-be26-d34e0fb626e8",
+            "idem_key": "daa4cdf9d4a246439ebfad70c20568b1",
+            "request_hash": "d27a071bc9841e7920f6f2e2146b818c72be5b74f862e240257276277422c3a7",
+            "http_status": 202,
+            "body": "{\"id\":\"adba6838-04f5-4c19-be26-d34e0fb626e8\",\"attemptId\":\"14bf6e92-5a0b-402b-b303-e25a718a308b\",\"code\":\"PAYMENT_PROCESSING\"}",
+            "created_at": "2026-10-31 08:53:16.501370"
+          },
+          {
+            "principal": 2436796451655,
+            "operation": "reserve",
+            "scope": "1793436796451655",
+            "idem_key": "3746393a7e1a4b63b4542ecccf85a571",
+            "request_hash": "60fc81f16fa90167afeffcf8bf4f20a720395d240c12d110db21229226369b80",
+            "http_status": 201,
+            "body": "{\"orderId\":\"mogu_adba683804f54c19be26d34e0fb626e8\",\"code\":\"RESERVED\",\"currency\":\"KRW\",\"amount\":1000,\"id\":\"adba6838-04f5-4c19-be26-d34e0fb626e8\"}",
+            "created_at": "2026-10-31 08:53:16.482836"
+          },
+          {
+            "principal": 2436799256848,
+            "operation": "pay",
+            "scope": "d55f3435-13e4-4a81-b910-67c4cf83303b",
+            "idem_key": "59d775af91704cb3b2830d995cb42ac1",
+            "request_hash": "77a774b4699bdb9dc982f48372bc8216e43ae3e151f330cc7995f3b2928bb11e",
+            "http_status": 202,
+            "body": "{\"id\":\"d55f3435-13e4-4a81-b910-67c4cf83303b\",\"attemptId\":\"4fa961ca-750b-4d08-b0ee-80494e850dc6\",\"code\":\"PAYMENT_PROCESSING\"}",
+            "created_at": "2026-10-31 08:53:19.291893"
+          },
+          {
+            "principal": 2436799256848,
+            "operation": "reserve",
+            "scope": "1793436799256853",
+            "idem_key": "9e6291d5a7004b6eab863572da762885",
+            "request_hash": "60fc81f16fa90167afeffcf8bf4f20a720395d240c12d110db21229226369b80",
+            "http_status": 201,
+            "body": "{\"orderId\":\"mogu_d55f343513e44a81b91067c4cf83303b\",\"code\":\"RESERVED\",\"currency\":\"KRW\",\"amount\":1000,\"id\":\"d55f3435-13e4-4a81-b910-67c4cf83303b\"}",
+            "created_at": "2026-10-31 08:53:19.277648"
+          },
+          {
+            "principal": 2436800194189,
+            "operation": "cancel",
+            "scope": "2279c2c6-6670-4916-9de2-4172560ae026",
+            "idem_key": "d017eeef5c9b46bda376d0b9f93391a1",
+            "request_hash": "0a08421cbdd59ae765754c87ea05449e5d2e51e839a0db845d7535acfe91309b",
+            "http_status": 202,
+            "body": "{\"code\":\"CANCEL_REQUESTED\"}",
+            "created_at": "2026-10-31 08:53:20.297717"
+          },
+          {
+            "principal": 2436800194189,
+            "operation": "pay",
+            "scope": "2279c2c6-6670-4916-9de2-4172560ae026",
+            "idem_key": "27f14a3642b141759cad37259c472cff",
+            "request_hash": "958d49d3bd2a400bf0ad7e06ec79c427616c34899404688956acf6ca70b9d78a",
+            "http_status": 202,
+            "body": "{\"id\":\"2279c2c6-6670-4916-9de2-4172560ae026\",\"attemptId\":\"7e986f96-610a-4024-a91b-fcf054589a77\",\"code\":\"PAYMENT_PROCESSING\"}",
+            "created_at": "2026-10-31 08:53:20.228974"
+          },
+          {
+            "principal": 2436800194189,
+            "operation": "reserve",
+            "scope": "1793436800194191",
+            "idem_key": "f01c37fd64bc4ffcbf273729fba75247",
+            "request_hash": "60fc81f16fa90167afeffcf8bf4f20a720395d240c12d110db21229226369b80",
+            "http_status": 201,
+            "body": "{\"orderId\":\"mogu_2279c2c6667049169de24172560ae026\",\"code\":\"RESERVED\",\"currency\":\"KRW\",\"amount\":1000,\"id\":\"2279c2c6-6670-4916-9de2-4172560ae026\"}",
+            "created_at": "2026-10-31 08:53:20.210422"
+          }
+        ],
+        "observations": [
+          {
+            "id": 1,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "CONFIRM",
+            "fact": "APPROVED",
+            "valid": 1,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:16.595837"
+          },
+          {
+            "id": 2,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "QUERY",
+            "fact": "CANCELED_FINAL",
+            "valid": 1,
+            "detail": "CANCELED",
+            "created_at": "2026-10-31 08:53:16.735110"
+          },
+          {
+            "id": 3,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "QUERY",
+            "fact": "APPROVED",
+            "valid": 0,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:16.949122"
+          },
+          {
+            "id": 4,
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "source": "QUERY",
+            "fact": "APPROVED",
+            "valid": 1,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:19.030356"
+          },
+          {
+            "id": 6,
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "source": "CONFIRM",
+            "fact": "UNOBSERVED",
+            "valid": 1,
+            "detail": "UNKNOWN",
+            "created_at": "2026-10-31 08:53:19.329087"
+          },
+          {
+            "id": 7,
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "source": "QUERY",
+            "fact": "APPROVED",
+            "valid": 0,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:19.871373"
+          },
+          {
+            "id": 8,
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "source": "QUERY",
+            "fact": "APPROVED",
+            "valid": 1,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:20.135957"
+          },
+          {
+            "id": 9,
+            "attempt_id": "7e986f96-610a-4024-a91b-fcf054589a77",
+            "source": "CONFIRM",
+            "fact": "APPROVED",
+            "valid": 1,
+            "detail": "DONE",
+            "created_at": "2026-10-31 08:53:20.313258"
+          },
+          {
+            "id": 10,
+            "attempt_id": "7e986f96-610a-4024-a91b-fcf054589a77",
+            "source": "CANCEL",
+            "fact": "UNOBSERVED",
+            "valid": 1,
+            "detail": "UNKNOWN",
+            "created_at": "2026-10-31 08:53:20.329395"
+          },
+          {
+            "id": 11,
+            "attempt_id": "7e986f96-610a-4024-a91b-fcf054589a77",
+            "source": "QUERY",
+            "fact": "CANCELED_FINAL",
+            "valid": 0,
+            "detail": "CANCELED",
+            "created_at": "2026-10-31 08:53:20.884699"
+          }
+        ],
+        "inbox": [
+          {
+            "fingerprint": "171d98ac257ee807c4c25d11eb71aa86a1428327b8bdde2c409f5884e4327165",
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "body": "{\"data\":{\"mid\":\"mogu-sim\",\"orderId\":\"mogu_adba683804f54c19be26d34e0fb626e8\",\"paymentKey\":\"sim_e10ac599157441b5be9b67ddb789c5dc\",\"status\":\"DONE\"},\"eventId\":\"e4e778a257c7420a919bfaaded92e7ba\",\"eventType\":\"PAYMENT_STATUS_CHANGED\"}",
+            "processed": 1,
+            "received_at": "2026-10-31 08:53:16.804203"
+          },
+          {
+            "fingerprint": "6a3eb9e5698ee1c2593ec6b824da2ccb911e1f96f24f31a189552fefc10fb838",
+            "attempt_id": "14bf6e92-5a0b-402b-b303-e25a718a308b",
+            "body": "{\"data\":{\"mid\":\"mogu-sim\",\"orderId\":\"mogu_adba683804f54c19be26d34e0fb626e8\",\"paymentKey\":\"sim_e10ac599157441b5be9b67ddb789c5dc\",\"status\":\"DONE\"},\"eventId\":\"b16021a7ba1e4628ae9d8390eb6f1aeb\",\"eventType\":\"PAYMENT_STATUS_CHANGED\"}",
+            "processed": 1,
+            "received_at": "2026-10-31 08:53:16.680100"
+          },
+          {
+            "fingerprint": "90e8790ff3d9f443f8f6ec65c096bb009f2a1df28141ff2c9e4b495b8b1c5caf",
+            "attempt_id": "4fa961ca-750b-4d08-b0ee-80494e850dc6",
+            "body": "{\"data\":{\"mid\":\"mogu-sim\",\"orderId\":\"mogu_d55f343513e44a81b91067c4cf83303b\",\"paymentKey\":\"sim_5389a210ccdb44e9869dca764f0f686b\",\"status\":\"DONE\"},\"eventId\":\"f7a4ef7bb9d349c48ca56cf90008b768\",\"eventType\":\"PAYMENT_STATUS_CHANGED\"}",
+            "processed": 1,
+            "received_at": "2026-10-31 08:53:19.982856"
+          }
+        ],
+        "budgets": [
+          {
+            "id": 1,
+            "pending": 1,
+            "inbox_count": 3,
+            "hint_after": null
+          }
+        ],
+        "inventory_buckets": [
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 0,
+            "quota": 1,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 1,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 2,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 3,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 4,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 5,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 6,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 7,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 8,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 9,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 10,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 11,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 12,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 13,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 14,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436796451655,
+            "bucket_id": 15,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 0,
+            "quota": 1,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 1,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 2,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 3,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 4,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 5,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 6,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 7,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 8,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 9,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 10,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 11,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 12,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 13,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 14,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436799256853,
+            "bucket_id": 15,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 0,
+            "quota": 1,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 1,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 2,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 3,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 4,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 5,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 6,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 7,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 8,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 9,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 10,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 11,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 12,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 13,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 14,
+            "quota": 0,
+            "available": 0
+          },
+          {
+            "sale_id": 1793436800194191,
+            "bucket_id": 15,
+            "quota": 0,
+            "available": 0
+          }
+        ]
+      },
+      "malformed_audit": {
+        "ok": true,
+        "errors": [],
+        "reservations": 3,
+        "attempts": 3,
+        "effects": 4,
+        "pending": 1
+      },
+      "recovered_state": {
+        "state": "CANCELLED",
+        "terminal_at": "2026-10-31 08:53:21.159912"
+      },
+      "calls": [
+        {
+          "at": 1793436800.306407,
+          "id": 9,
+          "kind": "CONFIRM",
+          "payment_key": "sim_ffa2d9dbb1254e5bb0a1c5032d8a436f"
+        },
+        {
+          "at": 1793436800.3222048,
+          "id": 10,
+          "kind": "CANCEL",
+          "payment_key": "sim_ffa2d9dbb1254e5bb0a1c5032d8a436f"
+        },
+        {
+          "at": 1793436800.877769,
+          "id": 11,
+          "kind": "QUERY",
+          "payment_key": "sim_ffa2d9dbb1254e5bb0a1c5032d8a436f"
+        },
+        {
+          "at": 1793436800.896802,
+          "id": 12,
+          "kind": "CANCEL",
+          "payment_key": "sim_ffa2d9dbb1254e5bb0a1c5032d8a436f"
+        },
+        {
+          "at": 1793436801.150839,
+          "id": 13,
+          "kind": "QUERY",
+          "payment_key": "sim_ffa2d9dbb1254e5bb0a1c5032d8a436f"
+        }
+      ]
+    }
+  ]
+}

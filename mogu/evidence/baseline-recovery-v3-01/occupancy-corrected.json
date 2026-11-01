@@ -1,0 +1,913 @@
+{
+  "definition": "Unresolved stock occupancy: reservation DB created_at to terminal_at; purchased stock remains consumed after this interval. Measured rows only; warmup excluded. UTC microsecond timestamps.",
+  "unit": "item.seconds",
+  "source_sha256": {
+    "db.json": "d9ee178a93ba400e8af1e5d8c19b67cf9b097c099aae7d7646c59a67da3d750c",
+    "results.json": "3c12f59d2bd64d9d0b38a9a010044ab00d4d67fd02845361699f9f373986677e"
+  },
+  "original_stock_seconds": 160.00061893463135,
+  "allocation_stock_seconds": 161.4500617980957,
+  "pending_stock_seconds": 160.39217352867126,
+  "rows": [
+    {
+      "id": "881db021-7f7b-4a0a-811f-e2a5fdce1353",
+      "reserved_at": 1793348126.553636,
+      "payment_started_at": 1793348126.565582,
+      "terminal_at": 1793348127.202795,
+      "allocation_to_resolution_seconds": 0.6491589546203613,
+      "payment_pending_seconds": 0.6372129917144775,
+      "accepted_response_to_resolution_seconds": 0.6317770481109619
+    },
+    {
+      "id": "a95e0ccc-fa21-4f7f-9b76-bee8da722c63",
+      "reserved_at": 1793348126.652998,
+      "payment_started_at": 1793348126.663934,
+      "terminal_at": 1793348127.221242,
+      "allocation_to_resolution_seconds": 0.5682439804077148,
+      "payment_pending_seconds": 0.5573079586029053,
+      "accepted_response_to_resolution_seconds": 0.5527520179748535
+    },
+    {
+      "id": "c71ba1c9-5c41-40b6-9e17-f114ae1e3804",
+      "reserved_at": 1793348126.755414,
+      "payment_started_at": 1793348126.768197,
+      "terminal_at": 1793348128.357796,
+      "allocation_to_resolution_seconds": 1.602381944656372,
+      "payment_pending_seconds": 1.5895988941192627,
+      "accepted_response_to_resolution_seconds": 1.5855610370635986
+    },
+    {
+      "id": "9b5fbde0-c662-4105-a87a-78ccbb6b21cb",
+      "reserved_at": 1793348126.852342,
+      "payment_started_at": 1793348126.863654,
+      "terminal_at": 1793348128.480726,
+      "allocation_to_resolution_seconds": 1.6283841133117676,
+      "payment_pending_seconds": 1.6170721054077148,
+      "accepted_response_to_resolution_seconds": 1.6131279468536377
+    },
+    {
+      "id": "3a10333e-ee36-4eeb-bc77-e6001460bc59",
+      "reserved_at": 1793348126.951703,
+      "payment_started_at": 1793348126.96301,
+      "terminal_at": 1793348128.606399,
+      "allocation_to_resolution_seconds": 1.654695987701416,
+      "payment_pending_seconds": 1.6433889865875244,
+      "accepted_response_to_resolution_seconds": 1.6394400596618652
+    },
+    {
+      "id": "db2a3e1e-c155-479c-afbb-2aac8e419119",
+      "reserved_at": 1793348127.055377,
+      "payment_started_at": 1793348127.067475,
+      "terminal_at": 1793348128.662229,
+      "allocation_to_resolution_seconds": 1.6068520545959473,
+      "payment_pending_seconds": 1.5947539806365967,
+      "accepted_response_to_resolution_seconds": 1.5905530452728271
+    },
+    {
+      "id": "0adedbe3-22e0-4b35-997b-d70bdc60087b",
+      "reserved_at": 1793348127.15617,
+      "payment_started_at": 1793348127.168668,
+      "terminal_at": 1793348128.836694,
+      "allocation_to_resolution_seconds": 1.6805241107940674,
+      "payment_pending_seconds": 1.6680259704589844,
+      "accepted_response_to_resolution_seconds": 1.6639809608459473
+    },
+    {
+      "id": "1c4e7358-604e-416b-a0f9-d67295bd23d8",
+      "reserved_at": 1793348127.250512,
+      "payment_started_at": 1793348127.259811,
+      "terminal_at": 1793348131.000103,
+      "allocation_to_resolution_seconds": 3.749591112136841,
+      "payment_pending_seconds": 3.7402920722961426,
+      "accepted_response_to_resolution_seconds": 3.7354049682617188
+    },
+    {
+      "id": "04eff1f8-5acc-41d4-90ee-c68b3f87e008",
+      "reserved_at": 1793348127.351515,
+      "payment_started_at": 1793348127.361666,
+      "terminal_at": 1793348127.954769,
+      "allocation_to_resolution_seconds": 0.6032538414001465,
+      "payment_pending_seconds": 0.5931029319763184,
+      "accepted_response_to_resolution_seconds": 0.5896830558776855
+    },
+    {
+      "id": "443faf68-fc02-4768-a963-8da5080168fb",
+      "reserved_at": 1793348127.451307,
+      "payment_started_at": 1793348127.463414,
+      "terminal_at": 1793348128.069695,
+      "allocation_to_resolution_seconds": 0.6183879375457764,
+      "payment_pending_seconds": 0.606281042098999,
+      "accepted_response_to_resolution_seconds": 0.6019887924194336
+    },
+    {
+      "id": "42d6bd0f-3744-48ae-8481-ef93ca38aa39",
+      "reserved_at": 1793348127.551675,
+      "payment_started_at": 1793348127.56448,
+      "terminal_at": 1793348129.188777,
+      "allocation_to_resolution_seconds": 1.6371018886566162,
+      "payment_pending_seconds": 1.6242969036102295,
+      "accepted_response_to_resolution_seconds": 1.6203038692474365
+    },
+    {
+      "id": "d06063c8-eeb5-431b-b64d-37e5b7a81203",
+      "reserved_at": 1793348127.654457,
+      "payment_started_at": 1793348127.664859,
+      "terminal_at": 1793348129.310482,
+      "allocation_to_resolution_seconds": 1.6560249328613281,
+      "payment_pending_seconds": 1.645622968673706,
+      "accepted_response_to_resolution_seconds": 1.6414790153503418
+    },
+    {
+      "id": "547c87bc-838f-46fb-aadc-32970b5763af",
+      "reserved_at": 1793348127.755425,
+      "payment_started_at": 1793348127.766968,
+      "terminal_at": 1793348129.37904,
+      "allocation_to_resolution_seconds": 1.623615026473999,
+      "payment_pending_seconds": 1.6120719909667969,
+      "accepted_response_to_resolution_seconds": 1.607607126235962
+    },
+    {
+      "id": "0fdeeaee-7309-4bcb-bf1a-28131f0b949a",
+      "reserved_at": 1793348127.852218,
+      "payment_started_at": 1793348127.863681,
+      "terminal_at": 1793348129.493227,
+      "allocation_to_resolution_seconds": 1.6410090923309326,
+      "payment_pending_seconds": 1.6295459270477295,
+      "accepted_response_to_resolution_seconds": 1.6256370544433594
+    },
+    {
+      "id": "5d69fbd7-9c71-4439-a7f8-372d552eb180",
+      "reserved_at": 1793348127.954094,
+      "payment_started_at": 1793348127.966899,
+      "terminal_at": 1793348129.613585,
+      "allocation_to_resolution_seconds": 1.6594910621643066,
+      "payment_pending_seconds": 1.64668607711792,
+      "accepted_response_to_resolution_seconds": 1.6429851055145264
+    },
+    {
+      "id": "9e9a8f74-22cc-4f37-af3f-f5ad89bf8ae4",
+      "reserved_at": 1793348128.05605,
+      "payment_started_at": 1793348128.066628,
+      "terminal_at": 1793348131.772732,
+      "allocation_to_resolution_seconds": 3.716681957244873,
+      "payment_pending_seconds": 3.706104040145874,
+      "accepted_response_to_resolution_seconds": 3.7009711265563965
+    },
+    {
+      "id": "f7c43ae0-0ec6-4a0d-96bb-1487604324c4",
+      "reserved_at": 1793348128.151758,
+      "payment_started_at": 1793348128.160646,
+      "terminal_at": 1793348128.726722,
+      "allocation_to_resolution_seconds": 0.5749640464782715,
+      "payment_pending_seconds": 0.5660760402679443,
+      "accepted_response_to_resolution_seconds": 0.5627219676971436
+    },
+    {
+      "id": "c69eded6-204d-4279-b9f6-f7f9bdf06646",
+      "reserved_at": 1793348128.255992,
+      "payment_started_at": 1793348128.267801,
+      "terminal_at": 1793348128.83821,
+      "allocation_to_resolution_seconds": 0.5822181701660156,
+      "payment_pending_seconds": 0.5704090595245361,
+      "accepted_response_to_resolution_seconds": 0.5667541027069092
+    },
+    {
+      "id": "cc6eb38e-f718-48c3-b0df-372d7abab379",
+      "reserved_at": 1793348128.350468,
+      "payment_started_at": 1793348128.360382,
+      "terminal_at": 1793348130.030585,
+      "allocation_to_resolution_seconds": 1.680117130279541,
+      "payment_pending_seconds": 1.6702029705047607,
+      "accepted_response_to_resolution_seconds": 1.6664409637451172
+    },
+    {
+      "id": "db8c0233-da2f-44d5-89d5-095ae710fde5",
+      "reserved_at": 1793348128.453007,
+      "payment_started_at": 1793348128.465162,
+      "terminal_at": 1793348130.09799,
+      "allocation_to_resolution_seconds": 1.6449830532073975,
+      "payment_pending_seconds": 1.6328279972076416,
+      "accepted_response_to_resolution_seconds": 1.6289730072021484
+    },
+    {
+      "id": "aee312ab-72b8-42bf-97e7-4fb36b9b08d2",
+      "reserved_at": 1793348128.552768,
+      "payment_started_at": 1793348128.562591,
+      "terminal_at": 1793348130.15709,
+      "allocation_to_resolution_seconds": 1.6043219566345215,
+      "payment_pending_seconds": 1.594498872756958,
+      "accepted_response_to_resolution_seconds": 1.5911920070648193
+    },
+    {
+      "id": "b96f9ed5-fed7-4a32-a3a8-778e9cd2ddf1",
+      "reserved_at": 1793348128.654451,
+      "payment_started_at": 1793348128.66567,
+      "terminal_at": 1793348130.275957,
+      "allocation_to_resolution_seconds": 1.6215062141418457,
+      "payment_pending_seconds": 1.6102871894836426,
+      "accepted_response_to_resolution_seconds": 1.6053881645202637
+    },
+    {
+      "id": "44f0bf2a-dc95-4f1d-9de2-d5c2b609149a",
+      "reserved_at": 1793348128.75039,
+      "payment_started_at": 1793348128.760189,
+      "terminal_at": 1793348130.393203,
+      "allocation_to_resolution_seconds": 1.642812967300415,
+      "payment_pending_seconds": 1.6330139636993408,
+      "accepted_response_to_resolution_seconds": 1.6296699047088623
+    },
+    {
+      "id": "a6165507-15ce-43a4-afb6-38bd0418a97f",
+      "reserved_at": 1793348128.851037,
+      "payment_started_at": 1793348128.860335,
+      "terminal_at": 1793348132.548828,
+      "allocation_to_resolution_seconds": 3.6977908611297607,
+      "payment_pending_seconds": 3.688492774963379,
+      "accepted_response_to_resolution_seconds": 3.6850318908691406
+    },
+    {
+      "id": "f1410812-b824-48db-aa31-cd60faa7d8b8",
+      "reserved_at": 1793348128.954952,
+      "payment_started_at": 1793348128.969304,
+      "terminal_at": 1793348129.554316,
+      "allocation_to_resolution_seconds": 0.5993640422821045,
+      "payment_pending_seconds": 0.5850119590759277,
+      "accepted_response_to_resolution_seconds": 0.579761266708374
+    },
+    {
+      "id": "3fc42860-8a80-44ac-9248-327b5935db7f",
+      "reserved_at": 1793348129.057138,
+      "payment_started_at": 1793348129.068301,
+      "terminal_at": 1793348129.676799,
+      "allocation_to_resolution_seconds": 0.6196610927581787,
+      "payment_pending_seconds": 0.6084980964660645,
+      "accepted_response_to_resolution_seconds": 0.6047618389129639
+    },
+    {
+      "id": "cc8c77b7-c2a9-48a2-965a-47ba884f4e04",
+      "reserved_at": 1793348129.152777,
+      "payment_started_at": 1793348129.161625,
+      "terminal_at": 1793348130.811651,
+      "allocation_to_resolution_seconds": 1.6588740348815918,
+      "payment_pending_seconds": 1.6500260829925537,
+      "accepted_response_to_resolution_seconds": 1.646953821182251
+    },
+    {
+      "id": "29812ce2-c3f4-4109-b685-329fda0d645b",
+      "reserved_at": 1793348129.252755,
+      "payment_started_at": 1793348129.265364,
+      "terminal_at": 1793348130.877111,
+      "allocation_to_resolution_seconds": 1.6243560314178467,
+      "payment_pending_seconds": 1.6117470264434814,
+      "accepted_response_to_resolution_seconds": 1.6075727939605713
+    },
+    {
+      "id": "76e2a9fe-8539-4cad-81fa-a20726d6223e",
+      "reserved_at": 1793348129.35387,
+      "payment_started_at": 1793348129.364038,
+      "terminal_at": 1793348130.93904,
+      "allocation_to_resolution_seconds": 1.585170030593872,
+      "payment_pending_seconds": 1.5750019550323486,
+      "accepted_response_to_resolution_seconds": 1.5712838172912598
+    },
+    {
+      "id": "9c9bbd5d-4bc9-4aa1-bef3-96d449529216",
+      "reserved_at": 1793348129.451176,
+      "payment_started_at": 1793348129.461991,
+      "terminal_at": 1793348131.062338,
+      "allocation_to_resolution_seconds": 1.6111621856689453,
+      "payment_pending_seconds": 1.6003470420837402,
+      "accepted_response_to_resolution_seconds": 1.596879243850708
+    },
+    {
+      "id": "6fa992c4-5305-436e-aa41-26ae5cdc0ded",
+      "reserved_at": 1793348129.554599,
+      "payment_started_at": 1793348129.566099,
+      "terminal_at": 1793348131.1842,
+      "allocation_to_resolution_seconds": 1.629601001739502,
+      "payment_pending_seconds": 1.6181011199951172,
+      "accepted_response_to_resolution_seconds": 1.614603042602539
+    },
+    {
+      "id": "6079496e-c8af-40b7-a2d9-286a8795c123",
+      "reserved_at": 1793348129.654501,
+      "payment_started_at": 1793348129.663885,
+      "terminal_at": 1793348133.323984,
+      "allocation_to_resolution_seconds": 3.669482946395874,
+      "payment_pending_seconds": 3.6600987911224365,
+      "accepted_response_to_resolution_seconds": 3.656287670135498
+    },
+    {
+      "id": "042d24cf-e58b-4be1-bec9-0474cd430130",
+      "reserved_at": 1793348129.754101,
+      "payment_started_at": 1793348129.764839,
+      "terminal_at": 1793348130.333437,
+      "allocation_to_resolution_seconds": 0.5793359279632568,
+      "payment_pending_seconds": 0.5685980319976807,
+      "accepted_response_to_resolution_seconds": 0.5652530193328857
+    },
+    {
+      "id": "d905abc2-01ab-4e6c-8366-fd06add10d4c",
+      "reserved_at": 1793348129.85468,
+      "payment_started_at": 1793348129.865589,
+      "terminal_at": 1793348130.452651,
+      "allocation_to_resolution_seconds": 0.5979709625244141,
+      "payment_pending_seconds": 0.5870621204376221,
+      "accepted_response_to_resolution_seconds": 0.5833179950714111
+    },
+    {
+      "id": "3154f63e-293e-4d48-a15a-3cdbbf38a249",
+      "reserved_at": 1793348129.954106,
+      "payment_started_at": 1793348129.964696,
+      "terminal_at": 1793348131.652527,
+      "allocation_to_resolution_seconds": 1.6984210014343262,
+      "payment_pending_seconds": 1.687831163406372,
+      "accepted_response_to_resolution_seconds": 1.6843252182006836
+    },
+    {
+      "id": "d9463d15-1af9-4eb3-ad76-a29303668954",
+      "reserved_at": 1793348130.052925,
+      "payment_started_at": 1793348130.064404,
+      "terminal_at": 1793348131.659368,
+      "allocation_to_resolution_seconds": 1.606442928314209,
+      "payment_pending_seconds": 1.5949640274047852,
+      "accepted_response_to_resolution_seconds": 1.591597080230713
+    },
+    {
+      "id": "5fb5f770-292e-41e8-b31f-e2b3c279ac25",
+      "reserved_at": 1793348130.151353,
+      "payment_started_at": 1793348130.162393,
+      "terminal_at": 1793348131.837154,
+      "allocation_to_resolution_seconds": 1.6858010292053223,
+      "payment_pending_seconds": 1.6747608184814453,
+      "accepted_response_to_resolution_seconds": 1.6708331108093262
+    },
+    {
+      "id": "d6084df5-a914-4885-b7c6-38b02547a9f5",
+      "reserved_at": 1793348130.251312,
+      "payment_started_at": 1793348130.262188,
+      "terminal_at": 1793348131.841347,
+      "allocation_to_resolution_seconds": 1.5900349617004395,
+      "payment_pending_seconds": 1.5791590213775635,
+      "accepted_response_to_resolution_seconds": 1.5755817890167236
+    },
+    {
+      "id": "4748ff84-082a-495b-8c65-a021ef17e1a1",
+      "reserved_at": 1793348130.35318,
+      "payment_started_at": 1793348130.36337,
+      "terminal_at": 1793348132.01298,
+      "allocation_to_resolution_seconds": 1.6598000526428223,
+      "payment_pending_seconds": 1.6496100425720215,
+      "accepted_response_to_resolution_seconds": 1.6451389789581299
+    },
+    {
+      "id": "4d08c80c-319c-4efa-960f-cd56780856c8",
+      "reserved_at": 1793348130.454104,
+      "payment_started_at": 1793348130.463876,
+      "terminal_at": 1793348134.192275,
+      "allocation_to_resolution_seconds": 3.738171100616455,
+      "payment_pending_seconds": 3.7283990383148193,
+      "accepted_response_to_resolution_seconds": 3.7236011028289795
+    },
+    {
+      "id": "3145a98b-e362-4538-8c08-8334d3e43ad8",
+      "reserved_at": 1793348130.553914,
+      "payment_started_at": 1793348130.563365,
+      "terminal_at": 1793348131.124549,
+      "allocation_to_resolution_seconds": 0.5706348419189453,
+      "payment_pending_seconds": 0.5611839294433594,
+      "accepted_response_to_resolution_seconds": 0.5565547943115234
+    },
+    {
+      "id": "dac5c4a8-b7e5-4ae9-a386-9f1fada52073",
+      "reserved_at": 1793348130.656251,
+      "payment_started_at": 1793348130.666137,
+      "terminal_at": 1793348131.244795,
+      "allocation_to_resolution_seconds": 0.5885441303253174,
+      "payment_pending_seconds": 0.5786581039428711,
+      "accepted_response_to_resolution_seconds": 0.574958086013794
+    },
+    {
+      "id": "d3d53c09-150f-42ce-a260-9964dbf43d7a",
+      "reserved_at": 1793348130.755146,
+      "payment_started_at": 1793348130.767056,
+      "terminal_at": 1793348132.425344,
+      "allocation_to_resolution_seconds": 1.6701979637145996,
+      "payment_pending_seconds": 1.6582880020141602,
+      "accepted_response_to_resolution_seconds": 1.654297113418579
+    },
+    {
+      "id": "fa750abc-e8a5-42de-8010-43e418ff9279",
+      "reserved_at": 1793348130.853001,
+      "payment_started_at": 1793348130.862916,
+      "terminal_at": 1793348132.488568,
+      "allocation_to_resolution_seconds": 1.6355669498443604,
+      "payment_pending_seconds": 1.6256520748138428,
+      "accepted_response_to_resolution_seconds": 1.6222269535064697
+    },
+    {
+      "id": "1cb5612a-d159-4aea-b8cb-0ae5b0a2aaa7",
+      "reserved_at": 1793348130.953756,
+      "payment_started_at": 1793348130.964549,
+      "terminal_at": 1793348132.610615,
+      "allocation_to_resolution_seconds": 1.6568589210510254,
+      "payment_pending_seconds": 1.6460659503936768,
+      "accepted_response_to_resolution_seconds": 1.6429080963134766
+    },
+    {
+      "id": "3e74ad55-501b-4352-8fc1-b9c11514313e",
+      "reserved_at": 1793348131.053117,
+      "payment_started_at": 1793348131.065116,
+      "terminal_at": 1793348132.734082,
+      "allocation_to_resolution_seconds": 1.6809649467468262,
+      "payment_pending_seconds": 1.6689660549163818,
+      "accepted_response_to_resolution_seconds": 1.6642699241638184
+    },
+    {
+      "id": "770b225a-62d7-4153-9859-958181461647",
+      "reserved_at": 1793348131.155187,
+      "payment_started_at": 1793348131.169524,
+      "terminal_at": 1793348132.797693,
+      "allocation_to_resolution_seconds": 1.6425061225891113,
+      "payment_pending_seconds": 1.628169059753418,
+      "accepted_response_to_resolution_seconds": 1.6245861053466797
+    },
+    {
+      "id": "d7a48fee-8389-4174-9ed9-30c0423270ed",
+      "reserved_at": 1793348131.250342,
+      "payment_started_at": 1793348131.262924,
+      "terminal_at": 1793348134.968856,
+      "allocation_to_resolution_seconds": 3.7185142040252686,
+      "payment_pending_seconds": 3.705932140350342,
+      "accepted_response_to_resolution_seconds": 3.701056957244873
+    },
+    {
+      "id": "452097e5-611b-4ff7-84c5-59740e5a05d1",
+      "reserved_at": 1793348131.354025,
+      "payment_started_at": 1793348131.364634,
+      "terminal_at": 1793348131.955772,
+      "allocation_to_resolution_seconds": 0.6017470359802246,
+      "payment_pending_seconds": 0.5911378860473633,
+      "accepted_response_to_resolution_seconds": 0.5879409313201904
+    },
+    {
+      "id": "c382a2b1-bf1f-4698-8f31-cbf5abfd80b7",
+      "reserved_at": 1793348131.454544,
+      "payment_started_at": 1793348131.464645,
+      "terminal_at": 1793348132.018066,
+      "allocation_to_resolution_seconds": 0.5635218620300293,
+      "payment_pending_seconds": 0.5534210205078125,
+      "accepted_response_to_resolution_seconds": 0.5500071048736572
+    },
+    {
+      "id": "1fcc5494-9afa-4aa6-9b55-36569c7c01a3",
+      "reserved_at": 1793348131.550438,
+      "payment_started_at": 1793348131.560151,
+      "terminal_at": 1793348133.205914,
+      "allocation_to_resolution_seconds": 1.6554760932922363,
+      "payment_pending_seconds": 1.6457629203796387,
+      "accepted_response_to_resolution_seconds": 1.6420550346374512
+    },
+    {
+      "id": "b1a27f19-4f92-4621-b9b6-064b38e21583",
+      "reserved_at": 1793348131.655307,
+      "payment_started_at": 1793348131.668928,
+      "terminal_at": 1793348133.31953,
+      "allocation_to_resolution_seconds": 1.6642229557037354,
+      "payment_pending_seconds": 1.650602102279663,
+      "accepted_response_to_resolution_seconds": 1.6459782123565674
+    },
+    {
+      "id": "e8622eff-29dd-4c4b-b4c0-1a52fed0fb62",
+      "reserved_at": 1793348131.752632,
+      "payment_started_at": 1793348131.761344,
+      "terminal_at": 1793348133.382718,
+      "allocation_to_resolution_seconds": 1.6300861835479736,
+      "payment_pending_seconds": 1.6213741302490234,
+      "accepted_response_to_resolution_seconds": 1.6181771755218506
+    },
+    {
+      "id": "dccbf3b3-ccf1-4ba2-91b7-e201ad9dd826",
+      "reserved_at": 1793348131.853362,
+      "payment_started_at": 1793348131.863629,
+      "terminal_at": 1793348133.497299,
+      "allocation_to_resolution_seconds": 1.6439368724822998,
+      "payment_pending_seconds": 1.6336698532104492,
+      "accepted_response_to_resolution_seconds": 1.6306769847869873
+    },
+    {
+      "id": "bcad05a6-c441-427b-b4dd-e6ed95e2a5d1",
+      "reserved_at": 1793348131.952154,
+      "payment_started_at": 1793348131.961195,
+      "terminal_at": 1793348133.614946,
+      "allocation_to_resolution_seconds": 1.6627919673919678,
+      "payment_pending_seconds": 1.6537508964538574,
+      "accepted_response_to_resolution_seconds": 1.6501009464263916
+    },
+    {
+      "id": "469922b7-283c-4115-a135-aa8ee2f28e4c",
+      "reserved_at": 1793348132.05501,
+      "payment_started_at": 1793348132.065023,
+      "terminal_at": 1793348135.748217,
+      "allocation_to_resolution_seconds": 3.693207025527954,
+      "payment_pending_seconds": 3.683194160461426,
+      "accepted_response_to_resolution_seconds": 3.6787261962890625
+    },
+    {
+      "id": "71497f6a-3421-46aa-8a6b-2fbe3ae18906",
+      "reserved_at": 1793348132.151842,
+      "payment_started_at": 1793348132.161081,
+      "terminal_at": 1793348132.739265,
+      "allocation_to_resolution_seconds": 0.5874228477478027,
+      "payment_pending_seconds": 0.5781838893890381,
+      "accepted_response_to_resolution_seconds": 0.5751190185546875
+    },
+    {
+      "id": "cc6a9e95-e542-435d-b3f7-b51169b150b8",
+      "reserved_at": 1793348132.257135,
+      "payment_started_at": 1793348132.266277,
+      "terminal_at": 1793348132.855758,
+      "allocation_to_resolution_seconds": 0.5986230373382568,
+      "payment_pending_seconds": 0.5894808769226074,
+      "accepted_response_to_resolution_seconds": 0.58608078956604
+    },
+    {
+      "id": "889674ea-c3ed-4c41-95cf-d54847a04d71",
+      "reserved_at": 1793348132.354658,
+      "payment_started_at": 1793348132.365755,
+      "terminal_at": 1793348134.020536,
+      "allocation_to_resolution_seconds": 1.6658780574798584,
+      "payment_pending_seconds": 1.6547808647155762,
+      "accepted_response_to_resolution_seconds": 1.6501379013061523
+    },
+    {
+      "id": "fcc6bca6-2447-47ca-8b9a-68f5f878f92d",
+      "reserved_at": 1793348132.454024,
+      "payment_started_at": 1793348132.462955,
+      "terminal_at": 1793348134.078509,
+      "allocation_to_resolution_seconds": 1.6244850158691406,
+      "payment_pending_seconds": 1.6155540943145752,
+      "accepted_response_to_resolution_seconds": 1.611321210861206
+    },
+    {
+      "id": "4fd48a35-dd69-4695-8ff6-cfb8e5abb55d",
+      "reserved_at": 1793348132.549947,
+      "payment_started_at": 1793348132.560029,
+      "terminal_at": 1793348134.195104,
+      "allocation_to_resolution_seconds": 1.6451568603515625,
+      "payment_pending_seconds": 1.6350748538970947,
+      "accepted_response_to_resolution_seconds": 1.631608009338379
+    },
+    {
+      "id": "79ec1cff-5512-44bf-8101-63c0ca6edc68",
+      "reserved_at": 1793348132.654579,
+      "payment_started_at": 1793348132.664964,
+      "terminal_at": 1793348134.316467,
+      "allocation_to_resolution_seconds": 1.6618881225585938,
+      "payment_pending_seconds": 1.651503086090088,
+      "accepted_response_to_resolution_seconds": 1.6464149951934814
+    },
+    {
+      "id": "15837d1c-0e4c-46c8-a983-8581934a75f2",
+      "reserved_at": 1793348132.755588,
+      "payment_started_at": 1793348132.76603,
+      "terminal_at": 1793348134.377998,
+      "allocation_to_resolution_seconds": 1.6224100589752197,
+      "payment_pending_seconds": 1.6119680404663086,
+      "accepted_response_to_resolution_seconds": 1.6080780029296875
+    },
+    {
+      "id": "bacc7a75-1ae2-4fd9-bad3-20000b9a31df",
+      "reserved_at": 1793348132.850632,
+      "payment_started_at": 1793348132.860467,
+      "terminal_at": 1793348136.539084,
+      "allocation_to_resolution_seconds": 3.6884520053863525,
+      "payment_pending_seconds": 3.678617000579834,
+      "accepted_response_to_resolution_seconds": 3.6744818687438965
+    },
+    {
+      "id": "56ded058-c12e-4b7c-a12f-65ed1ec52b98",
+      "reserved_at": 1793348132.953077,
+      "payment_started_at": 1793348132.961108,
+      "terminal_at": 1793348133.502307,
+      "allocation_to_resolution_seconds": 0.5492298603057861,
+      "payment_pending_seconds": 0.5411989688873291,
+      "accepted_response_to_resolution_seconds": 0.5379340648651123
+    },
+    {
+      "id": "008a01fc-2abb-4020-b1d0-6cc9eb3781bd",
+      "reserved_at": 1793348133.050217,
+      "payment_started_at": 1793348133.058204,
+      "terminal_at": 1793348133.618961,
+      "allocation_to_resolution_seconds": 0.5687441825866699,
+      "payment_pending_seconds": 0.5607571601867676,
+      "accepted_response_to_resolution_seconds": 0.5571422576904297
+    },
+    {
+      "id": "7b217430-2b79-40e5-8dfa-552d786fd92f",
+      "reserved_at": 1793348133.155419,
+      "payment_started_at": 1793348133.163191,
+      "terminal_at": 1793348134.785711,
+      "allocation_to_resolution_seconds": 1.6302919387817383,
+      "payment_pending_seconds": 1.6225199699401855,
+      "accepted_response_to_resolution_seconds": 1.6195120811462402
+    },
+    {
+      "id": "2a6c72f2-ca1e-4f3b-80a9-171b4c42b260",
+      "reserved_at": 1793348133.253022,
+      "payment_started_at": 1793348133.262684,
+      "terminal_at": 1793348134.905448,
+      "allocation_to_resolution_seconds": 1.65242600440979,
+      "payment_pending_seconds": 1.6427638530731201,
+      "accepted_response_to_resolution_seconds": 1.6391639709472656
+    },
+    {
+      "id": "6220953c-a93c-4fde-9904-0622493b256d",
+      "reserved_at": 1793348133.34959,
+      "payment_started_at": 1793348133.358768,
+      "terminal_at": 1793348134.96653,
+      "allocation_to_resolution_seconds": 1.6169400215148926,
+      "payment_pending_seconds": 1.607762098312378,
+      "accepted_response_to_resolution_seconds": 1.6044790744781494
+    },
+    {
+      "id": "6e0630b6-a5ad-4763-9bda-fdfdafbc5514",
+      "reserved_at": 1793348133.450874,
+      "payment_started_at": 1793348133.461058,
+      "terminal_at": 1793348135.084362,
+      "allocation_to_resolution_seconds": 1.6334879398345947,
+      "payment_pending_seconds": 1.6233041286468506,
+      "accepted_response_to_resolution_seconds": 1.6198370456695557
+    },
+    {
+      "id": "e6fe1be0-7219-4ded-9fd7-68eee11a696f",
+      "reserved_at": 1793348133.553897,
+      "payment_started_at": 1793348133.562678,
+      "terminal_at": 1793348135.20698,
+      "allocation_to_resolution_seconds": 1.653083086013794,
+      "payment_pending_seconds": 1.6443018913269043,
+      "accepted_response_to_resolution_seconds": 1.6407201290130615
+    },
+    {
+      "id": "5cee3017-75d1-43f2-9f28-84b884ae9918",
+      "reserved_at": 1793348133.652033,
+      "payment_started_at": 1793348133.662314,
+      "terminal_at": 1793348137.301528,
+      "allocation_to_resolution_seconds": 3.6494948863983154,
+      "payment_pending_seconds": 3.639214038848877,
+      "accepted_response_to_resolution_seconds": 3.6352591514587402
+    },
+    {
+      "id": "50005aa5-ff81-4648-9276-004833436495",
+      "reserved_at": 1793348133.749402,
+      "payment_started_at": 1793348133.758483,
+      "terminal_at": 1793348134.322765,
+      "allocation_to_resolution_seconds": 0.5733630657196045,
+      "payment_pending_seconds": 0.5642821788787842,
+      "accepted_response_to_resolution_seconds": 0.5602831840515137
+    },
+    {
+      "id": "b4ef3924-33f5-4c00-8caa-04c38414e5fe",
+      "reserved_at": 1793348133.854346,
+      "payment_started_at": 1793348133.863394,
+      "terminal_at": 1793348134.437468,
+      "allocation_to_resolution_seconds": 0.5831220149993896,
+      "payment_pending_seconds": 0.5740740299224854,
+      "accepted_response_to_resolution_seconds": 0.5706460475921631
+    },
+    {
+      "id": "357000d0-1883-41bb-b0c7-eedc4d181a20",
+      "reserved_at": 1793348133.950837,
+      "payment_started_at": 1793348133.960412,
+      "terminal_at": 1793348135.619434,
+      "allocation_to_resolution_seconds": 1.6685972213745117,
+      "payment_pending_seconds": 1.6590220928192139,
+      "accepted_response_to_resolution_seconds": 1.6554052829742432
+    },
+    {
+      "id": "2eec0213-c4fc-4257-80a7-e665cf56be0b",
+      "reserved_at": 1793348134.05461,
+      "payment_started_at": 1793348134.063884,
+      "terminal_at": 1793348135.685117,
+      "allocation_to_resolution_seconds": 1.630506992340088,
+      "payment_pending_seconds": 1.6212329864501953,
+      "accepted_response_to_resolution_seconds": 1.6173219680786133
+    },
+    {
+      "id": "c0df7ad3-2316-4b34-a443-145726ff65f3",
+      "reserved_at": 1793348134.154269,
+      "payment_started_at": 1793348134.164709,
+      "terminal_at": 1793348135.809367,
+      "allocation_to_resolution_seconds": 1.6550979614257812,
+      "payment_pending_seconds": 1.644657850265503,
+      "accepted_response_to_resolution_seconds": 1.641150951385498
+    },
+    {
+      "id": "3d72de9b-b381-43be-baa9-94d147be8d8d",
+      "reserved_at": 1793348134.251991,
+      "payment_started_at": 1793348134.260958,
+      "terminal_at": 1793348135.875533,
+      "allocation_to_resolution_seconds": 1.623542070388794,
+      "payment_pending_seconds": 1.6145751476287842,
+      "accepted_response_to_resolution_seconds": 1.611206293106079
+    },
+    {
+      "id": "258a1516-d5b5-44b1-ba82-26f99ffd53eb",
+      "reserved_at": 1793348134.355395,
+      "payment_started_at": 1793348134.36544,
+      "terminal_at": 1793348135.939514,
+      "allocation_to_resolution_seconds": 1.5841188430786133,
+      "payment_pending_seconds": 1.5740740299224854,
+      "accepted_response_to_resolution_seconds": 1.5695650577545166
+    },
+    {
+      "id": "74689e87-c971-40cf-9d33-c0e50f6762a9",
+      "reserved_at": 1793348134.453985,
+      "payment_started_at": 1793348134.462804,
+      "terminal_at": 1793348138.107786,
+      "allocation_to_resolution_seconds": 3.6538009643554688,
+      "payment_pending_seconds": 3.644981861114502,
+      "accepted_response_to_resolution_seconds": 3.6416659355163574
+    },
+    {
+      "id": "573991f1-6607-48db-ad64-76bd8845fc8a",
+      "reserved_at": 1793348134.552739,
+      "payment_started_at": 1793348134.564349,
+      "terminal_at": 1793348135.146314,
+      "allocation_to_resolution_seconds": 0.5935750007629395,
+      "payment_pending_seconds": 0.5819649696350098,
+      "accepted_response_to_resolution_seconds": 0.5783097743988037
+    },
+    {
+      "id": "df891eb5-7ea4-4349-98a6-894c08e8e3fb",
+      "reserved_at": 1793348134.650848,
+      "payment_started_at": 1793348134.661393,
+      "terminal_at": 1793348135.212484,
+      "allocation_to_resolution_seconds": 0.5616359710693359,
+      "payment_pending_seconds": 0.5510909557342529,
+      "accepted_response_to_resolution_seconds": 0.5473160743713379
+    },
+    {
+      "id": "2a884c70-8f9d-4425-b2bd-f2e8bf91456b",
+      "reserved_at": 1793348134.752526,
+      "payment_started_at": 1793348134.761716,
+      "terminal_at": 1793348136.358348,
+      "allocation_to_resolution_seconds": 1.6058218479156494,
+      "payment_pending_seconds": 1.5966320037841797,
+      "accepted_response_to_resolution_seconds": 1.5928549766540527
+    },
+    {
+      "id": "0375f84b-2ba4-44c5-97f9-f1c0c8a9de55",
+      "reserved_at": 1793348134.850386,
+      "payment_started_at": 1793348134.859754,
+      "terminal_at": 1793348136.48207,
+      "allocation_to_resolution_seconds": 1.6316840648651123,
+      "payment_pending_seconds": 1.6223158836364746,
+      "accepted_response_to_resolution_seconds": 1.618894100189209
+    },
+    {
+      "id": "2b6278b5-13cb-486f-bf70-7203d1193dfb",
+      "reserved_at": 1793348134.954336,
+      "payment_started_at": 1793348134.964843,
+      "terminal_at": 1793348136.599405,
+      "allocation_to_resolution_seconds": 1.6450691223144531,
+      "payment_pending_seconds": 1.6345620155334473,
+      "accepted_response_to_resolution_seconds": 1.630403995513916
+    },
+    {
+      "id": "1be53e77-fa4d-4ca2-b64b-f0949b777f6b",
+      "reserved_at": 1793348135.052886,
+      "payment_started_at": 1793348135.064721,
+      "terminal_at": 1793348136.658193,
+      "allocation_to_resolution_seconds": 1.6053071022033691,
+      "payment_pending_seconds": 1.5934720039367676,
+      "accepted_response_to_resolution_seconds": 1.588536024093628
+    },
+    {
+      "id": "04a5306f-44b4-41cc-a7ed-847ef21f206b",
+      "reserved_at": 1793348135.152444,
+      "payment_started_at": 1793348135.163029,
+      "terminal_at": 1793348136.82923,
+      "allocation_to_resolution_seconds": 1.676786184310913,
+      "payment_pending_seconds": 1.666201114654541,
+      "accepted_response_to_resolution_seconds": 1.662541151046753
+    },
+    {
+      "id": "6d0c6bc8-869b-4f6c-ae05-05c283ed4248",
+      "reserved_at": 1793348135.25362,
+      "payment_started_at": 1793348135.26644,
+      "terminal_at": 1793348139.035043,
+      "allocation_to_resolution_seconds": 3.7814230918884277,
+      "payment_pending_seconds": 3.7686030864715576,
+      "accepted_response_to_resolution_seconds": 3.7648050785064697
+    },
+    {
+      "id": "35a3dc07-cf2e-4542-9f0e-36ea1739d5a5",
+      "reserved_at": 1793348135.350391,
+      "payment_started_at": 1793348135.360368,
+      "terminal_at": 1793348135.937686,
+      "allocation_to_resolution_seconds": 0.5872950553894043,
+      "payment_pending_seconds": 0.5773179531097412,
+      "accepted_response_to_resolution_seconds": 0.5741748809814453
+    },
+    {
+      "id": "5fd6f49a-5c75-43ab-94d6-54d95740e8f3",
+      "reserved_at": 1793348135.455897,
+      "payment_started_at": 1793348135.467038,
+      "terminal_at": 1793348136.060561,
+      "allocation_to_resolution_seconds": 0.6046638488769531,
+      "payment_pending_seconds": 0.5935230255126953,
+      "accepted_response_to_resolution_seconds": 0.5900287628173828
+    },
+    {
+      "id": "e9cccdbd-db87-455f-be5c-62c12a544b1e",
+      "reserved_at": 1793348135.553356,
+      "payment_started_at": 1793348135.564504,
+      "terminal_at": 1793348137.232524,
+      "allocation_to_resolution_seconds": 1.6791679859161377,
+      "payment_pending_seconds": 1.6680200099945068,
+      "accepted_response_to_resolution_seconds": 1.6636269092559814
+    },
+    {
+      "id": "88f3a12d-2921-4c17-8f01-f54d2da7b120",
+      "reserved_at": 1793348135.649706,
+      "payment_started_at": 1793348135.659635,
+      "terminal_at": 1793348137.295126,
+      "allocation_to_resolution_seconds": 1.6454200744628906,
+      "payment_pending_seconds": 1.635490894317627,
+      "accepted_response_to_resolution_seconds": 1.6321070194244385
+    },
+    {
+      "id": "8cb5df5b-d5c7-451d-8c71-5f3353dd4ea9",
+      "reserved_at": 1793348135.750181,
+      "payment_started_at": 1793348135.763497,
+      "terminal_at": 1793348137.414373,
+      "allocation_to_resolution_seconds": 1.6641919612884521,
+      "payment_pending_seconds": 1.6508758068084717,
+      "accepted_response_to_resolution_seconds": 1.6473519802093506
+    },
+    {
+      "id": "eb12343f-210b-4ed4-8dae-5927d8f8ae02",
+      "reserved_at": 1793348135.851011,
+      "payment_started_at": 1793348135.864193,
+      "terminal_at": 1793348137.472158,
+      "allocation_to_resolution_seconds": 1.6211469173431396,
+      "payment_pending_seconds": 1.6079649925231934,
+      "accepted_response_to_resolution_seconds": 1.6022610664367676
+    },
+    {
+      "id": "f33bdac1-ba98-4f3f-be7a-81097a61a6ff",
+      "reserved_at": 1793348135.949199,
+      "payment_started_at": 1793348135.958203,
+      "terminal_at": 1793348137.582905,
+      "allocation_to_resolution_seconds": 1.6337060928344727,
+      "payment_pending_seconds": 1.624701976776123,
+      "accepted_response_to_resolution_seconds": 1.6202752590179443
+    },
+    {
+      "id": "7b118f2f-622a-40a6-9606-2cf67d742d11",
+      "reserved_at": 1793348136.053236,
+      "payment_started_at": 1793348136.064145,
+      "terminal_at": 1793348139.739439,
+      "allocation_to_resolution_seconds": 3.6862030029296875,
+      "payment_pending_seconds": 3.6752939224243164,
+      "accepted_response_to_resolution_seconds": 3.6707589626312256
+    },
+    {
+      "id": "79cfd93c-854f-4c0c-a38b-65430a288891",
+      "reserved_at": 1793348136.150076,
+      "payment_started_at": 1793348136.160546,
+      "terminal_at": 1793348136.72394,
+      "allocation_to_resolution_seconds": 0.5738639831542969,
+      "payment_pending_seconds": 0.5633938312530518,
+      "accepted_response_to_resolution_seconds": 0.5592470169067383
+    },
+    {
+      "id": "0c478534-55e3-40f8-9b39-51882f832e05",
+      "reserved_at": 1793348136.252484,
+      "payment_started_at": 1793348136.26247,
+      "terminal_at": 1793348136.887944,
+      "allocation_to_resolution_seconds": 0.6354598999023438,
+      "payment_pending_seconds": 0.6254739761352539,
+      "accepted_response_to_resolution_seconds": 0.6206328868865967
+    },
+    {
+      "id": "ca19c7dd-ff5e-45b1-9e03-d6f6c023eba0",
+      "reserved_at": 1793348136.353027,
+      "payment_started_at": 1793348136.364628,
+      "terminal_at": 1793348137.983986,
+      "allocation_to_resolution_seconds": 1.6309587955474854,
+      "payment_pending_seconds": 1.6193578243255615,
+      "accepted_response_to_resolution_seconds": 1.6143009662628174
+    },
+    {
+      "id": "1882208b-a2c6-4284-a79e-c7bf1e68c92d",
+      "reserved_at": 1793348136.452212,
+      "payment_started_at": 1793348136.462377,
+      "terminal_at": 1793348138.042191,
+      "allocation_to_resolution_seconds": 1.5899789333343506,
+      "payment_pending_seconds": 1.5798139572143555,
+      "accepted_response_to_resolution_seconds": 1.5759611129760742
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "runs": [
+    {
+      "variant": "baseline",
+      "run": "retry-admission-baseline-v2",
+      "passed": true,
+      "at": 1793437536.3515441
+    },
+    {
+      "variant": "pull",
+      "run": "retry-admission-pull-v2",
+      "passed": true,
+      "at": 1793437546.269242
+    },
+    {
+      "variant": "late",
+      "run": "retry-admission-late-v2",
+      "passed": true,
+      "at": 1793437556.448732
+    }
+  ]
+}

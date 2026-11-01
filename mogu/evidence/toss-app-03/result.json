@@ -1,0 +1,44 @@
+{
+  "scope": "App integration with real TEST PG",
+  "authentication": "completed",
+  "actual_webhook_delivery": "not_received",
+  "began_at": 1793368269.165041,
+  "reservation_id": "48a04b40-938b-4be3-be03-e90c4afee97a",
+  "source": "5a17b7444c3f32e1b011fc66b269ca5102b8add1",
+  "callback_received_at": 1793368919.396565,
+  "integration_started_at": 1793369061.665684,
+  "bootstrap_query": {
+    "http": 200,
+    "status": "IN_PROGRESS",
+    "purpose": "expected merchant from authenticated provider, not browser"
+  },
+  "app_payment_http": 202,
+  "app_state": "PAYMENT_PENDING",
+  "payment": {
+    "id": "013ec351-b2aa-464b-ac56-6438d5a19ed4",
+    "intent": "CONTINUE",
+    "fact": "UNOBSERVED",
+    "workflow": "REVIEW",
+    "review_reason": "OBSERVATION_BINDING_OR_CONTRACT"
+  },
+  "verification_query": {
+    "http": 200,
+    "status": "DONE",
+    "totalAmount": 1000,
+    "balanceAmount": 1000
+  },
+  "scenario": "purchase",
+  "cancel_recovery": "not_verified",
+  "operations": [
+    {
+      "kind": "CONFIRM",
+      "dispatch": "ARMED",
+      "calls": 1
+    }
+  ],
+  "webhook_inbox": [],
+  "payment_key_sha256": "b874edbbc4a39b335ba78bc1909f6e8c603c88fed318adfd8355c9240a850831",
+  "passed": false,
+  "error": "AssertionError",
+  "ended_at": 1793369155.292088
+}

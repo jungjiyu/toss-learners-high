@@ -1,0 +1,14 @@
+{
+  "http": 200,
+  "status": "DONE",
+  "method": "간편결제",
+  "card_present": false,
+  "easyPay_present": true,
+  "checks": {
+    "paymentKey": true,
+    "orderId": true,
+    "totalAmount": true,
+    "currency": true
+  },
+  "scope": "Authenticated read-only provider comparison after app binding rejection. No new confirm or cancel."
+}

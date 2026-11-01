@@ -1,0 +1,227 @@
+[
+  {
+    "run": "k6-pull-mixed-capacity-r01",
+    "source": "f423494c2276407ef9490aeed17b5c2e5213c3c5",
+    "actual_durable_buckets": [
+      {
+        "bucket": 0,
+        "cancel": 1429
+      },
+      {
+        "bucket": 1,
+        "expire": 1427
+      },
+      {
+        "bucket": 2,
+        "pay": 1429
+      },
+      {
+        "bucket": 3,
+        "pay": 1428
+      },
+      {
+        "bucket": 4,
+        "cancel": 1431
+      },
+      {
+        "bucket": 5,
+        "expire": 1428
+      },
+      {
+        "bucket": 6,
+        "pay": 1424
+      },
+      {
+        "bucket": 7,
+        "pay": 1429
+      },
+      {
+        "bucket": 8,
+        "cancel": 1427
+      },
+      {
+        "bucket": 9,
+        "expire": 1423
+      },
+      {
+        "bucket": 10,
+        "pay": 1422
+      },
+      {
+        "bucket": 11,
+        "pay": 1425
+      },
+      {
+        "bucket": 12,
+        "cancel": 1429
+      },
+      {
+        "bucket": 13,
+        "expire": 1428
+      },
+      {
+        "bucket": 14,
+        "pay": 1424
+      },
+      {
+        "bucket": 15,
+        "pay": 1429
+      }
+    ],
+    "raw_sha256": {
+      "plan.json": "c92063eec5d72b111dd0f27fd3beeb02fd940bc302c77ac81ca30a1b6d1f1a85",
+      "reservations.json.gz": "3b0dacd13f52b2d2196533f55612a507518fca248e5253a323beb0c5bc0d9437",
+      "request-results.json.gz": "f0405a6b556f97d1cd86571111720e5cfa27924571a3e51d4ff9b8746f7f13d8"
+    }
+  },
+  {
+    "run": "k6-pull-mixed-capacity-r02",
+    "source": "f423494c2276407ef9490aeed17b5c2e5213c3c5",
+    "actual_durable_buckets": [
+      {
+        "bucket": 0,
+        "cancel": 1433
+      },
+      {
+        "bucket": 1,
+        "expire": 1432
+      },
+      {
+        "bucket": 2,
+        "pay": 1430
+      },
+      {
+        "bucket": 3,
+        "pay": 1428
+      },
+      {
+        "bucket": 4,
+        "cancel": 1436
+      },
+      {
+        "bucket": 5,
+        "expire": 1433
+      },
+      {
+        "bucket": 6,
+        "pay": 1434
+      },
+      {
+        "bucket": 7,
+        "pay": 1437
+      },
+      {
+        "bucket": 8,
+        "cancel": 1438
+      },
+      {
+        "bucket": 9,
+        "expire": 1432
+      },
+      {
+        "bucket": 10,
+        "pay": 1427
+      },
+      {
+        "bucket": 11,
+        "pay": 1434
+      },
+      {
+        "bucket": 12,
+        "cancel": 1434
+      },
+      {
+        "bucket": 13,
+        "expire": 1434
+      },
+      {
+        "bucket": 14,
+        "pay": 1427
+      },
+      {
+        "bucket": 15,
+        "pay": 1433
+      }
+    ],
+    "raw_sha256": {
+      "plan.json": "67cbdeb607ffa8d22c30be232e4e09ba88970d640b24144aca22243ecfedbc0c",
+      "reservations.json.gz": "2ac63d6100096a24f80f0d8ee0bd4370cd4cc1e967b0abba44a603f22e75f0a8",
+      "request-results.json.gz": "f1737b2ddee768018769f96d4aa5b83af4e7cbe87d5ca97848eef7dc72d899f5"
+    }
+  },
+  {
+    "run": "k6-pull-mixed-capacity-r03",
+    "source": "2f79aa33f0433d8f83bb86c2d018f90c2d5942f4",
+    "actual_durable_buckets": [
+      {
+        "bucket": 0,
+        "cancel": 1432
+      },
+      {
+        "bucket": 1,
+        "expire": 1436
+      },
+      {
+        "bucket": 2,
+        "pay": 1428
+      },
+      {
+        "bucket": 3,
+        "pay": 1433
+      },
+      {
+        "bucket": 4,
+        "cancel": 1430
+      },
+      {
+        "bucket": 5,
+        "expire": 1433
+      },
+      {
+        "bucket": 6,
+        "pay": 1429
+      },
+      {
+        "bucket": 7,
+        "pay": 1431
+      },
+      {
+        "bucket": 8,
+        "cancel": 1430
+      },
+      {
+        "bucket": 9,
+        "expire": 1428
+      },
+      {
+        "bucket": 10,
+        "pay": 1426
+      },
+      {
+        "bucket": 11,
+        "pay": 1432
+      },
+      {
+        "bucket": 12,
+        "cancel": 1438
+      },
+      {
+        "bucket": 13,
+        "expire": 1434
+      },
+      {
+        "bucket": 14,
+        "pay": 1430
+      },
+      {
+        "bucket": 15,
+        "pay": 1433
+      }
+    ],
+    "raw_sha256": {
+      "plan.json": "52dded16ebbdf75925af6dafb9a07c95747ae0cc36dc0b19b41e438c524d0ce4",
+      "reservations.json.gz": "0f82b518e9581a77f6675b64dd1dc3769422073beb8c98a7aa72ae3300c3bae6",
+      "request-results.json.gz": "2a3276d8a6f890ddd989bafaef6565c64d1d16a754801c7398d434c5bf0a141d"
+    }
+  }
+]

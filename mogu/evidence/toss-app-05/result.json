@@ -1,0 +1,58 @@
+{
+  "scope": "App integration with real TEST PG",
+  "authentication": "completed",
+  "actual_webhook_delivery": "not_received",
+  "began_at": 1793369832.888187,
+  "settings": {
+    "HOLD_SECONDS": "3600",
+    "PG_TIMEOUT_MS": "10000",
+    "LEASE_MS": "30000",
+    "POLL_MS": "1000",
+    "REVIEW_POLL_MS": "60000"
+  },
+  "requested_method": "direct card, selected issuer, installment0",
+  "reservation_id": "8693d36b-8c5a-4cce-a6fa-3a251384a537",
+  "source": "f423494c2276407ef9490aeed17b5c2e5213c3c5",
+  "callback_received_at": 1793369956.2167628,
+  "integration_started_at": 1793370187.465257,
+  "bootstrap_query": {
+    "http": 200,
+    "status": "IN_PROGRESS",
+    "purpose": "expected merchant from authenticated provider, not browser"
+  },
+  "app_payment_http": 202,
+  "cancel_http": 202,
+  "app_state": "CANCELLED",
+  "payment": {
+    "id": "c0d4ce4e-1638-4c5f-902e-5b48cc23fbcf",
+    "intent": "CANCEL_REQUESTED",
+    "fact": "CANCELED_FINAL",
+    "workflow": "RESOLVED",
+    "review_reason": null
+  },
+  "verification_query": {
+    "http": 200,
+    "status": "CANCELED",
+    "totalAmount": 1000,
+    "balanceAmount": 0,
+    "method": "카드"
+  },
+  "scenario": "cancel-pending",
+  "cancel_recovery": "verified",
+  "operations": [
+    {
+      "kind": "CANCEL",
+      "dispatch": "ARMED",
+      "calls": 1
+    },
+    {
+      "kind": "CONFIRM",
+      "dispatch": "ARMED",
+      "calls": 1
+    }
+  ],
+  "webhook_inbox": [],
+  "payment_key_sha256": "0d772f99d1f5737ca56121cbc4eb2f709580bfee4b8e2d3493e748f223572d70",
+  "passed": true,
+  "ended_at": 1793370195.064061
+}

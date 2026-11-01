@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "began": 1793376931.815199,
+  "ended": 1793376948.0387042,
+  "policy": "explicit TEST-only unsigned untrusted query hint; NOT verified sender signature",
+  "before": {
+    "inbox": 1,
+    "queries": 0,
+    "confirms": 3,
+    "cancels": 1
+  },
+  "after_durable_commit_before_ACK": {
+    "inbox": 2,
+    "queries": 1,
+    "confirms": 3,
+    "cancels": 1
+  },
+  "after_retransmission": {
+    "inbox": 2,
+    "queries": 1,
+    "confirms": 3,
+    "cancels": 1
+  },
+  "network_observations": [
+    {
+      "at": 1793376940.77809,
+      "http": 503,
+      "bytes": 1424,
+      "body_sha256": "55a30ad5a2cbec52654030b58639c5ad0dbeac8803abf065fc45ba12c1bcbd3f",
+      "transmission_id_sha256": "e8140d51149211590daa5284c7a43105de12640b8dfe0471c5905c7e3ad98ac2",
+      "toss_header_names": [
+        "tosspayments-webhook-transmission-id",
+        "tosspayments-webhook-transmission-retried-count",
+        "tosspayments-webhook-transmission-time"
+      ],
+      "signature_present": false,
+      "signature_length": 0,
+      "transmission_time_present": true,
+      "event_type": "PAYMENT_STATUS_CHANGED",
+      "event_id_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "payment_key_sha256": "0d772f99d1f5737ca56121cbc4eb2f709580bfee4b8e2d3493e748f223572d70",
+      "provider_status": "DONE"
+    },
+    {
+      "at": 1793376942.345048,
+      "http": 200,
+      "bytes": 1424,
+      "body_sha256": "55a30ad5a2cbec52654030b58639c5ad0dbeac8803abf065fc45ba12c1bcbd3f",
+      "transmission_id_sha256": "787476f2f25ba2612733fd22ae676f0acd38f62afbac8b9546b0676816bd1f3c",
+      "toss_header_names": [
+        "tosspayments-webhook-transmission-id",
+        "tosspayments-webhook-transmission-retried-count",
+        "tosspayments-webhook-transmission-time"
+      ],
+      "signature_present": false,
+      "signature_length": 0,
+      "transmission_time_present": true,
+      "event_type": "PAYMENT_STATUS_CHANGED",
+      "event_id_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "payment_key_sha256": "0d772f99d1f5737ca56121cbc4eb2f709580bfee4b8e2d3493e748f223572d70",
+      "provider_status": "DONE"
+    }
+  ],
+  "checks": [
+    "real developer-center retransmission reached app",
+    "durable save before proxy ACK loss",
+    "same real event retried, single inbox",
+    "authenticated PG QUERY increased without new CONFIRM/CANCEL",
+    "missing signature remained untrusted; payload not used as payment fact"
+  ],
+  "source": "e23de53089bbe74c97eebea46803636fa6fb217a"
+}

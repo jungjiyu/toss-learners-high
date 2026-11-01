@@ -1,0 +1,455 @@
+{
+  "checks": [
+    {
+      "run": "retry-final-pull-once-400-r01",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.9999275207519531,
+          "at": 1793441608.585,
+          "scenario_start": 1793441518.584
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.021999835968017578,
+      "last_start_offset": 90.00099992752075,
+      "last_end_offset": 92.81699991226196,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-pull-retry-400-r01",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793442577.714,
+          "scenario_start": 1793442487.714
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.019999980926513672,
+      "last_start_offset": 90.0,
+      "last_end_offset": 96.76900005340576,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-late-once-400-r01",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793441960.574,
+          "scenario_start": 1793441870.574
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.020000219345092773,
+      "last_start_offset": 90.0,
+      "last_end_offset": 92.81000018119812,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-late-retry-400-r01",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.9999275207519531,
+          "at": 1793442863.391,
+          "scenario_start": 1793442773.39
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.021999835968017578,
+      "last_start_offset": 90.00099992752075,
+      "last_end_offset": 96.75899982452393,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-expiry-once-400-r01",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793442301.986,
+          "scenario_start": 1793442211.986
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.020999908447265625,
+      "last_start_offset": 90.0,
+      "last_end_offset": 92.65199995040894,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-expiry-retry-400-r01",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793443152.293,
+          "scenario_start": 1793443062.293
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.012000083923339844,
+      "last_start_offset": 90.0,
+      "last_end_offset": 96.46600008010864,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-pull-once-400-r02",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.9999275207519531,
+          "at": 1793445690.485,
+          "scenario_start": 1793445600.484
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.015000104904174805,
+      "last_start_offset": 90.00099992752075,
+      "last_end_offset": 92.73000001907349,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-pull-retry-400-r02",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.9999275207519531,
+          "at": 1793444785.457,
+          "scenario_start": 1793444695.456
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.021999835968017578,
+      "last_start_offset": 90.00099992752075,
+      "last_end_offset": 96.91499996185303,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-late-once-400-r02",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.9999275207519531,
+          "at": 1793445351.688,
+          "scenario_start": 1793445261.687
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.03099989891052246,
+      "last_start_offset": 90.00099992752075,
+      "last_end_offset": 92.7979998588562,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-late-retry-400-r02",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793444503.275,
+          "scenario_start": 1793444413.275
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.023000001907348633,
+      "last_start_offset": 90.0,
+      "last_end_offset": 96.67799997329712,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-expiry-once-400-r02",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793445075.422,
+          "scenario_start": 1793444985.422
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.01900005340576172,
+      "last_start_offset": 90.0,
+      "last_end_offset": 92.66700005531311,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-expiry-retry-400-r02",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793444252.868,
+          "scenario_start": 1793444162.868
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.016000032424926758,
+      "last_start_offset": 90.0,
+      "last_end_offset": 96.07399988174438,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-pull-once-400-r03",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793446896.068,
+          "scenario_start": 1793446806.068
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.013000011444091797,
+      "last_start_offset": 90.0,
+      "last_end_offset": 92.84799981117249,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-pull-retry-400-r03",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793447870.336,
+          "scenario_start": 1793447780.336
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.018000125885009766,
+      "last_start_offset": 90.0,
+      "last_end_offset": 96.46399998664856,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-late-once-400-r03",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793447244.714,
+          "scenario_start": 1793447154.714
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.019999980926513672,
+      "last_start_offset": 90.0,
+      "last_end_offset": 92.80299997329712,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    },
+    {
+      "run": "retry-final-expiry-once-400-r03",
+      "phase": "warmup",
+      "started": 200,
+      "outside": [
+        {
+          "index": 181,
+          "offset_ms": 42.999982833862305,
+          "at": 1793447495.805,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 182,
+          "offset_ms": 143.99981498718262,
+          "at": 1793447495.906,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 183,
+          "offset_ms": 243.99995803833008,
+          "at": 1793447496.006,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 184,
+          "offset_ms": 343.99986267089844,
+          "at": 1793447496.106,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 185,
+          "offset_ms": 442.99983978271484,
+          "at": 1793447496.205,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 186,
+          "offset_ms": 543.9999103546143,
+          "at": 1793447496.306,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 187,
+          "offset_ms": 643.9998149871826,
+          "at": 1793447496.406,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 188,
+          "offset_ms": 743.9999580383301,
+          "at": 1793447496.506,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 189,
+          "offset_ms": 843.9998626708984,
+          "at": 1793447496.606,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 190,
+          "offset_ms": 944.0000057220459,
+          "at": 1793447496.706,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 191,
+          "offset_ms": 1043.9999103546143,
+          "at": 1793447496.806,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 192,
+          "offset_ms": 1143.9998149871826,
+          "at": 1793447496.906,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 193,
+          "offset_ms": 1243.99995803833,
+          "at": 1793447497.006,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 194,
+          "offset_ms": 1342.9999351501465,
+          "at": 1793447497.105,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 195,
+          "offset_ms": 1444.000005722046,
+          "at": 1793447497.206,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 196,
+          "offset_ms": 1541.9998168945312,
+          "at": 1793447497.304,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 197,
+          "offset_ms": 1643.9998149871826,
+          "at": 1793447497.406,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 198,
+          "offset_ms": 1743.99995803833,
+          "at": 1793447497.506,
+          "scenario_start": 1793447475.762
+        },
+        {
+          "index": 199,
+          "offset_ms": 1843.9998626708984,
+          "at": 1793447497.606,
+          "scenario_start": 1793447475.762
+        }
+      ],
+      "before": 0,
+      "after": 19,
+      "first_start_offset": 0.006999969482421875,
+      "last_start_offset": 21.8439998626709,
+      "last_end_offset": 22.628999948501587,
+      "next_phase_gap_from_last_start": 5.114000082015991,
+      "next_phase_gap_from_last_end": 4.328999996185303
+    },
+    {
+      "run": "retry-finite-expiry-once-400-r01",
+      "phase": "measure_0_400",
+      "started": 36000,
+      "outside": [
+        {
+          "index": 1035999,
+          "offset_ms": 0.0,
+          "at": 1793448997.99,
+          "scenario_start": 1793448907.99
+        }
+      ],
+      "before": 0,
+      "after": 1,
+      "first_start_offset": 0.03800010681152344,
+      "last_start_offset": 90.0,
+      "last_end_offset": 91.26999998092651,
+      "next_phase_gap_from_last_start": null,
+      "next_phase_gap_from_last_end": null
+    }
+  ],
+  "interpretation": "Measured-phase outside starts are16 final logical iterations at the90-second boundary or1ms after it; all planned starts/completions remain counted, zero drops. One warmup has19 starts beyond its planned20-second wall-time window; all200 warmup iterations completed4.329s before measured input and last warmup start preceded measured input by5.114s. No monotonic/host-clock synchronization trace was recorded to prove whether the warmup wall-time discontinuity was scheduling or clock adjustment. Do not attribute it to server capacity. Main-phase timing/cost windows use the observed scenario_start; original raw data and all repetitions retained.",
+  "at": 1793451718.1746829,
+  "script_sha256": "3092ab02d78d994435d20316bcf7dd7edb67b452bd4cf90fa21f02ed3b12a842"
+}

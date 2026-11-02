@@ -1,8 +1,8 @@
 {
-  "checked_at_utc": "2026-11-02T02:47:13.847315+00:00",
-  "published_content_commit": "e3e18b6c6d7312b3224cf5a90070c04dcb578b81",
-  "source_commit": "1433438b6756981c28bca00645e62abd967c12c6",
-  "pages_run": "https://github.com/jungjiyu/toss-learners-high/actions/runs/41379329594",
+  "checked_at_utc": "2026-11-02T03:06:12.073338+00:00",
+  "published_content_commit": "d4eee1a59da21db3b0b26f4811eec9fd9306d15f",
+  "source_commit": "c17b5e5f04f8bd5659ce157aa77048781415b326",
+  "pages_run": "https://github.com/jungjiyu/toss-learners-high/actions/runs/41380948635",
   "public_base": "https://jungjiyu.github.io/toss-learners-high/",
   "anonymous": true,
   "cookies_after": [],
@@ -23,7 +23,7 @@
       "status": 200,
       "content_type": "application/json; charset=utf-8",
       "bytes": 395638,
-      "sha256": "05f2447b000164c12beba89ce974eaf70bf7684ecca353f8cd9444243634b059",
+      "sha256": "13a7d95ab898b4b52bf4e3a35c0672cf2e43d51dc263e37f1d2dce79fb48f5e2",
       "sha256_matches": true
     },
     {
@@ -130,8 +130,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/comparison.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 32519,
-      "sha256": "17f7eeac12b8ecbe85b860f9127d5643a6669404ac625e67e5f0947dbd7eccbe",
+      "bytes": 32634,
+      "sha256": "615b9917a9a8bc34f786c8281beb99eb1c56980000f3c400f2615ea4a2959e56",
       "sha256_matches": true
     },
     {
@@ -139,8 +139,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/connections.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 31538,
-      "sha256": "5e9a4a48ac166f3536d14cf5d0b2b5dd3bd07ac3a2a77df4d697c664cdc7dea7",
+      "bytes": 31682,
+      "sha256": "c9ab239f2c7bfcc4df1441c95a1bdb156e8730a006c3e6cde2c5e9c52965cf08",
       "sha256_matches": true
     },
     {
@@ -148,8 +148,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/distributed.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 42389,
-      "sha256": "3d131bad104916c12d159b949beb238897da578bb34cdabc9935b692b9e91259",
+      "bytes": 42880,
+      "sha256": "2371a1467166d35edf89384abf06a89f1f9877f9c98f71890dca39425d57f8b7",
       "sha256_matches": true
     },
     {
@@ -157,8 +157,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/mixed-runs.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 120830,
-      "sha256": "018cf46d6f330f22a83e512b416d2a1d4a25cb74e521f5c3047aae170d87ae8d",
+      "bytes": 121197,
+      "sha256": "f4e0096e6eb54b34548f619264ca35a838251b6253d6b69f29d9e840d6f1c1a4",
       "sha256_matches": true
     },
     {
@@ -166,8 +166,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/mixed.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 115025,
-      "sha256": "14900da7da9b68eeda7b53c75b007c79afe88bf365aaca8da24ebc691dd2249d",
+      "bytes": 115688,
+      "sha256": "3f379502689f96da9ada15adbdc07774ea29594ee47bbb9501e244b9298f1745",
       "sha256_matches": true
     },
     {
@@ -175,8 +175,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/reconnect-runs.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 77466,
-      "sha256": "5fad697d38044c3940b71141c7c0b95310cfd2d8223db4bce00f01ffa12c10d7",
+      "bytes": 77788,
+      "sha256": "67df9911e3c4c91357f38fd191d438392f787a6df1ce47093915245158c07355",
       "sha256_matches": true
     },
     {
@@ -184,8 +184,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/reconnect.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 53419,
-      "sha256": "d68cbca57179bc4413689968a6df7c508d002c56fd4bc44219810505e697693d",
+      "bytes": 53755,
+      "sha256": "20e105b4caa4f54db47b0b2953d6ea2404439b5a2f741092663700c89db02d21",
       "sha256_matches": true
     },
     {
@@ -193,8 +193,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/recovery.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 18277,
-      "sha256": "554ffe07f215b28955853f29cafc43f843f2a69a8b9bf64c2a9fa2fef57dc02c",
+      "bytes": 18824,
+      "sha256": "9d556fc5dbc2d2f16df8e14ad4b456fcddc6f97e617c38d1421449d8aa3a3cbd",
       "sha256_matches": true
     },
     {
@@ -202,8 +202,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/scale.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 234873,
-      "sha256": "cc2a434b9f05925d2d27e4e4ef2fc34876bcab3be29c6108bd6ddd55a7ee3167",
+      "bytes": 235366,
+      "sha256": "26142d160ec6c6c9092120570e03d0fb3c4abad57d430e54ba997cd66c107328",
       "sha256_matches": true
     },
     {
@@ -211,8 +211,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/shared-fanout.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 102621,
-      "sha256": "dab4b82419cde226250f778bd93232767abbb7a98adc5cbc3f0d25c4e9caafac",
+      "bytes": 103221,
+      "sha256": "87bb80fbce7e56b5084c381ff728b065bf5dd07b1e72cd99c8e13892c095b057",
       "sha256_matches": true
     },
     {
@@ -220,8 +220,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/storage.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 21549,
-      "sha256": "a5cd6506d946956e92a029967e19aec6fcc1b94ba5bd4599261655fa8cf95409",
+      "bytes": 22034,
+      "sha256": "3090ba4ed5cc5dc59c98d3dfa43456348f1f501071a11c370a79f76e2c84dddd",
       "sha256_matches": true
     },
     {
@@ -230,7 +230,7 @@
       "status": 200,
       "content_type": "application/json; charset=utf-8",
       "bytes": 61223,
-      "sha256": "3c95655165b7995586d49bd8541ad7329df34c2ef174475b7850270711a68d8f",
+      "sha256": "4c55d2e01f9a80dc0089d51da8e20ae0d7cfcf4731332679a4784f4bf65411db",
       "sha256_matches": true
     },
     {
@@ -238,8 +238,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/architecture.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 118331,
-      "sha256": "6d7b48a63e75461edfb3ba51eed31ce9fffec0779e20293707cda2bd1cac4c46",
+      "bytes": 119483,
+      "sha256": "7a77c36c5c7776ecdba68f34fa09abc38df76c00711349f897a0335012879734",
       "sha256_matches": true
     },
     {
@@ -247,8 +247,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/boundary-churn-range.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 149804,
-      "sha256": "339a77af0f3e91348ce5b1310651177ce2286e96239f10f04da4da3b0dad9dc0",
+      "bytes": 150956,
+      "sha256": "85818c78613665a5830894ba281de6258bea32c48941567b55bac654454d39a1",
       "sha256_matches": true
     },
     {
@@ -256,8 +256,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/boundary-range.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 156819,
-      "sha256": "75f14a3133a11df682017bb844d036936229d6cfdf702353d2d09b74ac7e570c",
+      "bytes": 157971,
+      "sha256": "8a926e82897d3a271ee1b67576007e2319c59a76db934d4798fa9273a69b577b",
       "sha256_matches": true
     },
     {
@@ -265,8 +265,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/boundary-reconnect.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 1519683,
-      "sha256": "88817f52d91957656e39ebc57980389da52edd4cb9417888969e2db1347aba09",
+      "bytes": 1520835,
+      "sha256": "5296db7592b4556b6fb0632a538d0a23e48cea08936d9487df3e89611acd3aaa",
       "sha256_matches": true
     },
     {
@@ -274,8 +274,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/boundary-soak-backlog.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 153865,
-      "sha256": "7b8a2974152b4537e1a63d4c068c995d20a4a2177300c546d064c6d7d0598bea",
+      "bytes": 155017,
+      "sha256": "a9bede6a69a9a0d5083e2526d2130049f28f5e717d1b6d84e7e21194a2f8d470",
       "sha256_matches": true
     },
     {
@@ -283,8 +283,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/boundary-soak-resources.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 229932,
-      "sha256": "2e38efc0c00c45d28f012ed2c67f2f5406b2e8710693cd8ce76b3de195b8a98e",
+      "bytes": 231084,
+      "sha256": "711d211e6d9c1825ee70d62b2c1bfb20818c74c29766edc8492489d2262d7f49",
       "sha256_matches": true
     },
     {
@@ -292,8 +292,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/causal-2x2.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 133591,
-      "sha256": "27b4526d377037efe941bfd3a65db03040068199548bbb13e7a00c8100e17998",
+      "bytes": 134743,
+      "sha256": "739278d84921175a8a4ab994915611b1734447df290520fdd2ea0a6730fd2a3b",
       "sha256_matches": true
     },
     {
@@ -301,8 +301,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/causal-d-resources.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 311457,
-      "sha256": "939e80e02622e6bc28e7493564e249aee55ba42f51f0a59cb281161ed876d13e",
+      "bytes": 312609,
+      "sha256": "a03a63c6f3f3fb3e60c655ba075391b2787210b2001be1384ca3dbca4b5ffd16",
       "sha256_matches": true
     },
     {
@@ -310,8 +310,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/causal-final-repeats.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 169711,
-      "sha256": "f5bf3145c7ad3e85243800fc5b386e844492cf7fcf78a63e7882c29fcc8e10ad",
+      "bytes": 170863,
+      "sha256": "fc991f97024eee2f424fc5f6ffe738828613695125ed6c4c087bb91763091020",
       "sha256_matches": true
     },
     {
@@ -319,8 +319,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/causal-same-message.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 129520,
-      "sha256": "48f4c4e714875056873dac144e5847929bd736032039319ede5c7fc002fc1614",
+      "bytes": 130672,
+      "sha256": "db51a81d786c42fa52e5786b16edb4550144daa06650a699b0b63089e2bedcbd",
       "sha256_matches": true
     },
     {
@@ -328,8 +328,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/causal-stage-times.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 124653,
-      "sha256": "8cf7f66a3e0a8ea3583d41bd612f7bf3bf8844f98f68c1c0449d55fbabe0d821",
+      "bytes": 125805,
+      "sha256": "04dbb26a44fadc7df4ae78f93b797722e2befb1df757bafd93132b3e0ec749be",
       "sha256_matches": true
     },
     {
@@ -337,8 +337,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/comparison.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 143395,
-      "sha256": "ca636903f17d9ff278d307c6dfb730f5f1276f4736480d0a54c7cb0f2e8899cc",
+      "bytes": 144547,
+      "sha256": "416ddba3d99663d2195bcb0cdda829d16d423025b7f24be53edd8fb029797e13",
       "sha256_matches": true
     },
     {
@@ -346,8 +346,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/connection-memory.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 129993,
-      "sha256": "48d685592ba9398756c25f2e0a4f350ea4f7b2d31633cf848332b233cfc15289",
+      "bytes": 131145,
+      "sha256": "bc9d59a3d525cd8b5b366659bee53ce6cac6e97862080526f4f280c29d094c99",
       "sha256_matches": true
     },
     {
@@ -355,8 +355,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/credit.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 116500,
-      "sha256": "db537b6cb3087081834e20d7377b50b25b196eccd235a7da40b827f2b2393b97",
+      "bytes": 117652,
+      "sha256": "32dce4056eddb2f6b979fd4f25debd2e769bf0766b080c09900903a0678074fb",
       "sha256_matches": true
     },
     {
@@ -364,8 +364,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/font.woff2",
       "status": 200,
       "content_type": "font/woff2",
-      "bytes": 85860,
-      "sha256": "c52cbec30e71369ba52550a3e3d9616bc5ff50604a28c48b9130953678dbd98d",
+      "bytes": 86724,
+      "sha256": "e5edfb29f8d19dec46257ca303b0dbf65134d15f9ec027fde03cc84d16c0ed5e",
       "sha256_matches": true
     },
     {
@@ -373,8 +373,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/mixed-backlog.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 146625,
-      "sha256": "c65067e925e6718e2c49ea410046fde58ab96f37abf554deedbd6130ab5bdcf3",
+      "bytes": 147777,
+      "sha256": "6a72f9c5906a736022c86cf09424fc34bc384edad98800e9d65d15378fadb71d",
       "sha256_matches": true
     },
     {
@@ -382,8 +382,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/mixed-matched.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 146191,
-      "sha256": "25238b20a782a562f0191ec3cd0e239ae8b5e6de1c03ee673fbc0558d869dcb6",
+      "bytes": 147343,
+      "sha256": "9e94c3cc0d16e77716b303ac00af691ecaf5bb1623b04be4b9bb557b1f44f4c6",
       "sha256_matches": true
     },
     {
@@ -391,8 +391,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/mixed-primary.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 158023,
-      "sha256": "39f6848ceb942c4c6c1893bdb2c8be252de8b539783c31b4e6eda3bc8801d4d6",
+      "bytes": 159175,
+      "sha256": "4c00d2cfbf40e6118e1dc7f1e5e5eddc786eb74e5602885a4f6a31fba222f637",
       "sha256_matches": true
     },
     {
@@ -400,8 +400,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/mixed-recovery.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 150904,
-      "sha256": "f11182f5eada59313ec2099fa905c1ccfcb02950ffcbbd8bbc0b360e261105b0",
+      "bytes": 152056,
+      "sha256": "35ffb3113a59346b007ed122b429a6fb86aecb3201c267a8d7fb207e3ec4b3dd",
       "sha256_matches": true
     },
     {
@@ -409,8 +409,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/mixed-resources.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 151473,
-      "sha256": "a2c56d965ccc0da6dddcfc5329f0d56a2a756edc9fe49905189882f8d1a1eb20",
+      "bytes": 152625,
+      "sha256": "29760190b7d398560c55b524aac19eddc4066fcb2c1bef5de51465712f9ddb7e",
       "sha256_matches": true
     },
     {
@@ -418,8 +418,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/mixed-soak.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 172311,
-      "sha256": "d6a3e3b477064b8eb2e808eb80ea2dfe5b911fdb7df3b81a0a474fe332a2f6e1",
+      "bytes": 173463,
+      "sha256": "843537054170f1a106169ba0da5259f8c5e419f6a2f80edf8d7ad9124b18a939",
       "sha256_matches": true
     },
     {
@@ -427,8 +427,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/mixed-writer.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 121129,
-      "sha256": "b2fa733ea9148e9829aaba37fa2406340b8b1a4758a8a46fd51ad7097860df2d",
+      "bytes": 122281,
+      "sha256": "674192b92056b4bf3f36cfb5283b473c0725c668149c871e80940803ef692717",
       "sha256_matches": true
     },
     {
@@ -445,8 +445,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/rabbit-gateways.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 119205,
-      "sha256": "72d349e837ecbccc5a5bb414d2ca52361299bd2a80f7de10a7a627523d87b5f5",
+      "bytes": 120357,
+      "sha256": "1ae42717a3b37a3c00ba0e191aeb310f8bedf98225f9c91dd4fa2336705e2547",
       "sha256_matches": true
     },
     {
@@ -454,8 +454,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery-timeline-37.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 177546,
-      "sha256": "4bbef852e0e1ca3f7db72eb075ec561191a68f80120b690a26b4d51948437df2",
+      "bytes": 178698,
+      "sha256": "1c3e4da0270d4a6528724d55788d4601f4183bd97cc3d6b3ed9dbd80f3b96408",
       "sha256_matches": true
     },
     {
@@ -463,8 +463,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery-timeline-38.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 169077,
-      "sha256": "c62e808f126ba3f65ba31c6ae3520680984bcc5432c2658e75440ec969300362",
+      "bytes": 170229,
+      "sha256": "4d2cfcccc6a4e6d48390f153053d5f01458e19ff59866e7efeaa277b7599ea15",
       "sha256_matches": true
     },
     {
@@ -472,8 +472,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery-timeline-39.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 182001,
-      "sha256": "00aaec45f831808b4ea8907a1a064cc39cda33699864b80608eaba84799a04a6",
+      "bytes": 183153,
+      "sha256": "acc246ddcde742ee69086e99bd293290fd99d993596868cf7d14e5bc26359417",
       "sha256_matches": true
     },
     {
@@ -481,8 +481,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery-timeline-40.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 196724,
-      "sha256": "b38cba274a15ddc7a4bbb6bdf3c61da9413984edefa58322438caa55e502ee3e",
+      "bytes": 197876,
+      "sha256": "497f8308630abd829e90a463addaf6caf7bc9d9ca990437c8bd175cca5962ea4",
       "sha256_matches": true
     },
     {
@@ -490,8 +490,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery-timeline-41.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 170412,
-      "sha256": "1b28e92e42767cf8e7c336ae997b9abea543f1d3f3e54b77fb816e77394da538",
+      "bytes": 171564,
+      "sha256": "e30fdb843b17eed60422c7d5e34daaea19fb4f963483ab79da43253e7aeced0e",
       "sha256_matches": true
     },
     {
@@ -499,8 +499,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery-timeline-42.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 175166,
-      "sha256": "aac3a56254f552fa309efb9d9856ea6ab6cd7a7172b02a5e354323a3107721a5",
+      "bytes": 176318,
+      "sha256": "34491d9544e6c267985a2950696807a7b444ebcae67c824aa70bfd5466fad595",
       "sha256_matches": true
     },
     {
@@ -508,8 +508,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery-timeline-43.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 201939,
-      "sha256": "8aa3129cb24ba37a460bf142efdb06231322c1a2ceb987a3d7426b07657cce9d",
+      "bytes": 203091,
+      "sha256": "aa2f630ae6fb91153de8ccb758cea50c3add9acce459c38af54b32a28ed07943",
       "sha256_matches": true
     },
     {
@@ -517,8 +517,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/recovery.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 144669,
-      "sha256": "00c86888ed9584df4275648aaf6c6f50e408aa6d51b380423e0525d3f8675802",
+      "bytes": 145821,
+      "sha256": "408e1e9be4be45602d875a5bcf857fd467fa3459f2e3a9074f5865c0f1aafd08",
       "sha256_matches": true
     },
     {
@@ -526,8 +526,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-amplification.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 141219,
-      "sha256": "86369fa362cc932664fba33d0d8d37ef10deb79805980767f4d5cb231ec2d962",
+      "bytes": 142371,
+      "sha256": "8065cfb851bd5dfddeab4dff1cc13d3a2fc09cec13c5efd43eaad201f5c6456f",
       "sha256_matches": true
     },
     {
@@ -535,8 +535,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-final-cost.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 141253,
-      "sha256": "f105171638216346008dfc68b70e45423a1c8136b413c8de08b87dff093545b2",
+      "bytes": 142405,
+      "sha256": "dd4c6b16f23d354f1e434e53f990e280f1c024ec11c1b4bbfc99b3e73b4b2ca4",
       "sha256_matches": true
     },
     {
@@ -544,8 +544,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-final-fanout.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 158649,
-      "sha256": "b0ba6b2fd1078e77ffb56471a1dad355e8654f84af125952360e9d5c8bee32b5",
+      "bytes": 159801,
+      "sha256": "9f2b6b1e7a1f31462cea8825e4e872d862fd46940435c9afcf61e53a8f8d2e2e",
       "sha256_matches": true
     },
     {
@@ -553,8 +553,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-final-outcomes.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 146028,
-      "sha256": "0d10034874d941af626087d33fc586cd6d865b0ecb16a279f285c5b38681819c",
+      "bytes": 147180,
+      "sha256": "c85ae0b924531a5514d81a4245d68e434ede5c84461911922de94aab481d5a3e",
       "sha256_matches": true
     },
     {
@@ -562,8 +562,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-final-primary.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 147756,
-      "sha256": "15cb399990029babd32d6884b73ec9a5576c9938ef9b410646615cf4bf128e01",
+      "bytes": 148908,
+      "sha256": "18d66ab58283c733ed2e73eac2c5d59d3bc1c56069804709b22d4b351999e053",
       "sha256_matches": true
     },
     {
@@ -571,8 +571,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-final-throughput.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 155140,
-      "sha256": "c2026e288a50ab558c6bcfa1f5a38129ea716b7b705df0d6b8276b0e2499bd7e",
+      "bytes": 156292,
+      "sha256": "89f25ce3289dca0d578f1a01c53621f64f4f0c026d34176ffd8c42e86ce20b72",
       "sha256_matches": true
     },
     {
@@ -580,8 +580,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-idle.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 137450,
-      "sha256": "2cc200fd0b364bd3c29f92bf413f94e4587c2ab58b8454c8d052e608a8a928c0",
+      "bytes": 138602,
+      "sha256": "ec42093b62a83fb87cd5ab6791d5b0772a2c36eec29702b83ec7119fc598c09b",
       "sha256_matches": true
     },
     {
@@ -589,8 +589,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-memory-cost.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 134957,
-      "sha256": "7072eba6344a421ca822fc2ce0b5f8b9745c0da91ff677efd3bc3167912ae8b5",
+      "bytes": 136109,
+      "sha256": "c8da5b1d5bbe17dba6606ec7d0c21d3617759cfd04243d8a63d8a272f7aff920",
       "sha256_matches": true
     },
     {
@@ -598,8 +598,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-memory-outcomes.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 132464,
-      "sha256": "ab68f6915e6d1e262edd32a9278372aed4f003d06a1bb12e3db0bf94c104c515",
+      "bytes": 133616,
+      "sha256": "5fb36c8e51c5d431462a4f5be84a19c5399e54311eac238be29ec421abe5fcf6",
       "sha256_matches": true
     },
     {
@@ -607,8 +607,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-memory-primary.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 134330,
-      "sha256": "58fa73f664dfc5d3398bbc5c8b32676abbac5867a42383acf5b21a76db068d91",
+      "bytes": 135482,
+      "sha256": "4f386c45d333d3a3abcfb84d4c0fab2af5838e580f16652c56b432edca537ba0",
       "sha256_matches": true
     },
     {
@@ -616,8 +616,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-primary.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 165789,
-      "sha256": "4b513d5408010f1c4ecfd3ea00c0f61c33301da04a98afd071c7adf0fab1f2d9",
+      "bytes": 166941,
+      "sha256": "de1448604bf51dc1deda29dcad973abff82d85b63ad61ba94cee0b856f17cbbd",
       "sha256_matches": true
     },
     {
@@ -625,8 +625,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/scale-throughput.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 137550,
-      "sha256": "5763de1ee2f86c29341bf30fb78f08e9555d4b6719b4700aa0de6dc49362b804",
+      "bytes": 138702,
+      "sha256": "54a34398f19c6ae583b5e83e55e10c90d5d1450ae2c9e16db2f5713f37d24a98",
       "sha256_matches": true
     },
     {
@@ -634,8 +634,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/assets/shared-live-architecture.svg",
       "status": 200,
       "content_type": "image/svg+xml",
-      "bytes": 118938,
-      "sha256": "883b75aa92f239382ebd91283c7d09263933255bd1962ffa6ebd3c87b8a8c05a",
+      "bytes": 120090,
+      "sha256": "35f3bb0882313e950d924bef85f244b050ab231db3d90a8f859db3f1f82341a8",
       "sha256_matches": true
     },
     {
@@ -779,7 +779,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 2567,
-      "sha256": "26cd9e5b6c5e517ed1e63c4cee9472c95c8d4f8cfce0dce767106e2939397529",
+      "sha256": "ea6ee4e01def33efeb8ee7ae49b216e250caab311b23c3a0bd96ffb00d618088",
       "sha256_matches": true
     },
     {
@@ -788,7 +788,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 3998,
-      "sha256": "3626be7083c8bf804f1f9a42fc6b035019dcbf7d5d65f3cf26504bcdb4ad2bd7",
+      "sha256": "e0ae83f87cd5c68f178aa6a22a3a6bb1d7b0a80616654d91368dd0def745b420",
       "sha256_matches": true
     },
     {
@@ -797,7 +797,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 3817,
-      "sha256": "31e03008944d922320b93cbf0157e5183e7e49ebe3cfcd67a3d93be45c390a2f",
+      "sha256": "5061c843360453738ef0b92d34edba87b2d65838581e5369d511b75355eede64",
       "sha256_matches": true
     },
     {
@@ -806,7 +806,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 29338,
-      "sha256": "279e298a954f479d63488989bcae6a090147590773ec7dfac215174a9a0cc1bf",
+      "sha256": "4f49cde7ac37a2dd611df6b55b1679e5c32b723e791b867aa26e935b17405e08",
       "sha256_matches": true
     },
     {
@@ -815,7 +815,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 9211,
-      "sha256": "27cfc327cb4f7379f99a2c894a477f30be28b56f8f512bb99b7cac40282c0f6d",
+      "sha256": "e3eaa5842288d99a4412f3e50a631eb090c5d907208164f4a05655871288eb95",
       "sha256_matches": true
     },
     {
@@ -824,7 +824,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 13940,
-      "sha256": "bb26a6379716a6e6537cbdb1dc3d5c05e21d30c9f447a4007539291ddc7f3020",
+      "sha256": "04a8345ce6f2875cca943513c6f6474be5359f3e1e7f1503e859af8ec366e5ee",
       "sha256_matches": true
     },
     {
@@ -833,7 +833,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4255,
-      "sha256": "831d61cdb661935f0f5b27c6dcf5d407f4a3f886ce45aa01087beaa557b1a0a8",
+      "sha256": "7472360f201698c98274d38c6fe49eb3137808c452044312a1e88cc551832b4e",
       "sha256_matches": true
     },
     {
@@ -842,7 +842,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 2006,
-      "sha256": "a3e1db10f444b9f174a1d73ef955ad0bd47114e0148f22a8ed9254f02c1c39dd",
+      "sha256": "d31105b9e10295fdf5e8524c86e26c4a4d89d19e597520a61aea7ecaf58b4c74",
       "sha256_matches": true
     },
     {
@@ -851,7 +851,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 12410,
-      "sha256": "5edf9faf1b591872b02398a7d522e645c1a94f0910558695e7fc259f1c2abf09",
+      "sha256": "c1f01e9f9c1a1b5909fe97177a9a65a46a287745387536b45618328436be87ca",
       "sha256_matches": true
     },
     {
@@ -860,7 +860,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 7794,
-      "sha256": "22d9833cc0b84145c9efc244cad4062a26af79e683402a3734525d6abe0874a0",
+      "sha256": "1f324291cccc3b457743c013a8bc44030dcfd571c917e728ed80b2cef6e0d49c",
       "sha256_matches": true
     },
     {
@@ -869,7 +869,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 2208,
-      "sha256": "70fb845185eaba47f9fef1c52010e72cc48722d7a434a621129f2e3884b86f7b",
+      "sha256": "7a76c9217026af94504108930dcc96a2aec41a345570ee42f9ab2926014418aa",
       "sha256_matches": true
     },
     {
@@ -7528,8 +7528,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/review/report.json",
       "status": 200,
       "content_type": "application/json; charset=utf-8",
-      "bytes": 112086,
-      "sha256": "dd53333b929d7b5359b1e2cc8c5b5b105f766d8939697d669c71b4ef8a3f85b6",
+      "bytes": 112419,
+      "sha256": "3e114d6962709c03f8d3a97e27354f431a6608adc4e43c0a610e4b6c1a72eacb",
       "sha256_matches": true
     },
     {
@@ -7573,8 +7573,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/execution.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 24500,
-      "sha256": "d20f222576d57119bae06e61faa31096ae3767b54d78b2fcd6f2130aad6966ec",
+      "bytes": 24907,
+      "sha256": "99ef75361a3644d1f3b5bb6cd9bc4a401e0db0ed3e113faec456643708762025",
       "sha256_matches": true
     },
     {
@@ -7582,8 +7582,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/final.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 25359,
-      "sha256": "ab87e615eb29f1ac5b4d2eb8a32bb4ec0011bb60ea4d45cf6f948595ad4ed907",
+      "bytes": 25549,
+      "sha256": "3b5b0067715dbc07295e2f820bcece278eae972deece65d2e1b5775fd5d17125",
       "sha256_matches": true
     },
     {
@@ -7591,8 +7591,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/inventory.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 25273,
-      "sha256": "965eeb09b30aaff90ec87031471fc9804eeb8d5192be846c0b9212568a5f115c",
+      "bytes": 25426,
+      "sha256": "6cb894e257df3e760b6ca1bf974d5bdcce2f2ad314c5a27698d084478eed3ecb",
       "sha256_matches": true
     },
     {
@@ -7600,8 +7600,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/overload.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 20068,
-      "sha256": "1bc7821ce6c79a3844b881a8d91b02817a4cfcd92cdce4a5b4ee9c4e12f26e42",
+      "bytes": 20179,
+      "sha256": "413c453ad2bd670c5731bde06b1aa9b684470915c8f136820ac13a8666814e94",
       "sha256_matches": true
     },
     {
@@ -7609,8 +7609,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/purchases.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 52720,
-      "sha256": "e7648a6991999b99f9f472349cdd8f5e7a9870899d9214594319efa59ecb9f5e",
+      "bytes": 52820,
+      "sha256": "09ea5f637be5d24f46315497212623f1b576d6af68a24b11e9cb799e862280f1",
       "sha256_matches": true
     },
     {
@@ -7618,8 +7618,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/reconciliation.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 26935,
-      "sha256": "86ef2bad9c7a26f7d9ee923acaa6c498bb5c564270ee65ecf9e443efab4e9fbb",
+      "bytes": 27048,
+      "sha256": "a778d9b857d47d2090540f7bfa42dc51a11adcea115a88da123603dede004d65",
       "sha256_matches": true
     },
     {
@@ -7627,8 +7627,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/recovery.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 17570,
-      "sha256": "b53e25fa8a6933b2294229659a7c922fcbc67c5e60a2cd94b57bf961e03bda7e",
+      "bytes": 17651,
+      "sha256": "1b4f229306453ade3d3890c1b07e2992838e3e7cbc1abd9d210e4a86e27ecb90",
       "sha256_matches": true
     },
     {
@@ -7636,8 +7636,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/retries.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 73922,
-      "sha256": "6dac4edeff047d726f27ffef8e80c8eead7b1a4c17223f23451fb32221b38897",
+      "bytes": 74107,
+      "sha256": "9d6aa9eeca54e72ab80c2c1a18961884fecf426cbc0538adf286ad9bddde5810",
       "sha256_matches": true
     },
     {
@@ -7645,8 +7645,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/terminal.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 16697,
-      "sha256": "57ba134856f5b68593e91a88e9cf356f001b2b3a5bf2d88cbbdae7834220663c",
+      "bytes": 16883,
+      "sha256": "b58adaeca2a7c36cf51e78fbb46b6a2318e2a5e725fbc5c0e23042df5739f107",
       "sha256_matches": true
     },
     {
@@ -7654,8 +7654,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/transactions.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 40843,
-      "sha256": "0dc0906b865cbe79c150c8919c8a6c4360be9f31a0fbdcbe5e1a3f9c1d54d11f",
+      "bytes": 41103,
+      "sha256": "c96f97aba922496807170be8a6bda3ef4731fe0f689713d7db0c4bb98afa5e16",
       "sha256_matches": true
     },
     {
@@ -7663,8 +7663,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/articles/verification.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 30832,
-      "sha256": "00e705de1ba2ede7cda38d3bdffc7d89417d684a10945ada83296eadd5b3803c",
+      "bytes": 30951,
+      "sha256": "5fee519642755c386f4d72ee83edf05d118598c94b26b783d0abb1dd1fb8c6e0",
       "sha256_matches": true
     },
     {
@@ -9950,7 +9950,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 7923,
-      "sha256": "29932a75545e4b5edac7eab5960a32bf475c34124ef4c3f21f003111949245fd",
+      "sha256": "d9a789bc4772bf9e39cee428c9b60e6d42b948e111ac0271832b673e23bf5eef",
       "sha256_matches": true
     },
     {
@@ -9959,7 +9959,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 2735,
-      "sha256": "f51246163fa6f4a5c796487200e6b7b0c66cdd3941fcc9c839ad1c1aa57006f9",
+      "sha256": "4fefdf27c2ef2fac541415de84403569425cdfb6304d7451dfa2c1e7050d92f4",
       "sha256_matches": true
     },
     {
@@ -10066,8 +10066,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/index.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 17835,
-      "sha256": "7e86ce4d110840629118baed921cdd0a5ecab620b5db3ef2c988c2ca1e588aab",
+      "bytes": 17910,
+      "sha256": "aaea5d249e43ef096cc4fabbe994b395280d1c2be0a7daf6d89dea04d146064c",
       "sha256_matches": true
     }
   ],
@@ -10717,13 +10717,13 @@
     {
       "width": 1280,
       "route": "representative → actual list",
-      "top": 175.15625
+      "top": 112.15625
     },
     {
       "width": 1280,
       "route": "root → StoryBridge list",
       "cards": 11,
-      "top": 112.15625
+      "top": 125.15625
     },
     {
       "width": 1280,
@@ -10758,12 +10758,12 @@
     {
       "width": 1280,
       "route": "storybridge/articles/reconnect.html → list",
-      "top": 195.15625
+      "top": 175.15625
     },
     {
       "width": 1280,
       "route": "storybridge/articles/recovery.html → list",
-      "top": 175.15625
+      "top": 194.15625
     },
     {
       "width": 1280,
@@ -10819,7 +10819,7 @@
     {
       "width": 390,
       "route": "storybridge/articles/mixed-runs.html → list",
-      "top": 162.984375
+      "top": 163.984375
     },
     {
       "width": 390,
@@ -10844,12 +10844,12 @@
     {
       "width": 390,
       "route": "storybridge/articles/scale.html → list",
-      "top": 162.984375
+      "top": 163.984375
     },
     {
       "width": 390,
       "route": "storybridge/articles/shared-fanout.html → list",
-      "top": 162.984375
+      "top": 163.984375
     },
     {
       "width": 390,
@@ -10937,7 +10937,7 @@
     },
     {
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/index.html#articles",
-      "top": 189.609375,
+      "top": 190.609375,
       "cards": 11,
       "images": [
         {
@@ -10977,7 +10977,7 @@
     },
     {
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/index.html#articles",
-      "top": 190.609375,
+      "top": 189.609375,
       "cards": 11,
       "images": [
         {
@@ -11017,7 +11017,7 @@
     },
     {
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/index.html#articles",
-      "top": 186.765625,
+      "top": 187.765625,
       "cards": 11,
       "images": [
         {
@@ -11117,8 +11117,8 @@
     }
   ],
   "source_content_checks": 664,
-  "mogu_preserved_commit": "1a3cf2eab0efb460dd2c1602d19ac8ddaa3a2518",
-  "manual_review": "Read source prose across all 11 articles and desktop/mobile captures. Read deployed representative summary and selected changed paragraphs, guide/list, tables and graphs at 1280px and 390px. Technical terms, numeric evidence, code and approved architecture were retained.",
+  "mogu_preserved_commit": "083083ff5943fa0752d7c1e345f3f53b16312411",
+  "manual_review": "Source: read all 11 first screens and six revised body passages in actual Chrome captures, after reviewing prose and corresponding source paragraphs. Public: read representative/guide, revised recovery-cost and reconnect findings, tables and graphs in desktop/390px captures. No new reflection section; technical terms, measured values, comparison scope and failure judgments retained.",
   "captures": [
     {
       "file": "public-root-1280.png",
@@ -11126,7 +11126,7 @@
     },
     {
       "file": "public-storybridge-list-1280.png",
-      "sha256": "ef4a6e731a11b43107f8631dbf70118fb03418650fa74725d8e345c43ae95b90"
+      "sha256": "1d1e892960f52600565651522414e43c439cf3451c73d01b2c1eb6f0c04e1294"
     },
     {
       "file": "public-storybridge-guide-1280.png",
@@ -11138,7 +11138,7 @@
     },
     {
       "file": "public-reconnect-runs-summary-1280.png",
-      "sha256": "1762fb3338c70f1453748c3c4b566fcf0e11329dcf160c3bdea6d441477d9ed4"
+      "sha256": "f2f3bcd61bff5a935badecdc5f46fa282a3626887c2bdfefe353b445bc1cd06a"
     },
     {
       "file": "public-reconnect-opening-1280.png",
@@ -11150,11 +11150,11 @@
     },
     {
       "file": "public-reconnect-p99-1280.png",
-      "sha256": "5b2d3283e70a63dcc0f3bf8195b5378f73ab300be106be4e521c448557d35690"
+      "sha256": "b2505c6019e57efb26eb425ae9771d1f22b0d22eba8bf6d57b3d9217511119af"
     },
     {
       "file": "public-reconnect-graph-1280.png",
-      "sha256": "fbfd83d09d2c602bc353ead97f2dad9f264e3397c7d171e6272f94936665b6f4"
+      "sha256": "c67d69139358cc72cd03e5551987c29403d22706d2c475aa0b0313d07e5d2c40"
     },
     {
       "file": "public-reconnect-table-1280.png",
@@ -11162,11 +11162,11 @@
     },
     {
       "file": "public-mogu-representative-1280.png",
-      "sha256": "f44345ff7ff0c00a56e311a5d482f7161d224c4bdf5cc3c0b9df9b26e39be333"
+      "sha256": "e11c2adfb0f00488fefc2af14fa19daecf8791a163b893b8f96cbcc9582f2694"
     },
     {
       "file": "public-mogu-list-1280.png",
-      "sha256": "c10e08ea00d79290547cd3231dce002b2f50c6d499692f59ec6a1752870ff7e5"
+      "sha256": "e1793e53bc56998659a8eb81ca4c11a86b5a02628d7262ae6a60801e47e3e16c"
     },
     {
       "file": "public-root-390.png",
@@ -11174,7 +11174,7 @@
     },
     {
       "file": "public-storybridge-list-390.png",
-      "sha256": "4e99d4c686b46f7fa6d36800b2438e33848fd315f8a5dd8df0cc6ebfe1b386a2"
+      "sha256": "c09a6d745c0bfacdf56d3e203d005715b146f24d1e7c944412ced781564f15df"
     },
     {
       "file": "public-storybridge-guide-390.png",
@@ -11186,7 +11186,7 @@
     },
     {
       "file": "public-reconnect-runs-summary-390.png",
-      "sha256": "f627b1976a42d179f9fd93c964db452e1e33b168eb23f16bf9a26889aa0f3d59"
+      "sha256": "7310cdc0e4807c1bc71733fe73182da3691c3f2e29cbef3f24c5d1eb465e0416"
     },
     {
       "file": "public-reconnect-opening-390.png",
@@ -11198,11 +11198,11 @@
     },
     {
       "file": "public-reconnect-p99-390.png",
-      "sha256": "7aeb799c205cfc0e0ee13da393d6610adef8d5bdc3cd8be48c68f7d5bb0e03ef"
+      "sha256": "1a69670889708b5bed22cee430f12463c4529e15b4cf45acf929d6ad13d6cd84"
     },
     {
       "file": "public-reconnect-graph-390.png",
-      "sha256": "9794cd9d1c91f5a3d0e7f22add831237adc5ef44182354fadca9230ec8ef9195"
+      "sha256": "a0e5fc75e898a14b813c0ea95a98582870c05a438e5a2703e533a65ef1230374"
     },
     {
       "file": "public-reconnect-table-390.png",
@@ -11210,17 +11210,41 @@
     },
     {
       "file": "public-mogu-representative-390.png",
-      "sha256": "d3dd89af773392a00e381b9b29994543661fffeceb41db4e2a70d7ef587fe40d"
+      "sha256": "273fba68d7ae8d9ced66ecfe6f2141148f005def5e954245e50a08b562667f6f"
     },
     {
       "file": "public-mogu-list-390.png",
       "sha256": "567b78ea0aaba71e34c4ff544104ccdd1e07fcd949336daabf78efdc81756c91"
+    },
+    {
+      "file": "public-decision-mixed-1280.png",
+      "sha256": "c82ac67bc243c9a8b0a03f6764cbe8cdaa5611afcb2f560292e21c0ee782f153"
+    },
+    {
+      "file": "public-decision-mixed-390.png",
+      "sha256": "728402819ee9852b5cf90d0ac4303272122419c6995a85ac5947b5c219ca04ee"
+    },
+    {
+      "file": "public-decision-reconnect-1280.png",
+      "sha256": "f243d39a20ae4d646f4b0634274ce8d38ffe81d7fb75151b22e85635404b2fa5"
+    },
+    {
+      "file": "public-decision-reconnect-390.png",
+      "sha256": "fa5afa6b435e1dccb438e1ab6fada410eecfc5aae364bd05c70ccbac40ffb35c"
+    },
+    {
+      "file": "public-decision-shared-fanout-1280.png",
+      "sha256": "7f39b9b6e6e824f524fa6042a27bdb9717241249e77756ad3d5ec9213395964f"
+    },
+    {
+      "file": "public-decision-shared-fanout-390.png",
+      "sha256": "d69945e50485cab03cee59de3641f99b08871a2274e52fdaeb49b42d35db9d5f"
     }
   ],
   "limits": [
-    "Chrome on Windows; other browser engines and physical print pagination were not reviewed.",
-    "No performance or fault experiments were rerun.",
-    "Third-party official URLs were unchanged; their previous checks were not rerun in this prose-only revision."
+    "Chrome/Windows only; no other engine or physical print pagination review.",
+    "No new performance or fault experiments.",
+    "Third-party URLs unchanged; prior official-source checks not repeated in this prose-only revision."
   ],
   "errors": [],
   "passed": true

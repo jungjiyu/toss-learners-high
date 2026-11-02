@@ -4298,12 +4298,6 @@
   ],
   "browser_errors": [],
   "runtime_errors": [],
-  "manual_review": {
-    "prose": "Read all 11 articles from opening through body, limitations, appendix prose and captions, not only the previously edited 42 paragraphs. Reviewed all revised paragraphs again in context.",
-    "body_captures": "Actual Chrome captures from all 11 articles at 1280px/390px: .scratch/whole-flow-screens/. Read one width per article plus surrounding paragraphs, SQL and tables.",
-    "opening_captures": "Read guide and reconnect first screens in actual desktop/mobile captures.",
-    "scope": "106 paragraphs revised; 97 outside the previous 42-paragraph set. Technical vocabulary, measured values, failure denominators, source tables/code/figures and architecture retained.",
-    "limits": "Chrome/Windows; 768px and print media checked automatically. No physical print pagination or other engine review; no new load tests."
-  },
+  "manual_review": "Read the revised openings of all 11 articles and the guide in actual Chrome screenshots; read storage snapshot, shared-fanout tradeoffs, mixed boundary and reconnect adoption paragraphs with surrounding SQL/results. Compared all 76 revised paragraphs as text. Desktop and 390px manual reading; 768px and print-media structural checks. No other engine or physical pagination review.",
   "scope": "Static documents only; no performance or fault tests; print media, no PDF."
 }

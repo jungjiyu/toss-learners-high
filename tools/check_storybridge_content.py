@@ -36,7 +36,7 @@ for x in m['files']:
   checks.append({'path':x['published_path'],'check':kind,'passed':ok})
 # A concurrent, independently published Mogu prose revision was merged intact.
 # Compare its exact tree and manifest, rather than rejecting that user's update.
-MOGU_BASE='083083ff5943fa0752d7c1e345f3f53b16312411'
+MOGU_BASE='fa759a2ccfc9236b1c9cf25c6f145f2a41b0d5a4'
 assert not subprocess.check_output(['git','diff',MOGU_BASE,'--','mogu','publication.json'],cwd=R),'Latest published Mogu changed'
 result={'source_commit':m['source_commit'],'checks':checks,'passed':all(c['passed'] for c in checks),'existing_mogu_content_unchanged':True,'mogu_preserved_commit':MOGU_BASE}
 (R/'.review/content.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

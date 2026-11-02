@@ -6,53 +6,55 @@
 <body><a class="skip" href="#content">본문으로</a>
 <header class="site-header"><a href="../index.html">VLOps · Backend Engineering</a><a href="../index.html#articles">글 목록</a></header>
 <main id="content"><article aria-labelledby="article-title"><p class="eyebrow">VLOPS · GPU 작업의 생성·재연결·자원 회수</p>
-<h1 id="article-title">GPU 작업 생성 응답을 잃었을 때, 다시 만들어도 될까</h1><p class="lead">GPU 작업 생성 API를 호출한 뒤 응답을 받지 못했다면, 호출한 쪽에서는 작업이 만들어지지 않았는지, 이미 실행 중인데 응답만 끊겼는지 알 수 없었다. 여기서 생성 요청을 그대로 재시도하면 같은 모델을 서빙하는 GPU 작업이 하나 더 생길 수 있었다. VLOps에서는 생성 전에 식별자를 저장하고 원격 작업에도 전달해, 응답 없이도 기존 작업을 찾을 수 있도록 구현했다.</p>
-<nav class="toc" aria-label="이 글의 목차"><strong>목차</strong><ol><li><a href="#lost-response">작업은 생성됐지만 실행 ID는 모르는 상태</a></li><li><a href="#identity">응답을 받기 전에 준비한 식별자</a></li><li><a href="#submission">같은 평가 요청과 같은 GPU 작업은 다른 문제</a></li><li><a href="#reconnect">워커 재시작 후에도 같은 원격 Run으로</a></li><li><a href="#release">종료 요청과 회수 완료 사이</a></li></ol></nav>
-<section aria-labelledby="lost-response"><h2 id="lost-response">작업은 생성됐지만 실행 ID는 모르는 상태</h2>
+<h1 id="article-title">GPU 작업 생성 응답을 잃었을 때, 다시 만들어도 될까</h1><p class="lead">GPU 작업 생성 요청이 타임아웃됐을 때 가장 곤란한 점은 작업이 만들어졌는지 알 수 없다는 것이었다. 응답만 끊겼다면 GPU에서는 이미 모델을 로딩하고 있을 수 있었다. 이때 생성 API를 다시 호출하면 같은 작업이 하나 더 생긴다. VLOps에서는 생성 전에 ID를 발급해 DB와 원격 작업 양쪽에 남기고, 응답을 받지 못해도 이 ID로 기존 작업을 찾도록 구현했다.</p>
+<nav class="toc" aria-label="이 글의 목차"><strong>목차</strong><ol><li><a href="#lost-response">GPU 작업은 있는데 Run ID가 없는 상태</a></li><li><a href="#identity">GPU 작업 생성 전에 저장한 ID</a></li><li><a href="#submission">요청 접수와 Workflow 시작의 중복 방지</a></li><li><a href="#reconnect">워커 재시작 후에도 같은 원격 Run으로</a></li><li><a href="#release">종료 요청과 회수 완료 사이</a></li></ol></nav>
+<section aria-labelledby="lost-response"><h2 id="lost-response">GPU 작업은 있는데 Run ID가 없는 상태</h2>
 
-<p>NAVER Cloud에서 모델 서빙·평가 플랫폼을 개발할 때, 모델 서버를 띄우는 과정은 외부 GPU 플랫폼에 작업을 생성하고 준비 상태를 조회하는 방식이었다. 생성 응답의 원격 Run ID를 DB에 저장하면 이후 조회와 종료에 사용할 수 있었지만, 원격 생성과 DB 저장을 하나의 트랜잭션으로 묶을 수는 없었다.</p>
-<p>그래서 ‘원격에서는 생성됐지만 VLOps에는 Run ID가 없는 상태’를 별도로 다뤘다. 응답이 끊기거나 ID를 저장하기 전에 워커가 종료되면 생길 수 있는 상태로, 생성 실패라고 단정해서도 안 되고 실행 중이라고 기록한 채 기다리기만 해서도 안 됐다. 다시 조회할 때 사용할 식별자가 필요했다.</p>
-<p>이 상황은 <strong>가짜 GPU API 서버가 작업을 생성한 직후 오류 응답을 반환하도록 한 테스트</strong>로 검증했다. 확인할 조건은 재시도가 성공했는지에 그치지 않았다. 생성 API가 한 번만 호출됐고, 원격 작업도 하나만 존재하며, VLOps가 그 작업의 ID를 되찾았는지를 함께 확인했다.</p>
+<p>NAVER Cloud에서 모델 서빙·평가 플랫폼인 VLOps를 개발했다. 모델 서버를 띄울 때는 외부 GPU 플랫폼에 Run 생성을 요청하고, 응답으로 받은 Run ID를 DB에 저장한 뒤 상태 조회와 종료에 사용했다. 원격 작업 생성과 DB 저장은 하나의 트랜잭션으로 처리할 수 없었다.</p>
+<p>생성 응답을 잃거나 Run ID를 저장하기 전에 워커가 종료되면, GPU 작업은 존재하는데 VLOps는 그 ID를 모르는 상태가 됐다. Run ID는 응답을 받아야 알 수 있었으므로, <strong>생성 요청 전에 발급할 수 있는 별도의 ID</strong>가 필요했다.</p>
 
-</section>
-<section aria-labelledby="identity"><h2 id="identity">응답을 받기 전에 준비한 식별자</h2>
-
-<p><strong>원격 작업을 만들기 전에 VLOps DB에 실행 자원 레코드를 생성하고, 그 ID를 원격 작업의 식별 표식으로 사용했다.</strong> 이 레코드는 해당 작업 시도와 연결해 저장했으므로, 같은 작업의 시작 처리가 다시 호출돼도 새 자원 레코드를 만드는 대신 기존 것을 읽을 수 있었다.</p>
-<p>전용 GPU Run API 연동에서는 이 ID를 생성 요청의 메모와 환경 변수에 함께 넣었다. 원격 Run ID가 아직 없더라도 작업 목록에서 표식을 대조할 수 있었고, 이미 ID를 저장한 경우에는 목록 검색 없이 해당 Run을 바로 조회했다.</p>
-<figure class="architecture"><a class="figure-image" href="../assets/diagrams/runtime-recovery.svg" aria-label="생성 응답 유실 후 식별 표식으로 기존 GPU 작업을 찾는 순서 확대"><picture><source media="(max-width: 620px)" srcset="../assets/diagrams/runtime-recovery-mobile.svg"><img src="../assets/diagrams/runtime-recovery.svg" alt="생성 응답 유실 후 식별 표식으로 기존 GPU 작업을 찾는 순서" loading="lazy"></picture></a><figcaption>원격 생성 전에 저장한 표식이 응답 유실 전후를 연결했다. 생성 응답을 잃은 경로에서는 목록 조회로 기존 작업을 찾았다. <a class="diagram-enlarge" href="../assets/diagrams/runtime-recovery.svg">확대 보기 ↗</a></figcaption></figure>
-<p>처음 시작할 때는 저장된 Run ID가 있는지 확인하고, 없다면 표식으로 기존 작업을 검색했다. 둘 다 없을 때 생성 API를 호출하되, 그 응답이 불명확해진 뒤에는 같은 생성 요청을 즉시 반복하지 않았다. 대신 제한된 시간 동안 목록을 다시 조회해 표식이 붙은 작업이 나타나는지 확인했다.</p>
-<p>하나를 찾으면 그 Run ID를 저장해 이어갔고, 같은 표식이 붙은 작업이 여러 개면 충돌로 처리했다. 임의로 하나를 고르면 다른 GPU 작업이 관리 대상에서 빠질 수 있기 때문이었다. 제한 시간 안에 하나도 찾지 못한 경우에도 ‘생성되지 않았다’고 확정하지 않고 시작 실패를 반환했다. <strong>이 확인 과정에서는 생성 API를 다시 호출하지 않도록 했다.</strong></p>
-<p>테스트에서는 응답 유실뿐 아니라, 첫 프로세스가 작업을 만든 뒤 Run ID를 저장하지 못한 상황도 구성했다. 같은 VLOps 자원 ID만 가진 새 객체로 시작 처리를 호출했을 때 기존 Run ID를 복구하고, 생성 호출 수가 여전히 1인지 확인했다. 반대로 조회 끝까지 작업이 나타나지 않는 경우에는 오류를 반환하면서도 생성 호출을 추가하지 않는지 검증했다.</p>
-<p>이 방식은 원격 시스템이 생성 때 전달한 표식을 보존하고 조회할 수 있다는 조건에 의존했다. 따라서 모든 GPU 환경에 통용되는 원자적 생성 보장으로 취급하지 않았고, 표식을 찾지 못한 상태를 재생성의 근거로 삼지 않는 처리를 해당 API Adapter에 두었다.</p>
 
 </section>
-<section aria-labelledby="submission"><h2 id="submission">같은 평가 요청과 같은 GPU 작업은 다른 문제</h2>
+<section aria-labelledby="identity"><h2 id="identity">GPU 작업 생성 전에 저장한 ID</h2>
 
-<p>여기까지는 한 작업이 외부 GPU 플랫폼에 중복 생성되는 문제였다. 그보다 앞서 사용자가 평가 제출 응답을 받지 못해 다시 요청하거나, VLOps가 Temporal 시작 응답을 받지 못하는 경우도 구분해야 했다. 원격 GPU 표식만으로는 이 단계에서 실행 레코드가 두 개 생기는 것을 막을 수 없었다.</p>
+<p><strong>GPU API를 호출하기 전에 VLOps DB에 자원 레코드를 저장하고, 그 ID를 생성 요청에 넣었다.</strong> 작업 시도와 자원 레코드도 이때 연결했다. 같은 작업의 시작 처리가 다시 호출되면 이미 연결된 레코드를 읽어 같은 ID를 사용했다.</p>
+<p>전용 Run API에는 이 ID를 메모와 환경 변수로 전달했다. 생성 응답을 받지 못해도 원격 작업 목록에서 같은 ID가 붙은 Run을 찾을 수 있었다. 원격 Run ID까지 DB에 저장된 경우에는 해당 Run을 바로 조회했다.</p>
+<figure class="architecture"><a class="figure-image" href="../assets/diagrams/runtime-recovery.svg" aria-label="생성 응답 유실 후 식별 표식으로 기존 GPU 작업을 찾는 순서 확대"><picture><source media="(max-width: 620px)" srcset="../assets/diagrams/runtime-recovery-mobile.svg"><img src="../assets/diagrams/runtime-recovery.svg" alt="생성 응답 유실 후 식별 표식으로 기존 GPU 작업을 찾는 순서" loading="lazy"></picture></a><figcaption>생성 요청에 넣은 표식으로 원격 작업 목록을 검색했다. 응답을 받지 못했더라도 기존 Run을 찾으면 새로 생성하지 않았다. <a class="diagram-enlarge" href="../assets/diagrams/runtime-recovery.svg">확대 보기 ↗</a></figcaption></figure>
+<p>시작 코드는 DB에 Run ID가 있는지 먼저 확인하고, 없으면 VLOps 자원 ID를 표식으로 기존 작업을 검색했다. 둘 다 없을 때만 생성 API를 호출했다. 다만 호출 후 응답을 잃었다면 곧바로 다시 생성하지 않고, 제한 시간 동안 목록을 재조회했다.</p>
+<p>일치하는 Run이 하나라면 ID를 저장해 계속 사용하고, 여러 개라면 충돌로 처리했다. 임의로 하나를 선택하면 나머지 작업이 관리에서 빠지기 때문이었다. 제한 시간까지 찾지 못한 경우에도 생성되지 않았다고 단정할 수 없어 시작 오류를 반환했다. <strong>응답 유실 후 재조회하는 동안에는 생성 API를 다시 호출하지 않았다.</strong></p>
+<p>테스트에서는 가짜 GPU API 서버가 Run을 생성한 직후 오류 응답을 반환하게 했다. Adapter가 목록 조회로 원래 Run을 찾는지, <strong>생성 API 호출 수와 원격 작업 수가 모두 1인지</strong> 확인했다. 별도로 Run ID 저장 전 워커 재시작을 모사해, VLOps 자원 ID만 복원한 새 객체로 시작 처리를 호출해도 기존 Run에 연결되는지 검사했다.</p>
+<p>제한 시간까지 표식이 나타나지 않는 테스트도 추가했다. 이 경우에는 시작 오류를 반환하되 생성 API 호출 수가 1로 유지돼야 했다. 조회에 실패했다고 생성 요청까지 반복하지 않는지 확인하기 위한 테스트였다.</p>
+<p>이 방식은 원격 API가 표식을 저장하고 목록 조회에서 반환해야 사용할 수 있었다. 표식 조회와 생성은 원자적이지 않아, 이 방식만으로 동시 생성 요청까지 막을 수는 없었다.</p>
+
+</section>
+<section aria-labelledby="submission"><h2 id="submission">요청 접수와 Workflow 시작의 중복 방지</h2>
+
+<p>중복은 GPU 생성 단계에서만 생기지 않았다. 사용자가 평가 제출 응답을 받지 못해 재요청하거나, VLOps가 Temporal 시작 응답을 잃는 경우도 있었다. 이 단계에서 실행이 두 개 만들어지면 각각 다른 자원 ID로 GPU 작업을 생성할 수 있으므로, 요청 접수와 Workflow 시작에도 별도의 중복 방지가 필요했다.</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="단계별 중복 식별 방법"><table><caption>중복 여부를 판단한 대상과 식별자</caption><thead><tr><th scope="col">경계</th><th scope="col">확인할 대상</th><th scope="col">처리 기준</th></tr></thead><tbody>
 <tr><td>평가 요청 접수</td><td>같은 제출을 반복했는가</td><td>요청 ID와 내용의 fingerprint</td></tr>
-<tr><td>Temporal 시작</td><td>해당 실행의 Workflow가 이미 시작됐는가</td><td>같은 VLOps 실행 ID를 Workflow ID로 사용</td></tr>
+<tr><td>Temporal 시작</td><td>해당 실행의 Workflow가 이미 시작됐는가</td><td>VLOps 실행 ID에서 정한 고정 Workflow ID</td></tr>
 <tr><td>GPU 작업 생성</td><td>원격 Run이 이미 만들어졌는가</td><td>저장된 Run ID, 없으면 생성 전 식별 표식</td></tr>
 </tbody></table></div>
-<p>접수 단계에서는 요청 ID와 요청 내용의 fingerprint를 저장했다. 같은 ID와 같은 내용이면 기존 실행을 반환하고, 같은 ID에 다른 내용을 보내면 충돌로 거절했다. 내용이 같아도 다른 요청 ID로 제출하면 새로운 평가이므로, 이를 같은 실행으로 합치지는 않았다.</p>
-<p>실행과 작업들의 대기 레코드를 DB에 먼저 저장한 뒤 Temporal을 시작했기 때문에, 두 단계 사이에 실패하더라도 다음 요청은 기존 실행 ID로 이어갈 수 있었다. Temporal에도 이 ID를 사용해 시작을 요청했고, 이미 시작된 Workflow라는 응답을 받으면 같은 실행으로 처리했다. Temporal에 연결하지 못한 경우에는 접수 완료로 응답하지 않되, 저장해 둔 대기 레코드를 유지해 같은 요청으로 다시 시도할 수 있게 했다.</p>
-<p>접수 테스트에서는 응답을 잃은 클라이언트가 같은 요청을 재전송해도 실행·작업 레코드가 각각 하나이고 Workflow 시작도 한 번인지 확인했다. Temporal 시작을 실패시킨 뒤 같은 요청으로 다시 제출하는 테스트에서는, 처음 저장한 실행 ID를 유지한 채 시작할 수 있는지 확인했다. 이때 GPU 생성은 접수 함수가 아니라 이후 실행 단계에서 담당하도록 분리했다.</p>
+<p>평가 접수 시에는 요청 ID와 fingerprint를 저장했다. 같은 ID와 같은 내용이면 기존 실행을 반환하고, 같은 ID로 내용을 바꾸면 충돌로 거절했다. 내용이 같더라도 요청 ID가 다르면 사용자가 새 평가를 요청한 것으로 처리했다.</p>
+<p>DB에 실행·작업 레코드를 먼저 저장한 뒤 Temporal Workflow를 시작했다. 시작 요청이 실패해도 레코드는 남겨, 같은 요청이 다시 들어오면 기존 실행 ID를 사용하도록 했다. Temporal Workflow ID도 이 실행 ID를 기준으로 고정하고 ID 재사용을 거절하도록 설정했다. 따라서 이미 시작됐다는 응답을 받으면 기존 Workflow를 사용했다. 연결 오류로 시작 여부를 확인하지 못한 경우에는 접수 완료로 응답하지 않고, 같은 요청으로 재시도할 수 있게 했다.</p>
+<p>접수 테스트에서는 클라이언트가 응답을 잃고 재요청해도 실행·작업 레코드가 각각 하나이고 Workflow 시작도 한 번인지 확인했다. Temporal 시작이 실패했다가 복구된 경우에도 같은 요청으로 처음 발급한 실행 ID를 사용하는지 검사했다. 접수 과정에서는 GPU API를 호출하지 않고, 이후 Workflow 실행에서 생성하도록 했다.</p>
 
 </section>
 <section aria-labelledby="reconnect"><h2 id="reconnect">워커 재시작 후에도 같은 원격 Run으로</h2>
 
-<p>Run ID를 저장한 이후라면 복구에 필요한 정보는 달라졌다. 워커가 재시작해도 GPU 작업은 계속 실행될 수 있으므로, Temporal Activity를 다시 수행한다고 GPU 생성부터 반복해서는 안 됐다. 작업과 연결된 자원 레코드를 읽고, 저장된 Run ID로 원격 상태를 다시 관측하도록 했다.</p>
-<p>원격 조회에서는 실행 상태와 접속 정보를 갱신했다. 이전에 저장한 상태만 보고 완료를 결정하지 않았으며, 어떤 GPU 환경의 클라이언트를 사용할지도 해당 실행에 고정된 정의 버전에서 복원했다. 운영 중 설정의 최신 버전이 바뀌었다고 기존 자원을 다른 환경에서 조회하거나 종료하지 않도록 한 것이다.</p>
-<p>이 경로는 서비스 객체를 새로 만든 뒤 자원 ID만 전달하는 테스트로 확인했다. 새 객체가 DB의 생성 이력과 정의 버전에서 원래 실행 환경을 찾아 조회·종료할 수 있었고, 최신 정의가 달라져도 기존 자원에는 원래 버전을 사용했다.</p>
-<p>Temporal의 실행 이력은 Activity를 어디서 이어갈지 알려줬지만, 외부 GPU 작업이 지금도 존재하는지까지 보장하지는 않았다. 그래서 VLOps DB에는 작업과 원격 자원의 연결을 남기고, Adapter가 실제 GPU 상태를 다시 확인하도록 했다. 이 세 상태를 같은 것으로 취급하지 않아야 워커 복구가 원격 작업의 재생성으로 이어지지 않았다.</p>
+<p>Run ID를 저장한 뒤 워커가 재시작했다면 DB에서 이 ID를 읽어 원격 상태를 다시 조회했다. 워커가 종료돼도 GPU 작업은 계속 실행될 수 있으므로, 시작 Activity가 재실행된다는 이유로 새 Run을 만들면 안 됐다.</p>
+<p>상태와 접속 정보는 원격 조회 결과로 갱신하고, 사용할 GPU 환경의 설정은 해당 실행의 정의 버전에서 읽었다. 그동안 최신 정의가 바뀌었더라도 기존 Run을 조회·종료할 때는 생성 당시의 환경을 사용해야 했다.</p>
+<p>테스트에서는 서비스 객체를 새로 만든 뒤 자원 ID만 전달했다. DB의 작업·실행·정의 버전을 조회해 원래 환경을 복원하고, 그 환경에서 자원을 조회하고 종료하는지 확인했다. 최신 정의의 환경 설정을 바꿔도 기존 자원에는 영향을 주지 않아야 했다.</p>
+<p>Temporal은 Activity를 재실행할 수 있지만, 이전 호출에서 생성한 GPU 작업까지 찾아주지는 않았다. VLOps가 DB의 Run ID와 생성 전 표식을 관리하고 Adapter에서 원격 상태를 다시 확인해야, Workflow를 재개하면서 기존 GPU 작업을 계속 사용할 수 있었다.</p>
 
 </section>
 <section aria-labelledby="release"><h2 id="release">종료 요청과 회수 완료 사이</h2>
 
-<p>종료할 때도 API 응답만으로 처리를 끝낼 수는 없었다. 중지 요청을 보낸 뒤 워커가 종료되거나, 원격 시스템이 요청은 받았지만 아직 작업을 종료하지 않은 상태가 남을 수 있었기 때문이다. 그래서 <strong>회수하려는 의도는 원격 호출 전에 저장하고, 회수 완료 시각은 원격 종료를 확인한 뒤에만 기록했다.</strong></p>
-<p>회수 처리는 한 번에 끝나는 함수 대신, 원격 상태를 조회하고 필요하면 종료를 요청하는 단계로 구성했다. Run이 계속 실행 중이면 종료를 요청한 뒤 미완료를 반환하고, 다음 단계에서 다시 확인했다. 해당 API 연동에서는 Run이 종료 상태이거나 더 이상 존재하지 않는 것을 확인하면 회수 완료로 기록했다.</p>
-<p>조회나 종료 호출에 오류가 나도 회수 의도는 DB에 남고 완료 시각은 비어 있도록 했다. Temporal 경로에서는 이 상태를 바탕으로 후속 확인을 이어갔으며, 같은 회수 요청이 다시 실행돼도 이미 확인된 자원에는 불필요한 원격 호출을 하지 않았다. 여기서 확인한 것은 GPU 플랫폼이 제공하는 자원의 종료 상태였으며, 별도 과금 내역까지 대조한 것은 아니었다.</p>
-<p>가짜 제공자를 사용한 테스트에서는 회수 오류가 났을 때 의도만 남는지, 중지 요청 직후에는 완료로 기록하지 않는지, 이후 원격 자원이 사라졌을 때만 완료 시각을 채우는지 검증했다. 두 회수 처리를 교차 실행하는 경우에도 같은 자원의 회수로 수렴하는지 확인했다.</p>
+<p>종료 API도 호출 성공만으로 회수 완료를 기록할 수는 없었다. GPU 플랫폼이 요청을 받은 뒤에도 Run이 한동안 종료 중일 수 있고, 그 사이 워커가 재시작할 수도 있었다. 그래서 <strong>API 호출 전에 DB에 회수 대상으로 기록하고, 원격 종료를 확인한 뒤에만 회수 완료 시각을 저장했다.</strong></p>
+<p>회수 코드는 매번 Run의 상태를 조회했다. 실행 중이면 종료를 요청하고 미완료를 반환해 다음 호출에서 다시 확인하도록 했다. Run이 종료 상태이거나 더 이상 존재하지 않을 때만 회수를 완료했다.</p>
+<p>조회나 종료 호출에 오류가 나더라도 DB에는 회수 대상으로 남고 완료 시각은 비어 있도록 했다. 회수 Activity는 DB에 남은 상태를 읽어 처리를 재개하고, 이미 완료 시각이 저장돼 있으면 원격 API를 호출하지 않았다.</p>
+<p>테스트용 provider는 처음 두 번의 회수 호출에는 미완료를, 세 번째에만 완료를 반환하도록 했다. 두 번째 호출까지는 DB에 회수 대상으로 남아 있고 완료 시각은 비어 있는지, 세 번째에서만 완료 시각이 채워지는지 확인했다. <strong>provider 호출 전에 DB 저장이 끝났는지</strong>도 매번 검사했다. 호출 도중 워커가 종료되더라도 재시작 후 어떤 자원을 정리해야 하는지 알 수 있어야 했기 때문이다.</p>
+<p>자동 회수와 수동 회수의 호출을 교차시키는 테스트도 수행했다. 첫 호출은 종료를 요청하고 다음 호출은 종료를 확인했으며, 이후 다시 회수해도 완료 시각이 바뀌거나 원격 API 호출이 추가되지 않는지 검사했다.</p>
 
 </section>
 <nav class="next" aria-label="다른 VLOps 글"><p>VLOps의 설계와 실행 제어</p><a href="workflow-versions.html">대표 글: 평가 계획과 실행 버전</a> · <a href="../index.html#articles">전체 글 목록으로</a></nav>

@@ -64,3 +64,5 @@ python -X utf8 tools/verify_storybridge_live.py https://jungjiyu.github.io/toss-
 공개 검수에는 `playwright`와 설치된 Chrome을 사용한다(`python -m pip install playwright`). 브라우저는 쿠키·로그인 정보가 없는 새 컨텍스트로 연다. Pages는 기존과 같이 `main` 루트를 게시하며 `/mogu/` 주소는 유지한다.
 
 두 프로젝트의 안내 페이지는 SVG 크기를 HTML의 width/height에도 지정한다. 처음 접속할 때 이미지 로딩으로 `#all`·`#articles` 위치가 밀리는 것을 막기 위한 게시 처리이며 원본 그림·본문은 그대로다. `tools/check_storybridge_anchor.py <공개 URL>`로 데스크톱·390px의 새 브라우저 컨텍스트를 각각 3회 열어 실제 목록 위치를 확인한다.
+
+공개 검수 결과는 [verification/storybridge-publication.json](verification/storybridge-publication.json)에 기록했다. 검수한 콘텐츠 커밋, 원본 커밋, HTTP 상태·내용 해시, 브라우저 이동과 실제 화면 검수 범위를 포함한다.

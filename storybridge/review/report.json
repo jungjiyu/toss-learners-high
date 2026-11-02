@@ -4298,6 +4298,19 @@
   ],
   "browser_errors": [],
   "runtime_errors": [],
-  "manual_review": "Read the opening screens of all 11 articles from current desktop/mobile Chrome captures and reviewed scoped paragraph edits against the prior publication. Final duplicated conjunctions corrected and regeneration/checks rerun. Print media checked automatically; physical page breaks and other engines not reviewed.",
+  "manual_review": {
+    "articles": "All 11 first screens read in actual Chrome desktop or 390px captures; all prose reviewed before editing.",
+    "body_paragraphs": [
+      "comparison:11",
+      "recovery:27",
+      "shared-fanout:30",
+      "mixed:92",
+      "reconnect:27",
+      "reconnect:55"
+    ],
+    "paragraph_captures": ".scratch/decision-screens/",
+    "readability": "Read findings, supporting observations, implementation decisions and remaining limits in their surrounding paragraphs. Kept technical terms, no new reflection section.",
+    "limits": "Chrome/Windows only. Print media checked; physical pagination and other engines not reviewed."
+  },
   "scope": "Static documents only; no performance or fault tests; print media, no PDF."
 }

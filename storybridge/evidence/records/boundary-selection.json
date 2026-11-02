@@ -1,0 +1,38 @@
+{
+  "status": "reviewed",
+  "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+  "conclusion": "Q의 동일 혼합 분포에서 전체 수락률 95% 가정까지 충족한 최고 확인 지점은 지속 연결 45 SEND/s였다(120초 독립 3회). 50 SEND/s는 2회 통과·1회 실패한 경계다. 그러나 45 SEND/s의 600초·전체 연결 반복 재접속에서는 일반 방 p99 336.54ms와 미완료 재접속 782/10,000회로 목표를 놓쳤다. 짧은 지속 연결의 통과를 재접속을 포함한 품질 보장으로 확대하지 않는다.",
+  "interpretation": [
+    "지속 연결 45/s는 전체 수락 96.33~96.95%, 일반 방 수락 100%, STORED p99 47~50.65ms, 일반 방 p99 119~130.16ms였다. 일반 방 전체 SEND 중 저장 후 예정 수신자 전원이 250ms 안에 받은 비율은 99.8148~100%다. 이 장비·분포·하네스에서 확인한 지점이며 그 이하 모든 입력이나 다른 분포의 보장은 아니다.",
+    "50/s의 전체 수락은 94.33~95.73%로 한 반복이 사전 가정 95%를 밑돌았다. 55/s와60/s는 각각3회 모두 전체 수락 기준을 놓쳤다. 하지만60/s에서도 일반 방 수락은100%, 일반 방 p99는161.49~174.94ms였다. 따라서45/s를 정상 방 자체의 물리적 처리 한계라고 부르지 않는다. 확인 반복의 거절은 인기 방 ROOM_BUSY와 소수 ROOM_RELEASE_RACE였고 전체 WRITE_BUDGET·stripe 충돌·outbox 포화로 기록된 거절은 없었다.",
+    "600초45/s는 실제27,000시도 중26,238건이 당시 STORED로 확인됐다. 인기 방21,600시도/20,838저장/762거절, 일반 방5,400시도/5,400저장/0거절이며 미확정과 발생기 drop은0이다. STORED p99는44ms, 일반 방 p99는336.54ms, 일반 SEND→모든 예정 수신자250ms 비율은97.46296%다. 수신 지연은 단절 중 시작해 재접속 후 도착한 메시지도 포함한다.",
+    "측정 중 재접속10,000회에서9,218회가 H에 도달했고782회는 다음 주기 단절 전에 H에 도달하지 못했다. 실패782회는 전부 느린 인기 방 수신자다(해당 집단2,000회 중782회). 일반 방2,000회는 모두 완료됐고 최대1.522초였다. 완료 표본의 전체 p99가26.049초로30초보다 짧아도 실패 회차를 포함한 복구 목표는 실패다. 초기500회·워밍업0회·추가 관측2,000회도 원장과 별도 분모에 남겼다. 실제 연결 자체 실패는 이번 지속 실행에서0회이며 해당 상태는 k6 추적기 사례 시험으로도 확인했다.",
+    "느린 제한 중 실제 인기 방 저장34.7825/s와 수신자당 연속 수신23.6814/s의 차이 때문에100명 잔량은 약1,110.1건/s 증가했다. 전량 수락36/s와 설정상 최대25/s로 계산한1,100건/s는 별도의 요구량 계산이다. 실패 회차는 측정75.105~285.612초에 시작해105.003~315.321초에 H 도달 전 닫혔다. 제한은 계획상 측정300초에 해제된다. 전체8,494,918건 의무는 최종 전량 완료했고 마지막 수신은 신규 송신 종료+22ms였다. 회차 복구 시간과 이 잔량 해소 시간은 서로 다른 원점이다.",
+    "전체 연결30초 재접속의 짧은120초 확인도20/25/30 SEND/s 각각3회 모두 일반 방 p99 목표를 놓쳤다.20/s에서는 전량 수락·복구 완료였지만 일반 방 p99가277.45~296.37ms였다. 지속 실행의250ms 초과 정상 수신229건 중226건은 해당 연결의 재접속 시도 전후1초 안에 시작했다. 이는 시간상 연관이며 재접속만이 원인이라는 증명은 아니다. 표본을 제외하거나 기존100~599ms 재시도 대기를 줄여 목표를 맞추지 않았다. 이 전체 재접속 시나리오의 통과 입력률은 이번에 확인하지 못했으며20/s 미만은 미검증이다.",
+    "모든 유효 확인 반복과 지속 시험에서 발생기 drop·SEND 미확정·최종 수신 미완료는0이었다.45/s 지속 시험의 실제 도착률은45/s, 발생 지연 p99는17.56ms다. 서버 스택 CPU 평균2.72개 논리CPU 시간, k6는4.60개였고 호스트 최소 여유 메모리는약4,342MiB였다. 발생기 drop으로 실패한 경계는 아니지만 공유 호스트·이벤트 루프 지연과 서버 비용을 완전히 분리한 물리 용량 결과도 아니다.",
+    "Q 서버 소스와 JAR는 변경하지 않았다. 기존601,000건 복구의 CPU 절감, W 저장 대기 후보의 효과와 기각 이유, 기존250/s 실패와 정확성 회귀는 원본 재사용임을 표시한다. 이번 새 계측의 첫 receipt wrapper 해석 오류는 실패 실행으로 보존했고 수정 후 최종 부하 하네스를 고정했다. 새 서버 정합성 결함은 발견하지 않았다. 새로운32실행 중1개 계측 실패를 유효 성능 실험으로 세지 않는다."
+  ],
+  "representative_runs": [
+    "scale-Q-boundary-steady-confirm-45-20261031-163056-7705",
+    "scale-Q-boundary-steady-confirm-45-20261031-163528-20eb",
+    "scale-Q-boundary-steady-confirm-45-20261031-164000-47ca",
+    "scale-Q-boundary-steady-confirm-50-20261031-161704-98aa",
+    "scale-Q-boundary-steady-confirm-50-20261031-162136-4101",
+    "scale-Q-boundary-steady-confirm-50-20261031-162608-6727",
+    "scale-Q-boundary-confirm-20-20261031-152421-3bab",
+    "scale-Q-boundary-confirm-20-20261031-152853-eed6",
+    "scale-Q-boundary-confirm-20-20261031-153324-8947",
+    "scale-Q-boundary-soak-45-20261031-164507-e8a0"
+  ],
+  "evidence": {
+    "plan": "boundary-plan.json",
+    "new_and_reused": "boundary-results.json",
+    "all_repeats": "boundary-review-inputs.json",
+    "timing_association": "boundary-timing.json",
+    "slow_and_resources": "boundary-soak.json",
+    "verification": "boundary-verification.json",
+    "tooling": "evidence/boundary-tooling-final-20261031-165947/result.json"
+  },
+  "reproduction": "$storyQJarHash=(Get-FileHash worktrees/experiment-socket-batch/build/libs/storybridge.jar -Algorithm SHA256).Hash.ToLower()\n.venv/Scripts/python.exe scripts/boundary_campaign.py steady-confirm 50 --artifact-sha256 $storyQJarHash\n.venv/Scripts/python.exe scripts/boundary_campaign.py steady-confirm 45 --artifact-sha256 $storyQJarHash\n.venv/Scripts/python.exe scripts/boundary_campaign.py soak 45 --artifact-sha256 $storyQJarHash",
+  "decision": "Keep Q as the previously selected cost-improvement candidate. Qualify its demonstrated operating range; do not claim mixed reconnect SLO completion or a new capacity improvement. No server settings or contract were changed to obtain a pass."
+}

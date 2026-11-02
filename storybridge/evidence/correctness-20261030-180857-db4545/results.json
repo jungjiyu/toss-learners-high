@@ -1,0 +1,41 @@
+[
+  {
+    "ids": "T23 T25",
+    "name": "actual-admission-caps",
+    "status": "PASS",
+    "details": {
+      "simultaneous_sessions": 128,
+      "session_129_rejected": true,
+      "subscriptions_per_session": 4,
+      "subscription_5_rejected": true,
+      "post_close": {
+        "applied_ack": 1,
+        "buffer_bytes": 0,
+        "credit_bytes": 0,
+        "credit_count": 0,
+        "db_admission_rejected": 157,
+        "db_work_nanos": 167220700,
+        "frames_issued": 1,
+        "global_buffer": 0,
+        "global_credit": 0,
+        "history_queries": 6,
+        "history_rows": 1,
+        "io_queue": 0,
+        "issued_bytes": 342,
+        "outbox_done": 1,
+        "peers": 0,
+        "route_rooms": 0,
+        "route_subscriptions": 0,
+        "session_closes": 130,
+        "sessions_active": 0,
+        "socket_received_bytes": 594,
+        "socket_sent_bytes": 493115,
+        "socket_writes": 255,
+        "writer_exits": 130,
+        "writer_exits_error": 130,
+        "writers_active": 0
+      }
+    },
+    "seconds": 2.063344999914989
+  }
+]

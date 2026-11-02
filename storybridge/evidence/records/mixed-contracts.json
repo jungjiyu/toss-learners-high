@@ -1,0 +1,1003 @@
+{
+  "source": {
+    "branch": "experiment-socket-batch",
+    "source_sha": "4d540615c4526929dceb98af77f71611d6550b7c",
+    "jar_sha256": "5142cbfc545d8201024a15eced593e9d16e96951a34d0902af780a0887884eb3"
+  },
+  "tests": [
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "identity-order",
+      "ids": "T01 T02 T07",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "transaction-boundaries",
+      "ids": "T03 T04 T06",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "subscribe-boundary",
+      "ids": "T08",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "reversed-gap-last-loss",
+      "ids": "T09 T10 T29",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "slow-ack-recovery",
+      "ids": "T11 T13 T27 T39 X02",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "retention-snapshot",
+      "ids": "T21 T42",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "read-auth-list",
+      "ids": "T22 T23 T33",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "retiring-credit",
+      "ids": "T30 T41 X07",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "poison",
+      "ids": "E05",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "local-crash",
+      "ids": "T26 T28 T37",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "app-crash",
+      "ids": "T05",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "storage-audit",
+      "ids": "T40-storage",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102056-fdd47d",
+      "case": "ws-keyed-admission",
+      "ids": "T02 T23",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "reconnect-hot",
+      "ids": "T24 T36 X04",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "churn-epochs",
+      "ids": "T14 T25",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "local-quota-retention",
+      "ids": "T21 T37 T38 X06",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "database-restart",
+      "ids": "T35",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "retire-timeout-tabs",
+      "ids": "T14 T41",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "process-commit-crash",
+      "ids": "T03 T04 T28",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "list-order-pages",
+      "ids": "T34 X05",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "combined-local-restart",
+      "ids": "T26 T28 T14 X03",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "bounded-nonprogress",
+      "ids": "T39",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102121-735d37",
+      "case": "blocked-write",
+      "ids": "T12 T43",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102306-d2318c",
+      "case": "shared-statement-retention",
+      "ids": "T21 T42",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-102306-d2318c",
+      "case": "exact-unicode-credit",
+      "ids": "T11 T41",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-103437-63711b",
+      "case": "partial-inbound-contract",
+      "ids": "T01 T02 T30 T43",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-103437-63711b",
+      "case": "partial-inbound-global-budget",
+      "ids": "T12 T30 T39",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-103447-6197f5",
+      "case": "live-during-head-snapshot",
+      "ids": "T08 T09 T10",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-103457-cc732a",
+      "case": "representation-cache-boundaries",
+      "ids": "T20 T21 T22",
+      "status": "PASS"
+    },
+    {
+      "run": "correctness-20261031-120753-0a9ee9",
+      "case": "expired-batch-lease",
+      "ids": "T06 T07 E04",
+      "status": "PASS"
+    }
+  ],
+  "mapping": {
+    "T01": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "identity-order",
+        "ids": "T01 T02 T07",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103437-63711b",
+        "case": "partial-inbound-contract",
+        "ids": "T01 T02 T30 T43",
+        "status": "PASS"
+      }
+    ],
+    "T02": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "identity-order",
+        "ids": "T01 T02 T07",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "ws-keyed-admission",
+        "ids": "T02 T23",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103437-63711b",
+        "case": "partial-inbound-contract",
+        "ids": "T01 T02 T30 T43",
+        "status": "PASS"
+      }
+    ],
+    "T03": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "transaction-boundaries",
+        "ids": "T03 T04 T06",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "process-commit-crash",
+        "ids": "T03 T04 T28",
+        "status": "PASS"
+      }
+    ],
+    "T04": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "transaction-boundaries",
+        "ids": "T03 T04 T06",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "process-commit-crash",
+        "ids": "T03 T04 T28",
+        "status": "PASS"
+      }
+    ],
+    "T05": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "app-crash",
+        "ids": "T05",
+        "status": "PASS"
+      }
+    ],
+    "T06": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "transaction-boundaries",
+        "ids": "T03 T04 T06",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-120753-0a9ee9",
+        "case": "expired-batch-lease",
+        "ids": "T06 T07 E04",
+        "status": "PASS"
+      }
+    ],
+    "T07": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "identity-order",
+        "ids": "T01 T02 T07",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-120753-0a9ee9",
+        "case": "expired-batch-lease",
+        "ids": "T06 T07 E04",
+        "status": "PASS"
+      }
+    ],
+    "T08": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "subscribe-boundary",
+        "ids": "T08",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103447-6197f5",
+        "case": "live-during-head-snapshot",
+        "ids": "T08 T09 T10",
+        "status": "PASS"
+      }
+    ],
+    "T09": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "reversed-gap-last-loss",
+        "ids": "T09 T10 T29",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103447-6197f5",
+        "case": "live-during-head-snapshot",
+        "ids": "T08 T09 T10",
+        "status": "PASS"
+      }
+    ],
+    "T10": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "reversed-gap-last-loss",
+        "ids": "T09 T10 T29",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103447-6197f5",
+        "case": "live-during-head-snapshot",
+        "ids": "T08 T09 T10",
+        "status": "PASS"
+      }
+    ],
+    "T11": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "slow-ack-recovery",
+        "ids": "T11 T13 T27 T39 X02",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102306-d2318c",
+        "case": "exact-unicode-credit",
+        "ids": "T11 T41",
+        "status": "PASS"
+      }
+    ],
+    "T12": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "blocked-write",
+        "ids": "T12 T43",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103437-63711b",
+        "case": "partial-inbound-global-budget",
+        "ids": "T12 T30 T39",
+        "status": "PASS"
+      }
+    ],
+    "T13": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "slow-ack-recovery",
+        "ids": "T11 T13 T27 T39 X02",
+        "status": "PASS"
+      }
+    ],
+    "T14": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "churn-epochs",
+        "ids": "T14 T25",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "retire-timeout-tabs",
+        "ids": "T14 T41",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "combined-local-restart",
+        "ids": "T26 T28 T14 X03",
+        "status": "PASS"
+      }
+    ],
+    "T15": [],
+    "T16": [],
+    "T17": [],
+    "T18": [],
+    "T19": [],
+    "T20": [
+      {
+        "run": "correctness-20261031-103457-cc732a",
+        "case": "representation-cache-boundaries",
+        "ids": "T20 T21 T22",
+        "status": "PASS"
+      }
+    ],
+    "T21": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "retention-snapshot",
+        "ids": "T21 T42",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "local-quota-retention",
+        "ids": "T21 T37 T38 X06",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102306-d2318c",
+        "case": "shared-statement-retention",
+        "ids": "T21 T42",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103457-cc732a",
+        "case": "representation-cache-boundaries",
+        "ids": "T20 T21 T22",
+        "status": "PASS"
+      }
+    ],
+    "T22": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "read-auth-list",
+        "ids": "T22 T23 T33",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103457-cc732a",
+        "case": "representation-cache-boundaries",
+        "ids": "T20 T21 T22",
+        "status": "PASS"
+      }
+    ],
+    "T23": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "read-auth-list",
+        "ids": "T22 T23 T33",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "ws-keyed-admission",
+        "ids": "T02 T23",
+        "status": "PASS"
+      }
+    ],
+    "T24": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "reconnect-hot",
+        "ids": "T24 T36 X04",
+        "status": "PASS"
+      }
+    ],
+    "T25": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "churn-epochs",
+        "ids": "T14 T25",
+        "status": "PASS"
+      }
+    ],
+    "T26": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "local-crash",
+        "ids": "T26 T28 T37",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "combined-local-restart",
+        "ids": "T26 T28 T14 X03",
+        "status": "PASS"
+      }
+    ],
+    "T27": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "slow-ack-recovery",
+        "ids": "T11 T13 T27 T39 X02",
+        "status": "PASS"
+      }
+    ],
+    "T28": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "local-crash",
+        "ids": "T26 T28 T37",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "process-commit-crash",
+        "ids": "T03 T04 T28",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "combined-local-restart",
+        "ids": "T26 T28 T14 X03",
+        "status": "PASS"
+      }
+    ],
+    "T29": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "reversed-gap-last-loss",
+        "ids": "T09 T10 T29",
+        "status": "PASS"
+      }
+    ],
+    "T30": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "retiring-credit",
+        "ids": "T30 T41 X07",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103437-63711b",
+        "case": "partial-inbound-contract",
+        "ids": "T01 T02 T30 T43",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103437-63711b",
+        "case": "partial-inbound-global-budget",
+        "ids": "T12 T30 T39",
+        "status": "PASS"
+      }
+    ],
+    "T31": [],
+    "T32": [],
+    "T33": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "read-auth-list",
+        "ids": "T22 T23 T33",
+        "status": "PASS"
+      }
+    ],
+    "T34": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "list-order-pages",
+        "ids": "T34 X05",
+        "status": "PASS"
+      }
+    ],
+    "T35": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "database-restart",
+        "ids": "T35",
+        "status": "PASS"
+      }
+    ],
+    "T36": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "reconnect-hot",
+        "ids": "T24 T36 X04",
+        "status": "PASS"
+      }
+    ],
+    "T37": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "local-crash",
+        "ids": "T26 T28 T37",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "local-quota-retention",
+        "ids": "T21 T37 T38 X06",
+        "status": "PASS"
+      }
+    ],
+    "T38": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "local-quota-retention",
+        "ids": "T21 T37 T38 X06",
+        "status": "PASS"
+      }
+    ],
+    "T39": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "slow-ack-recovery",
+        "ids": "T11 T13 T27 T39 X02",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "bounded-nonprogress",
+        "ids": "T39",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103437-63711b",
+        "case": "partial-inbound-global-budget",
+        "ids": "T12 T30 T39",
+        "status": "PASS"
+      }
+    ],
+    "T40": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "storage-audit",
+        "ids": "T40-storage",
+        "status": "PASS"
+      }
+    ],
+    "T41": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "retiring-credit",
+        "ids": "T30 T41 X07",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "retire-timeout-tabs",
+        "ids": "T14 T41",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102306-d2318c",
+        "case": "exact-unicode-credit",
+        "ids": "T11 T41",
+        "status": "PASS"
+      }
+    ],
+    "T42": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "retention-snapshot",
+        "ids": "T21 T42",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-102306-d2318c",
+        "case": "shared-statement-retention",
+        "ids": "T21 T42",
+        "status": "PASS"
+      }
+    ],
+    "T43": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "blocked-write",
+        "ids": "T12 T43",
+        "status": "PASS"
+      },
+      {
+        "run": "correctness-20261031-103437-63711b",
+        "case": "partial-inbound-contract",
+        "ids": "T01 T02 T30 T43",
+        "status": "PASS"
+      }
+    ],
+    "T44": [],
+    "E01": [],
+    "E02": [],
+    "E03": [],
+    "E04": [
+      {
+        "run": "correctness-20261031-120753-0a9ee9",
+        "case": "expired-batch-lease",
+        "ids": "T06 T07 E04",
+        "status": "PASS"
+      }
+    ],
+    "E05": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "poison",
+        "ids": "E05",
+        "status": "PASS"
+      }
+    ],
+    "E06": [],
+    "E07": [],
+    "E08": [],
+    "X01": [],
+    "X02": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "slow-ack-recovery",
+        "ids": "T11 T13 T27 T39 X02",
+        "status": "PASS"
+      }
+    ],
+    "X03": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "combined-local-restart",
+        "ids": "T26 T28 T14 X03",
+        "status": "PASS"
+      }
+    ],
+    "X04": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "reconnect-hot",
+        "ids": "T24 T36 X04",
+        "status": "PASS"
+      }
+    ],
+    "X05": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "list-order-pages",
+        "ids": "T34 X05",
+        "status": "PASS"
+      }
+    ],
+    "X06": [
+      {
+        "run": "correctness-20261031-102121-735d37",
+        "case": "local-quota-retention",
+        "ids": "T21 T37 T38 X06",
+        "status": "PASS"
+      }
+    ],
+    "X07": [
+      {
+        "run": "correctness-20261031-102056-fdd47d",
+        "case": "retiring-credit",
+        "ids": "T30 T41 X07",
+        "status": "PASS"
+      }
+    ]
+  },
+  "unmapped_applicable": [],
+  "not_selected": {
+    "T15": "Single gateway Q has no broker path. Historical C4 source c85d534 retains its own real distributed evidence, not inherited as Q tests.",
+    "T16": "Single gateway Q has no broker path. Historical C4 source c85d534 retains its own real distributed evidence, not inherited as Q tests.",
+    "T17": "Single gateway Q has no broker path. Historical C4 source c85d534 retains its own real distributed evidence, not inherited as Q tests.",
+    "T18": "Single gateway Q has no broker path. Historical C4 source c85d534 retains its own real distributed evidence, not inherited as Q tests.",
+    "T31": "Single gateway Q has no broker path. Historical C4 source c85d534 retains its own real distributed evidence, not inherited as Q tests.",
+    "T32": "Single gateway Q has no broker path. Historical C4 source c85d534 retains its own real distributed evidence, not inherited as Q tests.",
+    "T44": "Single gateway Q has no broker path. Historical C4 source c85d534 retains its own real distributed evidence, not inherited as Q tests.",
+    "T19": "Redis not selected; bounded immutable representation cache is tested under T20.",
+    "E01": "Conditional N1/replica/dynamic membership/broker feature not selected in Q; see original design and historical C4 scope.",
+    "E02": "Conditional N1/replica/dynamic membership/broker feature not selected in Q; see original design and historical C4 scope.",
+    "E03": "Conditional N1/replica/dynamic membership/broker feature not selected in Q; see original design and historical C4 scope.",
+    "E06": "Conditional N1/replica/dynamic membership/broker feature not selected in Q; see original design and historical C4 scope.",
+    "E07": "Conditional N1/replica/dynamic membership/broker feature not selected in Q; see original design and historical C4 scope.",
+    "E08": "Conditional N1/replica/dynamic membership/broker feature not selected in Q; see original design and historical C4 scope.",
+    "X01": "Compound broker recovery scenario is outside single-gateway Q; historical C4 keeps its actual evidence."
+  },
+  "loads": [
+    {
+      "run": "scale-Q-mixedround-final-hot-250-20261031-120548-1f0c",
+      "seconds": 60,
+      "path": "http",
+      "layout": "hot"
+    },
+    {
+      "run": "scale-Q-mixedround-final-mixed-250-20261031-114913-6d05",
+      "seconds": 90,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-final-mixed-250-20261031-115315-de29",
+      "seconds": 600,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-finalmatched-mixed-0-20261031-113752-40d7",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-finalmatched-mixed-0-20261031-113947-fa65",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-finalmatched-mixed-0-20261031-114602-85b8",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-handoff-many-250-20261031-112833-8f2e",
+      "seconds": 30,
+      "path": "http",
+      "layout": "many"
+    },
+    {
+      "run": "scale-Q-mixedround-handoff-mixed-250-20261031-113218-d583",
+      "seconds": 30,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-matched-mixed-0-20261031-103112-7d4c",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-many-250-20261031-104217-2d44",
+      "seconds": 60,
+      "path": "http",
+      "layout": "many"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-many-250-20261031-110115-3df6",
+      "seconds": 60,
+      "path": "http",
+      "layout": "many"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-many-250-20261031-111735-398c",
+      "seconds": 60,
+      "path": "http",
+      "layout": "many"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-mixed-250-20261031-103757-ea29",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-mixed-250-20261031-105021-78dc",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-mixed-250-20261031-111324-074d",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-spread-1000-20261031-104639-7b86",
+      "seconds": 60,
+      "path": "http",
+      "layout": "spread"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-spread-1000-20261031-105924-1275",
+      "seconds": 60,
+      "path": "http",
+      "layout": "spread"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-spread-1000-20261031-110612-6394",
+      "seconds": 60,
+      "path": "http",
+      "layout": "spread"
+    },
+    {
+      "run": "scale-Q-mixedround-primary-spread-1000-20261031-112145-858f",
+      "seconds": 60,
+      "path": "http",
+      "layout": "spread"
+    },
+    {
+      "run": "scale-Q-pilot-20261031-102338-d4b2",
+      "seconds": 60,
+      "path": "http",
+      "layout": "mixed"
+    }
+  ],
+  "durable": [
+    {
+      "run": "scale-Q-mixedround-final-hot-250-20261031-120548-1f0c",
+      "audit": [
+        {
+          "room": 999,
+          "cursor": 5525,
+          "expected": 5525,
+          "exact_ledger_match": true,
+          "errors": [],
+          "diagnostic_events_dropped": 1731,
+          "diagnostic_queue": 4096,
+          "commit_events": 5525,
+          "contract": "SQLite FULL atomic commit before APPLIED",
+          "measure_expected": 4754,
+          "measure_committed": 4754,
+          "measure_incomplete": 0,
+          "measure_p50_ms": 61.723876953125,
+          "measure_p95_ms": 133.83753662109362,
+          "measure_p99_ms": 183.66658203125004,
+          "measure_over_500ms": 0,
+          "measure_negative_samples": 0
+        },
+        {
+          "room": 999,
+          "cursor": 5525,
+          "expected": 5525,
+          "exact_ledger_match": true,
+          "errors": [],
+          "diagnostic_events_dropped": 1732,
+          "diagnostic_queue": 4096,
+          "commit_events": 5525,
+          "contract": "SQLite FULL atomic commit before APPLIED",
+          "measure_expected": 4754,
+          "measure_committed": 4754,
+          "measure_incomplete": 0,
+          "measure_p50_ms": 69.2923583984375,
+          "measure_p95_ms": 144.96502685546872,
+          "measure_p99_ms": 192.36297119140653,
+          "measure_over_500ms": 0,
+          "measure_negative_samples": 0
+        },
+        {
+          "room": 999,
+          "cursor": 5525,
+          "expected": 5525,
+          "exact_ledger_match": true,
+          "errors": [],
+          "diagnostic_events_dropped": 1734,
+          "diagnostic_queue": 4096,
+          "commit_events": 5525,
+          "contract": "SQLite FULL atomic commit before APPLIED",
+          "measure_expected": 4754,
+          "measure_committed": 4754,
+          "measure_incomplete": 0,
+          "measure_p50_ms": 71.984619140625,
+          "measure_p95_ms": 148.12320556640617,
+          "measure_p99_ms": 196.00826904296937,
+          "measure_over_500ms": 0,
+          "measure_negative_samples": 0
+        },
+        {
+          "room": 999,
+          "cursor": 5525,
+          "expected": 5525,
+          "exact_ledger_match": true,
+          "errors": [],
+          "diagnostic_events_dropped": 1736,
+          "diagnostic_queue": 4096,
+          "commit_events": 5525,
+          "contract": "SQLite FULL atomic commit before APPLIED",
+          "measure_expected": 4754,
+          "measure_committed": 4754,
+          "measure_incomplete": 0,
+          "measure_p50_ms": 72.25927734375,
+          "measure_p95_ms": 150.0505126953124,
+          "measure_p99_ms": 195.10560302734376,
+          "measure_over_500ms": 0,
+          "measure_negative_samples": 0
+        }
+      ],
+      "input_audit": {
+        "logged_logical_inputs": 17502,
+        "db_unique": 5525,
+        "inputs_without_receipt": 11977,
+        "problems": [],
+        "scope": "Every actual k6 HTTP logical input hash versus independent message/receipt/outbox rows; no server route index used"
+      }
+    }
+  ],
+  "indexeddb_browser": [
+    {
+      "run": "browser-app-20261031-120802",
+      "result": {
+        "applied_cursor": 1,
+        "abort_atomic": true,
+        "reverse_list_merge": true,
+        "reconnect_cursor": 1,
+        "desktop": {
+          "title": "StoryBridge · 경계 검증 UI",
+          "width": 1280,
+          "scrollWidth": 1265,
+          "overflow": false,
+          "brokenImages": 0,
+          "print": false
+        },
+        "narrow": {
+          "title": "StoryBridge · 경계 검증 UI",
+          "width": 390,
+          "scrollWidth": 375,
+          "overflow": false,
+          "brokenImages": 0,
+          "print": false
+        },
+        "errors": []
+      }
+    }
+  ],
+  "history": "scale-contracts.json preserves earlier M/C4 exact-source tests. No earlier run was relabelled as Q."
+}

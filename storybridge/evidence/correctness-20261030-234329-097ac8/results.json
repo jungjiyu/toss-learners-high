@@ -1,0 +1,18 @@
+[
+  {
+    "ids": "T20 T21 T22",
+    "name": "representation-cache-boundaries",
+    "status": "PASS",
+    "details": {
+      "cache_budget_bytes": 4096,
+      "cache_peak_bytes": 2804,
+      "evictions": 42,
+      "hits": 37,
+      "cold_after_eviction_exact_rows": 40,
+      "warm_cache_unauthorized": "FORBIDDEN",
+      "new_retention_old_cursor": "RESYNC_REQUIRED",
+      "receipt_survives": true
+    },
+    "seconds": 2.516171499970369
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "ids": "T08",
+    "name": "subscribe-boundary",
+    "status": "PASS",
+    "details": {
+      "base": 0,
+      "completed": 1
+    },
+    "seconds": 1.6138760999310762
+  },
+  {
+    "ids": "T09 T10 T29",
+    "name": "reversed-gap-last-loss",
+    "status": "PASS",
+    "details": {
+      "reversed_messages": 39,
+      "gap_base": 0,
+      "final_cursor": 41,
+      "new_send_after_last": 0
+    },
+    "seconds": 2.1620341999223456
+  },
+  {
+    "ids": "T11 T13 T27 T39 X02",
+    "name": "slow-ack-recovery",
+    "status": "PASS",
+    "details": {
+      "base": 0,
+      "goal": 90,
+      "max_credit": 4,
+      "applied": 90
+    },
+    "seconds": 3.8307890000287443
+  }
+]

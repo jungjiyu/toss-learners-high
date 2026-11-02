@@ -1,0 +1,150 @@
+{
+  "audit.json": {
+    "bytes": 394604,
+    "sha256": "36758ea90deb1bb21d5a53f2eb44c531966353dea378fcd1fc7968ffd36abff5"
+  },
+  "boundary-audit.json": {
+    "bytes": 8983,
+    "sha256": "730c9f2c2cba494e8adf14af8e1d84804cce74af2ba4426b864609e4d4980f3b"
+  },
+  "command.json": {
+    "bytes": 224,
+    "sha256": "dd55e5c6a9464a105ac393286a4aabc322f7df51523a569747e2df47e279764f"
+  },
+  "cpu-budget.json": {
+    "bytes": 280,
+    "sha256": "d008aeb0897497d25ed8dd474df70e56a78a729119181c83d1336d72c4bc388c"
+  },
+  "db-message-audit-columns.json": {
+    "bytes": 132,
+    "sha256": "8064fe6af7f7fac10406942b9d9380f086170807df2bd741556afb23b55c710c"
+  },
+  "db-message-audit.jsonl": {
+    "bytes": 849530,
+    "sha256": "40acb2737f2c453aca1d60283288069e0e5794b98050ea4fc4ed41db688c94e5"
+  },
+  "environment.json": {
+    "bytes": 13105,
+    "sha256": "136112ecc986416bcae6b8247ef8d3198f71e3f18b4eb845154290cebf626bb7"
+  },
+  "execution-status.json": {
+    "bytes": 315,
+    "sha256": "66b3e7401d620dec4775ef64bae801016288a90dea8146341f76d9c10cfabfb7"
+  },
+  "hash_cache.js": {
+    "bytes": 549,
+    "sha256": "2e0dc0d898a3eeea56de2c01bba4004cb6e302a0a1d0e3e4fa216ecf49af95d8"
+  },
+  "input-storage-audit.json": {
+    "bytes": 241,
+    "sha256": "2a1dac1861e5ab5dd083d0d52fbe549a6fcc4c26e564fd2744316babacb4638b"
+  },
+  "k6-summary.json": {
+    "bytes": 17425,
+    "sha256": "9cfdf82b04d1165a4a9428ec0cdaa1e6d804453ca964f04437d3ed7f172928e3"
+  },
+  "k6.log": {
+    "bytes": 6556819,
+    "sha256": "3b56d55093338fd24dfe5dcd4feda4e6e3b5cdb23bbd81e33d827fd6e1f6e861"
+  },
+  "lifecycle_trace.js": {
+    "bytes": 386,
+    "sha256": "c3af22bd138808918a0fdee391a6f49317d1bcef586565cf534c5689f7ce84a3"
+  },
+  "mysql-digests.json": {
+    "bytes": 28799,
+    "sha256": "7ff6021f107c62538da7b4e0719b89a43044fed29550345d0efd9dce6b17c38d"
+  },
+  "mysql-waits.json": {
+    "bytes": 6511,
+    "sha256": "19bd50e43580be4c5f0737b45ff6714387f9866250c22af4beef81ad1d31a2d4"
+  },
+  "normal-receipts.jsonl": {
+    "bytes": 331984,
+    "sha256": "077e8b82420b06ea77099ef36469979912e1d90d65ae806d6f17c381de9f8931"
+  },
+  "normal-send-outcomes.jsonl": {
+    "bytes": 194090,
+    "sha256": "b73893c6d084a193ae59e98da950f650374ffe3a195d807501f3913a151ebe2a"
+  },
+  "plan.json": {
+    "bytes": 866,
+    "sha256": "82ccd17d061048116c88a54c4f138c8062cb086720f3489ec015c530e2a94f46"
+  },
+  "python-packages.txt": {
+    "bytes": 412,
+    "sha256": "56be70cebb7964c10f189629474593f1c2f88834c8c475af3d01bf84fbcd801a"
+  },
+  "reconnect-attempts.jsonl": {
+    "bytes": 744218,
+    "sha256": "3102db7bfde22e9be9d47fb78d161f7c8c1d1c32d6c3fab28279ae78d7e8a470"
+  },
+  "recovery_attempt.js": {
+    "bytes": 942,
+    "sha256": "0d227e46bed9d466728bc36d9c8b58fc2c27ad6ea33c035d88d71df2a45943bd"
+  },
+  "resources.jsonl": {
+    "bytes": 812025,
+    "sha256": "29465ae9bae43647d0432ac8413b5e8d45f4725504bacae5acd499d9a520069f"
+  },
+  "retry_policy.js": {
+    "bytes": 177,
+    "sha256": "614d63a8eb28262040dbaf224872b6938f28757416aac39bccfa126b6f4d6f65"
+  },
+  "server-metrics.json": {
+    "bytes": 8580,
+    "sha256": "f67cca358fcfe8a23d5a1f37079c686562a7648b7e3106e20c9e2f90da95e2f6"
+  },
+  "stored-by-room.json": {
+    "bytes": 444,
+    "sha256": "488c75895098cda6026da8e623872e3fa274233092b575c98f7ec72d2286aa2a"
+  },
+  "traffic.js": {
+    "bytes": 20180,
+    "sha256": "3f40ec206732a5f2f203655e13f7b1e247612eb94133d8621c3f48e2c1d6f7bb"
+  },
+  "uncertain-send-audit.json": {
+    "bytes": 2,
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "harness/app.py": {
+    "bytes": 3539,
+    "sha256": "063526a761a6fe42693df13d9a5f1310631f13b7e2e7ef0d2269de1d58011e38"
+  },
+  "harness/boundary_audit.py": {
+    "bytes": 6323,
+    "sha256": "eb9a87e19e09b2f3bc18b2d76e2b2255901d44fb3378c3641d88b13c24b069be"
+  },
+  "harness/broker_local.py": {
+    "bytes": 3759,
+    "sha256": "aafa86d9da0fa4d96e98b383e95c0f2eb527491a752fd17da5adcce8e80229b2"
+  },
+  "harness/client.py": {
+    "bytes": 10443,
+    "sha256": "52fb4a50b71eda5c801256501379fad533953f4ab9ccfd9e84a28e84c3c19961"
+  },
+  "harness/cpu_budget.py": {
+    "bytes": 2095,
+    "sha256": "dc58894d7f9c52f9bf00f0b1573574c18cc4e684dc929c2d018364643d215614"
+  },
+  "harness/evidence.py": {
+    "bytes": 2833,
+    "sha256": "5c27e9647c0bf22858cdf72723c844143722924e23ad1e16459fd8ea3d716c3b"
+  },
+  "harness/lifecycle_audit.py": {
+    "bytes": 12009,
+    "sha256": "4be91d054887696399ed9ee3b2d30b2b4d3850a6e224844359ae89c503684e1b"
+  },
+  "harness/mysql_local.py": {
+    "bytes": 5734,
+    "sha256": "1ef5cadc7bb05af723e5fc4b72dfc599f22b1365b808597fd04cccc160da004a"
+  },
+  "harness/run_validation.py": {
+    "bytes": 3268,
+    "sha256": "35f75ef3a3d51c16ac203f7b0837a84087fb8306e337d83ba7a999c0a1e2ff60"
+  },
+  "harness/scale_run.py": {
+    "bytes": 24336,
+    "sha256": "bc873809601bbacfc4f5efdedfa95886d752497c774f2fdd5c3f4cbddef3081d"
+  }
+}

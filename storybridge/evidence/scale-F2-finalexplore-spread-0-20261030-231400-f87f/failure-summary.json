@@ -1,0 +1,5 @@
+{
+  "exit": 1,
+  "cause": "Owned k6 watchdog termination after GC/API stall; post-run metrics then timed out. No complete audit/summary.",
+  "status": "FAILED"
+}

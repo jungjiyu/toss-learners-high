@@ -1,0 +1,109 @@
+{
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.74",
+    "revision": "@d331de35ca8ab1358c7a17e4bd41627d55eaef51",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.25"
+  },
+  "checks": [
+    {
+      "title": "StoryBridge — 개선 전후 아키텍처",
+      "width": 720,
+      "scrollWidth": 705,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "diagram": "before",
+      "media": "screen",
+      "image_display_width": 665
+    },
+    {
+      "title": "StoryBridge — 개선 전후 아키텍처",
+      "width": 720,
+      "scrollWidth": 705,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "diagram": "after",
+      "media": "screen",
+      "image_display_width": 665
+    },
+    {
+      "title": "StoryBridge — 개선 전후 아키텍처",
+      "width": 900,
+      "scrollWidth": 885,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "diagram": "before",
+      "media": "screen",
+      "image_display_width": 837
+    },
+    {
+      "title": "StoryBridge — 개선 전후 아키텍처",
+      "width": 900,
+      "scrollWidth": 885,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "diagram": "after",
+      "media": "screen",
+      "image_display_width": 837
+    },
+    {
+      "title": "StoryBridge — 개선 전후 아키텍처",
+      "width": 720,
+      "scrollWidth": 705,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "diagram": "before",
+      "media": "print",
+      "image_display_width": 705
+    },
+    {
+      "title": "StoryBridge — 개선 전후 아키텍처",
+      "width": 720,
+      "scrollWidth": 705,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "diagram": "after",
+      "media": "print",
+      "image_display_width": 705
+    }
+  ],
+  "svg_checks": [
+    {
+      "viewBox": "0 0 1080 1030",
+      "foreignObjects": 0,
+      "texts": 22,
+      "outside": [],
+      "fontLoaded": true,
+      "node_text_overflow": []
+    },
+    {
+      "viewBox": "0 0 1080 1030",
+      "foreignObjects": 0,
+      "texts": 22,
+      "outside": [],
+      "fontLoaded": true,
+      "node_text_overflow": []
+    }
+  ],
+  "errors": [],
+  "scope": "Static portfolio only; no app or load test. Screen captures at 1x zoom plus print media; no PDF.",
+  "files": {
+    "after.mmd": "41f0c50de32fd840c3d9e9145ebe38c2b0af2a3f88ffdc21f3d3f63eecd1799c",
+    "after.svg": "e7f8376aea1ff764428d450c42196212ba250dfdfae55a784cac49668afd0646",
+    "before.mmd": "bb31295e3ca47a43396d2e375395843bc5aeb7cc2c0e9e55cfd6683c8f072b40",
+    "before.svg": "09fe51890bd2426318f3a3760f7a57a67a0a00397f8279b61d167fc6500ba867",
+    "captions.txt": "cba7197ed015cb3a4efaed57b7f3b54a5a9eb07b3fb8607ac49a752a170fa420",
+    "FONT-LICENSE.txt": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+    "manual-review.txt": "f8e07b61eff045b8c194667ff3469780f5d5ede049651b55993d368157a70438",
+    "portfolio-ko.woff": "2f3ea9cc7609917f24a9392097667fe661160926945860558af7affa91e64550",
+    "preview.html": "3e6cf9c05d9c8e9d570a6b62966e70264d5578a37b506f6cdf54e4c0b668c623",
+    "sources.txt": "8f23fefc713b89f6fb8fe8ef29bff03715fdc303d31d9804715924d04b9fae7c"
+  }
+}

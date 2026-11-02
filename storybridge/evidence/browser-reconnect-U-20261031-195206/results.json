@@ -1,0 +1,57 @@
+{
+  "inflight_old_generation": {
+    "first": 22,
+    "final": 23,
+    "cursor": 23
+  },
+  "transient": {
+    "seq": 24,
+    "cursor": 24
+  },
+  "persistent_outage": {
+    "duration_ms": 30078.400000095367,
+    "attempts": 9,
+    "stored_while_offline": [
+      25,
+      26,
+      27
+    ],
+    "cursor": 27,
+    "max_allowed_attempts": 12
+  },
+  "open_without_ready_flaps": {
+    "duration_ms": 12101.800000071526,
+    "attempts": 2,
+    "bound": 8,
+    "passed": true,
+    "close_to_next_attempt_ms": [
+      4249.599999904633,
+      3066.0999999046326,
+      3815.2000000476837
+    ]
+  },
+  "atomic_abort": true,
+  "independent_ledger": {
+    "messages": 28,
+    "cursor": 28,
+    "exact_fields": [
+      "room",
+      "seq",
+      "messageId",
+      "hash",
+      "body"
+    ],
+    "match": true
+  },
+  "page_restart_same_generation_cursor": true,
+  "screen": {
+    "title": "StoryBridge \u00b7 \uacbd\uacc4 \uac80\uc99d UI",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "brokenImages": 0,
+    "print": false
+  },
+  "runtime_errors": [],
+  "execution_valid": true
+}

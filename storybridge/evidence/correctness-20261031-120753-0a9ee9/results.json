@@ -1,0 +1,16 @@
+[
+  {
+    "ids": "T06 T07 E04",
+    "name": "expired-batch-lease",
+    "status": "PASS",
+    "details": {
+      "batch_rows": 32,
+      "real_second_publisher_reclaimed_after_expiry": true,
+      "all_tokens_changed": true,
+      "late_finish_rejected_rows": 32,
+      "exact_unique_local_rows": 32,
+      "synthetic_lease_sql_changes": false
+    },
+    "seconds": 6.825191099895164
+  }
+]

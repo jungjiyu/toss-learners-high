@@ -1,0 +1,146 @@
+{
+  "before": {
+    "18080": {
+      "gc_count": 10,
+      "gc_ms": 34,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 134217728,
+      "heap_used": 77767456,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "outbox_claim_queries": 152,
+      "outbox_done": 0,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 25,
+      "route_rooms": 0,
+      "route_subscriptions": 0
+    }
+  },
+  "after": {
+    "18080": {
+      "applied_ack": 1009478,
+      "batch_callback_nanos": 3911481109,
+      "batch_group_max": 232,
+      "batch_pending": 0,
+      "batch_query_nanos": 97625314531,
+      "batch_requests": 111356,
+      "batch_shared_recipients": 111331,
+      "batch_snapshots": 11446,
+      "batch_wait_max_nanos": 331095300,
+      "batch_wait_nanos": 6170173329847,
+      "credit_bytes": 0,
+      "credit_count": 0,
+      "db_admission_rejected": 11883,
+      "db_work_nanos": 421128462827,
+      "frames_issued": 973743,
+      "gc_count": 161,
+      "gc_ms": 1446,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 197132288,
+      "heap_used": 153457864,
+      "history_queries": 11946,
+      "history_rows": 102922,
+      "inbound_assembly_bytes": 0,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "issued_bytes": 807080450,
+      "list_batch_requests": 40463,
+      "list_batch_snapshots": 11214,
+      "live_transitions": 34492,
+      "observed_write_ms": 113,
+      "outbox_claim_queries": 1816,
+      "outbox_claim_updates": 965,
+      "outbox_done": 5680,
+      "outbox_finish_transactions": 965,
+      "outbox_finish_updates": 965,
+      "outbox_publication_queries": 965,
+      "outbox_publication_rows": 5680,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 61,
+      "recovery_errors": 25,
+      "recovery_event_wakes": 46928,
+      "route_rooms": 0,
+      "route_subscriptions": 0,
+      "session_closes": 500,
+      "sessions_active": 0,
+      "shared_live_deferred": 336433,
+      "shared_live_issued": 602833,
+      "socket_received_bytes": 89389277,
+      "socket_sent_bytes": 832186117,
+      "socket_writes": 1085383,
+      "stored_results": 5680,
+      "wire_cache_bytes": 7129962,
+      "wire_cache_evictions": 1584,
+      "wire_cache_hits": 968418,
+      "wire_cache_misses": 5680,
+      "wire_cache_peak": 7129962,
+      "writer_exits": 500,
+      "writer_exits_error": 500,
+      "writers_active": 0
+    }
+  },
+  "db_before": [
+    [
+      "Bytes_received",
+      "73403"
+    ],
+    [
+      "Bytes_sent",
+      "65076"
+    ],
+    [
+      "Innodb_row_lock_time",
+      "0"
+    ],
+    [
+      "Innodb_row_lock_waits",
+      "0"
+    ],
+    [
+      "Questions",
+      "1031"
+    ],
+    [
+      "Threads_connected",
+      "4"
+    ],
+    [
+      "Threads_running",
+      "2"
+    ]
+  ],
+  "db_after": [
+    [
+      "Bytes_received",
+      "19445811"
+    ],
+    [
+      "Bytes_sent",
+      "93618753"
+    ],
+    [
+      "Innodb_row_lock_time",
+      "0"
+    ],
+    [
+      "Innodb_row_lock_waits",
+      "0"
+    ],
+    [
+      "Questions",
+      "213532"
+    ],
+    [
+      "Threads_connected",
+      "12"
+    ],
+    [
+      "Threads_running",
+      "2"
+    ]
+  ]
+}

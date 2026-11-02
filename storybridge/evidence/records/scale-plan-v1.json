@@ -1,0 +1,47 @@
+{
+  "phase": "2026-10-30 follow-up; earlier 16-connection comparison remains intermediate evidence",
+  "contracts": {
+    "transport": "k6 volatile contiguous receive/hash/window ACK; never durable APPLIED",
+    "durable": "SQLite FULL projection+dedupe+cursor commit before ACK; process-restart and independent DB audit"
+  },
+  "fixed_goals_before_measurement": {
+    "stored_p99_ms": 150,
+    "normal_transport_p99_ms": 250,
+    "normal_durable_p99_ms": 500,
+    "accepted_obligation_audit_completion_percent": 100,
+    "recovery_after_capacity_restoration_seconds": 30,
+    "generator_dropped_iterations_for_adoption": 0,
+    "correctness_violations": 0
+  },
+  "exploration": {
+    "idle_connections": [100, 500, 1000, 2000, 4000],
+    "unique_send_per_second": [100, 250, 500, 1000],
+    "hot_fanout": [32, 128, 256, 512, 1000],
+    "body_bytes": [128, 512, 4096],
+    "slow_recipient_percent": [0, 10, 25],
+    "sender_users": 31,
+    "send_paths": ["HTTP open arrival rate", "persistent WebSocket independently timed SEND"],
+    "note": "Adaptive boundary search, not full Cartesian product. An admission cap is a configured bound, not hardware capacity. Stop growth only on measured generator/host/server limits. Keep failed and overloaded runs."
+  },
+  "budgets": {
+    "single_gateway_heap_mib": 768,
+    "dual_gateway_heap_mib_each": 256,
+    "dual_broker_budget_mib": 256,
+    "mysql_buffer_pool_mib": 256,
+    "client_generator_rss_guard_mib": 2500,
+    "host_available_guard_mib": 2000,
+    "max_sessions_per_gateway": 4096,
+    "global_delivery_body_bytes_per_single_gateway": 50331648,
+    "note": "Heap/body envelopes are not RSS or OS CPU quotas. Report actual total gateway+broker+DB CPU/RSS and generator/host separately. Dual gateway plus broker uses same planned heap budget; overage is reported, not hidden."
+  },
+  "comparison": {
+    "pilot_seconds": 20,
+    "warmup_seconds": 15,
+    "measurement_seconds": 60,
+    "independent_repeats": 3,
+    "soak_measurement_seconds": 600,
+    "selection": "Require unchanged correctness and complete accepted obligations. Prefer structural alternative when it materially reduces query amplification or improves sustainable accepted throughput/tail/recovery under the same budget. Evaluate CPU, RSS, network, rejection, backlog and operational complexity together. Do not change latency goals or remove failed arrivals after observing results.",
+    "candidate": "Bounded room-level coalescing of concurrently requested immutable pages, with fresh coherent F/head/body snapshot, authorized subscription grants and fair recovery scheduling; no durable dependence on cache."
+  },
+  "distributed": "RabbitMQ C room routing, one bounded exclusive queue per gateway, drop-head, bounded prefetch; real two processes, publisher confirm+mandatory return, one transport recovery owner, desired bindings and transport epoch, independent primary-head recovery. No physical HA claim."
+}

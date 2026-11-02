@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Actual MySQL snapshot plan</title><link rel="stylesheet" href="../../assets/shared/styles.css"><main><h1>Actual MySQL snapshot plan</h1><p>Read-only post-run diagnostic, not the original load instant or a latency benchmark. Source SQL matched; DB configuration and actual parameters below.</p><p>Source 4d540615c4526929dceb98af77f71611d6550b7c</p><p><a href="query-plan.json">Query, settings, parameters and indexes</a></p><pre>SELECT r.head,r.floor_seq,m.* FROM room r JOIN membership a ON a.room_id=r.id AND a.user_id=%s LEFT JOIN message m ON m.room_id=r.id AND m.seq&gt;GREATEST(%s,r.floor_seq-1) AND m.seq&lt;=LEAST(%s,r.head) WHERE r.id=%s ORDER BY m.seq LIMIT 64
+Parameters: [2, 5493, 5525, 999]</pre><pre>-&gt; Limit: 64 row(s)  (actual time=0.104..0.123 rows=32 loops=1)
+    -&gt; Sort: m.seq, limit input to 64 row(s) per chunk  (actual time=0.102..0.118 rows=32 loops=1)
+        -&gt; Stream results  (cost=6.7 rows=32) (actual time=0.0286..0.0717 rows=32 loops=1)
+            -&gt; Nested loop left join  (cost=6.7 rows=32) (actual time=0.0223..0.0499 rows=32 loops=1)
+                -&gt; Rows fetched before execution  (cost=0..0 rows=1) (actual time=0.0021..0.0021 rows=1 loops=1)
+                -&gt; Filter: ((m.room_id = 999) and (m.seq &gt; &lt;cache&gt;(greatest(5493,(&#x27;1&#x27; - 1)))) and (m.seq &lt;= &lt;cache&gt;(least(5525,&#x27;5525&#x27;))))  (cost=6.7 rows=32) (actual time=0.0163..0.0421 rows=32 loops=1)
+                    -&gt; Index range scan on m using PRIMARY over (room_id = 999 AND 5493 &lt; seq &lt;= 5525)  (cost=6.7 rows=32) (actual time=0.0147..0.0363 rows=32 loops=1)
+</pre></main></html>

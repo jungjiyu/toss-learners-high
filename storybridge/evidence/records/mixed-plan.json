@@ -1,0 +1,63 @@
+{
+  "round": "2026-10-31 mixed workload follow-up, predeclared before final comparisons",
+  "source_start": {
+    "main": "a10c04b",
+    "M": "5963f2e",
+    "C4": "c85d534"
+  },
+  "goals": {
+    "stored_p99_ms": 150,
+    "normal_transport_p99_ms": 250,
+    "durable_p99_ms": 500,
+    "recovery_seconds": 30,
+    "dropped_iterations": 0,
+    "correctness_errors": 0,
+    "accepted_obligations_complete_percent": 100
+  },
+  "budgets": {
+    "stack_host_cpu_rate": 3333,
+    "single_gateway_heap_mib": 768,
+    "mysql_buffer_pool_mib": 256,
+    "global_credit_mib": 32,
+    "wire_cache_mib": 16,
+    "reader_workers": 2,
+    "write_permits": 6,
+    "read_permits": 4
+  },
+  "primary": {
+    "warmup_seconds": 15,
+    "measure_seconds": 60,
+    "independent_repeats": 3,
+    "sender_vus": 512,
+    "receiver_hash_cache_entries_per_vu": 128,
+    "comparison_sources": {
+      "MI": "727153f",
+      "Q": "4d54061",
+      "M_mixed_observer_control": "14b76fc"
+    },
+    "order": "Alternate MI/Q order by repeat; M control after each group. All use the same bounded k6 receiver hash cache. No JDBC parse cache or increased initial heap: pilots did not establish an overall benefit.",
+    "comparisons": [
+      "mixed:500 connections,250 HTTP SEND/s,400 hot recipients,100 slow at40ms,100 normal",
+      "many:500 unique users,125 two-person rooms plus63 small rooms,250 HTTP SEND/s",
+      "spread:500 recipients,31 rooms,1000 HTTP SEND/s"
+    ],
+    "sender_vus_at_1000": 1024
+  },
+  "matched_work": {
+    "warmup_seconds": 15,
+    "measure_seconds": 60,
+    "repeats": 3,
+    "committed_hot_messages": 1500,
+    "committed_messages_per_normal_room": 10,
+    "recipients": 500,
+    "expected_obligations": 601000,
+    "contract": "Preload through actual authenticated k6 HTTP; then cold log recovery with no concurrent SEND. Distinct from live throughput/latency."
+  },
+  "selection": "Preserve exact storage/delivery/local-commit contracts. Prefer repeatable improvement in work-normalized cost and normal-room tail/backlog recovery, without hiding lower accepted fanout or moving rejection to unbounded delay. No single CPU threshold decides. Original SLO failures remain failures even if eventual drain succeeds.",
+  "long_run": "600s at500 mixed connections/250 HTTP SEND/s with30s reconnect; fixed30s recovery deadline plus bounded later observation",
+  "scope": "Native Windows, same laptop. C4 and all historical sources/failures stay intact; no claim of physical HA. k6 is volatile transport, SQLite/IndexedDB are separate durable evidence. No latency goal relaxation.",
+  "generator_revision": {
+    "reason": "MI 104447-8a6b: warmup drop176, measure drop0; k6 peak662MiB, host available min6138MiB. Preserve both 512-VU high-rate runs; final high-rate cohort uses1024 for MI and Q, three each. Other conditions remain512.",
+    "unchanged": "Executed scale/k6/receiver/measurement scripts and server budgets; reuse completed exact source/config/script repeats without latency selection."
+  }
+}

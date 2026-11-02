@@ -1,0 +1,36 @@
+[
+  {
+    "ids": "T24 T36 X04",
+    "name": "reconnect-hot",
+    "status": "PASS",
+    "details": {
+      "reconnecting_recipients": 8,
+      "normal_send_seconds": [
+        0.012824999983422458,
+        0.02026849996764213,
+        0.03269870008807629,
+        0.014365099952556193,
+        0.01861909998115152,
+        0.0327331000007689,
+        0.016814299975521863,
+        0.017368500004522502
+      ],
+      "hot_rejections": [
+        503,
+        429,
+        429,
+        429,
+        429
+      ],
+      "all_recovered": true
+    },
+    "seconds": 2.460485199932009
+  },
+  {
+    "ids": "T35",
+    "name": "database-restart",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 46, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\extended_suite.py\", line 66, in database_restart\n    key=uuid.uuid4().hex;r=post(a,101,key,'during database down');assert r.status_code in (429,503)\n                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "seconds": 1.8529885000316426
+  }
+]

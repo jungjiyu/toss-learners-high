@@ -1,0 +1,26 @@
+{
+  "Q": {
+    "branch": "experiment-socket-batch",
+    "source_sha": "4d540615c4526929dceb98af77f71611d6550b7c",
+    "jar_sha256": "5142cbfc545d8201024a15eced593e9d16e96951a34d0902af780a0887884eb3",
+    "checkout": "worktrees/experiment-socket-batch",
+    "retry_policy": "scripts/k6/legacy_retry_policy.js",
+    "retry_policy_sha256": "614d63a8eb28262040dbaf224872b6938f28757416aac39bccfa126b6f4d6f65"
+  },
+  "U0": {
+    "branch": "experiment-subscribe-grant",
+    "source_sha": "dcb8fe8d31eb1cebd694b0b62fadc4c9117a79ce",
+    "jar_sha256": "4791af4b5e7a2c6eb80019b7b5518925de47982593d023c53dd0a22f28f97dd7",
+    "checkout": "worktrees/experiment-subscribe-grant",
+    "retry_policy": "scripts/k6/legacy_retry_policy.js",
+    "retry_policy_sha256": "614d63a8eb28262040dbaf224872b6938f28757416aac39bccfa126b6f4d6f65"
+  },
+  "U": {
+    "branch": "experiment-reconnect-path",
+    "source_sha": "d1ab45300a25fc763381899466752482bf6e0921",
+    "jar_sha256": "561b57fc488c79bb034fbd33194e0252f7c530ff4681b602a1be8981cc2287ac",
+    "checkout": "worktrees/experiment-reconnect-path",
+    "retry_policy": "worktrees/experiment-reconnect-path/src/main/resources/static/retry-policy.js",
+    "retry_policy_sha256": "59e852ee8c4d0109c991f731cd07cf9649824da0cdf7ef79c3ff374209f88b09"
+  }
+}

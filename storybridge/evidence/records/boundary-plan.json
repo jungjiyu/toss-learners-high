@@ -1,0 +1,63 @@
+{
+  "status": "fixed before new load experiments",
+  "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+  "purpose": "Q mixed workload boundary on this laptop, not a capacity improvement or a universal SLO",
+  "distribution": {
+    "connections": 500,
+    "hot_connections": 400,
+    "normal_connections": 100,
+    "slow_hot_connections": 100,
+    "hot_send_fraction": 0.8,
+    "normal_send_fraction": 0.2,
+    "body_bytes": 512,
+    "sender_users": 31,
+    "normal_rooms": 31,
+    "slow_ms": 40,
+    "slow_release": "warmup + half measurement duration, unchanged from prior mixed workload",
+    "churn_seconds": 30
+  },
+  "budgets": {
+    "stack_host_cpu_rate": 3333,
+    "gateway_heap_mib": 768,
+    "mysql_buffer_mib": 256,
+    "global_credit_mib": 32,
+    "wire_cache_mib": 16,
+    "read_workers": 2,
+    "write_permits": 6,
+    "sender_vus": 512
+  },
+  "goals": {
+    "stored_p99_ms": 150,
+    "normal_transport_p99_ms": 250,
+    "reconnect_fixed_H_ms": 30000,
+    "post_arrival_drain_ms": 30000,
+    "overall_acceptance": 0.95,
+    "normal_acceptance": 0.99,
+    "unknown": 0,
+    "generator_drop": 0,
+    "accepted_obligations_complete": 1
+  },
+  "acceptance_assumption": "No previous minimum acceptance rate exists. For THIS verdict assume >=95% of all logical SEND attempts and >=99% of normal-room attempts receive STORED. This prevents calling heavy rejection acceptable normal service; it permits at most 5% aggregate and 1% normal immediate rejection. It is a new explicit assumption, not a previously agreed business SLO. Report hot acceptance separately.",
+  "normal_all_recipient_ratio": "Report normal logical SEND attempts whose original key/hash is committed and every independently planned room recipient receives its seq within250ms of first SEND start. Denominator includes rejected and unknown SEND. Volatile k6 memory receipt, NOT durable local commit. Diagnostic joint outcome, no additional post-hoc threshold.",
+  "clock_origins": {
+    "stored": "first logical HTTP SEND start to successful STORED or same-key result; phase selected at SEND start",
+    "normal_received": "original logical SEND start to first contiguous memory receipt, including replay tail for measurement-origin messages",
+    "reconnect": "physical WebSocket construction attempt to contiguous cursor >= first READY head H; H remains fixed for that attempt; already caught at READY finishes at READY; failures/interrupted/test-end attempts remain denominator",
+    "post_arrival": "last scheduled measurement arrival boundary to final receipt of all committed obligations; independent from per-connection H recovery"
+  },
+  "recovery_verdict": "Every reconnect attempt started in the measurement window must finish to its fixed H within30s. Pending/failed/interrupted attempts fail even if a later connection completes. Initial, warmup, and observation attempts are separate reported cohorts, never discarded. Post-arrival fixed30s is an additional gate.",
+  "search": "60s measurement pilots with15s warmup,45s observation,30s churn. Start25 and100 SEND/s, adapt midpoint in5/s increments until highest pilot pass and adjacent fail differ<=5/s; extend downward if25 fails. Preserve non-monotone outcomes. Final boundary points use120s observation and120s measurement and3 independent repetitions each; if results disagree retain mixed boundary, do not pick favorable repeats. Highest confirmed pass gets600s soak with30s churn. If soak fails report short/long scopes separately, no goal relaxation.",
+  "validity": "No generator drop; offered count difference <=max(1,0.1% target) for scenario boundary scheduling. Show actual count/rate, deficit/excess and schedule delay. Missing mandatory files, child failure, malformed ledgers or integrity violations give nonzero campaign exit. A complete valid experiment failing performance remains a valid failed experiment with zero execution exit.",
+  "provenance": "New measured runs and reused historical evidence are explicitly labelled. Existing250/s failures and601000-obligation CPU comparison remain unchanged. No existing run can be reused for new per-attempt recovery claims.",
+  "official_k6_2_3_docs": [
+    "https://grafana.com/docs/k6/latest/javascript-api/k6-websockets/websocket/websocket-onclose/",
+    "https://grafana.com/docs/k6/latest/using-k6/scenarios/executors/constant-arrival-rate/"
+  ],
+  "pilot_duration_revision": "First30s runs retained as instrumentation probes: the first30s churn coincides with slow release at warm15+measure/2. Before the valid boundary search, use60s pilots so a reconnect actually occurs while slow receivers remain constrained. Final120s and600s scopes unchanged; no SLO relaxation.",
+  "scenario_separation_before_steady_runs": {
+    "reason": "Original Q250 primary plans had churnEvery0; prior600s soak had churnEvery30. Initial boundary confirmation applied the latter stronger condition to short runs too. All reconnecting-normal-room failures remain valid and are not replaced. Measure the original steady mixed condition separately, then its highest confirmed candidate under600s all-connection reconnect. This is two explicitly named scenarios, not a relaxed latency target.",
+    "steady": "No periodic disconnect, same500/400/100 slow distribution, quotas and SLO/acceptance goals. Per-attempt reconnect30s is N/A (no attempts); post-arrival drain30s still applies. Pilot40/60, adaptive5/s spacing; final highest pass and adjacent fail120s x3.",
+    "reconnecting": "Existing churnEvery30 results retained. Finish20/s x3. Highest steady confirmed candidate gets600s churn30; failure means the steady range does NOT extend to reconnecting service. Do not discard replay from normal p99.",
+    "criteria": "150/250ms,30s,95% overall/99% normal,zero unknown/drop and complete obligations unchanged. Report scenarios in separate tables/plot panels."
+  }
+}

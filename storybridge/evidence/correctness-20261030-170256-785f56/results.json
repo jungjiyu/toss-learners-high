@@ -1,0 +1,109 @@
+[
+  {
+    "ids": "T24 T36 X04",
+    "name": "reconnect-hot",
+    "status": "PASS",
+    "details": {
+      "reconnecting_recipients": 8,
+      "normal_send_seconds": [
+        0.019110799999907613,
+        0.02565720002166927,
+        0.012755800038576126,
+        0.008662400068715215,
+        0.030432599945925176,
+        0.019418600015342236,
+        0.010138200013898313,
+        0.009117400040850043
+      ],
+      "hot_rejections": [
+        503,
+        429,
+        429,
+        429,
+        429
+      ],
+      "all_recovered": true
+    },
+    "seconds": 3.162696299958043
+  },
+  {
+    "ids": "T14 T25",
+    "name": "churn-epochs",
+    "status": "PASS",
+    "details": {
+      "churn_cycles": 20,
+      "remaining_peers": 0,
+      "remaining_routes": 0,
+      "rss_before": 266571776,
+      "rss_after": 264572928,
+      "interpretation": "RSS includes JIT/heap retention; zero route/credit/writer references is separately checked."
+    },
+    "seconds": 5.7907476999098435
+  },
+  {
+    "ids": "T21 T37 T38 X06",
+    "name": "local-quota-retention",
+    "status": "PASS",
+    "details": {
+      "sqlite_full": true,
+      "unacked_cursor": 45,
+      "new_floor": 48,
+      "classification": "RESYNC_REQUIRED followed by explicit new bootstrap interval",
+      "cursor_only_rejected": true
+    },
+    "seconds": 1.2832768999505788
+  },
+  {
+    "ids": "T35",
+    "name": "database-restart",
+    "status": "PASS",
+    "details": {
+      "real_mysqld_kill": 10688,
+      "down_send_status": 503,
+      "retry_same_key_seq": 119,
+      "recovery_query_errors_delta": 0,
+      "socket_preserved": true
+    },
+    "seconds": 11.046175200026482
+  },
+  {
+    "ids": "T14 T41",
+    "name": "retire-timeout-tabs",
+    "status": "PASS",
+    "details": {
+      "other_tab_survived": true,
+      "missing_close_ack_closed_seconds": 3.015999999945052
+    },
+    "seconds": 3.6694640999194235
+  },
+  {
+    "ids": "T03 T04 T28 X03",
+    "name": "process-commit-crash",
+    "status": "PASS",
+    "details": {
+      "real_app_kills": 2,
+      "precommit_rolled_back": true,
+      "postcommit_same_seq": 45
+    },
+    "seconds": 9.710418399889022
+  },
+  {
+    "ids": "T34 X05",
+    "name": "list-order-pages",
+    "status": "PASS",
+    "details": {
+      "stable_pages_rooms": 73,
+      "reverse_summary_head": 49,
+      "list_only_last_loss_recovered": true,
+      "browser_reverse_merge": "separate browser verification required"
+    },
+    "seconds": 1.1846902000252157
+  },
+  {
+    "ids": "T12 T43",
+    "name": "blocked-write",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 47, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\extended_suite.py\", line 155, in blocked_write\n    close_clients();app('stop');app('start')\n                                ^^^^^^^^^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 39, in app\n    def app(action):subprocess.run([sys.executable,str(ROOT/'scripts/app.py'),action,*(['--tests'] if action=='start' else [])],check=True,capture_output=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\REDACTED\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['C:\\\\1030_toss_storybridge\\\\.venv\\\\Scripts\\\\python.exe', 'C:\\\\1030_toss_storybridge\\\\scripts\\\\app.py', 'start', '--tests']' returned non-zero exit status 1.\n",
+    "seconds": 33.31710679992102
+  }
+]

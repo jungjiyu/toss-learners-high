@@ -1,0 +1,933 @@
+{
+  "before": [
+    [
+      "01e38bc61b9d72584a718c1c22dfecddd8b20cd0b3a0248b3efae4369378f775",
+      "DELETE FROM `message`",
+      1,
+      277965000000,
+      11000000,
+      18372,
+      0
+    ],
+    [
+      "f97a1d783b3686724b6f92665a6ed2456df69a98fee0d27c707f180df8797f17",
+      "DELETE FROM `send_receipt`",
+      1,
+      146507900000,
+      7000000,
+      18372,
+      0
+    ],
+    [
+      "5dafea96a234026cf966b13fb0163076bafe828d1781894e1d9755239adecf6d",
+      "DELETE FROM `outbox`",
+      1,
+      115979700000,
+      4000000,
+      18372,
+      0
+    ],
+    [
+      "fb98122f541a0821368c4125dbd1debae0f9b22a0931914d6a2e6e715c836631",
+      "SELECT `id` , `room_id` , `seq` , `attempts` FROM `outbox` WHERE ( ( `state` = ? AND `next_attempt` <= ? ) OR ( `state` = ? AND `lease_until` < ? ) ) ORDER BY `id` LIMIT ? FOR UPDATE SKIP LOCKED",
+      142,
+      45339100000,
+      494000000,
+      0,
+      0
+    ],
+    [
+      "f2b9be5f0f32ca7507e4ddf133cd2fad0993a1c26fde9caa6f067b1af2b7603c",
+      "COMMIT",
+      147,
+      42753900000,
+      0,
+      0,
+      0
+    ],
+    [
+      "158bfe3d4b4b0a372a4acdb38affe2cb4f6b3cb21a9af0ea9fad9a9a083ac18a",
+      "SET `autocommit` = ?",
+      296,
+      34205900000,
+      0,
+      0,
+      0
+    ],
+    [
+      "d0d3ba54aedfcef0383a9a27a3c36e2bafd393abe342e9a65ba3ca7b6ecb4d0e",
+      "INSERT IGNORE INTO `membership` ( `room_id` , `user_id` ) VALUES (...)",
+      200,
+      22097700000,
+      168000000,
+      0,
+      0
+    ],
+    [
+      "3a05326daa568e37dd4102df0ef1265cc54acc529fefcd1565924b76ef9101a5",
+      "SELECT `VARIABLE_VALUE` FROM `performance_schema` . `global_variables` WHERE `variable_name` = ?",
+      1,
+      11026800000,
+      3000000,
+      0,
+      0
+    ],
+    [
+      "333162d0accb2fa9553c6128c78af65aa4d7d44c0478f5766a409f6d7c7543aa",
+      "INSERT IGNORE INTO `room` ( `id` , `last_body` ) VALUES (...)",
+      73,
+      8837100000,
+      60000000,
+      0,
+      0
+    ],
+    [
+      "637a8ace4fd08794f6880db011524cd3cd21f3cd7fbd0606ee8c87e95da86775",
+      "INSERT IGNORE INTO `sb_user` VALUES (...)",
+      32,
+      7401600000,
+      49000000,
+      0,
+      0
+    ],
+    [
+      "b58dc6934164d4a66e292e6b8e5a33aa09a5a2ddbaa35a4fbd159c4eecf33506",
+      "SELECT `password_hash` FROM `sb_user` WHERE `id` = ?",
+      32,
+      6316400000,
+      69000000,
+      32,
+      32
+    ],
+    [
+      "c0d61b679356307454055d7d8a563b5bce63b6730c98b3a4ea8972b8baa1998e",
+      "SELECT `TABLE_SCHEMA` AS `TABLE_CAT` , ? AS `TABLE_SCHEM` , TABLE_NAME , CASE WHEN `TABLE_TYPE` = ? THEN CASE WHEN `TABLE_SCHEMA` = ? OR `TABLE_SCHEMA` = ? OR `TABLE_SCHEMA` = ? THEN ? ELSE ? END WHEN `TABLE_TYPE` = ? THEN ? ELSE `TABLE_TYPE` END AS `TABLE_TYPE` , `TABLE_COMMENT` AS `REMARKS` , ? AS `TYPE_CAT` , ? AS `TYPE_SCHEM` , ? AS `TYPE_NAME` , ? AS `SELF_REFERENCING_COL_NAME` , ? AS `REF_GENERATION` FROM `INFORMATION_SCHEMA` . `TABLES` WHERE `TABLE_SCHEMA` = ? AND TABLE_NAME LIKE ? ORDER BY `TABLE_TYPE` , `TABLE_SCHEMA` , TABLE_NAME",
+      3,
+      3146600000,
+      12000000,
+      33,
+      3
+    ],
+    [
+      "79cba78862aa5332fdba687e853286334356c39bf359e0d4b1243f9819f61229",
+      "UPDATE `room` SET `head` = ? , `floor_seq` = ? , `last_body` = ?",
+      1,
+      2926100000,
+      10000000,
+      73,
+      0
+    ],
+    [
+      "0bd52df5a6e81880a88240d0ee10dc4b5216af65873f704072a88b2db08af010",
+      "SHOW SCHEMAS LIKE ?",
+      1,
+      2658700000,
+      8000000,
+      6,
+      0
+    ],
+    [
+      "2cf260c1dfedd9db62815f2979e2d8e673dfe5a15301c7f4caa6df9d4cd45fca",
+      "SELECT `installed_rank` , `version` , `description` , `type` , `script` , `checksum` , `installed_on` , `installed_by` , `execution_time` , `success` FROM `storybridge_a` . `flyway_schema_history` WHERE `installed_rank` > - ? ORDER BY `installed_rank`",
+      1,
+      2399800000,
+      7000000,
+      1,
+      1
+    ],
+    [
+      "95c8507923edcddc0ae27658c89ed840d33d788d005c6834667b35ad26c51d62",
+      "SELECT COUNT (?) FROM `information_schema` . `schemata` WHERE SCHEMA_NAME = ? LIMIT ?",
+      2,
+      1038300000,
+      5000000,
+      8,
+      2
+    ],
+    [
+      "64b71fa5abd16f4bbebb165a00d726567519b82b206cbb5009b2e61b8ebce18b",
+      "UPDATE `membership` SET `read_seq` = ?",
+      1,
+      996200000,
+      0,
+      200,
+      0
+    ],
+    [
+      "b0a2105f85f781a2af3593f66431f1528f14f14566499839ea27e23911fb9a5a",
+      "SHOW GLOBAL STATUS WHERE `Variable_name` IN (...)",
+      1,
+      984500000,
+      7000000,
+      5,
+      5
+    ],
+    [
+      "c20fcea11911be36651b7ca7bd3712d4ed9ac1134cee9c6620039e1fb13b5eff",
+      "SELECT @@SESSION . `auto_increment_increment` AS `auto_increment_increment` , @@`character_set_client` AS `character_set_client` , @@`character_set_connection` AS `character_set_connection` , @@`character_set_results` AS `character_set_results` , @@`character_set_server` AS `character_set_server` , @@`collation_server` AS `collation_server` , @@`collation_connection` AS `collation_connection` , @@`init_connect` AS `init_connect` , @@`interactive_timeout` AS `interactive_timeout` , @@`license` AS `license` , @@`lower_case_table_names` AS `lower_case_table_names` , @@`max_allowed_packet` AS `max_allowed_packet` , @@`net_write_timeout` AS `net_write_timeout` , @@`performance_schema` AS `performance_schema` , @@`sql_mode` AS `sql_mode` , @@`system_time_zone` AS `system_time_zone` , @@`time_zone` AS `time_zone` , @@`transaction_isolation` AS `transaction_isolation` , @@`wait_timeout` AS `wait_timeout`",
+      3,
+      725900000,
+      0,
+      3,
+      3
+    ],
+    [
+      "ce04eda080d3f5605113e1d0d47c2f20e23b091e2487ba586f07b32cda423942",
+      "SELECT SCHEMA ( )",
+      3,
+      593600000,
+      0,
+      3,
+      3
+    ],
+    [
+      "6d631211d940af327fe3f82a008b908dc6cba3912cae61881353006e73354eee",
+      "SET NAMES `utf8mb4`",
+      5,
+      448000000,
+      0,
+      0,
+      0
+    ],
+    [
+      "82a5c4c98da93c15cd303c5d3c188bfc4b7b3e2641a163bc626ed91c7966453a",
+      "SET `foreign_key_checks` = ? , `sql_safe_updates` = ?",
+      5,
+      406900000,
+      0,
+      0,
+      0
+    ],
+    [
+      "6c34c9edb36fd2d575a66f1762f0bb40569b0049df13f95423e358ef409930b6",
+      "SELECT `version` ( )",
+      2,
+      403800000,
+      0,
+      2,
+      2
+    ],
+    [
+      "c16f24f908846019a741db580f6545a5933e9435a7cf1579c50794a6ca287739",
+      "SELECT @@SESSION . `transaction_read_only`",
+      3,
+      303000000,
+      0,
+      3,
+      3
+    ],
+    [
+      "4a828aa1fe3bd0bf2a28fbc6219437d7106edadb1aa284a7832de0ce5446de78",
+      "SET SESSION `innodb_lock_wait_timeout` = ?",
+      3,
+      285400000,
+      0,
+      0,
+      0
+    ],
+    [
+      "ee697e4b4152b6204eb23d2a055339cc8262297cf42467b78c1e241ddfcfbce3",
+      "SET `character_set_results` = ?",
+      3,
+      253000000,
+      0,
+      0,
+      0
+    ],
+    [
+      "3bdeb92eb8cce0a92e8f1d00bdafc690ce0fa95cfe5ccfdaa55997f22c95de49",
+      "SELECT @@`version` AS `version` , @@`innodb_flush_log_at_trx_commit` AS `flush_commit` , @@`sync_binlog` AS `sync_binlog`",
+      1,
+      237100000,
+      0,
+      1,
+      1
+    ],
+    [
+      "8a38586b58b06fd01eed66f2e781dfc9b02de55c015ca187a0a149c5584df989",
+      "SELECT `variable_name` FROM `performance_schema` . `user_variables_by_thread` WHERE `variable_value` IS NOT NULL",
+      1,
+      190000000,
+      0,
+      0,
+      0
+    ],
+    [
+      "ea6835a67266c52e9fb72b6d5c8a2043c9f4dcbeffab05b910702ee7089d35f6",
+      "SELECT @@`version` , @@`innodb_flush_log_at_trx_commit` , @@`sync_binlog` , @@`transaction_isolation` , @@`innodb_buffer_pool_size` , @@`innodb_redo_log_capacity` , @@`max_connections`",
+      1,
+      182000000,
+      0,
+      1,
+      1
+    ],
+    [
+      "a724a21545b602d4ae826ae58bbf526427a94f1e68ebec539ec3c53bfaa88281",
+      "SELECT @@SESSION . `transaction_isolation`",
+      1,
+      151300000,
+      0,
+      1,
+      1
+    ],
+    [
+      "410e37fce3b70b1d83e268b43a57a614f9ea5eba32d89b618a50808d7faae012",
+      "SELECT `installed_rank` , `version` , `description` , `type` , `script` , `checksum` , `installed_on` , `installed_by` , `execution_time` , `success` FROM `storybridge_a` . `flyway_schema_history` WHERE `installed_rank` > ? ORDER BY `installed_rank`",
+      1,
+      140600000,
+      1000000,
+      0,
+      0
+    ],
+    [
+      "6ed56857f2cfaf3373f175ec4188104e49cb7465f0a658cee54d7f8f82ed0089",
+      "SELECT @@`sql_safe_updates`",
+      1,
+      126900000,
+      0,
+      1,
+      1
+    ],
+    [
+      "a103cb960fa15d12f28bb0574809fefdf3ad3568ba0e00938c34f64f91db5cf4",
+      "SELECT @@`foreign_key_checks`",
+      1,
+      117300000,
+      0,
+      1,
+      1
+    ],
+    [
+      "a038f297780575bae2edb831de036f83aadd2ea324cf49eab2a2ac4857823645",
+      "SELECT @@GLOBAL . `ENFORCE_GTID_CONSISTENCY`",
+      1,
+      100400000,
+      0,
+      1,
+      1
+    ],
+    [
+      "210f83c02903215c675fba4b4d27b8f5699d2c738724bdcba3482ab3124c4bb9",
+      "SELECT `GET_LOCK` (...)",
+      1,
+      99900000,
+      0,
+      1,
+      1
+    ],
+    [
+      "cd5c7825c46d1eb3066634184c6a3b7a1dd6d66a1e9522da6ca2eece8e245d8d",
+      "SELECT @@`pid_file`",
+      1,
+      94200000,
+      0,
+      1,
+      1
+    ],
+    [
+      "9f6606aa4a617001be69c6327abdcbecf410b1281756802de955c77df12d101e",
+      "SELECT `RELEASE_LOCK` (?)",
+      1,
+      88200000,
+      0,
+      1,
+      1
+    ],
+    [
+      "b629f0a8717fa5ed6ebf10d14f99162cb7b7db2f61c9ca979574553ac96f1a0e",
+      "USE `storybridge_a`",
+      1,
+      80800000,
+      0,
+      0,
+      0
+    ],
+    [
+      "782d35290c4f6c3f27184b80e9b6b143640e2533cf44e654b8858cec708c731c",
+      "SELECT `SUBSTRING_INDEX` ( SYSTEM_USER ( ) , ?, ... )",
+      1,
+      79300000,
+      0,
+      1,
+      1
+    ],
+    [
+      "55fa5810fbb2760e86d578526176c1497b134d4ef3dd0863dd78b1c5e819848c",
+      "BEGIN",
+      1,
+      53100000,
+      0,
+      0,
+      0
+    ]
+  ],
+  "after": [
+    [
+      "f2b9be5f0f32ca7507e4ddf133cd2fad0993a1c26fde9caa6f067b1af2b7603c",
+      "COMMIT",
+      35065,
+      131366425700000,
+      0,
+      0,
+      0
+    ],
+    [
+      "3d3f2f0d36a1f6d2fe2682ef4a34e3c6f8d9ee2b215cfa255c26be3d85ae772b",
+      "SELECT COUNT ( * ) FROM `outbox` WHERE `room_id` = ? AND `state` != ?",
+      21014,
+      19841478300000,
+      56251000000,
+      530499,
+      21042
+    ],
+    [
+      "158bfe3d4b4b0a372a4acdb38affe2cb4f6b3cb21a9af0ea9fad9a9a083ac18a",
+      "SET `autocommit` = ?",
+      70574,
+      15733799500000,
+      0,
+      0,
+      0
+    ],
+    [
+      "a2055a8765a1ebb93af146b4a5e5e1e448daaaadd91a0e6cd10edc63918bb4f0",
+      "SELECT COUNT ( * ) FROM `membership` WHERE `room_id` = ? AND `user_id` = ?",
+      32614,
+      13482882200000,
+      323113000000,
+      32635,
+      32635
+    ],
+    [
+      "c28db513491f2df9cec3ce8ff5f8f69ce83b88ce684b76cf5fe386fb183509b7",
+      "UPDATE `room` SET `head` = ? , `last_body` = ? WHERE `id` = ?",
+      21014,
+      12234896000000,
+      44343000000,
+      21043,
+      0
+    ],
+    [
+      "447d2419eabd09495fa813a7cf0ee27d3c6d91be613895d89ce8603cc4ae5d66",
+      "INSERT INTO `message` VALUES (...)",
+      21027,
+      11292206400000,
+      44253000000,
+      0,
+      0
+    ],
+    [
+      "8b5ede04633f83b13e71273e79ca9bf57174d751bba1695c4f551f082cab7eb1",
+      "INSERT INTO `send_receipt` VALUES (...)",
+      21038,
+      10789647300000,
+      48915000000,
+      0,
+      0
+    ],
+    [
+      "ff674309d0211693b12509d37f18553677bd7ba9edd3a97f397f509df9f70770",
+      "SELECT `head` FROM `room` WHERE `id` = ? FOR UPDATE",
+      21030,
+      10023605500000,
+      58799000000,
+      21041,
+      21041
+    ],
+    [
+      "6ad5ebaac074b2d1c7154009361f43845696592cb1061ca7ad1764cafa93c900",
+      "INSERT INTO `outbox` ( `room_id` , `seq` ) VALUES (...)",
+      21029,
+      9467354900000,
+      43500000000,
+      0,
+      0
+    ],
+    [
+      "7b0f6299ec895d0e486d87e8dbeccb17bcab573cde2c4abab9e8df73a5897474",
+      "SELECT * FROM `send_receipt` WHERE `room_id` = ? AND `sender_id` = ? AND `client_key` = ?",
+      21258,
+      9375604200000,
+      40735000000,
+      48,
+      48
+    ],
+    [
+      "9a3495ee49daac851ac7be3251bd3ec6ab24bef3025f98af67a68fff9e278772",
+      "SELECT `r` . `id` , `r` . `head` , LEFT ( `r` . `last_body` , ? ) , `m` . `read_seq` FROM `membership` `m` JOIN `room` `r` ON `r` . `id` = `m` . `room_id` WHERE `m` . `user_id` = ? AND `r` . `id` > ? ORDER BY `r` . `id` LIMIT ?",
+      6936,
+      4822470500000,
+      22564000000,
+      86031,
+      28677
+    ],
+    [
+      "f3f3314318474a5ceb8eabc285be910ccefba47ba83c71bb2c4df1911e645909",
+      "UPDATE `outbox` SET `state` = ? , `lease_until` = ? , `last_error` = ? WHERE `state` = ? AND `lease_token` = ? AND `id` IN (...)",
+      920,
+      4276827900000,
+      6280000000,
+      21124,
+      0
+    ],
+    [
+      "b326c629b4bfea18ac8897d2a84f573799fb5def47491c58d816d8ffa13f1dee",
+      "SELECT `head` , `floor_seq` FROM `room` WHERE `id` = ?",
+      11375,
+      3942626000000,
+      22787000000,
+      11376,
+      11376
+    ],
+    [
+      "c2fad19cd5c1ba458845895085ebd167f4dd87a89795c79c8ba1688c28fa02d5",
+      "UPDATE `outbox` SET `state` = ? , `lease_token` = ? , `lease_until` = ? , `attempts` = `attempts` + ? WHERE `id` IN (...)",
+      920,
+      2445335500000,
+      2334000000,
+      21100,
+      0
+    ],
+    [
+      "a724a21545b602d4ae826ae58bbf526427a94f1e68ebec539ec3c53bfaa88281",
+      "SELECT @@SESSION . `transaction_isolation`",
+      11598,
+      2440718900000,
+      0,
+      11597,
+      11597
+    ],
+    [
+      "9cf78ec1ee2746bb4c688b21593f69a1eba7026ba2277d7717cd8defb167449a",
+      "SET SESSION TRANSACTION READ ONLY",
+      11595,
+      2304152100000,
+      0,
+      0,
+      0
+    ],
+    [
+      "a2ec27bb65e6253a3fcebb742606cd68e95fa42fe95a2a3ddb7914176b2d4ddd",
+      "SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ",
+      11594,
+      2239314900000,
+      0,
+      0,
+      0
+    ],
+    [
+      "184b254cf8a04dc02dde13544f6b8fc2abe37037886cd02a153350b3909cf70e",
+      "SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED",
+      11597,
+      2115583200000,
+      0,
+      0,
+      0
+    ],
+    [
+      "664a2aec28f52c38fac12d5adf14d7f8da06346ba3a594072cc152ad9bcecb59",
+      "SET SESSION TRANSACTION READ WRITE",
+      11596,
+      2110759200000,
+      0,
+      0,
+      0
+    ],
+    [
+      "fb98122f541a0821368c4125dbd1debae0f9b22a0931914d6a2e6e715c836631",
+      "SELECT `id` , `room_id` , `seq` , `attempts` FROM `outbox` WHERE ( ( `state` = ? AND `next_attempt` <= ? ) OR ( `state` = ? AND `lease_until` < ? ) ) ORDER BY `id` LIMIT ? FOR UPDATE SKIP LOCKED",
+      1744,
+      2024739900000,
+      6040000000,
+      91329,
+      21044
+    ],
+    [
+      "94f412049c028cd83ee7bc6b78801ab5b8035e595ae39153ea5dcf460a1bccc8",
+      "SELECT * FROM `message` WHERE `room_id` = ? AND `seq` > ? AND `seq` <= ? ORDER BY `seq` LIMIT ?",
+      3305,
+      1764017500000,
+      8338000000,
+      5585,
+      5585
+    ],
+    [
+      "657a5b089df54a3031fe81d6c0d7e4fce46dce66dbe5fb0fb998a511774658b1",
+      "SELECT `o` . `id` AS `outbox_id` , `o` . `lease_token` , `m` . * FROM `outbox` `o` JOIN `message` `m` ON `m` . `room_id` = `o` . `room_id` AND `m` . `seq` = `o` . `seq` WHERE `o` . `state` = ? AND `o` . `id` IN (...)",
+      920,
+      1453675500000,
+      3646000000,
+      42087,
+      21044
+    ],
+    [
+      "01e38bc61b9d72584a718c1c22dfecddd8b20cd0b3a0248b3efae4369378f775",
+      "DELETE FROM `message`",
+      1,
+      277965000000,
+      11000000,
+      18372,
+      0
+    ],
+    [
+      "f97a1d783b3686724b6f92665a6ed2456df69a98fee0d27c707f180df8797f17",
+      "DELETE FROM `send_receipt`",
+      1,
+      146507900000,
+      7000000,
+      18372,
+      0
+    ],
+    [
+      "5dafea96a234026cf966b13fb0163076bafe828d1781894e1d9755239adecf6d",
+      "DELETE FROM `outbox`",
+      1,
+      115979700000,
+      4000000,
+      18372,
+      0
+    ],
+    [
+      "3e67fa9d38d82054e7fc01fe3ee8844dc76faaaefbd74d213a2af42e60e95520",
+      "ROLLBACK",
+      174,
+      33445100000,
+      0,
+      0,
+      0
+    ],
+    [
+      "d0d3ba54aedfcef0383a9a27a3c36e2bafd393abe342e9a65ba3ca7b6ecb4d0e",
+      "INSERT IGNORE INTO `membership` ( `room_id` , `user_id` ) VALUES (...)",
+      200,
+      22097700000,
+      168000000,
+      0,
+      0
+    ],
+    [
+      "3a05326daa568e37dd4102df0ef1265cc54acc529fefcd1565924b76ef9101a5",
+      "SELECT `VARIABLE_VALUE` FROM `performance_schema` . `global_variables` WHERE `variable_name` = ?",
+      1,
+      11026800000,
+      3000000,
+      0,
+      0
+    ],
+    [
+      "1e2876309281694eb003c45a379aa24a72a257e7259989ef9902b00f0053c4f9",
+      "SELECT `message_id` , `seq` , `body_hash` FROM `send_receipt` WHERE `room_id` = ? AND `sender_id` = ? AND `client_key` = ?",
+      181,
+      10935300000,
+      77000000,
+      8,
+      8
+    ],
+    [
+      "333162d0accb2fa9553c6128c78af65aa4d7d44c0478f5766a409f6d7c7543aa",
+      "INSERT IGNORE INTO `room` ( `id` , `last_body` ) VALUES (...)",
+      73,
+      8837100000,
+      60000000,
+      0,
+      0
+    ],
+    [
+      "637a8ace4fd08794f6880db011524cd3cd21f3cd7fbd0606ee8c87e95da86775",
+      "INSERT IGNORE INTO `sb_user` VALUES (...)",
+      32,
+      7401600000,
+      49000000,
+      0,
+      0
+    ],
+    [
+      "b58dc6934164d4a66e292e6b8e5a33aa09a5a2ddbaa35a4fbd159c4eecf33506",
+      "SELECT `password_hash` FROM `sb_user` WHERE `id` = ?",
+      32,
+      6316400000,
+      69000000,
+      32,
+      32
+    ],
+    [
+      "e62cc9f4f7f5ee6d76b266b99ede25eb98e4fc6b1010efe06427ae12695adcc7",
+      "SELECT ( SELECT COUNT ( * ) FROM `message` ) , ( SELECT COUNT ( * ) FROM `send_receipt` ) , ( SELECT COUNT ( * ) FROM `outbox` ) , ( SELECT COUNT ( * ) FROM `outbox` WHERE `state` != ? )",
+      1,
+      5404700000,
+      3000000,
+      1,
+      1
+    ],
+    [
+      "c20fcea11911be36651b7ca7bd3712d4ed9ac1134cee9c6620039e1fb13b5eff",
+      "SELECT @@SESSION . `auto_increment_increment` AS `auto_increment_increment` , @@`character_set_client` AS `character_set_client` , @@`character_set_connection` AS `character_set_connection` , @@`character_set_results` AS `character_set_results` , @@`character_set_server` AS `character_set_server` , @@`collation_server` AS `collation_server` , @@`collation_connection` AS `collation_connection` , @@`init_connect` AS `init_connect` , @@`interactive_timeout` AS `interactive_timeout` , @@`license` AS `license` , @@`lower_case_table_names` AS `lower_case_table_names` , @@`max_allowed_packet` AS `max_allowed_packet` , @@`net_write_timeout` AS `net_write_timeout` , @@`performance_schema` AS `performance_schema` , @@`sql_mode` AS `sql_mode` , @@`system_time_zone` AS `system_time_zone` , @@`time_zone` AS `time_zone` , @@`transaction_isolation` AS `transaction_isolation` , @@`wait_timeout` AS `wait_timeout`",
+      11,
+      5135300000,
+      0,
+      11,
+      11
+    ],
+    [
+      "c16f24f908846019a741db580f6545a5933e9435a7cf1579c50794a6ca287739",
+      "SELECT @@SESSION . `transaction_read_only`",
+      13,
+      4413700000,
+      0,
+      13,
+      13
+    ],
+    [
+      "4a828aa1fe3bd0bf2a28fbc6219437d7106edadb1aa284a7832de0ce5446de78",
+      "SET SESSION `innodb_lock_wait_timeout` = ?",
+      11,
+      3948400000,
+      0,
+      0,
+      0
+    ],
+    [
+      "c0d61b679356307454055d7d8a563b5bce63b6730c98b3a4ea8972b8baa1998e",
+      "SELECT `TABLE_SCHEMA` AS `TABLE_CAT` , ? AS `TABLE_SCHEM` , TABLE_NAME , CASE WHEN `TABLE_TYPE` = ? THEN CASE WHEN `TABLE_SCHEMA` = ? OR `TABLE_SCHEMA` = ? OR `TABLE_SCHEMA` = ? THEN ? ELSE ? END WHEN `TABLE_TYPE` = ? THEN ? ELSE `TABLE_TYPE` END AS `TABLE_TYPE` , `TABLE_COMMENT` AS `REMARKS` , ? AS `TYPE_CAT` , ? AS `TYPE_SCHEM` , ? AS `TYPE_NAME` , ? AS `SELF_REFERENCING_COL_NAME` , ? AS `REF_GENERATION` FROM `INFORMATION_SCHEMA` . `TABLES` WHERE `TABLE_SCHEMA` = ? AND TABLE_NAME LIKE ? ORDER BY `TABLE_TYPE` , `TABLE_SCHEMA` , TABLE_NAME",
+      3,
+      3146600000,
+      12000000,
+      33,
+      3
+    ],
+    [
+      "79cba78862aa5332fdba687e853286334356c39bf359e0d4b1243f9819f61229",
+      "UPDATE `room` SET `head` = ? , `floor_seq` = ? , `last_body` = ?",
+      1,
+      2926100000,
+      10000000,
+      73,
+      0
+    ],
+    [
+      "0bd52df5a6e81880a88240d0ee10dc4b5216af65873f704072a88b2db08af010",
+      "SHOW SCHEMAS LIKE ?",
+      1,
+      2658700000,
+      8000000,
+      6,
+      0
+    ],
+    [
+      "2cf260c1dfedd9db62815f2979e2d8e673dfe5a15301c7f4caa6df9d4cd45fca",
+      "SELECT `installed_rank` , `version` , `description` , `type` , `script` , `checksum` , `installed_on` , `installed_by` , `execution_time` , `success` FROM `storybridge_a` . `flyway_schema_history` WHERE `installed_rank` > - ? ORDER BY `installed_rank`",
+      1,
+      2399800000,
+      7000000,
+      1,
+      1
+    ],
+    [
+      "8833a19d4b080a9130bf9c45c7699e59e6a7c6c35171b87d8d31fa6a0df916c3",
+      "SELECT `DIGEST` , `DIGEST_TEXT` , `COUNT_STAR` , `SUM_TIMER_WAIT` , `SUM_LOCK_TIME` , `SUM_ROWS_EXAMINED` , `SUM_ROWS_SENT` FROM `performance_schema` . `events_statements_summary_by_digest` WHERE SCHEMA_NAME = ? ORDER BY `SUM_TIMER_WAIT` DESC LIMIT ?",
+      1,
+      2351600000,
+      9000000,
+      80,
+      40
+    ],
+    [
+      "ee697e4b4152b6204eb23d2a055339cc8262297cf42467b78c1e241ddfcfbce3",
+      "SET `character_set_results` = ?",
+      11,
+      2104400000,
+      0,
+      0,
+      0
+    ],
+    [
+      "b0a2105f85f781a2af3593f66431f1528f14f14566499839ea27e23911fb9a5a",
+      "SHOW GLOBAL STATUS WHERE `Variable_name` IN (...)",
+      2,
+      1552800000,
+      8000000,
+      10,
+      10
+    ],
+    [
+      "95c8507923edcddc0ae27658c89ed840d33d788d005c6834667b35ad26c51d62",
+      "SELECT COUNT (?) FROM `information_schema` . `schemata` WHERE SCHEMA_NAME = ? LIMIT ?",
+      2,
+      1038300000,
+      5000000,
+      8,
+      2
+    ],
+    [
+      "64b71fa5abd16f4bbebb165a00d726567519b82b206cbb5009b2e61b8ebce18b",
+      "UPDATE `membership` SET `read_seq` = ?",
+      1,
+      996200000,
+      0,
+      200,
+      0
+    ],
+    [
+      "6d631211d940af327fe3f82a008b908dc6cba3912cae61881353006e73354eee",
+      "SET NAMES `utf8mb4`",
+      10,
+      975800000,
+      0,
+      0,
+      0
+    ],
+    [
+      "ce04eda080d3f5605113e1d0d47c2f20e23b091e2487ba586f07b32cda423942",
+      "SELECT SCHEMA ( )",
+      3,
+      593600000,
+      0,
+      3,
+      3
+    ],
+    [
+      "82a5c4c98da93c15cd303c5d3c188bfc4b7b3e2641a163bc626ed91c7966453a",
+      "SET `foreign_key_checks` = ? , `sql_safe_updates` = ?",
+      5,
+      406900000,
+      0,
+      0,
+      0
+    ],
+    [
+      "6c34c9edb36fd2d575a66f1762f0bb40569b0049df13f95423e358ef409930b6",
+      "SELECT `version` ( )",
+      2,
+      403800000,
+      0,
+      2,
+      2
+    ],
+    [
+      "3bdeb92eb8cce0a92e8f1d00bdafc690ce0fa95cfe5ccfdaa55997f22c95de49",
+      "SELECT @@`version` AS `version` , @@`innodb_flush_log_at_trx_commit` AS `flush_commit` , @@`sync_binlog` AS `sync_binlog`",
+      1,
+      237100000,
+      0,
+      1,
+      1
+    ],
+    [
+      "8a38586b58b06fd01eed66f2e781dfc9b02de55c015ca187a0a149c5584df989",
+      "SELECT `variable_name` FROM `performance_schema` . `user_variables_by_thread` WHERE `variable_value` IS NOT NULL",
+      1,
+      190000000,
+      0,
+      0,
+      0
+    ],
+    [
+      "ea6835a67266c52e9fb72b6d5c8a2043c9f4dcbeffab05b910702ee7089d35f6",
+      "SELECT @@`version` , @@`innodb_flush_log_at_trx_commit` , @@`sync_binlog` , @@`transaction_isolation` , @@`innodb_buffer_pool_size` , @@`innodb_redo_log_capacity` , @@`max_connections`",
+      1,
+      182000000,
+      0,
+      1,
+      1
+    ],
+    [
+      "410e37fce3b70b1d83e268b43a57a614f9ea5eba32d89b618a50808d7faae012",
+      "SELECT `installed_rank` , `version` , `description` , `type` , `script` , `checksum` , `installed_on` , `installed_by` , `execution_time` , `success` FROM `storybridge_a` . `flyway_schema_history` WHERE `installed_rank` > ? ORDER BY `installed_rank`",
+      1,
+      140600000,
+      1000000,
+      0,
+      0
+    ],
+    [
+      "6ed56857f2cfaf3373f175ec4188104e49cb7465f0a658cee54d7f8f82ed0089",
+      "SELECT @@`sql_safe_updates`",
+      1,
+      126900000,
+      0,
+      1,
+      1
+    ],
+    [
+      "cb5b2faeb2642cf274172eb5a087cc92f2259f8c64144f255e698469221e3a9b",
+      "SELECT `id` , `head` FROM `room`",
+      1,
+      122400000,
+      1000000,
+      73,
+      73
+    ],
+    [
+      "a103cb960fa15d12f28bb0574809fefdf3ad3568ba0e00938c34f64f91db5cf4",
+      "SELECT @@`foreign_key_checks`",
+      1,
+      117300000,
+      0,
+      1,
+      1
+    ],
+    [
+      "a038f297780575bae2edb831de036f83aadd2ea324cf49eab2a2ac4857823645",
+      "SELECT @@GLOBAL . `ENFORCE_GTID_CONSISTENCY`",
+      1,
+      100400000,
+      0,
+      1,
+      1
+    ],
+    [
+      "210f83c02903215c675fba4b4d27b8f5699d2c738724bdcba3482ab3124c4bb9",
+      "SELECT `GET_LOCK` (...)",
+      1,
+      99900000,
+      0,
+      1,
+      1
+    ],
+    [
+      "cd5c7825c46d1eb3066634184c6a3b7a1dd6d66a1e9522da6ca2eece8e245d8d",
+      "SELECT @@`pid_file`",
+      1,
+      94200000,
+      0,
+      1,
+      1
+    ],
+    [
+      "9f6606aa4a617001be69c6327abdcbecf410b1281756802de955c77df12d101e",
+      "SELECT `RELEASE_LOCK` (?)",
+      1,
+      88200000,
+      0,
+      1,
+      1
+    ],
+    [
+      "b629f0a8717fa5ed6ebf10d14f99162cb7b7db2f61c9ca979574553ac96f1a0e",
+      "USE `storybridge_a`",
+      1,
+      80800000,
+      0,
+      0,
+      0
+    ],
+    [
+      "782d35290c4f6c3f27184b80e9b6b143640e2533cf44e654b8858cec708c731c",
+      "SELECT `SUBSTRING_INDEX` ( SYSTEM_USER ( ) , ?, ... )",
+      1,
+      79300000,
+      0,
+      1,
+      1
+    ],
+    [
+      "55fa5810fbb2760e86d578526176c1497b134d4ef3dd0863dd78b1c5e819848c",
+      "BEGIN",
+      1,
+      53100000,
+      0,
+      0,
+      0
+    ]
+  ]
+}

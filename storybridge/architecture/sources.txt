@@ -1,0 +1,234 @@
+StoryBridge 포트폴리오 아키텍처 — 코드·실험 근거
+검토일: 2026-11-02. 경로는 저장소 루트 C:/1030_toss_storybridge 기준.
+이번 작업은 기존 원본의 정리다. 서버 구현·성능 실험은 실행하지 않았다.
+변경 범위: main의 docs/portfolio/architecture/만. 사용자가 직접 노션에 게시한다.
+
+1. 비교 기준과 선정 확인
+개선 전: baseline-v4 = 91ce2a72a9635a60d8171db5ab5840ade3692926.
+개선 후: experiment-reconnect-path = d1ab45300a25fc763381899466752482bf6e0921.
+선정 태그: experiment-reconnect-path-v1.
+문서 검토 시작점 main = 8bbe5c438627ea7b1746747aa368a901bbb828a2.
+git diff baseline-v4 -- src 결과 없음: 현재 main의 기준 업무 소스는 baseline-v4와 동일.
+git ls-remote origin으로 main, baseline-v4, 최종 브랜치의 원격 SHA도 확인했다.
+선정 근거: docs/scale-selection.json, docs/causal-selection.json,
+docs/index.html, docs/articles/reconnect.html. 최종 개선 코드는 main에 병합되지 않았다.
+before는 과거 프리랜서 프로젝트가 아니라 이번 재구현 기준이다.
+과거 CPU 81.4%→28.1%는 이번 성과에 사용하지 않았다.
+
+2. 실제 활성 구성과 설정
+두 그림 모두 단일 JVM 채팅 서버 + MySQL/InnoDB + 브라우저다.
+HTTP SEND와 WebSocket SEND는 Store.send를 공유한다. 아래 성능 수치는 HTTP SEND다.
+선정 소스의 Publisher는 Gateway.publish를 직접 호출한다. RabbitMQ/Redis/외부 캐시는 없다.
+별도 분산 후보 C4의 broker·두 gateway 시험은 최종 선정 소스에 통합된 결과가 아니다.
+방별 routes 인덱스와 별도 socket writer는 개선 전에도 존재했다. 새 개선처럼 표시하지 않았다.
+두 그림의 저장·전달 실행기·복구·writer는 같은 서버 내부 기능이다. 별도 배포 서비스가 아니다.
+
+기준 소스의 설정:
+src/main/resources/application.properties @91ce2a72
+Hikari 12, 읽기 permit 4/쓰기 permit 6, DB IO worker 4/queue 128.
+기본 session admission 128, window 16개/128KiB, session credit 32개,
+수신자별 live buffer 128KiB, 전체 credit 32MiB/live buffer 16MiB.
+head 재검증 1000ms, ACK timeout 15000ms, write timeout 1500ms.
+MySQL RC, 페이지 조회는 REPEATABLE READ 트랜잭션. db/port는 프로젝트 전용 설정.
+이 기본 설정을 아래 최종 500연결 실험 설정과 같다고 주장하지 않는다.
+
+최종 채택의 정확한 측정 설정 대표 원본:
+docs/evidence/scale-U-causal-explore-D-20261031-223245-c68f/plan.json
+동일 디렉터리 environment.json, cpu-budget.json, command.json, harness/, manifest.json.
+실행 JAR sha256: 561b57fc488c79bb034fbd33194e0252f7c530ff4681b602a1be8981cc2287ac.
+retry-policy.js sha256: 59e852ee8c4d0109c991f731cd07cf9649824da0cdf7ef79c3ff374209f88b09.
+Java21.0.13, SpringBoot3.5.16, Tomcat10.1.55, MySQL8.4.13, k6 2.3.0.
+Gateway18080 + MySQL13306. loopback, TLS/압축 비활성.
+heap 128~768MiB, MySQL buffer pool256MiB, innodb_flush_log_at_trx_commit=1/sync_binlog=1.
+서버+DB 합계 CPU Job quota3333/10000: 호스트18논리CPU 기준 약6개 CPU 시간.
+전용 코어가 아니며 k6는 quota 밖에서 같은 호스트를 공유한다.
+session admission4096, Tomcat max-connections4224/accept-count512.
+초기 DB IO2worker/queue128, 공유 읽기2worker, 읽기4permit/쓰기6permit/Hikari12.
+전역 credit32MiB + 표현 캐시16MiB, window16개/256KiB, session credit32개.
+공유 요청 전체4096/키256/그룹512, 캐시 최대4096entry 및16MiB 추정 비용 예산.
+실제 JVM 객체 전체가 이 수치 안에 들어간다는 뜻은 아니다.
+기본 properties의 max-sessions128을 실제 실행의4096과 혼동하지 않았다.
+
+3. 그림 화살표와 정합성 경계
+정확한 커밋별 메서드 행 번호와 영구 GitHub 링크: code-map.json.
+집계 원본에서 추출·재계산한 개별 수치와 원본 해시: numbers.json.
+아래 파일명은 src/main/java/dev/storybridge/를 기준으로 한다.
+
+[SEND → SEND 처리 / commit 후 STORED → 발신자]
+Api.send 및 Gateway.send → Store.send. Auth.header/verify 또는 SocketConfig.beforeHandshake.
+Store.authorize가 회원 방 권한 확인. room head FOR UPDATE 후 같은 sender/key receipt 조회.
+같은 key/hash는 기존 receipt, 같은 key/다른 hash는 KEY_CONFLICT.
+message + send_receipt + outbox INSERT와 room head 갱신은 하나의 write.execute.
+TransactionTemplate가 commit을 마친 뒤 반환해야 STORED를 구성한다.
+방별 즉시 admission과 전체 write budget은 최종에서도 유지된다. 유한 저장 대기 후보는 미채택.
+응답 불명에 새 키를 만들지 않는다. Api.result/Store.result는 동일 키의 저장 결과를 조회한다.
+브라우저 app.js는 전송 전에 IndexedDB pending에 key/body/hash를 저장한다.
+
+[전달 실행기 → MySQL: 전달 작업 선점·본문 조회·완료]
+Publisher.poll → Store.claim/publication/finish (기준).
+최종은 claim/publications/finishBatch: 최대32개 작업의 UPDATE/본문 JOIN/완료를 묶는다.
+claim은 FOR UPDATE SKIP LOCKED, 완료는 id+lease_token으로 fencing.
+완료 기록은 로컬 publish 이후다. 소켓 수신이나 APPLIED 완료 기록이 아니다.
+publish 후 DONE 전에 종료되면 재발행 가능. 만료 lease 재선점/재시도 및 poison 격리 유지.
+
+[전달 실행기 → 연결별 전달: 방별 팬아웃]
+Publisher.poll이 Gateway.publish를 직접 호출하고 routes[room]의 구독을 순회한다.
+정상 연속 메시지는 issue로 즉시 전송 큐에 등록한다. DB가 소켓에 직접 push하지 않는다.
+기준: credit 부족 시 Sub.buffer(TreeMap)와 globalBuffer 예산을 사용, 넘치면 buffer를 비우고 로그 복구.
+최종: 수신자별 대기 본문 버퍼 없음. gap/credit 부족이면 공유 로그 조회에 맡긴다.
+최종도 socket frames와 outstanding credit 원장은 유한하게 존재한다. '버퍼가 전혀 없음'이 아니다.
+
+[연결별 전달 → 앱 메모리]
+기준 Gateway.publish/drain/clearBuffer가 수신자별 live 버퍼를 보관·배출한다.
+최종 Gateway.issue → WireCache.encode: messageId/hash가 같은 불변 JSON과 UTF-8 길이를 재사용.
+구독 prefix는 Sub 생성 때 재사용 준비. 각 연결의 frame String 생성까지 없앤 것은 아니다.
+캐시는 직렬화 표현만 보관한다. 권한·head/floor·조회 Page의 TTL 캐시가 아니다.
+권한이 허용된 현재 DB 조회/발행 Message가 있어야 encode에 들어온다.
+eviction/cold miss/동시 miss는 동기화된 encode에서 처리한다. 캐시 소실로 복구 로그가 없어지지 않는다.
+
+[수신 브라우저 → 구독·복구: 연속 cursor로 재구독]
+app.js localRoom/subscribe: IndexedDB 본문과 연속 cursor 및 로컬 generation 일치 확인.
+Gateway.subscribe: 새 구독 객체·epoch, 인증 만료·closing·현재 구독 재확인 후 READY.
+기준은 Store.history(...limit=0)에서 권한 SELECT와 head/floor SELECT 및 RR transaction 왕복.
+최종은 Store.subscription → batchHistory(end=0): membership JOIN room 한 SELECT의 권위 snapshot.
+원래 cursor가 floor-1 아래면 RESYNC_REQUIRED, head 위면 INVALID_CURSOR. 조용한 cursor 보정 없음.
+초기 구독은 각 identity를 독립 확인한다. 초기 권한 조회를 서로 다른 사용자끼리 공유하지 않는다.
+
+[구독·복구 → DB / 연결별 전달: 누락 조회와 연속 전송]
+기준 Gateway.tickPeer/load → Store.history: 수신자별 RR 페이지, 주기적인 보충.
+최종 Gateway.load → RoomReads.submit/dispatch/run → Store.batchHistory.
+같은 방과 after/32 범위의 동시 대기를 닫힌 그룹으로 병합. 완료 snapshot을 미래 요청에 재사용하지 않는다.
+권한·floor·head·본문을 하나의 SELECT로 읽고, 요청별 bound/limit/연속 행 수를 재검사한다.
+추가 공유 대상은 이미 구독 권한을 얻은 고정 membership. 요청·callback에서 identity 만료와 구독 세대를 검사한다.
+동적 멤버십 철회 보장을 새로 입증한 구조가 아니다.
+head/목록의 독립 재검증은 계속 수행한다. 같은 user/목록 cursor의 동시 목록 조회도 병합한다.
+읽기 그룹은 기존 2슬롯 내에서 대기 순서를 유지하고 목록/본문을 번갈아 처리한다.
+제출/완료 알림을 합쳐 dispatcher를 깨우고, APPLIED 뒤 window 여유가 생기면 다음 로그 페이지를 보충한다.
+READY 당시 고정 목표 H까지 연속 적용한 뒤 LIVE로 돌아온다. 새 head 관측이 미완료 고정 H를 이동시키지 않는다.
+현재 신규 메시지는 gap을 넘지 못한다. 소켓 전송과 ACK는 live/복구가 공통 경로를 사용한다.
+
+[연결별 전달 → 브라우저 / 적용 후 ACK → 연결별 전달]
+기준 Gateway.issue는 수신자마다 전체 MESSAGE JSON을 직렬화, writer가 매 프레임 sendMessage.
+최종 issue는 본문 표현 재사용, writer는 take+drainTo(7) 후 Tomcat batching API로 즉시 flushBatch.
+writer는 peer monitor 밖에서 socket I/O 수행. 묶음 수집 timer나 worker/window 증설은 없다.
+유한 count/byte credit, ACK timeout, blocked write watchdog/실제 close 경계를 유지한다.
+UNSUBSCRIBE는 즉시 credit를 반환하지 않는다. RETIRING/순서 있는 종료 barrier/CLOSE_ACK 또는 종료 회수.
+브라우저 receive → apply → IndexedDB messages/rooms/meta 단일 readwrite transaction 완료 후 APPLIED.
+중복 id/hash 확인, seq=cursor+1, 오래된 connection/epoch 배제. 큐64 초과면 연결 종료 후 복구.
+소켓 쓰기 성공 ≠ APPLIED. APPLIED ≠ 읽음. 읽음 버튼은 별도 Api.read/Store.read로 membership.read_seq를 단조 갱신.
+읽음/목록/APPLIED의 보조 화살표는 그림 혼잡을 줄이기 위해 생략했다. APPLIED는 범례의 적용 후 ACK로 설명하며, 코드 추적에서는 확인했다.
+
+[클라이언트 재접속 정책 — 서버 변경과 구분]
+기준 브라우저: 250ms 지수 대기 +0~200ms jitter, OPEN에서 실패 횟수 초기화.
+최종 app.js + retry-policy.js: READY가10초 안정 유지된 뒤 첫 종료에만25~325ms jitter.
+실패/READY 전 종료/짧은 READY는500~1000 →1000~2000 →2000~4000 →2500~5000ms로 backoff.
+OPEN만으로 실패 이력을 초기화하지 않는다. 실제 브라우저에 구현된 정책이다.
+직전 k6의 legacy 재시도는100+index%500ms였으므로 k6 개선 폭을 실제 브라우저 사용자 개선 폭과 같다고 하지 않는다.
+최종 k6는 같은 정책 바이트를 사용하되 고정 수신자 seed, 브라우저는 Math.random을 사용한다.
+
+4. 숫자와 관측 범위
+그림의 baseline91ce2a72 → 최종d1ab453 직접 성능 비교 데이터는 없다.
+서로 다른 단계의 수치를 하나의 전후 향상률로 합치지 않는다. captions.txt는 아래 두 비교를 구분한다.
+
+4-1. 같은 복구 의무에서 CPU 감소: 중간 계측 구현727153f →4d54061
+정확한 소스:
+727153f2a84ac9274a181f25f43287cdcd378174
+4d540615c4526929dceb98af77f71611d6550b7c
+원본 집계 docs/mixed-results.json의 matched_work, 글 docs/articles/mixed.html.
+각500연결, 같은 미리 저장된 로그, 신규 SEND0, 예정 수신601000/실제601000/누락0, 독립3회.
+CPU는 수신자 시작부터 마지막 수신까지의 1초 간격 프로세스 CPU 시간 적분.
+gateway+MySQL 합산, fixture 저장과 복구 완료 이후 idle 및 k6 CPU는 제외.
+이 값은 CPU 사용률(%)이 아니라 누적 CPU초이며, 60초 관측 중 복구 완료는 약47~48초.
+전:177.248929/196.920440/180.335966 CPU초 → 후:143.714502/140.515914/130.245285.
+중앙값180.335966→140.515914, 감소22.0810% (표시180.34→140.52/약22%).
+JDBC statement snapshot + 불변 직렬화 길이/prefix + writer batch의 통합 변경 결과.
+어느 한 기법의 독립 효과나 최종d1ab453 자체의 재측정으로 표시하지 않는다.
+동일 예산 CPU quota/heap/DB/credit, 계측 조건과 CPU 계산 코드는 각원본/harness/에 고정.
+원본 run ID:
+scale-MI-mixedround-finalmatched-mixed-0-20261031-113558-8b61
+scale-MI-mixedround-finalmatched-mixed-0-20261031-114142-f883
+scale-MI-mixedround-finalmatched-mixed-0-20261031-114336-73f1
+scale-Q-mixedround-finalmatched-mixed-0-20261031-113752-40d7
+scale-Q-mixedround-finalmatched-mixed-0-20261031-113947-fa65
+scale-Q-mixedround-finalmatched-mixed-0-20261031-114602-85b8
+각 docs/evidence/<run>/plan.json/environment.json/command.json/resources.jsonl/manifest.json.
+
+4-2. 최종 구독·재시도 개선: 직전4d54061 → 최종d1ab453
+docs/causal-final.json, causal-final-slots.json, causal-selection.json, articles/reconnect.html.
+500연결(500고유 사용자가 아님):31고유 사용자, 일반 방100연결/31방, 인기 방400연결.
+HTTP45SEND/s=인기36+일반9, 본문512byte, warmup15초/측정600초/관측grace120초.
+인기 방100느린 연결은 적용 간40ms, 측정300초에 제한 해제. 모든 수신 연결30초마다 강제 단절.
+정확한 동일 입력 및 집단별 단절 일정/계측으로 전후각3회. 일정은 분산시키지 않았다.
+분모: 일반 방 전체 논리 SEND5400건/실행. 성공 조건: 당시 저장 확인 AND 해당 방의 예정 수신자 전원 최초 논리 SEND 시작 후250ms 이내 연속 메모리 적용.
+거절·미확정·단절 중 SEND·일부 수신 지연을 분모에서 제거하지 않는다.
+일반 방 수락은 모든 비교에서5400/5400. 발생기 drop0.
+범위: 전95.462963~98.185185%, 후98.740741~99.296296%.
+짝별 차이+1.259259,+1.111111,+3.277778%p. 범위의 양끝끼리 뺀 값을 개선율로 쓰지 않는다.
+일반 수신 전체 표본의 실행별 p99: 전262.77~813.08ms, 후139~211ms.
+시작은 최초 논리 HTTP SEND, 끝은 k6가 해당 수신자의 연속 cursor를 진전시킨 시각.
+실제 IndexedDB/SQLite commit 성능이 아니다. 서버시각과 브라우저monotonic시각을 빼지 않았다.
+원본 슬롯(각 행 전→후):
+scale-Q-causal-explore-D-20261031-222005-1f73 → scale-U-causal-explore-D-20261031-223245-c68f
+scale-Q-causal-final-D-20261031-205058-7159 → scale-U-causal-final-D-20261031-203816-086a
+scale-Q-causal-final-D-20261031-215422-6614 → scale-U-causal-final-D-20261031-220703-9edc
+해당 docs/evidence/<run>/normal-send-outcomes.jsonl, normal-receipts.jsonl,
+normal-message-fates.jsonl, connection-lifecycle.jsonl, reconnect-attempts.jsonl,
+causal-verdict.json, input-storage-audit.json, boundary-audit.json 및manifest.json.
+재분석 명령/고정 원본: docs/scripts/causal_final.py 및 각원본/harness/.
+새 실행은 하지 않았다. 이전 외부 앱 정리 간섭 D와 중단 D는 실패 원본으로 보존되며 위 슬롯에 포함되지 않는다.
+
+남은 한계:
+최종 동시 재접속의 slow closed-before-target780/780/786회는 실패 분모에 남는다.
+마지막 반복은 추가 OPEN 이전 연결 실패15회(일반4/인기 빠른8/느린3), 총801/10015실패.
+다음 시도에서 완료돼도 기존 실패를 지우지 않는다. 신규 SEND 종료 후 잔량0과30초 복구 목표는 별개.
+같은 반복 인기SEND 미확정1: POST TCP연결거절 뒤 결과조회READ_BUDGET 거절.
+종료 receipt없음을 당시 명시적 거절로 바꾸지 않는다. 전체 저장 수락률94.8185%는 기존95%가정 미달.
+최종 후보에서 일반 사용자 중 개별 p99>250ms도 반복별3/2/19명, 전원250ms를 놓친 SEND47/38/68건.
+최종 반복 CPU는 공유 호스트 변동이 커 보편적인 CPU 절감률로 쓰지 않았다.
+한 노트북/loopback/10분/소수사용자 다중탭 범위. 물리HA·500고유사용자·일주일 안정성·250/1000SEND/s 최종 성과 아님.
+
+5. 관측 원인과 기능 검증을 구분
+docs/articles/shared-fanout.html: 조회 증폭, Jackson JFR 표본, 고정 주기 dispatcher 대기/DB 실행 분리, live 직접 전달의 후속 도입.
+docs/articles/mixed.html: 실제 JFR/SQL digest, 동일 복구량 통합 변경, 유한 저장 대기 미채택.
+docs/articles/reconnect.html: 같은 메시지의 일부 수신자 지연, 2×2 대조 및 초기 구독 큐/쿼리 단계.
+초기 대조는 타방만 재접속 효과 -0.0185%p, 자기 재접속 -1.5%p, 동시 복귀 추가 -0.7778%p(각1회).
+이를 보편적인 '인기 방은 영향 없음' 또는 모든 원인이 클라이언트라는 결론으로 바꾸지 않았다.
+실제 DB/프로세스/TCP 회귀: docs/causal-contracts.json의25사례.
+최종 실제 브라우저: browser-reconnect-U-20261031-195206, browser-pending-20261031-195317.
+IndexedDB 원자 abort/재시작/세대, 지속 단절 backoff, 응답 유실 후 같은 키 pending을 별도 검증했다.
+이는 대규모 영속 적용 성능 수치가 아니다.
+
+6. 문서·주석과 코드의 차이
+shared-fanout.html의 초기 설명은 당시 RR transaction을 다룬다. 최종활성 batchHistory는 한 SELECT이므로 후자에 맞춰 그렸다.
+최종 Gateway의 클래스 주석은 hint-triggered 로그 전달이라고 요약하지만, 실제 publish에는 연속 live 직접 issue 경로가 있다. 이를 그림에서 빠뜨리지 않았다.
+기준도 routes 인덱스와 socket writer를 이미 사용한다. 이를 개선 후에 새로 만든 것처럼 표시하지 않았다.
+최종 properties에 buffer-bytes가 남아 있어도 실제 Sub에는 live buffer가 없다. 캐시와 전송 큐로 구분했다.
+초기 구독 최적화는 서버 Store.subscription, 재시도 정책은 실제 브라우저 retry-policy.js다.
+문서의 '채택'은 조건부 일반 사용자 경험 개선이다. 전체 성능/복구 목표 통과가 아니다.
+
+7. 산출물 재생성과 검수
+사용자 지정 시각 참고: https://github.com/jungjiyu/toss_mogu/tree/40f7c52662237bca09cc305dfa0c767d3320e647/docs/portfolio/architecture
+before.mmd/after.mmd/layout.json/render.py/preview.html과 실제 after.svg를 확인했다.
+같은 스타일의 고정 열, 회색 서버 경계, 흰 기능 상자, DB 원통, 직각 화살표와 초록 변경 경로를 적용했다.
+해당 프로젝트의 코드·성과·아키텍처를 StoryBridge 근거로 재사용하지 않았다. 참고 저장소는 수정하지 않았다.
+Mermaid11.12.0 공식 npm browser bundle로 두 .mmd를 실제 Chrome에서 구문 검증한다.
+fixed_svg.py가 .mmd의 노드·라벨·화살표·변경 class를 읽고 layout.json의 공유 좌표로 SVG를 출력한다.
+모구시장과 같은 방식으로 의미와 배치를 분리했다. Mermaid 자동 배치 결과를 그대로 저장한 SVG는 아니다.
+노션에서 .mmd를 직접 렌더링하면 배치가 달라질 수 있다. 검수한 배치를 보존하려면 SVG를 사용한다.
+발신자/수신자 왼쪽, 서버 중앙, MySQL 오른쪽. 두 그림의 모든 노드와 화살표 좌표는 동일하다.
+DB 원통은 같은 트랜잭션에 포함되는 여러 테이블을 묶은 표현이며 하나의 물리 테이블을 뜻하지 않는다.
+실시간/복구는 같은 writer를 사용한다. 메모리 점선 테두리는 프로세스 내부 유한 버퍼/캐시를 표시한다.
+공식 문서: https://mermaid.js.org/config/usage.html
+구문: https://mermaid.js.org/syntax/flowchart.html
+선택 버전 자료: https://github.com/mermaid-js/mermaid/tree/mermaid%4011.12.0
+Noto Sans KR의 필요한 글자를 subset하여 SVG 안에 포함. 라이선스 FONT-LICENSE.txt.
+공식 폰트: https://github.com/google/fonts/tree/main/ofl/notosanskr
+다운로드 무결성·원본/산출물 hash: render-provenance.json.
+실행: .venv/Scripts/python.exe -X utf8 docs/portfolio/architecture/make_diagrams.py
+실행: .venv/Scripts/python.exe -X utf8 docs/portfolio/architecture/build_preview.py
+실행: .venv/Scripts/python.exe -X utf8 docs/portfolio/architecture/render.py
+실행: .venv/Scripts/python.exe -X utf8 docs/portfolio/architecture/collect_sources.py
+검수: .venv/Scripts/python.exe -X utf8 docs/portfolio/architecture/review.py
+출력: preview.html, review.json, review-*.png. PDF는 생성하지 않는다.
+preview는 정적 SVG+HTML/CSS이며 외부 스크립트·서버·인증 없이 열린다.
+노션 업로드 후의 노션 자체 표시/변환은 사용자가 게시할 때 확인해야 한다.

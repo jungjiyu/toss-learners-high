@@ -1,0 +1,23 @@
+{
+  "scope": "Out-of-band current-host observation during Q C3, after Q C2 unexpectedly used more stack and k6 CPU. Not a time series or retrospective evidence; no power/affinity/thermal policy changes. Aggregate Windows frequency is not per-core clock or proof of throttling cause. Preserve Q C2 as valid failed performance experiment.",
+  "observations": [
+    {
+      "at": "2026-10-31T21:31:44.7428490+09:00",
+      "battery": [
+        {
+          "BatteryStatus": 2,
+          "EstimatedChargeRemaining": 37
+        }
+      ],
+      "powerScheme": "전원 구성표 GUID: ab6534a3-bc02-4c44-94d1-a8535b2eb070  (SAMSUNG MODE)",
+      "processors": [
+        {
+          "Name": "_Total",
+          "PercentProcessorPerformance": 69,
+          "ProcessorFrequency": 922,
+          "PercentProcessorUtility": 45
+        }
+      ]
+    }
+  ]
+}

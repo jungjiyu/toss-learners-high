@@ -1,0 +1,39 @@
+[
+  {
+    "ids": "T14 T25",
+    "name": "churn-epochs",
+    "status": "PASS",
+    "details": {
+      "churn_cycles": 20,
+      "remaining_peers": 0,
+      "remaining_routes": 0,
+      "rss_before": 252944384,
+      "rss_after": 254078976,
+      "interpretation": "RSS includes JIT/heap retention; zero route/credit/writer references is separately checked."
+    },
+    "seconds": 7.7725202000001445
+  },
+  {
+    "ids": "T14 T41",
+    "name": "retire-timeout-tabs",
+    "status": "PASS",
+    "details": {
+      "other_tab_survived": true,
+      "missing_close_ack_closed_seconds": 3.01500000001397
+    },
+    "seconds": 3.952607600018382
+  },
+  {
+    "ids": "T26 T28 T14 X03",
+    "name": "combined-local-restart",
+    "status": "PASS",
+    "details": {
+      "same_key": "1a972e554ec1468499b6f215f654f484",
+      "same_recipient_store": true,
+      "receiver_process_killed_before_commit": true,
+      "old_epoch_rejected": true,
+      "final_cursor": 2
+    },
+    "seconds": 5.816464800038375
+  }
+]

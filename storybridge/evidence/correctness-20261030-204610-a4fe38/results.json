@@ -1,0 +1,14 @@
+[
+  {
+    "ids": "T08 T09 T10",
+    "name": "live-during-head-snapshot",
+    "status": "PASS",
+    "details": {
+      "cursor_before": 28,
+      "applied_before_snapshot_release": 29,
+      "after_old_callback": 30,
+      "snapshot_did_not_hold_live": true
+    },
+    "seconds": 2.099826299934648
+  }
+]

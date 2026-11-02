@@ -1,0 +1,18 @@
+{
+  "status": "reviewed pilot decision; not a three-repeat final performance claim",
+  "branch": "experiment-store-handoff",
+  "tag": "experiment-store-handoff-v1",
+  "source": "66b4b9c",
+  "base": "4d54061",
+  "decision": "Do not replace Q for the mixed-workload default",
+  "reasons": [
+    "W는 별도 worktree에서 실제 구현했다. stripe당 대기자1명·전역64명·요청 parking 기한4ms이며 쓰기 permit과 commit 이후 STORED 계약은 유지한다.",
+    "작은 방의 30초 pilot에서 Q→W 성공 저장204.8→238.53/s, 정상p9952→69ms, STORED p9915→25ms, 서버 CPU220.6→280.5%였다. 총용량이 남아 있어도 즉시 gate 거절이 발생한다는 가설을 지지하지만 이득은 공짜가 아니다.",
+    "같은 혼합 pilot에서 성공 저장80.33→82.97/s, 정상 방 p99298→323ms, STORED p99203.91→210ms였다. hot 성공1075→1161건, normal1335→1328건으로 추가 수락은 주로400배 팬아웃을 만든다. 양쪽 목표 미달은 그대로 남긴다.",
+    "혼합에서 실제 wait 평균7.22ms·최대150.38ms였다. 4ms는 요청 parking timeout이며 OS가 해당 thread를 즉시 실행한다는 보장이 아니다. 대기자·쓰기·credit 상한은 유지됐고 최종 미확정·수신 미완료0이지만, 이번 목표에 대한 혼합 품질 개선 근거가 없어 기본 채택을 기각했다.",
+    "작은 방에 유리한 별도 정책 가능성은 남지만 이를 혼합 부하의 개선이라고 합산하지 않는다. 30초 pilot은 방향 판별이며 통계적으로 확정한 보편적 성능 차이가 아니다. 추가 파라미터를 계속 늘리는 대신 Q의 비용 개선과 한계를 최종 반복으로 평가한다."
+  ],
+  "runs": ["scale-Q-mixedround-handoff-many-250-20261031-112833-8f2e", "scale-W-mixedround-handoff-many-250-20261031-113023-51b3", "scale-Q-mixedround-handoff-mixed-250-20261031-113218-d583", "scale-W-mixedround-handoff-mixed-250-20261031-113337-bc56"],
+  "correctness": ["correctness-20261031-112803-561d2f", "correctness-20261031-112825-d9725b"],
+  "correctness_scope": "Core13 plus real held-commit test: 24 rejected requests had no hidden receipts, later same-key retry committed exactly24. Maximum observed waiter count is not proof of exercising all64 slots; the bound is enforced in code."
+}

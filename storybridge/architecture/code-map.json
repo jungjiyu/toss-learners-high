@@ -1,0 +1,494 @@
+{
+  "before": {
+    "commit": "91ce2a72a9635a60d8171db5ab5840ade3692926",
+    "files": [
+      {
+        "path": "src/main/java/dev/storybridge/Api.java",
+        "git_blob_sha256": "9b61c80906956578c0f43b8ef9a3bf69d7145b85348c29afe9fc7e9f5ecaac27",
+        "locations": [
+          {
+            "method": "public Object send(",
+            "line": 28,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Api.java.html#L28"
+          },
+          {
+            "method": "public Object result(",
+            "line": 29,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Api.java.html#L29"
+          },
+          {
+            "method": "public Object read(",
+            "line": 32,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Api.java.html#L32"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Auth.java",
+        "git_blob_sha256": "a9c10be8a9bf3ce43371fca8637d64f1a505cd777eff50c924ad9460f8618a5c",
+        "locations": [
+          {
+            "method": "public Identity verify(",
+            "line": 43,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Auth.java.html#L43"
+          },
+          {
+            "method": "public Identity header(",
+            "line": 53,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Auth.java.html#L53"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/SocketConfig.java",
+        "git_blob_sha256": "19b80609adb3563de1255443c9450cdd7c5da8a957b40ea0c0b63db194f12ddb",
+        "locations": [
+          {
+            "method": "public boolean beforeHandshake(",
+            "line": 16,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/SocketConfig.java.html#L16"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Store.java",
+        "git_blob_sha256": "71898e985e3f87174426ded2696e5d3fe1c2495a6b803057c363e16245fd5fb6",
+        "locations": [
+          {
+            "method": "public Receipt send(",
+            "line": 52,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L52"
+          },
+          {
+            "method": "public Page history(",
+            "line": 87,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L87"
+          },
+          {
+            "method": "public List<Lease> claim(",
+            "line": 118,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L118"
+          },
+          {
+            "method": "public Message publication(",
+            "line": 127,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L127"
+          },
+          {
+            "method": "public boolean finish(",
+            "line": 128,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L128"
+          },
+          {
+            "method": "public void fail(",
+            "line": 131,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L131"
+          },
+          {
+            "method": "public long retain(",
+            "line": 135,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L135"
+          },
+          {
+            "method": "public long read(",
+            "line": 110,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Store.java.html#L110"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Publisher.java",
+        "git_blob_sha256": "e75391bcfb0c34875f87a3484c8a2332808a27eb1eaf7eac683743605c9619f9",
+        "locations": [
+          {
+            "method": "void poll()",
+            "line": 15,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Publisher.java.html#L15"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Gateway.java",
+        "git_blob_sha256": "3d729404424034aab5277822d45dda1e51437150f3e962ce19d8a602aa259b01",
+        "locations": [
+          {
+            "method": "private boolean issue(",
+            "line": 80,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L80"
+          },
+          {
+            "method": "public void publish(",
+            "line": 100,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L100"
+          },
+          {
+            "method": "private void subscribe(",
+            "line": 138,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L138"
+          },
+          {
+            "method": "private void applied(",
+            "line": 161,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L161"
+          },
+          {
+            "method": "private void retire(",
+            "line": 175,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L175"
+          },
+          {
+            "method": "private void tickPeer(",
+            "line": 186,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L186"
+          },
+          {
+            "method": "private void load(",
+            "line": 212,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L212"
+          },
+          {
+            "method": "private void writer(",
+            "line": 231,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L231"
+          },
+          {
+            "method": "private void close(",
+            "line": 246,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/java/dev/storybridge/Gateway.java.html#L246"
+          }
+        ]
+      },
+      {
+        "path": "src/main/resources/static/app.js",
+        "git_blob_sha256": "38afd3247c8b2c8945da4383b665eb087f8692437ca17835d11bd68fe1630424",
+        "locations": [
+          {
+            "method": "async function localRoom(",
+            "line": 9,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L9"
+          },
+          {
+            "method": "async function apply(",
+            "line": 13,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L13"
+          },
+          {
+            "method": "async function subscribe(",
+            "line": 24,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L24"
+          },
+          {
+            "method": "async function receive(",
+            "line": 26,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L26"
+          },
+          {
+            "method": "function connect(",
+            "line": 35,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L35"
+          },
+          {
+            "method": "async function retryPending(",
+            "line": 40,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L40"
+          },
+          {
+            "method": "$('send').onsubmit",
+            "line": 43,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L43"
+          },
+          {
+            "method": "$('read').onclick",
+            "line": 44,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/91ce2a72a9635a60d8171db5ab5840ade3692926/src/main/resources/static/app.js.html#L44"
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "commit": "d1ab45300a25fc763381899466752482bf6e0921",
+    "files": [
+      {
+        "path": "src/main/java/dev/storybridge/Api.java",
+        "git_blob_sha256": "fc0996253d67af66934830852eadfde1b30a373f488fdba09a16276c397cce45",
+        "locations": [
+          {
+            "method": "public Object send(",
+            "line": 28,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Api.java.html#L28"
+          },
+          {
+            "method": "public Object result(",
+            "line": 29,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Api.java.html#L29"
+          },
+          {
+            "method": "public Object read(",
+            "line": 32,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Api.java.html#L32"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Auth.java",
+        "git_blob_sha256": "a9c10be8a9bf3ce43371fca8637d64f1a505cd777eff50c924ad9460f8618a5c",
+        "locations": [
+          {
+            "method": "public Identity verify(",
+            "line": 43,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Auth.java.html#L43"
+          },
+          {
+            "method": "public Identity header(",
+            "line": 53,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Auth.java.html#L53"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/SocketConfig.java",
+        "git_blob_sha256": "19b80609adb3563de1255443c9450cdd7c5da8a957b40ea0c0b63db194f12ddb",
+        "locations": [
+          {
+            "method": "public boolean beforeHandshake(",
+            "line": 16,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/SocketConfig.java.html#L16"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Store.java",
+        "git_blob_sha256": "997bf1c240357619e9aed30f7e7a61b0d31866fc4994ab3a0565b6af7fd37ec0",
+        "locations": [
+          {
+            "method": "public Receipt send(",
+            "line": 62,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L62"
+          },
+          {
+            "method": "public Page history(",
+            "line": 100,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L100"
+          },
+          {
+            "method": "public Page subscription(",
+            "line": 124,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L124"
+          },
+          {
+            "method": "Page batchHistory(",
+            "line": 134,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L134"
+          },
+          {
+            "method": "public List<Lease> claim(",
+            "line": 167,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L167"
+          },
+          {
+            "method": "public Message publication(",
+            "line": 181,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L181"
+          },
+          {
+            "method": "public java.util.Map<Long,Message> publications(",
+            "line": 182,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L182"
+          },
+          {
+            "method": "public boolean finish(",
+            "line": 190,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L190"
+          },
+          {
+            "method": "public int finishBatch(",
+            "line": 193,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L193"
+          },
+          {
+            "method": "public void fail(",
+            "line": 208,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L208"
+          },
+          {
+            "method": "public long retain(",
+            "line": 212,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L212"
+          },
+          {
+            "method": "public long read(",
+            "line": 159,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Store.java.html#L159"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Publisher.java",
+        "git_blob_sha256": "c5c70f3b87c1a3465ea8b870b1ab44b6b840111d178a3e62a6351f82d8a716e4",
+        "locations": [
+          {
+            "method": "void poll()",
+            "line": 15,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Publisher.java.html#L15"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/Gateway.java",
+        "git_blob_sha256": "bdebf39d145cc7382096f621941e283ff1bdb0cb7edcfe60abc0023df8463b6b",
+        "locations": [
+          {
+            "method": "private boolean issue(",
+            "line": 86,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L86"
+          },
+          {
+            "method": "public void publish(",
+            "line": 112,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L112"
+          },
+          {
+            "method": "private void subscribe(",
+            "line": 170,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L170"
+          },
+          {
+            "method": "private void applied(",
+            "line": 198,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L198"
+          },
+          {
+            "method": "private void retire(",
+            "line": 212,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L212"
+          },
+          {
+            "method": "private void tickPeer(",
+            "line": 223,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L223"
+          },
+          {
+            "method": "private void load(",
+            "line": 250,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L250"
+          },
+          {
+            "method": "private void completeLoad(",
+            "line": 254,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L254"
+          },
+          {
+            "method": "private void writer(",
+            "line": 277,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L277"
+          },
+          {
+            "method": "private void close(",
+            "line": 307,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L307"
+          },
+          {
+            "method": "private void wake(",
+            "line": 100,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/Gateway.java.html#L100"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/RoomReads.java",
+        "git_blob_sha256": "52f24508e9508cd0a39b9cb31ebdcd12780583fb42bf294637a75454a651e93a",
+        "locations": [
+          {
+            "method": "public synchronized boolean submit(",
+            "line": 27,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/RoomReads.java.html#L27"
+          },
+          {
+            "method": "private void requestDispatch(",
+            "line": 35,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/RoomReads.java.html#L35"
+          },
+          {
+            "method": "private void dispatchOne(",
+            "line": 47,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/RoomReads.java.html#L47"
+          },
+          {
+            "method": "private void run(",
+            "line": 62,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/RoomReads.java.html#L62"
+          }
+        ]
+      },
+      {
+        "path": "src/main/java/dev/storybridge/WireCache.java",
+        "git_blob_sha256": "373b37e3b11b02b3fbb07821d484a378bdaccc9c6228a2960fc0281a98fe9a74",
+        "locations": [
+          {
+            "method": "public synchronized Encoded encode(",
+            "line": 15,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/java/dev/storybridge/WireCache.java.html#L15"
+          }
+        ]
+      },
+      {
+        "path": "src/main/resources/static/app.js",
+        "git_blob_sha256": "66559601a36e7f5120762c58f9f31f57033220dc8c6f9c167b42e7bc86d731f1",
+        "locations": [
+          {
+            "method": "async function localRoom(",
+            "line": 10,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L10"
+          },
+          {
+            "method": "async function apply(",
+            "line": 14,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L14"
+          },
+          {
+            "method": "async function subscribe(",
+            "line": 25,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L25"
+          },
+          {
+            "method": "async function receive(",
+            "line": 27,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L27"
+          },
+          {
+            "method": "function connect(",
+            "line": 36,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L36"
+          },
+          {
+            "method": "async function retryPending(",
+            "line": 41,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L41"
+          },
+          {
+            "method": "$('send').onsubmit",
+            "line": 44,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L44"
+          },
+          {
+            "method": "$('read').onclick",
+            "line": 45,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/app.js.html#L45"
+          }
+        ]
+      },
+      {
+        "path": "src/main/resources/static/retry-policy.js",
+        "git_blob_sha256": "c9caf4a4fc45254e3c443dd14012d82412bb53c492cab056b94a280d324d18df",
+        "locations": [
+          {
+            "method": "globalThis.StoryBridgeRetry=",
+            "line": 3,
+            "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/evidence/code/d1ab45300a25fc763381899466752482bf6e0921/src/main/resources/static/retry-policy.js.html#L3"
+          }
+        ]
+      }
+    ]
+  }
+}

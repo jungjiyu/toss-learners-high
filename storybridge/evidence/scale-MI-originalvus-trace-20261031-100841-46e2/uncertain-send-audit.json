@@ -1,0 +1,1258 @@
+[
+  {
+    "key": "2d69094d9255-measure0-0-6132",
+    "room": 999,
+    "user": 27,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408978276,
+    "hash": "e51ea4bd07b291eb2f429b571e95295106dd5009275522ac7ffe39fd1d9deb79",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 22,
+        "duration": 20.5148,
+        "blocked": 0,
+        "waiting": 19.5171
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 60,
+        "duration": 17.0893,
+        "blocked": 21.0132,
+        "waiting": 16.0896
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 108,
+        "duration": 46.9015,
+        "blocked": 0,
+        "waiting": 46.9015
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 184,
+        "duration": 5.8446,
+        "blocked": 0,
+        "waiting": 4.8238
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6216",
+    "room": 999,
+    "user": 18,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408978611,
+    "hash": "c4e095c48f26711961d0bff799566a7a3e2ba5bd0f0320c9ac44de4aa0f62ded",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 4,
+        "duration": 2.6035,
+        "blocked": 0,
+        "waiting": 2.6035
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 16,
+        "duration": 10.3858,
+        "blocked": 0.5441,
+        "waiting": 9.7911
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 18,
+        "duration": 1.2119,
+        "blocked": 0,
+        "waiting": 1.2119
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 69,
+        "duration": 51.2348,
+        "blocked": 0,
+        "waiting": 51.2348
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6212",
+    "room": 999,
+    "user": 14,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408978596,
+    "hash": "233df014614cffea5cc6b48adb5715ead13350786588c586d376f090429153c0",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 19,
+        "duration": 17.9314,
+        "blocked": 0,
+        "waiting": 15.3279
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 31,
+        "duration": 10.3858,
+        "blocked": 1.0595,
+        "waiting": 9.7911
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 33,
+        "duration": 1.2119,
+        "blocked": 0.5453,
+        "waiting": 1.2119
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 86,
+        "duration": 53.3717,
+        "blocked": 0,
+        "waiting": 52.8264
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6306",
+    "room": 999,
+    "user": 15,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408978979,
+    "hash": "583c205e2b5890790e35a24d0a6683f050cf40d20930ad7ca372059a8daea9d9",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 5,
+        "duration": 3.0451,
+        "blocked": 0,
+        "waiting": 2.0248
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 17,
+        "duration": 8.3864,
+        "blocked": 2.9965,
+        "waiting": 6.0204
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 19,
+        "duration": 1.3762,
+        "blocked": 0,
+        "waiting": 1.3762
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 25,
+        "duration": 6.1871,
+        "blocked": 0,
+        "waiting": 6.1871
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6399",
+    "room": 999,
+    "user": 15,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408979342,
+    "hash": "8663b3158e2a29db3901c0b28b17e2fc2902fdb8936830b9bca29e1c03ffd307",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 104,
+        "duration": 104.6907,
+        "blocked": 0,
+        "waiting": 103.6914
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 220,
+        "duration": 16.7418,
+        "blocked": 98.5891,
+        "waiting": 10.9651
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 223,
+        "duration": 2.0217,
+        "blocked": 0,
+        "waiting": 2.0217
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 231,
+        "duration": 6.0142,
+        "blocked": 0,
+        "waiting": 6.0142
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6397",
+    "room": 999,
+    "user": 13,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408979334,
+    "hash": "293bdad878a2835f0fb1f8fc7a1b1d7cd256863ebc20461d67b39d72adae01d8",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 107,
+        "duration": 106.9086,
+        "blocked": 0,
+        "waiting": 104.8825
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 169,
+        "duration": 42.5113,
+        "blocked": 19.8104,
+        "waiting": 35.898
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 175,
+        "duration": 6.0955,
+        "blocked": 0,
+        "waiting": 6.0955
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 181,
+        "duration": 5.546,
+        "blocked": 0,
+        "waiting": 5.546
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6419",
+    "room": 999,
+    "user": 4,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408979422,
+    "hash": "f0a682593fac77897fe74a4bd589e3f4d416cd319937caa8aa03edcfade39319",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 26,
+        "duration": 26.228,
+        "blocked": 0,
+        "waiting": 23.7118
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 127,
+        "duration": 49.1495,
+        "blocked": 51.1492,
+        "waiting": 6.8463
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 169,
+        "duration": 2.1102,
+        "blocked": 0,
+        "waiting": 2.1102
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 174,
+        "duration": 4.8534,
+        "blocked": 0,
+        "waiting": 4.8534
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6482",
+    "room": 999,
+    "user": 5,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408979690,
+    "hash": "9b707559b4f7ccde56cf37680ed7867ed83321525a62fb3e6464ba99394d2a05",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 16,
+        "duration": 13.7444,
+        "blocked": 0,
+        "waiting": 13.7444
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 142,
+        "duration": 125.3666,
+        "blocked": 1.0009,
+        "waiting": 124.3344
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 144,
+        "duration": 1.7268,
+        "blocked": 0,
+        "waiting": 1.7268
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 198,
+        "duration": 52.6355,
+        "blocked": 0,
+        "waiting": 52.6355
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-6559",
+    "room": 999,
+    "user": 20,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793408979982,
+    "hash": "b4c213b110623c5147a4df11712a0335d12c0610c84cf4fc0be380dc3b819144",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 58,
+        "duration": 56.8396,
+        "blocked": 0,
+        "waiting": 54.8165
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 68,
+        "duration": 8.0216,
+        "blocked": 2.024,
+        "waiting": 5.9999
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 70,
+        "duration": 2.0034,
+        "blocked": 0,
+        "waiting": 2.0034
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 78,
+        "duration": 7.3208,
+        "blocked": 0,
+        "waiting": 7.3208
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12468",
+    "room": 999,
+    "user": 8,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409003633,
+    "hash": "4cc0a6be85ca0c3a9e3bb5a8b2169e01f5e168070c46afe015895e2597d82d6f",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 40,
+        "duration": 32.1156,
+        "blocked": 0,
+        "waiting": 28.5923
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 63,
+        "duration": 21.1529,
+        "blocked": 0.5168,
+        "waiting": 20.5256
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 65,
+        "duration": 1.1322,
+        "blocked": 0,
+        "waiting": 1.1322
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 72,
+        "duration": 6.5969,
+        "blocked": 0,
+        "waiting": 6.5969
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12508",
+    "room": 999,
+    "user": 17,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409003778,
+    "hash": "a35f2f69b180b3139d6018b8671ec61b278cf8ea208f8145a702bb1290b4b628",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 4,
+        "duration": 4.0555,
+        "blocked": 0,
+        "waiting": 3.5395
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 21,
+        "duration": 13.2918,
+        "blocked": 3.022,
+        "waiting": 12.2928
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 25,
+        "duration": 4.6167,
+        "blocked": 0,
+        "waiting": 3.5421
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 31,
+        "duration": 5.998,
+        "blocked": 0,
+        "waiting": 5.998
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12513",
+    "room": 999,
+    "user": 22,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409003799,
+    "hash": "4f5b281fa96903a83384bd839a74923a1839574477c5cfb199511e3e87418563",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 5,
+        "duration": 3.5421,
+        "blocked": 0,
+        "waiting": 3.5421
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 15,
+        "duration": 9.0176,
+        "blocked": 0.9991,
+        "waiting": 9.0176
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 25,
+        "duration": 0.9976,
+        "blocked": 0,
+        "waiting": 0.9976
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 30,
+        "duration": 5.1674,
+        "blocked": 0,
+        "waiting": 5.1674
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12546",
+    "room": 999,
+    "user": 24,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409003936,
+    "hash": "411b8c10f586b0bc86cbf31f05490e747561a332204afbbb59d24306cbf86b58",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 29,
+        "duration": 28.3686,
+        "blocked": 0,
+        "waiting": 3.5363
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 65,
+        "duration": 8.4504,
+        "blocked": 27.7923,
+        "waiting": 7.4545
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 66,
+        "duration": 1.0038,
+        "blocked": 0,
+        "waiting": 1.0038
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 75,
+        "duration": 7.5322,
+        "blocked": 0,
+        "waiting": 7.5322
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12562",
+    "room": 999,
+    "user": 9,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409003994,
+    "hash": "f9b652943f66133f3783a92361db1dfce89868f8b7a199eaf24a17cdfc701998",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 3,
+        "duration": 2.8984,
+        "blocked": 0,
+        "waiting": 1.9996
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 12,
+        "duration": 7.066,
+        "blocked": 2.0183,
+        "waiting": 7.066
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 15,
+        "duration": 1.9978,
+        "blocked": 1.0026,
+        "waiting": 1.9978
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 21,
+        "duration": 6.0133,
+        "blocked": 0,
+        "waiting": 6.0133
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12594",
+    "room": 999,
+    "user": 10,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409004122,
+    "hash": "27b1508609a9867e2e006bed68ba7a6a63761dbcd0983d70de18cb169ecebeea",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 59,
+        "duration": 59.2351,
+        "blocked": 0,
+        "waiting": 59.2351
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 94,
+        "duration": 33.2689,
+        "blocked": 0,
+        "waiting": 32.7286
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 107,
+        "duration": 13.6559,
+        "blocked": 0,
+        "waiting": 13.6559
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 133,
+        "duration": 25.2536,
+        "blocked": 0,
+        "waiting": 25.2536
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12583",
+    "room": 999,
+    "user": 30,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409004082,
+    "hash": "4d52d2012fe50751c67fc94ee4811fcc23e67d2acde032edf8a01944c86aac8e",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 28,
+        "duration": 28.0519,
+        "blocked": 0,
+        "waiting": 26.0611
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 152,
+        "duration": 121.6341,
+        "blocked": 0.5545,
+        "waiting": 121.0742
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 153,
+        "duration": 1.5461,
+        "blocked": 0,
+        "waiting": 1.199
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 179,
+        "duration": 26.292,
+        "blocked": 0,
+        "waiting": 26.292
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12673",
+    "room": 999,
+    "user": 27,
+    "status": 0,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409004447,
+    "hash": "229f09d91adb02c6e6c64505fc9d182e89e47cd16e9f9dbe1c5edec9ed3a9416",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 31,
+        "duration": 30.4719,
+        "blocked": 0,
+        "waiting": 5.5418
+      },
+      {
+        "kind": "RESULT",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "READ_BUDGET",
+        "elapsed": 34,
+        "duration": 2.0298,
+        "blocked": 1.0898,
+        "waiting": 2.0298
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12746",
+    "room": 999,
+    "user": 7,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409004730,
+    "hash": "6ee2d93ebbffe16d9ac9f7b47925403865c05e09a941e27263c9c7061d548808",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 31,
+        "duration": 30.6725,
+        "blocked": 0,
+        "waiting": 30.6725
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 40,
+        "duration": 5.6646,
+        "blocked": 1.7108,
+        "waiting": 5.6646
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 41,
+        "duration": 1.0714,
+        "blocked": 0,
+        "waiting": 1.0714
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 48,
+        "duration": 6.1813,
+        "blocked": 0,
+        "waiting": 5.6005
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12748",
+    "room": 999,
+    "user": 9,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409004741,
+    "hash": "a0090bc09ab7c8b2713a9ae2f3927fccd2f48cde7893f7be54870be2d11fad12",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 21,
+        "duration": 19.5728,
+        "blocked": 0,
+        "waiting": 19.5728
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 28,
+        "duration": 5.3332,
+        "blocked": 2.0422,
+        "waiting": 5.3332
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 30,
+        "duration": 1.0714,
+        "blocked": 0,
+        "waiting": 1.0714
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 38,
+        "duration": 6.1813,
+        "blocked": 0,
+        "waiting": 6.1813
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12791",
+    "room": 999,
+    "user": 21,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409004912,
+    "hash": "51b879c0fabc557c5f2541672bbf01bcf1a4a001f7d61c6f48fbb763d38421f3",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 59,
+        "duration": 56.6387,
+        "blocked": 0,
+        "waiting": 40.1081
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 96,
+        "duration": 27.8816,
+        "blocked": 8.9492,
+        "waiting": 17.7489
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 109,
+        "duration": 13.0141,
+        "blocked": 0,
+        "waiting": 13.0141
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 117,
+        "duration": 8.0805,
+        "blocked": 0,
+        "waiting": 8.0805
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12848",
+    "room": 999,
+    "user": 16,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409005141,
+    "hash": "501b81c1abf670c1f942cd976c786ba7acc4f50297d4f2897a6bd30340d5a95e",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 17,
+        "duration": 16.6416,
+        "blocked": 0,
+        "waiting": 13.1111
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 50,
+        "duration": 15.7998,
+        "blocked": 16.7201,
+        "waiting": 14.7801
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 58,
+        "duration": 6.0916,
+        "blocked": 0,
+        "waiting": 6.0916
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 63,
+        "duration": 5.2674,
+        "blocked": 0,
+        "waiting": 5.2674
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12856",
+    "room": 999,
+    "user": 24,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409005195,
+    "hash": "aaff3ceb9c98656c2ff73f441cde98b5e0f1a3803dab822a9e7a2b4a76df0819",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 13,
+        "duration": 12.3593,
+        "blocked": 0,
+        "waiting": 2.5343
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 58,
+        "duration": 37.5091,
+        "blocked": 6.603,
+        "waiting": 37.5091
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 83,
+        "duration": 23.5641,
+        "blocked": 0,
+        "waiting": 23.5641
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 155,
+        "duration": 69.6808,
+        "blocked": 0,
+        "waiting": 68.763
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12862",
+    "room": 999,
+    "user": 30,
+    "status": 0,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409005207,
+    "hash": "35da0a8b5f2e875c0ca1a8d9cb7604c3a17e9056a07d5c949843de53bcbf9e69",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 90,
+        "duration": 49.6726,
+        "blocked": 0,
+        "waiting": 32.1834
+      },
+      {
+        "kind": "RESULT",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "READ_BUDGET",
+        "elapsed": 144,
+        "duration": 53.6234,
+        "blocked": 1.201,
+        "waiting": 53.6234
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "2d69094d9255-measure0-0-12893",
+    "room": 999,
+    "user": 30,
+    "status": 429,
+    "code": "BUSY",
+    "phase": "measure",
+    "at": 1793409005335,
+    "hash": "186e706bc909e34bc2b867bf37503dcef4f27cbb421ccb04c5e63603bf233a15",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1220,
+        "reason": "ROOM_BUSY",
+        "elapsed": 16,
+        "duration": 16.3868,
+        "blocked": 0,
+        "waiting": 14.8945
+      },
+      {
+        "kind": "RESULT",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 44,
+        "duration": 25.1885,
+        "blocked": 2.055,
+        "waiting": 24.5687
+      },
+      {
+        "kind": "POST",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "ROOM_BUSY",
+        "elapsed": 48,
+        "duration": 4.2835,
+        "blocked": 0,
+        "waiting": 4.2835
+      },
+      {
+        "kind": "RESULT_AFTER_RETRY",
+        "status": 404,
+        "error_code": 1404,
+        "reason": "NOT_FOUND",
+        "elapsed": 95,
+        "duration": 46.5318,
+        "blocked": 0,
+        "waiting": 46.5318
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  }
+]

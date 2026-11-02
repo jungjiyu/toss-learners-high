@@ -1,0 +1,28 @@
+flowchart LR
+  sender["발신자"]
+  receiver["수신자·브라우저<br/>원자 적용·cursor<br/>지수 지연 재시도"]
+  subgraph app["채팅 서버 · 한 애플리케이션"]
+    api["메시지 저장 API<br/>인증·방 권한·멱등 검사"]
+    publisher["전달 실행기<br/>작업별 선점·완료"]
+    fanout["방별 팬아웃·writer<br/>개별 직렬화·쓰기"]
+    memory["앱 메모리 · 유한 버퍼<br/>수신자별 대기 본문"]
+    recovery["구독·누락 복구<br/>권한·순번·본문 조회<br/>수신자별 개별 실행"]
+  end
+  subgraph mysql["MySQL · 단일 DB"]
+    records[("메시지·방별 순번<br/>중복 판별 기록<br/>전달 작업 outbox")]
+  end
+  sender e_send@-->|"메시지<br/>전송"| api
+  api e_stored@-->|"저장 완료<br/>commit 후"| sender
+  api e_save@-->|"① 원자 저장"| records
+  publisher e_claim@-->|"② 전달 작업 선점"| records
+  publisher e_publish@-->|"저장된 메시지"| fanout
+  fanout e_deliver@-->|"③ 실시간<br/>전달"| receiver
+  fanout e_memory@-->|"본문 참조"| memory
+  receiver e_subscribe@-.->|"cursor로 재구독"| recovery
+  recovery e_history@-.->|"④ 누락 메시지 조회"| records
+  recovery e_replay@-.->|"복구 전송"| fanout
+  classDef changed fill:#e5f5ef,stroke:#087f6d,color:#075e50
+  classDef memoryBox stroke-dasharray:6 5
+  class memory memoryBox
+%% legend: 실선: 저장·전달 | 점선: 재구독·복구
+%% note: 저장 완료 ≠ 수신 완료 · 수신자는 로컬 원자 적용 후 ACK

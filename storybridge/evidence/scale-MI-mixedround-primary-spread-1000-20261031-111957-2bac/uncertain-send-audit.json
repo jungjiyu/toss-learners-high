@@ -1,0 +1,1226 @@
+[
+  {
+    "key": "7f631ee623aa-warm-0-1003",
+    "room": 12,
+    "user": 13,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220420,
+    "hash": "4b8b0a05646bf8c0e53ad1d3ba6f14db43d38ba1e950ff9a1df9a4f97afe8242",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1004",
+    "room": 13,
+    "user": 14,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220421,
+    "hash": "96b63f977de431852d2bf1ad52a7c1aa143ed48940218e58295febb5e6dd4a42",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1005",
+    "room": 14,
+    "user": 15,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220422,
+    "hash": "519d8dc3a3ab16b262afd37309eeb75f4ba376a0bd3cad32f804bb33ad91172e",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1006",
+    "room": 15,
+    "user": 16,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220423,
+    "hash": "b3756fa2fae5b48ecf0afae5ee5242aec603ce9ae62a63f4be0c1c7747bd31ba",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1007",
+    "room": 16,
+    "user": 17,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220424,
+    "hash": "2aa9e33b3605b0632e6229feace30841ff5facebecae2346acb6bf9a77fa521d",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1008",
+    "room": 17,
+    "user": 18,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220425,
+    "hash": "7c38f63322fa122999c67a6b309b3f72e013ceeca5da4135cfd8307502f50a86",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1009",
+    "room": 18,
+    "user": 19,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220426,
+    "hash": "b695f0698b9b895210f16444fb356a04c3db650a009b5877ff6cf3e86417c523",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1010",
+    "room": 19,
+    "user": 20,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220427,
+    "hash": "e341d7e5b0fbccc7a8c9ad5b969740a053781ff7d0f0aa8b256ed548c3ce8a0b",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1011",
+    "room": 20,
+    "user": 21,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220428,
+    "hash": "22eed9b57f253036f02293af2aa69f454bb567cea342588526573d3a640ecbb6",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1012",
+    "room": 21,
+    "user": 22,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220429,
+    "hash": "9ba420b1958b2e0944a8de2e3d0d3c5acc43f232f8d20e26684b0fd1e2bd7211",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1013",
+    "room": 22,
+    "user": 23,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220430,
+    "hash": "308cc20bfa5ef6e4098d32ed3051b2ece4cbb11dcd970f0a1d7cd8b0489729d2",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1014",
+    "room": 23,
+    "user": 24,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220431,
+    "hash": "b6458514461ea465822114d456874e180ad622a9791648e12012cff60aec9281",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1015",
+    "room": 24,
+    "user": 25,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220432,
+    "hash": "79794794ff146d5be680eb44cc119bf28f7c3d739d9385c7f3e28e40902ce992",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1016",
+    "room": 25,
+    "user": 26,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220433,
+    "hash": "cc800cfd0be85091dec96989df9c6c402b76055157f815eec7753ff514f345ff",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1017",
+    "room": 26,
+    "user": 27,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220434,
+    "hash": "7c89ec79c4b2b4b844d26ee777cb3bfa15a0df4b5d4fc7c484d351aa57df2b53",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1018",
+    "room": 27,
+    "user": 28,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220435,
+    "hash": "fa3d0a6b7e111008bcfa81c33c7519aca7f9877509539af2d0984f16f295f323",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1019",
+    "room": 28,
+    "user": 29,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220436,
+    "hash": "0827200692261dd91ad21736ad667b1d0b8fd11f7d60dbe05e781027ae33f2ff",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1020",
+    "room": 29,
+    "user": 30,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220437,
+    "hash": "1e3f35c2dd550baac3ea4a92b253f9e2c162f2ccd198743c194f909723627baf",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1021",
+    "room": 30,
+    "user": 31,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220438,
+    "hash": "b3d8dbcaffd916263f863e086ae665f1d34062650652e36fc872f99018c05db9",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1022",
+    "room": 31,
+    "user": 32,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220439,
+    "hash": "c2a7cad0a05d5e477c7d5a8e65c83284fb9c980ba210330fdd4ea66ef8c554ee",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-warm-0-1023",
+    "room": 1,
+    "user": 2,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "warm",
+    "at": 1793413220440,
+    "hash": "1326237a9eda0b43952050fb5640041a3c0d217fe61ea682ded7d8f2367b8249",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-586",
+    "room": 29,
+    "user": 30,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230002,
+    "hash": "d3087cac4b432e6b626b38c030a49c5737b58b124f5486385374092c85caa265",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-587",
+    "room": 30,
+    "user": 31,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230003,
+    "hash": "e73f1ec84264f06f0e23bf6f4c683b5c99c8e0fc78b062bfe960d74fbe007387",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-588",
+    "room": 31,
+    "user": 32,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230004,
+    "hash": "cb7781d3d6633e8310e1c9583c81a40bcb0916e0b1f4b0151f3619292b192df7",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-589",
+    "room": 1,
+    "user": 2,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230005,
+    "hash": "6c8433c7c50d5029210bb2e5260a6d3b341a8af7ac7149454377300123b1fa99",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-590",
+    "room": 2,
+    "user": 3,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230006,
+    "hash": "b5949291d2bc6d5aebfdafe86a26b0bc88a9c011432eed536f09952fc73596f5",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-591",
+    "room": 3,
+    "user": 4,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230007,
+    "hash": "2168b58dfdd5657faddb2bd3f324141bd64ff0741e30017f8292d68c4fa16744",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-592",
+    "room": 4,
+    "user": 5,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230008,
+    "hash": "9e06d81dca00af66e5221637671b02e5ba79f4033b2c9c5e05062052e2820d99",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-593",
+    "room": 5,
+    "user": 6,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230009,
+    "hash": "92abed02e5b8dd0b10624c534e05407338860810b85b04726dee6a5999c3cfb6",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-594",
+    "room": 6,
+    "user": 7,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230010,
+    "hash": "e679fddd4ae582b5ea7410b60a35a90456f84a44bb2be012797f747b364fc2f3",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-595",
+    "room": 7,
+    "user": 8,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230012,
+    "hash": "895124a47831421f564abb6ed2ec248bac46d4de8741354ef3250194b25f89c2",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-596",
+    "room": 8,
+    "user": 9,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230012,
+    "hash": "895124a47831421f564abb6ed2ec248bac46d4de8741354ef3250194b25f89c2",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-597",
+    "room": 9,
+    "user": 10,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230013,
+    "hash": "8a1d2a8a30d4f83db6146ca2454019098f9be19df7d4b66585495c17d269426d",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-598",
+    "room": 10,
+    "user": 11,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230014,
+    "hash": "a781feb1b6022a367dd1a8a0e7021b4601d3e7e38a6f98c89f4dcb9ac7864d1e",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-599",
+    "room": 11,
+    "user": 12,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230015,
+    "hash": "8b03fef99cf90f1931430d5958bb7fa414fe560ff2eeb6978779b82f8328eb48",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 1,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  },
+  {
+    "key": "7f631ee623aa-measure0-0-600",
+    "room": 12,
+    "user": 13,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793413230016,
+    "hash": "161d3d65cd9f6b1eea1ac8f4dc4d3cfee799282a37887a3afeedd6c569c904fc",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 0,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  }
+]

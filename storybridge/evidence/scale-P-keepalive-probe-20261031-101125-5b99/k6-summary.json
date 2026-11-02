@@ -1,0 +1,779 @@
+{
+  "root_group": {
+    "checks": [],
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e",
+    "groups": []
+  },
+  "options": {
+    "summaryTrendStats": [
+      "count",
+      "avg",
+      "min",
+      "med",
+      "p(95)",
+      "p(99)",
+      "max"
+    ],
+    "summaryTimeUnit": "",
+    "noColor": true
+  },
+  "state": {
+    "isStdOutTTY": false,
+    "isStdErrTTY": false,
+    "testRunDurationMs": 90039.1853
+  },
+  "metrics": {
+    "sb_rejection_reason{phase:measure,roomClass:hot-room,cause:BUSY}": {
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      },
+      "type": "counter"
+    },
+    "sb_rejection_reason{phase:measure,roomClass:normal-room,cause:WRITE_BUDGET}": {
+      "values": {
+        "count": 136,
+        "rate": 1.5104534714176274
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "sb_retries": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:normal-room,cause:READ_BUDGET}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_result_queries": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_stored{phase:measure,roomClass:hot-room}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 25.56664625884837,
+        "count": 2302
+      }
+    },
+    "sb_rejected{phase:measure,roomClass:hot-room}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 9698,
+        "rate": 107.70866004270698
+      }
+    },
+    "ws_msgs_sent": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 1158367,
+        "rate": 12865.143061217814
+      }
+    },
+    "sb_stored_ms{phase:measure,roomClass:hot-room}": {
+      "contains": "time",
+      "values": {
+        "max": 217,
+        "count": 2302,
+        "avg": 35.20677671589922,
+        "min": 4,
+        "med": 24,
+        "p(95)": 93.94999999999982,
+        "p(99)": 150
+      },
+      "type": "trend"
+    },
+    "sb_retries{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:hot-room,cause:ROOM_RELEASE_RACE}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 0.4442510210051845,
+        "count": 40
+      }
+    },
+    "ws_msgs_received": {
+      "contains": "default",
+      "values": {
+        "count": 1236546,
+        "rate": 13733.420575496923
+      },
+      "type": "counter"
+    },
+    "iterations": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 17526,
+        "rate": 194.6485848534216
+      }
+    },
+    "sb_attempts{phase:measure,roomClass:hot-room}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 133.27530630155536,
+        "count": 12000
+      }
+    },
+    "sb_result_queries{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_attempts{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 15001,
+        "rate": 166.60523915246932
+      }
+    },
+    "sb_physical_send{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 15001,
+        "rate": 166.60523915246932
+      }
+    },
+    "sb_connected": {
+      "contains": "default",
+      "values": {
+        "count": 500,
+        "rate": 5.553137762564806
+      },
+      "type": "counter"
+    },
+    "sb_rejection_reason{phase:measure,roomClass:normal-room,cause:ROOM_BUSY}": {
+      "values": {
+        "rate": 0.03331882657538884,
+        "count": 3
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "sb_schedule_ms{phase:measure}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 166,
+        "count": 15001,
+        "avg": 6.497833477768149,
+        "min": 0,
+        "med": 1,
+        "p(95)": 32,
+        "p(99)": 61
+      }
+    },
+    "sb_received_ms": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 20371,
+        "max": 23751,
+        "count": 1118429,
+        "avg": 2713.0190856996733,
+        "min": 7,
+        "med": 148,
+        "p(95)": 17387
+      }
+    },
+    "sb_unknown{phase:measure,roomClass:hot-room}": {
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      },
+      "type": "counter"
+    },
+    "http_req_blocked": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "avg": 0.06103486086509339,
+        "min": 0,
+        "med": 0,
+        "p(95)": 0,
+        "p(99)": 1.0143,
+        "max": 97.9652,
+        "count": 17501
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:normal-room,cause:STRIPE_COLLISION}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_result_resolved": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:hot-room,cause:OUTBOX_FULL}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "count": 0
+      }
+    },
+    "sb_stored_ms{phase:measure,roomClass:normal-room}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 157.38999999999987,
+        "max": 273,
+        "count": 2862,
+        "avg": 44.4895178197065,
+        "min": 5,
+        "med": 33,
+        "p(95)": 122
+      }
+    },
+    "sb_attempts": {
+      "contains": "default",
+      "values": {
+        "rate": 194.37092796529336,
+        "count": 17501
+      },
+      "type": "counter"
+    },
+    "sb_unknown": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "count": 0
+      }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 17501,
+        "rate": 194.37092796529336
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:hot-room,cause:STRIPE_COLLISION}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "dropped_iterations{scenario:warm}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 0,
+        "count": 0
+      }
+    },
+    "sb_stored{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 5164,
+        "rate": 57.35280681176932
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:hot-room,cause:ROOM_BUSY}": {
+      "values": {
+        "count": 9644,
+        "rate": 107.10892116434998
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "sb_result_resolved{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_list_fresh_ms": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "count": 28213,
+        "avg": 159.9614362173466,
+        "min": 5,
+        "med": 98,
+        "p(95)": 569,
+        "p(99)": 794.880000000001,
+        "max": 1282
+      }
+    },
+    "sb_stored{phase:measure,roomClass:normal-room}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 2862,
+        "rate": 31.78616055292095
+      }
+    },
+    "dropped_iterations{scenario:measure0}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "ws_session_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "count": 500,
+        "avg": 89523.99014459994,
+        "min": 89036.631,
+        "med": 89526.92195,
+        "p(95)": 89962.59459000001,
+        "p(99)": 90005.76652800001,
+        "max": 90012.5705
+      }
+    },
+    "sb_attempts{phase:measure,roomClass:normal-room}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 3001,
+        "rate": 33.32993285091397
+      }
+    },
+    "sb_rejection_reason": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 11377,
+        "rate": 126.3560966493996
+      }
+    },
+    "sb_stored": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 6124,
+        "rate": 68.01483131589374
+      }
+    },
+    "http_req_waiting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "med": 12.4234,
+        "p(95)": 69.4377,
+        "p(99)": 121.8516,
+        "max": 209.1429,
+        "count": 17501,
+        "avg": 20.281881275355612,
+        "min": 0
+      }
+    },
+    "sb_list_fresh_ms{phase:measure}": {
+      "contains": "time",
+      "values": {
+        "count": 28213,
+        "avg": 159.9614362173466,
+        "min": 5,
+        "med": 98,
+        "p(95)": 569,
+        "p(99)": 794.880000000001,
+        "max": 1282
+      },
+      "type": "trend"
+    },
+    "http_req_receiving": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 0,
+        "med": 0,
+        "p(95)": 14.3931,
+        "p(99)": 39.1383,
+        "max": 144.8868,
+        "count": 17501,
+        "avg": 2.295729884006633
+      }
+    },
+    "sb_received_ms{phase:measure,role:slow}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 21943,
+        "max": 23751,
+        "count": 230200,
+        "avg": 11318.227315377932,
+        "min": 12,
+        "med": 13002,
+        "p(95)": 20352
+      }
+    },
+    "http_req_tls_handshaking": {
+      "values": {
+        "p(95)": 0,
+        "p(99)": 0,
+        "max": 0,
+        "count": 17501,
+        "avg": 0,
+        "min": 0,
+        "med": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "sb_unknown{phase:measure,roomClass:normal-room}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "iteration_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "count": 17526,
+        "avg": 155.7321508501655,
+        "min": 0,
+        "med": 17.844900000000003,
+        "p(95)": 84.75987500000001,
+        "p(99)": 138.66432500000002,
+        "max": 90037.4824
+      }
+    },
+    "http_req_sending": {
+      "values": {
+        "p(95)": 5.8208,
+        "p(99)": 24.2345,
+        "max": 112.8841,
+        "count": 17501,
+        "avg": 1.0595084223758626,
+        "min": 0,
+        "med": 0
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "sb_stored_ms{phase:measure}": {
+      "contains": "time",
+      "values": {
+        "count": 5164,
+        "avg": 40.351471727343146,
+        "min": 4,
+        "med": 29,
+        "p(95)": 114,
+        "p(99)": 153.73999999999978,
+        "max": 273
+      },
+      "type": "trend"
+    },
+    "dropped_iterations": {
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      },
+      "type": "counter"
+    },
+    "sb_rejection_reason{phase:measure,roomClass:normal-room,cause:OUTBOX_FULL}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_rejected{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 9837,
+        "rate": 109.2524323407
+      }
+    },
+    "ws_connecting": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "min": 0.7397,
+        "med": 2.30605,
+        "p(95)": 62.91872999999984,
+        "p(99)": 102.42712999999998,
+        "max": 111.7519,
+        "count": 500,
+        "avg": 9.526284399999994
+      }
+    },
+    "data_sent": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 123567566,
+        "rate": 1372375.433965638
+      }
+    },
+    "sb_initial_unknown": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "http_req_duration": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 238.1183,
+        "count": 17501,
+        "avg": 23.637119581738222,
+        "min": 0,
+        "med": 14.7682,
+        "p(95)": 75.4575,
+        "p(99)": 127.5885
+      }
+    },
+    "sb_initial_unknown{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:normal-room,cause:ROOM_RELEASE_RACE}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:hot-room,cause:READ_BUDGET}": {
+      "values": {
+        "count": 0,
+        "rate": 0
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "sb_rejected{phase:measure,roomClass:normal-room}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 139,
+        "rate": 1.5437722979930162
+      }
+    },
+    "http_req_duration{expected_response:true}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "p(99)": 146.8820689999998,
+        "max": 238.1183,
+        "count": 6124,
+        "avg": 35.72313491182233,
+        "min": 4.2395,
+        "med": 23.78015,
+        "p(95)": 106.13140499999996
+      }
+    },
+    "sb_stored_ms": {
+      "values": {
+        "med": 27,
+        "p(95)": 110,
+        "p(99)": 152,
+        "max": 273,
+        "count": 6124,
+        "avg": 38.71325930764206,
+        "min": 4
+      },
+      "type": "trend",
+      "contains": "time"
+    },
+    "http_req_connecting": {
+      "contains": "time",
+      "values": {
+        "avg": 0.021743226101365646,
+        "min": 0,
+        "med": 0,
+        "p(95)": 0,
+        "p(99)": 0,
+        "max": 36.5324,
+        "count": 17501
+      },
+      "type": "trend"
+    },
+    "sb_physical_send": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 17501,
+        "rate": 194.37092796529336
+      }
+    },
+    "sb_schedule_ms": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "count": 17501,
+        "avg": 6.160505113993486,
+        "min": 0,
+        "med": 1,
+        "p(95)": 30,
+        "p(99)": 58,
+        "max": 166
+      }
+    },
+    "sb_rejection_reason{phase:measure,roomClass:hot-room,cause:WRITE_BUDGET}": {
+      "values": {
+        "count": 14,
+        "rate": 0.15548785735181458
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "vus_max": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "value": 153,
+        "min": 153,
+        "max": 153
+      }
+    },
+    "sb_closed": {
+      "values": {
+        "count": 500,
+        "rate": 5.553137762564806
+      },
+      "type": "counter",
+      "contains": "default"
+    },
+    "sb_rejection_reason{phase:measure,roomClass:normal-room,cause:BUSY}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "vus": {
+      "type": "gauge",
+      "contains": "default",
+      "values": {
+        "max": 47,
+        "value": 25,
+        "min": 25
+      }
+    },
+    "sb_unknown{phase:measure}": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 0,
+        "rate": 0
+      }
+    },
+    "sb_rejected": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "rate": 126.3560966493996,
+        "count": 11377
+      }
+    },
+    "data_received": {
+      "type": "counter",
+      "contains": "data",
+      "values": {
+        "count": 963433793,
+        "rate": 10700161.15527869
+      }
+    },
+    "ws_sessions": {
+      "type": "counter",
+      "contains": "default",
+      "values": {
+        "count": 500,
+        "rate": 5.553137762564806
+      }
+    },
+    "sb_received_ms{phase:measure,roomClass:normal-room}": {
+      "type": "trend",
+      "contains": "time",
+      "values": {
+        "max": 514,
+        "count": 9236,
+        "avg": 137.4576656561282,
+        "min": 20,
+        "med": 127,
+        "p(95)": 247,
+        "p(99)": 327
+      }
+    },
+    "sb_received_ms{phase:measure,role:normal}": {
+      "contains": "time",
+      "values": {
+        "max": 709,
+        "count": 699836,
+        "avg": 141.88393137820862,
+        "min": 7,
+        "med": 129,
+        "p(95)": 273,
+        "p(99)": 359
+      },
+      "type": "trend"
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "contains": "default",
+      "values": {
+        "rate": 0.6500771384492314,
+        "passes": 11377,
+        "fails": 6124
+      }
+    }
+  }
+}

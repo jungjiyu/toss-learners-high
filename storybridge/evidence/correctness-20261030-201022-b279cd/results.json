@@ -1,0 +1,142 @@
+[
+  {
+    "ids": "T15",
+    "name": "cross-gateway",
+    "status": "PASS",
+    "details": {
+      "gateways": 2,
+      "durable_recipients": 4,
+      "unique_obligations": 160,
+      "all_applied": true,
+      "bindings_match": true,
+      "states": [
+        {
+          "desired": [
+            101
+          ],
+          "desiredVersion": 3,
+          "queue": "amq.gen-rbtsg-iwRteGDmMzWFIscw",
+          "appQueue": 0,
+          "prefetch": 32,
+          "ttlMs": 5000,
+          "ready": [
+            101
+          ],
+          "queueLimit": 256,
+          "readyVersion": 3,
+          "epoch": 1
+        },
+        {
+          "ttlMs": 5000,
+          "ready": [
+            101
+          ],
+          "queueLimit": 256,
+          "readyVersion": 1,
+          "epoch": 1,
+          "desired": [
+            101
+          ],
+          "desiredVersion": 1,
+          "queue": "amq.gen-X-rNvtImQx-GevirnoNcUA",
+          "appQueue": 0,
+          "prefetch": 32
+        }
+      ]
+    },
+    "seconds": 2.834128399961628
+  },
+  {
+    "ids": "T16 T31 T32 X01",
+    "name": "topology-recovery",
+    "status": "PASS",
+    "details": {
+      "websocket_preserved": true,
+      "old_transport_epoch": 1,
+      "new_state": {
+        "ttlMs": 5000,
+        "ready": [
+          102
+        ],
+        "queueLimit": 256,
+        "readyVersion": 5,
+        "epoch": 2,
+        "desired": [
+          102
+        ],
+        "desiredVersion": 5,
+        "queue": "amq.gen-lcFLQtHoSXSzhnGQiwRKNw",
+        "appQueue": 0,
+        "prefetch": 32
+      },
+      "applied": 20,
+      "binding_oracle_match": true
+    },
+    "seconds": 1.7264345999574289
+  },
+  {
+    "ids": "T17",
+    "name": "broker-outage",
+    "status": "PASS",
+    "details": {
+      "pending_during_outage": 60,
+      "durable_applied_while_broker_down": 60,
+      "post_restore_seconds": 0.14099999994505197,
+      "outbox_drained": true,
+      "new_send_applied": true,
+      "epoch_advanced": true
+    },
+    "seconds": 17.3714173999615
+  },
+  {
+    "ids": "T18",
+    "name": "gateway-after-broker-ack",
+    "status": "PASS",
+    "details": {
+      "broker_ack_before_kill": true,
+      "cursor_before_kill": 995,
+      "cursor_after_other_gateway_reconnect": 996,
+      "same_sqlite_store": true
+    },
+    "seconds": 6.383447799948044
+  },
+  {
+    "ids": "T44",
+    "name": "queue-overflow",
+    "status": "PASS",
+    "details": {
+      "published": 120,
+      "pressure_queue_limit": 32,
+      "default_queue_limit": 256,
+      "pressure_ttl_ms": 60000,
+      "default_ttl_ms": 5000,
+      "sample_before_ttl": true,
+      "start_head": 996,
+      "final_head": 1116,
+      "ready_peak": 32,
+      "unacked_peak": 32,
+      "app_queue_cap": 32,
+      "normal_room_seconds": [
+        0.0779999999795109,
+        0.06299999996554106,
+        0.0470000000204891,
+        0.0470000000204891
+      ],
+      "both_gateway_recipients_applied": true,
+      "ready_plus_unacked_less_than_published": true
+    },
+    "seconds": 19.306853899965063
+  },
+  {
+    "ids": "T06 T07",
+    "name": "duplicate-no-route",
+    "status": "PASS",
+    "details": {
+      "publish_attempts_max": 16,
+      "duplicate_local_effect": false,
+      "offline_finish_reason": "NO_ONLINE_ROUTE",
+      "receipt_retained": true
+    },
+    "seconds": 1.0390135999768972
+  }
+]

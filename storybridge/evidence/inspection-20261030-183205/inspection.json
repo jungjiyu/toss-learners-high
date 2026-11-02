@@ -1,0 +1,22 @@
+{
+  "run_id": "inspection-20261030-183205",
+  "sql": "SELECT * FROM message WHERE room_id=999 AND seq>454 AND seq<=486 ORDER BY seq LIMIT 32",
+  "plan": [
+    [
+      "-> Limit: 32 row(s)  (cost=11.9 rows=32) (actual time=0.0189..0.0614 rows=32 loops=1)\n    -> Filter: ((message.room_id = 999) and (message.seq > 454) and (message.seq <= 486))  (cost=11.9 rows=58) (actual time=0.0176..0.0566 rows=32 loops=1)\n        -> Index range scan on message using PRIMARY over (room_id = 999 AND 454 < seq <= 486)  (cost=11.9 rows=58) (actual time=0.016..0.0504 rows=32 loops=1)\n"
+    ]
+  ],
+  "audit_before_profile": [
+    [
+      835,
+      835,
+      835,
+      0
+    ]
+  ],
+  "profile_sends": 174,
+  "jfr_original": ".runtime\\profiles\\inspection-20261030-183205.jfr",
+  "jfr_sha256": "b7ae986645a2656e0603821e2ad72e2bc470b0c2b3b33c2a56f3625d3bf12f6a",
+  "jfr_bytes": 520416,
+  "phase": "separate diagnostic after measured comparison"
+}

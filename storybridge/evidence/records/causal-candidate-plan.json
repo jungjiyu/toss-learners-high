@@ -1,0 +1,35 @@
+{
+  "status": "Declared after Q2x2 and before candidate implementation",
+  "branch": "experiment-reconnect-path",
+  "base": "4d540615c4526929dceb98af77f71611d6550b7c",
+  "causes": {
+    "own_reconnect": "C-A -1.5pp; normal retry wait median350ms, handshake2ms, subscribeREADY3ms. C receiverp99224ms passes but83/5400logical sends fail all-recipient250ms.",
+    "concurrent_subscription": "Interaction -0.77778pp. D1618client SUBSCRIBE BUSY equals1618serverio_rejected, READ_BUDGET0. DsubscribeREADYp99774.03ms vs C84ms. B-A -0.01852pp, no evidence large ongoing normal-room penalty in this trial."
+  },
+  "steps": [
+    {
+      "label": "U0",
+      "change": "Use existing authoritative single-statement membership+F/H snapshot for each initial SUBSCRIBE, preserving cursor/floor checks and auth recheck. Add bounded room-class queue/query/callback timers. Keep2IOworkers,128queue,4read permits, all existing budgets.",
+      "expected": "Reduce per-grant SQL/session roundtrips, initial queue wait and BUSY retry; independent of multi-tab coalescing.",
+      "risks": "More grants complete together and can create a recovery burst. Permission/floor/cursor checks must not disappear when replacing history().",
+      "discriminator": "D60s with unchanged legacy retry; exact MySQL plan, initial grant tests and same metrics."
+    },
+    {
+      "label": "U",
+      "change": "Shared actual-browser/k6 retry module: after READY stable10s, one random25..225ms retry; failed/unready/short-lived connections use500..1000ms then exponential equal jitter capped2500..5000ms. OPEN never resets backoff. k6 reproducible RNG keyed by recipient; actual browser Math.random.",
+      "expected": "Reduce intentional own outage without removing jitter or sustaining rapid failures.",
+      "risks": "500connections return in shorter window; inspect D handshake/initial queue/normal tail and hot recovery. 30s outage and12s OPEN-without-READY flaps must stay bounded; real IndexedDB old-generation in-flight apply, abort, page restart and ledger audit.",
+      "discriminator": "C/D60s pilots, then freeze source/harness and C/D600s independent3 each Q/U; A600s candidate check. Original simultaneous schedule unchanged."
+    }
+  ],
+  "adoption": "Same existing150/250/30000ms and95%overall/99%normal assumptions. Consistent primary joint improvement across3 repeats, no selective acceptance, finite resources, no hot starvation after release. Keep constrained slow physical failures in denominator; do not call an overall pass if recovery fails. Review absolute and work-normalized total costs.",
+  "final_reuse": "Only exact executed Q harness/config/artifact/input/schedule-compatible initial C/D may fill Qrepeat1; manifest and independent audits verified, explicitly origin=reused. Final source frozen before repeats.",
+  "pilot_revision_before_next_run": {
+    "initial": "25..225ms stable retry",
+    "proposed": "25..325ms stable retry, exponential failure backoff unchanged",
+    "evidence": "scale-U-causal-pilot-D-20261031-193747-90a3",
+    "hypothesis": "500 returns over300ms (~1667/s) instead200ms (~2500/s), compared with observed initial normal query mean0.90ms on2workers (~2222/s ignoring other costs). A sizing hypothesis, not proven capacity. Reduce queue retries and k6 timer contention; add up to100ms intentional delay as explicit tradeoff.",
+    "unchanged": "45/s, all500 simultaneous forced cuts at original30s schedule, body/slow/CPU budget,150/250/30000ms goals, acceptance assumptions. Never widen the latency target.",
+    "decision_test": "One C/D60s revised-policy pilot, then freeze final implementation. Compare joint successes, acceptance, queue rejections and timer delays; no claim based only on completed p99."
+  }
+}

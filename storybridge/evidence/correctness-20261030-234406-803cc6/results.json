@@ -1,0 +1,181 @@
+[
+  {
+    "ids": "T01 T02 T07",
+    "name": "identity-order",
+    "status": "PASS",
+    "details": {
+      "same_key_calls": 8,
+      "unique_effect": 1,
+      "parallel_unique": 24,
+      "first": 36,
+      "last": 59
+    },
+    "seconds": 0.8162554999580607
+  },
+  {
+    "ids": "T03 T04 T06",
+    "name": "transaction-boundaries",
+    "status": "PASS",
+    "details": {
+      "rollback_head": 2,
+      "lost_response_receipt": {
+        "room": 102,
+        "sender": 1,
+        "key": "02c33609927d477ab6101e6e6d581d5e",
+        "messageId": "3c56632e-e231-41c8-9579-24f29d31281c",
+        "seq": 3,
+        "hash": "3d218b82f677ec124ef052881422627134b7e52fc9943323458654cb13320a22",
+        "storedAt": 1793371449159
+      },
+      "duplicate_publish_attempts": 1
+    },
+    "seconds": 0.8361635999754071
+  },
+  {
+    "ids": "T08",
+    "name": "subscribe-boundary",
+    "status": "PASS",
+    "details": {
+      "base": 2,
+      "completed": 3
+    },
+    "seconds": 0.6236819999758154
+  },
+  {
+    "ids": "T09 T10 T29",
+    "name": "reversed-gap-last-loss",
+    "status": "PASS",
+    "details": {
+      "reversed_messages": 39,
+      "gap_base": 65,
+      "final_cursor": 106,
+      "new_send_after_last": 0
+    },
+    "seconds": 2.3830260999966413
+  },
+  {
+    "ids": "T11 T13 T27 T39 X02",
+    "name": "slow-ack-recovery",
+    "status": "PASS",
+    "details": {
+      "base": 90,
+      "goal": 180,
+      "max_credit": 1,
+      "applied": 90
+    },
+    "seconds": 3.668558800010942
+  },
+  {
+    "ids": "T21 T42",
+    "name": "retention-snapshot",
+    "status": "PASS",
+    "details": {
+      "old_snapshot_floor": 8,
+      "old_snapshot_rows": 6,
+      "new_floor": 14,
+      "receipt_survives": true,
+      "delete_rollback": true
+    },
+    "seconds": 0.4356424999423325
+  },
+  {
+    "ids": "T22 T23 T33",
+    "name": "read-auth-list",
+    "status": "PASS",
+    "details": {
+      "list_only_head": 31,
+      "read_monotonic": 31,
+      "unauthorized_paths": 5,
+      "expired_socket_closed": true
+    },
+    "seconds": 2.2218041999731213
+  },
+  {
+    "ids": "T30 T41 X07",
+    "name": "retiring-credit",
+    "status": "PASS",
+    "details": {
+      "retiring_credit": 16,
+      "discarded_not_applied": 16,
+      "new_epoch": true,
+      "stale_ack_rejected": true,
+      "new_epoch_recovered_to": 48,
+      "new_epoch_unique_applied": 24
+    },
+    "seconds": 0.7424096000613645
+  },
+  {
+    "ids": "E05",
+    "name": "poison",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 48, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 158, in poison\n    until(lambda:sql('SELECT state FROM outbox WHERE room_id=108 AND seq=%s',(seq,))[0][0]=='QUARANTINE')\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 18, in until\n    raise TimeoutError('condition deadline')\nTimeoutError: condition deadline\n",
+    "seconds": 8.191344099934213
+  },
+  {
+    "ids": "T26 T28 T37",
+    "name": "local-crash",
+    "status": "PASS",
+    "details": {
+      "real_process_exit_points": [
+        {
+          "stage": "before_projection",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "after_projection",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "after_cursor",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "before_commit",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "after_commit",
+          "cursor_after_kill": 3
+        }
+      ],
+      "pending_key_reused": true,
+      "fresh_store_cursor": 0
+    },
+    "seconds": 1.7598077999427915
+  },
+  {
+    "ids": "T05",
+    "name": "app-crash",
+    "status": "PASS",
+    "details": {
+      "durable_seq": 2,
+      "post_restart_applied": true
+    },
+    "seconds": 6.208951300010085
+  },
+  {
+    "ids": "T40-storage",
+    "name": "storage-audit",
+    "status": "PASS",
+    "details": {
+      "rooms": 73,
+      "retained_messages": 1571,
+      "problems": [],
+      "snapshot": "one REPEATABLE READ transaction",
+      "note": "Storage snapshot; independent logical delivery obligations are audited separately by load harness."
+    },
+    "seconds": 0.1009673000080511
+  },
+  {
+    "ids": "T02 T23",
+    "name": "ws-keyed-admission",
+    "status": "PASS",
+    "details": {
+      "path": "WebSocket SEND",
+      "accepted_keys": 2,
+      "rejected_key_correlated": true,
+      "bounds": 2
+    },
+    "seconds": 0.2694715999532491
+  }
+]

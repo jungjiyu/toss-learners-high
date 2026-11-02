@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\1030_toss_storybridge\scripts\scale_run.py", line 234, in <module>
+    try:sys.exit(main())
+                 ^^^^^^
+  File "C:\1030_toss_storybridge\scripts\scale_run.py", line 56, in main
+    for port in (18080,18081):app('stop','--port',str(port))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\1030_toss_storybridge\scripts\scale_run.py", line 30, in app
+    def app(*args):subprocess.run([sys.executable,str(ROOT/'scripts/app.py'),*args],check=True,capture_output=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\1030_toss_storybridge\\.venv\\Scripts\\python.exe', 'C:\\1030_toss_storybridge\\scripts\\app.py', 'stop', '--port', '18081']' returned non-zero exit status 1.

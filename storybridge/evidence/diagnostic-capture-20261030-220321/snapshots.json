@@ -1,0 +1,146 @@
+[
+  {
+    "source_run": "correctness-20261030-220313-110d81 / broker offline; SQLite applied, outbox pending",
+    "at": "2026-10-30T13:03:21.890481+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 54,
+      "shared_live_issued": 202,
+      "outbox_done": 97,
+      "broker_confirms": 99,
+      "broker_consumer_acks": 164,
+      "broker_transport_epochs": 6,
+      "heap_used": 63403072,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 34,
+      "shared_live_issued": 106,
+      "outbox_done": 22,
+      "broker_confirms": 24,
+      "broker_consumer_acks": 76,
+      "broker_transport_epochs": 8,
+      "heap_used": 92466776,
+      "gc_ms": 42
+    },
+    "mysql_outbox": {
+      "DONE": 17701,
+      "PENDING": 60
+    },
+    "broker": "unavailable"
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / broker offline; SQLite applied, outbox pending",
+    "at": "2026-10-30T13:03:23.989771+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 56,
+      "shared_live_issued": 202,
+      "outbox_done": 97,
+      "broker_confirms": 99,
+      "broker_consumer_acks": 164,
+      "broker_transport_epochs": 10,
+      "heap_used": 65500224,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 36,
+      "shared_live_issued": 106,
+      "outbox_done": 22,
+      "broker_confirms": 24,
+      "broker_consumer_acks": 76,
+      "broker_transport_epochs": 12,
+      "heap_used": 27040032,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17701,
+      "PENDING": 60
+    },
+    "broker": "unavailable"
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / broker offline; SQLite applied, outbox pending",
+    "at": "2026-10-30T13:03:26.071654+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 58,
+      "shared_live_issued": 202,
+      "outbox_done": 97,
+      "broker_confirms": 99,
+      "broker_consumer_acks": 164,
+      "broker_transport_epochs": 14,
+      "heap_used": 67597376,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 38,
+      "shared_live_issued": 106,
+      "outbox_done": 22,
+      "broker_confirms": 24,
+      "broker_consumer_acks": 76,
+      "broker_transport_epochs": 15,
+      "heap_used": 29137184,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17701,
+      "PENDING": 60
+    },
+    "broker": "unavailable"
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / broker offline; SQLite applied, outbox pending",
+    "at": "2026-10-30T13:03:28.175262+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 60,
+      "shared_live_issued": 202,
+      "outbox_done": 97,
+      "broker_confirms": 99,
+      "broker_consumer_acks": 164,
+      "broker_transport_epochs": 18,
+      "heap_used": 69694528,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 40,
+      "shared_live_issued": 106,
+      "outbox_done": 22,
+      "broker_confirms": 24,
+      "broker_consumer_acks": 76,
+      "broker_transport_epochs": 19,
+      "heap_used": 31234336,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17701,
+      "PENDING": 60
+    },
+    "broker": "unavailable"
+  }
+]

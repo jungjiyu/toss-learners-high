@@ -1,0 +1,320 @@
+{
+  "runs": [
+    {
+      "run": "scale-Q-causal-explore-A-20261031-182538-a6eb",
+      "trace": "on",
+      "rounds": 500,
+      "normal_attempts": 5400,
+      "joint_successes": 5398,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-explore-B-20261031-183813-54d5",
+      "trace": "on",
+      "rounds": 10100,
+      "normal_attempts": 5400,
+      "joint_successes": 5397,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-explore-C-20261031-190329-9e67",
+      "trace": "on",
+      "rounds": 2900,
+      "normal_attempts": 5400,
+      "joint_successes": 5317,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-explore-D-20261031-185051-bf67",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5274,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-explore-D-20261031-222005-1f73",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5285,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-final-C-20261031-211621-0f0c",
+      "trace": "on",
+      "rounds": 2900,
+      "normal_attempts": 5400,
+      "joint_successes": 5301,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-final-C-20261031-212902-e322",
+      "trace": "on",
+      "rounds": 2900,
+      "normal_attempts": 5400,
+      "joint_successes": 5313,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-final-D-20261031-205058-7159",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5302,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-final-D-20261031-215422-6614",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5155,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-pilot-A-20261031-180549-22b2",
+      "trace": "on",
+      "rounds": 500,
+      "normal_attempts": 540,
+      "joint_successes": 540,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-pilot-B-20261031-181159-66d7",
+      "trace": "on",
+      "rounds": 1700,
+      "normal_attempts": 540,
+      "joint_successes": 540,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-pilot-C-20261031-181634-bdc6",
+      "trace": "on",
+      "rounds": 800,
+      "normal_attempts": 540,
+      "joint_successes": 530,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-pilot-D-20261031-181416-f9fd",
+      "trace": "on",
+      "rounds": 2000,
+      "normal_attempts": 540,
+      "joint_successes": 526,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-pilot-D-20261031-181950-11a1",
+      "trace": "on",
+      "rounds": 2000,
+      "normal_attempts": 540,
+      "joint_successes": 524,
+      "issues": []
+    },
+    {
+      "run": "scale-Q-causal-pilot-D-traceoff-20261031-182221-200a",
+      "trace": "off",
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-explore-A-20261031-224524-0cc9",
+      "trace": "on",
+      "rounds": 500,
+      "normal_attempts": 5400,
+      "joint_successes": 5399,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-explore-D-20261031-223245-c68f",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5353,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-C-20261031-195336-7572",
+      "trace": "on",
+      "rounds": 2900,
+      "normal_attempts": 5400,
+      "joint_successes": 5370,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-C-20261031-210341-5163",
+      "trace": "on",
+      "rounds": 2900,
+      "normal_attempts": 5400,
+      "joint_successes": 5370,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-C-20261031-214144-b68b",
+      "trace": "on",
+      "rounds": 2900,
+      "normal_attempts": 5400,
+      "joint_successes": 5362,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-200612-3638",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5358,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-201902-16b2",
+      "intentional_interruption": true,
+      "execution_valid": false,
+      "preserved_validation_issues": [
+        {
+          "file": "k6-summary.json",
+          "error": "FileNotFoundError"
+        },
+        {
+          "execution_failure": "runner-failure.txt"
+        },
+        {
+          "recipient_reports": 0,
+          "expected": 500
+        },
+        {
+          "file": "boundary-audit.json",
+          "error": "FileNotFoundError"
+        },
+        {
+          "missing": "reconnect-attempts.jsonl"
+        },
+        {
+          "missing": "normal-send-outcomes.jsonl"
+        },
+        {
+          "missing": "normal-receipts.jsonl"
+        },
+        {
+          "file": "lifecycle-audit.json",
+          "error": "FileNotFoundError"
+        },
+        {
+          "missing": "lifecycle-events.jsonl"
+        },
+        {
+          "missing": "connection-lifecycle.jsonl"
+        },
+        {
+          "missing": "normal-message-fates.jsonl"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-202535-0b1c",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5357,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-203816-086a",
+      "trace": "on",
+      "rounds": 12500,
+      "normal_attempts": 5400,
+      "joint_successes": 5362,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-220703-9edc",
+      "trace": "on",
+      "rounds": 12515,
+      "normal_attempts": 5400,
+      "joint_successes": 5332,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-pilot-C-20261031-193531-50db",
+      "trace": "on",
+      "rounds": 800,
+      "normal_attempts": 540,
+      "joint_successes": 538,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-pilot-C-20261031-194802-4596",
+      "trace": "on",
+      "rounds": 800,
+      "normal_attempts": 540,
+      "joint_successes": 536,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-pilot-D-20261031-193747-90a3",
+      "trace": "on",
+      "rounds": 2000,
+      "normal_attempts": 540,
+      "joint_successes": 533,
+      "issues": []
+    },
+    {
+      "run": "scale-U-causal-pilot-D-20261031-194545-d857",
+      "trace": "on",
+      "rounds": 2000,
+      "normal_attempts": 540,
+      "joint_successes": 535,
+      "issues": []
+    },
+    {
+      "run": "scale-U0-causal-pilot-D-20261031-192235-7f6f",
+      "trace": "on",
+      "rounds": 2000,
+      "normal_attempts": 540,
+      "joint_successes": 531,
+      "issues": []
+    }
+  ],
+  "manifest_files_checked": 1473,
+  "issues": [],
+  "functional_runs": [
+    {
+      "run": "correctness-20261031-192106-5fe397",
+      "issues": []
+    },
+    {
+      "run": "correctness-20261031-192108-48017e",
+      "issues": []
+    },
+    {
+      "run": "correctness-20261031-193158-80c946",
+      "issues": []
+    },
+    {
+      "run": "correctness-20261031-193219-6bf147",
+      "issues": []
+    },
+    {
+      "run": "correctness-20261031-193318-9d4c90",
+      "issues": []
+    },
+    {
+      "run": "correctness-20261031-193418-e4b311",
+      "issues": []
+    },
+    {
+      "run": "browser-reconnect-U-20261031-195206",
+      "issues": []
+    },
+    {
+      "run": "browser-pending-20261031-195317",
+      "issues": []
+    },
+    {
+      "run": "retry-policy-tests-20261031-194544",
+      "issues": []
+    }
+  ],
+  "scope": "Read-only independent recipient plan, per-message denominator, generation, timestamp ordering, fixed-target bounds, completion and every preserved file hash. Early instrumentation pilots are preserved separately; final sources/config/snapshots are strictly checked by causal_final.py.",
+  "checker_sha256": "2bf217ef83943fe6c3538669e2b09de2be98fd5c9d040a0350ff3f3fc816a72b"
+}

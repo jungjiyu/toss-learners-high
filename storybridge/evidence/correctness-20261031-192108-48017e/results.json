@@ -1,0 +1,37 @@
+[
+  {
+    "ids": "T08",
+    "name": "subscribe-boundary",
+    "status": "PASS",
+    "details": {
+      "base": 0,
+      "completed": 1
+    },
+    "seconds": 0.5419987000059336
+  },
+  {
+    "ids": "T21 T42",
+    "name": "retention-snapshot",
+    "status": "PASS",
+    "details": {
+      "old_snapshot_floor": 1,
+      "old_snapshot_rows": 6,
+      "new_floor": 7,
+      "receipt_survives": true,
+      "delete_rollback": true
+    },
+    "seconds": 0.4815484000137076
+  },
+  {
+    "ids": "T22 T23 T33",
+    "name": "read-auth-list",
+    "status": "PASS",
+    "details": {
+      "list_only_head": 186,
+      "read_monotonic": 186,
+      "unauthorized_paths": 5,
+      "expired_socket_closed": true
+    },
+    "seconds": 3.070906199980527
+  }
+]

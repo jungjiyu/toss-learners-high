@@ -1,0 +1,42 @@
+{
+  "primary": [
+    "scale-M-mixedround-primary-mixed-250-20261031-104830-c026",
+    "scale-M-mixedround-primary-mixed-250-20261031-110948-f14f",
+    "scale-M-mixedround-primary-mixed-250-20261031-112333-4700",
+    "scale-MI-mixedround-primary-many-250-20261031-103948-9ee1",
+    "scale-MI-mixedround-primary-many-250-20261031-110347-b474",
+    "scale-MI-mixedround-primary-many-250-20261031-111511-e89f",
+    "scale-MI-mixedround-primary-mixed-250-20261031-103610-2c70",
+    "scale-MI-mixedround-primary-mixed-250-20261031-105213-39ad",
+    "scale-MI-mixedround-primary-mixed-250-20261031-111136-3925",
+    "scale-MI-mixedround-primary-spread-1000-20261031-105733-08fe",
+    "scale-MI-mixedround-primary-spread-1000-20261031-110800-3dcc",
+    "scale-MI-mixedround-primary-spread-1000-20261031-111957-2bac",
+    "scale-Q-mixedround-primary-many-250-20261031-104217-2d44",
+    "scale-Q-mixedround-primary-many-250-20261031-110115-3df6",
+    "scale-Q-mixedround-primary-many-250-20261031-111735-398c",
+    "scale-Q-mixedround-primary-mixed-250-20261031-103757-ea29",
+    "scale-Q-mixedround-primary-mixed-250-20261031-105021-78dc",
+    "scale-Q-mixedround-primary-mixed-250-20261031-111324-074d",
+    "scale-Q-mixedround-primary-spread-1000-20261031-105924-1275",
+    "scale-Q-mixedround-primary-spread-1000-20261031-110612-6394",
+    "scale-Q-mixedround-primary-spread-1000-20261031-112145-858f"
+  ],
+  "matched": [
+    "scale-MI-mixedround-finalmatched-mixed-0-20261031-113558-8b61",
+    "scale-MI-mixedround-finalmatched-mixed-0-20261031-114142-f883",
+    "scale-MI-mixedround-finalmatched-mixed-0-20261031-114336-73f1",
+    "scale-Q-mixedround-finalmatched-mixed-0-20261031-113752-40d7",
+    "scale-Q-mixedround-finalmatched-mixed-0-20261031-113947-fa65",
+    "scale-Q-mixedround-finalmatched-mixed-0-20261031-114602-85b8"
+  ],
+  "timeline": [
+    "scale-MI-mixedround-primary-mixed-250-20261031-111136-3925",
+    "scale-Q-mixedround-primary-mixed-250-20261031-105021-78dc"
+  ],
+  "recovery_and_soak": [
+    "scale-Q-mixedround-final-mixed-250-20261031-114913-6d05",
+    "scale-Q-mixedround-final-mixed-250-20261031-115315-de29"
+  ],
+  "selection_rule": "For each candidate choose median normal-room p99 run for timeline, preserve all repeats in scatter and appendix. No pooled p99 claim."
+}

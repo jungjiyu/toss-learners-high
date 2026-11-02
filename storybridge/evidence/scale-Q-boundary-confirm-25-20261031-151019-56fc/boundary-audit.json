@@ -1,0 +1,303 @@
+{
+  "integrity_issues": [],
+  "recovery": {
+    "all": {
+      "all": {
+        "attempts": 4500,
+        "completed": 4500,
+        "within_30s": 4500,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 2863,
+          "caught_up": 1637
+        },
+        "p50_ms": 11.0,
+        "p99_ms": 937.0200000000004,
+        "max_ms": 1422,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "normal": {
+        "attempts": 900,
+        "completed": 900,
+        "within_30s": 900,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 863,
+          "caught_up": 37
+        },
+        "p50_ms": 6.0,
+        "p99_ms": 420.1099999999999,
+        "max_ms": 595,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_slow": {
+        "attempts": 900,
+        "completed": 900,
+        "within_30s": 900,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 500,
+          "caught_up": 400
+        },
+        "p50_ms": 29.5,
+        "p99_ms": 1156.06,
+        "max_ms": 1422,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_fast": {
+        "attempts": 2700,
+        "completed": 2700,
+        "within_30s": 2700,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 1500,
+          "caught_up": 1200
+        },
+        "p50_ms": 28.5,
+        "p99_ms": 495.03999999999905,
+        "max_ms": 595,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      }
+    },
+    "initial": {
+      "all": {
+        "attempts": 500,
+        "completed": 500,
+        "within_30s": 500,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 500
+        },
+        "p50_ms": 37.0,
+        "p99_ms": 158.01,
+        "max_ms": 180,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "normal": {
+        "attempts": 100,
+        "completed": 100,
+        "within_30s": 100,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 100
+        },
+        "p50_ms": 37.0,
+        "p99_ms": 158.01,
+        "max_ms": 159,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_slow": {
+        "attempts": 100,
+        "completed": 100,
+        "within_30s": 100,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 100
+        },
+        "p50_ms": 31.0,
+        "p99_ms": 150.2000000000001,
+        "max_ms": 170,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_fast": {
+        "attempts": 300,
+        "completed": 300,
+        "within_30s": 300,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 300
+        },
+        "p50_ms": 40.5,
+        "p99_ms": 156.02999999999997,
+        "max_ms": 180,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      }
+    },
+    "warm": {
+      "all": {
+        "attempts": 0,
+        "completed": 0,
+        "within_30s": 0,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {},
+        "p50_ms": null,
+        "p99_ms": null,
+        "max_ms": null,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "normal": {
+        "attempts": 0,
+        "completed": 0,
+        "within_30s": 0,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {},
+        "p50_ms": null,
+        "p99_ms": null,
+        "max_ms": null,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_slow": {
+        "attempts": 0,
+        "completed": 0,
+        "within_30s": 0,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {},
+        "p50_ms": null,
+        "p99_ms": null,
+        "max_ms": null,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_fast": {
+        "attempts": 0,
+        "completed": 0,
+        "within_30s": 0,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {},
+        "p50_ms": null,
+        "p99_ms": null,
+        "max_ms": null,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      }
+    },
+    "measure": {
+      "all": {
+        "attempts": 2000,
+        "completed": 2000,
+        "within_30s": 2000,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 363,
+          "caught_up": 1637
+        },
+        "p50_ms": 143.0,
+        "p99_ms": 1076.0,
+        "max_ms": 1422,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "normal": {
+        "attempts": 400,
+        "completed": 400,
+        "within_30s": 400,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 363,
+          "caught_up": 37
+        },
+        "p50_ms": 74.0,
+        "p99_ms": 456.9599999999991,
+        "max_ms": 595,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_slow": {
+        "attempts": 400,
+        "completed": 400,
+        "within_30s": 400,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_up": 400
+        },
+        "p50_ms": 182.5,
+        "p99_ms": 1200.01,
+        "max_ms": 1422,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_fast": {
+        "attempts": 1200,
+        "completed": 1200,
+        "within_30s": 1200,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_up": 1200
+        },
+        "p50_ms": 150.0,
+        "p99_ms": 518.3799999999997,
+        "max_ms": 595,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      }
+    },
+    "observation": {
+      "all": {
+        "attempts": 2000,
+        "completed": 2000,
+        "within_30s": 2000,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 2000
+        },
+        "p50_ms": 3.0,
+        "p99_ms": 11.009999999999991,
+        "max_ms": 17,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "normal": {
+        "attempts": 400,
+        "completed": 400,
+        "within_30s": 400,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 400
+        },
+        "p50_ms": 3.0,
+        "p99_ms": 11.0,
+        "max_ms": 16,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_slow": {
+        "attempts": 400,
+        "completed": 400,
+        "within_30s": 400,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 400
+        },
+        "p50_ms": 3.0,
+        "p99_ms": 15.0,
+        "max_ms": 17,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      },
+      "hot_fast": {
+        "attempts": 1200,
+        "completed": 1200,
+        "within_30s": 1200,
+        "incomplete_or_over_30s": 0,
+        "outcomes": {
+          "caught_at_ready": 1200
+        },
+        "p50_ms": 3.0,
+        "p99_ms": 11.0,
+        "max_ms": 15,
+        "scope": "latencies are completed samples; all failed/censored attempts remain denominator"
+      }
+    }
+  },
+  "rooms": {
+    "hot": {
+      "attempts": 2400,
+      "stored": 2397,
+      "rejected": 3,
+      "unknown": 0,
+      "acceptance": 0.99875
+    },
+    "normal": {
+      "attempts": 601,
+      "stored": 601,
+      "rejected": 0,
+      "unknown": 0,
+      "acceptance": 1.0
+    }
+  },
+  "normal_joint": {
+    "attempts": 601,
+    "stored_and_all_within_250ms": 585,
+    "ratio": 0.9733777038269551,
+    "stored_but_any_late_or_missing": 16,
+    "unknown_committed": 0,
+    "contract": "Volatile k6 contiguous memory receipt; not persistent APPLIED. First SEND origin, all independently planned recipients; rejection produces no successful sample."
+  },
+  "post_arrival": {
+    "deadline": 0,
+    "final_missing": 0,
+    "final_drain_ms": 18
+  },
+  "clock": "Unix wall milliseconds in k6; no cross-process monotonic origin assumption"
+}

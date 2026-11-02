@@ -1,0 +1,150 @@
+[
+  {
+    "ids": "T24 T36 X04",
+    "name": "reconnect-hot",
+    "status": "PASS",
+    "details": {
+      "reconnecting_recipients": 8,
+      "normal_send_seconds": [
+        0.01223980006761849,
+        0.011683600023388863,
+        0.01170609996188432,
+        0.03684320009779185,
+        0.017481500050053,
+        0.019606600049883127,
+        0.020415199920535088,
+        0.03262139996513724
+      ],
+      "hot_rejections": [
+        503,
+        429,
+        429,
+        429,
+        429
+      ],
+      "all_recovered": true
+    },
+    "seconds": 3.497349700075574
+  },
+  {
+    "ids": "T14 T25",
+    "name": "churn-epochs",
+    "status": "PASS",
+    "details": {
+      "churn_cycles": 20,
+      "remaining_peers": 0,
+      "remaining_routes": 0,
+      "rss_before": 275812352,
+      "rss_after": 254345216,
+      "interpretation": "RSS includes JIT/heap retention; zero route/credit/writer references is separately checked."
+    },
+    "seconds": 8.269896400044672
+  },
+  {
+    "ids": "T21 T37 T38 X06",
+    "name": "local-quota-retention",
+    "status": "PASS",
+    "details": {
+      "sqlite_full": true,
+      "unacked_cursor": 99,
+      "new_floor": 102,
+      "classification": "RESYNC_REQUIRED followed by explicit new bootstrap interval",
+      "cursor_only_rejected": true
+    },
+    "seconds": 1.4282094999216497
+  },
+  {
+    "ids": "T35",
+    "name": "database-restart",
+    "status": "PASS",
+    "details": {
+      "real_mysqld_kill": 5080,
+      "down_send_status": 503,
+      "retry_same_key_seq": 55,
+      "recovery_query_errors_delta": 0,
+      "socket_preserved": true
+    },
+    "seconds": 11.08323129999917
+  },
+  {
+    "ids": "T14 T41",
+    "name": "retire-timeout-tabs",
+    "status": "PASS",
+    "details": {
+      "other_tab_survived": true,
+      "missing_close_ack_closed_seconds": 3.047000000020489
+    },
+    "seconds": 3.978255500085652
+  },
+  {
+    "ids": "T03 T04 T28",
+    "name": "process-commit-crash",
+    "status": "PASS",
+    "details": {
+      "real_app_kills": 2,
+      "precommit_rolled_back": true,
+      "postcommit_same_seq": 103
+    },
+    "seconds": 11.423992500058375
+  },
+  {
+    "ids": "T34 X05",
+    "name": "list-order-pages",
+    "status": "PASS",
+    "details": {
+      "stable_pages_rooms": 73,
+      "reverse_summary_head": 103,
+      "list_only_last_loss_recovered": true,
+      "browser_reverse_merge": "separate browser verification required"
+    },
+    "seconds": 1.3018152000149712
+  },
+  {
+    "ids": "T26 T28 T14 X03",
+    "name": "combined-local-restart",
+    "status": "PASS",
+    "details": {
+      "same_key": "9f342090b92d44588fa67f56f0ac5f25",
+      "same_recipient_store": true,
+      "receiver_process_killed_before_commit": true,
+      "old_epoch_rejected": true,
+      "final_cursor": 3
+    },
+    "seconds": 7.323972999933176
+  },
+  {
+    "ids": "T39",
+    "name": "bounded-nonprogress",
+    "status": "PASS",
+    "details": {
+      "logical_obligations": 24,
+      "wire_received": 16,
+      "locally_committed": 0,
+      "uncompleted": 24,
+      "classification": "permanently non-applying recipient; bounded close is NOT recovery",
+      "closed_seconds": 15.155999999959022
+    },
+    "seconds": 16.018478199956007
+  },
+  {
+    "ids": "T12 T43",
+    "name": "blocked-write",
+    "status": "PASS",
+    "details": {
+      "preloaded_messages": 1100,
+      "body_bytes": 8000,
+      "nonreading_sockets": 2,
+      "max_blocked_write_ms": 1803,
+      "writer_exits": 2,
+      "normal_room_applied": 109,
+      "normal_progress_during_block": {
+        "seq": 108,
+        "seconds": 0.0470000000204891
+      },
+      "owned_tcp_sockets_before_client_close": [],
+      "thread_dump": true,
+      "after_last_send_seconds": 5.108999999938533
+    },
+    "seconds": 38.461662300047465
+  }
+]

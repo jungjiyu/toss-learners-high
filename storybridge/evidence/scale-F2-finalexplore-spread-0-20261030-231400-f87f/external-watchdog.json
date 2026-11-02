@@ -1,0 +1,13 @@
+{
+  "at": 1793369871.808203,
+  "reason": "After all recipient final logs, k6 still alive beyond configured duration plus60s; diagnostics API unavailable",
+  "gateway_pid": 32140,
+  "k6": [
+    {
+      "pid": 14368,
+      "created": 1793369656.121271,
+      "status": "running",
+      "connections": 4000
+    }
+  ]
+}

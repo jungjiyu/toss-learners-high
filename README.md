@@ -4,6 +4,8 @@
 
 - [모구시장 대표 글](https://jungjiyu.github.io/toss-learners-high/mogu/articles/retries.html)
 - [모구시장 전체 아티클 11편](https://jungjiyu.github.io/toss-learners-high/mogu/index.html#articles)
+- [StoryBridge 대표 글 — 같은 메시지가 일부 수신자에게만 늦었던 이유](https://jungjiyu.github.io/toss-learners-high/storybridge/articles/reconnect.html)
+- [StoryBridge 전체 아티클 11편](https://jungjiyu.github.io/toss-learners-high/storybridge/index.html#all)
 
 ## 원본과 게시 범위
 
@@ -33,3 +35,30 @@ python3 tools/verify_live.py https://jungjiyu.github.io/toss-learners-high/
 ```
 
 인증 없는 HTTP로 게시 파일의 해시를 대조하고, 쿠키가 없는 새 Chrome 컨텍스트에서 글·목록 이동과 데스크톱/390px 이미지·CSS·SQL·그래프·표를 검사합니다.
+
+## StoryBridge 원본과 갱신
+
+원본 저장소: `jungjiyu/toss_storybridge` (비공개 유지).
+게시 원본 커밋: `79c3da3aae9ba09db24ff334b172039fe2c7fa38`.
+검토 기준 `c07dc77` 이후 조건부 backlog 증가량, SEND 미확정과 복구 실패 회차, 시험별 전체/수신자별 p99의 세 문장만 교정했다.
+
+`/storybridge/`에는 안내와 외부 아티클 11편, 승인된 아키텍처, 실제 링크가 참조하는 자산·측정·진단 자료를 게시한다. 비공개 저장소 링크는 공개용 사본으로 변경했으며, 내부 아티클 링크는 해당 글의 측정·구현 근거 목록으로 연결한다. 표·SQL·실험 수치·실패 결과는 유지한다.
+
+구현 코드는 각각의 검증 커밋에서 추출한다.
+
+- 기준 구현: `91ce2a72a9635a60d8171db5ab5840ade3692926`
+- 최종 단일 서버: `d1ab45300a25fc763381899466752482bf6e0921`
+- 별도 RabbitMQ 다중 gateway: `c85d5345e1effcc73cf4816341217ad1ad1e7868`
+
+게시 파일의 출처·해시·링크 변환과 민감값 치환 내역은 `storybridge-publication.json`에 기록한다. 합성 사용자·방·메시지 식별자는 원장 대조를 위해 유지하고, 로컬 사용자 디렉터리명과 자격정보는 공개 사본에서 제거한다. 원본 저장소나 기존 `mogu/`는 게시 도구가 수정하지 않는다.
+
+게시본에서는 404였던 Jakarta WebSocket 2.1 `RemoteEndpoint` 링크를 올바른 API 주소로 수정했고, HTTP403을 반환하던 MySQL8.4 참고 링크 두 곳은 같은 버전의 Oracle 공식 매뉴얼로 연결했다. 원본 아티클의 기술 설명이나 측정값은 바꾸지 않았다.
+
+```sh
+# 원본에서 문서 재생성·검수·커밋한 후 그 정확한 SHA를 지정한다.
+python -X utf8 tools/publish_storybridge.py /path/to/toss_storybridge SOURCE_COMMIT
+python -X utf8 tools/check_site.py
+python -X utf8 tools/verify_storybridge_live.py https://jungjiyu.github.io/toss-learners-high/
+```
+
+공개 검수에는 `playwright`와 설치된 Chrome을 사용한다(`python -m pip install playwright`). 브라우저는 쿠키·로그인 정보가 없는 새 컨텍스트로 연다. Pages는 기존과 같이 `main` 루트를 게시하며 `/mogu/` 주소는 유지한다.

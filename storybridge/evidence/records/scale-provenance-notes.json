@@ -1,0 +1,12 @@
+{
+  "reviewed_discrepancies": [
+    {
+      "run": "scale-C4-finalmemoryprimary-hot-100-20261030-235757-4d75",
+      "file": "root/scripts/scale_run.py",
+      "snapshot_sha256": "cb529824a8e40b2b9bc7116973974ba4d82a82ed9486062dd8aec982350c6c86",
+      "provenance_disk_sha256": "8f63c5ea4d9451de687cd72ba1a71f28db7221962256bfdb4a9fb9c94e8addef",
+      "explanation": "The Python process loaded scale_run.py and saved harness/scale_run.py before setup. The live disk file was then amended to capture MySQL Bytes_sent/received and AMQP connection octets before provenance read its hash. The run executed the preserved earlier snapshot, not the later disk version. The only diff adds network observation before/after k6; SEND model, budgets, deadlines and server source are unchanged. Original environment.json and manifest are preserved. This run has no broker-network.json and no MySQL byte counters; those remain uncollected. Future provenance separately records executed snapshot hashes.",
+      "review": "Compared complete unified diff of the snapshot and later disk source; original mismatch report retained in scale-evidence-verification-first.json."
+    }
+  ]
+}

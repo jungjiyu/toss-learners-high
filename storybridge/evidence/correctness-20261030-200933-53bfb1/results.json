@@ -1,0 +1,14 @@
+[
+  {
+    "ids": "T02 T23",
+    "name": "ws-keyed-admission",
+    "status": "PASS",
+    "details": {
+      "path": "WebSocket SEND",
+      "accepted_keys": 2,
+      "rejected_key_correlated": true,
+      "bounds": 2
+    },
+    "seconds": 0.3392329999478534
+  }
+]

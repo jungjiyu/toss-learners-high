@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "C:\1030_toss_storybridge\scripts\scale_run.py", line 212, in <module>
+    try:sys.exit(main())
+                 ^^^^^^
+  File "C:\1030_toss_storybridge\scripts\scale_run.py", line 138, in main
+    (out/'stored-by-room.json').write_text(json.dumps(sql("SELECT room_id,COUNT(*),SUM(body LIKE 'sb|%%|measure|%%') FROM message GROUP BY room_id ORDER BY room_id")))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable

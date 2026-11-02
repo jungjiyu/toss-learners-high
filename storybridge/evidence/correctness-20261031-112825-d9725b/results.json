@@ -1,0 +1,18 @@
+[
+  {
+    "ids": "T02 T03 T04 T39",
+    "name": "bounded-store-handoff",
+    "status": "PASS",
+    "details": {
+      "held_commit_timed_out_requests": 24,
+      "timed_out_requests_committed": 0,
+      "same_key_retry_unique_stores": 24,
+      "no_early_receipt": true,
+      "wait_attempts": 3,
+      "wait_timeouts": 3,
+      "global_wait_peak": 1,
+      "deadline_note": "4ms requested parking deadline; scheduler overshoot is measured, not a hard OS execution deadline"
+    },
+    "seconds": 1.6254207999445498
+  }
+]

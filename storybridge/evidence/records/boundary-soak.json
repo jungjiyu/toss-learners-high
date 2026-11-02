@@ -1,0 +1,4202 @@
+[
+  {
+    "run": "scale-Q-boundary-soak-45-20261031-164507-e8a0",
+    "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+    "required_if_all_accepted": {
+      "hot_send_per_second": 36.0,
+      "hot_delivery_obligations_per_second": 14400.0,
+      "normal_send_per_second": 9.0,
+      "normal_delivery_obligations_per_second": 29.032258064516128
+    },
+    "constrained_slow_interval": {
+      "start_elapsed": 42.13254737854004,
+      "end_elapsed": 297.00785064697266,
+      "seconds": 254.86955834960938,
+      "recipients": 100,
+      "actual_hot_commits_per_second": 34.78249837840466,
+      "actual_slow_receipts_per_recipient_second": 23.681408007623876,
+      "predicted_backlog_growth_per_second": 1110.1090370780785,
+      "observed_backlog_growth_per_second": 1110.1090370780785,
+      "scope": "Same observed interval, independent5s DB/client reports with skew; includes repeated disconnect/reconnect time, not atomic instantaneous rates or durable commits."
+    },
+    "room_classes": {
+      "hot-room": {
+        "recipients": 400,
+        "attempts": 21600,
+        "stored": 20838,
+        "rejected": 762,
+        "unknown": 0,
+        "received_during_measurement": 8346974,
+        "final_missing": 0,
+        "reasons": {
+          "ROOM_BUSY": 761,
+          "ROOM_RELEASE_RACE": 1,
+          "STRIPE_COLLISION": 0,
+          "WRITE_BUDGET": 0,
+          "READ_BUDGET": 0,
+          "OUTBOX_FULL": 0,
+          "BUSY": 0
+        }
+      },
+      "normal-room": {
+        "recipients": 100,
+        "attempts": 5400,
+        "stored": 5400,
+        "rejected": 0,
+        "unknown": 0,
+        "received_during_measurement": 17427,
+        "final_missing": 0,
+        "reasons": {
+          "ROOM_BUSY": 0,
+          "ROOM_RELEASE_RACE": 0,
+          "STRIPE_COLLISION": 0,
+          "WRITE_BUDGET": 0,
+          "READ_BUDGET": 0,
+          "OUTBOX_FULL": 0,
+          "BUSY": 0
+        }
+      }
+    },
+    "timeline": [
+      {
+        "elapsed": 0.0,
+        "at": 1793432722533.5613,
+        "reported": 0,
+        "max_report_age_ms": 0,
+        "hot": {
+          "stored_heads": 0,
+          "received": 0,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 0,
+          "received": 0,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 0,
+          "received": 0,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 0,
+          "received": 0,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 5.251225233078003,
+        "at": 1793432727770.7424,
+        "reported": 500,
+        "max_report_age_ms": 35.742431640625,
+        "hot": {
+          "stored_heads": 0,
+          "received": 0,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 1,
+          "received": 0,
+          "backlog": 4,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 0,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 0,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 10.539106369018555,
+        "at": 1793432733051.9592,
+        "reported": 500,
+        "max_report_age_ms": 316.959228515625,
+        "hot": {
+          "stored_heads": 186,
+          "received": 64174,
+          "backlog": 10226,
+          "queued": 1019
+        },
+        "normal": {
+          "stored_heads": 48,
+          "received": 149,
+          "backlog": 9,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 11791,
+          "backlog": 6809
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 52383,
+          "backlog": 3417
+        }
+      },
+      {
+        "elapsed": 15.79954743385315,
+        "at": 1793432738309.4087,
+        "reported": 500,
+        "max_report_age_ms": 573.40869140625,
+        "hot": {
+          "stored_heads": 376,
+          "received": 130434,
+          "backlog": 19966,
+          "queued": 1351
+        },
+        "normal": {
+          "stored_heads": 97,
+          "received": 291,
+          "backlog": 27,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 23989,
+          "backlog": 13611
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 106445,
+          "backlog": 6355
+        }
+      },
+      {
+        "elapsed": 21.043708086013794,
+        "at": 1793432743551.6716,
+        "reported": 500,
+        "max_report_age_ms": 815.671630859375,
+        "hot": {
+          "stored_heads": 564,
+          "received": 196398,
+          "backlog": 29202,
+          "queued": 1339
+        },
+        "normal": {
+          "stored_heads": 144,
+          "received": 446,
+          "backlog": 21,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 36198,
+          "backlog": 20202
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 160200,
+          "backlog": 9000
+        }
+      },
+      {
+        "elapsed": 26.30561089515686,
+        "at": 1793432748826.4639,
+        "reported": 500,
+        "max_report_age_ms": 1090.4638671875,
+        "hot": {
+          "stored_heads": 753,
+          "received": 262630,
+          "backlog": 38570,
+          "queued": 1307
+        },
+        "normal": {
+          "stored_heads": 191,
+          "received": 588,
+          "backlog": 34,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 48430,
+          "backlog": 26870
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 214200,
+          "backlog": 11700
+        }
+      },
+      {
+        "elapsed": 31.57959246635437,
+        "at": 1793432754147.8772,
+        "reported": 500,
+        "max_report_age_ms": 1410.877197265625,
+        "hot": {
+          "stored_heads": 933,
+          "received": 327830,
+          "backlog": 45370,
+          "queued": 1328
+        },
+        "normal": {
+          "stored_heads": 239,
+          "received": 734,
+          "backlog": 39,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 60530,
+          "backlog": 32770
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 267300,
+          "backlog": 12600
+        }
+      },
+      {
+        "elapsed": 36.89510416984558,
+        "at": 1793432759424.2917,
+        "reported": 500,
+        "max_report_age_ms": 1687.291748046875,
+        "hot": {
+          "stored_heads": 1119,
+          "received": 389555,
+          "backlog": 58045,
+          "queued": 1440
+        },
+        "normal": {
+          "stored_heads": 287,
+          "received": 878,
+          "backlog": 53,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 71906,
+          "backlog": 39994
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 317649,
+          "backlog": 18051
+        }
+      },
+      {
+        "elapsed": 42.13254737854004,
+        "at": 1793432764655.7366,
+        "reported": 500,
+        "max_report_age_ms": 1909.736572265625,
+        "hot": {
+          "stored_heads": 1302,
+          "received": 453659,
+          "backlog": 67141,
+          "queued": 1359
+        },
+        "normal": {
+          "stored_heads": 334,
+          "received": 1027,
+          "backlog": 52,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 83867,
+          "backlog": 46333
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 369792,
+          "backlog": 20808
+        }
+      },
+      {
+        "elapsed": 47.44293975830078,
+        "at": 1793432769961.593,
+        "reported": 500,
+        "max_report_age_ms": 2213.593017578125,
+        "hot": {
+          "stored_heads": 1484,
+          "received": 518014,
+          "backlog": 75586,
+          "queued": 1424
+        },
+        "normal": {
+          "stored_heads": 382,
+          "received": 1169,
+          "backlog": 68,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 95895,
+          "backlog": 52505
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 422119,
+          "backlog": 23081
+        }
+      },
+      {
+        "elapsed": 52.71224284172058,
+        "at": 1793432775224.5366,
+        "reported": 500,
+        "max_report_age_ms": 2476.53662109375,
+        "hot": {
+          "stored_heads": 1667,
+          "received": 581815,
+          "backlog": 84985,
+          "queued": 1402
+        },
+        "normal": {
+          "stored_heads": 429,
+          "received": 1318,
+          "backlog": 67,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 107934,
+          "backlog": 58766
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 473881,
+          "backlog": 26219
+        }
+      },
+      {
+        "elapsed": 58.026378870010376,
+        "at": 1793432780560.1123,
+        "reported": 500,
+        "max_report_age_ms": 2812.1123046875,
+        "hot": {
+          "stored_heads": 1853,
+          "received": 646934,
+          "backlog": 94266,
+          "queued": 1393
+        },
+        "normal": {
+          "stored_heads": 477,
+          "received": 1460,
+          "backlog": 83,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 119943,
+          "backlog": 65357
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 526991,
+          "backlog": 28909
+        }
+      },
+      {
+        "elapsed": 63.33687400817871,
+        "at": 1793432785869.2393,
+        "reported": 500,
+        "max_report_age_ms": 3120.2392578125,
+        "hot": {
+          "stored_heads": 2031,
+          "received": 710874,
+          "backlog": 101526,
+          "queued": 1155
+        },
+        "normal": {
+          "stored_heads": 525,
+          "received": 1602,
+          "backlog": 92,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 131874,
+          "backlog": 71226
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 579000,
+          "backlog": 30300
+        }
+      },
+      {
+        "elapsed": 68.61474514007568,
+        "at": 1793432791188.925,
+        "reported": 500,
+        "max_report_age_ms": 3432.925048828125,
+        "hot": {
+          "stored_heads": 2215,
+          "received": 771663,
+          "backlog": 114337,
+          "queued": 1397
+        },
+        "normal": {
+          "stored_heads": 572,
+          "received": 1751,
+          "backlog": 98,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 142800,
+          "backlog": 78700
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 628863,
+          "backlog": 35637
+        }
+      },
+      {
+        "elapsed": 73.97697472572327,
+        "at": 1793432796497.4636,
+        "reported": 500,
+        "max_report_age_ms": 3738.463623046875,
+        "hot": {
+          "stored_heads": 2399,
+          "received": 835501,
+          "backlog": 124099,
+          "queued": 1416
+        },
+        "normal": {
+          "stored_heads": 620,
+          "received": 1894,
+          "backlog": 108,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 154574,
+          "backlog": 85326
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 680927,
+          "backlog": 38773
+        }
+      },
+      {
+        "elapsed": 79.27743005752563,
+        "at": 1793432801826.6997,
+        "reported": 500,
+        "max_report_age_ms": 4065.69970703125,
+        "hot": {
+          "stored_heads": 2587,
+          "received": 899719,
+          "backlog": 135081,
+          "queued": 1429
+        },
+        "normal": {
+          "stored_heads": 668,
+          "received": 2043,
+          "backlog": 115,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 166499,
+          "backlog": 92201
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 733220,
+          "backlog": 42880
+        }
+      },
+      {
+        "elapsed": 84.60457611083984,
+        "at": 1793432807119.982,
+        "reported": 500,
+        "max_report_age_ms": 4349.98193359375,
+        "hot": {
+          "stored_heads": 2768,
+          "received": 964233,
+          "backlog": 142967,
+          "queued": 1384
+        },
+        "normal": {
+          "stored_heads": 716,
+          "received": 2184,
+          "backlog": 130,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 178463,
+          "backlog": 98337
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 785770,
+          "backlog": 44630
+        }
+      },
+      {
+        "elapsed": 89.99000072479248,
+        "at": 1793432812557.1401,
+        "reported": 500,
+        "max_report_age_ms": 4780.14013671875,
+        "hot": {
+          "stored_heads": 2952,
+          "received": 1027733,
+          "backlog": 153067,
+          "queued": 1361
+        },
+        "normal": {
+          "stored_heads": 765,
+          "received": 2333,
+          "backlog": 137,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 190416,
+          "backlog": 104784
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 837317,
+          "backlog": 48283
+        }
+      },
+      {
+        "elapsed": 95.4511399269104,
+        "at": 1793432817994.1196,
+        "reported": 500,
+        "max_report_age_ms": 213.11962890625,
+        "hot": {
+          "stored_heads": 3131,
+          "received": 1150194,
+          "backlog": 102206,
+          "queued": 1439
+        },
+        "normal": {
+          "stored_heads": 814,
+          "received": 2625,
+          "backlog": 6,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 212988,
+          "backlog": 100112
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 937206,
+          "backlog": 2094
+        }
+      },
+      {
+        "elapsed": 100.79287505149841,
+        "at": 1793432823326.6062,
+        "reported": 500,
+        "max_report_age_ms": 544.606201171875,
+        "hot": {
+          "stored_heads": 3311,
+          "received": 1212575,
+          "backlog": 111825,
+          "queued": 1439
+        },
+        "normal": {
+          "stored_heads": 862,
+          "received": 2767,
+          "backlog": 15,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 224758,
+          "backlog": 106342
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 987817,
+          "backlog": 5483
+        }
+      },
+      {
+        "elapsed": 106.10373640060425,
+        "at": 1793432828643.269,
+        "reported": 500,
+        "max_report_age_ms": 861.26904296875,
+        "hot": {
+          "stored_heads": 3494,
+          "received": 1275743,
+          "backlog": 121857,
+          "queued": 1390
+        },
+        "normal": {
+          "stored_heads": 910,
+          "received": 2914,
+          "backlog": 26,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 236705,
+          "backlog": 112695
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1039038,
+          "backlog": 9162
+        }
+      },
+      {
+        "elapsed": 111.39681720733643,
+        "at": 1793432833923.2998,
+        "reported": 500,
+        "max_report_age_ms": 1140.2998046875,
+        "hot": {
+          "stored_heads": 3674,
+          "received": 1338615,
+          "backlog": 130985,
+          "queued": 1387
+        },
+        "normal": {
+          "stored_heads": 957,
+          "received": 3058,
+          "backlog": 30,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 248528,
+          "backlog": 118872
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1090087,
+          "backlog": 12113
+        }
+      },
+      {
+        "elapsed": 116.66909527778625,
+        "at": 1793432839238.564,
+        "reported": 500,
+        "max_report_age_ms": 1454.56396484375,
+        "hot": {
+          "stored_heads": 3854,
+          "received": 1401562,
+          "backlog": 140038,
+          "queued": 1371
+        },
+        "normal": {
+          "stored_heads": 1005,
+          "received": 3202,
+          "backlog": 44,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 260289,
+          "backlog": 125111
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1141273,
+          "backlog": 14927
+        }
+      },
+      {
+        "elapsed": 121.98546695709229,
+        "at": 1793432844519.8223,
+        "reported": 500,
+        "max_report_age_ms": 1734.822265625,
+        "hot": {
+          "stored_heads": 4026,
+          "received": 1463668,
+          "backlog": 146732,
+          "queued": 1241
+        },
+        "normal": {
+          "stored_heads": 1053,
+          "received": 3346,
+          "backlog": 52,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 272118,
+          "backlog": 130482
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1191550,
+          "backlog": 16250
+        }
+      },
+      {
+        "elapsed": 127.35380673408508,
+        "at": 1793432849926.6025,
+        "reported": 500,
+        "max_report_age_ms": 2141.6025390625,
+        "hot": {
+          "stored_heads": 4213,
+          "received": 1524605,
+          "backlog": 160595,
+          "queued": 1381
+        },
+        "normal": {
+          "stored_heads": 1101,
+          "received": 3491,
+          "backlog": 64,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 282919,
+          "backlog": 138381
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1241686,
+          "backlog": 22214
+        }
+      },
+      {
+        "elapsed": 132.72397112846375,
+        "at": 1793432855242.1428,
+        "reported": 500,
+        "max_report_age_ms": 2457.142822265625,
+        "hot": {
+          "stored_heads": 4394,
+          "received": 1587619,
+          "backlog": 169981,
+          "queued": 1405
+        },
+        "normal": {
+          "stored_heads": 1149,
+          "received": 3641,
+          "backlog": 69,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 294609,
+          "backlog": 144791
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1293010,
+          "backlog": 25190
+        }
+      },
+      {
+        "elapsed": 138.06268978118896,
+        "at": 1793432860610.587,
+        "reported": 500,
+        "max_report_age_ms": 2824.5869140625,
+        "hot": {
+          "stored_heads": 4580,
+          "received": 1650809,
+          "backlog": 181191,
+          "queued": 1351
+        },
+        "normal": {
+          "stored_heads": 1197,
+          "received": 3782,
+          "backlog": 82,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 306366,
+          "backlog": 151634
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1344443,
+          "backlog": 29557
+        }
+      },
+      {
+        "elapsed": 143.40337777137756,
+        "at": 1793432865936.7454,
+        "reported": 500,
+        "max_report_age_ms": 3149.745361328125,
+        "hot": {
+          "stored_heads": 4758,
+          "received": 1713891,
+          "backlog": 189309,
+          "queued": 1388
+        },
+        "normal": {
+          "stored_heads": 1245,
+          "received": 3932,
+          "backlog": 90,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 318156,
+          "backlog": 157644
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1395735,
+          "backlog": 31665
+        }
+      },
+      {
+        "elapsed": 148.75912284851074,
+        "at": 1793432871339.2834,
+        "reported": 500,
+        "max_report_age_ms": 3538.283447265625,
+        "hot": {
+          "stored_heads": 4943,
+          "received": 1776548,
+          "backlog": 200652,
+          "queued": 1359
+        },
+        "normal": {
+          "stored_heads": 1294,
+          "received": 4072,
+          "backlog": 104,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 330010,
+          "backlog": 164290
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1446538,
+          "backlog": 36362
+        }
+      },
+      {
+        "elapsed": 154.19607639312744,
+        "at": 1793432876757.9824,
+        "reported": 500,
+        "max_report_age_ms": 3953.982421875,
+        "hot": {
+          "stored_heads": 5117,
+          "received": 1838006,
+          "backlog": 208794,
+          "queued": 1216
+        },
+        "normal": {
+          "stored_heads": 1343,
+          "received": 4221,
+          "backlog": 116,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 341437,
+          "backlog": 170263
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1496569,
+          "backlog": 38531
+        }
+      },
+      {
+        "elapsed": 159.49887490272522,
+        "at": 1793432882008.9585,
+        "reported": 500,
+        "max_report_age_ms": 4204.95849609375,
+        "hot": {
+          "stored_heads": 5299,
+          "received": 1898248,
+          "backlog": 221352,
+          "queued": 1375
+        },
+        "normal": {
+          "stored_heads": 1390,
+          "received": 4364,
+          "backlog": 121,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 352311,
+          "backlog": 177589
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1545937,
+          "backlog": 43763
+        }
+      },
+      {
+        "elapsed": 164.73789596557617,
+        "at": 1793432887254.2427,
+        "reported": 500,
+        "max_report_age_ms": 4448.24267578125,
+        "hot": {
+          "stored_heads": 5486,
+          "received": 1962401,
+          "backlog": 231999,
+          "queued": 1415
+        },
+        "normal": {
+          "stored_heads": 1437,
+          "received": 4511,
+          "backlog": 129,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 364232,
+          "backlog": 184368
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1598169,
+          "backlog": 47631
+        }
+      },
+      {
+        "elapsed": 170.01135921478271,
+        "at": 1793432892523.8901,
+        "reported": 500,
+        "max_report_age_ms": 4708.89013671875,
+        "hot": {
+          "stored_heads": 5673,
+          "received": 2028098,
+          "backlog": 241102,
+          "queued": 1384
+        },
+        "normal": {
+          "stored_heads": 1485,
+          "received": 4655,
+          "backlog": 136,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 376393,
+          "backlog": 190907
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1651705,
+          "backlog": 50195
+        }
+      },
+      {
+        "elapsed": 175.23648691177368,
+        "at": 1793432897750.6118,
+        "reported": 500,
+        "max_report_age_ms": 4927.61181640625,
+        "hot": {
+          "stored_heads": 5860,
+          "received": 2093180,
+          "backlog": 250820,
+          "queued": 1384
+        },
+        "normal": {
+          "stored_heads": 1532,
+          "received": 4798,
+          "backlog": 148,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 388537,
+          "backlog": 197463
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1704643,
+          "backlog": 53357
+        }
+      },
+      {
+        "elapsed": 180.47226190567017,
+        "at": 1793432902995.6394,
+        "reported": 500,
+        "max_report_age_ms": 169.639404296875,
+        "hot": {
+          "stored_heads": 6049,
+          "received": 2224831,
+          "backlog": 194769,
+          "queued": 1207
+        },
+        "normal": {
+          "stored_heads": 1579,
+          "received": 5087,
+          "backlog": 7,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 412883,
+          "backlog": 192017
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1811948,
+          "backlog": 2752
+        }
+      },
+      {
+        "elapsed": 185.7968785762787,
+        "at": 1793432908317.928,
+        "reported": 500,
+        "max_report_age_ms": 490.927978515625,
+        "hot": {
+          "stored_heads": 6237,
+          "received": 2290208,
+          "backlog": 204592,
+          "queued": 1427
+        },
+        "normal": {
+          "stored_heads": 1627,
+          "received": 5239,
+          "backlog": 13,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 424476,
+          "backlog": 199224
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1865732,
+          "backlog": 5368
+        }
+      },
+      {
+        "elapsed": 191.09358620643616,
+        "at": 1793432913633.2112,
+        "reported": 500,
+        "max_report_age_ms": 806.211181640625,
+        "hot": {
+          "stored_heads": 6424,
+          "received": 2355533,
+          "backlog": 214067,
+          "queued": 1432
+        },
+        "normal": {
+          "stored_heads": 1674,
+          "received": 5381,
+          "backlog": 21,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 436520,
+          "backlog": 205880
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1919013,
+          "backlog": 8187
+        }
+      },
+      {
+        "elapsed": 196.33276343345642,
+        "at": 1793432918854.0176,
+        "reported": 500,
+        "max_report_age_ms": 1026.017578125,
+        "hot": {
+          "stored_heads": 6612,
+          "received": 2421269,
+          "backlog": 223531,
+          "queued": 1407
+        },
+        "normal": {
+          "stored_heads": 1722,
+          "received": 5529,
+          "backlog": 29,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 448600,
+          "backlog": 212600
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 1972669,
+          "backlog": 10931
+        }
+      },
+      {
+        "elapsed": 201.6349561214447,
+        "at": 1793432924166.7463,
+        "reported": 500,
+        "max_report_age_ms": 1338.746337890625,
+        "hot": {
+          "stored_heads": 6803,
+          "received": 2486990,
+          "backlog": 234210,
+          "queued": 1322
+        },
+        "normal": {
+          "stored_heads": 1769,
+          "received": 5670,
+          "backlog": 40,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 460730,
+          "backlog": 219570
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2026260,
+          "backlog": 14640
+        }
+      },
+      {
+        "elapsed": 206.96688532829285,
+        "at": 1793432929521.2874,
+        "reported": 500,
+        "max_report_age_ms": 1691.287353515625,
+        "hot": {
+          "stored_heads": 6995,
+          "received": 2553101,
+          "backlog": 244899,
+          "queued": 1387
+        },
+        "normal": {
+          "stored_heads": 1818,
+          "received": 5821,
+          "backlog": 46,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 472675,
+          "backlog": 226825
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2080426,
+          "backlog": 18074
+        }
+      },
+      {
+        "elapsed": 212.30411291122437,
+        "at": 1793432934835.4033,
+        "reported": 500,
+        "max_report_age_ms": 2005.4033203125,
+        "hot": {
+          "stored_heads": 7174,
+          "received": 2617235,
+          "backlog": 252365,
+          "queued": 1185
+        },
+        "normal": {
+          "stored_heads": 1865,
+          "received": 5959,
+          "backlog": 63,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 484706,
+          "backlog": 232694
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2132529,
+          "backlog": 19671
+        }
+      },
+      {
+        "elapsed": 217.64260172843933,
+        "at": 1793432940170.3582,
+        "reported": 500,
+        "max_report_age_ms": 2340.358154296875,
+        "hot": {
+          "stored_heads": 7364,
+          "received": 2680200,
+          "backlog": 265400,
+          "queued": 1386
+        },
+        "normal": {
+          "stored_heads": 1913,
+          "received": 6106,
+          "backlog": 67,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 495904,
+          "backlog": 240496
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2184296,
+          "backlog": 24904
+        }
+      },
+      {
+        "elapsed": 222.92043685913086,
+        "at": 1793432945475.3076,
+        "reported": 500,
+        "max_report_age_ms": 2644.3076171875,
+        "hot": {
+          "stored_heads": 7553,
+          "received": 2745316,
+          "backlog": 275884,
+          "queued": 1397
+        },
+        "normal": {
+          "stored_heads": 1961,
+          "received": 6253,
+          "backlog": 78,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 507901,
+          "backlog": 247399
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2237415,
+          "backlog": 28485
+        }
+      },
+      {
+        "elapsed": 228.21468210220337,
+        "at": 1793432950770.136,
+        "reported": 500,
+        "max_report_age_ms": 2939.135986328125,
+        "hot": {
+          "stored_heads": 7741,
+          "received": 2811096,
+          "backlog": 285304,
+          "queued": 1330
+        },
+        "normal": {
+          "stored_heads": 2009,
+          "received": 6394,
+          "backlog": 88,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 520059,
+          "backlog": 254041
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2291037,
+          "backlog": 31263
+        }
+      },
+      {
+        "elapsed": 233.5272786617279,
+        "at": 1793432956058.9722,
+        "reported": 500,
+        "max_report_age_ms": 3227.97216796875,
+        "hot": {
+          "stored_heads": 7928,
+          "received": 2876293,
+          "backlog": 294907,
+          "queued": 1375
+        },
+        "normal": {
+          "stored_heads": 2057,
+          "received": 6544,
+          "backlog": 96,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 532122,
+          "backlog": 260678
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2344171,
+          "backlog": 34229
+        }
+      },
+      {
+        "elapsed": 238.75390195846558,
+        "at": 1793432961272.573,
+        "reported": 500,
+        "max_report_age_ms": 3440.572998046875,
+        "hot": {
+          "stored_heads": 8111,
+          "received": 2941157,
+          "backlog": 303243,
+          "queued": 1387
+        },
+        "normal": {
+          "stored_heads": 2103,
+          "received": 6687,
+          "backlog": 98,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 544189,
+          "backlog": 266911
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2396968,
+          "backlog": 36332
+        }
+      },
+      {
+        "elapsed": 244.10938358306885,
+        "at": 1793432966642.4592,
+        "reported": 500,
+        "max_report_age_ms": 3809.459228515625,
+        "hot": {
+          "stored_heads": 8293,
+          "received": 3004873,
+          "backlog": 312327,
+          "queued": 1250
+        },
+        "normal": {
+          "stored_heads": 2152,
+          "received": 6833,
+          "backlog": 113,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 556242,
+          "backlog": 273058
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2448631,
+          "backlog": 39269
+        }
+      },
+      {
+        "elapsed": 249.40149426460266,
+        "at": 1793432971929.0156,
+        "reported": 500,
+        "max_report_age_ms": 4095.015625,
+        "hot": {
+          "stored_heads": 8479,
+          "received": 3068080,
+          "backlog": 323520,
+          "queued": 1449
+        },
+        "normal": {
+          "stored_heads": 2199,
+          "received": 6976,
+          "backlog": 118,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 567777,
+          "backlog": 280123
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2500303,
+          "backlog": 43397
+        }
+      },
+      {
+        "elapsed": 254.69329118728638,
+        "at": 1793432977211.19,
+        "reported": 500,
+        "max_report_age_ms": 4376.18994140625,
+        "hot": {
+          "stored_heads": 8667,
+          "received": 3133093,
+          "backlog": 333707,
+          "queued": 1363
+        },
+        "normal": {
+          "stored_heads": 2247,
+          "received": 7127,
+          "backlog": 125,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 579660,
+          "backlog": 287040
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2553433,
+          "backlog": 46667
+        }
+      },
+      {
+        "elapsed": 259.9910478591919,
+        "at": 1793432982547.8953,
+        "reported": 500,
+        "max_report_age_ms": 4712.895263671875,
+        "hot": {
+          "stored_heads": 8857,
+          "received": 3198649,
+          "backlog": 344151,
+          "queued": 1400
+        },
+        "normal": {
+          "stored_heads": 2295,
+          "received": 7267,
+          "backlog": 139,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 591673,
+          "backlog": 294027
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2606976,
+          "backlog": 50124
+        }
+      },
+      {
+        "elapsed": 265.271999835968,
+        "at": 1793432987813.9575,
+        "reported": 500,
+        "max_report_age_ms": 4976.95751953125,
+        "hot": {
+          "stored_heads": 9043,
+          "received": 3264142,
+          "backlog": 353058,
+          "queued": 1368
+        },
+        "normal": {
+          "stored_heads": 2342,
+          "received": 7416,
+          "backlog": 142,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 603708,
+          "backlog": 300592
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2660434,
+          "backlog": 52466
+        }
+      },
+      {
+        "elapsed": 270.5369083881378,
+        "at": 1793432993070.1848,
+        "reported": 500,
+        "max_report_age_ms": 227.184814453125,
+        "hot": {
+          "stored_heads": 9230,
+          "received": 3393548,
+          "backlog": 298452,
+          "queued": 1179
+        },
+        "normal": {
+          "stored_heads": 2390,
+          "received": 7700,
+          "backlog": 14,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 627839,
+          "backlog": 295161
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2765709,
+          "backlog": 3291
+        }
+      },
+      {
+        "elapsed": 275.82638573646545,
+        "at": 1793432998353.3547,
+        "reported": 500,
+        "max_report_age_ms": 510.354736328125,
+        "hot": {
+          "stored_heads": 9416,
+          "received": 3458651,
+          "backlog": 307749,
+          "queued": 1361
+        },
+        "normal": {
+          "stored_heads": 2437,
+          "received": 7851,
+          "backlog": 13,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 639265,
+          "backlog": 302335
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2819386,
+          "backlog": 5414
+        }
+      },
+      {
+        "elapsed": 281.1282832622528,
+        "at": 1793433003656.4558,
+        "reported": 500,
+        "max_report_age_ms": 805.455810546875,
+        "hot": {
+          "stored_heads": 9602,
+          "received": 3523290,
+          "backlog": 317510,
+          "queued": 1366
+        },
+        "normal": {
+          "stored_heads": 2485,
+          "received": 7991,
+          "backlog": 31,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 651179,
+          "backlog": 309021
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2872111,
+          "backlog": 8489
+        }
+      },
+      {
+        "elapsed": 286.4544630050659,
+        "at": 1793433009006.7373,
+        "reported": 500,
+        "max_report_age_ms": 1153.7373046875,
+        "hot": {
+          "stored_heads": 9792,
+          "received": 3587929,
+          "backlog": 328871,
+          "queued": 1413
+        },
+        "normal": {
+          "stored_heads": 2533,
+          "received": 8143,
+          "backlog": 30,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 663195,
+          "backlog": 316005
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2924734,
+          "backlog": 12866
+        }
+      },
+      {
+        "elapsed": 291.75343012809753,
+        "at": 1793433014271.1538,
+        "reported": 500,
+        "max_report_age_ms": 1418.15380859375,
+        "hot": {
+          "stored_heads": 9977,
+          "received": 3653110,
+          "backlog": 337690,
+          "queued": 1421
+        },
+        "normal": {
+          "stored_heads": 2580,
+          "received": 8285,
+          "backlog": 43,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 675280,
+          "backlog": 322420
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 2977830,
+          "backlog": 15270
+        }
+      },
+      {
+        "elapsed": 297.00785064697266,
+        "at": 1793433019525.295,
+        "reported": 500,
+        "max_report_age_ms": 1672.294921875,
+        "hot": {
+          "stored_heads": 10167,
+          "received": 3719517,
+          "backlog": 347283,
+          "queued": 1389
+        },
+        "normal": {
+          "stored_heads": 2628,
+          "received": 8433,
+          "backlog": 46,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 687434,
+          "backlog": 329266
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3032083,
+          "backlog": 18017
+        }
+      },
+      {
+        "elapsed": 302.33725357055664,
+        "at": 1793433024880.5593,
+        "reported": 500,
+        "max_report_age_ms": 2027.559326171875,
+        "hot": {
+          "stored_heads": 10354,
+          "received": 3784049,
+          "backlog": 357551,
+          "queued": 1106
+        },
+        "normal": {
+          "stored_heads": 2676,
+          "received": 8571,
+          "backlog": 66,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 699478,
+          "backlog": 335922
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3084571,
+          "backlog": 21629
+        }
+      },
+      {
+        "elapsed": 307.7133467197418,
+        "at": 1793433030234.0947,
+        "reported": 500,
+        "max_report_age_ms": 2380.0947265625,
+        "hot": {
+          "stored_heads": 10543,
+          "received": 3848627,
+          "backlog": 368573,
+          "queued": 1444
+        },
+        "normal": {
+          "stored_heads": 2724,
+          "received": 8725,
+          "backlog": 63,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 710950,
+          "backlog": 343350
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3137677,
+          "backlog": 25223
+        }
+      },
+      {
+        "elapsed": 313.0042653083801,
+        "at": 1793433035533.1177,
+        "reported": 500,
+        "max_report_age_ms": 2678.11767578125,
+        "hot": {
+          "stored_heads": 10731,
+          "received": 3913263,
+          "backlog": 379137,
+          "queued": 1415
+        },
+        "normal": {
+          "stored_heads": 2772,
+          "received": 8864,
+          "backlog": 82,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 722917,
+          "backlog": 350183
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3190346,
+          "backlog": 28954
+        }
+      },
+      {
+        "elapsed": 318.45681715011597,
+        "at": 1793433041064.3809,
+        "reported": 500,
+        "max_report_age_ms": 3193.380859375,
+        "hot": {
+          "stored_heads": 10899,
+          "received": 3985976,
+          "backlog": 373624,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 2821,
+          "received": 9013,
+          "backlog": 89,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 741767,
+          "backlog": 348133
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3244209,
+          "backlog": 25491
+        }
+      },
+      {
+        "elapsed": 323.9484522342682,
+        "at": 1793433046512.9275,
+        "reported": 500,
+        "max_report_age_ms": 3611.927490234375,
+        "hot": {
+          "stored_heads": 11037,
+          "received": 4101066,
+          "backlog": 313734,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 2870,
+          "received": 9159,
+          "backlog": 102,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 817900,
+          "backlog": 285800
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3283166,
+          "backlog": 27934
+        }
+      },
+      {
+        "elapsed": 329.5055055618286,
+        "at": 1793433052065.0525,
+        "reported": 500,
+        "max_report_age_ms": 4162.052490234375,
+        "hot": {
+          "stored_heads": 11177,
+          "received": 4210005,
+          "backlog": 260795,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 2920,
+          "received": 9303,
+          "backlog": 122,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 889351,
+          "backlog": 228349
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3320654,
+          "backlog": 32446
+        }
+      },
+      {
+        "elapsed": 335.1772072315216,
+        "at": 1793433057727.1191,
+        "reported": 500,
+        "max_report_age_ms": 4818.119140625,
+        "hot": {
+          "stored_heads": 11326,
+          "received": 4316508,
+          "backlog": 213892,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 2971,
+          "received": 9448,
+          "backlog": 137,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 957445,
+          "backlog": 175155
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3359063,
+          "backlog": 38737
+        }
+      },
+      {
+        "elapsed": 340.681529045105,
+        "at": 1793433063238.3586,
+        "reported": 500,
+        "max_report_age_ms": 4826.358642578125,
+        "hot": {
+          "stored_heads": 11468,
+          "received": 4479614,
+          "backlog": 107586,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3021,
+          "received": 9724,
+          "backlog": 25,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1041950,
+          "backlog": 104850
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3437664,
+          "backlog": 2736
+        }
+      },
+      {
+        "elapsed": 346.1525044441223,
+        "at": 1793433068699.8074,
+        "reported": 500,
+        "max_report_age_ms": 787.807373046875,
+        "hot": {
+          "stored_heads": 11616,
+          "received": 4621772,
+          "backlog": 24628,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3069,
+          "received": 9882,
+          "backlog": 20,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1143116,
+          "backlog": 18484
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3478656,
+          "backlog": 6144
+        }
+      },
+      {
+        "elapsed": 351.54231238365173,
+        "at": 1793433074089.217,
+        "reported": 500,
+        "max_report_age_ms": 1177.217041015625,
+        "hot": {
+          "stored_heads": 11797,
+          "received": 4703532,
+          "backlog": 15268,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3119,
+          "received": 10034,
+          "backlog": 30,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1176807,
+          "backlog": 2893
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3526725,
+          "backlog": 12375
+        }
+      },
+      {
+        "elapsed": 356.82810163497925,
+        "at": 1793433079341.243,
+        "reported": 500,
+        "max_report_age_ms": 1427.242919921875,
+        "hot": {
+          "stored_heads": 11984,
+          "received": 4774479,
+          "backlog": 19121,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3166,
+          "received": 10173,
+          "backlog": 45,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1194536,
+          "backlog": 3864
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3579943,
+          "backlog": 15257
+        }
+      },
+      {
+        "elapsed": 362.0809030532837,
+        "at": 1793433084625.7883,
+        "reported": 500,
+        "max_report_age_ms": 1711.788330078125,
+        "hot": {
+          "stored_heads": 12169,
+          "received": 4844603,
+          "backlog": 22997,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3214,
+          "received": 10321,
+          "backlog": 49,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1211835,
+          "backlog": 5065
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3632768,
+          "backlog": 17932
+        }
+      },
+      {
+        "elapsed": 367.34995460510254,
+        "at": 1793433089863.3774,
+        "reported": 500,
+        "max_report_age_ms": 1948.37744140625,
+        "hot": {
+          "stored_heads": 12357,
+          "received": 4916194,
+          "backlog": 26606,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3261,
+          "received": 10468,
+          "backlog": 57,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1230023,
+          "backlog": 5677
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3686171,
+          "backlog": 20929
+        }
+      },
+      {
+        "elapsed": 372.62350273132324,
+        "at": 1793433095136.1074,
+        "reported": 500,
+        "max_report_age_ms": 2220.107421875,
+        "hot": {
+          "stored_heads": 12545,
+          "received": 4987727,
+          "backlog": 30273,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3308,
+          "received": 10612,
+          "backlog": 61,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1247912,
+          "backlog": 6588
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3739815,
+          "backlog": 23685
+        }
+      },
+      {
+        "elapsed": 377.8752489089966,
+        "at": 1793433100407.972,
+        "reported": 500,
+        "max_report_age_ms": 2488.971923828125,
+        "hot": {
+          "stored_heads": 12735,
+          "received": 5059895,
+          "backlog": 34105,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3356,
+          "received": 10762,
+          "backlog": 69,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1265900,
+          "backlog": 7600
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3793995,
+          "backlog": 26505
+        }
+      },
+      {
+        "elapsed": 383.13708782196045,
+        "at": 1793433105650.295,
+        "reported": 500,
+        "max_report_age_ms": 2725.294921875,
+        "hot": {
+          "stored_heads": 12923,
+          "received": 5131442,
+          "backlog": 37758,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3403,
+          "received": 10902,
+          "backlog": 77,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1283828,
+          "backlog": 8472
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3847614,
+          "backlog": 29286
+        }
+      },
+      {
+        "elapsed": 388.3584978580475,
+        "at": 1793433110881.1326,
+        "reported": 500,
+        "max_report_age_ms": 2955.132568359375,
+        "hot": {
+          "stored_heads": 13111,
+          "received": 5203093,
+          "backlog": 41307,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3450,
+          "received": 11050,
+          "backlog": 84,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1301739,
+          "backlog": 9361
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3901354,
+          "backlog": 31946
+        }
+      },
+      {
+        "elapsed": 393.6302967071533,
+        "at": 1793433116156.8296,
+        "reported": 500,
+        "max_report_age_ms": 3230.82958984375,
+        "hot": {
+          "stored_heads": 13295,
+          "received": 5272586,
+          "backlog": 45414,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3497,
+          "received": 11187,
+          "backlog": 95,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1318928,
+          "backlog": 10572
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 3953658,
+          "backlog": 34842
+        }
+      },
+      {
+        "elapsed": 398.8458089828491,
+        "at": 1793433121363.4001,
+        "reported": 500,
+        "max_report_age_ms": 3437.400146484375,
+        "hot": {
+          "stored_heads": 13481,
+          "received": 5344377,
+          "backlog": 48023,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3544,
+          "received": 11340,
+          "backlog": 97,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1337077,
+          "backlog": 11023
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4007300,
+          "backlog": 37000
+        }
+      },
+      {
+        "elapsed": 404.1028983592987,
+        "at": 1793433126614.2314,
+        "reported": 500,
+        "max_report_age_ms": 3687.2314453125,
+        "hot": {
+          "stored_heads": 13670,
+          "received": 5416500,
+          "backlog": 51500,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3592,
+          "received": 11481,
+          "backlog": 107,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1355076,
+          "backlog": 11924
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4061424,
+          "backlog": 39576
+        }
+      },
+      {
+        "elapsed": 409.3396565914154,
+        "at": 1793433131858.121,
+        "reported": 500,
+        "max_report_age_ms": 3931.12109375,
+        "hot": {
+          "stored_heads": 13856,
+          "received": 5488008,
+          "backlog": 54392,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3639,
+          "received": 11634,
+          "backlog": 109,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1372974,
+          "backlog": 12626
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4115034,
+          "backlog": 41766
+        }
+      },
+      {
+        "elapsed": 414.57589197158813,
+        "at": 1793433137085.9878,
+        "reported": 500,
+        "max_report_age_ms": 4158.98779296875,
+        "hot": {
+          "stored_heads": 14044,
+          "received": 5559751,
+          "backlog": 57849,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3686,
+          "received": 11772,
+          "backlog": 119,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1390891,
+          "backlog": 13509
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4168860,
+          "backlog": 44340
+        }
+      },
+      {
+        "elapsed": 419.7980902194977,
+        "at": 1793433142321.1523,
+        "reported": 500,
+        "max_report_age_ms": 4393.15234375,
+        "hot": {
+          "stored_heads": 14231,
+          "received": 5631437,
+          "backlog": 60963,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3733,
+          "received": 11925,
+          "backlog": 121,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1408843,
+          "backlog": 14257
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4222594,
+          "backlog": 46706
+        }
+      },
+      {
+        "elapsed": 425.05743956565857,
+        "at": 1793433147570.671,
+        "reported": 500,
+        "max_report_age_ms": 4641.6708984375,
+        "hot": {
+          "stored_heads": 14417,
+          "received": 5700952,
+          "backlog": 65848,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3780,
+          "received": 12064,
+          "backlog": 130,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1426203,
+          "backlog": 15497
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4274749,
+          "backlog": 50351
+        }
+      },
+      {
+        "elapsed": 430.3565511703491,
+        "at": 1793433152890.0718,
+        "reported": 500,
+        "max_report_age_ms": 4961.07177734375,
+        "hot": {
+          "stored_heads": 14609,
+          "received": 5773630,
+          "backlog": 69970,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3828,
+          "received": 12208,
+          "backlog": 144,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1444410,
+          "backlog": 16490
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4329220,
+          "backlog": 53480
+        }
+      },
+      {
+        "elapsed": 435.5955991744995,
+        "at": 1793433158103.8772,
+        "reported": 500,
+        "max_report_age_ms": 4937.877197265625,
+        "hot": {
+          "stored_heads": 14796,
+          "received": 5903400,
+          "backlog": 15000,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3875,
+          "received": 12473,
+          "backlog": 29,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1466055,
+          "backlog": 13545
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4437345,
+          "backlog": 1455
+        }
+      },
+      {
+        "elapsed": 440.83284640312195,
+        "at": 1793433163357.6992,
+        "reported": 500,
+        "max_report_age_ms": 4962.69921875,
+        "hot": {
+          "stored_heads": 14985,
+          "received": 5978079,
+          "backlog": 15921,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3922,
+          "received": 12626,
+          "backlog": 29,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1486904,
+          "backlog": 11596
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4491175,
+          "backlog": 4325
+        }
+      },
+      {
+        "elapsed": 446.22661900520325,
+        "at": 1793433168809.8506,
+        "reported": 500,
+        "max_report_age_ms": 869.8505859375,
+        "hot": {
+          "stored_heads": 15178,
+          "received": 6060607,
+          "backlog": 10593,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 3971,
+          "received": 12788,
+          "backlog": 26,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1516075,
+          "backlog": 1725
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4544532,
+          "backlog": 8868
+        }
+      },
+      {
+        "elapsed": 451.61675000190735,
+        "at": 1793433174163.32,
+        "reported": 500,
+        "max_report_age_ms": 1223.320068359375,
+        "hot": {
+          "stored_heads": 15361,
+          "received": 6127567,
+          "backlog": 16833,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4019,
+          "received": 12933,
+          "backlog": 34,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1532761,
+          "backlog": 3339
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4594806,
+          "backlog": 13494
+        }
+      },
+      {
+        "elapsed": 456.988573551178,
+        "at": 1793433179529.7944,
+        "reported": 500,
+        "max_report_age_ms": 1588.79443359375,
+        "hot": {
+          "stored_heads": 15548,
+          "received": 6197865,
+          "backlog": 21335,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4068,
+          "received": 13078,
+          "backlog": 50,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1550512,
+          "backlog": 4288
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4647353,
+          "backlog": 17047
+        }
+      },
+      {
+        "elapsed": 462.2929961681366,
+        "at": 1793433184818.1125,
+        "reported": 500,
+        "max_report_age_ms": 1872.112548828125,
+        "hot": {
+          "stored_heads": 15735,
+          "received": 6269652,
+          "backlog": 24348,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4115,
+          "received": 13232,
+          "backlog": 44,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1568439,
+          "backlog": 5061
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4701213,
+          "backlog": 19287
+        }
+      },
+      {
+        "elapsed": 467.5030508041382,
+        "at": 1793433190016.9775,
+        "reported": 500,
+        "max_report_age_ms": 2070.9775390625,
+        "hot": {
+          "stored_heads": 15923,
+          "received": 6340928,
+          "backlog": 28272,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4162,
+          "received": 13371,
+          "backlog": 60,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1586245,
+          "backlog": 6055
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4754683,
+          "backlog": 22217
+        }
+      },
+      {
+        "elapsed": 472.74825525283813,
+        "at": 1793433195269.7505,
+        "reported": 500,
+        "max_report_age_ms": 2323.75048828125,
+        "hot": {
+          "stored_heads": 16111,
+          "received": 6412956,
+          "backlog": 31444,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4209,
+          "received": 13520,
+          "backlog": 59,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1604287,
+          "backlog": 6813
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4808669,
+          "backlog": 24631
+        }
+      },
+      {
+        "elapsed": 477.98277163505554,
+        "at": 1793433200493.6265,
+        "reported": 500,
+        "max_report_age_ms": 2546.62646484375,
+        "hot": {
+          "stored_heads": 16298,
+          "received": 6484178,
+          "backlog": 35022,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4256,
+          "received": 13666,
+          "backlog": 68,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1622063,
+          "backlog": 7737
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4862115,
+          "backlog": 27285
+        }
+      },
+      {
+        "elapsed": 483.23450350761414,
+        "at": 1793433205773.3193,
+        "reported": 500,
+        "max_report_age_ms": 2825.3193359375,
+        "hot": {
+          "stored_heads": 16484,
+          "received": 6553868,
+          "backlog": 39732,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4304,
+          "received": 13802,
+          "backlog": 83,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1639449,
+          "backlog": 8951
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4914419,
+          "backlog": 30781
+        }
+      },
+      {
+        "elapsed": 488.50008511543274,
+        "at": 1793433211022.2908,
+        "reported": 500,
+        "max_report_age_ms": 3074.290771484375,
+        "hot": {
+          "stored_heads": 16672,
+          "received": 6626966,
+          "backlog": 41834,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4351,
+          "received": 13957,
+          "backlog": 83,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1657744,
+          "backlog": 9456
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 4969222,
+          "backlog": 32378
+        }
+      },
+      {
+        "elapsed": 493.7662284374237,
+        "at": 1793433216294.927,
+        "reported": 500,
+        "max_report_age_ms": 3345.927001953125,
+        "hot": {
+          "stored_heads": 16862,
+          "received": 6698526,
+          "backlog": 46274,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4399,
+          "received": 14099,
+          "backlog": 92,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1675632,
+          "backlog": 10568
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5022894,
+          "backlog": 35706
+        }
+      },
+      {
+        "elapsed": 499.03138613700867,
+        "at": 1793433221555.4883,
+        "reported": 500,
+        "max_report_age_ms": 3605.48828125,
+        "hot": {
+          "stored_heads": 17052,
+          "received": 6770647,
+          "backlog": 50153,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4446,
+          "received": 14243,
+          "backlog": 103,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1693729,
+          "backlog": 11471
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5076918,
+          "backlog": 38682
+        }
+      },
+      {
+        "elapsed": 504.32586097717285,
+        "at": 1793433226840.7068,
+        "reported": 500,
+        "max_report_age_ms": 3890.706787109375,
+        "hot": {
+          "stored_heads": 17238,
+          "received": 6841733,
+          "backlog": 53467,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4494,
+          "received": 14385,
+          "backlog": 113,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1711466,
+          "backlog": 12334
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5130267,
+          "backlog": 41133
+        }
+      },
+      {
+        "elapsed": 509.55144715309143,
+        "at": 1793433232089.4563,
+        "reported": 500,
+        "max_report_age_ms": 4138.456298828125,
+        "hot": {
+          "stored_heads": 17424,
+          "received": 6913303,
+          "backlog": 56297,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4541,
+          "received": 14536,
+          "backlog": 116,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1729335,
+          "backlog": 13065
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5183968,
+          "backlog": 43232
+        }
+      },
+      {
+        "elapsed": 514.8714082241058,
+        "at": 1793433237385.5356,
+        "reported": 500,
+        "max_report_age_ms": 4434.53564453125,
+        "hot": {
+          "stored_heads": 17609,
+          "received": 6981464,
+          "backlog": 62136,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4589,
+          "received": 14672,
+          "backlog": 134,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1746307,
+          "backlog": 14593
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5235157,
+          "backlog": 47543
+        }
+      },
+      {
+        "elapsed": 520.1123259067535,
+        "at": 1793433242622.684,
+        "reported": 500,
+        "max_report_age_ms": 4671.68408203125,
+        "hot": {
+          "stored_heads": 17796,
+          "received": 7053568,
+          "backlog": 64832,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4636,
+          "received": 14829,
+          "backlog": 129,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1764411,
+          "backlog": 15189
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5289157,
+          "backlog": 49643
+        }
+      },
+      {
+        "elapsed": 525.3356540203094,
+        "at": 1793433247849.3728,
+        "reported": 500,
+        "max_report_age_ms": 4897.372802734375,
+        "hot": {
+          "stored_heads": 17984,
+          "received": 7125207,
+          "backlog": 68393,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4683,
+          "received": 14969,
+          "backlog": 141,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1782300,
+          "backlog": 16100
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5342907,
+          "backlog": 52293
+        }
+      },
+      {
+        "elapsed": 530.5570855140686,
+        "at": 1793433253085.7886,
+        "reported": 500,
+        "max_report_age_ms": 4870.78857421875,
+        "hot": {
+          "stored_heads": 18173,
+          "received": 7254896,
+          "backlog": 14304,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4730,
+          "received": 15233,
+          "backlog": 28,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1803949,
+          "backlog": 13351
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5450947,
+          "backlog": 953
+        }
+      },
+      {
+        "elapsed": 535.8039169311523,
+        "at": 1793433258312.6973,
+        "reported": 500,
+        "max_report_age_ms": 4786.697265625,
+        "hot": {
+          "stored_heads": 18361,
+          "received": 7329773,
+          "backlog": 14627,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4777,
+          "received": 15384,
+          "backlog": 30,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1824836,
+          "backlog": 11264
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5504937,
+          "backlog": 3363
+        }
+      },
+      {
+        "elapsed": 541.0325272083282,
+        "at": 1793433263605.4294,
+        "reported": 500,
+        "max_report_age_ms": 4987.429443359375,
+        "hot": {
+          "stored_heads": 18549,
+          "received": 7405221,
+          "backlog": 14379,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4824,
+          "received": 15533,
+          "backlog": 31,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1848047,
+          "backlog": 6853
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5557174,
+          "backlog": 7526
+        }
+      },
+      {
+        "elapsed": 546.3398251533508,
+        "at": 1793433268863.237,
+        "reported": 500,
+        "max_report_age_ms": 908.237060546875,
+        "hot": {
+          "stored_heads": 18736,
+          "received": 7483701,
+          "backlog": 10699,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4872,
+          "received": 15696,
+          "backlog": 26,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1871966,
+          "backlog": 1634
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5611735,
+          "backlog": 9065
+        }
+      },
+      {
+        "elapsed": 551.5353956222534,
+        "at": 1793433274048.6206,
+        "reported": 500,
+        "max_report_age_ms": 1092.62060546875,
+        "hot": {
+          "stored_heads": 18922,
+          "received": 7555314,
+          "backlog": 13486,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4918,
+          "received": 15840,
+          "backlog": 27,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1889886,
+          "backlog": 2314
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5665428,
+          "backlog": 11172
+        }
+      },
+      {
+        "elapsed": 556.7627048492432,
+        "at": 1793433279280.5178,
+        "reported": 500,
+        "max_report_age_ms": 1323.517822265625,
+        "hot": {
+          "stored_heads": 19110,
+          "received": 7627079,
+          "backlog": 16921,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 4965,
+          "received": 15983,
+          "backlog": 39,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1907833,
+          "backlog": 3167
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5719246,
+          "backlog": 13754
+        }
+      },
+      {
+        "elapsed": 561.9862446784973,
+        "at": 1793433284516.1855,
+        "reported": 500,
+        "max_report_age_ms": 1559.185546875,
+        "hot": {
+          "stored_heads": 19298,
+          "received": 7698896,
+          "backlog": 20304,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5013,
+          "received": 16134,
+          "backlog": 39,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1925801,
+          "backlog": 3999
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5773095,
+          "backlog": 16305
+        }
+      },
+      {
+        "elapsed": 567.2115840911865,
+        "at": 1793433289737.2563,
+        "reported": 500,
+        "max_report_age_ms": 1780.25634765625,
+        "hot": {
+          "stored_heads": 19485,
+          "received": 7770837,
+          "backlog": 23163,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5060,
+          "received": 16273,
+          "backlog": 55,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1943699,
+          "backlog": 4801
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5827138,
+          "backlog": 18362
+        }
+      },
+      {
+        "elapsed": 572.4785702228546,
+        "at": 1793433295019.5964,
+        "reported": 500,
+        "max_report_age_ms": 2062.596435546875,
+        "hot": {
+          "stored_heads": 19669,
+          "received": 7839681,
+          "backlog": 27919,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5107,
+          "received": 16418,
+          "backlog": 58,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1960899,
+          "backlog": 6001
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5878782,
+          "backlog": 21918
+        }
+      },
+      {
+        "elapsed": 577.7787058353424,
+        "at": 1793433300297.4678,
+        "reported": 500,
+        "max_report_age_ms": 2337.4677734375,
+        "hot": {
+          "stored_heads": 19851,
+          "received": 7910465,
+          "backlog": 29935,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5155,
+          "received": 16567,
+          "backlog": 67,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1978621,
+          "backlog": 6479
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5931844,
+          "backlog": 23456
+        }
+      },
+      {
+        "elapsed": 583.0258057117462,
+        "at": 1793433305559.0674,
+        "reported": 500,
+        "max_report_age_ms": 2599.0673828125,
+        "hot": {
+          "stored_heads": 20040,
+          "received": 7981068,
+          "backlog": 34932,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5202,
+          "received": 16711,
+          "backlog": 71,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 1996344,
+          "backlog": 7656
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 5984724,
+          "backlog": 27276
+        }
+      },
+      {
+        "elapsed": 588.298214673996,
+        "at": 1793433310810.0928,
+        "reported": 500,
+        "max_report_age_ms": 2849.0927734375,
+        "hot": {
+          "stored_heads": 20229,
+          "received": 8052743,
+          "backlog": 38857,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5249,
+          "received": 16861,
+          "backlog": 76,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2014227,
+          "backlog": 8673
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6038516,
+          "backlog": 30184
+        }
+      },
+      {
+        "elapsed": 593.5087761878967,
+        "at": 1793433316026.7412,
+        "reported": 500,
+        "max_report_age_ms": 3064.7412109375,
+        "hot": {
+          "stored_heads": 20417,
+          "received": 8124764,
+          "backlog": 42036,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5296,
+          "received": 17002,
+          "backlog": 83,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2032239,
+          "backlog": 9461
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6092525,
+          "backlog": 32575
+        }
+      },
+      {
+        "elapsed": 598.7604248523712,
+        "at": 1793433321267.6638,
+        "reported": 500,
+        "max_report_age_ms": 3305.663818359375,
+        "hot": {
+          "stored_heads": 20603,
+          "received": 8195935,
+          "backlog": 45265,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5343,
+          "received": 17148,
+          "backlog": 92,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2050002,
+          "backlog": 10298
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6145933,
+          "backlog": 34967
+        }
+      },
+      {
+        "elapsed": 604.0024788379669,
+        "at": 1793433326520.8896,
+        "reported": 500,
+        "max_report_age_ms": 3557.8896484375,
+        "hot": {
+          "stored_heads": 20790,
+          "received": 8265601,
+          "backlog": 50399,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5390,
+          "received": 17285,
+          "backlog": 103,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2067614,
+          "backlog": 11386
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6197987,
+          "backlog": 39013
+        }
+      },
+      {
+        "elapsed": 609.2050936222076,
+        "at": 1793433331717.6592,
+        "reported": 500,
+        "max_report_age_ms": 3754.6591796875,
+        "hot": {
+          "stored_heads": 20978,
+          "received": 8339397,
+          "backlog": 51803,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5437,
+          "received": 17438,
+          "backlog": 105,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2085956,
+          "backlog": 11844
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6253441,
+          "backlog": 39959
+        }
+      },
+      {
+        "elapsed": 614.4440586566925,
+        "at": 1793433336976.3833,
+        "reported": 500,
+        "max_report_age_ms": 4012.38330078125,
+        "hot": {
+          "stored_heads": 21166,
+          "received": 8411031,
+          "backlog": 55369,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5485,
+          "received": 17579,
+          "backlog": 115,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2103838,
+          "backlog": 12762
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6307193,
+          "backlog": 42607
+        }
+      },
+      {
+        "elapsed": 619.684467792511,
+        "at": 1793433342208.362,
+        "reported": 500,
+        "max_report_age_ms": 4244.362060546875,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 624.8909454345703,
+        "at": 1793433347407.3008,
+        "reported": 500,
+        "max_report_age_ms": 4442.30078125,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 630.0949146747589,
+        "at": 1793433352597.8286,
+        "reported": 500,
+        "max_report_age_ms": 4632.82861328125,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 635.3158316612244,
+        "at": 1793433357839.9236,
+        "reported": 500,
+        "max_report_age_ms": 4874.923583984375,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 640.5258855819702,
+        "at": 1793433363050.636,
+        "reported": 500,
+        "max_report_age_ms": 4982.635986328125,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 645.7347047328949,
+        "at": 1793433368241.0688,
+        "reported": 500,
+        "max_report_age_ms": 4697.06884765625,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 650.9070122241974,
+        "at": 1793433373419.1045,
+        "reported": 500,
+        "max_report_age_ms": 4875.1044921875,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 656.085592508316,
+        "at": 1793433378590.0918,
+        "reported": 500,
+        "max_report_age_ms": 4942.091796875,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 661.2686443328857,
+        "at": 1793433383785.6482,
+        "reported": 500,
+        "max_report_age_ms": 817.648193359375,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 666.4580130577087,
+        "at": 1793433388961.5479,
+        "reported": 500,
+        "max_report_age_ms": 992.5478515625,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 671.6573305130005,
+        "at": 1793433394176.7988,
+        "reported": 500,
+        "max_report_age_ms": 1207.798828125,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 676.835268497467,
+        "at": 1793433399340.991,
+        "reported": 500,
+        "max_report_age_ms": 1371.990966796875,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 682.0221590995789,
+        "at": 1793433404544.4119,
+        "reported": 500,
+        "max_report_age_ms": 1574.411865234375,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 687.2369236946106,
+        "at": 1793433409760.53,
+        "reported": 500,
+        "max_report_age_ms": 1790.530029296875,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 692.4286201000214,
+        "at": 1793433414942.3953,
+        "reported": 500,
+        "max_report_age_ms": 1971.395263671875,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 697.649138212204,
+        "at": 1793433420151.9756,
+        "reported": 500,
+        "max_report_age_ms": 2180.9755859375,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 702.8407447338104,
+        "at": 1793433425355.3462,
+        "reported": 500,
+        "max_report_age_ms": 2383.34619140625,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 708.0544197559357,
+        "at": 1793433430569.7483,
+        "reported": 500,
+        "max_report_age_ms": 2596.748291015625,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 713.287435054779,
+        "at": 1793433435810.224,
+        "reported": 500,
+        "max_report_age_ms": 2837.22412109375,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 718.4892468452454,
+        "at": 1793433440991.8926,
+        "reported": 500,
+        "max_report_age_ms": 3017.892578125,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 723.6840090751648,
+        "at": 1793433446189.3875,
+        "reported": 500,
+        "max_report_age_ms": 3215.387451171875,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 728.9142332077026,
+        "at": 1793433451441.55,
+        "reported": 500,
+        "max_report_age_ms": 3467.550048828125,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      },
+      {
+        "elapsed": 734.1421387195587,
+        "at": 1793433456648.447,
+        "reported": 500,
+        "max_report_age_ms": 3673.447021484375,
+        "hot": {
+          "stored_heads": 21193,
+          "received": 8477200,
+          "backlog": 0,
+          "queued": 0
+        },
+        "normal": {
+          "stored_heads": 5491,
+          "received": 17718,
+          "backlog": 0,
+          "queued": 0
+        },
+        "hot_slow": {
+          "recipients": 100,
+          "received": 2119300,
+          "backlog": 0
+        },
+        "hot_fast": {
+          "recipients": 300,
+          "received": 6357900,
+          "backlog": 0
+        }
+      }
+    ],
+    "resources": {
+      "server_cpu_mean_percent": 271.57067137809184,
+      "server_rss_peak_mib": 1021.26953125,
+      "k6_cpu_mean_percent": 460.052296819788,
+      "k6_rss_peak_mib": 979.62109375,
+      "minimum_host_available_mib": 4342.37109375,
+      "maximum_host_cpu_percent": 89.1,
+      "processes": {
+        "gateway18080": {
+          "cpu_mean_percent": 209.22544169611308,
+          "rss_peak_mib": 482.36328125,
+          "os_threads_peak": 78
+        },
+        "mysql": {
+          "cpu_mean_percent": 62.3452296819788,
+          "rss_peak_mib": 538.90625,
+          "os_threads_peak": 54
+        },
+        "broker": {
+          "cpu_mean_percent": 0,
+          "rss_peak_mib": 0.0,
+          "os_threads_peak": 0
+        },
+        "k6": {
+          "cpu_mean_percent": 460.052296819788,
+          "rss_peak_mib": 979.62109375,
+          "os_threads_peak": 37
+        },
+        "durable_harness": {
+          "cpu_mean_percent": 4.184275618374558,
+          "rss_peak_mib": 45.28515625,
+          "os_threads_peak": 8
+        }
+      }
+    },
+    "final_metrics": {
+      "18080": {
+        "applied_ack": 8827704,
+        "batch_callback_nanos": 12828974500,
+        "batch_group_max": 206,
+        "batch_pending": 0,
+        "batch_query_nanos": 119394937800,
+        "batch_requests": 1024343,
+        "batch_shared_recipients": 1024343,
+        "batch_snapshots": 142316,
+        "batch_wait_max_nanos": 188383200,
+        "batch_wait_nanos": 4813262768200,
+        "credit_bytes": 0,
+        "credit_count": 0,
+        "db_admission_rejected": 767,
+        "db_work_nanos": 412891438400,
+        "frames_issued": 8503190,
+        "gc_count": 543,
+        "gc_ms": 2322,
+        "global_buffer": 0,
+        "global_credit": 0,
+        "heap_committed": 266338304,
+        "heap_used": 186645952,
+        "history_queries": 154816,
+        "history_rows": 821801,
+        "inbound_assembly_bytes": 0,
+        "inbound_reserved": 0,
+        "io_queue": 0,
+        "io_rejected": 1619,
+        "issue_encode_sample_count": 127883,
+        "issue_encode_sample_max_nanos": 5026200,
+        "issue_encode_sample_nanos": 70855300,
+        "issue_window_rejected": 56,
+        "issued_bytes": 7063604711,
+        "list_batch_requests": 355171,
+        "list_batch_snapshots": 138047,
+        "list_callback_count": 138047,
+        "list_callback_max_nanos": 19817000,
+        "list_callback_nanos": 4283825000,
+        "list_query_count": 138047,
+        "list_query_max_nanos": 71855000,
+        "list_query_nanos": 90567172400,
+        "list_wait_count": 355171,
+        "list_wait_max_nanos": 156280600,
+        "list_wait_nanos": 2569216666100,
+        "live_transitions": 176410,
+        "load_focus_body_apply_count": 682924,
+        "load_focus_body_apply_max_nanos": 20204500,
+        "load_focus_body_apply_nanos": 5107676500,
+        "load_focus_body_monitor_count": 683039,
+        "load_focus_body_monitor_max_nanos": 10058300,
+        "load_focus_body_monitor_nanos": 371364700,
+        "load_focus_head_apply_count": 272261,
+        "load_focus_head_apply_max_nanos": 54904200,
+        "load_focus_head_apply_nanos": 1117168000,
+        "load_focus_head_monitor_count": 272291,
+        "load_focus_head_monitor_max_nanos": 1084100,
+        "load_focus_head_monitor_nanos": 117873500,
+        "load_other_body_apply_count": 701,
+        "load_other_body_apply_max_nanos": 883800,
+        "load_other_body_apply_nanos": 16745200,
+        "load_other_body_monitor_count": 701,
+        "load_other_body_monitor_max_nanos": 41200,
+        "load_other_body_monitor_nanos": 822400,
+        "load_other_head_apply_count": 68300,
+        "load_other_head_apply_max_nanos": 4750600,
+        "load_other_head_apply_nanos": 1113777800,
+        "load_other_head_monitor_count": 68312,
+        "load_other_head_monitor_max_nanos": 1176500,
+        "load_other_head_monitor_nanos": 58776300,
+        "observed_write_ms": 65,
+        "outbox_claim_queries": 19212,
+        "outbox_claim_updates": 14942,
+        "outbox_done": 26684,
+        "outbox_finish_transactions": 14942,
+        "outbox_finish_updates": 14942,
+        "outbox_publication_queries": 14942,
+        "outbox_publication_rows": 26684,
+        "outbox_stale_finish": 0,
+        "peers": 0,
+        "platform_threads": 58,
+        "publish_focus_count": 21193,
+        "publish_focus_max_nanos": 29589600,
+        "publish_focus_monitor_nanos": 2532270900,
+        "publish_focus_nanos": 16714343200,
+        "publish_other_count": 5491,
+        "publish_other_max_nanos": 4681300,
+        "publish_other_monitor_nanos": 10383100,
+        "publish_other_nanos": 250200700,
+        "read_focus_body_callback_count": 63388,
+        "read_focus_body_callback_max_nanos": 62336900,
+        "read_focus_body_callback_nanos": 8741668100,
+        "read_focus_body_query_count": 63388,
+        "read_focus_body_query_max_nanos": 127839800,
+        "read_focus_body_query_nanos": 81228860600,
+        "read_focus_body_recipients": 683039,
+        "read_focus_body_wait_count": 683039,
+        "read_focus_body_wait_max_nanos": 168115500,
+        "read_focus_body_wait_nanos": 3514615337500,
+        "read_focus_head_callback_count": 15047,
+        "read_focus_head_callback_max_nanos": 55203800,
+        "read_focus_head_callback_nanos": 2341197500,
+        "read_focus_head_query_count": 15047,
+        "read_focus_head_query_max_nanos": 54756700,
+        "read_focus_head_query_nanos": 7967589400,
+        "read_focus_head_recipients": 272291,
+        "read_focus_head_wait_count": 272291,
+        "read_focus_head_wait_max_nanos": 132967800,
+        "read_focus_head_wait_nanos": 816449175000,
+        "read_other_body_callback_count": 665,
+        "read_other_body_callback_max_nanos": 901500,
+        "read_other_body_callback_nanos": 27169900,
+        "read_other_body_query_count": 665,
+        "read_other_body_query_max_nanos": 52106100,
+        "read_other_body_query_nanos": 642089800,
+        "read_other_body_recipients": 701,
+        "read_other_body_wait_count": 701,
+        "read_other_body_wait_max_nanos": 115990200,
+        "read_other_body_wait_nanos": 6048484400,
+        "read_other_head_callback_count": 63216,
+        "read_other_head_callback_max_nanos": 10567700,
+        "read_other_head_callback_nanos": 1809076700,
+        "read_other_head_query_count": 63216,
+        "read_other_head_query_max_nanos": 116419000,
+        "read_other_head_query_nanos": 29647048600,
+        "read_other_head_recipients": 68312,
+        "read_other_head_wait_count": 68312,
+        "read_other_head_wait_max_nanos": 188383200,
+        "read_other_head_wait_nanos": 476149771300,
+        "reader_slot_count": 280363,
+        "reader_slot_max_nanos": 128336900,
+        "reader_slot_nanos": 230709414800,
+        "reader_slots_active": 0,
+        "recovery_event_wakes": 220156,
+        "route_rooms": 0,
+        "route_subscriptions": 0,
+        "send_focus_ROOM_BUSY": 766,
+        "send_focus_ROOM_RELEASE_RACE": 1,
+        "send_focus_attempts": 21960,
+        "send_focus_room_hold_count": 21193,
+        "send_focus_room_hold_max_nanos": 137231200,
+        "send_focus_room_hold_nanos": 128229244500,
+        "send_focus_stored": 21193,
+        "send_focus_transaction_count": 21193,
+        "send_focus_transaction_max_nanos": 137224100,
+        "send_focus_transaction_nanos": 128013998500,
+        "send_other_attempts": 5491,
+        "send_other_room_hold_count": 5491,
+        "send_other_room_hold_max_nanos": 110175400,
+        "send_other_room_hold_nanos": 35240520500,
+        "send_other_stored": 5491,
+        "send_other_transaction_count": 5491,
+        "send_other_transaction_max_nanos": 110162700,
+        "send_other_transaction_nanos": 35187298600,
+        "session_closes": 12500,
+        "sessions_active": 0,
+        "shared_live_deferred": 1159493,
+        "shared_live_issued": 7073556,
+        "socket_flush_batches": 6634572,
+        "socket_received_bytes": 790908845,
+        "socket_sent_bytes": 7283950508,
+        "socket_still_open_after_writer_exit": 57,
+        "socket_writes": 9401652,
+        "stored_results": 26684,
+        "wire_cache_bytes": 7152272,
+        "wire_cache_evictions": 28754,
+        "wire_cache_hits": 8470396,
+        "wire_cache_misses": 32850,
+        "wire_cache_peak": 7153934,
+        "writer_exits": 12500,
+        "writer_exits_error": 12311,
+        "writer_flush_sample_count": 140677,
+        "writer_flush_sample_max_nanos": 79130200,
+        "writer_flush_sample_nanos": 11127170200,
+        "writer_queue_sample_count": 140677,
+        "writer_queue_sample_max_nanos": 86603500,
+        "writer_queue_sample_nanos": 345481179500,
+        "writers_active": 0
+      }
+    },
+    "measure_stored_obligations": {
+      "hot-room": 8335200,
+      "normal-room": 17424
+    }
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "outbox_rows": 6083,
+  "plans": [
+    {
+      "sql": "SELECT COUNT(*) FROM outbox WHERE room_id=999 AND state<>'DONE'",
+      "plan": [
+        [
+          "-> Aggregate: count(0)  (cost=1.51 rows=1) (actual time=0.0119..0.0121 rows=1 loops=1)\n    -> Filter: (outbox.room_id = 999)  (cost=1.41 rows=1) (actual time=0.0102..0.0102 rows=0 loops=1)\n        -> Index range scan on outbox using outbox_ready over (state < 'DONE') OR ('DONE' < state), with index condition: (outbox.state <> 'DONE')  (cost=1.41 rows=2) (actual time=0.0097..0.0097 rows=0 loops=1)\n"
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT id,room_id,seq,attempts FROM outbox WHERE ((state='PENDING' AND next_attempt<=1793360000000) OR (state='LEASED' AND lease_until<1793360000000)) ORDER BY id LIMIT 32",
+      "plan": [
+        [
+          "-> Limit: 32 row(s)  (cost=1.41 rows=2) (actual time=0.0115..0.0115 rows=0 loops=1)\n    -> Sort: outbox.id, limit input to 32 row(s) per chunk  (cost=1.41 rows=2) (actual time=0.0086..0.0086 rows=0 loops=1)\n        -> Filter: (((outbox.state = 'PENDING') and (outbox.next_attempt <= 1793360000000)) or ((outbox.state = 'LEASED') and (outbox.lease_until < 1793360000000)))  (cost=1.41 rows=2) (actual time=0.0065..0.0065 rows=0 loops=1)\n            -> Index range scan on outbox using outbox_ready over (state = 'LEASED') OR (state = 'PENDING' AND next_attempt <= 1793360000000), with index condition: (((outbox.state = 'PENDING') and (outbox.next_attempt <= 1793360000000)) or (outbox.state = 'LEASED'))  (cost=1.41 rows=2) (actual time=0.0061..0.0061 rows=0 loops=1)\n"
+        ]
+      ]
+    }
+  ]
+}

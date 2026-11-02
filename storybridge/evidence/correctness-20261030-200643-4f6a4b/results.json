@@ -1,0 +1,9 @@
+[
+  {
+    "ids": "T02 T23",
+    "name": "ws-keyed-admission",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 48, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 207, in ws_keyed_admission\n    w.send(json.dumps({'type':'SEND','room':3,'key':keys[2],'body':'explicit rejection'}));error,_=frame(w,'SEND_ERROR');assert error['key']==keys[2] and error['error']=='BUSY'\n                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "seconds": 0.2344248000299558
+  }
+]

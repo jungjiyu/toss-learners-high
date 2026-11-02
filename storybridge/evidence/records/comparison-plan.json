@@ -1,0 +1,74 @@
+{
+  "frozen_before_candidate_measurement": true,
+  "baseline_source": "4a48ff5",
+  "baseline": "A/R0 bounded live body buffer plus authoritative log recovery",
+  "candidate": "A/R1 live hint plus authoritative log recovery, no per-recipient live body buffer",
+  "normal": {
+    "seconds": 12,
+    "unique_send_rate": 60,
+    "body_bytes": 512,
+    "connections": 16
+  },
+  "mixed": {
+    "seconds": 12,
+    "unique_send_rate": 60,
+    "body_bytes": 4096,
+    "connections": 16,
+    "slow_recipients": 2,
+    "slow_commit_delay_ms": 40,
+    "restore_capacity_at_seconds": 6
+  },
+  "repetitions_per_profile_per_candidate": 3,
+  "warmup_seconds": 3,
+  "audit_grace_seconds": 20,
+  "durability": {
+    "innodb_flush_log_at_trx_commit": 1,
+    "sync_binlog": 1
+  },
+  "limits": {
+    "java_heap_mib": 384,
+    "jvm_active_processor_count_advisory": 4,
+    "mysql_buffer_pool_mib": 256,
+    "mysql_redo_mib": 128,
+    "db_pool": 12,
+    "io_workers": {
+      "budget": 8,
+      "R0": 8,
+      "R1_tuned": 4
+    },
+    "io_queue": 128,
+    "per_subscription_total_bytes": 262144,
+    "window_count": 32,
+    "session_count": 64
+  },
+  "required": [
+    "zero storage/recipient audit violations",
+    "zero generator dropped logical arrivals",
+    "all accepted obligations complete by audit",
+    "normal-recipient 3s completion at least 99.9 percent",
+    "stored 1s completion at least 99 percent",
+    "finite resource bounds during slow interval"
+  ],
+  "adoption": "Prefer simpler R0 if R1 has no material benefit. R1 should reduce live buffering or recovery completion materially (25 percent memory or 20 percent recovery improvement), while normal p95 and stack CPU do not regress more than 20 percent. Report tradeoffs and replicate variation; do not average run p99 as pooled p99.",
+  "scope": "One Windows native laptop. No broker or physical failure-domain claims. A is sufficient unless measurements demonstrate a reason for C. No implementation of optional cache, relay, N1, replica or speculative experiments merely to fill a matrix.",
+  "timestamps": "One Python process perf_counter_ns domain for scheduled SEND, response completion and after-SQLite-COMMIT events. DB storedAt is not a commit cursor or latency clock.",
+  "notes": "Completed latency quantiles always accompany missing/rejected/unresolved counts. Slow-recipient 3s misses remain visible; restored fixed-H completion is separate. CPU process percentages use one logical CPU=100, host CPU uses all logical CPUs=100. ActiveProcessorCount is not a CPU quota. Loopback JSON wire bytes exclude TCP/TLS overhead. TLS and WebSocket compression are disabled. Each run resets only this project's synthetic database with app stopped; seed and membership remain identical. Baseline repetitions precede candidate repetitions as required by branch workflow; thermal/order effects are limitations.",
+  "revision": 4,
+  "revision_reason": "The 12-second 100 SEND/s mixed baseline repeat 2 dropped four generator arrivals and missed its schedule. Retained as overload/generator-limit evidence, excluded from equal-arrival adoption comparison. Repeat BOTH candidates at 60 SEND/s for three independent mixed runs; 36/s hot arrival still exceeds 25/s initial slow application.",
+  "excluded_from_adoption": [
+    "bench-R0-mixed-20261030-171419-aebd",
+    "bench-R0-mixed-20261030-171536-0504"
+  ],
+  "superseded_candidate_source": "3154cf5",
+  "tuning_reason": "R1 fanout starts up to eight read workers against a four-read admission budget, causing 250 admission rejects in the first normal measurement. Tune R1 to four I/O workers within the same budget, retain all pre-tuning runs, repeat correctness and all three measured repetitions. R0 had five admission rejects in its corresponding sample; no reason to add workers or weaken limits.",
+  "candidate_source": "406b279",
+  "transport": {
+    "tomcat_connection_linger_seconds": 0,
+    "reason": "Writer exit and WebSocket isOpen=false left two non-reading sockets in FIN_WAIT1. Shared native abort-on-close fix; verify process-owned TCP sockets disappear before clients close."
+  },
+  "superseded_measurement_tags": [
+    "baseline-v1",
+    "recommended-r1-v1"
+  ],
+  "revalidation": "Run relevant/full core regression plus actual blocked-write OS-socket checks, then repeat three normal and three mixed runs for BOTH corrected sources. Preserve earlier tags and results unchanged."
+}

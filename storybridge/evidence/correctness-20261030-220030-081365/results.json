@@ -1,0 +1,9 @@
+[
+  {
+    "ids": "T19 T20 T21 T22",
+    "name": "representation-cache-boundaries",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 48, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\cache_suite.py\", line 8, in boundaries\n    before=metrics();assert before.get('wire_cache_evictions',0)>0 and before.get('wire_cache_hits',0)>0,before\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'applied_ack': 82, 'batch_callback_nanos': 3244701, 'batch_group_max': 1, 'batch_pending': 0, 'batch_query_nanos': 15149898, 'batch_requests': 5, 'batch_shared_recipients': 5, 'batch_snapshots': 5, 'batch_wait_max_nanos': 255800, 'batch_wait_nanos': 678898, 'credit_bytes': 0, 'credit_count': 0, 'db_work_nanos': 362420903, 'frames_issued': 80, 'gc_count': 11, 'gc_ms': 40, 'global_buffer': 0, 'global_credit': 0, 'heap_committed': 134217728, 'heap_used': 28224512, 'history_queries': 9, 'history_rows': 4, 'io_queue': 0, 'issued_bytes': 109322, 'list_batch_requests': 4, 'list_batch_snapshots': 4, 'live_transitions': 5, 'observed_write_ms': 3, 'outbox_claim_queries': 122, 'outbox_claim_updates': 31, 'outbox_done': 40, 'outbox_finish_transactions': 31, 'outbox_finish_updates': 31, 'outbox_publication_queries': 31, 'outbox_publication_rows': 40, 'outbox_stale_finish': 0, 'peers': 2, 'platform_threads': 33, 'recovery_event_wakes': 3, 'route_rooms': 1, 'route_subscriptions': 2, 'sessions_active': 2, 'shared_live_deferred': 1, 'shared_live_issued': 77, 'socket_received_bytes': 7904, 'socket_sent_bytes': 113356, 'socket_writes': 95, 'stored_results': 40, 'wire_cache_bytes': 112122, 'wire_cache_hits': 40, 'wire_cache_misses': 40, 'wire_cache_peak': 112122, 'writers_active': 2}\n",
+    "seconds": 2.0462988999206573
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "causal-2x2.svg": {
+    "runs": [
+      "scale-Q-causal-explore-A-20261031-182538-a6eb",
+      "scale-Q-causal-explore-B-20261031-183813-54d5",
+      "scale-Q-causal-explore-C-20261031-190329-9e67",
+      "scale-Q-causal-explore-D-20261031-185051-bf67"
+    ],
+    "selection": "One pre-change 600s run per cell, all shown."
+  },
+  "causal-final-repeats.svg": {
+    "runs": [
+      "scale-Q-causal-explore-C-20261031-190329-9e67",
+      "scale-U-causal-final-C-20261031-195336-7572",
+      "scale-Q-causal-explore-D-20261031-222005-1f73",
+      "scale-U-causal-explore-D-20261031-223245-c68f",
+      "scale-U-causal-final-D-20261031-203816-086a",
+      "scale-Q-causal-final-D-20261031-205058-7159",
+      "scale-U-causal-final-C-20261031-210341-5163",
+      "scale-Q-causal-final-C-20261031-211621-0f0c",
+      "scale-Q-causal-final-C-20261031-212902-e322",
+      "scale-U-causal-final-C-20261031-214144-b68b",
+      "scale-Q-causal-final-D-20261031-215422-6614",
+      "scale-U-causal-final-D-20261031-220703-9edc"
+    ],
+    "selection": "Every final slot; digit denotes repeat. C1 Q/U are an explicitly reused pre-cleanup pair; other slots are post-cleanup. No averaging of p99."
+  },
+  "causal-stage-times.svg": {
+    "runs": [
+      "scale-Q-causal-explore-D-20261031-222005-1f73",
+      "scale-U-causal-explore-D-20261031-223245-c68f"
+    ],
+    "selection": "D repeat1 for each source, independent distributions; never add percentile differences into contributions."
+  },
+  "causal-d-resources.svg": {
+    "runs": [
+      "scale-Q-causal-explore-D-20261031-222005-1f73",
+      "scale-U-causal-explore-D-20261031-223245-c68f"
+    ],
+    "selection": "D repeat1, chosen by ordinal not performance. One-second OS samples and asynchronous five-second backlog observations. Input age starts at logical SEND, not DB commit."
+  },
+  "causal-same-message.svg": {
+    "runs": [
+      "scale-Q-causal-explore-D-20261031-185051-bf67"
+    ],
+    "selection": "Partial-late logical SEND with largest recipient latency; illustrative worst case, not typical latency."
+  },
+  "_provenance": {
+    "generator_sha256": "115c810b36899a0f3d70b1d8e746950dc448cd6123a90e60db5e911133fd3a48",
+    "inputs": {
+      "causal-summary.json": "88b170d7da9a10f467147833dc7ffe26e2d255243d64d178fd29e31a28711e77",
+      "causal-final.json": "687bdae7aa5ea7b71e4573b27e30c849254c55feb15f183eabe7d1dedc0e3533"
+    }
+  }
+}

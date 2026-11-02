@@ -1,0 +1,9 @@
+[
+  {
+    "ids": "T12 T43",
+    "name": "blocked-write",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 48, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\extended_suite.py\", line 190, in blocked_write\n    assert not states[-1],states\n           ^^^^^^^^^^^^^^\nAssertionError: [['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1'], ['FIN_WAIT1', 'FIN_WAIT1']]\n",
+    "seconds": 34.0280268000206
+  }
+]

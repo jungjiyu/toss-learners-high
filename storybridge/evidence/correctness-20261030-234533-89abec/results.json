@@ -1,0 +1,30 @@
+[
+  {
+    "ids": "T01 T02 T30 T43",
+    "name": "partial-inbound-contract",
+    "status": "PASS",
+    "details": {
+      "unfragmented_escaped_json_chars": 49236,
+      "fragment_split_inside_utf8": true,
+      "no_commit_before_fin": true,
+      "oversized_no_commit": true,
+      "partial_timeout_released": true,
+      "binary_rejected": true
+    },
+    "seconds": 3.2639964000554755
+  },
+  {
+    "ids": "T12 T30 T39",
+    "name": "partial-inbound-global-budget",
+    "status": "PASS",
+    "details": {
+      "connections": 96,
+      "partial_chars_each": 64000,
+      "reserved_max": 16400384,
+      "budget_bytes": 16777216,
+      "rejections": 64,
+      "reserved_after_timeout": 0
+    },
+    "seconds": 4.595227599958889
+  }
+]

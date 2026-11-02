@@ -1,0 +1,37 @@
+{
+  "durable_before_network": {
+    "room": 1,
+    "key": "e7b17d67-0075-4770-a556-46effd1241a1",
+    "body": "pending-offline-6a077d5edfdf4447b5d5ac12dd4977f4",
+    "hash": "244070dcf812645ea9f95677439437fd96ce3ec5faf1b73935deef37425fcb47"
+  },
+  "committed_but_not_browser_stored": {
+    "receipt": {
+      "room": 1,
+      "sender": 1,
+      "key": "e7b17d67-0075-4770-a556-46effd1241a1",
+      "messageId": "b5a6ceff-8796-43ab-9a3f-f568ad61c675",
+      "seq": 29,
+      "hash": "244070dcf812645ea9f95677439437fd96ce3ec5faf1b73935deef37425fcb47",
+      "storedAt": 1793444002724
+    },
+    "pending_rows": 1,
+    "note": "Independent result lookup is NOT counted as an earlier UI STORED response."
+  },
+  "same_key_replay": {
+    "db_rows": 1,
+    "seq": 29,
+    "hash": "244070dcf812645ea9f95677439437fd96ce3ec5faf1b73935deef37425fcb47",
+    "pending_rows_after_response": 0,
+    "local_cursor": 29
+  },
+  "screen": {
+    "title": "StoryBridge \u00b7 \uacbd\uacc4 \uac80\uc99d UI",
+    "width": 1280,
+    "scrollWidth": 1265,
+    "overflow": false,
+    "brokenImages": 0,
+    "print": false
+  },
+  "execution_valid": true
+}

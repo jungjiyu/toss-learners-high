@@ -1,0 +1,5 @@
+{
+  "execution_valid": true,
+  "issues": [],
+  "scope": "Missing/corrupt mandatory evidence, child failure and integrity failures are nonzero. Latency, acceptance, generator drop, bounded incomplete recovery and outbox backlog remain explicit performance/availability failures, not silently promoted to PASS."
+}

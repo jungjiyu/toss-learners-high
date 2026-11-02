@@ -1,0 +1,200 @@
+[
+  {
+    "clients": 1,
+    "elapsed_seconds": 4.375,
+    "expected_commits": 4836,
+    "actual_commits": 4836,
+    "commits_per_second": 1105.3714285714286,
+    "all_exact": true,
+    "audits": [
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 752,
+        "errors": []
+      }
+    ]
+  },
+  {
+    "clients": 4,
+    "elapsed_seconds": 12.780999999959022,
+    "expected_commits": 19344,
+    "actual_commits": 19344,
+    "commits_per_second": 1513.4965965152978,
+    "all_exact": true,
+    "audits": [
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 768,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 768,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 767,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 767,
+        "errors": []
+      }
+    ]
+  },
+  {
+    "clients": 16,
+    "elapsed_seconds": 58.95299999997951,
+    "expected_commits": 77376,
+    "actual_commits": 77376,
+    "commits_per_second": 1312.5031805001763,
+    "all_exact": true,
+    "audits": [
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 857,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 856,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 856,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 856,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 856,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 856,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 856,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 856,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 855,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 855,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 855,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 855,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 854,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 854,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 854,
+        "errors": []
+      },
+      {
+        "cursor": 4836,
+        "expected": 4836,
+        "exact_match": true,
+        "body_hash_mismatches": 0,
+        "diagnostic_dropped": 854,
+        "errors": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "ids": "T01 T02 T07",
+    "name": "identity-order",
+    "status": "PASS",
+    "details": {
+      "same_key_calls": 8,
+      "unique_effect": 1,
+      "parallel_unique": 24,
+      "first": 3,
+      "last": 26
+    },
+    "seconds": 0.8244794000638649
+  },
+  {
+    "ids": "T03 T04 T06",
+    "name": "transaction-boundaries",
+    "status": "PASS",
+    "details": {
+      "rollback_head": 0,
+      "lost_response_receipt": {
+        "room": 102,
+        "sender": 1,
+        "key": "2a529995ced34d269bf0e33f1cb2eba6",
+        "messageId": "dbf45857-5cd2-4e60-a8ad-3e41e0477dc8",
+        "seq": 1,
+        "hash": "3d218b82f677ec124ef052881422627134b7e52fc9943323458654cb13320a22",
+        "storedAt": 1793346007611
+      },
+      "duplicate_publish_attempts": 2
+    },
+    "seconds": 0.7150773999746889
+  },
+  {
+    "ids": "T08",
+    "name": "subscribe-boundary",
+    "status": "PASS",
+    "details": {
+      "base": 0,
+      "completed": 1
+    },
+    "seconds": 1.4882505000568926
+  },
+  {
+    "ids": "T09 T10 T29",
+    "name": "reversed-gap-last-loss",
+    "status": "PASS",
+    "details": {
+      "reversed_messages": 39,
+      "gap_base": 0,
+      "final_cursor": 41,
+      "new_send_after_last": 0
+    },
+    "seconds": 2.2075724999886006
+  },
+  {
+    "ids": "T11 T13 T27 T39 X02",
+    "name": "slow-ack-recovery",
+    "status": "PASS",
+    "details": {
+      "base": 0,
+      "goal": 90,
+      "max_credit": 8,
+      "applied": 90
+    },
+    "seconds": 4.9724502000026405
+  },
+  {
+    "ids": "T21 T42",
+    "name": "retention-snapshot",
+    "status": "PASS",
+    "details": {
+      "old_snapshot_floor": 1,
+      "old_snapshot_rows": 6,
+      "new_floor": 7,
+      "receipt_survives": true,
+      "delete_rollback": true
+    },
+    "seconds": 0.5307114999741316
+  },
+  {
+    "ids": "T22 T23 T33",
+    "name": "read-auth-list",
+    "status": "PASS",
+    "details": {
+      "list_only_head": 3,
+      "read_monotonic": 3,
+      "unauthorized_paths": 5,
+      "expired_socket_closed": true
+    },
+    "seconds": 2.8536711999913678
+  },
+  {
+    "ids": "T30 T41 X07",
+    "name": "retiring-credit",
+    "status": "PASS",
+    "details": {
+      "retiring_credit": 16,
+      "discarded_not_applied": 16,
+      "new_epoch": true,
+      "stale_ack_rejected": true
+    },
+    "seconds": 0.6775496000191197
+  },
+  {
+    "ids": "E05",
+    "name": "poison",
+    "status": "PASS",
+    "details": {
+      "poison_seq": 1,
+      "protected_floor": 1,
+      "other_room_done": true,
+      "reprocessed": true
+    },
+    "seconds": 0.8646057000150904
+  },
+  {
+    "ids": "T26 T28 T37",
+    "name": "local-crash",
+    "status": "PASS",
+    "details": {
+      "real_process_exit_points": [
+        {
+          "stage": "before_projection",
+          "cursor_after_kill": 0
+        },
+        {
+          "stage": "after_projection",
+          "cursor_after_kill": 0
+        },
+        {
+          "stage": "after_cursor",
+          "cursor_after_kill": 0
+        },
+        {
+          "stage": "before_commit",
+          "cursor_after_kill": 0
+        },
+        {
+          "stage": "after_commit",
+          "cursor_after_kill": 1
+        }
+      ],
+      "pending_key_reused": true,
+      "fresh_store_cursor": 0
+    },
+    "seconds": 1.6375182999763638
+  },
+  {
+    "ids": "T05",
+    "name": "app-crash",
+    "status": "PASS",
+    "details": {
+      "durable_seq": 1,
+      "post_restart_applied": true
+    },
+    "seconds": 5.9979537999024615
+  },
+  {
+    "ids": "T40-storage",
+    "name": "storage-audit",
+    "status": "PASS",
+    "details": {
+      "rooms": 73,
+      "retained_messages": 193,
+      "problems": [],
+      "note": "Full delivery-obligation audit is added by load harness; this checks persistent storage."
+    },
+    "seconds": 4.955648600007407
+  }
+]

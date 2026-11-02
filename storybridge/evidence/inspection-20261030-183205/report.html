@@ -1,0 +1,36 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>실제 SQL·원장·JFR 진단</title><link rel="stylesheet" href="../../assets/shared/styles.css"><main><p class="eyebrow">STORYBRIDGE / ACTUAL DIAGNOSTIC</p><h1>MySQL 실행 계획과 원장 감사</h1><p class="meta">inspection-20261030-183205 · 앞선 성능 run의 화면이 아닌 별도 진단 실행이다.</p><h2>실제 실행한 SQL</h2><pre>SELECT * FROM message WHERE room_id=999 AND seq&gt;454 AND seq&lt;=486 ORDER BY seq LIMIT 32</pre><h2>EXPLAIN ANALYZE 결과</h2><pre>-&gt; Limit: 32 row(s)  (cost=11.9 rows=32) (actual time=0.0189..0.0614 rows=32 loops=1)
+    -&gt; Filter: ((message.room_id = 999) and (message.seq &gt; 454) and (message.seq &lt;= 486))  (cost=11.9 rows=58) (actual time=0.0176..0.0566 rows=32 loops=1)
+        -&gt; Index range scan on message using PRIMARY over (room_id = 999 AND 454 &lt; seq &lt;= 486)  (cost=11.9 rows=58) (actual time=0.016..0.0504 rows=32 loops=1)
+</pre><h2>진단 시작 시 DB 원장</h2><pre>{
+  &quot;message&quot;: 835,
+  &quot;receipt&quot;: 835,
+  &quot;outbox&quot;: 835,
+  &quot;unfinished_outbox&quot;: 0
+}</pre><h2>JVM Flight Recorder</h2><p>10초 실제 JFR 기록. 합성 SEND 174건. 원본 SHA-256: <code>b7ae986645a2656e0603821e2ad72e2bc470b0c2b3b33c2a56f3625d3bf12f6a</code></p><pre>
+ Version: 2.1
+ Chunks: 1
+ Start: 2026-10-30 09:32:06 (UTC)
+ Duration: 10 s
+
+ Event Type                              Count  Size (bytes) 
+=============================================================
+ jdk.ModuleExport                         1007          8900
+ jdk.ThreadPark                            918         30473
+ jdk.JavaMonitorWait                       504         11593
+ jdk.BooleanFlag                           500         14746
+ jdk.NativeMethodSample                    484          4526
+ jdk.ActiveSetting                         362         10083
+ jdk.SystemProcess                         272         18353
+ jdk.Checkpoint                            193        277481
+ jdk.LongFlag                              161          5056
+ jdk.ModuleRequire                         158          1264
+ jdk.ObjectAllocationSample                153          2090
+ jdk.UnsignedLongFlag                      134          4431
+ jdk.NativeLibrary                         126          8458
+ jdk.ThreadAllocationStatistics             82           785
+ jdk.InitialEnvironmentVariable             76          5391
+ jdk.InitialSecurityProperty                50          2566
+ jdk.ExecutionSample                        34           323
+ jdk.StringFlag                             28           819
+ jdk.IntFlag                                25           906
+ jdk.SafepointBegin                         15           179</pre></main></html>

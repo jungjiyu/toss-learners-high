@@ -1,0 +1,29 @@
+[
+  {
+    "ids": "T08 T21 T22 T42",
+    "name": "initial-grant-original-cursor",
+    "status": "PASS",
+    "details": {
+      "original_cursor_not_clamped": [
+        {
+          "cursor": 3,
+          "error": "FORBIDDEN"
+        },
+        {
+          "cursor": 0,
+          "error": "RESYNC_REQUIRED"
+        },
+        {
+          "cursor": 4,
+          "error": "INVALID_CURSOR"
+        }
+      ],
+      "valid_floor": 2,
+      "fixed_head": 3,
+      "recovered_rows": 2,
+      "exact_DB_match": true,
+      "explain": "grant-explain.json"
+    },
+    "seconds": 0.6139311000006273
+  }
+]

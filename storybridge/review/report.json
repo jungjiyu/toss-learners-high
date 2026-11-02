@@ -1,0 +1,4393 @@
+{
+  "static_errors": [],
+  "counts": {
+    "storage": {
+      "tables": 0,
+      "numeric_cells_checked": 0,
+      "implementation_blocks": 2,
+      "figures": 1
+    },
+    "recovery": {
+      "tables": 1,
+      "numeric_cells_checked": 16,
+      "implementation_blocks": 1,
+      "figures": 3
+    },
+    "comparison": {
+      "tables": 3,
+      "numeric_cells_checked": 149,
+      "implementation_blocks": 0,
+      "figures": 2
+    },
+    "shared-fanout": {
+      "tables": 18,
+      "numeric_cells_checked": 244,
+      "implementation_blocks": 5,
+      "figures": 9
+    },
+    "connections": {
+      "tables": 5,
+      "numeric_cells_checked": 83,
+      "implementation_blocks": 1,
+      "figures": 1
+    },
+    "distributed": {
+      "tables": 2,
+      "numeric_cells_checked": 246,
+      "implementation_blocks": 0,
+      "figures": 3
+    },
+    "scale": {
+      "tables": 13,
+      "numeric_cells_checked": 1277,
+      "implementation_blocks": 0,
+      "figures": 18
+    },
+    "mixed": {
+      "tables": 17,
+      "numeric_cells_checked": 417,
+      "implementation_blocks": 2,
+      "figures": 14
+    },
+    "mixed-runs": {
+      "tables": 4,
+      "numeric_cells_checked": 750,
+      "implementation_blocks": 0,
+      "figures": 0
+    },
+    "reconnect": {
+      "tables": 6,
+      "numeric_cells_checked": 219,
+      "implementation_blocks": 1,
+      "figures": 6
+    },
+    "reconnect-runs": {
+      "tables": 10,
+      "numeric_cells_checked": 693,
+      "implementation_blocks": 0,
+      "figures": 0
+    }
+  },
+  "browser": [
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "index.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "index.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "index.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "index.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "index.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "index.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "index.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "index.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "index.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "index.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "StoryBridge 채팅 서버 설계·성능 개선",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "index.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "소스와 원본 대응 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "sources.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "소스와 원본 대응 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "sources.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "소스와 원본 대응 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "sources.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "소스와 원본 대응 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "sources.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "소스와 원본 대응 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "sources.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/comparison.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/comparison.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 2,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/comparison.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 2,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/comparison.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/comparison.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/comparison.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/comparison.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/comparison.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/comparison.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/comparison.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "comparison.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "comparison.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "버퍼 기반 전달과 수신자별 로그 조회 비교 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "comparison.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/connections.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/connections.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 4,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/connections.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 5,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/connections.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/connections.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/connections.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/connections.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "connections.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "connections.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "connections.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "connections.html",
+      "kind": "table",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "connections.html",
+      "kind": "table",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "WebSocket 수신 버퍼의 메모리 사용량 개선 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "connections.html",
+      "kind": "pre",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 2,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 2,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/distributed.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ]
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/distributed.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/distributed.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "figure": 2,
+      "mode": "tablet"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/distributed.html",
+      "figure": 2,
+      "mode": "mobile"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/distributed.html",
+      "figure": 2,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "distributed.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "distributed.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "distributed.html",
+      "kind": "pre",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "distributed.html",
+      "kind": "pre",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "distributed.html",
+      "kind": "pre",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "RabbitMQ 기반 다중 gateway 메시지 전달 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "distributed.html",
+      "kind": "pre",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed-runs.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed-runs.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 4,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed-runs.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 4,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed-runs.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed-runs.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed-runs.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed-runs.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed-runs.html",
+      "kind": "table",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 12,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 12,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ]
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 2,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 2,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 2,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 3,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 3,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 3,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 4,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 4,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 4,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 5,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 5,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 5,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 6,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 6,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 6,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 7,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 7,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 7,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 8,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 8,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 8,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 9,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 9,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 9,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 10,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 10,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 10,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 11,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 11,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 11,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 12,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 12,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 12,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 13,
+      "mode": "tablet"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/mixed.html",
+      "figure": 13,
+      "mode": "mobile"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/mixed.html",
+      "figure": 13,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 5,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 6,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 7,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 8,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 9,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 10,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 11,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 12,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 13,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 14,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 15,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "table",
+      "index": 16,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "pre",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "pre",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "pre",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "pre",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "혼합 부하의 저장 경합과 소켓 쓰기 최적화 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "mixed.html",
+      "kind": "pre",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect-runs.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect-runs.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 8,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect-runs.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 8,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect-runs.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 5,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 6,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 7,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 8,
+      "mode": "print"
+    },
+    {
+      "title": "재접속 부하 상세 측정 결과 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect-runs.html",
+      "kind": "table",
+      "index": 9,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 4,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 4,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 2,
+      "mode": "tablet"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 2,
+      "mode": "mobile"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect.html",
+      "figure": 2,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 3,
+      "mode": "tablet"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 3,
+      "mode": "mobile"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect.html",
+      "figure": 3,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 4,
+      "mode": "tablet"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 4,
+      "mode": "mobile"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect.html",
+      "figure": 4,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 5,
+      "mode": "tablet"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/reconnect.html",
+      "figure": 5,
+      "mode": "mobile"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/reconnect.html",
+      "figure": 5,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect.html",
+      "kind": "table",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect.html",
+      "kind": "table",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect.html",
+      "kind": "table",
+      "index": 5,
+      "mode": "print"
+    },
+    {
+      "title": "같은 메시지가 일부 수신자에게만 늦었던 이유 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "reconnect.html",
+      "kind": "pre",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/recovery.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/recovery.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/recovery.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "figure": 2,
+      "mode": "tablet"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/recovery.html",
+      "figure": 2,
+      "mode": "mobile"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/recovery.html",
+      "figure": 2,
+      "mode": "print"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "recovery.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "수신 flow control과 로그 기반 복구 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "recovery.html",
+      "kind": "pre",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 11,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 11,
+      "details": [],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": []
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 2,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 2,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 2,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 3,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 3,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 3,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 4,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 4,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 4,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 5,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 5,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 5,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 6,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 6,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 6,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 7,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 7,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 7,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 8,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 8,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 8,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 9,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 9,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 9,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 10,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 10,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 10,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 11,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 11,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 11,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 12,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 12,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 12,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 13,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 13,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 13,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 14,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 14,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 14,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 15,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 15,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 15,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 16,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 16,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 16,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 17,
+      "mode": "tablet"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/scale.html",
+      "figure": 17,
+      "mode": "mobile"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/scale.html",
+      "figure": 17,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 5,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 6,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 7,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 8,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 9,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 10,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 11,
+      "mode": "print"
+    },
+    {
+      "title": "k6 부하 시험과 처리 한계 분석 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "scale.html",
+      "kind": "table",
+      "index": 12,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 3,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 3,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        },
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ]
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 1,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 1,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 1,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 2,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 2,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 2,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 3,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 3,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 3,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 4,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 4,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 4,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 5,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 5,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 5,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 6,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 6,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 6,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 7,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 7,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 7,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 8,
+      "mode": "tablet"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/shared-fanout.html",
+      "figure": 8,
+      "mode": "mobile"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/shared-fanout.html",
+      "figure": 8,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 5,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 6,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 7,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 8,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 9,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 10,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 11,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 12,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 13,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 14,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 15,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 16,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "table",
+      "index": 17,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 5,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 6,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 7,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 8,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 9,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 10,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 11,
+      "mode": "print"
+    },
+    {
+      "title": "복구 조회 병합과 메시지 직렬화 재사용 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "shared-fanout.html",
+      "kind": "pre",
+      "index": 12,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/storage.html",
+      "mode": "desktop",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/storage.html",
+      "mode": "tablet",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/storage.html",
+      "mode": "mobile",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ],
+      "disclosure_toggle": true
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/storage.html",
+      "mode": "print",
+      "hiddenContent": [],
+      "wideTables": 0,
+      "details": [
+        {
+          "open": false,
+          "content": "visible"
+        }
+      ]
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 768,
+      "scrollWidth": 753,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/storage.html",
+      "figure": 0,
+      "mode": "tablet"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 390,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": false,
+      "file": "articles/storage.html",
+      "figure": 0,
+      "mode": "mobile"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "articles/storage.html",
+      "figure": 0,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "storage.html",
+      "kind": "pre",
+      "index": 0,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "storage.html",
+      "kind": "pre",
+      "index": 1,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "storage.html",
+      "kind": "pre",
+      "index": 2,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "storage.html",
+      "kind": "pre",
+      "index": 3,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "storage.html",
+      "kind": "pre",
+      "index": 4,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "storage.html",
+      "kind": "pre",
+      "index": 5,
+      "mode": "print"
+    },
+    {
+      "title": "메시지 저장 트랜잭션과 전송 멱등성 · StoryBridge",
+      "width": 794,
+      "scrollWidth": 779,
+      "overflow": false,
+      "brokenImages": 0,
+      "print": true,
+      "file": "storage.html",
+      "kind": "pre",
+      "index": 6,
+      "mode": "print"
+    }
+  ],
+  "browser_errors": [],
+  "runtime_errors": [],
+  "manual_review": {
+    "status": "completed_with_scope",
+    "browser_version": "Chrome/156.0.8078.74",
+    "observed": "Inspected six actual Chrome captures: guide, mixed and reconnect at 1280px and 390px. Read the revised guide opening, retained technical summaries, comparison conditions and visible limitations. Paragraph edits were read in the generated HTML and checked against prior proofread prose. Actual navigation checks cover representative article, list return and all-articles shortcut. Automated screen/tablet/mobile/print review covers all 13 pages.",
+    "fixes": [
+      "Reverted explanatory rewrites of backend concepts after user correction",
+      "Retained original technical introductions and findings",
+      "Edited awkward predicates, repeated sentences and lengthy candidate-name repetition in scoped paragraphs",
+      "Corrected the grammar error around continuous application"
+    ],
+    "limitations": [
+      "Not every captured pixel manually inspected",
+      "Wide tables and figures require internal horizontal scrolling on narrow screens",
+      "Print-media rendering does not establish physical pagination; no PDF generated",
+      "No Safari/Firefox or Notion upload review"
+    ],
+    "representative_captures": [
+      {
+        "file": "proof-index-desktop-summary.png",
+        "sha256": "91a7959d3af157811e02846c34c90c02f53e67aac80c8a830bf5787de38257c9"
+      },
+      {
+        "file": "proof-index-desktop.png",
+        "sha256": "d8ed237455ee5a0b9bf2cab69fb43427bdb9c57ec5c2429c51e7ce9c2e59bced"
+      },
+      {
+        "file": "proof-index-mobile-summary.png",
+        "sha256": "b373e722828409b23118f112479738706ac93086400cba205c9afc37d3242c3d"
+      },
+      {
+        "file": "proof-index-mobile.png",
+        "sha256": "c05c042b8822cf265de395ba00e953dad6af6a06c2699c6c2722ec9f619fde26"
+      },
+      {
+        "file": "proof-list-desktop.png",
+        "sha256": "949a75fa84c05d84406ea6773d7929454f6f5f226cd88c9e8edd9fbae855cd98"
+      },
+      {
+        "file": "proof-list-mobile.png",
+        "sha256": "a08886c0346d4b9de8db36c181f5f7edd4087fe2278d0432dfb5016b7f0fdacd"
+      },
+      {
+        "file": "proof-mixed-desktop-summary.png",
+        "sha256": "ea2e724a34e4addc470a381690d141062d624528d1731edad47a7dff09c8869f"
+      },
+      {
+        "file": "proof-mixed-desktop.png",
+        "sha256": "630bb8a26f3d2d35aaf9ec91bf2d384cb26a77a83460921125fdf4c9202e81cc"
+      },
+      {
+        "file": "proof-mixed-mobile-summary.png",
+        "sha256": "a0a069bbd748caa5c2f799b7aabf877b19a2aeda7ee0b5f49881113210bc6949"
+      },
+      {
+        "file": "proof-mixed-mobile.png",
+        "sha256": "d04db502b3cdb526fbf03d64b67f0261a7444c833178f54833e048f6f15af1b2"
+      },
+      {
+        "file": "proof-reconnect-desktop-summary.png",
+        "sha256": "81e2784627057831a4b85d2a30397b3d624d2920b798c701a7c4347b4a3a9aaa"
+      },
+      {
+        "file": "proof-reconnect-desktop.png",
+        "sha256": "636722fd4395a9c75296836c6c535eea5194a4c2ca68201784c385197a95fbfd"
+      },
+      {
+        "file": "proof-reconnect-mobile-summary.png",
+        "sha256": "7c821e38de0fe09957fbcb56efcd2378c36a1279529083fb4244d34a6f0b8feb"
+      },
+      {
+        "file": "proof-reconnect-mobile.png",
+        "sha256": "9d440c733bfc86f19febd110867d4270d83adca04025ea2262ebf1b30e73d061"
+      }
+    ],
+    "documents": {
+      "index.html": "211bd420fad3f7a9a63a9035a32d8b8cf94bc3232891d86057fd0b025f2c4f13",
+      "sources.html": "2502854f0a4e6f665419ba42597836e2d399d2a68505b4f7c6187791c9594d5f",
+      "articles/comparison.html": "443e6ce919026da3ed0781f6cf196f9ebccbf632db5541795cf1018a6daa9696",
+      "articles/connections.html": "efebbb11c7f9f5c68330bbbbea82bca5609ac99f52a91da36dfdf507ca293c68",
+      "articles/distributed.html": "a7ad35f00bf4d4d92a016101c7ff0f5f29dacfc34a56ae6bc4fd414fa8a633b2",
+      "articles/mixed-runs.html": "2a037c1d962274edaaef7ac7d994684e3e0ff5c1a49c7ec97a96522161478f78",
+      "articles/mixed.html": "079f6371e95f59b24cbf0d6a7e7ccb31e6aa92d83d5e221288ba1e471e235a5c",
+      "articles/reconnect-runs.html": "53d56af95feb24dd08f8387e7b2fb68d87c35e8fea1b0857351160e639a2de15",
+      "articles/reconnect.html": "6a2d6e89431ac997e47c6fbf58fedd2267f0b3dd8c830c960c1dfa05e67c3c8e",
+      "articles/recovery.html": "eabd402868f011e7e1c63a29ebe3b17965685059cf98b6c79b60b8e0b2020a6a",
+      "articles/scale.html": "3904ad5a2d4346f9e84dc438738ab32e3162a6370872ca0108ebfc844d88f98a",
+      "articles/shared-fanout.html": "41b95b98ce81070886f13186aff1a6443ec565e38e29288da27aaf800b32f7fd",
+      "articles/storage.html": "4c48bb5a3f02dd186d683306891b5369d4512f3ff7e8af83cf88c0ca1a9a9e43"
+    },
+    "recorded_at": "2026-11-02T01:23:49.594259+00:00"
+  },
+  "scope": "Static documents only; no performance or fault tests; print media, no PDF."
+}

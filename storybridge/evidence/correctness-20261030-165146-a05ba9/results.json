@@ -1,0 +1,15 @@
+[
+  {
+    "ids": "T35",
+    "name": "database-restart",
+    "status": "PASS",
+    "details": {
+      "real_mysqld_kill": 20060,
+      "down_send_status": 503,
+      "retry_same_key_seq": 35,
+      "recovery_query_errors_delta": 0,
+      "socket_preserved": true
+    },
+    "seconds": 11.033562500029802
+  }
+]

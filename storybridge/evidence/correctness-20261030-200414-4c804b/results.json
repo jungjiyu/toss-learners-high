@@ -1,0 +1,181 @@
+[
+  {
+    "ids": "T01 T02 T07",
+    "name": "identity-order",
+    "status": "PASS",
+    "details": {
+      "same_key_calls": 8,
+      "unique_effect": 1,
+      "parallel_unique": 24,
+      "first": 809,
+      "last": 832
+    },
+    "seconds": 0.7589509999379516
+  },
+  {
+    "ids": "T03 T04 T06",
+    "name": "transaction-boundaries",
+    "status": "PASS",
+    "details": {
+      "rollback_head": 24,
+      "lost_response_receipt": {
+        "room": 102,
+        "sender": 1,
+        "key": "ce1b8215ae0641a89b22864aab207436",
+        "messageId": "96ee2665-bcbd-433e-83ee-96e769b1d1f2",
+        "seq": 25,
+        "hash": "3d218b82f677ec124ef052881422627134b7e52fc9943323458654cb13320a22",
+        "storedAt": 1793358256777
+      },
+      "duplicate_publish_attempts": 2
+    },
+    "seconds": 0.8823620000621304
+  },
+  {
+    "ids": "T08",
+    "name": "subscribe-boundary",
+    "status": "PASS",
+    "details": {
+      "base": 2,
+      "completed": 3
+    },
+    "seconds": 0.5811047001043335
+  },
+  {
+    "ids": "T09 T10 T29",
+    "name": "reversed-gap-last-loss",
+    "status": "PASS",
+    "details": {
+      "reversed_messages": 39,
+      "gap_base": 82,
+      "final_cursor": 123,
+      "new_send_after_last": 0
+    },
+    "seconds": 2.2798127999994904
+  },
+  {
+    "ids": "T11 T13 T27 T39 X02",
+    "name": "slow-ack-recovery",
+    "status": "PASS",
+    "details": {
+      "base": 180,
+      "goal": 270,
+      "max_credit": 1,
+      "applied": 90
+    },
+    "seconds": 3.9004833000944927
+  },
+  {
+    "ids": "T21 T42",
+    "name": "retention-snapshot",
+    "status": "PASS",
+    "details": {
+      "old_snapshot_floor": 15,
+      "old_snapshot_rows": 6,
+      "new_floor": 21,
+      "receipt_survives": true,
+      "delete_rollback": true
+    },
+    "seconds": 0.477094600093551
+  },
+  {
+    "ids": "T22 T23 T33",
+    "name": "read-auth-list",
+    "status": "PASS",
+    "details": {
+      "list_only_head": 3,
+      "read_monotonic": 3,
+      "unauthorized_paths": 5,
+      "expired_socket_closed": true
+    },
+    "seconds": 1.893741499981843
+  },
+  {
+    "ids": "T30 T41 X07",
+    "name": "retiring-credit",
+    "status": "PASS",
+    "details": {
+      "retiring_credit": 16,
+      "discarded_not_applied": 16,
+      "new_epoch": true,
+      "stale_ack_rejected": true,
+      "new_epoch_recovered_to": 72,
+      "new_epoch_unique_applied": 24
+    },
+    "seconds": 0.7516972000012174
+  },
+  {
+    "ids": "E05",
+    "name": "poison",
+    "status": "PASS",
+    "details": {
+      "poison_seq": 4,
+      "protected_floor": 4,
+      "other_room_done": true,
+      "reprocessed": true
+    },
+    "seconds": 0.830579400062561
+  },
+  {
+    "ids": "T26 T28 T37",
+    "name": "local-crash",
+    "status": "PASS",
+    "details": {
+      "real_process_exit_points": [
+        {
+          "stage": "before_projection",
+          "cursor_after_kill": 4
+        },
+        {
+          "stage": "after_projection",
+          "cursor_after_kill": 4
+        },
+        {
+          "stage": "after_cursor",
+          "cursor_after_kill": 4
+        },
+        {
+          "stage": "before_commit",
+          "cursor_after_kill": 4
+        },
+        {
+          "stage": "after_commit",
+          "cursor_after_kill": 5
+        }
+      ],
+      "pending_key_reused": true,
+      "fresh_store_cursor": 0
+    },
+    "seconds": 1.5384354999987409
+  },
+  {
+    "ids": "T05",
+    "name": "app-crash",
+    "status": "PASS",
+    "details": {
+      "durable_seq": 3,
+      "post_restart_applied": true
+    },
+    "seconds": 5.459126700065099
+  },
+  {
+    "ids": "T40-storage",
+    "name": "storage-audit",
+    "status": "PASS",
+    "details": {
+      "rooms": 73,
+      "retained_messages": 7442,
+      "problems": [],
+      "snapshot": "one REPEATABLE READ transaction",
+      "note": "Storage snapshot; independent logical delivery obligations are audited separately by load harness."
+    },
+    "seconds": 0.1280944999307394
+  },
+  {
+    "ids": "T02 T23",
+    "name": "ws-keyed-admission",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 48, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 206, in ws_keyed_admission\n    w.send(json.dumps({'type':'SEND','room':3,'key':keys[2],'body':'explicit rejection'}));error,_=frame(w,'SEND_ERROR');assert error['key']==keys[2] and error['error']=='BUSY'\n                                                                                                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 38, in frame\n    raise TimeoutError(kind)\nTimeoutError: SEND_ERROR\n",
+    "seconds": 6.398028999916278
+  }
+]

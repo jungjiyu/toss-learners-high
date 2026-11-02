@@ -1,0 +1,174 @@
+[
+  {
+    "ids": "T01 T02 T07",
+    "name": "identity-order",
+    "status": "PASS",
+    "details": {
+      "same_key_calls": 8,
+      "unique_effect": 1,
+      "parallel_unique": 24,
+      "first": 663,
+      "last": 686
+    },
+    "seconds": 0.6615936000598595
+  },
+  {
+    "ids": "T03 T04 T06",
+    "name": "transaction-boundaries",
+    "status": "PASS",
+    "details": {
+      "rollback_head": 22,
+      "lost_response_receipt": {
+        "room": 102,
+        "sender": 1,
+        "key": "14656cf3e2cd4f78a12b5a024b09a477",
+        "messageId": "7235863c-2a14-465c-ae86-cf1b9817305f",
+        "seq": 23,
+        "hash": "3d218b82f677ec124ef052881422627134b7e52fc9943323458654cb13320a22",
+        "storedAt": 1793357679393
+      },
+      "duplicate_publish_attempts": 2
+    },
+    "seconds": 0.8239583999384195
+  },
+  {
+    "ids": "T08",
+    "name": "subscribe-boundary",
+    "status": "PASS",
+    "details": {
+      "base": 1,
+      "completed": 2
+    },
+    "seconds": 0.6268625999800861
+  },
+  {
+    "ids": "T09 T10 T29",
+    "name": "reversed-gap-last-loss",
+    "status": "PASS",
+    "details": {
+      "reversed_messages": 39,
+      "gap_base": 41,
+      "final_cursor": 82,
+      "new_send_after_last": 0
+    },
+    "seconds": 2.211294399923645
+  },
+  {
+    "ids": "T11 T13 T27 T39 X02",
+    "name": "slow-ack-recovery",
+    "status": "PASS",
+    "details": {
+      "base": 90,
+      "goal": 180,
+      "max_credit": 2,
+      "applied": 90
+    },
+    "seconds": 4.040950900060125
+  },
+  {
+    "ids": "T21 T42",
+    "name": "retention-snapshot",
+    "status": "PASS",
+    "details": {
+      "old_snapshot_floor": 8,
+      "old_snapshot_rows": 6,
+      "new_floor": 14,
+      "receipt_survives": true,
+      "delete_rollback": true
+    },
+    "seconds": 0.4883208000101149
+  },
+  {
+    "ids": "T22 T23 T33",
+    "name": "read-auth-list",
+    "status": "PASS",
+    "details": {
+      "list_only_head": 2,
+      "read_monotonic": 2,
+      "unauthorized_paths": 5,
+      "expired_socket_closed": true
+    },
+    "seconds": 2.1850870000198483
+  },
+  {
+    "ids": "T30 T41 X07",
+    "name": "retiring-credit",
+    "status": "PASS",
+    "details": {
+      "retiring_credit": 16,
+      "discarded_not_applied": 16,
+      "new_epoch": true,
+      "stale_ack_rejected": true,
+      "new_epoch_recovered_to": 48,
+      "new_epoch_unique_applied": 24
+    },
+    "seconds": 0.9169564999174327
+  },
+  {
+    "ids": "E05",
+    "name": "poison",
+    "status": "PASS",
+    "details": {
+      "poison_seq": 3,
+      "protected_floor": 3,
+      "other_room_done": true,
+      "reprocessed": true
+    },
+    "seconds": 0.8311517999973148
+  },
+  {
+    "ids": "T26 T28 T37",
+    "name": "local-crash",
+    "status": "PASS",
+    "details": {
+      "real_process_exit_points": [
+        {
+          "stage": "before_projection",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "after_projection",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "after_cursor",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "before_commit",
+          "cursor_after_kill": 2
+        },
+        {
+          "stage": "after_commit",
+          "cursor_after_kill": 3
+        }
+      ],
+      "pending_key_reused": true,
+      "fresh_store_cursor": 0
+    },
+    "seconds": 1.4603852999862283
+  },
+  {
+    "ids": "T05",
+    "name": "app-crash",
+    "status": "PASS",
+    "details": {
+      "durable_seq": 2,
+      "post_restart_applied": true
+    },
+    "seconds": 5.510511999949813
+  },
+  {
+    "ids": "T40-storage",
+    "name": "storage-audit",
+    "status": "PASS",
+    "details": {
+      "rooms": 73,
+      "retained_messages": 7129,
+      "problems": [],
+      "snapshot": "one REPEATABLE READ transaction",
+      "note": "Storage snapshot; independent logical delivery obligations are audited separately by load harness."
+    },
+    "seconds": 0.13114349998068064
+  }
+]

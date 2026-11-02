@@ -1,0 +1,7 @@
+{
+  "logged_logical_inputs": 1810,
+  "db_unique": 1810,
+  "inputs_without_receipt": 0,
+  "problems": [],
+  "scope": "Every actual k6 HTTP logical input hash versus independent message/receipt/outbox rows; no server route index used"
+}

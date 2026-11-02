@@ -1,0 +1,242 @@
+{
+  "before": {
+    "18080": {
+      "broker_app_queue": 0,
+      "broker_consumers_registered": 1,
+      "broker_transport_epochs": 1,
+      "gc_count": 13,
+      "gc_ms": 61,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 134217728,
+      "heap_used": 30887936,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "outbox_claim_queries": 302,
+      "outbox_done": 0,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 29,
+      "route_rooms": 0,
+      "route_subscriptions": 0
+    },
+    "18081": {
+      "broker_app_queue": 0,
+      "broker_consumers_registered": 1,
+      "broker_transport_epochs": 1,
+      "gc_count": 13,
+      "gc_ms": 69,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 134217728,
+      "heap_used": 23320352,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "outbox_claim_queries": 146,
+      "outbox_done": 0,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 30,
+      "route_rooms": 0,
+      "route_subscriptions": 0
+    }
+  },
+  "after": {
+    "18080": {
+      "applied_ack": 499771,
+      "batch_callback_nanos": 1102592366,
+      "batch_group_max": 128,
+      "batch_pending": 0,
+      "batch_query_nanos": 39526327023,
+      "batch_requests": 32434,
+      "batch_shared_recipients": 32434,
+      "batch_snapshots": 4818,
+      "batch_wait_max_nanos": 165041700,
+      "batch_wait_nanos": 281494399757,
+      "broker_app_queue": 0,
+      "broker_bindings_added": 1,
+      "broker_bindings_removed": 1,
+      "broker_confirms": 1891,
+      "broker_consumer_acks": 3868,
+      "broker_consumers_registered": 1,
+      "broker_transport_epochs": 1,
+      "credit_bytes": 0,
+      "credit_count": 0,
+      "db_admission_rejected": 1565,
+      "db_work_nanos": 135406788679,
+      "frames_issued": 495104,
+      "gc_count": 61,
+      "gc_ms": 520,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 134217728,
+      "heap_used": 71417112,
+      "history_queries": 4946,
+      "history_rows": 33739,
+      "inbound_assembly_bytes": 0,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "issued_bytes": 410189056,
+      "list_batch_requests": 10938,
+      "list_batch_snapshots": 6613,
+      "live_transitions": 27646,
+      "observed_write_ms": 127,
+      "outbox_claim_queries": 2009,
+      "outbox_claim_updates": 857,
+      "outbox_done": 1891,
+      "outbox_finish_transactions": 857,
+      "outbox_finish_updates": 857,
+      "outbox_publication_queries": 857,
+      "outbox_publication_rows": 1891,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 60,
+      "recovery_event_wakes": 27720,
+      "route_rooms": 0,
+      "route_subscriptions": 0,
+      "session_closes": 128,
+      "sessions_active": 0,
+      "shared_live_deferred": 89984,
+      "shared_live_issued": 344058,
+      "socket_received_bytes": 44345588,
+      "socket_sent_bytes": 416735069,
+      "socket_writes": 538611,
+      "stored_results": 1937,
+      "wire_cache_bytes": 6734116,
+      "wire_cache_hits": 491613,
+      "wire_cache_misses": 3868,
+      "wire_cache_peak": 6734116,
+      "writer_exits": 128,
+      "writer_exits_error": 128,
+      "writers_active": 0
+    },
+    "18081": {
+      "applied_ack": 499839,
+      "batch_callback_nanos": 1279133320,
+      "batch_group_max": 128,
+      "batch_pending": 0,
+      "batch_query_nanos": 39064216488,
+      "batch_requests": 32867,
+      "batch_shared_recipients": 32867,
+      "batch_snapshots": 4268,
+      "batch_wait_max_nanos": 146750599,
+      "batch_wait_nanos": 278902948989,
+      "broker_app_queue": 0,
+      "broker_bindings_added": 1,
+      "broker_bindings_removed": 1,
+      "broker_confirms": 1977,
+      "broker_consumer_acks": 3868,
+      "broker_consumers_registered": 1,
+      "broker_transport_epochs": 1,
+      "credit_bytes": 0,
+      "credit_count": 0,
+      "db_admission_rejected": 1569,
+      "db_work_nanos": 136579603398,
+      "frames_issued": 495104,
+      "gc_count": 61,
+      "gc_ms": 543,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 134217728,
+      "heap_used": 46237760,
+      "history_queries": 4396,
+      "history_rows": 29237,
+      "inbound_assembly_bytes": 0,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "issued_bytes": 410189056,
+      "list_batch_requests": 10952,
+      "list_batch_snapshots": 6891,
+      "live_transitions": 27993,
+      "observed_write_ms": 116,
+      "outbox_claim_queries": 1843,
+      "outbox_claim_updates": 884,
+      "outbox_done": 1977,
+      "outbox_finish_transactions": 884,
+      "outbox_finish_updates": 884,
+      "outbox_publication_queries": 884,
+      "outbox_publication_rows": 1977,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 61,
+      "recovery_event_wakes": 28059,
+      "route_rooms": 0,
+      "route_subscriptions": 0,
+      "session_closes": 128,
+      "sessions_active": 0,
+      "shared_live_deferred": 88059,
+      "shared_live_issued": 345080,
+      "socket_received_bytes": 44351713,
+      "socket_sent_bytes": 416774612,
+      "socket_writes": 539040,
+      "stored_results": 1931,
+      "wire_cache_bytes": 6734116,
+      "wire_cache_hits": 491505,
+      "wire_cache_misses": 3868,
+      "wire_cache_peak": 6734116,
+      "writer_exits": 128,
+      "writer_exits_error": 128,
+      "writers_active": 0
+    }
+  },
+  "db_before": [
+    [
+      "Bytes_received",
+      "180357"
+    ],
+    [
+      "Bytes_sent",
+      "165119"
+    ],
+    [
+      "Innodb_row_lock_time",
+      "0"
+    ],
+    [
+      "Innodb_row_lock_waits",
+      "0"
+    ],
+    [
+      "Questions",
+      "2585"
+    ],
+    [
+      "Threads_connected",
+      "7"
+    ],
+    [
+      "Threads_running",
+      "2"
+    ]
+  ],
+  "db_after": [
+    [
+      "Bytes_received",
+      "16403969"
+    ],
+    [
+      "Bytes_sent",
+      "65096093"
+    ],
+    [
+      "Innodb_row_lock_time",
+      "14455"
+    ],
+    [
+      "Innodb_row_lock_waits",
+      "1706"
+    ],
+    [
+      "Questions",
+      "184428"
+    ],
+    [
+      "Threads_connected",
+      "11"
+    ],
+    [
+      "Threads_running",
+      "2"
+    ]
+  ]
+}

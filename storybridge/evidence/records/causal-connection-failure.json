@@ -1,0 +1,151 @@
+{
+  "run": "scale-U-causal-final-D-20261031-220703-9edc",
+  "scope": "Failed attempts stay failed; later successful attempts never erase them. Outage from original close is separate. TCP refusal OS detail was not directly traced.",
+  "failed_attempts": 15,
+  "first_attempt_after_measure_start_ms": 345361,
+  "last_attempt_after_measure_start_ms": 345381,
+  "same_time_unknown_send_source": "uncertain-send-audit.json",
+  "following_attempts": [
+    {
+      "recipient": 21,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345371,
+      "retry_wait_ms": 920,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1388
+    },
+    {
+      "recipient": 50,
+      "room": 20,
+      "failed_generation": 13,
+      "attempt_ms": 345370,
+      "retry_wait_ms": 881,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1355
+    },
+    {
+      "recipient": 107,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345381,
+      "retry_wait_ms": 757,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1267
+    },
+    {
+      "recipient": 108,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345372,
+      "retry_wait_ms": 811,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1272
+    },
+    {
+      "recipient": 136,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345369,
+      "retry_wait_ms": 722,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1235
+    },
+    {
+      "recipient": 165,
+      "room": 11,
+      "failed_generation": 13,
+      "attempt_ms": 345369,
+      "retry_wait_ms": 690,
+      "next_outcome": "caught_at_ready",
+      "next_H_from_original_close_ms": 1024
+    },
+    {
+      "recipient": 194,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345367,
+      "retry_wait_ms": 660,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1111
+    },
+    {
+      "recipient": 252,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345370,
+      "retry_wait_ms": 575,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 991
+    },
+    {
+      "recipient": 281,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345361,
+      "retry_wait_ms": 539,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 939
+    },
+    {
+      "recipient": 310,
+      "room": 1,
+      "failed_generation": 13,
+      "attempt_ms": 345363,
+      "retry_wait_ms": 502,
+      "next_outcome": "caught_at_ready",
+      "next_H_from_original_close_ms": 835
+    },
+    {
+      "recipient": 338,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345377,
+      "retry_wait_ms": 930,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1389
+    },
+    {
+      "recipient": 367,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345371,
+      "retry_wait_ms": 898,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1391
+    },
+    {
+      "recipient": 454,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345366,
+      "retry_wait_ms": 769,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1282
+    },
+    {
+      "recipient": 455,
+      "room": 22,
+      "failed_generation": 13,
+      "attempt_ms": 345362,
+      "retry_wait_ms": 829,
+      "next_outcome": "caught_at_ready",
+      "next_H_from_original_close_ms": 1161
+    },
+    {
+      "recipient": 483,
+      "room": 999,
+      "failed_generation": 13,
+      "attempt_ms": 345367,
+      "retry_wait_ms": 733,
+      "next_outcome": "caught_up",
+      "next_H_from_original_close_ms": 1199
+    }
+  ],
+  "inputs_sha256": {
+    "connection-lifecycle.jsonl": "53bc10b8173c9fd32d7f81596290184f043a3f57ebbf517b9fc76be0a79de621",
+    "lifecycle-audit.json": "4c2377d17dbaf3345f54006a93dc5faf81801cca675e3d2abe095d19e079639d",
+    "uncertain-send-audit.json": "f57ce24fe741206812b7bb442587917ca26250c31e292e3fc6a9c711253ecc0b"
+  },
+  "generator_sha256": "87a8b5035d9d6bdf386ff56fdf611dda002c597097996ce6e8699801fc74dc36"
+}

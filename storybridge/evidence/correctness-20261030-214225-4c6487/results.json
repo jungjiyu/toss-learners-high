@@ -1,0 +1,53 @@
+[
+  {
+    "ids": "T24 T36 X04",
+    "name": "reconnect-hot",
+    "status": "PASS",
+    "details": {
+      "reconnecting_recipients": 8,
+      "normal_send_seconds": [
+        0.02293840004131198,
+        0.013079899945296347,
+        0.011679999995976686,
+        0.01012540003284812,
+        0.02780379995238036,
+        0.017637499957345426,
+        0.0136280000442639,
+        0.01475079997908324
+      ],
+      "hot_rejections": [
+        503,
+        429,
+        429,
+        429,
+        429
+      ],
+      "all_recovered": true
+    },
+    "seconds": 3.3281597000313923
+  },
+  {
+    "ids": "T35",
+    "name": "database-restart",
+    "status": "PASS",
+    "details": {
+      "real_mysqld_kill": 20816,
+      "down_send_status": 503,
+      "retry_same_key_seq": 29,
+      "recovery_query_errors_delta": 0,
+      "socket_preserved": true
+    },
+    "seconds": 11.271915700053796
+  },
+  {
+    "ids": "T03 T04 T28",
+    "name": "process-commit-crash",
+    "status": "PASS",
+    "details": {
+      "real_app_kills": 2,
+      "precommit_rolled_back": true,
+      "postcommit_same_seq": 163
+    },
+    "seconds": 10.522776199970394
+  }
+]

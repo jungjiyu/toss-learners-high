@@ -1,0 +1,9 @@
+[
+  {
+    "ids": "T12 T43",
+    "name": "blocked-write",
+    "status": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 48, in case\n    try:record['details']=fn();record['status']='PASS'\n                          ^^^^\n  File \"C:\\1030_toss_storybridge\\scripts\\extended_suite.py\", line 186, in blocked_write\n    until(lambda:not owned_slow_sockets(),3)\n  File \"C:\\1030_toss_storybridge\\scripts\\suite.py\", line 18, in until\n    raise TimeoutError('condition deadline')\nTimeoutError: condition deadline\n",
+    "seconds": 32.622214399976656
+  }
+]

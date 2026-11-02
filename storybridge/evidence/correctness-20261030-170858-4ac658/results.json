@@ -1,0 +1,29 @@
+[
+  {
+    "ids": "T26 T28 T14 X03",
+    "name": "combined-local-restart",
+    "status": "PASS",
+    "details": {
+      "same_key": "36b6247df8814bbc9fc49dd3ee09f21a",
+      "same_recipient_store": true,
+      "receiver_process_killed_before_commit": true,
+      "old_epoch_rejected": true,
+      "final_cursor": 2
+    },
+    "seconds": 6.728597200009972
+  },
+  {
+    "ids": "T39",
+    "name": "bounded-nonprogress",
+    "status": "PASS",
+    "details": {
+      "logical_obligations": 24,
+      "wire_received": 16,
+      "locally_committed": 0,
+      "uncompleted": 24,
+      "classification": "permanently non-applying recipient; bounded close is NOT recovery",
+      "closed_seconds": 15.125
+    },
+    "seconds": 15.80320289998781
+  }
+]

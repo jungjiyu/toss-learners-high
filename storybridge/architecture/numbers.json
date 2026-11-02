@@ -1,0 +1,487 @@
+{
+  "cpu_stage": [
+    {
+      "run": "scale-MI-mixedround-finalmatched-mixed-0-20261031-113558-8b61",
+      "source": "727153f2a84ac9274a181f25f43287cdcd378174",
+      "expected": 601000,
+      "received": 601000,
+      "missing": 0,
+      "matched_work": {
+        "expected": 601000,
+        "received": 601000,
+        "recovery_elapsed_seconds": 47.74900007247925,
+        "cpu_seconds": {
+          "gateway18080": 145.8087560963631,
+          "mysql": 31.440173029184336,
+          "k6": 233.47798561024672
+        },
+        "server_cpu_seconds": 177.24892912554745,
+        "scope": "One-second process CPU interval overlap with receiver start through final receipt; fixture SEND and post-completion idle excluded. Includes all fixed obligations, not just measurement-window receipts."
+      }
+    },
+    {
+      "run": "scale-MI-mixedround-finalmatched-mixed-0-20261031-114142-f883",
+      "source": "727153f2a84ac9274a181f25f43287cdcd378174",
+      "expected": 601000,
+      "received": 601000,
+      "missing": 0,
+      "matched_work": {
+        "expected": 601000,
+        "received": 601000,
+        "recovery_elapsed_seconds": 48.11800003051758,
+        "cpu_seconds": {
+          "gateway18080": 162.49960482931135,
+          "mysql": 34.420835086584084,
+          "k6": 262.3671448488235
+        },
+        "server_cpu_seconds": 196.92043991589543,
+        "scope": "One-second process CPU interval overlap with receiver start through final receipt; fixture SEND and post-completion idle excluded. Includes all fixed obligations, not just measurement-window receipts."
+      }
+    },
+    {
+      "run": "scale-MI-mixedround-finalmatched-mixed-0-20261031-114336-73f1",
+      "source": "727153f2a84ac9274a181f25f43287cdcd378174",
+      "expected": 601000,
+      "received": 601000,
+      "missing": 0,
+      "matched_work": {
+        "expected": 601000,
+        "received": 601000,
+        "recovery_elapsed_seconds": 47.7279999256134,
+        "cpu_seconds": {
+          "gateway18080": 149.45873786616323,
+          "mysql": 30.877227841138843,
+          "k6": 248.20905579137795
+        },
+        "server_cpu_seconds": 180.33596570730208,
+        "scope": "One-second process CPU interval overlap with receiver start through final receipt; fixture SEND and post-completion idle excluded. Includes all fixed obligations, not just measurement-window receipts."
+      }
+    },
+    {
+      "run": "scale-Q-mixedround-finalmatched-mixed-0-20261031-113752-40d7",
+      "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+      "expected": 601000,
+      "received": 601000,
+      "missing": 0,
+      "matched_work": {
+        "expected": 601000,
+        "received": 601000,
+        "recovery_elapsed_seconds": 47.550999879837036,
+        "cpu_seconds": {
+          "gateway18080": 119.203363214016,
+          "mysql": 24.51113859343529,
+          "k6": 247.4450970807076
+        },
+        "server_cpu_seconds": 143.71450180745128,
+        "scope": "One-second process CPU interval overlap with receiver start through final receipt; fixture SEND and post-completion idle excluded. Includes all fixed obligations, not just measurement-window receipts."
+      }
+    },
+    {
+      "run": "scale-Q-mixedround-finalmatched-mixed-0-20261031-113947-fa65",
+      "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+      "expected": 601000,
+      "received": 601000,
+      "missing": 0,
+      "matched_work": {
+        "expected": 601000,
+        "received": 601000,
+        "recovery_elapsed_seconds": 47.312999963760376,
+        "cpu_seconds": {
+          "gateway18080": 116.9651163098812,
+          "mysql": 23.55079817652702,
+          "k6": 235.32180389118196
+        },
+        "server_cpu_seconds": 140.5159144864082,
+        "scope": "One-second process CPU interval overlap with receiver start through final receipt; fixture SEND and post-completion idle excluded. Includes all fixed obligations, not just measurement-window receipts."
+      }
+    },
+    {
+      "run": "scale-Q-mixedround-finalmatched-mixed-0-20261031-114602-85b8",
+      "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+      "expected": 601000,
+      "received": 601000,
+      "missing": 0,
+      "matched_work": {
+        "expected": 601000,
+        "received": 601000,
+        "recovery_elapsed_seconds": 47.098999977111816,
+        "cpu_seconds": {
+          "gateway18080": 108.1081247367859,
+          "mysql": 22.13715995097161,
+          "k6": 222.97111561226842
+        },
+        "server_cpu_seconds": 130.2452846877575,
+        "scope": "One-second process CPU interval overlap with receiver start through final receipt; fixture SEND and post-completion idle excluded. Includes all fixed obligations, not just measurement-window receipts."
+      }
+    }
+  ],
+  "cpu_medians": {
+    "MI": 180.33596570730208,
+    "Q": 140.5159144864082
+  },
+  "cpu_reduction_percent": 22.081036949403988,
+  "reconnect_stage": [
+    {
+      "run": "scale-Q-causal-explore-D-20261031-222005-1f73",
+      "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+      "final_slot": {
+        "label": "Q",
+        "cell": "D",
+        "repeat": 1
+      },
+      "attempts": 27000,
+      "stored": 26464,
+      "rejected": 536,
+      "unknown": 0,
+      "normal_acceptance": 1.0,
+      "normal_joint_ratio": 0.9787037037037037,
+      "normal_room_p99_ms": 310,
+      "overall_acceptance": 0.9801481481481481,
+      "reconnect_failures": 780,
+      "normal_send_confirmation": {
+        "attempts": 5400,
+        "confirmed": 5400,
+        "p99_ms": 53.02000000000044,
+        "max_ms": 150,
+        "scope": "First logical SEND to confirmed outcome; includes any same-key result resolution. Rejected/unknown sends remain in acceptance and joint denominators, not completion latency."
+      },
+      "dropped_measurement": 0,
+      "rooms": {
+        "hot": {
+          "attempts": 21600,
+          "stored": 21064,
+          "rejected": 536,
+          "unknown": 0,
+          "acceptance": 0.9751851851851852
+        },
+        "normal": {
+          "attempts": 5400,
+          "stored": 5400,
+          "rejected": 0,
+          "unknown": 0,
+          "acceptance": 1.0
+        }
+      },
+      "round_outcomes": {
+        "normal": {
+          "caught_at_ready": 1692,
+          "caught_up": 308
+        },
+        "hot_fast": {
+          "caught_up": 6000
+        },
+        "hot_slow": {
+          "caught_up": 1220,
+          "closed_before_target": 780
+        }
+      }
+    },
+    {
+      "run": "scale-U-causal-explore-D-20261031-223245-c68f",
+      "source": "d1ab45300a25fc763381899466752482bf6e0921",
+      "final_slot": {
+        "label": "U",
+        "cell": "D",
+        "repeat": 1
+      },
+      "attempts": 27000,
+      "stored": 26451,
+      "rejected": 549,
+      "unknown": 0,
+      "normal_acceptance": 1.0,
+      "normal_joint_ratio": 0.9912962962962963,
+      "normal_room_p99_ms": 166,
+      "overall_acceptance": 0.9796666666666667,
+      "reconnect_failures": 780,
+      "normal_send_confirmation": {
+        "attempts": 5400,
+        "confirmed": 5400,
+        "p99_ms": 55.02000000000044,
+        "max_ms": 258,
+        "scope": "First logical SEND to confirmed outcome; includes any same-key result resolution. Rejected/unknown sends remain in acceptance and joint denominators, not completion latency."
+      },
+      "dropped_measurement": 0,
+      "rooms": {
+        "hot": {
+          "attempts": 21600,
+          "stored": 21051,
+          "rejected": 549,
+          "unknown": 0,
+          "acceptance": 0.9745833333333334
+        },
+        "normal": {
+          "attempts": 5400,
+          "stored": 5400,
+          "rejected": 0,
+          "unknown": 0,
+          "acceptance": 1.0
+        }
+      },
+      "round_outcomes": {
+        "normal": {
+          "caught_at_ready": 1829,
+          "caught_up": 171
+        },
+        "hot_fast": {
+          "caught_up": 5998,
+          "caught_at_ready": 2
+        },
+        "hot_slow": {
+          "caught_up": 1218,
+          "closed_before_target": 780,
+          "caught_at_ready": 2
+        }
+      }
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-203816-086a",
+      "source": "d1ab45300a25fc763381899466752482bf6e0921",
+      "final_slot": {
+        "label": "U",
+        "cell": "D",
+        "repeat": 2
+      },
+      "attempts": 27000,
+      "stored": 26662,
+      "rejected": 338,
+      "unknown": 0,
+      "normal_acceptance": 1.0,
+      "normal_joint_ratio": 0.9929629629629629,
+      "normal_room_p99_ms": 139,
+      "overall_acceptance": 0.9874814814814815,
+      "reconnect_failures": 780,
+      "normal_send_confirmation": {
+        "attempts": 5400,
+        "confirmed": 5400,
+        "p99_ms": 35.0,
+        "max_ms": 116,
+        "scope": "First logical SEND to confirmed outcome; includes any same-key result resolution. Rejected/unknown sends remain in acceptance and joint denominators, not completion latency."
+      },
+      "dropped_measurement": 0,
+      "rooms": {
+        "hot": {
+          "attempts": 21600,
+          "stored": 21262,
+          "rejected": 338,
+          "unknown": 0,
+          "acceptance": 0.9843518518518518
+        },
+        "normal": {
+          "attempts": 5400,
+          "stored": 5400,
+          "rejected": 0,
+          "unknown": 0,
+          "acceptance": 1.0
+        }
+      },
+      "round_outcomes": {
+        "normal": {
+          "caught_at_ready": 1839,
+          "caught_up": 161
+        },
+        "hot_fast": {
+          "caught_up": 5990,
+          "caught_at_ready": 10
+        },
+        "hot_slow": {
+          "caught_up": 1220,
+          "closed_before_target": 780
+        }
+      }
+    },
+    {
+      "run": "scale-Q-causal-final-D-20261031-205058-7159",
+      "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+      "final_slot": {
+        "label": "Q",
+        "cell": "D",
+        "repeat": 2
+      },
+      "attempts": 27000,
+      "stored": 26685,
+      "rejected": 315,
+      "unknown": 0,
+      "normal_acceptance": 1.0,
+      "normal_joint_ratio": 0.9818518518518519,
+      "normal_room_p99_ms": 262.77000000000044,
+      "overall_acceptance": 0.9883333333333333,
+      "reconnect_failures": 780,
+      "normal_send_confirmation": {
+        "attempts": 5400,
+        "confirmed": 5400,
+        "p99_ms": 39.0,
+        "max_ms": 117,
+        "scope": "First logical SEND to confirmed outcome; includes any same-key result resolution. Rejected/unknown sends remain in acceptance and joint denominators, not completion latency."
+      },
+      "dropped_measurement": 0,
+      "rooms": {
+        "hot": {
+          "attempts": 21600,
+          "stored": 21285,
+          "rejected": 315,
+          "unknown": 0,
+          "acceptance": 0.9854166666666667
+        },
+        "normal": {
+          "attempts": 5400,
+          "stored": 5400,
+          "rejected": 0,
+          "unknown": 0,
+          "acceptance": 1.0
+        }
+      },
+      "round_outcomes": {
+        "normal": {
+          "caught_at_ready": 1729,
+          "caught_up": 271
+        },
+        "hot_fast": {
+          "caught_up": 6000
+        },
+        "hot_slow": {
+          "caught_up": 1220,
+          "closed_before_target": 780
+        }
+      }
+    },
+    {
+      "run": "scale-Q-causal-final-D-20261031-215422-6614",
+      "source": "4d540615c4526929dceb98af77f71611d6550b7c",
+      "final_slot": {
+        "label": "Q",
+        "cell": "D",
+        "repeat": 3
+      },
+      "attempts": 27000,
+      "stored": 25312,
+      "rejected": 1688,
+      "unknown": 0,
+      "normal_acceptance": 1.0,
+      "normal_joint_ratio": 0.9546296296296296,
+      "normal_room_p99_ms": 813.0800000000017,
+      "overall_acceptance": 0.9374814814814815,
+      "reconnect_failures": 800,
+      "normal_send_confirmation": {
+        "attempts": 5400,
+        "confirmed": 5400,
+        "p99_ms": 97.01000000000022,
+        "max_ms": 214,
+        "scope": "First logical SEND to confirmed outcome; includes any same-key result resolution. Rejected/unknown sends remain in acceptance and joint denominators, not completion latency."
+      },
+      "dropped_measurement": 0,
+      "rooms": {
+        "hot": {
+          "attempts": 21600,
+          "stored": 19912,
+          "rejected": 1688,
+          "unknown": 0,
+          "acceptance": 0.9218518518518518
+        },
+        "normal": {
+          "attempts": 5400,
+          "stored": 5400,
+          "rejected": 0,
+          "unknown": 0,
+          "acceptance": 1.0
+        }
+      },
+      "round_outcomes": {
+        "normal": {
+          "caught_at_ready": 1462,
+          "caught_up": 538
+        },
+        "hot_fast": {
+          "caught_up": 6000
+        },
+        "hot_slow": {
+          "caught_up": 1200,
+          "closed_before_target": 800
+        }
+      }
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-220703-9edc",
+      "source": "d1ab45300a25fc763381899466752482bf6e0921",
+      "final_slot": {
+        "label": "U",
+        "cell": "D",
+        "repeat": 3
+      },
+      "attempts": 27000,
+      "stored": 25601,
+      "rejected": 1398,
+      "unknown": 1,
+      "normal_acceptance": 1.0,
+      "normal_joint_ratio": 0.9874074074074074,
+      "normal_room_p99_ms": 211,
+      "overall_acceptance": 0.9481851851851851,
+      "reconnect_failures": 801,
+      "normal_send_confirmation": {
+        "attempts": 5400,
+        "confirmed": 5400,
+        "p99_ms": 86.0,
+        "max_ms": 230,
+        "scope": "First logical SEND to confirmed outcome; includes any same-key result resolution. Rejected/unknown sends remain in acceptance and joint denominators, not completion latency."
+      },
+      "dropped_measurement": 0,
+      "rooms": {
+        "hot": {
+          "attempts": 21600,
+          "stored": 20201,
+          "rejected": 1398,
+          "unknown": 1,
+          "acceptance": 0.9352314814814815
+        },
+        "normal": {
+          "attempts": 5400,
+          "stored": 5400,
+          "rejected": 0,
+          "unknown": 0,
+          "acceptance": 1.0
+        }
+      },
+      "round_outcomes": {
+        "normal": {
+          "caught_at_ready": 1791,
+          "caught_up": 209,
+          "connection_failed": 4
+        },
+        "hot_fast": {
+          "caught_up": 6000,
+          "connection_failed": 8
+        },
+        "hot_slow": {
+          "caught_up": 1214,
+          "closed_before_target": 786,
+          "connection_failed": 3
+        }
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "repeat": 1,
+      "Q": "scale-Q-causal-explore-D-20261031-222005-1f73",
+      "U": "scale-U-causal-explore-D-20261031-223245-c68f",
+      "joint_difference_pp": 1.25925925925926
+    },
+    {
+      "repeat": 2,
+      "Q": "scale-Q-causal-final-D-20261031-205058-7159",
+      "U": "scale-U-causal-final-D-20261031-203816-086a",
+      "joint_difference_pp": 1.1111111111111072
+    },
+    {
+      "repeat": 3,
+      "Q": "scale-Q-causal-final-D-20261031-215422-6614",
+      "U": "scale-U-causal-final-D-20261031-220703-9edc",
+      "joint_difference_pp": 3.2777777777777795
+    }
+  ],
+  "inputs": {
+    "docs\\mixed-results.json": "3b2294e485e427aecea2ab5400fac7cf6b80d07881907e0c012f10e0fa748a94",
+    "docs\\causal-final.json": "687bdae7aa5ea7b71e4573b27e30c849254c55feb15f183eabe7d1dedc0e3533",
+    "docs\\causal-final-slots.json": "88143b4766aa5a652a0002a37e39ef17ad14b0de80a0e3bca789a6bd86234416",
+    "docs\\causal-selection.json": "8a6cfee2069e02aac6e253fe53d5b380b2a07717406241c9d4621be51d6d8355"
+  }
+}

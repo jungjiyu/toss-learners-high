@@ -1,0 +1,32 @@
+{
+  "contractVersion": 2,
+  "id": "bb6e6bf085fb",
+  "urls": [
+    "http://127.0.0.1:18080"
+  ],
+  "connections": 500,
+  "rate": 250,
+  "seconds": 600,
+  "warmup": 15,
+  "layout": "mixed",
+  "path": "http",
+  "bytes": 512,
+  "slowPercent": 25,
+  "churnEvery": 30,
+  "reconnect": true,
+  "offlineSeconds": 0,
+  "burstRate": 0,
+  "senderVus": 512,
+  "senders": 31,
+  "grace": 120,
+  "preload": 0,
+  "diagnostic": true,
+  "heapDiagnostic": false,
+  "auditInputs": false,
+  "durableRecipients": 0,
+  "receiverFast": true,
+  "repeat": 0,
+  "contract": "k6 volatile transport receipt; NOT durable APPLIED",
+  "heap_total_mib": 768,
+  "app_extra": []
+}

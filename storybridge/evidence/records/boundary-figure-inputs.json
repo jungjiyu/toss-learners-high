@@ -1,0 +1,37 @@
+{
+  "boundary-range.svg": [
+    "scale-Q-boundary-steady-confirm-45-20261031-163056-7705",
+    "scale-Q-boundary-steady-confirm-45-20261031-163528-20eb",
+    "scale-Q-boundary-steady-confirm-45-20261031-164000-47ca",
+    "scale-Q-boundary-steady-confirm-50-20261031-161704-98aa",
+    "scale-Q-boundary-steady-confirm-50-20261031-162136-4101",
+    "scale-Q-boundary-steady-confirm-50-20261031-162608-6727",
+    "scale-Q-boundary-steady-confirm-55-20261031-154813-a0f3",
+    "scale-Q-boundary-steady-confirm-55-20261031-160149-589c",
+    "scale-Q-boundary-steady-confirm-55-20261031-160622-b635",
+    "scale-Q-boundary-steady-confirm-60-20261031-155245-d72f",
+    "scale-Q-boundary-steady-confirm-60-20261031-155717-eee1",
+    "scale-Q-boundary-steady-confirm-60-20261031-161054-f81f"
+  ],
+  "boundary-churn-range.svg": [
+    "scale-Q-boundary-confirm-20-20261031-152421-3bab",
+    "scale-Q-boundary-confirm-20-20261031-152853-eed6",
+    "scale-Q-boundary-confirm-20-20261031-153324-8947",
+    "scale-Q-boundary-confirm-25-20261031-145645-e328",
+    "scale-Q-boundary-confirm-25-20261031-151019-56fc",
+    "scale-Q-boundary-confirm-25-20261031-151450-37b4",
+    "scale-Q-boundary-confirm-30-20261031-150116-dfc5",
+    "scale-Q-boundary-confirm-30-20261031-150547-bc17",
+    "scale-Q-boundary-confirm-30-20261031-151922-0917"
+  ],
+  "boundary-reconnect.svg": [
+    "scale-Q-boundary-soak-45-20261031-164507-e8a0"
+  ],
+  "source": "boundary-results.json and each immutable reconnect-attempts.jsonl; no hand-entered data",
+  "boundary-soak-resources.svg": [
+    "scale-Q-boundary-soak-45-20261031-164507-e8a0"
+  ],
+  "boundary-soak-backlog.svg": [
+    "scale-Q-boundary-soak-45-20261031-164507-e8a0"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "locked_before_measurement": "2026-10-30 20:08 KST",
+  "goals": "scale-plan-v1.json unchanged",
+  "primary": [
+    {
+      "label": "R0",
+      "layout": "spread",
+      "connections": 500,
+      "rate": 250,
+      "seconds": 60,
+      "repeats": 3
+    },
+    {
+      "label": "X",
+      "layout": "spread",
+      "connections": 500,
+      "rate": 250,
+      "seconds": 60,
+      "repeats": 3
+    },
+    {
+      "label": "L",
+      "layout": "spread",
+      "connections": 500,
+      "rate": 250,
+      "seconds": 60,
+      "repeats": 3
+    },
+    {
+      "label": "R0",
+      "layout": "hot",
+      "connections": 256,
+      "rate": 100,
+      "seconds": 60,
+      "repeats": 3
+    },
+    {
+      "label": "R1",
+      "layout": "hot",
+      "connections": 256,
+      "rate": 100,
+      "seconds": 60,
+      "repeats": 3
+    },
+    {
+      "label": "L",
+      "layout": "hot",
+      "connections": 256,
+      "rate": 100,
+      "seconds": 60,
+      "repeats": 3
+    },
+    {
+      "label": "C2",
+      "layout": "hot",
+      "connections": 256,
+      "rate": 100,
+      "seconds": 60,
+      "repeats": 3
+    }
+  ],
+  "exploration": {
+    "rates": [
+      500,
+      1000
+    ],
+    "fanout": [
+      512,
+      1000
+    ],
+    "payloads": [
+      128,
+      4096
+    ],
+    "slowPercent": [
+      10,
+      25
+    ],
+    "paths": [
+      "http",
+      "ws"
+    ],
+    "burst": "250 -> 1000 -> 250 SEND/s",
+    "reconnect": "500 mixed recipients, 20 seconds hot-room offline, normal rooms remain connected",
+    "idle": "X 4000 versus preserved R0 4000 pilot",
+    "soak": "600 seconds, 500 spread recipients,250 SEND/s,30-second reconnect interval"
+  },
+  "note": "No goal changes after results. Failed boundaries retained. Final selection considers delivery, deadlines, resource totals and complexity, not CPU alone.",
+  "cpu_budget_before_primary": "Windows Job Object HARD_CAP: aggregate gateways+MySQL+broker 3333/10000 host cycles, nominal six of eighteen logical CPUs. Each run restarts only project DB/gateway/broker and warms 15s. Earlier pilots uncapped; do not directly attribute quota differences to candidate.",
+  "harness_v2_before_restart": "20:21 KST: first three minute runs preserve no-retry transport failures as intermediate. TCP reset during pooled HTTP reuse caused result uncertainty, without database_errors. Add bounded same-key result lookup/retry, separate logical/physical/retry/initial unknown/final unknown counters. Keep rate, budget and latency goals unchanged; restart full 3-repeat matrix with contractVersion=2. No new key on unknown.",
+  "live_shared_hypothesis": "After X spread p99 451ms with pending494 but history59009->7463 and CPU367->209%, add L experiment-live-shared from X v1. Direct contiguous live push consumes existing finite credit; no per-recipient body buffer. Gap/loading/slow recipients retain shared log recovery. C integrates same path. Prior runs/tags preserved. No rate/deadline changes.",
+  "followup_locked_before_runs": {
+    "time": "2026-10-30 22:02 KST",
+    "implementation": "F2 4270119; C3 66e23e7 integrates OB/F2 with broker confirms retained",
+    "reason": "L/OB had large recovery deficits. F2 first complete mixed obligations but CPU/acceptance worse: compare actual successful throughput and recovery, never adopt based on completion alone.",
+    "goals": "unchanged scale-plan-v1.json; no lowered rate or relaxed latency",
+    "primary": "scripts/scale_final_campaign.py primary: three interleaved repetitions, 60 seconds after15 warmup; R0/F2 mixed500@250 slow25; F2 spread500@250 and hot256@100 versus preserved matching R0 repeats; C3 hot256@100; R0/F2 spread500@1000 senderVus256",
+    "generator_amendment": "Existing senderVus64 was exhausted at 1000/s. Both new high-rate comparisons use256, same arrival rate/deadlines; original64 failures preserved. Lower-rate64 remains unchanged.",
+    "exploration": "scripts/scale_final_campaign.py explore; actual500/1000 rates,512/1000 fanout,4096B slow10%,burst1000,offline20,new messages throughout,C3 offline,4000idle,durable4",
+    "soak": "600 seconds,500 spread recipients,250/s,reconnect every30s",
+    "prior_incomplete_matrix": "L hot1 and earlier C hot2 remain intermediate; final shared-read engine changed after failed large recovery. New F2/C3 primary requires3; no old hashes counted as new."
+  },
+  "vu512_amendment_before_remaining_primary": {
+    "time": "2026-10-30 22:24 KST",
+    "reason": "VU256 still exhausted: R0 high-rate repeat1 dropped2708, F2 dropped226 (warm/measure split not yet emitted). VU512 pilots preserve target1000/s with zero drops in both; use512 for both final high-rate and burst comparisons. Keep VU256 results as intermediate, not substitute repeat1. Lower-rate completed repeats reused unchanged.",
+    "pilots": [
+      "scale-R0-vus512-pilot-20261030-222113-3d31",
+      "scale-F2-vus512-pilot-20261030-222230-c1f4"
+    ],
+    "schedule_metric_correction": "iterationInTest excludes skipped arrivals. Keep raw sb_schedule_ms as arrival-deficit proxy; pure dispatch lateness unknown when drop attribution unavailable. Built-in scenario drop counters added without changing offered traffic.",
+    "additional_isolation": "128 versus512 bytes spread at250; 512 versus4096 mixed slow10%; mixed512 slow10 versus25%. No deadline changes."
+  },
+  "skew_isolation_before_exploration": {
+    "time": "2026-10-30 22:45 KST",
+    "runs": "F2 hot500/250 slow0 and mixed500/250 slow0,60s; compare preserved F2 spread500/250 slow0 under same bytes,VUs,budget. Mixed slow0/10/25 and512/4096 bytes at slow10 isolate the remaining axes. Offered volume equal; accepted volume is an outcome, not forced equal."
+  },
+  "generator_diagnostic_before_runs": {
+    "time": "2026-10-30 23:03 KST",
+    "reason": "F2 500/s VU64 lost1250 all-phase iterations; hot1000 recipient k6 CPU976.8% versus server505.2%, transport p99 4162ms. Preserve original failures.",
+    "tasks": "After soak: spread500/500s/60s with senderVus512; hot1000/100s/60s with bounded128 exact-body SHA reuse per receiver VU and omission of redundant sb_received counter (Trend count and independent recipient count remain exhaustive). Same server source/budget, target arrivals, latency goals, every message hash/seq validation.",
+    "scope": "Generator diagnostic, separate from original three-repeat server cohort. Raw per-message latency Trend and recipient obligations unchanged. Do not pool fast receiver results into old comparison."
+  },
+  "recovery_drain_diagnostic_before_runs": {
+    "time": "2026-10-30 23:17 KST",
+    "observed_failures": [
+      "scale-F2-finalexplore-mixed-250-20261030-230906-49ab",
+      "scale-C3-finalexplore-mixed-250-20261030-231123-e5d4"
+    ],
+    "reason": "Both 400-recipient offline bursts still had large incomplete obligations after original15s tail. Keep originals failed; distinguish capacity-restoration deadline failure from a permanent stalled cursor.",
+    "runs": "F2/C3 same mixed500/250/90s/offline20/512B/VU64, unchanged server/client budgets and implementation,120s bounded diagnostic observation after arrivals. Record every recipient at fixed30s post-arrival deadline. Later completion is eventual-progress evidence only and cannot turn deadline failure into PASS. ReceiverFast remains false."
+  },
+  "connection_memory_hypothesis": {
+    "time": "2026-10-30 23:25 KST",
+    "source": "experiment-connection-memory from F2 tag4270119; not built or validated yet",
+    "failure": "scale-F2-finalexplore-spread-0-20261030-231400-f87f:4000 connections,768MiB heap, diagnostics stalled and GC threads consumed most CPU; terminated only owned k6 after preserving stacks and socket state",
+    "official_source": "Tomcat10.1.55 WsFrameBase constructor/processInitialHeader eagerly allocate max text char buffer per connection. Current65536 chars implies131072 data bytes per idle connection after first frame, before other objects. Need actual heap histogram reproduction to attribute retained memory.",
+    "change": "Partial WebSocket handling with4096-char parser buffer, unchanged65536-char assembled JSON and8192-byte body. Lazy assembly shared16MiB conservative reservation,3s incomplete-fragment timeout, auth every fragment, release on FIN/close/timeout. No outbound/body-log/cursor/ACK changes.",
+    "validation": "Actual escaped8192-byte body, UTF8-split fragments, no storage before FIN, oversized input, binary rejection, incomplete timeout/global budget; core+TCP regression;4000idle/heap histograms,representative load3 repeats and soak. ExistingF2/C3 results remain prior source; no new improvement merged into main."
+  },
+  "memory_candidate_validation_before_primary": {
+    "time": "2026-10-30 23:43 KST",
+    "M": "5963f2e / experiment-connection-memory-v1",
+    "C4": "c85d534 / recommended-c-rabbit-v5",
+    "evidence": "2000-connection class histogram: F2 char[]263872336 versus M18145232 bytes. M4000 actual peers/subscriptions stable60s and normal shutdown. Intrusive histogram CPU/latency excluded.",
+    "primary": "M spread500/250 and mixed500/250/slow25, C4hot256/100,60s after15 warm,each3 independent repeats; same original goals/budgets. Original F2/C3 cohort remains separate, not renamed to M/C4.",
+    "soak": "M500 spread250/s,600s,churn30s",
+    "idle": "M1000/2000 no-intrusive-diagnostic60s versus existing4000/60s. Config4096 remains policy bound, not claimed physical maximum.",
+    "remaining": "M/C4 full correctness and TCP regression, C4 real expired-owner lease, source-specific integrated validation; unchanged deadlines.",
+    "drain_source_clarification": "The campaign and WORKLOG23:40 switched the pending extended drain diagnostic to M/C4 after adding bounded input assembly. The older23:17 paragraph remains the original F2/C3 proposal, not the executed source. This is an integrated-source recovery diagnostic, not an identical-source grace-only comparison. Rate, outgoing recovery engine,30s failure threshold and120s observation remain unchanged."
+  }
+}

@@ -1,0 +1,338 @@
+[
+  {
+    "source_run": "correctness-20261030-220313-110d81 / restored; outbox drained and new send applied",
+    "at": "2026-10-30T13:03:46.206805+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 78,
+      "shared_live_issued": 203,
+      "outbox_done": 127,
+      "broker_confirms": 129,
+      "broker_consumer_acks": 225,
+      "broker_transport_epochs": 40,
+      "heap_used": 84374592,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 58,
+      "shared_live_issued": 107,
+      "outbox_done": 53,
+      "broker_confirms": 55,
+      "broker_consumer_acks": 137,
+      "broker_transport_epochs": 41,
+      "heap_used": 44865824,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17762
+    },
+    "broker_queue_totals": {
+      "messages": 0,
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_ready_details": {
+        "rate": 0.0
+      }
+    }
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / restored; outbox drained and new send applied",
+    "at": "2026-10-30T13:03:47.207299+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 79,
+      "shared_live_issued": 203,
+      "outbox_done": 127,
+      "broker_confirms": 129,
+      "broker_consumer_acks": 225,
+      "broker_transport_epochs": 40,
+      "heap_used": 84374592,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 58,
+      "shared_live_issued": 107,
+      "outbox_done": 53,
+      "broker_confirms": 55,
+      "broker_consumer_acks": 137,
+      "broker_transport_epochs": 41,
+      "heap_used": 44865824,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17762
+    },
+    "broker_queue_totals": {
+      "messages": 0,
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_ready_details": {
+        "rate": 0.0
+      }
+    }
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / restored; outbox drained and new send applied",
+    "at": "2026-10-30T13:03:48.219364+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 80,
+      "shared_live_issued": 203,
+      "outbox_done": 127,
+      "broker_confirms": 129,
+      "broker_consumer_acks": 225,
+      "broker_transport_epochs": 40,
+      "heap_used": 85423168,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 59,
+      "shared_live_issued": 107,
+      "outbox_done": 53,
+      "broker_confirms": 55,
+      "broker_consumer_acks": 137,
+      "broker_transport_epochs": 41,
+      "heap_used": 45914400,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17762
+    },
+    "broker_queue_totals": {
+      "messages": 0,
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_ready_details": {
+        "rate": 0.0
+      }
+    }
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / restored; outbox drained and new send applied",
+    "at": "2026-10-30T13:03:49.210106+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 81,
+      "shared_live_issued": 203,
+      "outbox_done": 127,
+      "broker_confirms": 129,
+      "broker_consumer_acks": 225,
+      "broker_transport_epochs": 40,
+      "heap_used": 85423168,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 60,
+      "shared_live_issued": 107,
+      "outbox_done": 53,
+      "broker_confirms": 55,
+      "broker_consumer_acks": 137,
+      "broker_transport_epochs": 41,
+      "heap_used": 45914400,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17762
+    },
+    "broker_queue_totals": {
+      "messages": 0,
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_ready_details": {
+        "rate": 0.0
+      }
+    }
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / restored; outbox drained and new send applied",
+    "at": "2026-10-30T13:03:50.215064+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 82,
+      "shared_live_issued": 203,
+      "outbox_done": 127,
+      "broker_confirms": 129,
+      "broker_consumer_acks": 225,
+      "broker_transport_epochs": 40,
+      "heap_used": 86471744,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 61,
+      "shared_live_issued": 107,
+      "outbox_done": 53,
+      "broker_confirms": 55,
+      "broker_consumer_acks": 137,
+      "broker_transport_epochs": 41,
+      "heap_used": 45914400,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17762
+    },
+    "broker_queue_totals": {
+      "messages": 0,
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_ready_details": {
+        "rate": 0.0
+      }
+    }
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / restored; outbox drained and new send applied",
+    "at": "2026-10-30T13:03:51.212334+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 83,
+      "shared_live_issued": 203,
+      "outbox_done": 127,
+      "broker_confirms": 129,
+      "broker_consumer_acks": 225,
+      "broker_transport_epochs": 40,
+      "heap_used": 86471744,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 62,
+      "shared_live_issued": 107,
+      "outbox_done": 53,
+      "broker_confirms": 55,
+      "broker_consumer_acks": 137,
+      "broker_transport_epochs": 41,
+      "heap_used": 46962976,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17762
+    },
+    "broker_queue_totals": {
+      "messages": 0,
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_ready_details": {
+        "rate": 0.0
+      }
+    }
+  },
+  {
+    "source_run": "correctness-20261030-220313-110d81 / restored; outbox drained and new send applied",
+    "at": "2026-10-30T13:03:52.208165+00:00",
+    "scope": "live diagnostic, not an original primary performance screenshot",
+    "gateway18080": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 84,
+      "shared_live_issued": 203,
+      "outbox_done": 127,
+      "broker_confirms": 129,
+      "broker_consumer_acks": 225,
+      "broker_transport_epochs": 40,
+      "heap_used": 87520320,
+      "gc_ms": 52
+    },
+    "gateway18081": {
+      "peers": 1,
+      "global_credit": 0,
+      "batch_pending": 0,
+      "history_queries": 63,
+      "shared_live_issued": 107,
+      "outbox_done": 53,
+      "broker_confirms": 55,
+      "broker_consumer_acks": 137,
+      "broker_transport_epochs": 41,
+      "heap_used": 46962976,
+      "gc_ms": 48
+    },
+    "mysql_outbox": {
+      "DONE": 17762
+    },
+    "broker_queue_totals": {
+      "messages": 0,
+      "messages_ready": 0,
+      "messages_unacknowledged": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_ready_details": {
+        "rate": 0.0
+      }
+    }
+  }
+]

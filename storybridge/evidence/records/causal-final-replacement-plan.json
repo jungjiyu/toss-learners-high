@@ -1,0 +1,23 @@
+{
+  "declared_before_replacement_results": true,
+  "slots": [
+    "Q:D:1",
+    "U:D:1"
+  ],
+  "previous_runs": {
+    "Q:D:1": "scale-Q-causal-explore-D-20261031-185051-bf67",
+    "U:D:1": "scale-U-causal-final-D-20261031-202535-0b1c"
+  },
+  "reason": "After cleanup, Q C2/C3 and U C3 use substantially more stack and k6 CPU time than early clean D1/D2. Pairing late replacement Q D1 only with early clean U D1 leaves a time-varying host confound. Run Q and U D1 consecutively after the current campaign, before seeing either new result. Keep early clean U D1 as a valid supplemental run, not an externally-confounded or failed run. No power/settings/source/runtime changes; no selection by latency or acceptance.",
+  "command": "python scripts/causal_campaign.py explore D --labels Q U",
+  "C_first_pair": "Q C1 and U C1 both completed before cleanup and are retained as a paired pre-cleanup stratum; C2/C3 and all final D are post-cleanup. No percentile pooling or homogeneous-host claim.",
+  "revised_at": "2026-10-31T21:56:50.973510+09:00",
+  "previous_predeclared_plan": {
+    "declared_before_replacement_results": true,
+    "slot": "Q:D:1",
+    "previous_run": "scale-Q-causal-explore-D-20261031-185051-bf67",
+    "reason": "User-reported host cleanup during first U D may change shared-host state. Retain original Q D in initial2x2, but pair replacement U D1 with an additional post-cleanup Q D1 for final comparison.",
+    "command": "python scripts/causal_campaign.py explore D --labels Q",
+    "C_first_pair": "Q C1 and U C1 both completed before cleanup and are retained as a paired pre-cleanup stratum; C2/C3 and all final D are post-cleanup. No percentile pooling or homogeneous-host claim."
+  }
+}

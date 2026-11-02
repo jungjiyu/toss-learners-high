@@ -1,0 +1,25 @@
+[
+  {
+    "ids": "T21 T42",
+    "name": "shared-statement-retention",
+    "status": "PASS",
+    "details": {
+      "snapshot_rows_before_delete": 16,
+      "atomic_local_rows": 16,
+      "next_snapshot": "RESYNC_REQUIRED",
+      "floor": 25
+    },
+    "seconds": 1.5257546999491751
+  },
+  {
+    "ids": "T11 T41",
+    "name": "exact-unicode-credit",
+    "status": "PASS",
+    "details": {
+      "exact_wire_bytes": 5531,
+      "body_utf8_bytes": 4000,
+      "released_after_applied": true
+    },
+    "seconds": 0.3219177999999374
+  }
+]

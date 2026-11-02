@@ -1,0 +1,126 @@
+{
+  "before": {
+    "18080": {
+      "gc_count": 10,
+      "gc_ms": 32,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 134217728,
+      "heap_used": 78104880,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "outbox_claim_queries": 149,
+      "outbox_done": 0,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 25,
+      "route_rooms": 0,
+      "route_subscriptions": 0
+    }
+  },
+  "after": {
+    "18080": {
+      "applied_ack": 168308,
+      "batch_callback_nanos": 852409342,
+      "batch_group_max": 50,
+      "batch_pending": 0,
+      "batch_query_nanos": 37630861173,
+      "batch_requests": 168316,
+      "batch_shared_recipients": 168316,
+      "batch_snapshots": 22881,
+      "batch_wait_max_nanos": 159318501,
+      "batch_wait_nanos": 1544286151610,
+      "db_work_nanos": 52253158456,
+      "gc_count": 63,
+      "gc_ms": 234,
+      "global_buffer": 0,
+      "global_credit": 0,
+      "heap_committed": 308281344,
+      "heap_used": 193673624,
+      "history_queries": 24881,
+      "history_rows": 0,
+      "inbound_assembly_bytes": 0,
+      "inbound_reserved": 0,
+      "io_queue": 0,
+      "list_batch_requests": 170640,
+      "list_batch_snapshots": 19074,
+      "live_transitions": 2000,
+      "observed_write_ms": 0,
+      "outbox_claim_queries": 2900,
+      "outbox_done": 0,
+      "outbox_stale_finish": 0,
+      "peers": 0,
+      "platform_threads": 56,
+      "route_rooms": 0,
+      "route_subscriptions": 0,
+      "session_closes": 2000,
+      "sessions_active": 0,
+      "socket_received_bytes": 14635903,
+      "socket_sent_bytes": 52785923,
+      "socket_writes": 344940,
+      "writer_exits": 2000,
+      "writer_exits_error": 1993,
+      "writers_active": 0
+    }
+  },
+  "db_before": [
+    [
+      "Bytes_received",
+      "72632"
+    ],
+    [
+      "Bytes_sent",
+      "64201"
+    ],
+    [
+      "Innodb_row_lock_time",
+      "0"
+    ],
+    [
+      "Innodb_row_lock_waits",
+      "0"
+    ],
+    [
+      "Questions",
+      "1019"
+    ],
+    [
+      "Threads_connected",
+      "4"
+    ],
+    [
+      "Threads_running",
+      "2"
+    ]
+  ],
+  "db_after": [
+    [
+      "Bytes_received",
+      "14466698"
+    ],
+    [
+      "Bytes_sent",
+      "15821381"
+    ],
+    [
+      "Innodb_row_lock_time",
+      "0"
+    ],
+    [
+      "Innodb_row_lock_waits",
+      "0"
+    ],
+    [
+      "Questions",
+      "279937"
+    ],
+    [
+      "Threads_connected",
+      "6"
+    ],
+    [
+      "Threads_running",
+      "2"
+    ]
+  ]
+}

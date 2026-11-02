@@ -1,0 +1,16 @@
+[
+  {
+    "ids": "T30 T41 X07",
+    "name": "retiring-credit",
+    "status": "PASS",
+    "details": {
+      "retiring_credit": 16,
+      "discarded_not_applied": 16,
+      "new_epoch": true,
+      "stale_ack_rejected": true,
+      "new_epoch_recovered_to": 24,
+      "new_epoch_unique_applied": 24
+    },
+    "seconds": 0.9099932999815792
+  }
+]

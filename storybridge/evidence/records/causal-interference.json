@@ -1,0 +1,15 @@
+{
+  "reported_at": "2026-10-31T20:24:50.019674+09:00",
+  "user_report": "Other applications were being uninstalled to free memory during first U D. User now confirms cleanup finished and requests resuming D. Exact earlier end time unknown.",
+  "excluded_runs": [
+    {
+      "run": "scale-U-causal-final-D-20261031-200612-3638",
+      "status": "completed but externally confounded; preserve original numbers, exclude from final adoption comparison"
+    },
+    {
+      "run": "scale-U-causal-final-D-20261031-201902-16b2",
+      "status": "in progress during uncertain overlap; intentionally interrupt project-owned k6 and replace after user confirmation"
+    }
+  ],
+  "scope": "Not a server correctness failure or a demonstrated cause of process RSS peak. Exclusion decided from external interference report, not SLO result. Retain C1 and clean Q originals; rerun U D1/D2 in fresh sequential campaign."
+}

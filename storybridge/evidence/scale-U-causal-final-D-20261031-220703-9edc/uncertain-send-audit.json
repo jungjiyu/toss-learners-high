@@ -1,0 +1,36 @@
+[
+  {
+    "key": "a5c1026544e1-measure0-0-15542",
+    "room": 999,
+    "user": 13,
+    "status": 0,
+    "code": "UNPARSED",
+    "phase": "measure",
+    "at": 1793452402768,
+    "hash": "c4cfa13d218e03c1183786c56813fda318f9ec0306700e7dc232112fe6310bd0",
+    "trace": [
+      {
+        "kind": "POST",
+        "status": 0,
+        "error_code": 1212,
+        "reason": "",
+        "elapsed": 6,
+        "duration": 0,
+        "blocked": 0,
+        "waiting": 0
+      },
+      {
+        "kind": "RESULT",
+        "status": 429,
+        "error_code": 1429,
+        "reason": "READ_BUDGET",
+        "elapsed": 51,
+        "duration": 40.8139,
+        "blocked": 3.226,
+        "waiting": 40.8139
+      }
+    ],
+    "final_db_receipt": null,
+    "hash_match": null
+  }
+]

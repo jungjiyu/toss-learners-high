@@ -1,0 +1,41 @@
+{
+  "status": "reviewed",
+  "selected_branch": "experiment-reconnect-path",
+  "selected_tag": "experiment-reconnect-path-v1",
+  "selected_sha": "d1ab45300a25fc763381899466752482bf6e0921",
+  "baseline_tag": "baseline-v4",
+  "baseline_sha": "91ce2a72a9635a60d8171db5ab5840ade3692926",
+  "conclusion": "초기 구독을 한 statement로 읽고 안정 READY 이후의 재시도 정책을 실제 브라우저에 적용한 U를 일반 사용자 경험의 개선으로 조건부 채택했다. 45 SEND/s·500연결·600초의 독립 비교에서 일반 방 전원250ms 비율은 C에서0.91~1.28%p, D에서1.11~3.28%p 높아졌다. 전체 복구·수락·미확정 목표가 모두 해결된 것은 아니다.",
+  "reasons": [
+    "초기2×2에서 계속 연결된 일반 방의 B−A 차이는−0.0185%p로 작았지만, 본인 재접속 C−A는−1.5%p이고 동시 복귀의 추가 차이는−0.7778%p였다. 단계 원장과 초기 큐 거절은 고정 재시도 대기와 초기 구독 왕복을 유력 원인으로 좁혔다. U0 서버 변경만의 pilot과 실제 브라우저 정책을 포함한 U를 분리했고, 최종 C/D 모든 반복에서 주 사용자 지표가 개선됐다. 큐·worker·admission 확대, 단절 일정 분산, 목표 완화 없이 얻은 개선이다. Q는 올바른 기준과 기존 실패 원본으로 유지하고 U0·좁은 지터 pilot도 보존한다. U의 새로운 연결 거절 및 미확정 비용 때문에 모든 SLO 통과나 일반적인 처리 용량 보장으로 채택하지 않는다.",
+    "최종 C/D 각각 Q와 U를600초씩 독립3회 비교했다. C의 일반 방 전체 SEND 중 저장·전원250ms 비율은 Q98.167~98.463%, U99.296~99.444%; D는 Q95.463~98.185%, U98.741~99.296%다. 일반 수신 p99는 C Q224~272ms→U136.54~175.77ms, D Q262.77~813.08ms→U139~211ms였다. 모든 비교에서 일반 방5,400건은 전량 저장됐다. C1 Q/U 두 원본만 정리 전의 쌍으로 재사용했고, 최종 D는 모두 정리 이후 실행이며 D1은 새 결과 전 선언한 인접 Q/U 대체 쌍이다.",
+    "C3의 성공 저장은 Q25,731/U25,733건으로 거의 같았고, D3는 U가289건 더 저장하면서 일반 전원250ms 비율이3.278%p 높았다. D1/D2는 U가 각각13/23건 적게 저장한 비용도 남긴다. D의 전체 MySQL Questions는 Q843,735~873,062회, U667,255~701,689회로 줄었다. 이는 초기 연결·관측 구간을 포함한 전체 누계다. 같은 측정 수신량으로 나눈 스택+k6 CPU초/백만 수신은 D1 457.51→445.12, D2 384.34→380.35, D3 737.84→656.90였다. 호스트 CPU 시간의 큰 변동이 있어 이를 보편적인 CPU 절감률로 주장하지 않는다. C에서는 U의 k6 peak RSS가최대1,157.86MiB로 Q최대1,066.24MiB보다 컸다. 설정 예산을 늘리지는 않았지만 모든 비용이 항상 줄었다고 말하지 않는다. D 최종 잔량은 모두0이고 유입 종료 후0~32ms에 해소됐지만, 이전 회차 실패는 유지한다."
+  ],
+  "validation": [
+    "재접속 없는 U A600초 확인은 일반 방5,399/5,400건(99.9815%)이 전원250ms, 일반 수신 p99121ms, 전체 수락98.219%·일반100%로 기존 목표를 통과했다. SEND 미확정·발생기 drop·최종 누락은0이었다. Q A의 역사적 한 번과 CPU 성능의 엄밀한 쌍 비교로 취급하지 않는다.",
+    "최종12개 비교 슬롯의 정확한 소스/JAR·15개 실행 하네스 snapshot·정책·입력·단절 일정·자원 설정을 대조했다.30개 causal 실행의1,473개 원본 파일과 독립 수신자·generation·cursor·시간·메시지 분모 검증에서 오류0이다. 실제 MySQL 영향 회귀25사례, 최종 브라우저의 IndexedDB 원자 abort·재시작·구독 세대·지속 단절·pending 응답 유실, 최종 재시도 정책7검사를 확인했다. 서버 회귀의 앞선 U artifact는 최종 U와35개 서버 class byte가 동일하며 브라우저 정책은 최종 소스로 다시 검증했다."
+  ],
+  "limits": [
+    "U D의 제한 중 closed-before-target는780/780/786회다. U D3에는 OPEN 이전 연결 실패15회(일반4·인기 빠른8·인기 느린3)가 추가되어 전체801/10,015회 실패다. 다음 시도에서 모두 복구됐어도 실패 분모를 줄이지 않는다. 최초 종료부터 이어 잰 일반 사용자 단절 최대는1,355ms였다.",
+    "U D3의 전체 수락94.818%는95% 가정에 못 미친다. 인기 방 SEND1건은 최초 TCP 연결 거절 뒤 결과 조회도READ_BUDGET으로 거절되어 미확정이다. 종료 receipt 부재를 당시 확정 거절로 바꾸지 않는다. 같은 시각 연결 실패의 세부 SYN/accept·커널 원인은 직접 계측하지 않았다.",
+    "U의 전체 일반 수신 p99가250ms 아래여도 D의 수신자별 p99 초과는반복별3/2/19명이다. 전원250ms를 놓친 SEND도47/38/68건 남았다. 주 성공 비율에 사후 통과선을 추가하지 않았다.",
+    "첫 후보 D의 외부 앱 정리 간섭 원본과 의도적 중단 원본을 보존·제외했다. 정리 이후에도 공유 호스트의 CPU/주파수 상태를 연속 통제하지 못했으며, 단일 현재 전원 관측으로 과거 원인을 확정하지 않는다. C1의 정리 전 쌍과 후속 실행을 섞어 하나의 p99로 만들지 않는다.",
+    "이 장비·45 SEND/s·31고유 사용자의 다중 탭500연결·HTTP SEND·loopback·600초 조건이다. 새 U의250/1,000 SEND/s 성과,500고유 사용자 또는 일·주 단위 안정성을 주장하지 않는다. 이전 Q의601,000건 CPU 비교와 고율 실패는 그 정확한 소스의 과거 근거다.",
+    "k6는 메모리 연속 수신이고500개의 영속 로컬 commit 성능이 아니다. SQLite/실브라우저 IndexedDB 검증은 별도 기능·장애 계약의 근거다. C4의 이전 두 gateway/broker 결과는 U 통합 분산 검증이나 물리 HA 증명이 아니다."
+  ],
+  "evidence": {
+    "causal": "causal-selection.json",
+    "final_comparison": "causal-final.json",
+    "plan": "causal-plan.json",
+    "cohort": "causal-cohort.json",
+    "verification": "causal-verification.json",
+    "previous_Q": "selection-history/scale-selection-before-causal.json"
+  },
+  "distributed_option": {
+    "branch": "recommended-c-rabbit",
+    "tag": "recommended-c-rabbit-v5",
+    "sha": "c85d5345e1effcc73cf4816341217ad1ad1e7868",
+    "role": "두 gateway 전달·장애 복구를 검증한 선택지. 같은 장비에서 단일 gateway보다 처리량이 높다는 채택 근거는 아니다."
+  },
+  "previous_scope": "Earlier Q601000-work,250/s,1000/s and C4 distributed evidence remains attributed to those exact sources; not relabeled as U performance."
+}

@@ -13,6 +13,9 @@ class P(HTMLParser):
   for k in ['href','src','xlink:href']:
    if k in a:self.refs.append(a[k])
 manifest=json.loads((R/'publication.json').read_text());errors=[];links=[];cache={}
+if (R/'storybridge-publication.json').exists():
+ story=json.loads((R/'storybridge-publication.json').read_text())
+ manifest['files']+=story['files']+[{'published_path':p,'published_sha256':h} for p,h in story['generated'].items()]
 paths=[R/'index.html']+[R/x['published_path'] for x in manifest['files']]
 for row in manifest['files']:
  p=R/row['published_path']
@@ -34,6 +37,7 @@ for p in paths:
    if unquote(u.fragment) not in cache[q].ids:errors.append([str(p.relative_to(R)),ref,'missing anchor'])
   links.append({'from':str(p.relative_to(R)),'href':ref,'target':str(q.relative_to(R))})
 assert len(list((R/'mogu/articles').glob('*.html')))==11
+if (R/'storybridge').exists():assert len(list((R/'storybridge/articles').glob('*.html')))==11
 for p in paths:
  if p.suffix not in ['.html','.svg','.css','.json','.txt']:continue
  s=p.read_text()

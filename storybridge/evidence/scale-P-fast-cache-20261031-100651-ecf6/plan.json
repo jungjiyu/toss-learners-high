@@ -1,0 +1,36 @@
+{
+  "contractVersion": 2,
+  "id": "484295be37f5",
+  "urls": [
+    "http://127.0.0.1:18080"
+  ],
+  "connections": 500,
+  "rate": 250,
+  "seconds": 60,
+  "warmup": 15,
+  "layout": "mixed",
+  "path": "http",
+  "bytes": 512,
+  "slowPercent": 25,
+  "churnEvery": 0,
+  "reconnect": false,
+  "offlineSeconds": 0,
+  "burstRate": 0,
+  "senderVus": 512,
+  "senders": 31,
+  "grace": 15,
+  "preload": 0,
+  "diagnostic": true,
+  "heapDiagnostic": false,
+  "auditInputs": false,
+  "durableRecipients": 0,
+  "receiverFast": true,
+  "repeat": 0,
+  "contract": "k6 volatile transport receipt; NOT durable APPLIED",
+  "heap_total_mib": 768,
+  "app_extra": [
+    "-Dspring.datasource.hikari.data-source-properties.cachePrepStmts=true",
+    "-Dspring.datasource.hikari.data-source-properties.prepStmtCacheSize=128",
+    "-Dspring.datasource.hikari.data-source-properties.prepStmtCacheSqlLimit=2048"
+  ]
+}

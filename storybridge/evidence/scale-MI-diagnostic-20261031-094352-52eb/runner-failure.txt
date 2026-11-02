@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\1030_toss_storybridge\scripts\scale_run.py", line 212, in <module>
+    try:sys.exit(main())
+                 ^^^^^^
+  File "C:\1030_toss_storybridge\scripts\scale_run.py", line 50, in main
+    for action in ('stop','start'):subprocess.run([sys.executable,str(ROOT/'scripts/mysql_local.py'),action],check=True,capture_output=True)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\1030_toss_storybridge\\.venv\\Scripts\\python.exe', 'C:\\1030_toss_storybridge\\scripts\\mysql_local.py', 'stop']' returned non-zero exit status 1.

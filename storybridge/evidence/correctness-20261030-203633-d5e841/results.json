@@ -1,0 +1,23 @@
+[
+  {
+    "ids": "T12 T43",
+    "name": "blocked-write",
+    "status": "PASS",
+    "details": {
+      "preloaded_messages": 1100,
+      "body_bytes": 8000,
+      "nonreading_sockets": 2,
+      "max_blocked_write_ms": 1508,
+      "writer_exits": 2,
+      "normal_room_applied": 20,
+      "normal_progress_during_block": {
+        "seq": 19,
+        "seconds": 0.062000000034458935
+      },
+      "owned_tcp_sockets_before_client_close": [],
+      "thread_dump": true,
+      "after_last_send_seconds": 4.858999999938533
+    },
+    "seconds": 49.655307900044136
+  }
+]

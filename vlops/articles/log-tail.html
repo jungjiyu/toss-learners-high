@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>재접속 검증에 성공했는데도 마지막 6줄은 왜 사라졌나 · VLOps</title><meta name="description" content="원격 로그 재접속과 종료 구간 누락">
+<link rel="stylesheet" href="../../mogu/assets/reader.css"><link rel="stylesheet" href="../assets/article.css"></head>
+<body><a class="skip" href="#content">본문으로</a>
+<header class="site-header"><a href="../index.html">VLOps · Backend Engineering</a><a href="../index.html#articles">글 목록</a></header>
+<main id="content"><article aria-labelledby="article-title"><p class="eyebrow">VLOPS · 원격 로그 재접속과 종료 구간 누락</p>
+<h1 id="article-title">재접속 검증에 성공했는데도 마지막 6줄은 왜 사라졌나</h1><p class="lead">원격 로그 연결이 끊겼다가 복구된 뒤, 이미 전달한 196개의 재전송 구간은 검증을 통과했다. 그런데 작업이 끝난 후 전체 로그를 대조하니 마지막 6줄이 없었다. 재접속 검사는 올바른 위치에서 이어 읽었는지를 확인했을 뿐, 작업 종료 직전의 로그까지 모두 읽었다는 뜻은 아니었다.</p>
+<nav class="toc" aria-label="이 글의 목차"><strong>목차</strong><ol><li><a href="#replay">처음부터 다시 보내는 로그 서버</a></li><li><a href="#run79">Run 79: 재전송 196개를 제외한 최종 523개</a></li><li><a href="#run80">Run 80: 앞부분은 맞고 마지막 6줄은 없는 출력</a></li><li><a href="#drain">종료 감지 후에도 남은 로그를 읽는 단계</a></li></ol></nav>
+<section aria-labelledby="replay"><h2 id="replay">처음부터 다시 보내는 로그 서버</h2>
+
+<p>NAVER Cloud에서 VLOps의 원격 작업 로그를 따라 읽는 기능을 구현했다. 사용자는 GPU 작업이 진행되는 동안 서빙과 평가 로그를 확인할 수 있었지만, 연결이 끊기면 원격 로그 서버는 마지막 수신 위치부터가 아니라 처음부터 다시 전송했다. 클라이언트가 그대로 출력하면 이미 본 로그가 중복됐다.</p>
+<p>본문 문자열을 집합에 넣고 이미 본 줄을 버리는 방법은 사용할 수 없었다. 실제 작업도 같은 진행 메시지나 오류를 여러 번 출력할 수 있으므로, 문장이 같다는 이유만으로 제거하면 정상 로그까지 잃었다. 구분해야 할 대상은 ‘같은 내용의 줄’이 아니라 <strong>‘이미 전달한 순서상의 구간’</strong>이었다.</p>
+<p>그래서 전달한 레코드 수와 누적 해시를 유지했다. 해시에는 stdout·stderr 같은 스트림 종류와 본문을 순서대로 반영했고, 재접속하면 처음부터 받은 레코드를 같은 방식으로 누적했다. 이전에 전달한 개수에 도달했을 때 해시가 같아야 그 앞부분을 재전송으로 인정하고 이후 레코드부터 전달했다.</p>
+<p>검증 도중에는 재전송된 앞부분을 사용자에게 다시 출력하지 않았다. 앞부분의 내용이나 순서가 달라 해시가 일치하지 않으면 임의로 중복을 제거하며 이어가는 대신 연속성을 확인할 수 없는 오류로 처리했다. 이 방식은 서버가 같은 노드의 로그를 처음부터 같은 순서로 재생한다는 조건을 확인하는 과정이었다.</p>
+
+</section>
+<section aria-labelledby="run79"><h2 id="run79">Run 79: 재전송 196개를 제외한 최종 523개</h2>
+
+<p>Run 79에서는 연결이 끊기기 전에 196개 레코드를 전달했다. 재접속 후 원격 서버가 그 196개를 다시 보냈고, 클라이언트는 스트림 종류와 본문의 누적 해시가 단절 전 값과 같은지 확인했다. 일치한 앞부분은 다시 출력하지 않고 새로 도착한 327개만 전달했다.</p>
+<p>따라서 사용자에게 최종 전달한 수는 <strong>최초 196개 + 신규 327개 = 523개</strong>였다. 재전송된 196개는 이 합계에 다시 포함하지 않았다. 같은 문장이 뒤에서 정상적으로 다시 출력되더라도, 검증이 끝난 구간 이후의 새 레코드라면 전달할 수 있었다.</p>
+<p>이 결과로 확인한 것은 재접속 후 이미 전달한 앞부분을 중복 없이 건너뛰었다는 점이었다. 하지만 이 검증은 과거에 받은 196개만 비교하므로, 그 뒤에 생성됐어야 할 모든 로그가 도착했는지까지 알려 주지는 않았다.</p>
+
+</section>
+<section aria-labelledby="run80"><h2 id="run80">Run 80: 앞부분은 맞고 마지막 6줄은 없는 출력</h2>
+
+<p>별도 실행인 Run 80에서도 재전송된 앞 196개는 검증을 통과했다. 그럼에도 실행 종료 후 기준본과 비교했을 때는 앞 517줄까지만 일치했고 마지막 6줄이 빠져 있었다. 연결이 복구됐다는 사실만으로 로그 수집이 끝까지 정상이라고 판단했다면 놓칠 수 있는 차이였다.</p>
+<p>기준본은 실행이 끝난 뒤 원격 로그 서버에서 다시 수집한 해당 노드의 로그였다. 당시에는 <code>follow_smoke.py</code>로 실시간 <code>follow</code>의 최종 출력과 이 기준본을 바이트 단위로 대조해 순서·누락·중복을 확인했다. 터미널에 보이는 일부 줄이나 레코드 개수만 비교한 것이 아니었다.</p>
+<figure class="architecture"><a class="figure-image" href="../assets/diagrams/log-tail.svg" aria-label="재접속 앞부분 검증과 종료 후 전체 비교가 확인한 범위 확대"><picture><source media="(max-width: 620px)" srcset="../assets/diagrams/log-tail-mobile.svg"><img src="../assets/diagrams/log-tail.svg" alt="재접속 앞부분 검증과 종료 후 전체 비교가 확인한 범위" loading="lazy"></picture></a><figcaption>Run 80의 앞부분 검증은 이미 전달한 196개를 대상으로 했다. 종료 후 전체 대조에서야 기준본의 마지막 6줄이 출력에 없다는 사실을 확인했다. <a class="diagram-enlarge" href="../assets/diagrams/log-tail.svg">확대 보기 ↗</a></figcaption></figure>
+<p>누락 위치는 재접속 경계가 아니라 실행의 끝이었다. 작업 상태 조회에서는 이미 종료를 확인했지만, 로그 스트림에는 아직 읽지 않은 출력이 남아 있었다. 그런데 종료 상태를 로그도 모두 읽었다는 신호로 사용하면 스트림을 닫는 시점이 너무 빨라졌다.</p>
+<p><strong>‘작업이 종료됐다’와 ‘그 작업의 로그를 모두 받았다’는 별개의 조건이었다.</strong> 재접속 검사는 이미 받은 앞부분의 동일성을 검증하므로, 한 번도 전달받지 못한 마지막 6줄을 비교할 방법이 없었다. 이 누락은 종료 후 완성된 기준본을 가져와 전체 출력을 대조하면서 발견했다.</p>
+
+</section>
+<section aria-labelledby="drain"><h2 id="drain">종료 감지 후에도 남은 로그를 읽는 단계</h2>
+
+<p>작업 종료를 감지하면 즉시 연결을 닫는 대신, 남은 로그를 읽는 drain 단계로 전환하도록 수정했다. 이미 열린 스트림에서 계속 레코드를 소비하고, 그동안 재접속과 재전송 검증이 발생해도 종료를 확인했다는 사실은 유지했다. 연결 상태가 바뀌었다고 작업이 다시 실행 중인 것으로 돌아가지는 않도록 했다.</p>
+<p>한편 스트림 종료를 무한정 기다릴 수도 없었다. 작업의 논리적 완료 이후에도 유지되는 서빙 자원이 계속 로그를 낼 수 있었기 때문이다. 구현에서는 원격 스트림이 끝나거나 새 레코드가 일정 시간 오지 않으면 drain을 마쳤고, 별도로 전체 대기 시간에도 상한을 두었다. 로그 관측을 끝내는 처리는 GPU 작업의 취소·회수와 분리했다.</p>
+<p>수정 후 Run 82에서는 마지막 오류 줄을 포함한 523줄 전체가 종료 후 기준본과 바이트 단위로 일치했다. 앞부분만 제대로 이어받았는지에 더해, 종료 구간까지 실제 출력에 포함됐는지를 확인한 결과였다.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="실행별 로그 검증 결과"><table><caption>서로 다른 실행에서 확인한 결과</caption><thead><tr><th scope="col">실행</th><th scope="col">확인한 내용</th><th scope="col">결과</th></tr></thead><tbody>
+<tr><td>Run 79</td><td>재접속 후 앞 196개 검증과 신규 전달</td><td>최초 196개 + 신규 327개 = 최종 전달 523개 레코드</td></tr>
+<tr><td>Run 80</td><td>앞 196개 검증 통과 후, 종료 후 기준본과 전체 대조</td><td>앞 517줄 일치, 마지막 6줄 누락</td></tr>
+<tr><td>Run 82</td><td>종료 후 drain 적용, 기준본과 전체 대조</td><td>마지막 오류 줄까지 523줄 전체 바이트 일치</td></tr>
+</tbody></table></div>
+<p class="note">위 실행별 수치와 바이트 비교 결과는 당시 검증 방법과 결과를 기록한 문서에 근거했다. 현재 확보한 자료에는 검증 스크립트 원본과 실행별 입력·출력·diff 파일이 없어 다시 실행한 결과로 제시하지 않았으며, drain의 대기 상한을 넘어 늦게 도착하는 로그까지 이 결과만으로 보장하지는 않았다.</p>
+
+</section>
+<nav class="next" aria-label="다른 VLOps 글"><p>VLOps의 설계와 실행 제어</p><a href="workflow-versions.html">대표 글: 평가 계획과 실행 버전</a> · <a href="../index.html#articles">전체 글 목록으로</a></nav>
+</article></main><footer>VLOps · 모델 평가 워크플로의 설계·구현</footer></body></html>

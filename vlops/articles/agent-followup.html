@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>사용자와 Agent가 동시에 재시도하면, GPU 작업은 몇 개 시작될까 · VLOps</title><meta name="description" content="Agent 제안의 검증과 후속 실행 통제">
+<link rel="stylesheet" href="../../mogu/assets/reader.css"><link rel="stylesheet" href="../assets/article.css"></head>
+<body><a class="skip" href="#content">본문으로</a>
+<header class="site-header"><a href="../index.html">VLOps · Backend Engineering</a><a href="../index.html#articles">글 목록</a></header>
+<main id="content"><article aria-labelledby="article-title"><p class="eyebrow">VLOPS · Agent 제안의 검증과 후속 실행 통제</p>
+<h1 id="article-title">사용자와 Agent가 동시에 재시도하면, GPU 작업은 몇 개 시작될까</h1><p class="lead">평가가 실패한 뒤 사용자는 같은 설정으로 재시도를 누르고, Agent는 동시성을 낮춘 새 평가를 제안할 수 있었다. 두 요청은 각각 유효하고 요청 ID와 내용도 달랐으므로, 일반적인 요청 중복 검사로는 둘 다 실행되는 것을 막을 수 없었다. 그래서 새 요청이 아니라 원래 실패한 실행 시도를 기준으로, 후속 실행 권한을 한쪽만 선점하도록 구현했다.</p>
+<nav class="toc" aria-label="이 글의 목차"><strong>목차</strong><ol><li><a href="#race">중복 요청은 아니지만 중복 복구인 경우</a></li><li><a href="#investigation">실패한 시도에 묶인 조사와 제안</a></li><li><a href="#validation">평가 대상은 고정하고 실행 설정만 변경</a></li><li><a href="#claim">실패한 시도에 하나뿐인 후속 실행 권한</a></li><li><a href="#budget">새 평가에서도 이어지는 복구 횟수</a></li><li><a href="#verification">조사부터 후속 평가까지의 통합 검증</a></li></ol></nav>
+<section aria-labelledby="race"><h2 id="race">중복 요청은 아니지만 중복 복구인 경우</h2>
+
+<p>NAVER Cloud에서 모델 서빙·평가 플랫폼인 VLOps를 개발하며, 실패한 평가를 조사하고 다음 조치를 제안하는 Agent를 구현했다. 기존 GPU 작업을 찾아 다시 연결하는 복구와 달리, 실패 원인에 따라 같은 단계를 재시도하거나 기존 결과에서 재개하고, 실행 설정을 조정한 새 평가를 제출하는 기능이었다.</p>
+<p>가령 평가 요청이 몰려 실패한 상황에서 사용자는 일시적인 문제라고 보고 그대로 재시도하고, Agent는 평가 동시성을 줄이자고 제안할 수 있었다. 이 예시에서 두 요청의 fingerprint를 비교해도 서로 다른 요청이라는 사실만 확인할 수 있었다. 모두 받아들이면 같은 실패를 해결하기 위한 GPU 작업이 두 개 생길 수 있었다.</p>
+<p>따라서 실행 서비스가 지켜야 할 조건을 <strong>‘실패한 시도 하나에서 후속 실행은 하나만 생성한다’</strong>로 정했다. Agent의 제안이 타당한지와 지금 그 제안을 실행해도 되는지는 서로 다른 검사였다. 먼저 타당성을 검증하더라도, 조사하는 사이 사용자가 재시도했다면 Agent는 후속 실행을 만들 수 없어야 했다.</p>
+
+</section>
+<section aria-labelledby="investigation"><h2 id="investigation">실패한 시도에 묶인 조사와 제안</h2>
+
+<p>Agent는 자동 복구가 활성화된 평가에서 실행이 실패하고 평가 작업도 성공하지 못했을 때 호출하도록 했다. 서빙 실패 때문에 평가가 시작되지 못한 경우도 조사 대상에 포함했지만, 사용자가 취소한 실행은 다시 살리지 않았다. 평가 자체는 성공했고 자원 회수만 실패한 경우에도 평가를 재실행하는 Agent를 호출하지 않았다.</p>
+<p>조사 입력에는 해당 평가의 설정, 작업별 실행 상태, 이전 복구 이력, 서빙·평가 로그를 담았다. Agent가 추가 로그를 요청하면 실패한 시도에 속한 작업의 지정 구간을 읽도록 했고, 무관한 실행의 로그를 섞지 않았다. 로그와 설정의 비밀값은 모델에 전달하기 전에 가렸으며, 조사 단계 수와 증거 데이터 크기에도 상한을 두었다.</p>
+<p>모델은 이 자료를 바탕으로 같은 단계를 다시 실행할지, 기존 산출물에서 재개할지, 설정을 바꾼 새 평가를 제출할지, 아무 조치도 하지 않을지를 제안했다. 다만 제안을 바로 GPU API 호출로 연결하지 않고, 규칙 기반 검증과 실행 서비스의 상태 확인을 거치도록 했다. 평가 작업이 아예 시작되지 않았다면 재개할 결과가 없으므로, resume 제안도 일반 재시도로 정규화했다.</p>
+<p>실환경에는 Agent를 배포하고 실제 Qwen 엔드포인트가 JSON 응답을 반환하는 것까지 확인했다. 모델의 조사와 제안이 후속 평가 성공으로 이어지는 전체 흐름은 뒤에서 설명할 <strong>scripted model과 가짜 GPU 제공자를 사용한 Temporal 통합 테스트</strong>로 확인했다. 실제 모델의 판단으로 후속 GPU 평가까지 성공한 사례와는 구분했다.</p>
+
+</section>
+<section aria-labelledby="validation"><h2 id="validation">평가 대상은 고정하고 실행 설정만 변경</h2>
+
+<p>자동 복구가 성공하더라도 모델이나 벤치마크가 달라졌다면 원래 평가를 복구했다고 보기 어려웠다. 그래서 설정 변경은 허용 항목을 명시하는 방식으로 검증하고, 모델·벤치마크·평가 엔진처럼 평가 대상을 바꾸는 항목은 보호했다.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Agent 설정 변경 검증 범위"><table><caption>설정 변경 제안에 적용한 규칙</caption><thead><tr><th scope="col">범위</th><th scope="col">허용한 변경 예시</th><th scope="col">보호한 항목</th></tr></thead><tbody>
+<tr><td>실행 환경</td><td>GPU 자원 유형</td><td>제공자 종류와 그 밖의 환경 설정</td></tr>
+<tr><td>모델 서빙</td><td>병렬화 크기, GPU 메모리 사용 비율, 배치 한도, 준비 대기 시간</td><td>모델 경로·이름, 생성 내용에 영향을 주는 설정</td></tr>
+<tr><td>평가 실행</td><td>평가 도구의 규칙이 허용한 동시성 등 실행 인자</td><td>벤치마크, 모델, 평가 엔진, 평가 소프트웨어 지정</td></tr>
+</tbody></table></div>
+<p>공통 검증기는 평가 요청의 고정 항목과 GPU 자원 변경을 검사했고, 서빙·평가 도구별 인자의 의미는 해당 도구의 검증 규칙에 맡겼다. 같은 숫자 설정이라도 배치 한도를 조절하는 것과 모델이 처리할 입력 길이를 바꾸는 것은 다르므로, 숫자 필드라는 이유만으로 허용하지 않았다. 변경 규칙이 없는 서빙 도구의 인자는 수정할 수 없도록 했다.</p>
+<p>Agent에게 알려 주는 변경 가능 항목도 이 검증 규칙에서 생성했다. 프롬프트에는 허용한다고 적었는데 실제 검증에서는 거절하거나, 반대로 프롬프트에 없는 변경이 통과하는 차이를 줄이기 위해서였다. 검증기는 원본과 후보 요청을 비교해 허용 여부와 위반 항목을 반환하고, 실행 서비스는 승인된 변경 내용과 후속 평가의 관계를 기록했다.</p>
+
+</section>
+<section aria-labelledby="claim"><h2 id="claim">실패한 시도에 하나뿐인 후속 실행 권한</h2>
+
+<p><strong>수동 재시도와 Agent 조치가 같은 실패 시도의 레코드를 조건부로 갱신하도록 했다.</strong> 실행 서비스는 제안의 대상이 여전히 최신 시도인지 확인한 뒤, 비어 있는 후속 실행 권한에 자신의 식별자를 기록했다. 다른 요청이 먼저 기록했다면 후속 실행을 만들지 않았다.</p>
+<figure class="architecture"><a class="figure-image" href="../assets/diagrams/agent-claim.svg" aria-label="수동 재시도와 Agent가 같은 실패 시도의 후속 실행 권한을 선점하는 구조 확대"><picture><source media="(max-width: 620px)" srcset="../assets/diagrams/agent-claim-mobile.svg"><img src="../assets/diagrams/agent-claim.svg" alt="수동 재시도와 Agent가 같은 실패 시도의 후속 실행 권한을 선점하는 구조" loading="lazy"></picture></a><figcaption>두 경로는 요청 내용이 달라도 같은 실패 시도를 기준으로 경합했다. 그림은 수동 재시도가 먼저 선점한 경우이며, Agent가 먼저 선점해도 같은 규칙을 적용했다. <a class="diagram-enlarge" href="../assets/diagrams/agent-claim.svg">확대 보기 ↗</a></figcaption></figure>
+<figure class="code-figure"><pre><code>-- 후속 실행 선점 조건을 일반화한 의사코드
+UPDATE failed_attempt
+   SET followup_owner = :claim_id
+ WHERE id = :source_attempt_id
+   AND followup_owner IS NULL;
+
+-- 갱신했거나 이미 자신의 claim이면 같은 처리로 이어간다.
+-- 다른 claim이 있으면 후속 실행을 생성하지 않는다.</code></pre><figcaption>선행 조회만으로 ‘아직 후속 실행이 없다’고 판단하지 않고, DB의 조건부 갱신으로 선점했다.</figcaption></figure>
+<p>같은 처리가 재호출됐을 때는 이미 자신의 식별자가 저장돼 있으면 이어갈 수 있도록 했다. 이 구분이 없으면 선점 후 응답을 잃은 요청까지 경쟁에서 진 것으로 처리하게 된다. 반면 다른 식별자가 저장돼 있다면 수동 재시도는 충돌을 반환하고 Agent 조치는 건너뛰도록 했다.</p>
+<p>경합 테스트에서는 두 스레드를 barrier에서 기다리게 한 뒤, 하나는 수동 재시도를, 다른 하나는 평가 동시성을 바꾼 새 평가 제출을 동시에 요청했다. 검증한 결과는 두 가지 중 하나였다. 수동 재시도가 이기면 원래 평가 안에 두 번째 시도만 생겼고, Agent가 이기면 원래 시도는 하나인 채 새 평가만 생겼다. <strong>두 경로가 모두 후속 실행을 만드는 결과는 허용하지 않았다.</strong></p>
+<p>이 테스트는 기록용 제출기를 사용해 DB의 평가·시도 개수와 선점자 ID를 확인했다. 실제 GPU 두 대를 띄운 실험은 아니었으며, GPU 작업을 요청하기 전 단계에서 두 실행이 함께 생성되지 않는다는 조건을 검증했다.</p>
+
+</section>
+<section aria-labelledby="budget"><h2 id="budget">새 평가에서도 이어지는 복구 횟수</h2>
+
+<p>후속 실행을 하나로 제한해도 새 평가마다 복구 횟수를 0으로 시작하면 반복을 막을 수 없었다. 설정 변경으로 생성한 평가가 다시 실패하고 Agent가 또 다른 평가를 만드는 과정이 계속될 수 있기 때문이었다.</p>
+<p>그래서 Agent가 새 평가를 만들 때 부모 평가, 최초 평가, 생성한 Agent 조치를 함께 기록했다. 자동 복구 횟수는 새 평가 ID가 아니라 최초 평가를 기준으로 계산했고, 후속 실행 권한을 선점한 뒤 남은 복구 횟수를 다시 확인했다. 조사 시작 때 여유가 있었다고 실행 시점에도 있다고 가정하지 않았다.</p>
+<p>횟수 배정에는 최초 평가 ID와 복구 순번의 유일성 제약을 사용했다. 동시에 처리하더라도 같은 순번을 중복 소비하지 못하게 했으며, 허용 횟수가 소진됐다면 새 실행을 만들지 않았다. 후속 실행 권한을 먼저 선점한 뒤 횟수 검사에서 탈락한 경우에는 자신이 잡은 권한을 반환하도록 했다.</p>
+<p>테스트에서는 설정을 바꿔 만든 평가가 부모와 최초 평가의 연결, 자동 복구 설정과 한도를 이어받는지 확인했다. 여러 평가에 걸친 조치가 같은 한도를 소비하는 경우와, 실행 직전 한도가 소진된 경우도 검증했다. 따라서 새 평가 제출은 이력이나 횟수 제한을 초기화하는 우회로가 되지 않았다.</p>
+
+</section>
+<section aria-labelledby="verification"><h2 id="verification">조사부터 후속 평가까지의 통합 검증</h2>
+
+<p>전체 흐름은 Temporal 테스트 환경에서 첫 평가를 실패시키고, scripted model이 평가 로그와 서빙 로그를 차례로 요청한 뒤 재시도를 제안하도록 구성했다. 모델 응답을 고정했기 때문에 판단의 품질보다, 그 제안을 시스템이 어떤 조건으로 실행하는지 확인할 수 있었다.</p>
+<p>테스트는 JSON이 아닌 응답과 알 수 없는 도구 요청도 중간에 넣었다. 조사기는 이를 오류 관측으로 남기고 제한된 단계 안에서 다음 응답을 받았으며, 마지막 단계에는 추가 도구 호출 대신 최종 제안을 요구했다. 이후 실행 서비스가 재시도 권한을 선점하고 기존 실행 경로로 후속 시도를 제출했다.</p>
+<p>검증한 이력은 <strong>첫 시도 실패 → 서빙·평가 로그 조사 → 재시도 제안 → 실행 조건 확인 → 두 번째 시도 성공</strong>이었다. 가짜 GPU 제공자의 평가 시작 횟수는 실패한 첫 시도와 성공한 후속 시도를 합쳐 2회였고, Agent를 중복 시작하려 해도 추가 실행이 생기지 않았다. 모델에 전달된 로그가 해당 시도의 것인지와 비밀값이 모델 입력·Temporal 이력에 남지 않는지도 함께 확인했다.</p>
+
+</section>
+<nav class="next" aria-label="다른 VLOps 글"><p>VLOps의 설계와 실행 제어</p><a href="workflow-versions.html">대표 글: 평가 계획과 실행 버전</a> · <a href="../index.html#articles">전체 글 목록으로</a></nav>
+</article></main><footer>VLOps · 모델 평가 워크플로의 설계·구현</footer></body></html>

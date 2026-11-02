@@ -1,0 +1,26 @@
+/* Hand-positioned SVG architecture; narrow screens use a separate layout. */
+article section>p{margin-bottom:24px}
+article h3{margin-top:38px;line-height:1.55;letter-spacing:-.3px}
+.architecture{margin:34px 0 40px}
+.architecture .figure-image{display:block;background:#fff;border:1px solid #d5dfe5;border-radius:10px;overflow:hidden;text-decoration:none}
+.architecture picture{display:block}
+.architecture img{display:block;width:100%;height:auto;min-width:0;max-height:none;border:0;border-radius:0}
+.architecture .figure-image:hover{border-color:#7b9caa}
+.architecture figcaption{margin-top:12px}
+.diagram-enlarge{white-space:nowrap;margin-left:5px;font-size:13px}
+.code-figure pre{margin-bottom:0}
+.evidence-detail .table-scroll td:first-child{min-width:120px}
+.article-footer{margin-top:48px}
+@media(max-width:620px){
+ .architecture{margin-inline:-6px}
+ .architecture figcaption{margin-inline:6px}
+ article h3{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{
+ .architecture{break-inside:avoid;margin:18pt 0}
+ .architecture img{min-width:0;max-height:180mm;object-fit:contain}
+ .diagram-enlarge{display:none}
+ article section>p{margin-bottom:12pt}
+ article h3{font-size:13pt;margin-top:18pt}
+}

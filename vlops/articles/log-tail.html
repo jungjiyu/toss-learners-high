@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ko">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>재접속 검증에 성공했는데도 마지막 6줄은 왜 사라졌나 · VLOps</title><meta name="description" content="원격 로그 재접속과 종료 구간 누락">
+<title>재접속은 성공했는데 마지막 6줄은 왜 빠졌을까 · VLOps</title><meta name="description" content="원격 로그 재접속과 종료 구간 누락">
 <link rel="stylesheet" href="../../mogu/assets/reader.css"><link rel="stylesheet" href="../assets/article.css"></head>
 <body><a class="skip" href="#content">본문으로</a>
 <header class="site-header"><a href="../index.html">VLOps · Backend Engineering</a><a href="../index.html#articles">글 목록</a></header>
 <main id="content"><article aria-labelledby="article-title"><p class="eyebrow">VLOPS · 원격 로그 재접속과 종료 구간 누락</p>
-<h1 id="article-title">재접속 검증에 성공했는데도 마지막 6줄은 왜 사라졌나</h1><p class="lead">로그 스트림에 재접속한 뒤, 다시 받은 앞 196개 레코드가 이전 출력과 일치하는지 확인했다. 검증은 통과했지만 작업 종료 후 전체 로그를 비교하니 마지막 6줄이 빠져 있었다. 재전송 구간을 정확히 건너뛰는 것과 마지막 로그까지 수집하는 것은 별개의 문제였다.</p>
+<h1 id="article-title">재접속은 성공했는데 마지막 6줄은 왜 빠졌을까</h1><p class="lead">로그 스트림에 재접속한 뒤, 다시 받은 앞 196개 레코드가 이전 출력과 일치하는지 확인했다. 검증은 통과했지만 작업 종료 후 전체 로그를 비교하니 마지막 6줄이 빠져 있었다. 재전송 구간을 정확히 건너뛰는 것과 마지막 로그까지 수집하는 것은 별개의 문제였다.</p>
 <nav class="toc" aria-label="이 글의 목차"><strong>목차</strong><ol><li><a href="#replay">처음부터 다시 보내는 로그 서버</a></li><li><a href="#run79">Run 79: 재전송 196개를 제외한 최종 523개</a></li><li><a href="#run80">Run 80: 앞부분은 맞고 마지막 6줄은 없는 출력</a></li><li><a href="#drain">작업 종료 후 로그 drain</a></li></ol></nav>
 <section aria-labelledby="replay"><h2 id="replay">처음부터 다시 보내는 로그 서버</h2>
 

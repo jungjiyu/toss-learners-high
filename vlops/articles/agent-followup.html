@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ko">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>사용자와 Agent가 동시에 재시도하면, GPU 작업은 몇 개 시작될까 · VLOps</title><meta name="description" content="Agent 제안의 검증과 후속 실행 통제">
+<title>평가 복구 Agent 설계: 설정 변경 검증과 중복 실행 방지 · VLOps</title><meta name="description" content="Agent 제안의 검증과 후속 실행 통제">
 <link rel="stylesheet" href="../../mogu/assets/reader.css"><link rel="stylesheet" href="../assets/article.css"></head>
 <body><a class="skip" href="#content">본문으로</a>
 <header class="site-header"><a href="../index.html">VLOps · Backend Engineering</a><a href="../index.html#articles">글 목록</a></header>
 <main id="content"><article aria-labelledby="article-title"><p class="eyebrow">VLOPS · Agent 제안의 검증과 후속 실행 통제</p>
-<h1 id="article-title">사용자와 Agent가 동시에 재시도하면, GPU 작업은 몇 개 시작될까</h1><p class="lead">평가가 실패하면 사용자는 같은 설정으로 재시도를 누를 수 있고, Agent는 동시성을 낮춰 다시 실행하자고 제안할 수 있었다. 둘 다 유효한 요청이지만 모두 실행하면 같은 실패 때문에 GPU 작업이 두 개 시작된다. 요청 ID도 내용도 다르므로 중복 요청 검사로는 막을 수 없었다. 실패한 실행 시도에 대해 수동 재시도와 Agent 중 하나만 후속 실행을 만들도록 구현했다.</p>
+<h1 id="article-title">평가 복구 Agent 설계: 설정 변경 검증과 중복 실행 방지</h1><p class="lead">평가가 실패하면 사용자는 같은 설정으로 재시도를 누를 수 있고, Agent는 동시성을 낮춰 다시 실행하자고 제안할 수 있었다. 둘 다 유효한 요청이지만 모두 실행하면 같은 실패 때문에 GPU 작업이 두 개 시작된다. 요청 ID도 내용도 다르므로 중복 요청 검사로는 막을 수 없었다. 실패한 실행 시도에 대해 수동 재시도와 Agent 중 하나만 후속 실행을 만들도록 구현했다.</p>
 <nav class="toc" aria-label="이 글의 목차"><strong>목차</strong><ol><li><a href="#race">서로 다른 요청이 같은 실패를 복구할 때</a></li><li><a href="#claim">CAS로 수동 재시도와 Agent의 경합 처리</a></li><li><a href="#investigation">Agent가 조사할 정보와 제안할 조치</a></li><li><a href="#validation">평가 대상은 고정하고 실행 설정만 변경</a></li><li><a href="#budget">평가가 새로 생성돼도 유지되는 복구 한도</a></li><li><a href="#verification">조사부터 후속 평가까지의 통합 검증</a></li></ol></nav>
 <section aria-labelledby="race"><h2 id="race">서로 다른 요청이 같은 실패를 복구할 때</h2>
 <p>NAVER Cloud에서 VLOps의 자동 복구 Agent를 구현했다. VLOps에서 수동 재시도는 기존 평가에 새 실행 시도를 추가했고, Agent가 설정을 바꿔 제출하면 별도의 평가를 생성했다. 저장되는 평가가 다르므로 기존 평가의 시도 번호에 유일성 제약을 두는 것만으로는 중복 실행을 막을 수 없었다.</p>

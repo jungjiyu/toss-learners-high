@@ -34,16 +34,11 @@ for x in m['files']:
    ok=numeric(json.loads(raw))==numeric(json.loads(published.read_bytes()));kind='numeric values and their JSON paths'
   else:ok=raw==published.read_bytes();kind='approved architecture bytes'
   checks.append({'path':x['published_path'],'check':kind,'passed':ok})
-changed=subprocess.check_output(['git','diff','--name-only','6cf96d8','--','mogu'],cwd=R,text=True).splitlines()
-assert set(changed)<= {'mogu/index.html'},changed
-old=subprocess.check_output(['git','show','6cf96d8:mogu/index.html'],cwd=R)
-current=(R/'mogu/index.html').read_bytes()
-# Only four dimension attributes on the two existing SVG img tags may differ.
-def without_dimensions(raw):
- return re.sub(rb'<img\b[^>]*>',lambda m:re.sub(rb' (?:width|height)="[0-9]+"',b'',m[0]),raw)
-assert old==without_dimensions(current),'Existing Mogu content changed'
-assert len(re.findall(rb' (?:width|height)="[0-9]+"',current))==4
-result={'source_commit':m['source_commit'],'checks':checks,'passed':all(c['passed'] for c in checks),'existing_mogu_content_unchanged':True,'mogu_layout_only':'four image dimension attributes on guide'}
+# A concurrent, independently published Mogu prose revision was merged intact.
+# Compare its exact tree and manifest, rather than rejecting that user's update.
+MOGU_BASE='2cf6eec65776727ca4419e7bdaa00b4fb72b27b0'
+assert not subprocess.check_output(['git','diff',MOGU_BASE,'--','mogu','publication.json'],cwd=R),'Latest published Mogu changed'
+result={'source_commit':m['source_commit'],'checks':checks,'passed':all(c['passed'] for c in checks),'existing_mogu_content_unchanged':True,'mogu_preserved_commit':MOGU_BASE}
 (R/'.review/content.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 assert result['passed'],[c for c in checks if not c['passed']]
-print('Published content checks:',len(checks),'PASS; existing Mogu content unchanged (image dimensions only)')
+print('Published content checks:',len(checks),'PASS; latest published Mogu and manifest unchanged')

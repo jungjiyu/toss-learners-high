@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>평가 계획을 바꾸면서도, 이미 시작한 실행의 계획은 어떻게 보존할까 · VLOps</title>
+  <title>모델 평가 워크플로 재설계: Argo에서 Temporal로 전환한 이유 · VLOps</title>
   <meta name="description" content="NAVER Cloud 인턴 업무에서 모델 평가 실행 구조를 개선한 과정. Argo와 Temporal을 검토한 이유, 실행별 정의 버전 고정과 DAG 병렬 실행을 구현한 내용을 정리했다.">
   <link rel="stylesheet" href="../../mogu/assets/reader.css">
   <link rel="stylesheet" href="../assets/article.css">
@@ -14,7 +14,7 @@
   <main id="content">
     <article aria-labelledby="article-title">
       <p class="eyebrow">VLOPS · 모델 평가 워크플로 재설계</p>
-      <h1 id="article-title">평가 계획을 바꾸면서도, 이미 시작한 실행의 계획은 어떻게 보존할까</h1>
+      <h1 id="article-title">모델 평가 워크플로 재설계: Argo에서 Temporal로 전환한 이유</h1>
       <p class="lead">NAVER Cloud에서 MLOps 인턴으로 일하며 모델 서빙·평가 플랫폼인 VLOps를 개발했다. 기존에도 모델 서버가 준비되면 벤치마크를 실행하고 결과를 수집하는 과정은 자동화돼 있었다. 다만 평가가 어디서 대기하고 무엇 때문에 실패했는지 알아보려면 Kafka 메시지, Airflow 콜백, 원격 GPU 작업을 함께 확인해야 했다.</p>
       <p>재설계 중에는 실행 도중에도 평가 항목과 순서를 바꾸고 싶다는 요구가 나왔다. 두 벤치마크를 실행하는 중에 세 번째를 추가한다면, 이미 시작한 평가도 세 개를 모두 실행해야 할까? 최종 구현에서는 계획을 수정할 때 새 버전을 등록하고, 이미 접수한 평가는 요청 당시의 계획대로 실행하도록 했다.</p>
       <nav class="toc" aria-label="이 글의 목차"><strong>목차</strong><ol>

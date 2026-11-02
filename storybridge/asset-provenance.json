@@ -2,7 +2,7 @@
   "architecture.svg": {
     "source": "docs/assets/architecture.svg",
     "source_sha256": "f9a6c8eb841f77e9c327d4064b92ec350c52e36c71abae66703d89fe403194cf",
-    "output_sha256": "488e75f014bf809c6013708f77767e66dd7b35dd671db0ca1c575857a02a2009",
+    "output_sha256": "42991df07ff575885eaa3cac0bbeda1cc8f4facf2dfbacfc6306da9b7e7aa106",
     "text_changes": [
       {
         "before": "StoryBridge / single gateway A · Windows native",
@@ -79,7 +79,7 @@
   "boundary-churn-range.svg": {
     "source": "docs/assets/boundary-churn-range.svg",
     "source_sha256": "d396ed8bb3f80b3930ab18fbed238c3ce0ec71589cc529f1f19766957afc741a",
-    "output_sha256": "84d32d29598cad2be81e28a994f4bb7701bb51d65897f840236e9ac2234d2add",
+    "output_sha256": "6132ec08673983ac62d2631098f867dd38e2c70e9ba5c33611875c53750bbb28",
     "text_changes": [],
     "html_legend": [
       {
@@ -123,7 +123,7 @@
   "boundary-range.svg": {
     "source": "docs/assets/boundary-range.svg",
     "source_sha256": "dcae67dfcbb369f86535a3dd946ab048cafbefcb70a48df631967d8dca0beeda",
-    "output_sha256": "84ecbb876b2e810c8adc75496084f7e4590a092f7687772c2f654f10d9527f10",
+    "output_sha256": "2fd2866579f81dde7ddad28d8d1dcff08f85770767abdb0c6984092011a8d88a",
     "text_changes": [],
     "html_legend": [
       {
@@ -167,7 +167,7 @@
   "boundary-reconnect.svg": {
     "source": "docs/assets/boundary-reconnect.svg",
     "source_sha256": "504fed183998bae282942b7470bb6a0afb2d050773bcb63e01dad80ea0e62992",
-    "output_sha256": "f6d4d3a57adeabc15c07aef2970c4c3bfd67d9ec1a423c79f64a98af0a7ef5cc",
+    "output_sha256": "d81bfab840c142475cc363d0fdadd279719e3e51a57b7b99119751dd812a4b0e",
     "text_changes": [
       {
         "before": "normal",
@@ -214,7 +214,7 @@
   "boundary-soak-backlog.svg": {
     "source": "docs/assets/boundary-soak-backlog.svg",
     "source_sha256": "96ee25c0c8499a1562ffa3c3fbdb0d35a644a97f76771d6b9b2027e0583623a9",
-    "output_sha256": "bd0e383a021fdeaa444cdbf4d099ec0046c2ca5048957ec0c6a2300a3b998f6f",
+    "output_sha256": "47b96c3c3a4f5d84447e11f2278a3fba450f52bef365bb7c45e7571d938262fd",
     "text_changes": [],
     "html_legend": [
       {
@@ -238,7 +238,7 @@
   "boundary-soak-resources.svg": {
     "source": "docs/assets/boundary-soak-resources.svg",
     "source_sha256": "9a4d31bdf2e04fc631981fd25458dd8882d43f9cde7a5ae71638b5e3c1c08bd7",
-    "output_sha256": "7faa585c1b99673ecad716857f4ea7d9d3941677adfb361cec5533e17abd3672",
+    "output_sha256": "9bec36747d5fc4e868a3d86f264697287228f8f6ed0893f999ad4512d0c4710d",
     "text_changes": [],
     "html_legend": [
       {
@@ -277,7 +277,7 @@
   "causal-2x2.svg": {
     "source": "docs/assets/causal-2x2.svg",
     "source_sha256": "2d75016c60e99a51a2ca6d9c14f653469ee9c3ed93ec1b8d198ca54951e6a2a0",
-    "output_sha256": "b9704d13de8818c56ff35889e91e504938bf69eeadd5f8e4e70e7a318dc1ccdb",
+    "output_sha256": "c69872d6a0173b72057285ad1d1c957934547aa4b503c717269b5ebd4432f961",
     "text_changes": [
       {
         "before": "A",
@@ -340,7 +340,7 @@
   "causal-d-resources.svg": {
     "source": "docs/assets/causal-d-resources.svg",
     "source_sha256": "168c6aecfcca46a551870eb4674a3e6264a5b9507adcf1507bdaf9495ce52cea",
-    "output_sha256": "97caa9daa0bc67c2e2d2d43a8351d8851a0f47dc48fbf1f733164db0726316bf",
+    "output_sha256": "38e94a6cfe8b04408dcf693d956e1e8987a21670693fd03a6e2be35dfa2255d3",
     "text_changes": [
       {
         "before": "Q",
@@ -458,7 +458,7 @@
   "causal-final-repeats.svg": {
     "source": "docs/assets/causal-final-repeats.svg",
     "source_sha256": "241932adbf5e9d5807adb4024fad39f3c7c0f12e0fb908a2514612ef813b8f81",
-    "output_sha256": "53221f9e1d251124f416d872253883fbb67af71bd74754f76f977f105b34c059",
+    "output_sha256": "81040b63c8214d0bec2b1ffa0d06cb726dca67fe2663d3720bc6326a570befc8",
     "text_changes": [
       {
         "before": "C/Q",
@@ -547,7 +547,7 @@
   "causal-same-message.svg": {
     "source": "docs/assets/causal-same-message.svg",
     "source_sha256": "acf979d7630d371c07357c449bb86e8960df675175b685b93a57d0e41f5e7b9d",
-    "output_sha256": "05db60be0015dafeab5386f4856cf802c5107f671280ba1ac674b4aca6d57929",
+    "output_sha256": "7ea530cff9033a6984c2f7b4a49599c40edef8f3aeffa4eedb97c89cbd9434d5",
     "text_changes": [
       {
         "before": "Q/D partial-late example: room 30, seq 8",
@@ -586,7 +586,7 @@
   "causal-stage-times.svg": {
     "source": "docs/assets/causal-stage-times.svg",
     "source_sha256": "60f1d4baa7e228aa0b91f0357a21c6aa5fef1f4d163fad623773367e997c44a2",
-    "output_sha256": "3dc801f2e4788c9fa4408b70cf9eb1b349aed760b381bc54f4696fe29b88e144",
+    "output_sha256": "0763a088ad2f8a900e55944568025e81061df620dbf88a01d79edb30a1c6d4fd",
     "text_changes": [
       {
         "before": "close -> attempt",
@@ -634,7 +634,7 @@
   "comparison.svg": {
     "source": "docs/assets/comparison.svg",
     "source_sha256": "cfe31bd5ba79fec9dffaef97d7cf436307874167138f41f459f60832dbea91bd",
-    "output_sha256": "fa940c9cc9edfa5e816a078db79c070e4eabf7cf183c2842d051088818e09dc2",
+    "output_sha256": "2f0e2be02d0042e4eb3cb0e15ad00679cb4c926379fbfb2551c6107d2b8d43a6",
     "text_changes": [
       {
         "before": "normal",
@@ -722,7 +722,7 @@
   "connection-memory.svg": {
     "source": "docs/assets/connection-memory.svg",
     "source_sha256": "e58a97fa2f443f6c6a2c1eb40beafcca1e914373b8f8ad8127101e4e07dba4bc",
-    "output_sha256": "ae04a34cb394e6504e5d0c69c508f4fa3d0a464f67c3db095250542a4a941614",
+    "output_sha256": "382d4d51e8871f1d63a054ea5e83ca900be027aa4ee9682b8ba4b41b2be913ce",
     "text_changes": [
       {
         "before": "F2 / 2000 connections",
@@ -747,7 +747,7 @@
   "credit.svg": {
     "source": "docs/assets/credit.svg",
     "source_sha256": "a0a3d90e0fa0741b1b4bcddec814c45b08a06b4eb1d104ed6d7e3d0dce1aa554",
-    "output_sha256": "df117bf870aae85383c01f534e8dcc80df7ac9c09e84550883df5b28976e299d",
+    "output_sha256": "e933932c0fb13d9162413f22fa6403c64e7f0fd1d55fe49a7552d6b319a6b683",
     "text_changes": [],
     "html_legend": [],
     "data": "Original SVG data paths and transforms retained; only text layers and legends edited."
@@ -755,7 +755,7 @@
   "mixed-backlog.svg": {
     "source": "docs/assets/mixed-backlog.svg",
     "source_sha256": "d88128b60031b9caa9aeee29d9f2dd04ddc21a47bf3dd86a920bb7087b49b329",
-    "output_sha256": "44fe19392b40a5438ddad70de47a06641e4d2b100aee87c61933129bf0c9e531",
+    "output_sha256": "632e3a056fdddb17dfdc1f555f3078ec6e5a24d8f0f202b470849a2024d8f8cf",
     "text_changes": [
       {
         "before": "MI",
@@ -819,7 +819,7 @@
   "mixed-matched.svg": {
     "source": "docs/assets/mixed-matched.svg",
     "source_sha256": "0670ea51aeac3454fc11b7aaf1e4b61cb942d8266bc951e21847eccef9666974",
-    "output_sha256": "9a12926290f11fd0c9d8f59ebb399627392d6316cdfdf17d371a236e15aa67aa",
+    "output_sha256": "864cb63e732e3637ba19df4910a2f53050a068e75839306ccc399ca438734198",
     "text_changes": [
       {
         "before": "MI",
@@ -876,7 +876,7 @@
   "mixed-primary.svg": {
     "source": "docs/assets/mixed-primary.svg",
     "source_sha256": "551f2812329fa39fb24df7d2de1c344e0af3c9e3de69a25e308714dfa7f09dca",
-    "output_sha256": "4ca55382037adf22f1b91030a0d85f0b4dcb2e4bfaac5e38f7ea46956c558d0a",
+    "output_sha256": "52db680fd9a7b8b64a4cac01eea31fd61f9c068e6fead376c6053bdbe7f940f2",
     "text_changes": [
       {
         "before": "Successful STORED / second",
@@ -965,7 +965,7 @@
   "mixed-recovery.svg": {
     "source": "docs/assets/mixed-recovery.svg",
     "source_sha256": "d7e037750498a2e1ae324720e141cf9096b6011d13ab5e1bff8dabfdfdd7e1a5",
-    "output_sha256": "98c686f9362a8278b94927be37479c18099756d5b482c0992c9f766b901a1d4e",
+    "output_sha256": "6e76b0c2f7c8f577b65d1a6c63ac21e5d278f29898dee0c1556906381a7ac343",
     "text_changes": [],
     "html_legend": [
       {
@@ -1044,7 +1044,7 @@
   "mixed-resources.svg": {
     "source": "docs/assets/mixed-resources.svg",
     "source_sha256": "b03b8fd97556a61c9ef5135fd2cc14af3ac842b37109dc6b66e367fe3b7bd663",
-    "output_sha256": "05de7337644112940d5b9c85d882cd6190ec1e96dda64549f086343ff48cbcf2",
+    "output_sha256": "fea20a97ebe11880a2c8fc7cab783771bd5297393436ad6540a44f02b653bdf0",
     "text_changes": [
       {
         "before": "MI outstanding credit MiB",
@@ -1108,7 +1108,7 @@
   "mixed-soak.svg": {
     "source": "docs/assets/mixed-soak.svg",
     "source_sha256": "772c0069449cbd114bb0eb92908a8ed72f508b099eec9407ef9111506a21006a",
-    "output_sha256": "9a82024be038420941b2d9d83f79f68a16053adbceb7120c86b16b9d60c4eb0a",
+    "output_sha256": "11f2f7965c1cf8d59bdcf419ef44850ba14ae9fe1cf28e304b9dbeb9e4065553",
     "text_changes": [],
     "html_legend": [
       {
@@ -1172,7 +1172,7 @@
   "mixed-writer.svg": {
     "source": "docs/assets/mixed-writer.svg",
     "source_sha256": "06d0187f7e1aee30fe3b199ab90eccb69cef1f7c9d1a228a5adbea47ef5501a0",
-    "output_sha256": "955a2268cc9c9d8b0a22e6a4dcdfc6ff6d038cd5f5d90e24782832638d76605d",
+    "output_sha256": "6572d23458bcbf8223611a7ebc98ec0026e6290c78a80e6239512bce2d636637",
     "text_changes": [],
     "html_legend": [],
     "data": "Original SVG data paths and transforms retained; only text layers and legends edited."
@@ -1180,7 +1180,7 @@
   "rabbit-gateways.svg": {
     "source": "docs/assets/rabbit-gateways.svg",
     "source_sha256": "b9f86018f97c8733a8585f9313b45927917af437d72702227ede786b9fe7e1ad",
-    "output_sha256": "24292021fc74944535f45b40efcd5c2e4b33133d75cf41c8966bd333f6ed7bf1",
+    "output_sha256": "a1f43a40d5907cf55542b18c348d6292e8c3bef8afd7a5e664d6a81ab9c98232",
     "text_changes": [
       {
         "before": "C2 / C3: one laptop, two processes — protocol recovery, not physical HA",
@@ -1197,7 +1197,7 @@
   "recovery.svg": {
     "source": "docs/assets/recovery.svg",
     "source_sha256": "df3771a1f55342324cd78b8e6f66d6d5effd43cf5451e985cba5a8d6aeb45cff",
-    "output_sha256": "b7d32333da0129ddacdcb1f320f45afe1663c9f68ebb8cc3ebad6e99cec03447",
+    "output_sha256": "e0bf875dd8e1de8a7dc3274691fa6ae4ab19bb47a70a73fb3fac77e244f979c3",
     "text_changes": [
       {
         "before": "R0",
@@ -1253,7 +1253,7 @@
   "scale-amplification.svg": {
     "source": "docs/assets/scale-amplification.svg",
     "source_sha256": "88259441e37e75d65b5bb6b046c67a13ecddb2522924b5a47159645b3c51f6de",
-    "output_sha256": "d3a9c9a9977ab80b21e7d149fc7ab683ea80909bd0a7fa6e108a3312b8f10eaa",
+    "output_sha256": "915fdca79859c43c8c47d9a976a500a6aa5596207a04fd74844d2151a1bbc05f",
     "text_changes": [
       {
         "before": "C2 / hot",
@@ -1318,7 +1318,7 @@
   "scale-final-cost.svg": {
     "source": "docs/assets/scale-final-cost.svg",
     "source_sha256": "f00786dad86805fa1e5d03e59ca2864394051517627b25f1c0380a5219ab7cf8",
-    "output_sha256": "a5f988a9d58bc0db095f4ddc770c8c74fa4a4593faed881cf5d17fe030335ff5",
+    "output_sha256": "7acf9e5650d826636e88f4c17c344868029c4d7d36b015b53d95e00e0416d6d9",
     "text_changes": [
       {
         "before": "C3/hot",
@@ -1383,7 +1383,7 @@
   "scale-final-fanout.svg": {
     "source": "docs/assets/scale-final-fanout.svg",
     "source_sha256": "5dcc6bc369ec117f23e4fcd6858f8ede4970f249c18f80d28c6a292cc3b23654",
-    "output_sha256": "1aa4b17e2e261ff54257aa14af8bcedd66dae4e9f1f54be64ea6a34158849909",
+    "output_sha256": "c514e41feca5bd66e1b059a20e0f68732deba2c192b6fb33cd05bc76045fcfc8",
     "text_changes": [
       {
         "before": "Normal transport tail",
@@ -1396,7 +1396,7 @@
   "scale-final-outcomes.svg": {
     "source": "docs/assets/scale-final-outcomes.svg",
     "source_sha256": "948e6ae1d3cd47e712e53e12bf92cb06e63b53553e1eefb8d50112fe78f1e757",
-    "output_sha256": "90bbfcb9e55724f6c542fdb829a5d8d979501cfb82c5bd0ff3119a58fe8ef386",
+    "output_sha256": "dbb2042d567237cff76eac77c1e43cc13ef9c4ffce7aaf3d07ca9ab3654c1c5a",
     "text_changes": [
       {
         "before": "C3/hot",
@@ -1461,7 +1461,7 @@
   "scale-final-primary.svg": {
     "source": "docs/assets/scale-final-primary.svg",
     "source_sha256": "353ee6574c6cca5dca0b1937f8a90c8b90337b4385ce403db5112912e0c169ae",
-    "output_sha256": "3810ab3900846f468d2c8c95b2b21ef68e37c902abd708afc9f9c38b37846a12",
+    "output_sha256": "34814cfff3c870af601097ec9e56d7c2c13af05ea5131372db6ea615a7fe9dd7",
     "text_changes": [
       {
         "before": "C3/hot",
@@ -1530,7 +1530,7 @@
   "scale-final-throughput.svg": {
     "source": "docs/assets/scale-final-throughput.svg",
     "source_sha256": "1df0e7cca99e7b73d6f8a3718be842b78681c37c4c769f395f1555538d1227aa",
-    "output_sha256": "30e3fb41a7a72147750dbbf35917abc61d8cba8179a7ed062a854729f80fc994",
+    "output_sha256": "d53c1f574063ab602786ea479a7d048f2e3c78dce52ab21b98959c0292e8c36c",
     "text_changes": [
       {
         "before": "R0",
@@ -1598,7 +1598,7 @@
   "scale-idle.svg": {
     "source": "docs/assets/scale-idle.svg",
     "source_sha256": "9b0d048048f78429e209060eb564c9e6b2f1292bfbca8bdb62effc95cec5bbf3",
-    "output_sha256": "26d9d8805d1be6ff4f754be904b61ef3a742f43957e74d86db51fe02d9746565",
+    "output_sha256": "5e0f4d3e3e5e3790320557bea7156f635e93603d88892d3a2b2e289c79ac3051",
     "text_changes": [
       {
         "before": "M",
@@ -1644,7 +1644,7 @@
   "scale-memory-cost.svg": {
     "source": "docs/assets/scale-memory-cost.svg",
     "source_sha256": "af47b87f5192001d05f034d1743b57320a8413c8e273bb4509f77472aefd2024",
-    "output_sha256": "55a022c27608b4fb74051bc50ffbda495d5eceacfcea57891768075b500b5d72",
+    "output_sha256": "d32bf46b96805c30fdbeea842a32751fbac9551ff426be97a38945b6a0aa6693",
     "text_changes": [
       {
         "before": "C4/hot",
@@ -1677,7 +1677,7 @@
   "scale-memory-outcomes.svg": {
     "source": "docs/assets/scale-memory-outcomes.svg",
     "source_sha256": "fd96b6cd8d60f85d7645ed07cc303875e0afcc762908c7baf758ba5065bffe5e",
-    "output_sha256": "d28d6c8e1427e95d27b71c47b3d524deb8fb4b4449e945cee50a098581abc74a",
+    "output_sha256": "4f75cf7d9fa8074cfc7b93e1e3f7ed4f67d0c1eaf076e2af72bec1af51d19fdc",
     "text_changes": [
       {
         "before": "C4/hot",
@@ -1710,7 +1710,7 @@
   "scale-memory-primary.svg": {
     "source": "docs/assets/scale-memory-primary.svg",
     "source_sha256": "ceea8a5252858fa4824f94454e13f2f63a17e744bd5da6304b65c82d114de26f",
-    "output_sha256": "5fa6bfae13d5932c3b7aa692cd33fa492883c713ac6372071b7047c60fbffb09",
+    "output_sha256": "9846235c14c0c37bb0a16c795cdb4b7e8a08e90603986c35318a52324ee843ff",
     "text_changes": [
       {
         "before": "C4/hot",
@@ -1747,7 +1747,7 @@
   "scale-primary.svg": {
     "source": "docs/assets/scale-primary.svg",
     "source_sha256": "19d5a6818756ad8b5f5666e34a0eb7eba0d7852447d764479182b4c2c4ca8145",
-    "output_sha256": "6d64b287cba9435f9be8b082821ae02a452092278501d2cce2f19d4bd95071f8",
+    "output_sha256": "c183f47e220ade98ada5b23f74d10d86888ecf51a78f426df80cf65b2ea44b74",
     "text_changes": [
       {
         "before": "C2 / hot",
@@ -1872,7 +1872,7 @@
   "scale-throughput.svg": {
     "source": "docs/assets/scale-throughput.svg",
     "source_sha256": "3931e3daf7199a63182b9c74420931b1b10e462c99f89bd46c00ae6be0896ee2",
-    "output_sha256": "d82bb52d074e877703442575d3f59b7e2b732945916d6755fc636b0db4aa4fd9",
+    "output_sha256": "26ccbdf9ead9401e36a746fba795834d0149be4025aca24dce9d44a66102b153",
     "text_changes": [],
     "html_legend": [
       {
@@ -1886,7 +1886,7 @@
   "shared-live-architecture.svg": {
     "source": "docs/assets/shared-live-architecture.svg",
     "source_sha256": "f4083fee5f3ae1ef1694f4f7b39e45dd975a49b67847c316448d910a4974c4a0",
-    "output_sha256": "405bc906d61d1003d5c14e5486fea251c6de69ad90bd573b90a9e1b77edb5f04",
+    "output_sha256": "fcb1349c777cd6eadf087e6829f341756e6b8ae7ae1b6ebd7f8cb401d3d92639",
     "text_changes": [
       {
         "before": "L / F2: shared representation, separate live and recovery paths",
@@ -1903,7 +1903,7 @@
   "recovery-timeline-37.svg": {
     "source": "docs/assets/timeline-scale-C4-finaldrain-mixed-250-20261031-002751-f379.svg",
     "source_sha256": "77ff0d78d6c9b2f9f20d90665a59cfcfbe5a55b1fc4a199e61b3e47436b4c209",
-    "output_sha256": "467c1264b05a56ebbb4917758d27a1878ede1f16b5c8b074c2e7f48eb7e4116e",
+    "output_sha256": "751b8059881848695defbb7cfca671d9aa4434b84709b836ab4eb3521be4903f",
     "text_changes": [
       {
         "before": "scale-C4-finaldrain-mixed-250-20261031-002751-f379",
@@ -1957,7 +1957,7 @@
   "recovery-timeline-38.svg": {
     "source": "docs/assets/timeline-scale-F2-finalexplore-mixed-250-20261030-230649-2f66.svg",
     "source_sha256": "d80ea0f04d77438b6066225f5bd0f38c15782936ff3efa5e199cfd38198418d5",
-    "output_sha256": "77346cd3a80258cdd12df9c9c5640870e7b1c574135f2a3492badcb1bc22e81d",
+    "output_sha256": "277880abde30d91d2da482b3344eb95dd1825ffc260add340595687fd8f3197d",
     "text_changes": [
       {
         "before": "scale-F2-finalexplore-mixed-250-20261030-230649-2f66",
@@ -2001,7 +2001,7 @@
   "recovery-timeline-39.svg": {
     "source": "docs/assets/timeline-scale-F2-finalexplore-mixed-250-20261030-230906-49ab.svg",
     "source_sha256": "64f2e595013d530980098b775a05e4d8e90aa34f05f9297bfba89a863e69d2a1",
-    "output_sha256": "d51a5f55b62333f889c60ab242961f239e87eec53b3395f69df92431000ce49e",
+    "output_sha256": "c6208ad5b7c7516403ce7e78f4fbfd7f8f31c1e1b2a75e01bb36aa6de995e95d",
     "text_changes": [
       {
         "before": "scale-F2-finalexplore-mixed-250-20261030-230906-49ab",
@@ -2055,7 +2055,7 @@
   "recovery-timeline-40.svg": {
     "source": "docs/assets/timeline-scale-F2-finalsoak-spread-250-20261030-231953-193f.svg",
     "source_sha256": "d3bd65b15475f5b3b96f58b4d42a0ff5b5690fdb5af385f7e05a3637863e3722",
-    "output_sha256": "95409906536130a5e2353b2ecf02250c615a2628657c76fb6a70246d2d2748a7",
+    "output_sha256": "2beddc8da4aeaa659438a17eb7ec243ebb66b5187154019c69902d28e4f65903",
     "text_changes": [
       {
         "before": "scale-F2-finalsoak-spread-250-20261030-231953-193f",
@@ -2099,7 +2099,7 @@
   "recovery-timeline-41.svg": {
     "source": "docs/assets/timeline-scale-L-explore-mixed-20261030-212606-b140.svg",
     "source_sha256": "86a16780aed44bbc4c4327cadae121592befadbda4b204d86ce6e5235af9411b",
-    "output_sha256": "ed1bc034c0bcf4aaf0d24b2c24ceb08d1592fe83cf6501d93da9bcd672b911c0",
+    "output_sha256": "ae259cba9f553a2ad9127756a2142facdea02f6fdecb848b77b85b920e7300cf",
     "text_changes": [
       {
         "before": "scale-L-explore-mixed-20261030-212606-b140",
@@ -2143,7 +2143,7 @@
   "recovery-timeline-42.svg": {
     "source": "docs/assets/timeline-scale-M-finaldrain-mixed-250-20261031-002348-3e32.svg",
     "source_sha256": "831b83ec57334b0cf9aad2834897ee228b2509333106245b93a30c05a4acb095",
-    "output_sha256": "4b0ffbd001c04b89caf107cdf0c89a782fbe8917eaf911ee417a71acc90ceff0",
+    "output_sha256": "50aac2d8f8e7a2671678064211c6ccd72b65f1f4a99722651407cbf6fe37b09c",
     "text_changes": [
       {
         "before": "scale-M-finaldrain-mixed-250-20261031-002348-3e32",
@@ -2197,7 +2197,7 @@
   "recovery-timeline-43.svg": {
     "source": "docs/assets/timeline-scale-M-finalmemorysoak-spread-250-20261031-000544-06cb.svg",
     "source_sha256": "4458bc173ea8b512ebb1fdb06d195ac6d0c9625e14e19c4110a288781a6cd56d",
-    "output_sha256": "f95e70f04f91fa01175fe4bd3c7d3e88bf609a53be90eca49eef28e56415d2ff",
+    "output_sha256": "bca73f850dcf1697006f61482183e6fad28594efb5cadffbb221ca0e7241266c",
     "text_changes": [
       {
         "before": "scale-M-finalmemorysoak-spread-250-20261031-000544-06cb",

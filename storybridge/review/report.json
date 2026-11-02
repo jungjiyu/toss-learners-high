@@ -4298,6 +4298,6 @@
   ],
   "browser_errors": [],
   "runtime_errors": [],
-  "manual_review": "Read the revised openings of all 11 articles and the guide in actual Chrome screenshots; read storage snapshot, shared-fanout tradeoffs, mixed boundary and reconnect adoption paragraphs with surrounding SQL/results. Compared all 76 revised paragraphs as text. Desktop and 390px manual reading; 768px and print-media structural checks. No other engine or physical pagination review.",
+  "manual_review": "Read all 11 articles and guide in full prose; compared Mogu retries/transactions/recovery. Read all edited blocks in context. Actual Chrome captures: all 11 openings, guide, and storage/shared-fanout/mixed/reconnect body paragraphs at desktop or 390px. 1280/768/390px and print-media automated rendering checks passed. Other engines and physical print pagination not reviewed.",
   "scope": "Static documents only; no performance or fault tests; print media, no PDF."
 }

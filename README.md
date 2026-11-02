@@ -39,10 +39,10 @@ python3 tools/verify_live.py https://jungjiyu.github.io/toss-learners-high/
 ## StoryBridge 원본과 갱신
 
 원본 저장소: `jungjiyu/toss_storybridge` (비공개 유지).
-게시 원본 커밋: `325777b442bff96581cb11498ba157fc7fd391aa`.
+게시 원본 커밋: `cb3e519303c47630e6e251e6047f3af5d45b6c27`.
 첫 게시 원본 `79c3da3`의 세 의미 교정과 `1433438`의 문장 연결 교정을 유지했다. `c17b5e5`에서 문제와 설계 선택의 이유를 앞세웠고, `55f14a6`에서는 11편 전체를 다시 읽고 문장 흐름이 끊기던 106개 문단을 교정했다. 이 중 97개는 직전 수정 집합 밖의 본문이다. 별도 소감 문단을 추가하지 않았으며 기술 용어·측정값·비교 조건·실패 판정·표·SQL·코드·승인된 아키텍처는 유지한다. 문단별 전후 원고와 대조 기록은 원본의 `docs/portfolio/decision-edits.json`, `review/decision-review.md`, `review/whole-article-flow-review.md`에 있다.
 
-이번 교정에서는 독자에게 해석 방법을 지시하던 문장을 개발자가 관측하고 판단한 내용으로 바꿨다. 11편의 도입·설계 선택·결과 해석과 안내 페이지를 대조했으며, 원문과의 전후 기록은 원본 `review/author-perspective-edits.json`과 `review/author-perspective-review.md`에 남겼다. 수치·비교 조건·실패 결과·기술 용어는 유지했다.
+모구시장 retries·transactions·recovery의 문체를 대조해 StoryBridge 11편과 안내를 다시 교정했다. 추상적인 표현을 실행 주체·실패 상황·설계 판단으로 바꾸고, 기술 용어·수치·비교 조건·실패 결과는 유지했다. 문단별 전후와 검수 범위는 원본 `review/mogu-tone-edits.json`, `review/mogu-tone-review.md`에 기록했다.
 
 `/storybridge/`에는 안내와 외부 아티클 11편, 승인된 아키텍처, 실제 링크가 참조하는 자산·측정·진단 자료를 게시한다. 비공개 저장소 링크는 공개용 사본으로 변경했으며, 내부 아티클 링크는 해당 글의 측정·구현 근거 목록으로 연결한다. 표·SQL·실험 수치·실패 결과는 유지한다.
 

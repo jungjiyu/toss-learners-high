@@ -74,3 +74,5 @@ records=sorted(done.values(),key=lambda x:x['published_path'])
 manifest={'source_repository':'https://github.com/jungjiyu/toss_mogu','source_commit':SHA,'source_repository_visibility':'private','scope':'12 external pages and only their reachable assets/evidence. Original internal articles and full experiment directories excluded.','files':records,'external_links':sorted(external),'redactions':[{'source':p,'kind':k,'occurrences':n} for (p,k),n in collections.Counter((r['source'],r['kind']) for r in redactions).items()]}
 (OUT/'publication.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'source_commit':SHA,'files':len(records),'bytes':sum((OUT/x['published_path']).stat().st_size for x in records),'redactions':manifest['redactions']},ensure_ascii=False))
+from reserve_mogu_image_space import reserve
+reserve(OUT)

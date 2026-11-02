@@ -39,8 +39,8 @@ python3 tools/verify_live.py https://jungjiyu.github.io/toss-learners-high/
 ## StoryBridge 원본과 갱신
 
 원본 저장소: `jungjiyu/toss_storybridge` (비공개 유지).
-게시 원본 커밋: `c17b5e5f04f8bd5659ce157aa77048781415b326`.
-첫 게시 원본 `79c3da3`의 세 의미 교정과 `1433438`의 문장 연결 교정을 유지했다. 이번에는 11편의 기존 42개 문단에서 관측한 문제와 설계 선택의 이유가 먼저 읽히도록 바꿨다. 별도 소감 문단을 추가하지 않았으며 기술 용어·측정값·비교 조건·실패 판정·표·SQL·코드·승인된 아키텍처는 유지한다. 문단별 전후 원고와 대조 기록은 원본의 `docs/portfolio/decision-edits.json`, `review/decision-review.md`에 있다.
+게시 원본 커밋: `55f14a6d0ee87ce5f56c7d558b29a98787f0807c`.
+첫 게시 원본 `79c3da3`의 세 의미 교정과 `1433438`의 문장 연결 교정을 유지했다. `c17b5e5`에서 문제와 설계 선택의 이유를 앞세운 구성을 유지하면서, 이번에는 11편 전체를 다시 읽고 문장 흐름이 끊기던 106개 문단을 교정했다. 이 중 97개는 직전 수정 집합 밖의 본문이다. 별도 소감 문단을 추가하지 않았으며 기술 용어·측정값·비교 조건·실패 판정·표·SQL·코드·승인된 아키텍처는 유지한다. 문단별 전후 원고와 대조 기록은 원본의 `docs/portfolio/decision-edits.json`, `review/decision-review.md`, `review/whole-article-flow-review.md`에 있다.
 
 `/storybridge/`에는 안내와 외부 아티클 11편, 승인된 아키텍처, 실제 링크가 참조하는 자산·측정·진단 자료를 게시한다. 비공개 저장소 링크는 공개용 사본으로 변경했으며, 내부 아티클 링크는 해당 글의 측정·구현 근거 목록으로 연결한다. 표·SQL·실험 수치·실패 결과는 유지한다.
 

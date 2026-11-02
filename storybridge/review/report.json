@@ -4299,18 +4299,11 @@
   "browser_errors": [],
   "runtime_errors": [],
   "manual_review": {
-    "articles": "All 11 first screens read in actual Chrome desktop or 390px captures; all prose reviewed before editing.",
-    "body_paragraphs": [
-      "comparison:11",
-      "recovery:27",
-      "shared-fanout:30",
-      "mixed:92",
-      "reconnect:27",
-      "reconnect:55"
-    ],
-    "paragraph_captures": ".scratch/decision-screens/",
-    "readability": "Read findings, supporting observations, implementation decisions and remaining limits in their surrounding paragraphs. Kept technical terms, no new reflection section.",
-    "limits": "Chrome/Windows only. Print media checked; physical pagination and other engines not reviewed."
+    "prose": "Read all 11 articles from opening through body, limitations, appendix prose and captions, not only the previously edited 42 paragraphs. Reviewed all revised paragraphs again in context.",
+    "body_captures": "Actual Chrome captures from all 11 articles at 1280px/390px: .scratch/whole-flow-screens/. Read one width per article plus surrounding paragraphs, SQL and tables.",
+    "opening_captures": "Read guide and reconnect first screens in actual desktop/mobile captures.",
+    "scope": "106 paragraphs revised; 97 outside the previous 42-paragraph set. Technical vocabulary, measured values, failure denominators, source tables/code/figures and architecture retained.",
+    "limits": "Chrome/Windows; 768px and print media checked automatically. No physical print pagination or other engine review; no new load tests."
   },
   "scope": "Static documents only; no performance or fault tests; print media, no PDF."
 }

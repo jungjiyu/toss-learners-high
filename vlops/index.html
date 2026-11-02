@@ -15,7 +15,7 @@
     <h1>모델 평가 워크플로의 설계와 실행 제어</h1>
     <p class="lead">NAVER Cloud에서 MLOps 인턴으로 일하며 모델 서빙·평가 플랫폼인 VLOps를 개발했다. 기존 평가 도구와 GPU 환경을 유지하면서 워크플로 실행 구조를 재설계하고, 실행 복구와 로그 수집을 개선했다.</p>
     <div class="cards" id="articles">
-      <article class="card"><p class="eyebrow">대표 글 · 평가 계획과 실행 버전</p><h2><a href="articles/workflow-versions.html">모델 평가 워크플로 재설계: Argo에서 Temporal로 전환한 이유</a></h2><p>Argo와 Temporal을 선택한 배경, 평가 요청 시 정의 버전을 확정한 이유, 직접 구현한 DAG 스케줄러.</p></article>
+      <article class="card"><p class="eyebrow">대표 글 · 워크플로 재설계</p><h2><a href="articles/workflow-versions.html">모델 평가 워크플로 재설계: 레거시 분석과 Temporal 선택</a></h2><p>Kafka·Airflow 기반 레거시 분석부터 Argo와 Temporal의 선택까지. 요구 변화에 따른 설계 판단과 직접 구현한 DAG 실행 제어.</p></article>
       <article class="card"><p class="eyebrow">심화 · GPU 실행 복구</p><h2><a href="articles/runtime-recovery.html">GPU 작업 생성 응답을 잃었을 때, 다시 만들어도 될까</a></h2><p>생성 응답을 받지 못한 GPU 작업을 다시 찾는 방법과 워커 재시작 후 재연결, 종료 확인까지의 처리.</p></article>
       <article class="card"><p class="eyebrow">심화 · Agent의 후속 실행 통제</p><h2><a href="articles/agent-followup.html">사용자와 Agent가 동시에 재시도하면, GPU 작업은 몇 개 시작될까</a></h2><p>수동 재시도와 Agent 제안의 경합을 CAS로 처리하고, 설정 변경 범위와 자동 복구 횟수를 제한한 구현.</p></article>
       <article class="card"><p class="eyebrow">심화 · 로그 종료 구간 누락</p><h2><a href="articles/log-tail.html">재접속 검증에 성공했는데도 마지막 6줄은 왜 사라졌나</a></h2><p>재접속 검증은 통과했지만 마지막 6줄이 빠졌다. 종료 후 전체 로그 비교로 원인을 찾고 drain을 적용한 과정.</p></article>

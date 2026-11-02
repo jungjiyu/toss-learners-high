@@ -56,6 +56,9 @@ for path,doc in parsed.items():
   elif fragment and target in parsed and fragment not in parsed[target].ids:errors.append({'from':path,'href':value,'error':'missing public anchor'})
   references+=1
 
+(OUT/('storybridge-http.json' if live else 'storybridge-local-http.json')).write_text(json.dumps(
+ {'base':BASE,'stage':'HTTP and anchor content checked; browser pending','http':responses,'references':references,'errors':errors},ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+
 views=[];routes=[];captures=[];browser_errors=[]
 with sync_playwright() as p:
  browser=p.chromium.launch(channel='chrome',headless=True)

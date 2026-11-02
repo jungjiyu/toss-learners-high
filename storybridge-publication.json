@@ -70,7 +70,7 @@
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/architecture/preview.html",
       "source_sha256": "3e6cf9c05d9c8e9d570a6b62966e70264d5578a37b506f6cdf54e4c0b668c623",
-      "published_sha256": "3e6cf9c05d9c8e9d570a6b62966e70264d5578a37b506f6cdf54e4c0b668c623"
+      "published_sha256": "56b449e13d8c7d400bc4b622c2a48b73c55740549b802a9dd078b13db9735ae1"
     },
     {
       "source_path": "docs/portfolio/architecture/review.json",
@@ -91,21 +91,21 @@
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/comparison.html",
       "source_sha256": "443e6ce919026da3ed0781f6cf196f9ebccbf632db5541795cf1018a6daa9696",
-      "published_sha256": "9252f87d53b32f88ffcb3d47ba0039b311fece77acf48da5199ac2c6a6c67782"
+      "published_sha256": "e7b4d3c9c50077f873214ef15ade9cc8abd2904a3b299e31c54dc7f4fee0bf92"
     },
     {
       "source_path": "docs/portfolio/articles/connections.html",
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/connections.html",
       "source_sha256": "efebbb11c7f9f5c68330bbbbea82bca5609ac99f52a91da36dfdf507ca293c68",
-      "published_sha256": "a0118feb2e1c089161af32ab2cc1a74b2ba98c7a71de5a60cfd11871baefdb2f"
+      "published_sha256": "d45c2329a38aa5a1b361c1abdb73536aa400321e9a78074eb899a32d746cf2e0"
     },
     {
       "source_path": "docs/portfolio/articles/distributed.html",
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/distributed.html",
       "source_sha256": "a7ad35f00bf4d4d92a016101c7ff0f5f29dacfc34a56ae6bc4fd414fa8a633b2",
-      "published_sha256": "51a132110fb48bdd939110f4e2e8f9039c6811ddcfd3ea609752d8f3b45409f1"
+      "published_sha256": "e4afb16166bc663f33640a34b0c0954c2395dffc8696e7194c3478d077ca3199"
     },
     {
       "source_path": "docs/portfolio/articles/mixed-runs.html",
@@ -119,7 +119,7 @@
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/mixed.html",
       "source_sha256": "87fd661f83f20de3d68c5c3c13dd32e5af65d05307552da0e313b6c1366afc37",
-      "published_sha256": "c6dc287f5ab499ff4e9e148181ef590e1b8c2e885f782c92da19ff1f10cc063b"
+      "published_sha256": "b6be3ff40acb450f9350372104fc2acdc5d0ea77a1a06e08670120781042110b"
     },
     {
       "source_path": "docs/portfolio/articles/reconnect-runs.html",
@@ -133,28 +133,28 @@
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/reconnect.html",
       "source_sha256": "5944a66afaf0296f794ac29e52480640cbdacb1d9f54c56d27fbc87b6127eb4b",
-      "published_sha256": "438a9533fcd5ad1f876c06613a33b5a114358e56fa9738d085ed8901851d863a"
+      "published_sha256": "c1e27eb36d21fa1b2b0351dfc152755d5417613fbe9d798cbfb113e6a75669e4"
     },
     {
       "source_path": "docs/portfolio/articles/recovery.html",
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/recovery.html",
       "source_sha256": "eabd402868f011e7e1c63a29ebe3b17965685059cf98b6c79b60b8e0b2020a6a",
-      "published_sha256": "87364e550a4a1196e52f44338251818f78f1730f1d194272623f1a65b55ad659"
+      "published_sha256": "efc81d26f00d58a339f42bff2ce4ca068ee8313ff303b449fa50a40dd0f77b3f"
     },
     {
       "source_path": "docs/portfolio/articles/scale.html",
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/scale.html",
       "source_sha256": "3904ad5a2d4346f9e84dc438738ab32e3162a6370872ca0108ebfc844d88f98a",
-      "published_sha256": "1fb8271fc97f82b51e6275e2ed1cf8ceeba0e95a94c9a8c1c6836262d58b2d30"
+      "published_sha256": "da66629305cdd3dba406ae67a67a5e24366168fb693b86e118e5100797ea39df"
     },
     {
       "source_path": "docs/portfolio/articles/shared-fanout.html",
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/articles/shared-fanout.html",
       "source_sha256": "41b95b98ce81070886f13186aff1a6443ec565e38e29288da27aaf800b32f7fd",
-      "published_sha256": "5cd51d16daf3b4181352dfc1833f162b564a513d98910621b5b7cabcff5a26d1"
+      "published_sha256": "abaf8c86c73c2af048c9ce1c498a52e46b57fe74421c70424b16aac6dc9a1bae"
     },
     {
       "source_path": "docs/portfolio/articles/storage.html",
@@ -5831,7 +5831,7 @@
       "source_commit": "79c3da3aae9ba09db24ff334b172039fe2c7fa38",
       "published_path": "storybridge/index.html",
       "source_sha256": "211bd420fad3f7a9a63a9035a32d8b8cf94bc3232891d86057fd0b025f2c4f13",
-      "published_sha256": "211bd420fad3f7a9a63a9035a32d8b8cf94bc3232891d86057fd0b025f2c4f13"
+      "published_sha256": "c17298e6aa1285c47912fdf8cb6e8a401088e6d8b4765bef123f9df2acf77d8a"
     },
     {
       "source_path": "docs/portfolio/provenance.json",

@@ -7,6 +7,7 @@ from urllib.parse import urlsplit,urlunsplit,unquote
 from html import escape,unescape
 from html.parser import HTMLParser
 import subprocess,sys,re,json,hashlib,posixpath,collections
+import struct,xml.etree.ElementTree as ET
 
 SRC=Path(sys.argv[1]).resolve();OUT=Path(__file__).resolve().parents[1]
 SHA=subprocess.check_output(['git','rev-parse',sys.argv[2]+'^{commit}'],cwd=SRC,text=True).strip()
@@ -71,6 +72,28 @@ def scrub(text,path):
  if re.search(r'-----BEGIN [^-]*PRIVATE KEY-----',text):raise ValueError('Private key requires review: '+path)
  return text
 
+def reserve_image_space(text,path,ref):
+ # Cold public navigation reaches #all before SVG downloads finish. Intrinsic
+ # dimensions reserve the same space without changing approved image bytes.
+ def image_tag(match):
+  tag=match[0]
+  source=re.search(r'\bsrc=["\']([^"\']+)["\']',tag)
+  if not source or re.search(r'\bwidth=',tag) and re.search(r'\bheight=',tag):return tag
+  url=urlsplit(unescape(source[1]))
+  if url.scheme or url.netloc:return tag
+  target=posixpath.normpath(posixpath.join(posixpath.dirname(path),unquote(url.path)))
+  data=blob(target,ref)
+  if target.endswith('.svg'):
+   root=ET.fromstring(data);box=root.get('viewBox')
+   if box:w,h=map(float,box.split()[2:])
+   else:w,h=(float(re.match(r'[0-9.]+',root.get(k))[0]) for k in ['width','height'])
+  elif data.startswith(b'\x89PNG\r\n\x1a\n'):w,h=struct.unpack('>II',data[16:24])
+  else:raise ValueError('Image dimensions require explicit support: '+target)
+  tag=re.sub(r'\s+(?:width|height)=["\'][^"\']*["\']','',tag)
+  ending='/>' if tag.endswith('/>') else '>'
+  return tag[:-len(ending)]+f' width="{round(w)}" height="{round(h)}"'+ending
+ return re.sub(r'<img\b[^>]*>',image_tag,text)
+
 class Links(HTMLParser):
  def __init__(self,text):super().__init__();self.refs=[];self.ids=[];self.feed(text)
  def handle_starttag(self,tag,attrs):
@@ -127,6 +150,7 @@ while todo:
     updated=walk(data)
     if updated!=data:text=json.dumps(updated,ensure_ascii=False,indent=2)+'\n'
    if suffix in ['.html','.svg']:
+    if suffix=='.html':text=reserve_image_space(text,path,ref)
     text=re.sub(r'\b(href|src|xlink:href)=("|\')([^"\']*)\2',lambda m:m[1]+'='+m[2]+escape(rewrite(m[3],path,ref),quote=True)+m[2],text)
    if suffix in ['.css','.svg','.html']:
     text=re.sub(r'url\(\s*(["\']?)([^)"\']+)\1\s*\)',lambda m:'url('+m[1]+rewrite(m[2].strip(),path,ref)+m[1]+')',text)

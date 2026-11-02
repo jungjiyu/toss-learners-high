@@ -1,8 +1,8 @@
 {
-  "checked_at_utc": "2026-11-02T03:06:12.073338+00:00",
-  "published_content_commit": "d4eee1a59da21db3b0b26f4811eec9fd9306d15f",
-  "source_commit": "c17b5e5f04f8bd5659ce157aa77048781415b326",
-  "pages_run": "https://github.com/jungjiyu/toss-learners-high/actions/runs/41380948635",
+  "checked_at_utc": "2026-11-02T03:44:29.910284+00:00",
+  "published_content_commit": "be0f6651e7887d1c8b9bc5e4976daee8b7b7b206",
+  "source_commit": "55f14a6d0ee87ce5f56c7d558b29a98787f0807c",
+  "pages_run": "https://github.com/jungjiyu/toss-learners-high/actions/runs/41384467669",
   "public_base": "https://jungjiyu.github.io/toss-learners-high/",
   "anonymous": true,
   "cookies_after": [],
@@ -23,7 +23,7 @@
       "status": 200,
       "content_type": "application/json; charset=utf-8",
       "bytes": 395638,
-      "sha256": "13a7d95ab898b4b52bf4e3a35c0672cf2e43d51dc263e37f1d2dce79fb48f5e2",
+      "sha256": "282e5a4c994871972506d121cc8a67a716158df8d2bb70fa07ddb879b62b0b16",
       "sha256_matches": true
     },
     {
@@ -130,8 +130,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/comparison.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 32634,
-      "sha256": "615b9917a9a8bc34f786c8281beb99eb1c56980000f3c400f2615ea4a2959e56",
+      "bytes": 32689,
+      "sha256": "0fbe2d1d9594988396eabbfd638607ad997135ccb32ff0fd7d0a21ab96472fbb",
       "sha256_matches": true
     },
     {
@@ -139,8 +139,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/connections.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 31682,
-      "sha256": "c9ab239f2c7bfcc4df1441c95a1bdb156e8730a006c3e6cde2c5e9c52965cf08",
+      "bytes": 31711,
+      "sha256": "b043a8df4fb7491f8fa294d44f1a80c28e1b6c8f576549126a326e3973c2fd43",
       "sha256_matches": true
     },
     {
@@ -148,8 +148,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/distributed.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 42880,
-      "sha256": "2371a1467166d35edf89384abf06a89f1f9877f9c98f71890dca39425d57f8b7",
+      "bytes": 42895,
+      "sha256": "fb60cb44fd3d78c699ddf9bf3e41ff9b45f3eb14d9c4f5c89d60a21342220b9f",
       "sha256_matches": true
     },
     {
@@ -157,8 +157,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/mixed-runs.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 121197,
-      "sha256": "f4e0096e6eb54b34548f619264ca35a838251b6253d6b69f29d9e840d6f1c1a4",
+      "bytes": 121227,
+      "sha256": "46185173370d1d95e751c24abe204418c6f699e92b9b932152adef7269073665",
       "sha256_matches": true
     },
     {
@@ -166,8 +166,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/mixed.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 115688,
-      "sha256": "3f379502689f96da9ada15adbdc07774ea29594ee47bbb9501e244b9298f1745",
+      "bytes": 115825,
+      "sha256": "2b665fcce660b5bac0b272d1c772166bc20d30ca1eb2d10292d4aa87e97bbf8c",
       "sha256_matches": true
     },
     {
@@ -175,8 +175,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/reconnect-runs.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 77788,
-      "sha256": "67df9911e3c4c91357f38fd191d438392f787a6df1ce47093915245158c07355",
+      "bytes": 77784,
+      "sha256": "26b5b9839cc54979ebb0141d0ba505cfc25642d54322e4e24f71e5327d9c4da2",
       "sha256_matches": true
     },
     {
@@ -184,8 +184,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/reconnect.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 53755,
-      "sha256": "20e105b4caa4f54db47b0b2953d6ea2404439b5a2f741092663700c89db02d21",
+      "bytes": 53845,
+      "sha256": "29c72fcaa87735d58cb2f95f2397fbc7282cb18d5a82d62960dd6a9238cc8a80",
       "sha256_matches": true
     },
     {
@@ -193,8 +193,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/recovery.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 18824,
-      "sha256": "9d556fc5dbc2d2f16df8e14ad4b456fcddc6f97e617c38d1421449d8aa3a3cbd",
+      "bytes": 18914,
+      "sha256": "5a49025962682250a33c691150a600988e033bac9e108475a2644d0ff6903fa7",
       "sha256_matches": true
     },
     {
@@ -202,8 +202,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/scale.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 235366,
-      "sha256": "26142d160ec6c6c9092120570e03d0fb3c4abad57d430e54ba997cd66c107328",
+      "bytes": 235408,
+      "sha256": "ec53d5ef91cf620335717b0bd1bd91a45daac8442d5bf58b0d4c29c2f36f1354",
       "sha256_matches": true
     },
     {
@@ -211,8 +211,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/shared-fanout.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 103221,
-      "sha256": "87bb80fbce7e56b5084c381ff728b065bf5dd07b1e72cd99c8e13892c095b057",
+      "bytes": 103344,
+      "sha256": "bfa9e3b4ba4da0806e6b8af54294b62e75a148666e6933280316bba0a37399be",
       "sha256_matches": true
     },
     {
@@ -220,8 +220,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/articles/storage.html",
       "status": 200,
       "content_type": "text/html; charset=utf-8",
-      "bytes": 22034,
-      "sha256": "3090ba4ed5cc5dc59c98d3dfa43456348f1f501071a11c370a79f76e2c84dddd",
+      "bytes": 22123,
+      "sha256": "928b9c84269d2c016761d5751ab40ef60900c2d7426b682cbce9cce91d8dbcc2",
       "sha256_matches": true
     },
     {
@@ -779,7 +779,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 2567,
-      "sha256": "ea6ee4e01def33efeb8ee7ae49b216e250caab311b23c3a0bd96ffb00d618088",
+      "sha256": "77d675e67a3d3a4f357f3dbce7dfae5e1601b03fc1f116f9574709cd4832367b",
       "sha256_matches": true
     },
     {
@@ -788,7 +788,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 3998,
-      "sha256": "e0ae83f87cd5c68f178aa6a22a3a6bb1d7b0a80616654d91368dd0def745b420",
+      "sha256": "68cc45db5d2951a5efb8a83b94e057f3a0484cede309b3fb800f57cbcef75019",
       "sha256_matches": true
     },
     {
@@ -797,7 +797,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 3817,
-      "sha256": "5061c843360453738ef0b92d34edba87b2d65838581e5369d511b75355eede64",
+      "sha256": "123a1ddc255ae131e95ddc4514e5c4bb31732d4cd8487f2dfd946efe65d46ebb",
       "sha256_matches": true
     },
     {
@@ -806,7 +806,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 29338,
-      "sha256": "4f49cde7ac37a2dd611df6b55b1679e5c32b723e791b867aa26e935b17405e08",
+      "sha256": "c5b952211fe69f7be1c4489ea03af773bb49b9908e8adae081ad43fe8c88e20e",
       "sha256_matches": true
     },
     {
@@ -815,7 +815,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 9211,
-      "sha256": "e3eaa5842288d99a4412f3e50a631eb090c5d907208164f4a05655871288eb95",
+      "sha256": "5673b8980e8cbd14a4383fa2cb348fa38e05dd386b3eee987963417231d5a14c",
       "sha256_matches": true
     },
     {
@@ -824,7 +824,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 13940,
-      "sha256": "04a8345ce6f2875cca943513c6f6474be5359f3e1e7f1503e859af8ec366e5ee",
+      "sha256": "6f2484ca595b816d48702bf02bbdbb2d347ae537b9d8577e7d874c8e4fa6e7f3",
       "sha256_matches": true
     },
     {
@@ -833,7 +833,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 4255,
-      "sha256": "7472360f201698c98274d38c6fe49eb3137808c452044312a1e88cc551832b4e",
+      "sha256": "c9af3dd0f99603eabbd0d61f38e89c9edd2b64cd0396d6de12d8f1dcf2da1a0d",
       "sha256_matches": true
     },
     {
@@ -842,7 +842,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 2006,
-      "sha256": "d31105b9e10295fdf5e8524c86e26c4a4d89d19e597520a61aea7ecaf58b4c74",
+      "sha256": "4c1122c152091bd3628bac3eb72bb8653ef8c324ca7c92d871e894ec91da12f9",
       "sha256_matches": true
     },
     {
@@ -851,7 +851,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 12410,
-      "sha256": "c1f01e9f9c1a1b5909fe97177a9a65a46a287745387536b45618328436be87ca",
+      "sha256": "f4ec0d641674306a989b8ab27d6ac2ca1a0f060d5ffb401a1d414b922fce6b78",
       "sha256_matches": true
     },
     {
@@ -860,7 +860,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 7794,
-      "sha256": "1f324291cccc3b457743c013a8bc44030dcfd571c917e728ed80b2cef6e0d49c",
+      "sha256": "96a3ed3ec92576ec9cf3ebd1c5c7b2aa19f064e76d938cc24d83d07cdad4a65f",
       "sha256_matches": true
     },
     {
@@ -869,7 +869,7 @@
       "status": 200,
       "content_type": "text/html; charset=utf-8",
       "bytes": 2208,
-      "sha256": "7a76c9217026af94504108930dcc96a2aec41a345570ee42f9ab2926014418aa",
+      "sha256": "386369c11b9a8f65b0487a905b125b18dcc05a33ebb701b70e87ebfddffba6b4",
       "sha256_matches": true
     },
     {
@@ -7528,8 +7528,8 @@
       "url": "https://jungjiyu.github.io/toss-learners-high/storybridge/review/report.json",
       "status": 200,
       "content_type": "application/json; charset=utf-8",
-      "bytes": 112419,
-      "sha256": "3e114d6962709c03f8d3a97e27354f431a6608adc4e43c0a610e4b6c1a72eacb",
+      "bytes": 112612,
+      "sha256": "9470dc6b9f2ff041f4110939ceb00f9f2d4a524e1eceffb4ad6cd5e858ef0d2f",
       "sha256_matches": true
     },
     {
@@ -10717,13 +10717,13 @@
     {
       "width": 1280,
       "route": "representative → actual list",
-      "top": 112.15625
+      "top": 175.15625
     },
     {
       "width": 1280,
       "route": "root → StoryBridge list",
       "cards": 11,
-      "top": 125.15625
+      "top": 126.15625
     },
     {
       "width": 1280,
@@ -10763,7 +10763,7 @@
     {
       "width": 1280,
       "route": "storybridge/articles/recovery.html → list",
-      "top": 194.15625
+      "top": 175.15625
     },
     {
       "width": 1280,
@@ -10793,7 +10793,7 @@
     {
       "width": 390,
       "route": "representative → actual list",
-      "top": 163.984375
+      "top": 162.984375
     },
     {
       "width": 390,
@@ -10809,7 +10809,7 @@
     {
       "width": 390,
       "route": "storybridge/articles/connections.html → list",
-      "top": 163.984375
+      "top": 162.984375
     },
     {
       "width": 390,
@@ -10819,7 +10819,7 @@
     {
       "width": 390,
       "route": "storybridge/articles/mixed-runs.html → list",
-      "top": 163.984375
+      "top": 162.984375
     },
     {
       "width": 390,
@@ -10844,7 +10844,7 @@
     {
       "width": 390,
       "route": "storybridge/articles/scale.html → list",
-      "top": 163.984375
+      "top": 162.984375
     },
     {
       "width": 390,
@@ -10897,7 +10897,7 @@
     },
     {
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/index.html#articles",
-      "top": 189.609375,
+      "top": 190.609375,
       "cards": 11,
       "images": [
         {
@@ -10937,7 +10937,7 @@
     },
     {
       "url": "https://jungjiyu.github.io/toss-learners-high/mogu/index.html#articles",
-      "top": 190.609375,
+      "top": 189.609375,
       "cards": 11,
       "images": [
         {
@@ -11118,7 +11118,7 @@
   ],
   "source_content_checks": 664,
   "mogu_preserved_commit": "083083ff5943fa0752d7c1e345f3f53b16312411",
-  "manual_review": "Source: read all 11 first screens and six revised body passages in actual Chrome captures, after reviewing prose and corresponding source paragraphs. Public: read representative/guide, revised recovery-cost and reconnect findings, tables and graphs in desktop/390px captures. No new reflection section; technical terms, measured values, comparison scope and failure judgments retained.",
+  "manual_review": "Read all 11 articles end to end and all revised paragraphs in context. Source: actual Chrome body captures across 11 articles, desktop/390px, and guide/representative opening. Public: read guide, representative article and revised body captures in desktop/390px. Kept technical terms, conditions, measurements and failure denominators.",
   "captures": [
     {
       "file": "public-root-1280.png",
@@ -11126,7 +11126,7 @@
     },
     {
       "file": "public-storybridge-list-1280.png",
-      "sha256": "1d1e892960f52600565651522414e43c439cf3451c73d01b2c1eb6f0c04e1294"
+      "sha256": "3ee255ee595c55daf82783b058d7821b37f1cf4cd4f21ae94d400347f6bf38cc"
     },
     {
       "file": "public-storybridge-guide-1280.png",
@@ -11138,27 +11138,27 @@
     },
     {
       "file": "public-reconnect-runs-summary-1280.png",
-      "sha256": "f2f3bcd61bff5a935badecdc5f46fa282a3626887c2bdfefe353b445bc1cd06a"
+      "sha256": "6b42ccbec30e547b9c9b77b25f111dfdf7a8c7d70cb3fea8d55639d8d77ec2f5"
     },
     {
       "file": "public-reconnect-opening-1280.png",
-      "sha256": "7d6f5dab8a7a65062d0fbf339884c88c73568b1b57ff4c34b2c8fc027a05231c"
+      "sha256": "c10d83c1821493e8311e75dc595b3a22c4a944917ddc4e83991272360a24f011"
     },
     {
       "file": "public-reconnect-summary-1280.png",
-      "sha256": "7d6f5dab8a7a65062d0fbf339884c88c73568b1b57ff4c34b2c8fc027a05231c"
+      "sha256": "c10d83c1821493e8311e75dc595b3a22c4a944917ddc4e83991272360a24f011"
     },
     {
       "file": "public-reconnect-p99-1280.png",
-      "sha256": "b2505c6019e57efb26eb425ae9771d1f22b0d22eba8bf6d57b3d9217511119af"
+      "sha256": "d164ce83181b5b27a42ac28de7eb292738854b924081183044f8b957ac218b6d"
     },
     {
       "file": "public-reconnect-graph-1280.png",
-      "sha256": "c67d69139358cc72cd03e5551987c29403d22706d2c475aa0b0313d07e5d2c40"
+      "sha256": "08ac0371885d787a2869eb98652c8e6a607d7c8db1bccc60804fcc93c5fe59e1"
     },
     {
       "file": "public-reconnect-table-1280.png",
-      "sha256": "d87696b04f52b7a8b22de445d4b961baebc7de11f5104c67ff53e4b0169b2c67"
+      "sha256": "035bb76931a68f7dec96827958cdbbc288774fe4d78dd327f825963781f9451c"
     },
     {
       "file": "public-mogu-representative-1280.png",
@@ -11166,7 +11166,7 @@
     },
     {
       "file": "public-mogu-list-1280.png",
-      "sha256": "e1793e53bc56998659a8eb81ca4c11a86b5a02628d7262ae6a60801e47e3e16c"
+      "sha256": "bb8657038e37620a96fb9008406918ba0b8c31e365ea12c7f313b0654d8abde9"
     },
     {
       "file": "public-root-390.png",
@@ -11182,31 +11182,31 @@
     },
     {
       "file": "public-mixed-backlog-390.png",
-      "sha256": "fc21ffd79615814e4b87e4dce39155b3637899cc46736d84eb95398fa2057631"
+      "sha256": "990094ebb2eb5d50bf7a4da37d4f0a23a64255548a6c24175c505ede6177c659"
     },
     {
       "file": "public-reconnect-runs-summary-390.png",
-      "sha256": "7310cdc0e4807c1bc71733fe73182da3691c3f2e29cbef3f24c5d1eb465e0416"
+      "sha256": "1cb6c8afdfcf0bb6a81e1fc3107446f5ef40701426780b4eda89efc36f9f8e31"
     },
     {
       "file": "public-reconnect-opening-390.png",
-      "sha256": "f51cc29d2bc01807dbf9f2b065b28ebeaa3e07f80a3b6e900a024b066496b37b"
+      "sha256": "a8d97b72ae6cfbf81a61423eeed2e59e7fed5bf6d01d40e3a3950766e4a00bed"
     },
     {
       "file": "public-reconnect-summary-390.png",
-      "sha256": "2e2d109eb83f4eaa04225da969f3ac9f9a7050d4bd0342848b891235780817b2"
+      "sha256": "c9c7eb7909b9f0d36938e0630539d6a55f96b0c986fa5ce5a99abe5ba3d22e51"
     },
     {
       "file": "public-reconnect-p99-390.png",
-      "sha256": "1a69670889708b5bed22cee430f12463c4529e15b4cf45acf929d6ad13d6cd84"
+      "sha256": "615526773cee8024bc40c29bc70f7239c406ddfc8a57b4346a194a7ee808691d"
     },
     {
       "file": "public-reconnect-graph-390.png",
-      "sha256": "a0e5fc75e898a14b813c0ea95a98582870c05a438e5a2703e533a65ef1230374"
+      "sha256": "de7aef8a88d5b8efdef62a7a4928c4a45e2244821c077dc6d65070e90f2e9bfa"
     },
     {
       "file": "public-reconnect-table-390.png",
-      "sha256": "1cb2185df0081138b7e6f70ff90e72f97af556944d856169242f361fb2d3f06b"
+      "sha256": "18de8a13da1fdbd1c2bf3215745e51cd55d33dd019e3a6d78b986df5d425d668"
     },
     {
       "file": "public-mogu-representative-390.png",
@@ -11217,28 +11217,28 @@
       "sha256": "567b78ea0aaba71e34c4ff544104ccdd1e07fcd949336daabf78efdc81756c91"
     },
     {
-      "file": "public-decision-mixed-1280.png",
-      "sha256": "c82ac67bc243c9a8b0a03f6764cbe8cdaa5611afcb2f560292e21c0ee782f153"
+      "file": "public-flow-mixed-1280.png",
+      "sha256": "2535d49e6300256c5543d20e7fed1cc7c438d6eea85d29bc3aa3869f34d101d2"
     },
     {
-      "file": "public-decision-mixed-390.png",
-      "sha256": "728402819ee9852b5cf90d0ac4303272122419c6995a85ac5947b5c219ca04ee"
+      "file": "public-flow-mixed-390.png",
+      "sha256": "d9037f1689fcf848fbe9f2b2355f023d691537f1e91a6e15416df5a5aa26efae"
     },
     {
-      "file": "public-decision-reconnect-1280.png",
-      "sha256": "f243d39a20ae4d646f4b0634274ce8d38ffe81d7fb75151b22e85635404b2fa5"
+      "file": "public-flow-reconnect-1280.png",
+      "sha256": "f210d318e00e89c4a4a143bd3fd49d07751460da6ff17cacb97317c44b9d2823"
     },
     {
-      "file": "public-decision-reconnect-390.png",
-      "sha256": "fa5afa6b435e1dccb438e1ab6fada410eecfc5aae364bd05c70ccbac40ffb35c"
+      "file": "public-flow-reconnect-390.png",
+      "sha256": "fa330d798af274ad29a6be0fe778dcc1aca0ed433d37114d5dd90fcc7e93640c"
     },
     {
-      "file": "public-decision-shared-fanout-1280.png",
-      "sha256": "7f39b9b6e6e824f524fa6042a27bdb9717241249e77756ad3d5ec9213395964f"
+      "file": "public-flow-storage-1280.png",
+      "sha256": "cc9574e0930db3db75d52e318738497792d824600b8a8022ffc667e240342746"
     },
     {
-      "file": "public-decision-shared-fanout-390.png",
-      "sha256": "d69945e50485cab03cee59de3641f99b08871a2274e52fdaeb49b42d35db9d5f"
+      "file": "public-flow-storage-390.png",
+      "sha256": "73071a1f1c2468081e1dec0f9b39b33c7e4854c74dd6907ab26e2cbb09d9b630"
     }
   ],
   "limits": [
